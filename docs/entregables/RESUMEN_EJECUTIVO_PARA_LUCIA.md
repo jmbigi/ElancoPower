@@ -83,7 +83,7 @@ Aquí está mi presupuesto personal para el trabajo técnico que puedo aportar.
 
 ---
 
-## 🎯 QUÉ PROBLEMAS RESUELVO
+## 🧩 QUÉ PROBLEMAS RESUELVO
 
 Según el correo de **David Saboya** (09-oct-2025), Elanco tiene estos issues:
 
@@ -98,7 +98,7 @@ Según el correo de **David Saboya** (09-oct-2025), Elanco tiene estos issues:
 
 ---
 
-## 🔧 MI PERFIL TÉCNICO
+## 🛠️ MI PERFIL TÉCNICO
 
 **Experiencia:**
 - ✅ Desarrollo en BigQuery (SQL avanzado, optimización de queries)
@@ -115,7 +115,7 @@ Según el correo de **David Saboya** (09-oct-2025), Elanco tiene estos issues:
 
 ---
 
-## 📅 CRONOGRAMA PROPUESTO
+## 🗓️ CRONOGRAMA PROPUESTO
 
 | Fecha | Hito |
 |-------|------|
@@ -260,4 +260,3 @@ Saludos,
 **Fecha:** 10 de octubre de 2025  
 **Validez:** 30 días  
 **Documentos adjuntos:** Ver carpeta ElancoPower/
-

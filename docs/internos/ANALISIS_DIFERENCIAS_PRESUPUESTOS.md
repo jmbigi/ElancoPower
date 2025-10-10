@@ -32,8 +32,7 @@ Fase 0: USD 11,520 (120h)
 ├── PM/Gobernanza: 40h × $110 = $4,400
 ├── Arquitecto Datos: 32h × $140 = $4,480
 ├── Especialista SAP (Lucía): 28h × $60 = $1,680
-├── QA/Compliance: 12h × $80 = $960
-└── Power User coaching: 8h × $0 = $0
+└── QA/Compliance: 12h × $80 = $960
 
 Fase 1: USD 20,260 (206h)
 ├── Arquitecto Datos: 64h × $140 = $8,960
@@ -274,7 +273,7 @@ Los siguientes roles del presupuesto anterior NO están en el nuevo presupuesto 
 
 **Desglose Fase 2 (148h JM Bigi):**
 - Modelo datos: 32h
-- Desarrollo 6 dashboards: 60h (10h/dashboard)
+- Desarrollo 6 dashboards: 60h
 - RLS configuración: 12h
 - Testing UAT: 16h
 - Documentación: 12h
@@ -307,4 +306,3 @@ Los siguientes roles del presupuesto anterior NO están en el nuevo presupuesto 
 **Elaborado por:** Juan Manuel Bigi  
 **Fecha:** 10 de octubre de 2025  
 **Documento complementario a:** PRESUPUESTO_REAL_BASADO_EN_FUENTES_PRIMARIAS.md
-

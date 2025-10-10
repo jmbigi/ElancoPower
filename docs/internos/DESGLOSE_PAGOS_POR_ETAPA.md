@@ -145,7 +145,7 @@
 
 ---
 
-## 💰 DISTRIBUCIÓN PORCENTUAL
+## 🧮 DISTRIBUCIÓN PORCENTUAL
 
 ### Escenario SIN ABAP externo (USD 14,170):
 
@@ -164,7 +164,7 @@
 
 ---
 
-## 📅 CALENDARIO DE PAGOS PROPUESTO
+## 🗓️ CALENDARIO DE PAGOS PROPUESTO
 
 ### Opción 1: Pago por Fase Completada
 
@@ -187,7 +187,7 @@
 
 ---
 
-## 🔍 COMPARATIVA CON PROPUESTA COMPLETA AUNERGIA
+## 🔎 COMPARATIVA CON PROPUESTA COMPLETA AUNERGIA
 
 ### Si Aunergia presenta propuesta de USD 48,000:
 
@@ -202,44 +202,6 @@
 - ✅ **Para ti:** Ganas USD 2,850 MÁS que en propuesta completa
 - ⚠️ **Para Aunergia:** Ganan USD 36,680 MENOS que en propuesta completa
 - ✅ **Para Elanco:** Ahorran USD 33,830 (70.5% menos)
-
----
-
-## 🎯 DECISIÓN QUE DEBE TOMAR AUNERGIA
-
-### Escenario A: Presentan propuesta completa (USD 48,000)
-**Ventajas:**
-- Mayor ganancia para Aunergia: USD 42,000
-- Menor ganancia para ti: USD 6,000
-- Servicio "llave en mano" para Elanco
-
-**Desventajas:**
-- Elanco paga USD 48,000
-- Menor competitividad
-
-### Escenario B: Presentan tu propuesta + Lucía (USD 14,170)
-**Ventajas:**
-- Mayor ganancia para ti: USD 8,850 (+47.5%)
-- Ahorro enorme para Elanco: 70.5%
-- Más competitivo
-
-**Desventajas:**
-- Menor ganancia para Aunergia: USD 5,320
-- Aunergia debe hacer PM sin cobrar extra
-
-### Escenario C: Híbrido (USD ~25,000-30,000)
-**Incluye:**
-- Tu trabajo: USD 8,850
-- Lucía: USD 5,320
-- PM Aunergia (40h × USD 110): USD 4,400
-- QA (30h × USD 80): USD 2,400
-- ABAP: USD 680
-- Overhead 10%: USD 2,165
-- **TOTAL: USD 23,815**
-
-**Distribución:**
-- Tú: USD 8,850 (37%)
-- Aunergia: USD 14,965 (63%)
 
 ---
 
@@ -263,9 +225,9 @@
 
 ---
 
-## 📋 RESUMEN PARA DECISIÓN RÁPIDA
+## 🧾 RESUMEN PARA DECISIÓN RÁPIDA
 
-### ¿Cuánto recibes TÚ en cada escenario?
+### ¿Cuánto recibes Tú en cada escenario?
 
 | Escenario | Tu ganancia | Diferencia vs. mínimo |
 |-----------|-------------|----------------------|
@@ -306,4 +268,3 @@
 **Elaborado por:** Juan Manuel Bigi  
 **Fecha:** 10 de octubre de 2025  
 **Documento:** Desglose de pagos por etapa
-

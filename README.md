@@ -7,43 +7,105 @@
 
 ---
 
-## 📋 ESTRUCTURA DEL PROYECTO
+## � ESTRUCTURA DEL REPOSITORIO
 
-### 🔴 PRESUPUESTOS (Documentos principales)
-
-| Documento | Tipo | Monto | Descripción |
-|-----------|------|-------|-------------|
-| **`PRESUPUESTO_REAL_BASADO_EN_FUENTES_PRIMARIAS.md`** | ✅ NUEVO | **USD 8,850** | Presupuesto personal Juan Manuel Bigi (354h × USD 25/h). Solo trabajo técnico. |
-| **`ANALISIS_DIFERENCIAS_PRESUPUESTOS.md`** | ✅ NUEVO | - | Comparativa y justificación entre presupuestos. |
-| `presupuesto_actualizado.md` | Referencia | USD 48,000 | Propuesta integral Aunergia (equipo completo, 494h). |
+```
+ElancoPower/
+├── README.md                    (este archivo - índice principal)
+├── inputs/                      (fuentes primarias - NO MODIFICAR)
+│   ├── conversaciones_con_lucia.md
+│   ├── correo_1_de_lucia.md
+│   ├── Attach_1_Correo_1_Texto_de_Imagen.md
+│   ├── Attach_2_Correo_1_Transacciones SAP.csv
+│   ├── Attach_2_Correo_1_Transacciones SAP.normalized.csv
+│   ├── Attach_2_Correo_1_Transacciones SAP.xlsx
+│   ├── Que_se_va_a_usar.txt
+│   └── quienes_somos.txt
+└── docs/
+    ├── entregables/             (para enviar a cliente)
+    │   ├── PRESUPUESTO_REAL_BASADO_EN_FUENTES_PRIMARIAS.md
+    │   └── RESUMEN_EJECUTIVO_PARA_LUCIA.md
+    ├── internos/                (documentos de trabajo)
+    │   ├── ANALISIS_DIFERENCIAS_PRESUPUESTOS.md
+    │   ├── AUDITORIA_FINAL_CONSOLIDACION.md
+    │   ├── DESGLOSE_PAGOS_POR_ETAPA.md
+    │   ├── INDICE_COMPLETO.md
+    │   ├── REORGANIZACION_COMPLETADA.md
+    │   ├── VERIFICACION_DE_FUENTES.md
+    │   ├── REPORTE_REVISION_FINAL.md
+    │   ├── REVISION_FINAL_QA.md
+    │   ├── checklist_permisos_y_licencias.md
+    │   └── transacciones_sap_backlog.md
+    └── historicos/              (archivos de referencia)
+        ├── presupuesto_actualizado.md
+        └── confirmacion_necesaria.txt
+```
 
 ---
 
-## 📁 ARCHIVOS POR CATEGORÍA
+## 🎯 INICIO RÁPIDO
 
-### 1️⃣ Fuentes Primarias (Datos reales verificables)
+### 📦 Documentos para Entregar a Elanco
+
+**Carpeta:** `docs/entregables/`
+
+| Documento | Descripción | Páginas |
+|-----------|-------------|---------|
+| **PRESUPUESTO_REAL_BASADO_EN_FUENTES_PRIMARIAS.md** | Presupuesto oficial (USD 8,850) | 29 |
+| **RESUMEN_EJECUTIVO_PARA_LUCIA.md** | Versión resumida para Lucía | 8 |
+
+### 📊 Documentos Internos de Trabajo
+
+**Carpeta:** `docs/internos/`
+
+| Documento | Propósito |
+|-----------|-----------|
+| ANALISIS_DIFERENCIAS_PRESUPUESTOS.md | Comparativa USD 8,850 vs USD 48,000 |
+| AUDITORIA_FINAL_CONSOLIDACION.md | Auditoría completa de consolidación (99/100) |
+| DESGLOSE_PAGOS_POR_ETAPA.md | Distribución de pagos por fase |
+| INDICE_COMPLETO.md | Guía de navegación completa |
+| REORGANIZACION_COMPLETADA.md | Documentación de reorganización |
+| VERIFICACION_DE_FUENTES.md | Certificación de datos verificables |
+| REPORTE_REVISION_FINAL.md | QA final del proyecto |
+| REVISION_FINAL_QA.md | Control de calidad exhaustivo |
+| checklist_permisos_y_licencias.md | Estado de accesos SAP/BigQuery/Power BI |
+| transacciones_sap_backlog.md | Backlog priorizado de transacciones |
+
+### 📚 Archivos Históricos
+
+**Carpeta:** `docs/historicos/`
+
+| Documento | Estado |
+|-----------|--------|
+| presupuesto_actualizado.md | Propuesta Aunergia completa (USD 48,000) - Referencia |
+| confirmacion_necesaria.txt | Borrador histórico (basado en USD 48k) |
+
+---
+
+## � PRESUPUESTOS DISPONIBLES
+
+| Presupuesto | Ubicación | Monto | Para quién |
+|-------------|-----------|-------|------------|
+| **Personal JM Bigi** | `docs/entregables/PRESUPUESTO_REAL_...` | **USD 8,850** | Lucía/Linda/Elanco |
+| **Resumen Ejecutivo** | `docs/entregables/RESUMEN_EJECUTIVO_...` | USD 8,850 | Lucía (formato corto) |
+| Propuesta Aunergia | `docs/historicos/presupuesto_actualizado.md` | USD 48,000 | Referencia histórica |
+
+---
+
+## 📁 FUENTES PRIMARIAS
+
+**Carpeta:** `inputs/` (NO MODIFICAR - datos originales)
 
 | Archivo | Tipo | Fecha | Contenido |
 |---------|------|-------|-----------|
 | `conversaciones_con_lucia.md` | Audio transcrito | 09-oct-2025 | Audio WhatsApp Lucía explicando el proyecto (04:39 min) |
 | `correo_1_de_lucia.md` | Email | 09-oct-2025 | Correo David Saboya (TI Elanco) con issues reportados |
 | `Attach_2_Correo_1_Transacciones SAP.csv` | Datos | 09-oct-2025 | 22 transacciones SAP identificadas (prioridades) |
+| `Attach_2_Correo_1_Transacciones SAP.normalized.csv` | Datos | 09-oct-2025 | CSV normalizado para análisis |
 | `Attach_2_Correo_1_Transacciones SAP.xlsx` | Datos | 09-oct-2025 | Mismo contenido en formato Excel |
-| `Attach_1_Correo_1_Texto_de_Imagen.md` | Especificación | - | Power User Persona (documento oficial Elanco) |
-
-### 2️⃣ Configuración y Estado Actual
-
-| Archivo | Descripción |
-|---------|-------------|
-| `Que_se_va_a_usar.txt` | Plataformas confirmadas por Finanzas/Operaciones (10-oct-2025) |
-| `quienes_somos.txt` | Contexto del proyecto (participantes, empresas) |
-
-### 3️⃣ Documentos Históricos / Referencia
-
-| Archivo | Estado |
-|---------|--------|
-| `presupuesto_actualizado.md` | Propuesta Aunergia completa (USD 48,000) - REFERENCIA |
-| `confirmacion_necesaria.txt` | Borrador de confirmación a enviar a Lucía - HISTÓRICO |
+| `Attach_1_Correo_1_Texto_de_Imagen.md` | Especificación | 09-oct-2025 | Power User Persona (documento oficial Elanco) |
+| `Que_se_va_a_usar.txt` | Confirmación | 10-oct-2025 | Plataformas confirmadas por Finanzas/Operaciones |
+| `quienes_somos.txt` | Contexto | 10-oct-2025 | Participantes del proyecto |
 
 ---
 
@@ -74,13 +136,15 @@ Automatizar la extracción de datos desde **SAP ECC** y centralizarlos en **Goog
 
 ---
 
-## 🔧 STACK TECNOLÓGICO CONFIRMADO
+## 🔧 STACK TECNOLÓGICO
+
+**Fuente:** `inputs/Que_se_va_a_usar.txt`
 
 | Componente | Herramienta | Estado |
 |------------|-------------|--------|
 | **ERP** | SAP ECC (roles MM, SD, FI, CO) | ✅ Confirmado |
 | **Data Lake** | Google BigQuery (dataset CASA) | ✅ Confirmado |
-| **BI** | Microsoft Power BI | ✅ Licencias adquiridas (8 Pro) |
+| **BI** | Microsoft Power BI | ✅ 8 licencias Pro adquiridas |
 | **Herramientas** | BigQuery Studio, ODBC Simba, Confluence | ✅ Disponibles |
 | **AI (opcional)** | Gemini AI Cloud Companion | 🟡 Opcional |
 
@@ -105,19 +169,20 @@ ME2L, MM60, MB59, ZVEL015, ME23N, FBL1N, FBL5N, MB5B, XK03, XD03
 
 ---
 
-## ⚠️ ISSUES CRÍTICOS IDENTIFICADOS
+## ⚠️ ISSUES CRÍTICOS
 
-**Fuente:** Correo David Saboya (TI Elanco), 09-oct-2025
+**Fuente:** `inputs/correo_1_de_lucia.md` (David Saboya, 09-oct-2025)  
+**Estado actual:** `docs/internos/checklist_permisos_y_licencias.md`
 
 ### Issue #1: Permisos SAP insuficientes
-> *"El usuario asignado como 'power user' para hacer la integración mediante BigQuery no contaba con todos los permisos para visualizar ciertas transacciones en SAP"*
+> *"El usuario asignado como 'power user' no contaba con todos los permisos para visualizar ciertas transacciones en SAP"*
 
-**Estado:** ▶️ En curso (Ticket SAP-48219 escalado a TI Global)
+**Estado:** ▶️ En curso (Ticket SAP-48219)
 
 ### Issue #2: Tablas no disponibles en BigQuery
-> *"Cada transacción cuenta con diferentes tablas, algunas de ellas no se encuentran en BigQuery por lo que se debe solicitar incluirlas para poder 'llamarlas' en la parte de codificación. Estas solicitudes se hacen por medio de tickets"*
+> *"Algunas tablas no se encuentran en BigQuery, se deben solicitar por tickets"*
 
-**Estado:** ⏳ Pendiente (Tickets BQ-7713, BQ-7721 por abrir)
+**Estado:** ⏳ Pendiente (Tickets BQ-7713, BQ-7721)
 
 ---
 
@@ -160,48 +225,59 @@ ME2L, MM60, MB59, ZVEL015, ME23N, FBL1N, FBL5N, MB5B, XK03, XD03
 
 ---
 
-## 📖 CÓMO USAR ESTA CARPETA
+## 📖 GUÍA DE USO POR ROL
 
-### Si eres Lucía / Linda (Aunergia):
-1. Lee **`PRESUPUESTO_REAL_BASADO_EN_FUENTES_PRIMARIAS.md`** para ver el costo de Juan Manuel Bigi
-2. Lee **`ANALISIS_DIFERENCIAS_PRESUPUESTOS.md`** para entender diferencias con propuesta completa
-3. Decide qué presupuesto presentar a Elanco:
-   - USD 8,850 (solo JM Bigi) + vuestros costos
-   - USD 48,000 (equipo completo Aunergia)
-   - Híbrido (~USD 25,000)
+### 👤 Si eres **Lucía / Linda (Aunergia)**:
+1. **Empieza aquí:** `docs/entregables/RESUMEN_EJECUTIVO_PARA_LUCIA.md` ⭐
+2. **Presupuesto completo:** `docs/entregables/PRESUPUESTO_REAL_BASADO_EN_FUENTES_PRIMARIAS.md`
+3. **Comparativa:** `docs/internos/ANALISIS_DIFERENCIAS_PRESUPUESTOS.md`
+4. **Pagos:** `docs/internos/DESGLOSE_PAGOS_POR_ETAPA.md`
 
-### Si eres stakeholder Elanco:
-1. Lee **`inputs/conversaciones_con_lucia.md`** para contexto del proyecto
-2. Lee **`inputs/correo_1_de_lucia.md`** para ver los issues reportados por David Saboya
-3. Revisa **`inputs/Que_se_va_a_usar.txt`** para confirmar plataformas
-4. Lee el presupuesto elegido por Aunergia
+**Opciones a decidir:**
+- Opción A: USD 48,000 (equipo completo Aunergia)
+- Opción B: USD 8,850 (solo JM Bigi) + costos Aunergia
+- Opción C: USD ~25,000 (híbrido)
 
-### Si eres Juan Manuel Bigi (Manolo):
-1. Tu presupuesto está en **`PRESUPUESTO_REAL_BASADO_EN_FUENTES_PRIMARIAS.md`**
-2. Las transacciones a implementar están en **`inputs/Attach_2_Correo_1_Transacciones SAP.csv`** (o el normalizado: `inputs/Attach_2_Correo_1_Transacciones SAP.normalized.csv`)
-3. Los issues técnicos están en **`correo_1_de_lucia.md`**
-4. Las especificaciones del Power User están en **`inputs/Attach_1_Correo_1_Texto_de_Imagen.md`**
+### 🏢 Si eres **stakeholder Elanco**:
+1. **Contexto:** `inputs/conversaciones_con_lucia.md`
+2. **Issues técnicos:** `inputs/correo_1_de_lucia.md`
+3. **Presupuesto:** `docs/entregables/PRESUPUESTO_REAL_BASADO_EN_FUENTES_PRIMARIAS.md`
+4. **Checklist:** `docs/internos/checklist_permisos_y_licencias.md`
+
+### 👨‍💻 Si eres **Juan Manuel Bigi**:
+1. **Tu presupuesto:** `docs/entregables/PRESUPUESTO_REAL_BASADO_EN_FUENTES_PRIMARIAS.md`
+2. **Transacciones:** `inputs/Attach_2_Correo_1_Transacciones SAP.csv` (o `.normalized.csv`)
+3. **Issues:** `inputs/correo_1_de_lucia.md`
+4. **Especificaciones:** `inputs/Attach_1_Correo_1_Texto_de_Imagen.md`
+5. **Backlog:** `docs/internos/transacciones_sap_backlog.md`
 
 ---
 
-## 🔍 FUENTES DE VERDAD
+## 🔍 REFERENCIAS RÁPIDAS
 
-### Datos financieros:
-- **Presupuesto JM Bigi:** `PRESUPUESTO_REAL_BASADO_EN_FUENTES_PRIMARIAS.md` (USD 8,850)
-- **Presupuesto Aunergia completo:** `presupuesto_actualizado.md` (USD 48,000)
+### 💰 Presupuestos:
+| Documento | Ubicación | Monto |
+|-----------|-----------|-------|
+| Presupuesto JM Bigi | `docs/entregables/PRESUPUESTO_REAL_...` | USD 8,850 |
+| Presupuesto Aunergia | `docs/historicos/presupuesto_actualizado.md` | USD 48,000 |
 
-### Datos técnicos:
-- **Transacciones SAP:** `inputs/Attach_2_Correo_1_Transacciones SAP.csv` (22 transacciones)
-- **Transacciones SAP (normalizado):** `inputs/Attach_2_Correo_1_Transacciones SAP.normalized.csv` (estandarizado de nombres/áreas y limpieza de espacios)
-- **Plataformas confirmadas:** `inputs/Que_se_va_a_usar.txt` (SAP ECC, BigQuery, Power BI)
-- **Issues reportados:** `inputs/correo_1_de_lucia.md` (permisos SAP, tablas BigQuery)
- - **Checklist permisos/licencias:** `checklist_permisos_y_licencias.md`
- - **Backlog transacciones SAP:** `transacciones_sap_backlog.md`
+### 📊 Datos Técnicos:
+| Dato | Ubicación |
+|------|-----------|
+| 22 Transacciones SAP | `inputs/Attach_2_Correo_1_Transacciones SAP.csv` |
+| Transacciones (normalizado) | `inputs/Attach_2_Correo_1_Transacciones SAP.normalized.csv` |
+| Plataformas confirmadas | `inputs/Que_se_va_a_usar.txt` |
+| Issues reportados | `inputs/correo_1_de_lucia.md` |
+| Checklist permisos | `docs/internos/checklist_permisos_y_licencias.md` |
+| Backlog priorizado | `docs/internos/transacciones_sap_backlog.md` |
 
-### Datos de contexto:
-- **Audio explicativo:** `inputs/conversaciones_con_lucia.md` (09-oct-2025, 04:39 min)
-- **Especificaciones técnicas:** `inputs/Attach_1_Correo_1_Texto_de_Imagen.md` (Power User Persona)
-- **Participantes:** `inputs/quienes_somos.txt`
+### 📝 Contexto:
+| Documento | Ubicación |
+|-----------|-----------|
+| Audio transcrito (04:39) | `inputs/conversaciones_con_lucia.md` |
+| Power User Persona | `inputs/Attach_1_Correo_1_Texto_de_Imagen.md` |
+| Participantes | `inputs/quienes_somos.txt` |
+| Índice completo | `docs/internos/INDICE_COMPLETO.md` |
 
 ---
 
@@ -217,5 +293,17 @@ ME2L, MM60, MB59, ZVEL015, ME23N, FBL1N, FBL5N, MB5B, XK03, XD03
 
 ---
 
+## 📌 NOTAS FINALES
+
+- ✅ **inputs/**: Contiene fuentes primarias verificables (NO modificar)
+- ✅ **docs/entregables/**: Documentos listos para enviar a cliente
+- ✅ **docs/internos/**: Documentos de trabajo y análisis
+- ✅ **docs/historicos/**: Archivos de referencia histórica
+
+**Para más detalles:** Ver `docs/internos/INDICE_COMPLETO.md`
+
+---
+
 **Última actualización:** 10 de octubre de 2025  
-**Versión:** 2.0 - Presupuestos actualizados con fuentes primarias
+**Versión:** 3.0 - Repositorio reorganizado y estructurado  
+**Estructura:** inputs/ (fuentes) + docs/ (entregables, internos, históricos)

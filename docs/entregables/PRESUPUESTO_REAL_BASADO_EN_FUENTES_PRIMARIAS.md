@@ -259,7 +259,7 @@ Este presupuesto se basa **exclusivamente** en:
 
 **Nota:** Según audio Lucía: *"sería como ya la NASA, el final"*
 
-**No se presupuesta en esta propuesta.** Se evaluará al finalizar Fase 2.
+**No se presupesta en esta propuesta.** Se evaluará al finalizar Fase 2.
 
 Alcance tentativo (solo referencia):
 - Modelos predictivos de ventas (3 años)
@@ -593,4 +593,3 @@ Este presupuesto se basa en:
 | Costo JM Bigi | USD 6,000 | USD 8,850 | +47.5% |
 
 **Aclaración:** El presupuesto anterior incluía costos de todo el equipo Aunergia (PM, Arquitectos, QA, etc.). Este presupuesto incluye SOLO el costo de Juan Manuel Bigi como desarrollador independiente. Las horas de Lucía Rodríguez y otros recursos Aunergia se facturan por separado.
-

@@ -187,7 +187,7 @@
 
 ---
 
-## 🔍 VALIDACIÓN DE ESTIMACIONES
+## 🔎 VALIDACIÓN DE ESTIMACIONES
 
 ### Horas estimadas - ¿Son realistas?
 
@@ -271,7 +271,7 @@
 
 ---
 
-## 📊 TRAZABILIDAD COMPLETA
+## 📈 TRAZABILIDAD COMPLETA
 
 ### Cada línea del presupuesto tiene fuente:
 
@@ -335,14 +335,13 @@ Este presupuesto de **USD 8,850** por **354 horas** se basa exclusivamente en:
 
 Si alguien cuestiona algún dato, estos son los archivos que lo respaldan:
 
-1. `conversaciones_con_lucia.md` - Audio transcrito Whisper
-2. `correo_1_de_lucia.md` - Email David Saboya
-3. `Attach_2_Correo_1_Transacciones SAP.csv` - 22 transacciones
-4. `Attach_1_Correo_1_Texto_de_Imagen.md` - Power User Persona
-5. `Que_se_va_a_usar.txt` - Confirmación plataformas
-6. `checklist_permisos_y_licencias.md` - Estado de accesos y tickets
-7. `transacciones_sap_backlog.md` - Backlog consolidado
-8. `quienes_somos.txt` - Contexto proyecto
+1. `inputs/conversaciones_con_lucia.md` - Audio transcrito Whisper
+2. `inputs/correo_1_de_lucia.md` - Email David Saboya
+3. `inputs/Attach_2_Correo_1_Transacciones SAP.csv` - 22 transacciones
+4. `inputs/Attach_1_Correo_1_Texto_de_Imagen.md` - Power User Persona
+5. `inputs/Que_se_va_a_usar.txt` - Confirmación plataformas
+6. `docs/internos/checklist_permisos_y_licencias.md` - Estado de accesos al 10-oct-2025
+7. `docs/internos/transacciones_sap_backlog.md` - Backlog consolidado
+8. `inputs/quienes_somos.txt` - Contexto proyecto
 
 **Todos los archivos fechados entre 09-oct y 10-oct-2025.**
-
