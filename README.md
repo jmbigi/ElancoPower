@@ -194,6 +194,8 @@ ME2L, MM60, MB59, ZVEL015, ME23N, FBL1N, FBL5N, MB5B, xk03, xd03
 - **Transacciones SAP:** `Attach_2_Correo_1_Transacciones SAP.csv` (22 transacciones)
 - **Plataformas confirmadas:** `Que_se_va_a_usar.txt` (SAP ECC, BigQuery, Power BI)
 - **Issues reportados:** `correo_1_de_lucia.md` (permisos SAP, tablas BigQuery)
+ - **Checklist permisos/licencias:** `checklist_permisos_y_licencias.md`
+ - **Backlog transacciones SAP:** `transacciones_sap_backlog.md`
 
 ### Datos de contexto:
 - **Audio explicativo:** `conversaciones_con_lucia.md` (09-oct-2025, 04:39 min)

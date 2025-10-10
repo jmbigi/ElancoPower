@@ -340,7 +340,9 @@ Si alguien cuestiona algún dato, estos son los archivos que lo respaldan:
 3. `Attach_2_Correo_1_Transacciones SAP.csv` - 22 transacciones
 4. `Attach_1_Correo_1_Texto_de_Imagen.md` - Power User Persona
 5. `Que_se_va_a_usar.txt` - Confirmación plataformas
-6. `quienes_somos.txt` - Contexto proyecto
+6. `checklist_permisos_y_licencias.md` - Estado de accesos y tickets
+7. `transacciones_sap_backlog.md` - Backlog consolidado
+8. `quienes_somos.txt` - Contexto proyecto
 
 **Todos los archivos fechados entre 09-oct y 10-oct-2025.**
 

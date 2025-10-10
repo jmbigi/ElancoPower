@@ -2,7 +2,7 @@
 
 **Fecha de elaboración:** 10 de octubre de 2025  
 **Elaborado por:** Juan Manuel Bigi (Manolo)  
-**Para:** Lucía Rodríguez (Aunergia) → Linda López (Coordinadora Elanco)
+**Para:** Lucía Rodríguez (Aunergia) → Linda López (Coordinadora Aunergia)
 
 ---
 
@@ -285,17 +285,27 @@ Alcance tentativo (solo referencia):
 - Conocimiento de arquitecturas Data Lake
 - Disponibilidad part-time
 
-### 4.2. Presupuesto por fase
+### 4.2. Presupuesto por fase (Juan Manuel Bigi)
 
-| Fase | Horas JM Bigi | Tarifa | Subtotal JM Bigi | Horas Lucía* | Subtotal Lucía* | TOTAL FASE |
-|------|---------------|--------|------------------|--------------|-----------------|------------|
-| **Fase 0** | 40h | $25/h | **$1,000** | 28h | Aunergia | $1,000 |
-| **Fase 1** | 156h | $25/h | **$3,900** | 40h | Aunergia | $3,900 |
-| **Fase 2** | 148h | $25/h | **$3,700** | 12h | Aunergia | $3,700 |
-| **Elaboración presupuesto** | 10h | $25/h | **$250** | - | - | $250 |
-| **TOTAL** | **354h** | | **$8,850** | **80h** | Aunergia | **$8,850** |
+| Fase | Horas JM Bigi | Tarifa | Subtotal JM Bigi |
+|------|---------------|--------|------------------|
+| **Fase 0** | 40h | $25/h | **$1,000** |
+| **Fase 1** | 156h | $25/h | **$3,900** |
+| **Fase 2** | 148h | $25/h | **$3,700** |
+| **Elaboración presupuesto** | 10h | $25/h | **$250** |
+| **TOTAL** | **354h** | | **$8,850** |
 
-\* Las horas de Lucía Rodríguez las factura Aunergia directamente a Elanco (no incluidas en este presupuesto personal).
+Notas:
+- Las horas de Lucía Rodríguez (Aunergia) se muestran únicamente como referencia y se facturan por separado por Aunergia (no incluidas en este presupuesto personal).
+
+Horas de Lucía Rodríguez (referencia, no incluidas):
+
+| Fase | Horas Lucía |
+|------|-------------|
+| **Fase 0** | 28h |
+| **Fase 1** | 40h |
+| **Fase 2** | 12h |
+| **TOTAL** | **80h** |
 
 ### 4.3. Costos adicionales estimados (no incluidos)
 
