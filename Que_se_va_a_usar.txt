@@ -4,19 +4,6 @@ Qué se va a usar (plataformas confirmadas):
 1. SAP ECC (power users con roles MM, SD, FI, CO).
 2. Google BigQuery (dataset CASA y ERP Enterprise Data Product).
 3. Microsoft Power BI (workspaces corporativos y RLS aplicado).
-4. Herramientas de apoyo: BigQuery Studio, ODBC Simba, Confluence/SharePoint.
-
-Recursos y licencias comprometidos (todos los montos en USD):
-- 1 power user primario (Lucía Rodríguez) + 2 respaldos con roles espejo.
-- 5 licencias SAP adicionales asignadas a Finanzas/Supply para pruebas.
-- 8 licencias Power BI Pro (4 Finanzas, 2 Supply, 1 TechOps, 1 TI Global).
-- Accesos BigQuery Data Viewer/Data Editor para 6 integrantes del equipo central.
-- Presupuesto validado Fases 0-2: USD 48.000 (F0: 11.520, F1: 20.260, F2: 16.220) con 494 horas totales según `presupuesto_actualizado.md`.
-- Consultoría ABAP externa acotada a 40 h (USD 3.400) incluida en la cifra total.
-- Acuerdo de confidencialidad Aunergia–Elanco vigente (no se requieren firmas adicionales).
-
-Pendientes controlados desde `checklist_permisos_y_licencias.md`:
-- Tickets para exponer tablas Z (ZLEL008) y CO-PA en BigQuery – en curso con TI Global.
 
 Por el momento no se va a usar:
 1. Gemini AI Cloud Companion – se documenta como opcional; las consultas se realizarán manualmente o con GPT básico externo hasta nuevo aviso.
