@@ -1,0 +1,25 @@
+Hola Lucía,
+
+Te paso el listado mínimo de herramientas y permisos que necesitamos confirmar con Elanco / Global IT antes de avanzar:
+
+1.SAP
+
+1.1. Usuario “Power User” con acceso pleno a MM, SD, FI y CO (transacciones ME2L, VA05, KSB1, FAGLL03, etc.).
+1.2. Autorización para exportaciones masivas (ALV / batch) y para exponer tablas estándar y Z vía conectores externos.
+
+2. Google BigQuery / Google Cloud
+
+2.1. Cuenta corporativa Elanco habilitada con roles BigQuery Data Viewer, BigQuery Data Editor y BigQuery Job User sobre el dataset regional.
+2.2. Acceso a BigQuery Studio y al ERP Enterprise Data Product (diccionario SAP enriquecido).
+2.3. Confirmar disponibilidad de campos/tablas faltantes y proceso de tickets para publicarlas.
+
+3. Power BI
+3.1. Licencias Power BI Pro (o Premium si el rollout global lo exige) para el equipo del proyecto.
+3.2. Permisos a workspaces corporativos, gateways y configuración de Row-Level Security acorde a cada país/área.
+
+4. Herramientas complementarias
+4.1. Driver ODBC Simba autorizado para casos donde necesitemos Alteryx/Excel/Tableau.
+
+5. No se considera:
+5.1. Acuerdos de confidencialidad (se supone que Aunergia y Elanco ya los tienen).
+5.2. Repositorio de código/documentación corporativa disponible (Git/SharePoint/Confluence) para versionado y soporte.

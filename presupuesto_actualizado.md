@@ -3,20 +3,20 @@
 ---
 
 ## 1. Resumen Ejecutivo
-Elanco necesita automatizar la extracción de datos desde SAP, centralizar la información en un repositorio corporativo y potenciar la analítica con Power BI y capacidades predictivas futuras. Esta propuesta actualizada sintetiza la conversación con Lucía Rodríguez, el correo corporativo recibido y el inventario de transacciones SAP priorizadas. El enfoque prioriza una **Fase 0 de habilitación y permisos**, seguida por la **automatización SAP → BigQuery**, la **modelización para Power BI** y un **módulo opcional predictivo**.
+Elanco necesita automatizar la extracción de datos desde SAP, centralizar la información en un repositorio corporativo y potenciar la analítica con Power BI y capacidades predictivas futuras. Esta propuesta actualizada sintetiza la conversación con Lucía Rodríguez, el correo corporativo recibido, el inventario refinado de transacciones SAP (`transacciones_sap_backlog.md`) y el lineamiento de **Power User Persona** (`Attach_1_Correo_1_Texto_de_Imagen.md`). El enfoque prioriza una **Fase 0 de habilitación y permisos**, seguida por la **automatización SAP → BigQuery**, la **modelización para Power BI** y un **módulo opcional predictivo**.
 
-La inversión estimada para las primeras tres fases (Fase 0 a Fase 2) es de **USD 46.800**, con un esfuerzo de **516 horas** distribuidas entre gobernanza, extracción SAP, arquitectura de datos y BI. Se asume BigQuery como Data Lake objetivo dado el uso corporativo global; se habilita un plan de contingencia si se confirman limitaciones que obliguen a migrar a Azure Data Lake.
+La inversión estimada para las primeras tres fases (Fase 0 a Fase 2) es de **USD 46.800**, con un esfuerzo de **516 horas** distribuidas entre gobernanza, extracción SAP, arquitectura de datos y BI. Se asume BigQuery como Data Lake objetivo dado el uso corporativo global; se habilita un plan de contingencia si se confirman limitaciones que obliguen a migrar a Azure Data Lake. El plan incorpora el blindaje requerido por TI Global, reforzado por el nuevo **Checklist de permisos y licencias** (`checklist_permisos_y_licencias.md`) y la disponibilidad de herramientas como BigQuery Studio y Gemini AI Companion.
 
 ---
 
 ## 2. Supuestos y Alcance
 
-- **Plataforma objetivo**: Google BigQuery (Data Lake corporativo autorizado). Alternativas (Azure, Snowflake) se evaluarán en Fase 0 si BigQuery resulta insuficiente.
+- **Plataforma objetivo**: Google BigQuery (Data Lake corporativo autorizado). Alternativas (Azure, Snowflake) se evaluarán en Fase 0 si BigQuery resulta insuficiente o si las limitaciones señaladas por David Saboyá persisten.
 - **Origen de datos**: Transacciones SAP listadas en `Transacciones SAP.csv` y nuevas fuentes que se definan (ej. Business Objects).
 - **Herramientas de visualización**: Power BI corporativo, con modelos tabulares, KPIs financieros y de supply.
 - **Usuarios clave**: Finanzas, Supply Chain, TechOps (CASA). Se requerirá la participación de TI Global para permisos.
 - **Seguridad y compliance**: Coordinación con políticas globales Elanco, acuerdos de confidencialidad y tickets de permisos.
-- **Entregables**: Pipelines automatizados SAP → BigQuery, modelos semánticos, dashboards Power BI certificados, documentación operativa, plan de soporte.
+- **Entregables**: Pipelines automatizados SAP → BigQuery, modelos semánticos, dashboards Power BI certificados, documentación operativa, plan de soporte y evidencias de permisos/licencias habilitados (checklist firmado).
 
 ---
 
@@ -31,19 +31,22 @@ La inversión estimada para las primeras tres fases (Fase 0 a Fase 2) es de **US
 | Arquitecto Datos | 32 | 140 | 4.480 |
 | Especialista SAP / Lucía | 28 | 60 | 1.680 |
 | QA / Compliance | 12 | 80 | 960 |
-| **Total Fase 0** | **112** | | **11.520** |
+| Power User Inside Elanco (coaching) | 8 | N/A (sin cargo, acompañamiento) | 0 |
+| **Total Fase 0** | **120** | | **11.520** |
 
 **Actividades clave**:
 - Validar alcance con Finanzas y Supply; refinar prioridades del inventario de transacciones.
 - Gestionar permisos SAP (power user) y tickets para exponer tablas faltantes en BigQuery.
-- Evaluar limitaciones de BigQuery y definir contingencia (Azure Data Lake) con TI Global.
+- Evaluar limitaciones de BigQuery y definir contingencia (Azure Data Lake) con TI Global, considerando uso de **BigQuery Studio**, **ERP Enterprise Data Product** y **ODBC Simba** para conectores externos.
 - Diseñar blueprint SAP → BigQuery → Power BI (modelo conceptual y fluxo de datos).
 - Definir métricas clave (ventas, opex, inventario) y criterios de calidad.
+- Identificar y entrenar al power user interno en línea con las expectativas corporativas (SQL avanzado, governance, control de costos).
 
 **Entregables**:
 - Arquitectura aprobada y plan de permisos.
 - Matriz de riesgos y gobernanza.
-- Backlog priorizado de transacciones (`ME2L`, `MM60`, `VA05`, `KSB1`, `KE24`, etc.).
+- Backlog priorizado de transacciones (`transacciones_sap_backlog.md`).
+- Checklist de habilitación firmado (`checklist_permisos_y_licencias.md`).
 
 ---
 
@@ -63,6 +66,7 @@ La inversión estimada para las primeras tres fases (Fase 0 a Fase 2) es de **US
 - Implementar mecanismos de control y trazabilidad (auditoría). 
 - Gestionar tickets de BigQuery para tablas faltantes y validar permisos productivos.
 - Documentar diccionarios de datos y reglas de transformación.
+- Implementar monitoreo de consumo y costos en BigQuery según políticas del power user persona.
 
 **Entregables**:
 - Pipelines productivos SAP → BigQuery para transacciones prioritarias (ME2L, ZLEL008, KSB1, FAGLL03, etc.).
@@ -85,9 +89,10 @@ La inversión estimada para las primeras tres fases (Fase 0 a Fase 2) es de **US
 
 **Actividades clave**:
 - Modelos tabulares y dataset certificado para Finanzas y Supply.
-- Dashboards ejecutivos y operativos (ventas, inventario, opex, órdenes abiertas).
+-- Dashboards ejecutivos y operativos (ventas, inventario, opex, órdenes abiertas) con narrativa alineada al valor estratégico definido en `presupuesto_3.md`.
 - Pruebas funcionales con usuarios clave; checklist de datos críticos.
 - Manuales operativos y plan de soporte; talleres con usuarios finales.
+- Guía de autosuficiencia para power users (incluye uso de BigQuery Studio y Gemini Companion).
 
 **Entregables**:
 - Dashboards en producción y dataset gobernado.

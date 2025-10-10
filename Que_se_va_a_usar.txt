@@ -6,3 +6,6 @@ Qué se va a usar:
 Otras herramientas complementarias si es necesario.
 
 Detallar detallar licencias de software requeridas para los trabajadores, y los accesos (SAP, Big Query, Power BI, etcétera).
+
+Por el momento no se va a usar:
+1. Gemini AI Cloud Companion - Se realizarán las consultas de manera manual o con GPT básico de navegador y externo.
