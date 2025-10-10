@@ -44,3 +44,9 @@ Te paso el listado mínimo de herramientas y permisos que necesitamos confirmar 
 5. No se considera:
 5.1. Acuerdos de confidencialidad (se supone que Aunergia y Elanco ya los tienen).
 5.2. Repositorio de código/documentación corporativa disponible (Git/SharePoint/Confluence) para versionado y soporte.
+
+PS:
+- Presupuesto vigente: `presupuesto_actualizado.md` (USD 48.000, 494 h; incluye tope ABAP 40 h / USD 3.400).
+- Checklist de permisos y licencias: `checklist_permisos_y_licencias.md`.
+- Backlog de transacciones SAP: `transacciones_sap_backlog.md` (fuentes: `Attach_2_Correo_1_Transacciones SAP.csv` y `Attach_2_Correo_1_Transacciones SAP.xlsx`).
+- Nota: otros archivos de presupuesto en esta carpeta son históricos y redirigen al presupuesto vigente.
