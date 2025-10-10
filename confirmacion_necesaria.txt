@@ -1,5 +1,26 @@
 Hola Lucía,
+Elanco Power – Confirmación de financiamiento y próximos pasos
+Fecha: 10 de octubre de 2025
 
+Hola Lucía,
+
+Confirmo que Finanzas y Operaciones aprobaron el presupuesto consolidado para las Fases 0 a 2 por **USD 48.000** (120 h + 206 h + 168 h) e incorporaron el límite de consultoría ABAP externa en **40 horas / USD 3.400**. Con esta aprobación podemos iniciar la Fase 0 en cuanto se cumplan los condicionantes administrativos:
+
+1. Dejar constancia interna de que el acuerdo de confidencialidad vigente entre Aunergia y Elanco cubre el proyecto (sin firmas adicionales).
+2. Asignación de los accesos SAP y BigQuery según el checklist actualizado (tickets SAP-48219 y BQ-7713).
+3. Confirmación del power user principal y sus dos respaldos (Lucía Rodríguez como titular; backups propuestos: Carolina Rondón y Juan Sebastián Ravelo).
+
+Además, Finanzas solicitó que mantengamos el seguimiento semanal de:
+
+- Publicación de tablas Z y CO-PA para garantizar que las transacciones de septiembre-octubre ya estén disponibles en BigQuery antes del Go/No-Go de Fase 1.
+- Consumos de BigQuery (dashboard de FinOps programado para la semana del 30-oct-2025).
+
+Quedo atento a tu confirmación para agendar el kick-off con Linda y David el 16 de octubre, y registrar oficialmente el inicio de la Fase 0.
+
+Saludos,
+
+Juan Manuel Bigi
+Proyecto Elanco Power
 Te paso el listado mínimo de herramientas y permisos que necesitamos confirmar con Elanco / Global IT antes de avanzar:
 
 1.SAP

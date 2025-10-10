@@ -1,5 +1,7 @@
 # **PROPUESTA EJECUTIVA MEJORADA - AUTOMATIZACIÓN ANALÍTICA SAP → BIGQUERY**
 
+> Actualización 10-oct-2025: El comité Finanzas/Operaciones ratificó un presupuesto vigente de **USD 48.000** para las Fases 0-2, con un tope de **40 horas / USD 3.400** para consultoría ABAP externa. Cualquier cifra alternativa incluida más adelante corresponde a un análisis histórico y deberá recalibrarse antes de compartirse con stakeholders. Moneda oficial: **USD**.
+
 ## **VISIÓN ESTRATÉGICA Y VALOR ENTREGABLE**
 
 ### **Resumen Ejecutivo Refinado**

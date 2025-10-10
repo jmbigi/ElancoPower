@@ -1,3 +1,5 @@
+> Actualización 10-oct-2025: El presupuesto oficial aprobado para las Fases 0-2 es de **USD 48.000** con consultoría ABAP externa limitada a **40 horas / USD 3.400**. Los cálculos detallados más abajo corresponden a versiones históricas y deben ajustarse utilizando estas cifras y el límite de consultores acordado. Mantener moneda **USD** en todas las comunicaciones.
+
 Absolutamente. Aquí tienes la **Propuesta Ejecutiva** completa, generada como Analista de Negocios Senior y Project Manager, siguiendo el formato, la estructura y las justificaciones de costo detalladas en el Super Prompt.
 
 ***

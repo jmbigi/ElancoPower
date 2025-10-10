@@ -1,11 +1,13 @@
 # PROPUESTA EJECUTIVA ACTUALIZADA – ELANCO POWER
 
+> Actualizado al 10-oct-2025 (reunión Finanzas + Operaciones). Todos los montos se expresan en **USD**.
+
 ---
 
 ## 1. Resumen Ejecutivo
 Elanco necesita automatizar la extracción de datos desde SAP, centralizar la información en un repositorio corporativo y potenciar la analítica con Power BI y capacidades predictivas futuras. Esta propuesta actualizada sintetiza la conversación con Lucía Rodríguez, el correo corporativo recibido, el inventario refinado de transacciones SAP (`transacciones_sap_backlog.md`) y el lineamiento de **Power User Persona** (`Attach_1_Correo_1_Texto_de_Imagen.md`). El enfoque prioriza una **Fase 0 de habilitación y permisos**, seguida por la **automatización SAP → BigQuery**, la **modelización para Power BI** y un **módulo opcional predictivo**.
 
-La inversión estimada para las primeras tres fases (Fase 0 a Fase 2) es de **USD 46.800**, con un esfuerzo de **516 horas** distribuidas entre gobernanza, extracción SAP, arquitectura de datos y BI. Se asume BigQuery como Data Lake objetivo dado el uso corporativo global; se habilita un plan de contingencia si se confirman limitaciones que obliguen a migrar a Azure Data Lake. El plan incorpora el blindaje requerido por TI Global, reforzado por el nuevo **Checklist de permisos y licencias** (`checklist_permisos_y_licencias.md`) y la disponibilidad de herramientas como BigQuery Studio y Gemini AI Companion.
+La inversión estimada para las primeras tres fases (Fase 0 a Fase 2) es de **USD 48.000**, con un esfuerzo de **494 horas** distribuidas entre gobernanza, extracción SAP, arquitectura de datos y BI. Este valor fue ratificado por el comité conjunto Finanzas/Operaciones del 10-oct-2025 y reemplaza cifras anteriores. Se asume BigQuery como Data Lake objetivo dado el uso corporativo global; se habilita un plan de contingencia si se confirman limitaciones que obliguen a migrar a Azure Data Lake. El plan incorpora el blindaje requerido por TI Global, reforzado por el nuevo **Checklist de permisos y licencias** (`checklist_permisos_y_licencias.md`) y la disponibilidad de herramientas como BigQuery Studio y Gemini AI Companion.
 
 ---
 
@@ -34,6 +36,8 @@ La inversión estimada para las primeras tres fases (Fase 0 a Fase 2) es de **US
 | Power User Inside Elanco (coaching) | 8 | N/A (sin cargo, acompañamiento) | 0 |
 | **Total Fase 0** | **120** | | **11.520** |
 
+> Las 8 horas de coaching del power user se registran para planificación, pero no se facturan; el subtotal refleja únicamente las horas con tarifa (112 h) y 8 h de acompañamiento sin cargo.
+
 **Actividades clave**:
 - Validar alcance con Finanzas y Supply; refinar prioridades del inventario de transacciones.
 - Gestionar permisos SAP (power user) y tickets para exponer tablas faltantes en BigQuery.
@@ -60,6 +64,8 @@ La inversión estimada para las primeras tres fases (Fase 0 a Fase 2) es de **US
 | PM / Gobernanza | 28 | 110 | 3.080 |
 | QA Datos | 24 | 80 | 1.920 |
 | **Total Fase 1** | **206** | | **20.260** |
+
+> **Acuerdo consultoría externa 10-oct-2025:** Dentro de las 90 horas de Lucía + soporte ABAP se reservan **40 horas** para consultoría ABAP especializada (USD 3.400). Las horas restantes serán cubiertas por el equipo interno; no se prevén refuerzos adicionales salvo aprobación explícita de Finanzas.
 
 **Actividades clave**:
 - Construir pipelines para transacciones críticas (prioridad 1) con historización.
@@ -89,15 +95,12 @@ La inversión estimada para las primeras tres fases (Fase 0 a Fase 2) es de **US
 
 **Actividades clave**:
 - Modelos tabulares y dataset certificado para Finanzas y Supply.
--- Dashboards ejecutivos y operativos (ventas, inventario, opex, órdenes abiertas) con narrativa alineada al valor estratégico definido en `presupuesto_3.md`.
+- Dashboards ejecutivos y operativos (ventas, inventario, opex, órdenes abiertas) con narrativa alineada al valor estratégico acordado en este presupuesto.
 - Pruebas funcionales con usuarios clave; checklist de datos críticos.
 - Manuales operativos y plan de soporte; talleres con usuarios finales.
 - Guía de autosuficiencia para power users (incluye uso de BigQuery Studio y Gemini Companion).
 
 **Entregables**:
-- Dashboards en producción y dataset gobernado.
-- Plan de operación, soporte y mantenimiento.
-- Reporte de lecciones aprendidas y roadmap futuro.
 
 ---
 
@@ -113,10 +116,10 @@ Se cotizará aparte en el futuro, durante Fase 2 (estimado USD 35.000 – 50.000
 
 | Concepto | Horas | USD |
 | --- | --- | --- |
-| Fase 0 – Due Diligence | 112 | 11.520 |
+| Fase 0 – Due Diligence | 120 | 11.520 |
 | Fase 1 – Automatización | 206 | 20.260 |
 | Fase 2 – BI & Cierre | 168 | 16.220 |
-| **Total Proyecto (Fase 0-2)** | **516** | **46.800** |
+| **Total Proyecto (Fase 0-2)** | **494** | **48.000** |
 
 *Los valores incluyen 15% de contingencia y overhead para coordinación corporativa.*
 
@@ -135,17 +138,17 @@ Se cotizará aparte en el futuro, durante Fase 2 (estimado USD 35.000 – 50.000
 ---
 
 ## 6. Próximos Pasos
-1. **Aprobación formal del presupuesto Fase 0 (USD 11.520)** y firma de acuerdo de confidencialidad.
-2. **Kick-off con stakeholders** (Finanzas, Supply, TI Global, TechOps) para validar backlog y plan de permisos.
-3. **Ejecución de Fase 0** y entrega de blueprint, matriz de riesgos y plan de permisos.
-4. **Go/No-Go** para Fase 1 en base a resultados de Fase 0.
+1. **Aprobación formal del presupuesto Fase 0 (USD 11.520)** dejando constancia del acuerdo de confidencialidad vigente entre Aunergia y Elanco – responsable Linda López, fecha objetivo 14-oct-2025.
+2. **Kick-off con stakeholders** (Finanzas, Supply, TI Global, TechOps) para validar backlog y plan de permisos – responsable Juan Manuel Bigi, fecha objetivo 16-oct-2025.
+3. **Cierre del checklist de permisos críticos** (`checklist_permisos_y_licencias.md`) antes de liberar Fase 1 – seguimiento semanal con TI Global.
+4. **Go/No-Go** para Fase 1, condicionado a: checklist completo + confirmación de que las transacciones septiembre-octubre estén disponibles en SAP/BigQuery.
 
 ---
 
 ## 7. Criterios de Éxito y ROI Esperado
 - Reducción del 70% del tiempo de consolidación de reportes mensuales.
 - Dashboard financiero disponible en máximo 24 h tras cierre de mes.
-- Disponibilidad del 100% de las transacciones prioritarias en el Data Lake.
+- Disponibilidad del 100% de las transacciones prioritarias en el Data Lake, con evidencia cargada de septiembre-octubre en SAP/BigQuery.
 - Usuarios de Finanzas certificados en Power BI y procesos de soporte en marcha.
 - Recuperación de inversión estimada en 12-15 meses mediante ahorro operativo y reducción de errores.
 
