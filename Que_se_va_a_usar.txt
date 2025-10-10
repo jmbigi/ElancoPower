@@ -1,0 +1,8 @@
+Qué se va a usar:
+1. SAP
+2. Big Query
+3. Power BI
+
+Otras herramientas complementarias si es necesario.
+
+Detallar detallar licencias de software requeridas para los trabajadores, y los accesos (SAP, Big Query, Power BI, etcétera).
