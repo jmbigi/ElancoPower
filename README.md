@@ -101,7 +101,7 @@ Automatizar la extracción de datos desde **SAP ECC** y centralizarlos en **Goog
 - **F.01** - Estado de situación (FI)
 
 ### Pendientes de clasificar (Fase futura):
-ME2L, MM60, MB59, ZVEL015, ME23N, FBL1N, FBL5N, MB5B, xk03, xd03
+ME2L, MM60, MB59, ZVEL015, ME23N, FBL1N, FBL5N, MB5B, XK03, XD03
 
 ---
 
@@ -171,16 +171,16 @@ ME2L, MM60, MB59, ZVEL015, ME23N, FBL1N, FBL5N, MB5B, xk03, xd03
    - Híbrido (~USD 25,000)
 
 ### Si eres stakeholder Elanco:
-1. Lee **`conversaciones_con_lucia.md`** para contexto del proyecto
-2. Lee **`correo_1_de_lucia.md`** para ver los issues reportados por David Saboya
-3. Revisa **`Que_se_va_a_usar.txt`** para confirmar plataformas
+1. Lee **`inputs/conversaciones_con_lucia.md`** para contexto del proyecto
+2. Lee **`inputs/correo_1_de_lucia.md`** para ver los issues reportados por David Saboya
+3. Revisa **`inputs/Que_se_va_a_usar.txt`** para confirmar plataformas
 4. Lee el presupuesto elegido por Aunergia
 
 ### Si eres Juan Manuel Bigi (Manolo):
 1. Tu presupuesto está en **`PRESUPUESTO_REAL_BASADO_EN_FUENTES_PRIMARIAS.md`**
-2. Las transacciones a implementar están en **`Attach_2_Correo_1_Transacciones SAP.csv`**
+2. Las transacciones a implementar están en **`inputs/Attach_2_Correo_1_Transacciones SAP.csv`** (o el normalizado: `inputs/Attach_2_Correo_1_Transacciones SAP.normalized.csv`)
 3. Los issues técnicos están en **`correo_1_de_lucia.md`**
-4. Las especificaciones del Power User están en **`Attach_1_Correo_1_Texto_de_Imagen.md`**
+4. Las especificaciones del Power User están en **`inputs/Attach_1_Correo_1_Texto_de_Imagen.md`**
 
 ---
 
@@ -191,16 +191,17 @@ ME2L, MM60, MB59, ZVEL015, ME23N, FBL1N, FBL5N, MB5B, xk03, xd03
 - **Presupuesto Aunergia completo:** `presupuesto_actualizado.md` (USD 48,000)
 
 ### Datos técnicos:
-- **Transacciones SAP:** `Attach_2_Correo_1_Transacciones SAP.csv` (22 transacciones)
-- **Plataformas confirmadas:** `Que_se_va_a_usar.txt` (SAP ECC, BigQuery, Power BI)
-- **Issues reportados:** `correo_1_de_lucia.md` (permisos SAP, tablas BigQuery)
+- **Transacciones SAP:** `inputs/Attach_2_Correo_1_Transacciones SAP.csv` (22 transacciones)
+- **Transacciones SAP (normalizado):** `inputs/Attach_2_Correo_1_Transacciones SAP.normalized.csv` (estandarizado de nombres/áreas y limpieza de espacios)
+- **Plataformas confirmadas:** `inputs/Que_se_va_a_usar.txt` (SAP ECC, BigQuery, Power BI)
+- **Issues reportados:** `inputs/correo_1_de_lucia.md` (permisos SAP, tablas BigQuery)
  - **Checklist permisos/licencias:** `checklist_permisos_y_licencias.md`
  - **Backlog transacciones SAP:** `transacciones_sap_backlog.md`
 
 ### Datos de contexto:
-- **Audio explicativo:** `conversaciones_con_lucia.md` (09-oct-2025, 04:39 min)
-- **Especificaciones técnicas:** `Attach_1_Correo_1_Texto_de_Imagen.md` (Power User Persona)
-- **Participantes:** `quienes_somos.txt`
+- **Audio explicativo:** `inputs/conversaciones_con_lucia.md` (09-oct-2025, 04:39 min)
+- **Especificaciones técnicas:** `inputs/Attach_1_Correo_1_Texto_de_Imagen.md` (Power User Persona)
+- **Participantes:** `inputs/quienes_somos.txt`
 
 ---
 
@@ -208,7 +209,7 @@ ME2L, MM60, MB59, ZVEL015, ME23N, FBL1N, FBL5N, MB5B, xk03, xd03
 
 **Para consultas sobre presupuesto:**
 - Lucía Rodríguez: lucia.rodriguez@aunergia.com.ar
-- Linda López: [email pendiente]
+- Linda López: linda.lopez@aunergia.com.ar
 
 **Para consultas técnicas:**
 - Juan Manuel Bigi (Manolo): [email pendiente]

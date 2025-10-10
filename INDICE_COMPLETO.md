@@ -254,11 +254,14 @@
 
 ## 📞 CONTACTOS
 
+Nota: se incluye un archivo normalizado para uso analítico:
+- `inputs/Attach_2_Correo_1_Transacciones SAP.normalized.csv` (nombres/áreas estandarizados y limpieza de espacios)
+
 | Persona | Rol | Email | Teléfono |
 |---------|-----|-------|----------|
 | Juan Manuel Bigi | Desarrollador | [pending] | - |
 | Lucía Rodríguez | Analista SAP | lucia.rodriguez@aunergia.com.ar | - |
-| Linda López | Coordinadora | [pending] | - |
+| Linda López | Coordinadora | linda.lopez@aunergia.com.ar | - |
 | David Saboya | TI Elanco | david.saboya@network.elancoah.com | +57 316 422 5533 |
 
 ---

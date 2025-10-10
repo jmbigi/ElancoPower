@@ -18,7 +18,7 @@ Todos los documentos han sido revisados exhaustivamente y se encuentran en condi
 
 ## 📁 DOCUMENTOS VERIFICADOS
 
-### ✅ Documentos Principales (7 archivos)
+### ✅ Documentos Principales (8 archivos)
 
 | # | Documento | Páginas | Estado | Calidad |
 |---|-----------|---------|--------|---------|

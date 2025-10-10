@@ -33,3 +33,4 @@ Fecha: 10 de octubre de 2025
 Notas:
 - Este backlog se consolidará y firmará en Fase 0 mediante workshops con Finanzas/Supply/TechOps.
 - Los nombres de tablas SAP específicas (VBAK, EKPO, etc.) se anexarán una vez confirmadas por TI Global.
+- Para análisis y tracking usar también: `inputs/Attach_2_Correo_1_Transacciones SAP.normalized.csv` (deduplicado y estandarizado)

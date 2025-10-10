@@ -1,0 +1,20 @@
+Transaccion,Descripcion,Prioridad,Area
+VA05,Sales Order,1,Supply
+VA05,Ordenes Abiertas,2,Finanzas
+ZLEL008,Inventario,1,Supply-Finanzas
+KSB1,OPEX,1,Finanzas
+KE24,Venta,2,Finanzas
+FB03,Documentos de Venta,2,Finanzas
+FAGLL03,,1,Finanzas
+F.08,,,
+F.01,,,
+ME2L,PO,,
+ME23N,,,
+MM60,Std Cost,,,
+MB59,Movimientos de material,,
+ZVEL015,Condiciones de Precio,,,
+FBL1N,,,
+FBL5N,,,
+MB5B,,,
+XK03,,,
+XD03,,,
