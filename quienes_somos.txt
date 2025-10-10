@@ -1,7 +1,7 @@
 Quienes somos:
 
-1. Yo soy Juan Manuel Bigi Musil (Manolo).
-2. Lucía Rodriguez, mi hermana también (realiza consultoría externa para Aunergia)
-3. Aunergia. Somos una firma de consultoría especializada en brindar asesoría experta en optimización de procesos de negocio y consultoría TI para incrementar la productividad de su empresa. Nuestra empresa fue fundada en 2017 por ex ejecutivos de una de las principales firmas Big-Four, y tenemos nuestra sede en Argentina con oficinas en Estados Unidos y España. Nuestra clientela se extiende por México, Centroamérica, Brasil, Chile, Perú, Uruguay, Colombia y España.
-4. Elanco. Una empresa de gente conducida por propósitos, creemos que los animales sanos son la clave para resolver algunos de los problemas más importantes del mundo.
-5. GlobalIT empresa que presta servicios de gestión de SAP para Elanco, encargados de la seguridad del sistema. 
+1. Juan Manuel Bigi Musil (Manolo).
+2. Lucía Rodríguez (consultoría externa para Aunergia).
+3. Aunergia. Firma de consultoría especializada en optimización de procesos de negocio y consultoría TI para incrementar la productividad. Fundada en 2017 por ex ejecutivos de una Big Four, con sede en Argentina y oficinas en Estados Unidos y España. Clientes en México, Centroamérica, Brasil, Chile, Perú, Uruguay, Colombia y España.
+4. Elanco. Compañía guiada por propósitos: los animales sanos son clave para resolver problemas relevantes del mundo.
+5. TI Global (gestiona SAP para Elanco y la seguridad del sistema).
