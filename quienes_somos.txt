@@ -4,4 +4,4 @@ Quienes somos:
 2. Lucía Rodríguez (consultoría externa para Aunergia).
 3. Aunergia. Firma de consultoría especializada en optimización de procesos de negocio y consultoría TI para incrementar la productividad. Fundada en 2017 por ex ejecutivos de una Big Four, con sede en Argentina y oficinas en Estados Unidos y España. Clientes en México, Centroamérica, Brasil, Chile, Perú, Uruguay, Colombia y España.
 4. Elanco. Compañía guiada por propósitos: los animales sanos son clave para resolver problemas relevantes del mundo.
-5. TI Global (gestiona SAP para Elanco y la seguridad del sistema).
+5. GlobalIT (gestiona SAP para Elanco y la seguridad del sistema).
