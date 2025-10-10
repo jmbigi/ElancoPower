@@ -13,7 +13,7 @@ La inversión estimada para las primeras tres fases (Fase 0 a Fase 2) es de **US
 
 ## 2. Supuestos y Alcance
 
-- **Plataforma objetivo**: Google BigQuery (Data Lake corporativo autorizado). Alternativas (Azure, Snowflake) se evaluarán en Fase 0 si BigQuery resulta insuficiente o si las limitaciones señaladas por David Saboyá persisten.
+- **Plataforma objetivo**: Google BigQuery (Data Lake corporativo autorizado). Alternativas (Azure, Snowflake) se evaluarán en Fase 0 si BigQuery resulta insuficiente o si las limitaciones señaladas por David Saboya persisten.
 - **Origen de datos**: Transacciones SAP listadas en `Attach_2_Correo_1_Transacciones SAP.csv` y nuevas fuentes que se definan (ej. Business Objects).
 - **Herramientas de visualización**: Power BI corporativo, con modelos tabulares, KPIs financieros y de supply.
 - **Usuarios clave**: Finanzas, Supply Chain, TechOps (CASA). Se requerirá la participación de TI Global para permisos.

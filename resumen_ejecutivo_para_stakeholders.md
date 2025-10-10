@@ -2,6 +2,8 @@
 
 > Actualizado al 10-oct-2025. Todos los montos expresados en USD. El cronograma queda condicionado al cierre del checklist de permisos y a la carga de datos septiembre-octubre.
 
+> Nota: el único presupuesto vigente es `presupuesto_actualizado.md`. Cualquier otro archivo de presupuesto en la carpeta es histórico y se mantiene solo como referencia.
+
 ## Objetivo del Proyecto
 Automatizar la extracción de datos desde SAP y centralizarlos en BigQuery para habilitar analítica corporativa con Power BI. A largo plazo, montar capacidades predictivas que permitan simular escenarios de negocio.
 
@@ -48,4 +50,4 @@ Automatizar la extracción de datos desde SAP y centralizarlos en BigQuery para 
 - `transacciones_sap_backlog.md`
 - `checklist_permisos_y_licencias.md`
 
-> Este resumen está pensado para presentaciones ejecutivas (Linda Lopez, David Saboyá, Finanzas y Supply) y puede convertirse rápidamente en un deck corporativo.
+> Este resumen está pensado para presentaciones ejecutivas (Linda López, David Saboya, Finanzas y Supply) y puede convertirse rápidamente en un deck corporativo.

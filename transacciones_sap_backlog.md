@@ -1,6 +1,6 @@
 # Backlog Prioritario de Transacciones SAP
 
-Actualizado al 10-oct-2025. Consolidado con `Attach_2_Correo_1_Transacciones SAP.csv`, conversaciones con Lucía y verificación de cargas SAP de septiembre-octubre.
+Actualizado al 10-oct-2025. Consolidado con `Attach_2_Correo_1_Transacciones SAP.csv` y `Attach_2_Correo_1_Transacciones SAP.xlsx`, conversaciones con Lucía y verificación de cargas SAP de septiembre-octubre.
 
 | Transacción | Descripción de referencia | Prioridad | Área responsable | Estado de permiso BigQuery | Sept-Oct SAP/BigQuery | Tablas SAP a validar | Notas / Próximas acciones |
 |-------------|---------------------------|-----------|------------------|----------------------------|----------------------|----------------------|---------------------------|
