@@ -1,0 +1,161 @@
+================================================================================
+        ALCANCE: TRANSACCIONES SAP PARA SINCRONIZACIÓN CON DATA LAKE
+================================================================================
+Proyecto: Elanco Power - Centralización de Datos
+Fecha: 29 de octubre de 2025
+Fuente: Attach_2_Correo_1_Transacciones SAP.csv (normalizado)
+
+================================================================================
+PRIORIDAD 1 - CRÍTICAS
+================================================================================
+
+1.  VA05 - Sales Order / Órdenes Abiertas
+    Área: Supply/Finanzas
+    [✓] SÍ ESTABA EN ANTECEDENTES - Listada 2 veces en archivo original
+
+2.  ZLEL008 - Inventario consolidado
+    Área: Supply-Finanzas
+    [✓] SÍ ESTABA EN ANTECEDENTES
+
+3.  KSB1 - OPEX / Órdenes CO
+    Área: Finanzas
+    [✓] SÍ ESTABA EN ANTECEDENTES
+
+4.  FAGLL03 - Mayor General
+    Área: Finanzas
+    [✓] SÍ ESTABA EN ANTECEDENTES
+
+================================================================================
+PRIORIDAD 2 - IMPORTANTES
+================================================================================
+
+5.  KE24 - Venta / CO-PA
+    Área: Finanzas
+    [✓] SÍ ESTABA EN ANTECEDENTES - Listada 2 veces en archivo original
+
+6.  FB03 - Documentos de Venta
+    Área: Finanzas
+    [✓] SÍ ESTABA EN ANTECEDENTES - Listada 2 veces en archivo original
+
+7.  F.08 - Balance de Comprobación
+    Área: Finanzas
+    [✓] SÍ ESTABA EN ANTECEDENTES
+
+8.  F.01 - Estado de Situación
+    Área: Finanzas
+    [✓] SÍ ESTABA EN ANTECEDENTES
+
+================================================================================
+PENDIENTES DE CLASIFICAR (Sin prioridad asignada)
+================================================================================
+
+9.  ME2L - Purchase Orders (PO)
+    Área: Sin asignar
+    [✓] SÍ ESTABA EN ANTECEDENTES - Listada 2 veces en archivo original
+
+10. MM60 - Standard Cost (Costos Estándar)
+    Área: Sin asignar
+    [✓] SÍ ESTABA EN ANTECEDENTES
+
+11. MB59 - Movimientos de Material
+    Área: Sin asignar
+    [✓] SÍ ESTABA EN ANTECEDENTES
+
+12. ZVEL015 - Condiciones de Precio
+    Área: Sin asignar
+    [✓] SÍ ESTABA EN ANTECEDENTES
+
+13. ME23N - (Sin descripción disponible)
+    Área: Sin asignar
+    [✓] SÍ ESTABA EN ANTECEDENTES
+
+14. FBL1N - (Sin descripción disponible)
+    Área: Sin asignar
+    [✓] SÍ ESTABA EN ANTECEDENTES
+
+15. FBL5N - (Sin descripción disponible)
+    Área: Sin asignar
+    [✓] SÍ ESTABA EN ANTECEDENTES
+
+16. MB5B - (Sin descripción disponible)
+    Área: Sin asignar
+    [✓] SÍ ESTABA EN ANTECEDENTES
+
+17. XK03 - (Sin descripción disponible)
+    Área: Sin asignar
+    [✓] SÍ ESTABA EN ANTECEDENTES - Aparece como "xk03" (minúsculas)
+
+18. XD03 - (Sin descripción disponible)
+    Área: Sin asignar
+    [✓] SÍ ESTABA EN ANTECEDENTES - Aparece como "xd03" (minúsculas)
+
+================================================================================
+RESUMEN ESTADÍSTICO
+================================================================================
+
+Total de transacciones identificadas:        18
+Transacciones con Prioridad 1:               4
+Transacciones con Prioridad 2:               4
+Transacciones sin clasificar:                10
+Transacciones de antecedentes originales:    18 (100%)
+Transacciones nuevas agregadas:              0 (0%)
+
+Áreas involucradas:
+  - Finanzas: 8 transacciones clasificadas
+  - Supply: 1 transacción clasificada
+  - Supply-Finanzas: 1 transacción clasificada
+  - Sin asignar: 10 transacciones
+
+================================================================================
+OBSERVACIONES IMPORTANTES
+================================================================================
+
+1. TODAS las transacciones provienen del archivo original de Lucía
+   (Attach_2_Correo_1_Transacciones SAP.csv)
+
+2. Duplicados eliminados durante normalización:
+   - VA05 (aparecía 2 veces: "Sales Order" y "Órdenes Abiertas")
+   - KE24 (aparecía 2 veces: ambas como "Venta")
+   - FB03 (aparecía 2 veces: ambas como "Documentos de Venta")
+   - ME2L (aparecía 2 veces: "PO" y sin descripción)
+
+3. Inconsistencias de formato:
+   - XK03 y XD03 aparecían en minúsculas (xk03, xd03) en el original
+
+4. Pendientes de confirmación con TI Global:
+   - Nombres de tablas SAP específicas (VBAK, EKPO, etc.)
+   - Campos clave de cada transacción
+   - Frecuencia de sincronización requerida
+   - Disponibilidad de tablas en dataset CASA
+
+5. Plataforma Data Lake (CONFIRMADO):
+   - BigQuery (Google Cloud Platform)
+   - Dataset: CASA
+   - ERP Enterprise Data Product con diccionario de datos SAP mejorado
+   - BigQuery Studio para desarrollo
+   - ODBC Simba para conectividad
+
+================================================================================
+PRÓXIMOS PASOS
+================================================================================
+
+[ ] Workshop Fase 0 con Finanzas/Supply/TechOps para clasificar las 10 
+    transacciones pendientes
+
+[ ] Validación con TI Global de nombres de tablas SAP y campos clave
+
+[ ] Definición de frecuencia de sincronización por transacción
+
+[ ] Documentación de mapeo de campos SAP → BigQuery
+
+[✓] Plataforma confirmada: BigQuery en dataset CASA
+
+[ ] Conexión Power BI → BigQuery validada (nativa o ODBC Simba)
+
+[ ] Estimación de volumen de datos por transacción
+
+[ ] Definición de SLA para cada prioridad
+
+================================================================================
+FIN DEL DOCUMENTO
+================================================================================
