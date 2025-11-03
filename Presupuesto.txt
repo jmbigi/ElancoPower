@@ -1,0 +1,33 @@
+Presupuesto para elaboración de propuesta de centralización de datos de análisis
+
+Descripción general de la propuesta
+Propuesta para desarrollo de proyecto de centralización de datos de análisis.
+Fase 1: Construcción de repositorio (Data Lake) de datos de análisis. 
+Fase 2: Construcción de modelos y tableros de análisis.
+Fase 3: Modelos de predicción (solo una descripción detallada, sin estimación de esfuerzos).
+
+Alcance de la propuesta
+1. Análisis de los antecedentes
+2. Documento con propuesta:
+2.1. Alcances:
+2.1.1. Alcance de la propuesta.
+2.1.2. Transacciones SAP consideradas.
+2.2. Lista y descripción de tareas por fase (fases 0, 1 y 2).
+2.3. Estimación de esfuerzo (en horas) para perfiles técnicos.
+2.4. Cronograma semanal.
+2.5. Requisitos técnicos y administrativos iniciales.
+
+Transacciones incluidas en la propuesta y proyecto: ME2L, MM60, VA05, MB59, ZLEL008, KSB1, KE24, FB03, ZVEL015, ME23N, FAGLL03, FBL1N, F.08, F.01, XK03, XD03, FBL5N, MB5B.
+
+Fases:
+Fase 0 – Revisión del alcance y factibilidad
+Fase 1 – Transferencia de datos a repositorio
+Fase 2 – Modelado de datos y generación de tableros
+Fase 3 – Predicción (solo descripción)
+
+Costo de la propuesta
+30 horas * 25 USD = 750 USD.
+
+Fecha de elaboración: 3 de noviembre de 2025.
+Validez: 24 horas.
+Fecha de entrega: 12 de noviembre de 2025.
