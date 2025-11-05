@@ -1,7 +1,7 @@
 # ✅ REPORTE DE REVISIÓN FINAL - PROYECTO ELANCO POWER
 
 **Fecha de revisión:** 10 de octubre de 2025 - 21:00  
-**Revisor:** Juan Manuel Bigi (Manolo)  
+**Revisor:** Juan Manuel Bigi  
 **Estado:** ✅ **APROBADO PARA ENTREGA**
 
 ---
@@ -347,7 +347,7 @@ En `PRESUPUESTO_REAL_BASADO_EN_FUENTES_PRIMARIAS.md`:
    Cualquier duda me avisás.
    
    Saludos,
-   Manolo
+   JMB
    ```
 
 ### Para Aunergia (decisión estratégica)
@@ -406,7 +406,7 @@ En `PRESUPUESTO_REAL_BASADO_EN_FUENTES_PRIMARIAS.md`:
 5. ✅ La documentación es profesional y completa
 6. ✅ Los documentos están listos para entrega
 
-**Firma:** Juan Manuel Bigi (Manolo)  
+**Firma:** Juan Manuel Bigi  
 **Fecha:** 10 de octubre de 2025 - 21:00  
 **Resultado:** ✅ **APROBADO**
 

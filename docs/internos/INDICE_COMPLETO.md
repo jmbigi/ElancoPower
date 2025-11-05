@@ -131,7 +131,7 @@
 ### 12. **inputs/quienes_somos.txt** ✅
 **Tipo:** Contexto del proyecto  
 **Contenido:**
-- Participantes (Manolo, Lucía, Aunergia, Elanco, TI Global)
+- Participantes (JMB, Lucía, Aunergia, Elanco, TI Global)
 - Roles y responsabilidades
 
 ---
@@ -212,7 +212,7 @@
 
 ---
 
-### Si eres **Juan Manuel Bigi (Manolo)**:
+### Si eres **Juan Manuel Bigi**:
 **Documentos a conocer:**
 1. `docs/entregables/PRESUPUESTO_REAL_BASADO_EN_FUENTES_PRIMARIAS.md` ⭐ (tu presupuesto)
 2. `inputs/conversaciones_con_lucia.md` (requerimientos)
@@ -336,4 +336,4 @@ NO entregar:
 
 **Última actualización:** 10 de octubre de 2025, 20:00  
 **Versión:** 2.0  
-**Elaborado por:** Juan Manuel Bigi (Manolo)
+**Elaborado por:** Juan Manuel Bigi

@@ -1,7 +1,7 @@
 # RESUMEN EJECUTIVO - PRESUPUESTO ELANCO POWER
 
 **Para:** Lucía Rodríguez (Aunergia)  
-**De:** Juan Manuel Bigi (Manolo)  
+**De:** Juan Manuel Bigi  
 **Fecha:** 10 de octubre de 2025  
 **Asunto:** Presupuesto personal para proyecto Elanco Power
 
@@ -226,7 +226,7 @@ He creado 3 documentos en la carpeta del proyecto:
 
 ## 📞 CONTACTO
 
-**Juan Manuel Bigi (Manolo)**
+**Juan Manuel Bigi**
 - Email: [pending - confirmar]
 - Disponibilidad: Part-time 20-25h/semana
 - Inicio disponible: 14-oct-2025
@@ -253,7 +253,7 @@ No incluye:
 **¿Avanzamos?** Espero tu confirmación.
 
 Saludos,  
-**Manolo**
+**JMB**
 
 ---
 

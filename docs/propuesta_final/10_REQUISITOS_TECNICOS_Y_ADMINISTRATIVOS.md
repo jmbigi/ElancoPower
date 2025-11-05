@@ -1,0 +1,427 @@
+# 10. REQUISITOS TÉCNICOS Y ADMINISTRATIVOS
+
+## 10.1. Requisitos Previos al Inicio del Proyecto
+
+### 10.1.1. Requisitos Administrativos CRÍTICOS
+
+Estos requisitos **DEBEN** estar resueltos antes del kick-off:
+
+| # | Requisito | Responsable | Fecha Límite | Bloqueante |
+|---|-----------|-------------|--------------|------------|
+| 1 | **Aprobación del proyecto (677 horas)** | Management Elanco | 10-nov-2025 | ⛔ SÍ |
+| 2 | **Firma de contrato Aunergia-Elanco** | Legal ambas partes | 10-nov-2025 | ⛔ SÍ |
+| 3 | **Designación de Product Owner** | Management Elanco | 10-nov-2025 | ⛔ SÍ |
+| 4 | **Confirmación disponibilidad stakeholders** | Finanzas/Supply | 10-nov-2025 | ⚠️ Alta |
+| 5 | **Acuerdo de confidencialidad (NDA) vigente** | Legal ambas partes | 10-nov-2025 | ⛔ SÍ |
+
+---
+
+## 10.2. Requisitos de Accesos y Permisos
+
+### 10.2.1. Accesos SAP ECC
+
+**Power User Primario: Lucía Rodríguez**
+
+| Módulo | Rol Requerido | Transacciones Clave | Status | Ticket |
+|--------|---------------|---------------------|--------|--------|
+| **MM** | Z_MM_POWER_USER | ME2L, MM60, MB59, MB5B, ME23N | ⏳ | SAP-48219 |
+| **SD** | Z_SD_POWER_USER | VA05 | ⏳ | SAP-48219 |
+| **FI** | Z_FI_POWER_USER | FAGLL03, FB03, F.08, F.01, FBL1N, FBL5N | ⏳ | SAP-48219 |
+| **CO** | Z_CO_POWER_USER | KSB1, KE24 | ⏳ | SAP-48219 |
+| **Custom** | Z_CUSTOM_READ | ZLEL008, ZVEL015 | ⏳ | SAP-48219 |
+| **Maestros** | Z_MD_READ | XK03, XD03 | ⏳ | SAP-48219 |
+
+**Autorizaciones Especiales Requeridas:**
+- ✅ S_TABU_DIS (Autorización lectura tablas)
+- ✅ S_TABU_RFC (Autorización RFC para extracción)
+- ✅ Exportación masiva de datos (sin límite de registros)
+- ✅ Acceso a todas las sociedades CASA (Company Codes)
+
+**Usuarios Backup:**
+- Carolina Rondón (TI) - Mismo perfil
+- Juan Sebastián Ravelo - Mismo perfil
+
+**Fecha límite resolución:** 10 de noviembre de 2025 (antes de kick-off)
+
+---
+
+### 10.2.2. Accesos Google BigQuery
+
+**Cuenta Corporativa Elanco:**
+
+| Usuario | Rol BigQuery | Permisos | Status |
+|---------|--------------|----------|--------|
+| **Lucía Rodríguez** | BigQuery Data Editor | Read/Write dataset CASA | ⏳ Pendiente |
+| **Juan Manuel Bigi** | BigQuery Data Editor | Read/Write dataset CASA | ⏳ Pendiente |
+| **Linda López** | BigQuery Data Viewer | Read-only dataset CASA | ⏳ Pendiente |
+| **David Saboya (TI)** | BigQuery Admin | Full access | ✅ OK |
+| **Usuarios Finanzas (2)** | BigQuery Data Viewer | Read-only dataset CASA | ⏳ Pendiente |
+| **Usuarios Supply (2)** | BigQuery Data Viewer | Read-only dataset CASA | ⏳ Pendiente |
+
+**Proyectos y Datasets:**
+- **Proyecto GCP:** `elanco-casa-bi` o `elanco-erp`
+- **Dataset Desarrollo:** `casa_bi_dev`
+- **Dataset QA:** `casa_bi_qa`
+- **Dataset Producción:** `casa_bi_prod`
+
+**Service Accounts:**
+- `sa-bigquery-etl@elanco-casa-bi.iam.gserviceaccount.com` (para pipelines)
+- Permisos: BigQuery Job User, BigQuery Data Editor
+
+**Fecha límite resolución:** 14 de noviembre de 2025 (antes de inicio Fase 1)
+
+---
+
+### 10.2.3. Accesos Microsoft Power BI
+
+**Licencias Ya Adquiridas (Orden PR-55219):**
+
+| Usuario | Licencia | Workspace | Status |
+|---------|----------|-----------|--------|
+| **Usuarios Finanzas (4)** | Power BI Pro | CASA_Finanzas | ✅ Activas |
+| **Usuarios Supply (2)** | Power BI Pro | CASA_Supply | ✅ Activas |
+| **TechOps (1)** | Power BI Pro | CASA_TechOps | ✅ Activa |
+| **TI Global (1)** | Power BI Pro | CASA_Admin | ✅ Activa |
+
+**Workspaces a Crear:**
+- `CASA_BI_Development` (desarrollo)
+- `CASA_BI_Production` (producción)
+
+**Permisos Requeridos:**
+- Juan Manuel Bigi: Power BI Pro (temporal durante proyecto) o acceso como External Guest
+- Lucía Rodríguez: Viewer en workspaces para validación
+
+**Fecha límite configuración:** 20 de noviembre de 2025
+
+---
+
+### 10.2.4. Otros Accesos
+
+| Sistema/Herramienta | Usuario | Propósito | Status |
+|---------------------|---------|-----------|--------|
+| **Confluence/SharePoint** | Equipo Aunergia | Documentación colaborativa | ⏳ |
+| **Git Repository** | Juan Manuel Bigi | Versionado código SQL | ⏳ |
+| **Cloud Storage** | Equipo Aunergia | Almacenamiento artefactos | ⏳ |
+
+---
+
+## 10.3. Requisitos de Infraestructura
+
+### 10.3.1. Google Cloud Platform (BigQuery)
+
+**Recursos Requeridos:**
+
+| Recurso | Especificación | Responsable Provisión |
+|---------|----------------|---------------------|
+| **BigQuery Datasets** | 3 datasets (dev/qa/prod) | TI Global Elanco |
+| **Almacenamiento** | ~500GB-1TB (estimado inicial) | TI Global Elanco |
+| **Procesamiento** | On-demand (sin slots reservados) | TI Global Elanco |
+| **Conectores SAP** | Google Cloud Data Fusion o Fivetran | TI Global Elanco |
+| **Networking** | VPN/Private Service Connect (si req.) | TI Global Elanco |
+
+**Costos Operativos Mensuales (asumidos por Elanco):**
+- Almacenamiento: ~500GB-1TB (Active storage)
+- Procesamiento: Query processing on-demand
+- Streaming inserts: Según volumen transaccional
+- **Responsable de costos:** Cliente (Elanco)
+
+**Fecha límite provisión:** 14 de noviembre de 2025
+
+---
+
+### 10.3.2. Conectividad
+
+**Conexiones Requeridas:**
+
+```
+┌────────────┐         ┌─────────────────┐         ┌──────────────┐
+│  SAP ECC   │────────▶│  Connector      │────────▶│  BigQuery    │
+│  (On-prem) │  RFC/   │  (Data Fusion/  │  HTTPS  │  (GCP Cloud) │
+│            │  BAPI   │   Fivetran)     │         │              │
+└────────────┘         └─────────────────┘         └──────────────┘
+                                                            │
+                                                            │ ODBC/
+                                                            │ Native
+                                                            ▼
+                                                    ┌──────────────┐
+                                                    │  Power BI    │
+                                                    │  Service     │
+                                                    └──────────────┘
+```
+
+**Requisitos de Red:**
+- Firewall abierto para tráfico SAP → GCP (puertos RFC)
+- Certificados SSL válidos
+- Latencia < 100ms (SAP ↔ BigQuery)
+
+**Responsable:** TI Elanco + TI Global
+
+---
+
+### 10.3.3. Ambientes
+
+| Ambiente | Propósito | Dataset BigQuery | Workspace Power BI |
+|----------|-----------|------------------|--------------------|
+| **Desarrollo** | Desarrollo y pruebas | `casa_bi_dev` | `CASA_BI_Development` |
+| **QA** | Validaciones pre-producción | `casa_bi_qa` | `CASA_BI_Development` |
+| **Producción** | Operación real | `casa_bi_prod` | `CASA_BI_Production` |
+
+**Estrategia de Promoción:**
+- Desarrollo → QA: Validación técnica (Aunergia)
+- QA → Producción: Validación negocio (Stakeholders)
+
+---
+
+## 10.4. Requisitos de Datos
+
+### 10.4.1. Disponibilidad de Datos Históricos
+
+**Requerimiento:** Mínimo 24 meses de datos históricos por transacción
+
+| Transacción | Fecha Desde | Fecha Hasta | Status Verificación |
+|-------------|-------------|-------------|---------------------|
+| VA05, KE24, FAGLL03, etc. | 01-nov-2023 | 31-oct-2025 | ⏳ Validar en Fase 0 |
+
+**Validación:**
+- Verificar en Fase 0 (Semana 1-2)
+- Si faltan datos: Evaluar impacto en modelos predictivos (Fase 3)
+
+---
+
+### 10.4.2. Tablas SAP en BigQuery
+
+**Tablas Críticas que DEBEN estar disponibles:**
+
+| Transacción | Tablas SAP | Status BigQuery | Ticket |
+|-------------|------------|-----------------|--------|
+| VA05 | VBAK, VBAP, VBEP | ⏳ Validar | - |
+| ZLEL008 | Z-tables (TBD) | ❌ No disponible | BQ-7713 |
+| KSB1 | COBK, COEP, AUFK | ⏳ Validar | - |
+| FAGLL03 | FAGLFLEXA, BKPF, BSEG | ⚠️ Parcial | BQ-7721 |
+| KE24 | CE1*, CE4* | ❌ No disponible | BQ-7713 |
+| ME2L | EKKO, EKPO | ⏳ Validar | - |
+| ... | ... | ... | ... |
+
+**Criterio Go/No-Go:**
+- Mínimo 12 de 18 transacciones con tablas completas disponibles
+- Si <12: Evaluar plan B (Azure o extracción RFC)
+
+---
+
+### 10.4.3. Diccionario de Datos SAP
+
+**Documentación Requerida:**
+- Diccionario de datos (Data Dictionary) de tablas SAP
+- Descripción de campos clave
+- Relaciones entre tablas (foreign keys)
+- Lógica de cálculo de campos derivados
+
+**Responsable:** TI Global Elanco  
+**Fecha entrega:** Disponible durante Fase 0
+
+---
+
+## 10.5. Requisitos de Equipo y Recursos Humanos
+
+### 10.5.1. Equipo Aunergia (Confirmado)
+
+| Rol | Nombre | Disponibilidad | Dedicación |
+|-----|--------|----------------|------------|
+| **Project Manager** | Linda López | Part-time | 4h/semana |
+| **Analista SAP / Power User** | Lucía Rodríguez | Part-time | 15-20h/semana |
+| **Arquitecto de Datos / Desarrollador** | Juan Manuel Bigi | Part-time | 20-25h/semana |
+
+**Horarios de Trabajo:**
+- Zona horaria: GMT-3 (Argentina) / GMT-5 (Colombia/Perú)
+- Horario hábil: Lunes a Viernes, 9:00 AM - 6:00 PM
+- Flexibilidad para reuniones con stakeholders Elanco
+
+---
+
+### 10.5.2. Equipo Elanco (Requerido)
+
+#### Product Owner (CRÍTICO)
+
+| Rol | Responsabilidades | Dedicación Requerida |
+|-----|-------------------|---------------------|
+| **Product Owner** | - Definir prioridades<br>- Aprobar entregables<br>- Toma de decisiones | 4-6h/semana |
+
+**Perfil ideal:**
+- Controller o Gerente Finanzas con conocimiento SAP
+- Visión cross-funcional (Finanzas + Supply)
+- Autoridad para tomar decisiones
+
+#### Stakeholders Clave
+
+| Área | Rol | Participación | Dedicación |
+|------|-----|---------------|------------|
+| **Finanzas** | Controller / Analista Senior | Workshops, validaciones, UAT | 2-3h/semana |
+| **Supply Chain** | Manager / Planeador | Workshops, validaciones, UAT | 2-3h/semana |
+| **TI TechOps** | David Saboya | Coordinación TI Global, tickets | 2h/semana |
+| **TI Global** | SAP Basis / BigQuery Admin | Soporte permisos, tablas | On-demand |
+
+#### Usuarios Finales (Capacitación)
+
+- 4-6 usuarios Finanzas
+- 2-4 usuarios Supply Chain
+- 1-2 usuarios Management
+- **Total:** ~10-15 usuarios
+
+---
+
+## 10.6. Requisitos de Documentación Base
+
+### 10.6.1. Documentación SAP
+
+| Documento | Descripción | Responsable | Status |
+|-----------|-------------|-------------|--------|
+| **Diccionario de Datos SAP** | Descripción tablas y campos | TI Global | ⏳ |
+| **Transacciones SAP - Guías** | Manuales de usuario SAP | Finanzas/Supply | ⏳ |
+| **Mapeo de Cuentas Contables** | Chart of Accounts por país | Finanzas | ⏳ |
+| **Estructura Organizacional** | Company Codes, Centros, Almacenes | TI | ⏳ |
+
+### 10.6.2. Documentación de Procesos
+
+| Documento | Descripción | Responsable | Status |
+|-----------|-------------|-------------|--------|
+| **Procesos de Cierre** | Cómo se hace cierre mensual hoy | Finanzas | ⏳ |
+| **Flujo de Consolidación** | Cómo se consolida información hoy | Finanzas/Supply | ⏳ |
+| **KPIs Actuales** | Métricas y cálculos existentes | Finanzas/Supply | ⏳ |
+
+**Fecha entrega:** Durante Fase 0 (Semanas 1-2)
+
+---
+
+## 10.7. Requisitos de Seguridad y Compliance
+
+### 10.7.1. Seguridad de Datos
+
+**Clasificación de Datos:**
+- Datos financieros: **CONFIDENCIAL**
+- Datos de clientes/proveedores: **CONFIDENCIAL + PII**
+- Datos operativos: **INTERNO**
+
+**Políticas a Cumplir:**
+- **PII** (Personally Identifiable Information): No exponer datos personales
+- **Red Data**: Datos sensibles según políticas Elanco
+- **Encriptación**: En tránsito (TLS 1.2+) y en reposo (AES-256)
+- **Row-Level Security**: Segregación por país/área
+
+### 10.7.2. Auditoría y Trazabilidad
+
+**Logs Requeridos:**
+- ✅ Log de accesos a datasets BigQuery
+- ✅ Log de ejecución de pipelines (quién, cuándo, qué)
+- ✅ Log de accesos a dashboards Power BI
+- ✅ Registro de cambios en datos (audit trail)
+
+**Retención:** Mínimo 12 meses
+
+### 10.7.3. Backup y Disaster Recovery
+
+| Elemento | Frecuencia Backup | Retención | RPO | RTO |
+|----------|-------------------|-----------|-----|-----|
+| **Datos BigQuery** | Automático (GCP) | 7 días | 24h | 4h |
+| **Código SQL** | Cada commit (Git) | Indefinido | 0 | 1h |
+| **Dashboards Power BI** | Semanal | 30 días | 7 días | 4h |
+
+**Responsable:** TI Elanco (infraestructura) + Aunergia (código)
+
+---
+
+## 10.8. Requisitos de Comunicación
+
+### 10.8.1. Canales de Comunicación
+
+| Canal | Propósito | Participantes | Frecuencia |
+|-------|-----------|---------------|------------|
+| **Email** | Comunicación formal, entregables | Todos | Según necesidad |
+| **MS Teams / Slack** | Comunicación rápida, consultas | Equipo proyecto | Diario |
+| **Videollamadas** | Reuniones, workshops | Todos + Stakeholders | Según agenda |
+| **Confluence/SharePoint** | Documentación compartida | Todos | Continuo |
+
+### 10.8.2. Reuniones Establecidas
+
+Ver sección 9.10 del documento [09_CRONOGRAMA_SEMANAL.md](09_CRONOGRAMA_SEMANAL.md)
+
+---
+
+## 10.9. Requisitos de Capacitación
+
+### 10.9.1. Capacitación Pre-Proyecto (Deseable)
+
+**Para Equipo Elanco:**
+- Introducción a BigQuery (SQL básico) - 4 horas
+- Introducción a Power BI (si no conocen) - 4 horas
+
+**Responsable:** TI Elanco o Aunergia (cotización adicional si requerido)
+
+### 10.9.2. Capacitación Durante Proyecto
+
+**Incluida en la propuesta:**
+- Power Users: 4 horas (uso avanzado dashboards)
+- Usuarios Finanzas: 3 horas
+- Usuarios Supply: 3 horas
+- Sesión refuerzo: 2 horas
+
+---
+
+## 10.10. Checklist de Inicio de Proyecto
+
+### ✅ Antes del Kick-off (11-nov-2025)
+
+- [ ] Contrato firmado
+- [ ] Proyecto aprobado (677 horas, 21-23 semanas incluyendo 1 semana vacacional)
+- [ ] Product Owner designado
+- [ ] NDA vigente
+- [ ] Kick-off meeting agendado (2-3 horas)
+
+### ✅ Durante Fase 0 (Semanas 1-2)
+
+- [ ] Accesos SAP solicitados (Ticket SAP-48219)
+- [ ] Accesos BigQuery solicitados
+- [ ] Accesos Power BI configurados
+- [ ] Ambientes BigQuery creados
+- [ ] Documentación base entregada
+- [ ] Stakeholders confirmados y disponibles
+
+### ✅ Antes de Inicio Fase 1 (16-dic-2025)
+
+- [ ] Permisos SAP completos confirmados ✓
+- [ ] Mínimo 12 transacciones con tablas en BigQuery ✓
+- [ ] Accesos Data Editor activos ✓
+- [ ] Backlog priorizado y aprobado ✓
+- [ ] Go/No-Go aprobado ✓
+
+---
+
+## 10.11. Responsabilidades de Elanco
+
+**Responsabilidades que Elanco DEBE asumir:**
+
+1. ✅ **Infraestructura GCP:** Provisión y costos de BigQuery
+2. ✅ **Licencias:** Power BI Pro (ya adquiridas)
+3. ✅ **Permisos y Accesos:** Gestión de tickets con TI Global
+4. ✅ **Ambientes:** Provisión de ambientes dev/qa/prod
+5. ✅ **Documentación Base:** Entregar documentación SAP y procesos
+6. ✅ **Disponibilidad Stakeholders:** Asegurar participación en workshops/UAT
+7. ✅ **Soporte TI:** Coordinación con TI Global para tickets
+8. ✅ **Backup y DR:** Responsabilidad de infraestructura
+
+---
+
+## 10.12. Responsabilidades de Aunergia
+
+**Responsabilidades que Aunergia asume:**
+
+1. ✅ **Desarrollo:** Pipelines ETL, dashboards Power BI
+2. ✅ **Arquitectura:** Diseño de Data Lake y modelo dimensional
+3. ✅ **Testing:** Validación de calidad de datos
+4. ✅ **Documentación:** Técnica, funcional y de usuario
+5. ✅ **Capacitación:** Usuarios finales y power users
+6. ✅ **Project Management:** Coordinación y seguimiento
+7. ✅ **Soporte (30 días):** Post go-live incluido
+
+---
+
+*Siguiente sección: [11_RIESGOS_Y_SUPUESTOS.md](11_RIESGOS_Y_SUPUESTOS.md)*

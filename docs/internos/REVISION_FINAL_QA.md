@@ -331,7 +331,7 @@ Si se requiere actualizar el presupuesto en el futuro:
 
 ---
 
-**Revisado por:** Juan Manuel Bigi (Manolo)  
+**Revisado por:** Juan Manuel Bigi  
 **Fecha de revisión:** 10 de octubre de 2025  
 **Resultado:** ✅ APROBADO PARA ENTREGA  
 **Próxima acción:** Enviar a Lucía Rodríguez

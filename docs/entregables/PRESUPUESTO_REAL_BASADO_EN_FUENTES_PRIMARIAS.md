@@ -1,7 +1,7 @@
 # PRESUPUESTO ELANCO POWER – BASADO EN FUENTES PRIMARIAS
 
 **Fecha de elaboración:** 10 de octubre de 2025  
-**Elaborado por:** Juan Manuel Bigi (Manolo)  
+**Elaborado por:** Juan Manuel Bigi  
 **Para:** Lucía Rodríguez (Aunergia) → Linda López (Coordinadora Aunergia)
 
 ---
@@ -149,7 +149,7 @@ Este presupuesto se basa **exclusivamente** en:
 |-----------|-------------|-----------------|---------------|
 | Coordinación permisos SAP + tickets BigQuery | Lucía Rodríguez | 20h | Gestión con TI Global, seguimiento tickets |
 | Análisis técnico arquitectura BigQuery | Juan Manuel Bigi | 24h | Evaluación dataset CASA, performance, costos |
-| Workshop priorización transacciones | Lucía + Manolo | 12h | 3 sesiones × 4h con Finanzas/Supply/TechOps |
+| Workshop priorización transacciones | Lucía + JMB | 12h | 3 sesiones × 4h con Finanzas/Supply/TechOps |
 | Documentación y backlog | Juan Manuel Bigi | 16h | Análisis CSV, mapeo tablas SAP, plan extracción |
 | Validación con TI Global | Lucía Rodríguez | 8h | Reuniones con David Saboya, Carolina Rondón |
 | **TOTAL FASE 0** | | **80h** | |
@@ -245,7 +245,7 @@ Este presupuesto se basa **exclusivamente** en:
 | Configuración RLS por país/área | Juan Manuel Bigi | 12h |
 | Testing con usuarios (UAT) | Juan Manuel Bigi + Stakeholders | 16h |
 | Documentación usuarios y soporte | Juan Manuel Bigi | 12h |
-| Capacitación usuarios finales | Lucía + Manolo | 12h |
+| Capacitación usuarios finales | Lucía + JMB | 12h |
 | Ajustes post-UAT | Juan Manuel Bigi | 16h |
 | **TOTAL FASE 2** | | **160h** |
 
@@ -519,7 +519,7 @@ Horas de Lucía Rodríguez (referencia, no incluidas):
 ## 11. INFORMACIÓN DE CONTACTO
 
 **Desarrollador:**
-- Nombre: Juan Manuel Bigi (Manolo)
+- Nombre: Juan Manuel Bigi
 - Email: [pending]
 - Especialidad: BigQuery, Power BI, Arquitectura Data Lake
 

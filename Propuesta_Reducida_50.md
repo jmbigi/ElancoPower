@@ -397,7 +397,7 @@ La propuesta completa incluirá:
 - **Reunión Go/No-Go:** 7 de noviembre de 2025
 - **Entrega de propuesta completa (100%):** 12 de noviembre de 2025 (condicionado a aprobación)
 - **Validez de la oferta:** Hasta 3 de diciembre de 2025
-- **Elaborado por:** Juan Manuel Bigi (Manolo) - Arquitecto de Datos
+- **Elaborado por:** Juan Manuel Bigi - Arquitecto de Datos
 - **Coordinación:** Linda López (Aunergia) / Lucía Rodríguez (Aunergia)
 - **Cliente final:** Elanco Animal Health - Operación CASA
 

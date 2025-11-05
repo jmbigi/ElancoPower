@@ -143,7 +143,7 @@ ElancoPower/
 2. ✅ **Sección "Inicio Rápido"** con documentos por carpeta
 3. ✅ **Tabla de presupuestos** con ubicaciones actualizadas
 4. ✅ **Referencias rápidas** organizadas por tipo de dato
-5. ✅ **Guía de uso por rol** (Lucía/Linda, Elanco, Manolo)
+5. ✅ **Guía de uso por rol** (Lucía/Linda, Elanco, JMB)
 6. ✅ **Todas las rutas** actualizadas con prefijos de carpeta
 7. ✅ **Notas finales** explicando propósito de cada carpeta
 8. ✅ **Versión actualizada** a 3.0

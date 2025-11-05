@@ -177,7 +177,7 @@
 #### Datos extraídos:
 
 ✅ **Participantes:**
-1. Juan Manuel Bigi (Manolo)
+1. Juan Manuel Bigi
 2. Lucía Rodríguez (consultoría externa Aunergia)
 3. Aunergia (consultoría, fundada 2017)
 4. Elanco (empresa animal health)
@@ -324,7 +324,7 @@ Este presupuesto de **USD 8,850** por **354 horas** se basa exclusivamente en:
 
 ---
 
-**Verificado por:** Juan Manuel Bigi (Manolo)  
+**Verificado por:** Juan Manuel Bigi  
 **Fecha:** 10 de octubre de 2025  
 **Método:** Análisis exhaustivo de 6 documentos fuente  
 **Tiempo de verificación:** ~3 horas

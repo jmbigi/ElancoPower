@@ -190,7 +190,7 @@ ME2L, MM60, MB59, ZVEL015, ME23N, FBL1N, FBL5N, MB5B, XK03, XD03
 
 | Nombre | Rol | Organización | Email |
 |--------|-----|--------------|-------|
-| **Juan Manuel Bigi (Manolo)** | Desarrollador BigQuery/Power BI | Independiente | [pending] |
+| **Juan Manuel Bigi** | Desarrollador BigQuery/Power BI | Independiente | [pending] |
 | **Lucía Rodríguez** | Analista SAP / Power User | Aunergia | lucia.rodriguez@aunergia.com.ar |
 | **Linda López** | Coordinadora Proyecto | Aunergia | linda.lopez@aunergia.com.ar |
 | **David Saboya** | Analista IT TechOps CASA | Elanco | david.saboya@network.elancoah.com |
@@ -204,14 +204,14 @@ ME2L, MM60, MB59, ZVEL015, ME23N, FBL1N, FBL5N, MB5B, XK03, XD03
 | Hito | Fecha | Responsable | Estado |
 |------|-------|-------------|--------|
 | Aprobación presupuesto | 14-oct-2025 | Linda López | ⏳ Pendiente |
-| Kick-off Fase 0 | 16-oct-2025 | Lucía + Manolo | 🗓️ Programado |
-| Revisión tickets SAP/BigQuery | 18-oct-2025 | Lucía | ⏳ Pendiente |
-| Go/No-Go Fase 1 | 07-nov-2025 | Equipo completo | 🗓️ Programado |
-| Fin Fase 0 | 10-nov-2025 | - | 🗓️ Estimado |
-| Fin Fase 1 | 05-ene-2026 | - | 🗓️ Estimado |
-| Fin Fase 2 | 09-feb-2026 | - | 🗓️ Estimado |
+| Kick-off Fase 0 | 1-dic-2025 | Lucía + JMB | 🗓️ Programado |
+| Go/No-Go Fase 1 | 12-ene-2026 | Equipo completo | 🗓️ Programado |
+| Fin Fase 0 | 12-ene-2026 | - | 🗓️ Estimado |
+| Fin Fase 1 | 23-mar-2026 | - | 🗓️ Estimado |
+| Fin Fase 2 | 18-may-2026 | - | 🗓️ Estimado |
 
-**Duración total:** ~4 meses (13-17 semanas)
+**Duración total:** ~6 meses (24 semanas, incl. 1 sem vacacional)  
+**Restricción:** JMB trabaja máximo 6h/día (30h/semana)
 
 ---
 
@@ -288,7 +288,7 @@ ME2L, MM60, MB59, ZVEL015, ME23N, FBL1N, FBL5N, MB5B, XK03, XD03
 - Linda López: linda.lopez@aunergia.com.ar
 
 **Para consultas técnicas:**
-- Juan Manuel Bigi (Manolo): [email pendiente]
+- Juan Manuel Bigi: [email pendiente]
 - David Saboya (Elanco TI): david.saboya@network.elancoah.com
 
 ---

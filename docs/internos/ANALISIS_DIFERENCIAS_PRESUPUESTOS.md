@@ -291,7 +291,7 @@ Los siguientes roles del presupuesto anterior NO están en el nuevo presupuesto 
    - Respuesta: USD 48,000 con equipo completo
 
 2. **Presupuesto Nuevo (USD 8,850):**
-   - Pregunta: *"¿Cuánto cobras vos (Manolo) por el trabajo técnico?"*
+   - Pregunta: *"¿Cuánto cobras vos (JMB) por el trabajo técnico?"*
    - Respuesta: USD 8,850 por 354h de desarrollo puro
 
 **La elección depende de:**

@@ -153,7 +153,7 @@ El proyecto **ElancoPower** ha sido completamente auditado, consolidado y reorga
 - ✅ 16-oct-2025 (kick-off Fase 0)
 
 ### Consistencia de nombres:
-- ✅ Juan Manuel Bigi / JM Bigi / Manolo (variaciones aceptables)
+- ✅ Juan Manuel Bigi / JM Bigi / JMB (variaciones aceptables)
 - ✅ Lucía Rodríguez (consistente)
 - ✅ Linda López (consistente)
 - ✅ David Saboya (consistente)
