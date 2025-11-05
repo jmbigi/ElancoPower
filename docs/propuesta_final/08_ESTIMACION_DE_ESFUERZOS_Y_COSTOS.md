@@ -28,9 +28,9 @@
 ### Duración Total
 
 - **Tiempo estimado:** 24 semanas (~6 meses, incluyendo 1 semana vacacional)
-- **Fecha inicio:** 1 de diciembre de 2025
-- **Fecha fin estimada:** 18 de mayo de 2026
-- **Nota:** Incluye 1 semana de pausa vacacional (23-29 diciembre 2025)
+- **Inicio:** Mes 1, Semana 1
+- **Finalización:** Mes 6, Semana 23
+- **Nota:** Incluye 1 semana de pausa vacacional durante festividades de fin de año
 - **Restricción:** Juan Manuel Bigi trabaja máximo 6 horas/día (30h/semana)
 
 ### Equipo
@@ -50,9 +50,8 @@
 ### 8.2.1. Fase 0 - Revisión del Alcance y Factibilidad
 
 | **Duración estimada** | 5 semanas (incluyendo 1 sem vacacional) |
-| **Fecha inicio:** | 1 de diciembre de 2025  |
-| **Fecha fin:** | 12 de enero de 2026  |
-| **Pausa vacacional:** | 23-29 diciembre 2025 |
+| **Fase del proyecto:** | Mes 1, Semanas 1-5  |
+| **Pausa vacacional:** | Durante Semana 4 (festividades de fin de año) |
 
 #### Desglose de Horas por Actividad
 
@@ -82,8 +81,7 @@
 ### 8.2.2. Fase 1 - Construcción de Data Lake
 
 **Duración:** 10 semanas  
-**Fecha inicio:** 13 de enero de 2026  
-**Fecha fin:** 23 de marzo de 2026
+**Fase del proyecto:** Mes 2-3, Semanas 6-15
 
 #### Desglose de Horas por Módulo SAP
 
@@ -122,8 +120,7 @@
 ### 8.2.3. Fase 2 - Modelado de Datos y 12 Dashboards
 
 **Duración:** 8 semanas  
-**Fecha inicio:** 24 de marzo de 2026  
-**Fecha fin:** 18 de mayo de 2026  
+**Fase del proyecto:** Mes 4-6, Semanas 16-23  
 **Nota:** Extendida de 7 a 8 semanas para cumplir restricción de JMB (máx 6h/día = 30h/sem)
 
 #### Desglose de Horas por Actividad
@@ -218,14 +215,14 @@
 
 ### 8.4.2. Calendario del Proyecto
 
-| Fase | Horas | Duración | Fecha Estimada |
-|------|-------|----------|----------------|
-| **Inicio del Proyecto** | - | - | 1-dic-2025 |
-| **Fase 0 (Revisión y Alcance)** | 116h | 5 semanas | Fin: 12-ene-2026 |
-| **Fase 1 (Data Lake)** | 267h | 10 semanas | Fin: 23-mar-2026 |
-| **Fase 2 (12 Dashboards)** | 294h | 8 semanas | Fin: 18-may-2026 |
-| **Cierre y Go-Live** | - | - | 12-18-may-2026 |
-| **TOTAL ESFUERZO** | **677h** | **24 semanas** | **1-dic-2025 a 18-may-2026** |
+| Fase | Horas | Duración | Periodo |
+|------|-------|----------|---------|
+| **Inicio del Proyecto** | - | - | Mes 1, Semana 1 |
+| **Fase 0 (Revisión y Alcance)** | 116h | 5 semanas | Mes 1, Semanas 1-5 |
+| **Fase 1 (Data Lake)** | 267h | 10 semanas | Mes 2-3, Semanas 6-15 |
+| **Fase 2 (12 Dashboards)** | 294h | 8 semanas | Mes 4-6, Semanas 16-23 |
+| **Cierre y Go-Live** | - | - | Mes 6, Semana 23 |
+| **TOTAL ESFUERZO** | **677h** | **24 semanas** | **~6 meses** |
 
 ---
 

@@ -12,11 +12,10 @@
 
 | Parámetro | Valor |
 |-----------|-------|
-| **Duración estimada** | 8-10 semanas (sprints de 2 semanas, con holguras para ajustes) |
-| **Fecha inicio** | 16 de diciembre de 2025 |
-| **Fecha fin** | 23 de febrero de 2026 |
-| **Horas totales** | 204 horas |
-| **Equipo** | Juan Manuel Bigi (156h) + Lucía Rodríguez (40h) + Consultor ABAP (8h contingencia) |
+| **Duración estimada** | 10 semanas (sprints de 2 semanas, con holguras para ajustes) |
+| **Fase del proyecto** | Mes 2-3, Semanas 6-15 |
+| **Horas totales** | 267 horas |
+| **Equipo** | Juan Manuel Bigi (180h) + Lucía Rodríguez (60h) + Linda López (15h) + Consultor ABAP (12h contingencia) |
 
 ---
 
@@ -477,14 +476,15 @@ FROM bigquery_target_table;
 
 ---
 
-## 5.7. Presupuesto de Fase 1
+## 5.7. Esfuerzo de Fase 1
 
-| Recurso | Horas | Tarifa (USD/h) | Subtotal (USD) |
-|---------|-------|----------------|----------------|
-| **Juan Manuel Bigi** | 156h | $25 | $3,900 |
-| **Lucía Rodríguez** | 40h | $30 | $1,200 |
-| **Consultor ABAP** (contingencia) | 8h | $80-100 | $640-800 |
-| **TOTAL FASE 1** | **204h** | - | **$5,740-5,900** |
+| Recurso | Horas |
+|---------|-------|
+| **Juan Manuel Bigi** | 180h |
+| **Lucía Rodríguez** | 60h |
+| **Linda López (PM)** | 15h |
+| **Consultor ABAP** (contingencia) | 12h |
+| **TOTAL FASE 1** | **267h** |
 
 ---
 

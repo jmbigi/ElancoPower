@@ -19,8 +19,7 @@
 | Parámetro | Valor |
 |-----------|-------|
 | **Duración estimada** | 8 semanas (ajustado por restricción 6h/día JMB) |
-| **Fecha inicio** | 24 de marzo de 2026 |
-| **Fecha fin** | 18 de mayo de 2026 |
+| **Fase del proyecto** | Mes 4-5, Semanas 16-23 |
 | **Horas totales** | 294 horas |
 | **Equipo** | Juan Manuel Bigi (240h) + Lucía Rodríguez (37h) + Linda López (17h) |
 | **Restricción** | JMB trabaja máximo 6h/día = 30h/semana |

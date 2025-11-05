@@ -20,9 +20,9 @@ Operación Centroamérica y Sudamérica (CASA)
 
 ---
 
-**Fecha de Elaboración:** 5 de noviembre de 2025  
-**Validez de la Oferta:** 5 de diciembre de 2025  
-**Versión del Documento:** 1.1 (Cronograma actualizado)
+**Fecha de Elaboración:** Noviembre 2025  
+**Validez de la Oferta:** 30 días desde fecha de presentación  
+**Versión del Documento:** 1.2 (Final)
 
 </div>
 
@@ -78,9 +78,9 @@ Operación Centroamérica y Sudamérica (CASA)
 ### Duración
 
 - **Tiempo total:** 24 semanas (~6 meses, incluyendo 1 semana vacacional)
-- **Fecha inicio estimada:** 1 de diciembre de 2025
-- **Fecha fin estimada:** 18 de mayo de 2026
-- **Pausa vacacional:** 23-29 diciembre 2025 (festividades de fin de año)
+- **Inicio:** Mes 1, Semana 1
+- **Finalización:** Mes 6, Semana 23
+- **Pausa vacacional:** 1 semana durante festividades de fin de año (incluida en cronograma)
 - **Nota:** Ajustado por restricción de JMB (máximo 6 horas/día de trabajo)
 
 ### Beneficios Esperados
@@ -147,28 +147,20 @@ Esta propuesta está organizada en los siguientes documentos:
 
 **Coordinadora del Proyecto:**  
 Linda López  
-Email: linda.lopez@aunergia.com.ar  
-Teléfono: [Por confirmar]
+*Información de contacto será proporcionada por Aunergia*
 
 **Consultoría SAP:**  
 Lucía Rodríguez  
-Email: lucia.rodriguez@aunergia.com.ar  
-Teléfono: [Por confirmar]
+*Información de contacto será proporcionada por Aunergia*
 
 **Arquitecto de Datos:**  
 Juan Manuel Bigi  
-Email: [Por confirmar]  
-Teléfono: [Por confirmar]
-
-**Oficinas:**
-- **Argentina (Sede Principal):** Buenos Aires
-- **Estados Unidos:** [Ciudad]
-- **España:** [Ciudad]
+*Información de contacto será proporcionada por Aunergia*
 
 ### Elanco Animal Health
 
 **Operación CASA:**  
-[Contacto principal por confirmar]
+*Contacto según coordinación con Aunergia*
 
 **TI TechOps:**  
 David Saboya  
@@ -184,11 +176,11 @@ Este documento contiene información confidencial y de propiedad exclusiva de **
 
 ## PRÓXIMOS PASOS
 
-1. **Revisión de la propuesta** por stakeholders de Elanco (6-10 nov 2025)
-2. **Reunión de presentación** y aclaración de dudas (11-15 nov 2025)
-3. **Decisión Go/No-Go** y aprobación de presupuesto (18-22 nov 2025)
-4. **Firma de contrato** y definición de kick-off (25-29 nov 2025)
-5. **Inicio de Fase 0** (1 diciembre 2025)
+1. **Revisión de la propuesta** por stakeholders de Elanco (Semana 1)
+2. **Reunión de presentación** y aclaración de dudas (Semana 1-2)
+3. **Decisión Go/No-Go** y aprobación de alcance (Semana 2-3)
+4. **Firma de contrato** y definición de kick-off (Semana 3-4)
+5. **Inicio de Fase 0** (Mes 1, Semana 1 del proyecto)
 
 ---
 
@@ -200,5 +192,5 @@ Clientes en: México, Centroamérica, Brasil, Chile, Perú, Uruguay, Colombia, E
 
 ---
 
-*Documento generado el 5 de noviembre de 2025*  
-*Versión 1.0 - Propuesta Final*
+*Documento generado: Noviembre 2025*  
+*Versión 1.2 - Propuesta Final*
