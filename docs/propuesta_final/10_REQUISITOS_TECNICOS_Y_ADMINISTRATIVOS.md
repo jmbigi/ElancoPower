@@ -259,7 +259,7 @@ Estos requisitos **DEBEN** estar resueltos antes del kick-off:
 | **Supply Chain** | Manager / Planeador | Workshops, validaciones, UAT | 2-3h/semana |
 | **TI TechOps** | David Saboya | Coordinación TI Global, tickets | 2h/semana |
 | **TI Global** | SAP Basis / BigQuery Admin | Soporte permisos, tablas | On-demand |
-| **SAP Basis** | Administrador SAP | - Gestión de usuarios y perfiles<br>- Gestión de órdenes de transporte<br>- Monitoreo del sistema SAP<br>- Punto de contacto para incidencias técnicas SAP | On-demand |
+| **SAP Basis (ELANCO)** | Administrador SAP | **RECURSO PROVISTO POR EL CLIENTE**<br>- Gestión de usuarios y perfiles SAP<br>- Gestión de órdenes de transporte<br>- Instalación y configuración de SLT Server<br>- Monitoreo del sistema SAP<br>- Aplicación de SAP Notes<br>- Configuración de conexiones RFC<br>- Punto de contacto para incidencias técnicas SAP | On-demand durante el proyecto |
 
 #### Usuarios Finales (Capacitación)
 
@@ -267,6 +267,14 @@ Estos requisitos **DEBEN** estar resueltos antes del kick-off:
 - 2-4 usuarios Supply Chain
 - 1-2 usuarios Management
 - **Total:** ~10-15 usuarios
+
+#### SAP Basis (Recurso del Cliente - CRÍTICO)
+
+| Rol | Responsabilidades | Dedicación Requerida |
+|-----|-------------------|---------------------|
+| **SAP Basis Administrator** | **RECURSO PROVISTO POR ELANCO**<br><br>**Responsabilidades:**<br>- Instalación y configuración de SAP Landscape Transformation Server (SLT)<br>- Gestión de usuarios y perfiles SAP (creación, modificación, autorizaciones)<br>- Gestión de órdenes de transporte SAP<br>- Aplicación de SAP Notes requeridas para el proyecto<br>- Configuración de conexiones RFC (Remote Function Call)<br>- Monitoreo del sistema SAP y servidor SLT<br>- Troubleshooting de incidencias técnicas SAP<br>- Soporte en la configuración del BigQuery Connector<br>- Punto de contacto técnico para el equipo del proyecto | **On-demand durante el proyecto**<br><br>Estimado: 2-4h/semana durante Fase 1<br><br>Picos de actividad:<br>- Fase 0: Setup inicial de permisos<br>- Fase 1: Configuración de SLT |
+
+**Nota Importante:** La disponibilidad de un recurso SAP Basis es **CRÍTICA** para el éxito del proyecto, especialmente durante la implementación de SAP SLT (Landscape Transformation Server) en la Fase 1.
 
 ---
 
@@ -400,14 +408,16 @@ Ver sección 9.10 del documento [09_CRONOGRAMA_SEMANAL.md](09_CRONOGRAMA_SEMANAL
 
 **Responsabilidades que Elanco DEBE asumir:**
 
-1. ✅ **Infraestructura GCP:** Provisión y costos de BigQuery
-2. ✅ **Licencias:** Power BI Pro (ya adquiridas)
-3. ✅ **Permisos y Accesos:** Gestión de tickets con TI Global
-4. ✅ **Ambientes:** Provisión de ambientes dev/qa/prod
-5. ✅ **Documentación Base:** Entregar documentación SAP y procesos
-6. ✅ **Disponibilidad Stakeholders:** Asegurar participación en workshops/UAT
-7. ✅ **Soporte TI:** Coordinación con TI Global para tickets
-8. ✅ **Backup y DR:** Responsabilidad de infraestructura
+1. ✅ **SAP Landscape Transformation Server (SLT):** Instalación, configuración, licenciamiento y operación del servidor SLT
+2. ✅ **Recurso SAP Basis:** Proveer administrador SAP Basis para soporte en configuración de SLT, permisos, y administración del sistema SAP
+3. ✅ **Infraestructura GCP:** Provisión y costos de BigQuery
+4. ✅ **Licencias:** Power BI Pro (ya adquiridas), licencias SLT y BigQuery Connector
+5. ✅ **Permisos y Accesos:** Gestión de tickets con TI Global
+6. ✅ **Ambientes:** Provisión de ambientes dev/qa/prod
+7. ✅ **Documentación Base:** Entregar documentación SAP y procesos
+8. ✅ **Disponibilidad Stakeholders:** Asegurar participación en workshops/UAT
+9. ✅ **Soporte TI:** Coordinación con TI Global para tickets
+10. ✅ **Backup y DR:** Responsabilidad de infraestructura
 
 ---
 

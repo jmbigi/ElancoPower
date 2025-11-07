@@ -19,7 +19,7 @@
 - ⏳ **07_FASE_3_MODELOS_PREDICTIVOS.md** - Arquitectura ML (solo descripción)
 
 #### Parte 4: Planificación
-- ✅ **08_ESTIMACION_DE_ESFUERZOS_Y_COSTOS.md** - Presupuesto detallado USD $17,210
+- ✅ **08_ESTIMACION_DE_ESFUERZOS_Y_COSTOS.md** - Estimación de esfuerzos detallada (677 horas)
 - ✅ **09_CRONOGRAMA_SEMANAL.md** - Planificación temporal 18-20 semanas (4.5 meses)
 
 #### Parte 5: Cierre
@@ -31,10 +31,8 @@
 
 Los siguientes documentos se crearán a continuación:
 
-- 06_FASE_2_MODELADO_Y_DASHBOARDS.md
-- 07_FASE_3_MODELOS_PREDICTIVOS.md
-- 08_ESTIMACION_DE_ESFUERZOS_Y_COSTOS.md
-- 09_CRONOGRAMA_SEMANAL.md
+- 06_FASE_2_MODELADO_Y_DASHBOARDS.md (Pendiente)
+- 07_FASE_3_MODELOS_PREDICTIVOS.md (Pendiente)
 - 10_REQUISITOS_TECNICOS_Y_ADMINISTRATIVOS.md
 - 11_RIESGOS_Y_SUPUESTOS.md
 - 12_ENTREGABLES_Y_CONDICIONES_COMERCIALES.md

@@ -394,7 +394,7 @@ El Product Owner designado no tiene autoridad para tomar decisiones, debe escala
 
 1. **Preventiva:**
    - ✅ Definir límites de autoridad del PO en kick-off
-   - ✅ Escalar solo decisiones estratégicas (> USD $1,000 o > 1 semana impacto)
+   - ✅ Escalar solo decisiones estratégicas (> 1 semana impacto o cambios de alcance significativos)
    - ✅ Designar sponsor ejecutivo para escalaciones
 
 2. **Contingencia:**
@@ -708,19 +708,19 @@ El proyecto requiere más horas de las estimadas (ej. complejidad transacciones 
 | 🟡 Media (30%) | 🟢 Bajo-Medio | 🟡 **MEDIO** | Fase 1 y Fase 2 |
 
 **Impacto Potencial:**
-- 💰 Sobrecosto (7-15% del presupuesto)
+- ⏱️ Necesidad de horas adicionales (7-15% del esfuerzo estimado)
 - ⚠️ Necesidad de aprobación adicional
 
 **Estrategias de Mitigación:**
 
 1. **Preventiva:**
-   - ✅ Presupuesto de contingencia: USD $510 (3.6% del total)
    - ✅ Estimaciones con buffer del 15-20%
    - ✅ Seguimiento semanal de horas consumidas vs. planificadas
+   - ✅ Análisis detallado en Fase 0 para reducir incertidumbre
 
 2. **Contingencia:**
-   - Usar presupuesto de contingencia
-   - Si excede contingencia: Solicitar aprobación formal para incremento
+   - Revisar alcance y re-priorizar transacciones
+   - Solicitar aprobación formal para extensión de horas si necesario
    - Reducir alcance funcional (postergar transacciones de prioridad 3)
 
 **Responsable:** Linda López (PM) + Management Elanco
@@ -730,22 +730,22 @@ El proyecto requiere más horas de las estimadas (ej. complejidad transacciones 
 ### 🟡 R-P-02: Costos de Infraestructura BigQuery Mayores
 
 **Descripción:**  
-Costos mensuales de BigQuery (almacenamiento + procesamiento) mayores a USD $540/mes estimado.
+Costos mensuales de BigQuery (almacenamiento + procesamiento) mayores a lo estimado inicialmente por Elanco.
 
 | **Probabilidad** | **Impacto** | **Exposición** | **Fase Afectada** |
 |------------------|-------------|----------------|-------------------|
 | 🟢 Baja (20%) | 🟢 Bajo | 🟢 **BAJO** | Producción |
 
 **Impacto Potencial:**
-- 💰 Costo mensual recurrente mayor
-- ⚠️ Necesidad de ajustar presupuesto anual
+- 💰 Costo mensual recurrente mayor para el cliente
+- ⚠️ Necesidad de ajustar presupuesto operativo anual de Elanco
 
 **Estrategias de Mitigación:**
 
 1. **Preventiva:**
    - ✅ Optimización de queries (ver R-T-05)
    - ✅ Particionamiento y clustering
-   - ✅ Monitoreo de costos con alertas (> USD $500/mes)
+   - ✅ Monitoreo de costos con alertas configurables
 
 2. **Contingencia:**
    - Revisión de queries más costosos (Query Plan Analyzer)
@@ -795,12 +795,12 @@ Se requieren recursos no planificados: consultor ABAP adicional, desarrollador B
 **Estrategias de Mitigación:**
 
 1. **Preventiva:**
-   - ✅ Presupuesto ABAP: USD $800 ya incluido
-   - ✅ Contingencia: USD $510 disponible
+   - ✅ Horas de consultoría ABAP ya incluidas en el presupuesto (12 horas)
+   - ✅ Análisis detallado en Fase 0 para identificar necesidades tempranas
 
 2. **Contingencia:**
-   - Usar presupuesto de contingencia
-   - Si excede: Solicitar aprobación formal
+   - Solicitar aprobación formal para recursos adicionales si necesario
+   - Re-priorizar transacciones según recursos disponibles
 
 **Responsable:** Linda López (PM)
 
@@ -856,10 +856,11 @@ Los siguientes supuestos son críticos para la viabilidad del proyecto. Si algun
 
 | # | Supuesto | Criticidad | Responsable Validación |
 |---|----------|------------|------------------------|
-| **S-P-01** | Costos de infraestructura BigQuery son asumidos por Elanco (no incluidos en el proyecto) | 🔴 CRÍTICO | Finance Elanco |
+| **S-P-01** | Costos de infraestructura BigQuery y licencias SLT son asumidos por Elanco (no incluidos en el esfuerzo del proyecto) | 🔴 CRÍTICO | Finance Elanco |
 | **S-P-02** | Licencias Power BI Pro (8 usuarios) ya están adquiridas y disponibles | 🔴 CRÍTICO | TI Elanco |
-| **S-P-03** | No se requieren herramientas de terceros adicionales (ej. Fivetran, Tableau) | 🟢 MEDIO | Aunergia |
-| **S-P-04** | Tarifas de Aunergia se mantienen constantes durante el proyecto (18-20 semanas) | 🟢 MEDIO | Aunergia Management |
+| **S-P-03** | Recurso SAP Basis estará disponible on-demand para configuración de SLT y administración SAP | 🔴 CRÍTICO | TI Elanco |
+| **S-P-04** | No se requieren herramientas de terceros adicionales (ej. Fivetran, Tableau) | 🟢 MEDIO | Aunergia |
+| **S-P-05** | El esfuerzo estimado se mantiene constante durante el proyecto (24 semanas) | 🟢 MEDIO | Aunergia Management |
 
 ---
 
@@ -896,7 +897,7 @@ Los siguientes supuestos son críticos para la viabilidad del proyecto. Si algun
 
 **Criterios de Escalación:**
 - Riesgo materializado con impacto > 2 semanas o cambios significativos al alcance
-- Supuestos críticos invalidados
+- Supuestos críticos invalidados (ej. falta de recurso SAP Basis, tablas no disponibles en BigQuery)
 - Imposibilidad de cumplir con Criterio Go/No-Go
 
 ---

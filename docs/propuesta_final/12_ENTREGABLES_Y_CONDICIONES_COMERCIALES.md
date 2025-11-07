@@ -490,17 +490,18 @@ A continuación se detalla la lista exhaustiva de todos los entregables del proy
 
 ## 12.4. Condiciones Comerciales
 
-### 12.4.1. Valor Total del Proyecto
+### 12.4.1. Esfuerzo Total del Proyecto
 
 **Desglose por Fase:**
 
-| Fase | Descripción |
-|------|-------------|
-| **Fase 0** | Revisión de Alcance y Factibilidad (4-5 semanas) |
-| **Fase 1** | Construcción de Data Lake (8-10 semanas) |
-| **Fase 2** | Modelado y Dashboards (5-6 semanas) |
-| **Fase 3** | Modelos Predictivos (solo descripción) |
-| **Consultoría ABAP** | Análisis transacciones custom |
+| Fase | Descripción | Horas |
+|------|-------------|-------|
+| **Fase 0** | Revisión de Alcance y Factibilidad (4-5 semanas) | 116h |
+| **Fase 1** | Construcción de Data Lake (8-10 semanas) | 267h |
+| **Fase 2** | Modelado y Dashboards (6-8 semanas) | 294h |
+| **Fase 3** | Modelos Predictivos (solo descripción) | Incluido en Fase 2 |
+| **Consultoría ABAP** | Análisis transacciones custom | 12h |
+| **TOTAL** | **24 semanas (incluyendo 1 semana vacacional)** | **677h** |
 
 ---
 
@@ -510,16 +511,16 @@ A continuación se detalla la lista exhaustiva de todos los entregables del proy
 
 | Hito | Fecha Estimada | % del Esfuerzo | Horas | Condición de Aceptación |
 |------|----------------|----------------|-------|-------------------------|
-| **Hito 1: Inicio del Proyecto** | 10-nov-2025 | - | - | Contrato firmado, Kick-off realizado |
+| **Hito 1: Inicio del Proyecto** | 1-dic-2025 | - | - | Contrato firmado, Kick-off realizado |
 | **Hito 2: Entrega Go/No-Go (Fase 0)** | 15-dic-2025 | 17% | 116h | Aprobación de Go/No-Go |
-| **Hito 3: Data Lake Completado (Fase 1)** | 23-feb-2026 | 39% | 267h | Aprobación técnica Data Lake |
-| **Hito 4: 12 Dashboards UAT (Fase 2)** | 16-abr-2026 | 43% | 294h | Aprobación UAT por stakeholders |
-| **Hito 5: Go-Live y Cierre** | 16-abr-2026 | - | - | Go-Live exitoso + Cierre |
+| **Hito 3: Data Lake Completado (Fase 1)** | 23-mar-2026 | 39% | 267h | Aprobación técnica Data Lake |
+| **Hito 4: 12 Dashboards UAT (Fase 2)** | 18-may-2026 | 43% | 294h | Aprobación UAT por stakeholders |
+| **Hito 5: Go-Live y Cierre** | 18-may-2026 | - | - | Go-Live exitoso + Cierre |
 | **TOTAL** | | **100%** | **677h** | |
 
 **Nota sobre Condiciones Comerciales:**
-- Las condiciones de pago y facturación serán definidas en acuerdo comercial separado
-- Esfuerzo total del proyecto: 677 horas distribuidas en 21-23 semanas (incluyendo 1 semana vacacional)
+- Las condiciones comerciales y esquema de facturación serán definidas en acuerdo separado
+- Esfuerzo total del proyecto: 677 horas distribuidas en 24 semanas (incluyendo 1 semana vacacional)
 - Si el proyecto se detiene en Fase 0 (NO-GO), se factura solo el esfuerzo de Fase 0 (116 horas)
 
 ---
@@ -823,13 +824,13 @@ Los siguientes documentos forman parte integral del contrato:
 ### 12.5.2. Soporte Extendido (Opcional - Post 30 Días)
 
 **Modalidad 1: Soporte On-Demand (Pay-per-Use)**
-- Tarifa: A cotizar según necesidad
+- A cotizar según necesidad
 - Sin compromiso mínimo
 - Facturación mensual por horas consumidas
 - Ideal para: Soporte esporádico, pequeños ajustes
 
 **Modalidad 2: Retainer Mensual**
-- Paquete: Horas mensuales acordadas a tarifa preferencial
+- Paquete: Horas mensuales acordadas
 - Incluye: Soporte continuo, pequeñas mejoras, monitoreo
 - Ideal para: Mantenimiento evolutivo, nuevas transacciones
 

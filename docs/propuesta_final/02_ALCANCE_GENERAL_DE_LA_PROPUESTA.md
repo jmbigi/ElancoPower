@@ -40,7 +40,9 @@ Implementar una **solución integral de centralización de datos de análisis** 
 ### 2.2.1. Incluido en el Alcance
 
 #### ✅ Sistemas Fuente
-- **SAP ECC:** 18 transacciones priorizadas (ver sección 3)
+- **SAP ECC:** Datos de 18 transacciones priorizadas (ver sección 3)
+  - *Nota técnica:* Se replicarán las **tablas SAP subyacentes** (estimado 70-90 tablas) asociadas a estas transacciones
+  - Las transacciones SAP son interfaces de usuario; lo que se replica mediante SLT son las tablas de base de datos
 - **Módulos SAP:** MM, SD, FI, CO
 - **Países:** Todos los países de la operación CASA (~10 países)
 - **Historización:** Mínimo 24 meses de datos históricos
@@ -49,6 +51,7 @@ Implementar una **solución integral de centralización de datos de análisis** 
 - **Data Lake:** Google BigQuery (dataset CASA)
 - **Arquitectura:** Zonas RAW → PROCESSED → CURATED
 - **Conectores:** **SAP SLT (Landscape Transformation Server)** para replicación en tiempo real SAP ECC ↔ BigQuery
+  - *Nota: La instalación y configuración de SLT es responsabilidad del cliente (Elanco) con soporte del equipo SAP Basis*
 - **Procesamiento:** Pipelines ETL/ELT con BigQuery SQL
 - **Monitoreo:** Logs de ejecución, alertas de errores, dashboards operativos
 
@@ -113,9 +116,10 @@ Implementar una **solución integral de centralización de datos de análisis** 
 - Módulos de recursos humanos (HCM - Human Capital Management)
 - Módulos de mantenimiento (PM - Plant Maintenance)
 
-#### ❌ Transacciones SAP Adicionales
-- Solo se incluyen las **18 transacciones priorizadas** (ver sección 3)
-- Transacciones adicionales requerirán cotización separada
+#### ❌ Tablas/Transacciones SAP Adicionales
+- Solo se incluyen las **tablas SAP asociadas a las 18 transacciones priorizadas** (ver sección 3)
+- Tablas o transacciones adicionales requerirán cotización separada
+- Si durante Fase 0 se identifican tablas adicionales necesarias, se evaluará el impacto en esfuerzo
 
 #### ❌ Desarrollo de Modelos Predictivos (Fase 3)
 - **Solo se entrega descripción conceptual** en Fase 3
@@ -123,11 +127,13 @@ Implementar una **solución integral de centralización de datos de análisis** 
 - Estimación preliminar para implementación: 8-10 semanas
 - Incluye: Data Science, MLOps, entrenamiento, deployment, monitoreo
 
-#### ❌ Infraestructura y Licencias
+#### ❌ Infraestructura y Licencias (Responsabilidad del Cliente)
+- **SAP Landscape Transformation Server (SLT):** Instalación, configuración y licenciamiento - provisto y configurado por Elanco con su equipo SAP Basis
 - Licencias de Google Cloud Platform (BigQuery) - costo asumido por Elanco
 - Licencias Power BI Pro - ya adquiridas por Elanco
 - Infraestructura de red y seguridad - gestionada por TI Elanco
 - Ambientes de desarrollo/QA/producción - provisionados por TI Global
+- **Recurso SAP Basis:** Provisto por Elanco para tareas de administración SAP y configuración de SLT
 
 #### ❌ Soporte Post-Implementación
 - Soporte operativo 24/7 - responsabilidad de TI Elanco
@@ -220,7 +226,8 @@ El proyecto se divide en **4 fases** con objetivos específicos:
 
 | Métrica | Objetivo |
 |---------|----------|
-| **Transacciones SAP automatizadas** | 18 de 18 (100%) |
+| **Tablas SAP replicadas** | 100% de las tablas identificadas para las 18 transacciones (~70-90 tablas) |
+| **Transacciones SAP con datos disponibles** | 18 de 18 (100%) |
 | **Reducción tiempo de consolidación** | ≥ 70% (de 3-5 días a < 1 día) |
 | **Tiempo de actualización de dashboards** | ≤ 24 horas desde cierre de periodo |
 | **Exactitud de datos (SAP vs BigQuery)** | ≥ 99.5% |

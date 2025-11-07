@@ -126,7 +126,7 @@ Esta propuesta está organizada en los siguientes documentos:
 - **07_FASE_3_MODELOS_PREDICTIVOS.md** - Arquitectura de analítica avanzada
 
 ### 📄 **Parte 4: Estimaciones y Planificación**
-- **08_ESTIMACION_DE_ESFUERZOS_Y_COSTOS.md** - Horas y presupuesto detallado
+- **08_ESTIMACION_DE_ESFUERZOS_Y_COSTOS.md** - Estimación de horas detallada
 - **09_CRONOGRAMA_SEMANAL.md** - Planificación temporal del proyecto
 
 ### 📄 **Parte 5: Requisitos y Cierre**

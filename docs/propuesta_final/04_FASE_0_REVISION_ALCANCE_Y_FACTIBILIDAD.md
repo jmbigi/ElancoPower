@@ -110,7 +110,7 @@ Calcular costo mensual de:
 - Procesamiento (Query processing)
 - Streaming inserts (si aplica)
 
-**Meta:** < USD $500/mes en costos BigQuery
+**Meta:** Costos BigQuery manejables según presupuesto de Elanco
 
 ---
 
@@ -175,8 +175,7 @@ Calcular costo mensual de:
 #### Contingencia
 
 Si el análisis requiere conocimientos ABAP especializados:
-- Contratar consultor ABAP externo: 8-16 horas
-- Costo: USD $640-$1,600 (incluido en contingencias)
+- Contratar consultor ABAP externo: 8-16 horas (incluido en contingencias)
 
 ---
 

@@ -1,6 +1,37 @@
 # 3. TRANSACCIONES SAP INCLUIDAS EN LA PROPUESTA
 
-## 3.1. Resumen Estadístico
+## 3.1. Nota Importante sobre Transacciones vs. Tablas SAP
+
+**Aclaración Técnica Fundamental:**
+
+En este documento se hace referencia a "transacciones SAP" como punto de partida para identificar los datos requeridos por el negocio. Sin embargo, es importante entender que:
+
+✅ **Lo que se replica son TABLAS SAP, no transacciones**
+
+- Las **transacciones SAP** (VA05, KSB1, FAGLL03, etc.) son **interfaces de usuario** que consultan y muestran datos almacenados en tablas de la base de datos SAP
+- Lo que se implementará mediante **SAP SLT (Landscape Transformation Server)** es la **replicación de las tablas subyacentes** que contienen los datos mostrados por esas transacciones
+- Por ejemplo: La transacción **VA05** consulta las tablas **VBAK, VBAP, VBEP**, y son estas tablas las que se replicarán a BigQuery
+
+**Proceso Técnico:**
+
+```
+TRANSACCIÓN SAP (UI)          TABLAS SAP (Datos)         REPLICACIÓN SLT
+┌──────────────┐              ┌──────────────┐           ┌──────────────┐
+│   VA05       │              │  VBAK        │           │  BigQuery    │
+│ (Órdenes     │──consulta──▶ │  VBAP        │──SLT────▶ │  raw_vbak    │
+│  Abiertas)   │              │  VBEP        │           │  raw_vbap    │
+│              │              │              │           │  raw_vbep    │
+└──────────────┘              └──────────────┘           └──────────────┘
+```
+
+**Por lo tanto:**
+- Cuando mencionamos "18 transacciones", en realidad nos referimos a "los datos de las tablas asociadas a estas 18 transacciones"
+- El análisis en **Fase 0** identificará las **tablas SAP específicas** que deben replicarse
+- La replicación se configura **tabla por tabla** en SLT, no "transacción por transacción"
+
+---
+
+## 3.2. Resumen Estadístico
 
 **Total de transacciones identificadas:** 18  
 **Fuente:** Attach_2_Correo_1_Transacciones SAP.csv (normalizado)  
@@ -8,12 +39,14 @@
 
 ### Distribución por Prioridad
 
-| Prioridad | Cantidad | Porcentaje |
-|-----------|----------|------------|
-| **Prioridad 1 (Críticas)** | 4 | 22% |
-| **Prioridad 2 (Importantes)** | 4 | 22% |
-| **Pendientes de clasificar** | 10 | 56% |
-| **TOTAL** | **18** | **100%** |
+| Prioridad | Cantidad | Porcentaje | Estimado de Tablas SAP |
+|-----------|----------|------------|------------------------|
+| **Prioridad 1 (Críticas)** | 4 | 22% | ~15-20 tablas |
+| **Prioridad 2 (Importantes)** | 4 | 22% | ~15-20 tablas |
+| **Pendientes de clasificar** | 10 | 56% | ~40-50 tablas |
+| **TOTAL** | **18** | **100%** | **~70-90 tablas SAP** |
+
+**Nota:** Una transacción puede requerir múltiples tablas. Por ejemplo, VA05 requiere al menos 3 tablas (VBAK, VBAP, VBEP).
 
 ### Distribución por Módulo SAP
 
@@ -558,12 +591,14 @@ Corregidas durante normalización:
 
 Para cada transacción se debe validar en Fase 0:
 
-1. ✅ **Nombres exactos de tablas SAP** involucradas
-2. ✅ **Campos clave** requeridos para análisis
-3. ✅ **Frecuencia de sincronización** adecuada
-4. ✅ **Disponibilidad en dataset CASA** de BigQuery
-5. ✅ **Volúmenes estimados** de datos (24 meses históricos)
-6. ✅ **Lógica de cálculo** (cuando aplique)
+1. ✅ **Identificación de tablas SAP subyacentes** - Determinar todas las tablas que consulta cada transacción
+2. ✅ **Nombres exactos de tablas SAP** a replicar mediante SLT
+3. ✅ **Campos clave** requeridos para análisis (pueden replicarse subconjuntos de campos)
+4. ✅ **Relaciones entre tablas** (claves foráneas, joins necesarios)
+5. ✅ **Frecuencia de replicación SLT** adecuada (tiempo real, batch diario, etc.)
+6. ✅ **Disponibilidad en dataset CASA** de BigQuery (confirmar que tablas ya están siendo replicadas)
+7. ✅ **Volúmenes estimados** de datos (24 meses históricos + crecimiento)
+8. ✅ **Lógica de cálculo** en transacciones custom (Z) que debe recrearse en BigQuery
 
 ### 3.6.5. Transacciones Custom (Z)
 
@@ -573,7 +608,7 @@ Para cada transacción se debe validar en Fase 0:
 
 **Mitigación:**
 - Análisis de código ABAP en Fase 0
-- Presupuesto de contingencia para consultoría ABAP (8-16 horas, USD $640-$1,600)
+- Presupuesto de contingencia para consultoría ABAP (8-16 horas)
 - Coordinación con equipo ABAP de Elanco (si disponible)
 
 ---
@@ -583,18 +618,22 @@ Para cada transacción se debe validar en Fase 0:
 ### Semana 1-2 de Fase 0
 
 1. ✅ **Workshop de priorización** con stakeholders (4 horas)
-2. ✅ **Análisis de transacciones custom** (ZLEL008, ZVEL015)
-3. ✅ **Validación de tablas en BigQuery** (consulta a TI Global)
-4. ✅ **Estimación de volúmenes** por transacción
-5. ✅ **Definición de SLAs** de actualización
+2. ✅ **Mapeo de transacciones a tablas SAP** - Identificar todas las tablas subyacentes por transacción
+3. ✅ **Análisis de transacciones custom** (ZLEL008, ZVEL015) - Ingeniería reversa para identificar tablas
+4. ✅ **Validación de disponibilidad de tablas** en BigQuery con TI Global
+5. ✅ **Análisis de relaciones entre tablas** (joins, claves foráneas)
+6. ✅ **Estimación de volúmenes** por tabla SAP
+7. ✅ **Definición de SLAs** de replicación SLT
 
 ### Entregable Clave
 
-📋 **"Backlog Definitivo de Transacciones SAP"**
+📋 **"Mapeo Completo: Transacciones → Tablas SAP → BigQuery"**
 - 18 transacciones clasificadas por prioridad
-- Estimación de esfuerzo por transacción
+- Listado completo de tablas SAP requeridas (~70-90 tablas)
+- Confirmación de disponibilidad de cada tabla en BigQuery
+- Estimación de esfuerzo por tabla (configuración SLT, validación, transformaciones)
 - Orden de implementación para Fase 1
-- Identificación de riesgos técnicos por transacción
+- Identificación de riesgos técnicos por tabla
 
 ---
 
