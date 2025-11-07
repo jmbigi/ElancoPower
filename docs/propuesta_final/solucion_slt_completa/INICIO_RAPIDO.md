@@ -40,7 +40,7 @@
 ## 📚 Estructura de Documentos (5 archivos)
 
 ```
-📁 docs/propuesta_final/
+📁 docs/propuesta_final/solucion_slt_completa/
 │
 ├── 🚀 INICIO_RAPIDO.md                    ← ESTÁS AQUÍ
 │
@@ -318,6 +318,9 @@ open INDICE_GENERAL.md
 
 # Busca tu rol específico
 # Descarga los scripts de tu fase
+# Lee el documento de implementación
+open Solucion_SLT_CONNECTOR_Y_PLAN_VA05.md
+
 # ¡Manos a la obra!
 ```
 

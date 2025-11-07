@@ -2,7 +2,7 @@
 
 ## 🎯 Vista General del Proyecto
 
-**Proyecto:** Integración SAP ECC/S/4HANA con Google BigQuery usando SLT  
+**Proyecto:** Integración SAP S/4HANA con Google BigQuery usando SLT  
 **Transacción Principal:** VA05 (Órdenes de Venta)  
 **Estado:** ✅ SOLUCIÓN COMPLETA Y LISTA PARA IMPLEMENTACIÓN  
 **Fecha:** 7 de noviembre de 2025
@@ -40,7 +40,7 @@
 
 ---
 
-### 3. Solucion_SLT_CONNECTOR_Y_PLAN_VA05.md (PARTE 1)
+### 3. Solucion_SLT_CONNECTOR_Y_PLAN_VA05.md (PARTE 1 - en esta carpeta)
 **Para:** Equipo técnico de implementación  
 **Contenido:**
 - **Arquitectura detallada**
@@ -128,7 +128,7 @@
 ## 🗂️ Organización de Archivos
 
 ```
-docs/propuesta_final/
+docs/propuesta_final/solucion_slt_completa/
 │
 ├── RESUMEN_EJECUTIVO_SLT.md              ⭐ EMPEZAR AQUÍ (Ejecutivos)
 ├── README_SOLUCION_COMPLETA_SLT.md       ⭐ EMPEZAR AQUÍ (PM)
@@ -178,8 +178,8 @@ docs/propuesta_final/
 ### Para SAP Basis / ABAP (4 horas)
 ```
 1. README > Checklist de Implementación        (15 min)
-2. Parte 1 > FASE 1: Infraestructura           (60 min)
-3. Parte 1 > FASE 2: Configuración SLT         (90 min)
+2. Solucion_SLT_CONNECTOR_Y_PLAN_VA05.md (PARTE 1) > FASE 1: Infraestructura (60 min)
+3. PARTE 1 > FASE 2: Configuración SLT         (90 min)
 4. Parte 2 > Problemas 1, 5 (SLT specific)     (45 min)
 → ACCIÓN: Ejecutar scripts de instalación y configuración
 ```
@@ -187,8 +187,8 @@ docs/propuesta_final/
 ### Para Cloud Architect / Data Engineer (4 horas)
 ```
 1. README > Arquitectura                       (15 min)
-2. Parte 1 > FASE 1: Configuración GCP         (60 min)
-3. Parte 1 > FASE 3: Data Products             (90 min)
+2. Solucion_SLT_CONNECTOR_Y_PLAN_VA05.md (PARTE 1) > FASE 1: Configuración GCP (60 min)
+3. PARTE 1 > FASE 3: Data Products             (90 min)
 4. Parte 2 > Problemas 2, 3, 4 (Cloud/BQ)      (45 min)
 → ACCIÓN: Configurar GCP, crear vistas BigQuery
 ```
@@ -196,7 +196,7 @@ docs/propuesta_final/
 ### Para DevOps / Support (3 horas)
 ```
 1. README > Sistema de Monitoreo               (15 min)
-2. Parte 1 > FASE 4: Monitoreo (inicio)        (30 min)
+2. Solucion_SLT_CONNECTOR_Y_PLAN_VA05.md (PARTE 1) > FASE 4: Monitoreo (inicio) (30 min)
 3. Parte 2 > FASE 4: Monitoreo (completo)      (60 min)
 4. Parte 2 > Todos los Problemas (1-5)         (60 min)
 5. Parte 2 > Plan de soporte                   (15 min)
@@ -206,8 +206,8 @@ docs/propuesta_final/
 ### Para Usuario Funcional (1 hora)
 ```
 1. RESUMEN_EJECUTIVO > Beneficios              (10 min)
-2. Parte 1 > Vista VA05_SALES_ORDERS           (20 min)
-3. Parte 1 > Diccionario de datos              (20 min)
+2. Solucion_SLT_CONNECTOR_Y_PLAN_VA05.md (PARTE 1) > Vista VA05_SALES_ORDERS (20 min)
+3. PARTE 1 > Diccionario de datos              (20 min)
 4. Parte 2 > Plan de soporte > Nivel 1         (10 min)
 → ACCIÓN: Participar en UAT, dar feedback
 ```
@@ -401,6 +401,8 @@ docs/propuesta_final/
 
 **ESTADO DEL PROYECTO:** ✅ LISTO PARA APROBACIÓN E IMPLEMENTACIÓN
 
-**Fecha:** 7 de noviembre de 2025  
+**Última actualización:** 7 de noviembre de 2025  
 **Versión del documento:** 1.0  
 **Próxima revisión:** Post aprobación
+
+````

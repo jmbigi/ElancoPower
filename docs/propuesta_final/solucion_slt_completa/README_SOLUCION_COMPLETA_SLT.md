@@ -12,7 +12,7 @@ El proyecto está enfocado en replicar la transacción **VA05 (Órdenes de Venta
 
 La solución está dividida en dos documentos principales:
 
-### Parte 1: `Solucion_SLT_CONNECTOR_Y_PLAN_VA05.md`
+### Parte 1: `Solucion_SLT_CONNECTOR_Y_PLAN_VA05.md` (en esta carpeta)
 **Contenido:**
 - Arquitectura y componentes clave
 - Recursos humanos requeridos

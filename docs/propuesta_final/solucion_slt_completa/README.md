@@ -48,9 +48,9 @@ Esta carpeta contiene la **documentación completa** para implementar la integra
 
 ---
 
-## 📄 Documento Principal (fuera de esta carpeta)
+## 📄 Documento Principal (en esta carpeta)
 
-**Archivo:** `../Solucion_SLT_CONNECTOR_Y_PLAN_VA05.md` (PARTE 1)
+**Archivo:** `./Solucion_SLT_CONNECTOR_Y_PLAN_VA05.md` (PARTE 1)
 
 **Contenido:**
 - Arquitectura detallada
@@ -78,7 +78,13 @@ Esta estructura facilita:
 ## 🗺️ Mapa de Navegación
 
 ```
-docs/propuesta_final/
+docs/propuesta_final/solucion_slt_completa/    📁 ESTA CARPETA
+│
+├── README.md                                  ← Estás aquí
+├── INICIO_RAPIDO.md                           ⭐ Empieza aquí
+├── INDICE_GENERAL.md                          📚 Navegación completa
+├── RESUMEN_EJECUTIVO_SLT.md                   💼 Para ejecutivos
+├── README_SOLUCION_COMPLETA_SLT.md            📖 Para PMs
 │
 ├── Solucion_SLT_CONNECTOR_Y_PLAN_VA05.md      📘 PARTE 1
 │   └── Implementación técnica completa
@@ -88,13 +94,8 @@ docs/propuesta_final/
 │       ├── FASE 3: Data Products (Scripts SQL)
 │       └── FASE 4: Monitoreo inicio
 │
-└── solucion_slt_completa/                     📁 ESTA CARPETA
-    ├── README.md                              ← Estás aquí
-    ├── INICIO_RAPIDO.md                       ⭐ Empieza aquí
-    ├── INDICE_GENERAL.md                      📚 Navegación completa
-    ├── RESUMEN_EJECUTIVO_SLT.md               💼 Para ejecutivos
-    ├── README_SOLUCION_COMPLETA_SLT.md        📖 Para PMs
-    └── Solucion_..._PARTE2.md                 🔧 Operations y troubleshooting
+└── Solucion_..._PARTE2.md                     � PARTE 2
+    └── Operations y troubleshooting
 ```
 
 ---
@@ -119,8 +120,8 @@ docs/propuesta_final/
 ```bash
 1. Lee: INDICE_GENERAL.md (5 min)
 2. Busca tu rol específico:
-   - SAP Basis → PARTE 1, FASE 1-2
-   - Cloud/Data → PARTE 1, FASE 3
+   - SAP Basis → Solucion_SLT_CONNECTOR_Y_PLAN_VA05.md (PARTE 1), FASE 1-2
+   - Cloud/Data → Solucion_SLT_CONNECTOR_Y_PLAN_VA05.md (PARTE 1), FASE 3
    - DevOps → PARTE 1-2, FASE 4
 3. Ejecuta los scripts de tu fase
 ```
@@ -247,7 +248,7 @@ Este documento contiene información propietaria y confidencial.
 
 1. **Primera vez:** Lee `INICIO_RAPIDO.md` (5 minutos)
 2. **Necesitas aprobar:** Lee `RESUMEN_EJECUTIVO_SLT.md`
-3. **Necesitas implementar:** Lee `../Solucion_SLT_CONNECTOR_Y_PLAN_VA05.md` (PARTE 1)
+3. **Necesitas implementar:** Lee `Solucion_SLT_CONNECTOR_Y_PLAN_VA05.md` (PARTE 1)
 4. **Necesitas troubleshooting:** Lee `Solucion_SLT_CONNECTOR_Y_PLAN_VA05_PARTE2.md`
 5. **Necesitas buscar algo:** Lee `INDICE_GENERAL.md`
 

@@ -368,7 +368,7 @@ sap-bigquery-team@elanco.com
 
 ---
 
-**Fecha de Documento:** 7 de noviembre de 2025  
+**Última actualización:** 7 de noviembre de 2025  
 **Versión:** 1.0 - Resumen Ejecutivo  
 **Válido hasta:** 31 de diciembre de 2025  
 **Estado:** ✅ APROBACIÓN PENDIENTE
