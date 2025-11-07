@@ -20,7 +20,7 @@ Alcance de la propuesta
 Transacciones incluidas en la propuesta y proyecto: ME2L, MM60, VA05, MB59, ZLEL008, KSB1, KE24, FB03, ZVEL015, ME23N, FAGLL03, FBL1N, F.08, F.01, XK03, XD03, FBL5N, MB5B.
 
 Fases:
-Fase 0 – Revisión del alcance y factibilidad
+Fase 0 – Revisión del alcance, factibilidad y piloto
 Fase 1 – Transferencia de datos a repositorio
 Fase 2 – Modelado de datos y generación de tableros
 Fase 3 – Predicción (solo descripción)
