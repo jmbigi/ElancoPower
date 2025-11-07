@@ -492,27 +492,15 @@ A continuación se detalla la lista exhaustiva de todos los entregables del proy
 
 ### 12.4.1. Valor Total del Proyecto
 
-**Monto Total:** **USD $17,210.00** (Diecisiete mil doscientos diez dólares americanos)
-
 **Desglose por Fase:**
 
-| Fase | Descripción | Monto (USD) | % del Total |
-|------|-------------|-------------|-------------|
-| **Fase 0** | Revisión de Alcance y Factibilidad (4-5 semanas) | $2,580.00 | 15.0% |
-| **Fase 1** | Construcción de Data Lake (8-10 semanas) | $8,190.00 | 47.6% |
-| **Fase 2** | Modelado y Dashboards (5-6 semanas) | $5,360.00 | 31.2% |
-| **Fase 3** | Modelos Predictivos (solo descripción) | $800.00 | 4.6% |
-| **Consultoría ABAP** | Análisis transacciones custom | $280.00 | 1.6% |
-| **TOTAL** | | **$17,210.00** | **100%** |
-
-**Notas:**
-- Presupuesto incluye todos los entregables listados en sección 12.2
-- **NO incluye costos de infraestructura y servicios** (responsabilidad del cliente):
-  - Licencias Google Cloud Platform (BigQuery): ~USD $300-500/mes
-  - Licencias Microsoft Power BI Pro (8 usuarios): Ya adquiridas por Elanco
-  - Provisión de ambientes (dev/qa/prod): A cargo de TI Elanco
-  - Conectividad y networking: A cargo de TI Elanco
-- NO incluye licencias de herramientas de terceros (Fivetran, Tableau, etc.)
+| Fase | Descripción |
+|------|-------------|
+| **Fase 0** | Revisión de Alcance y Factibilidad (4-5 semanas) |
+| **Fase 1** | Construcción de Data Lake (8-10 semanas) |
+| **Fase 2** | Modelado y Dashboards (5-6 semanas) |
+| **Fase 3** | Modelos Predictivos (solo descripción) |
+| **Consultoría ABAP** | Análisis transacciones custom |
 
 ---
 

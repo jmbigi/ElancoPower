@@ -69,7 +69,6 @@
 | **Duración** | 10 semanas (70 días calendario) |
 | **Esfuerzo** | 70 días-persona |
 | **Equipo** | 7 roles especializados |
-| **Costo Infraestructura Año 1** | $55,200 |
 | **Tablas Replicadas** | 6 tablas SAP SD |
 | **Scripts Incluidos** | 50+ scripts funcionales |
 | **Vistas BigQuery** | 7 vistas analíticas |
@@ -144,7 +143,7 @@ SAP S/4HANA
 ### Checklist Rápido:
 
 #### Prerrequisitos Organizacionales:
-- [ ] Presupuesto aprobado (Recursos humanos + $55,200 infraestructura)
+- [ ] Presupuesto aprobado (Recursos humanos)
 - [ ] Equipo de 7 personas disponible (70 días-persona)
 - [ ] 10 semanas de calendario disponibles
 - [ ] Sponsor ejecutivo asignado
@@ -167,7 +166,7 @@ SAP S/4HANA
 ### Paso 1: APROBAR (Esta Semana)
 ```
 Ejecutivos leen:  RESUMEN_EJECUTIVO_SLT.md
-Decisión:         Aprobar presupuesto (RRHH + $55,200 infraestructura)
+Decisión:         Aprobar presupuesto (RRHH)
 Output:           PO emitido, proyecto green-light
 ```
 

@@ -110,7 +110,7 @@ Las transacciones custom ZLEL008 (Comparativo de Precios) y ZVEL015 (Ventas Esta
    - ✅ Sesión de deep-dive con desarrolladores ABAP de TI Global
    - ✅ Solicitar código fuente de Z-transactions (includes, function modules)
    - ✅ Documentar lógica de cálculo y dependencias
-   - ✅ Asignar presupuesto de contingencia: USD $800 para ABAP freelance
+- Asignar presupuesto de contingencia para consultoría ABAP especializada.
 
 2. **Contingencia (SI ocurre):**
    - Contratar consultor ABAP senior por 40-60 horas (incluido en presupuesto contingencias)
@@ -163,7 +163,7 @@ Consultas BigQuery lentas o costosas por mal diseño de particiones, falta de cl
 | 🟢 Baja (20%) | 🟡 Medio | 🟢 **BAJO-MEDIO** | Fase 2 |
 
 **Impacto Potencial:**
-- 💰 Costos de procesamiento BigQuery mayores a lo estimado (> USD $400/mes)
+- 💰 Costos de procesamiento BigQuery mayores a lo estimado
 - ⏱️ Dashboards Power BI lentos (> 10 segundos)
 - 😤 Frustración de usuarios finales
 
@@ -482,7 +482,7 @@ Lucía tiene demandas competentes de su rol operativo SAP (soporte usuarios, cie
 
 2. **Contingencia:**
    - Extender plazos de Fase 1 (de 8 a 10-12 semanas)
-   - Contratar SAP Analyst adicional (costo adicional: USD $2,000-3,000)
+   - Contratar SAP Analyst adicional (costo adicional)
    - Re-priorizar transacciones: hacer TOP 10 primero
 
 **Responsable:** Linda López (PM) + Lucía Rodríguez
@@ -708,7 +708,7 @@ El proyecto requiere más horas de las estimadas (ej. complejidad transacciones 
 | 🟡 Media (30%) | 🟢 Bajo-Medio | 🟡 **MEDIO** | Fase 1 y Fase 2 |
 
 **Impacto Potencial:**
-- 💰 Sobrecosto de USD $1,000-2,000 (7-15% del presupuesto)
+- 💰 Sobrecosto (7-15% del presupuesto)
 - ⚠️ Necesidad de aprobación adicional
 
 **Estrategias de Mitigación:**
@@ -737,7 +737,8 @@ Costos mensuales de BigQuery (almacenamiento + procesamiento) mayores a USD $540
 | 🟢 Baja (20%) | 🟢 Bajo | 🟢 **BAJO** | Producción |
 
 **Impacto Potencial:**
-- 💰 Costo mensual recurrente mayor (USD $700-1,000/mes)
+- 💰 Costo mensual recurrente mayor
+- ⚠️ Necesidad de ajustar presupuesto anual
 
 **Estrategias de Mitigación:**
 
@@ -788,7 +789,8 @@ Se requieren recursos no planificados: consultor ABAP adicional, desarrollador B
 | 🟢 Baja-Media (25%) | 🟢 Bajo-Medio | 🟢 **BAJO-MEDIO** | Fase 1 |
 
 **Impacto Potencial:**
-- 💰 Costo adicional USD $800-1,500
+- 💰 Costo adicional
+- ⚠️ Necesidad de aprobación formal
 
 **Estrategias de Mitigación:**
 
@@ -824,7 +826,7 @@ Los siguientes supuestos son críticos para la viabilidad del proyecto. Si algun
 
 | # | Supuesto | Criticidad | Responsable Validación |
 |---|----------|------------|------------------------|
-| **S-O-01** | Presupuesto de USD $17,210 está aprobado y disponible | 🔴 CRÍTICO | Finance Elanco |
+| **S-O-01** | Presupuesto está aprobado y disponible | 🔴 CRÍTICO | Finance Elanco |
 | **S-O-02** | Product Owner está designado y tiene autoridad para tomar decisiones | 🔴 CRÍTICO | Management Elanco |
 | **S-O-03** | Stakeholders (Finanzas, Supply) están disponibles 4-6h/semana | 🟡 ALTO | Product Owner |
 | **S-O-04** | No hay cambios organizacionales mayores (reestructura, layoffs) durante el proyecto | 🟡 ALTO | Management Elanco |

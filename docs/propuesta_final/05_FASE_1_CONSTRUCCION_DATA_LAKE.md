@@ -140,21 +140,15 @@ SAP ECC                    BIGQUERY DATASET: CASA
 
 #### Conectores SAP ↔ BigQuery
 
-**Opciones evaluadas:**
-1. **Google Cloud Data Fusion** (recomendado)
-   - Conector SAP certificado
-   - UI visual para pipelines
-   - Soporte para CDC (Change Data Capture)
+**Método de Replicación:**
+- **SAP SLT (Landscape Transformation Server):** Se utilizará como la solución principal para la replicación de datos en tiempo real desde SAP ECC a Google BigQuery. SLT captura los cambios en las tablas de origen de SAP a nivel de base de datos y los replica de manera eficiente en el destino.
 
-2. **Fivetran** (alternativa comercial)
-   - Plug-and-play
-   - Costo adicional por licencia
+**Ventajas de SLT:**
+- **Replicación en Tiempo Real:** Permite tener datos actualizados en BigQuery con una latencia mínima.
+- **Bajo Impacto:** Minimiza la carga en el sistema SAP de origen.
+- **Confiabilidad:** Es una solución robusta y certificada por SAP para este tipo de escenarios.
 
-3. **Custom RFC/BAPI + Cloud Functions** (plan B)
-   - Desarrollo custom si conectores no funcionan
-   - Mayor control pero más mantenimiento
-
-**Decisión Fase 0:** Se definirá en base a validación técnica.
+**Decisión:** El uso de SAP SLT es una decisión de arquitectura clave para garantizar la frescura y consistencia de los datos en el Data Lake.
 
 ---
 

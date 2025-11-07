@@ -259,6 +259,7 @@ Estos requisitos **DEBEN** estar resueltos antes del kick-off:
 | **Supply Chain** | Manager / Planeador | Workshops, validaciones, UAT | 2-3h/semana |
 | **TI TechOps** | David Saboya | Coordinación TI Global, tickets | 2h/semana |
 | **TI Global** | SAP Basis / BigQuery Admin | Soporte permisos, tablas | On-demand |
+| **SAP Basis** | Administrador SAP | - Gestión de usuarios y perfiles<br>- Gestión de órdenes de transporte<br>- Monitoreo del sistema SAP<br>- Punto de contacto para incidencias técnicas SAP | On-demand |
 
 #### Usuarios Finales (Capacitación)
 

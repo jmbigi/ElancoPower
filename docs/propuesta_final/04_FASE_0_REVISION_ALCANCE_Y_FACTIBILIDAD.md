@@ -372,25 +372,17 @@ Cada riesgo incluye:
 
 **Hito:** Decisión Go/No-Go documentada
 
----
+### Presupuesto de Fase 0
 
-## 4.6. Presupuesto de Fase 0
+#### Desglose de Horas
 
-### Desglose de Horas
-
-| Recurso | Horas | Tarifa (USD/h) | Subtotal (USD) |
-|---------|-------|----------------|----------------|
-| **Juan Manuel Bigi** | 40h | $25 | $1,000 |
-| **Lucía Rodríguez** | 28h | $30 | $840 |
-| **Linda López (PM)** | 8h | $35 | $280 |
-| **Stakeholders Elanco** | 12h | - | (Sin costo) |
-| **TOTAL FASE 0** | **76h** | - | **$2,120** |
-
-### Contingencias Incluidas
-
-- Consultoría ABAP (si necesario): Reservado en presupuesto general (USD $640-$1,000)
-
----
+| Recurso | Horas |
+|---------|-------|
+| **Juan Manuel Bigi** | 40h |
+| **Lucía Rodríguez** | 28h |
+| **Linda López (PM)** | 8h |
+| **Stakeholders Elanco** | 12h (sin costo) |
+| **TOTAL FASE 0** | **76h** |
 
 ## 4.7. Criterios de Éxito de Fase 0
 

@@ -48,7 +48,7 @@ Implementar una **solución integral de centralización de datos de análisis** 
 #### ✅ Infraestructura de Datos
 - **Data Lake:** Google BigQuery (dataset CASA)
 - **Arquitectura:** Zonas RAW → PROCESSED → CURATED
-- **Conectores:** Certificados para SAP ECC ↔ BigQuery
+- **Conectores:** **SAP SLT (Landscape Transformation Server)** para replicación en tiempo real SAP ECC ↔ BigQuery
 - **Procesamiento:** Pipelines ETL/ELT con BigQuery SQL
 - **Monitoreo:** Logs de ejecución, alertas de errores, dashboards operativos
 
@@ -116,12 +116,11 @@ Implementar una **solución integral de centralización de datos de análisis** 
 #### ❌ Transacciones SAP Adicionales
 - Solo se incluyen las **18 transacciones priorizadas** (ver sección 3)
 - Transacciones adicionales requerirán cotización separada
-- Costo estimado por transacción adicional: USD $300-$800 según complejidad
 
 #### ❌ Desarrollo de Modelos Predictivos (Fase 3)
 - **Solo se entrega descripción conceptual** en Fase 3
 - La **implementación de modelos ML** se cotiza en proyecto separado
-- Estimación preliminar para implementación: USD $20,000-$35,000 (8-10 semanas)
+- Estimación preliminar para implementación: 8-10 semanas
 - Incluye: Data Science, MLOps, entrenamiento, deployment, monitoreo
 
 #### ❌ Infraestructura y Licencias

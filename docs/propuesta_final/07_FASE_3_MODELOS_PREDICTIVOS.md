@@ -8,7 +8,7 @@
 - Propuesta de arquitectura ML
 - Roadmap de desarrollo (sin estimación de esfuerzo)
 
-**La implementación se cotizará en proyecto separado** (estimación preliminar: USD $20,000-$35,000, 8-12 semanas).
+**La implementación se cotizará en proyecto separado** (estimación preliminar: 8-12 semanas).
 
 ---
 

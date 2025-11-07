@@ -11,7 +11,7 @@ Alcance de la propuesta
 2. Documento con propuesta:
 2.1. Alcances:
 2.1.1. Alcance de la propuesta.
-2.1.2. Transacciones SAP consideradas.
+2.1.2. Tablas y Transacciones SAP consideradas.
 2.2. Lista y descripción de tareas por fase (fases 0, 1 y 2).
 2.3. Estimación de esfuerzo (en horas) para perfiles técnicos.
 2.4. Cronograma semanal.
@@ -25,10 +25,3 @@ Fase 0 – Revisión del alcance, factibilidad y piloto
 Fase 1 – Transferencia de datos a repositorio
 Fase 2 – Modelado de datos y generación de tableros
 Fase 3 – Predicción (solo descripción)
-
-Costo de la propuesta
-30 horas * 25 USD = 750 USD.
-
-Fecha de elaboración: 3 de noviembre de 2025.
-Validez: 24 horas.
-Fecha de entrega: 12 de noviembre de 2025.

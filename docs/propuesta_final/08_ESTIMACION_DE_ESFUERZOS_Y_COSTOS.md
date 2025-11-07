@@ -253,7 +253,6 @@
 ### 8.6.1. Costos de Infraestructura y Servicios (Responsabilidad del Cliente)
 
 ❌ **Licencias Google Cloud Platform (BigQuery)**
-- Costo estimado: USD $300-$500/mes
 - **Responsable: ELANCO** (infraestructura corporativa a cuenta del cliente)
 - Incluye: Storage, processing, streaming inserts
 
