@@ -60,7 +60,7 @@ La solución está dividida en dos documentos principales:
 4. Cronograma detallado (10 semanas, 70 días-persona)
 5. Entregables finales completos
 6. Plan de soporte post-implementación
-7. Costos estimados ($122,595 año 1)
+7. Costos estimados (Infraestructura: $55,200 año 1)
 8. Criterios de aceptación
 
 ---
@@ -169,8 +169,7 @@ chmod +x create_service_account.sh
 | **Tablas Replicadas** | 6 (VBAK, VBAP, VBUK, VBUP, KNA1, MARA) |
 | **Scripts Incluidos** | 50+ scripts completos y funcionales |
 | **Vistas Creadas** | 7 vistas analíticas + 1 materializada |
-| **Costo Implementación** | $56,250 USD |
-| **Costo Año 1** | $122,595 USD (incluye infraestructura) |
+| **Costo Infraestructura Año 1** | $55,200 USD |
 | **Uptime Esperado** | 99.5% SLT + 99.9% BigQuery |
 | **Lag de Replicación** | < 2 minutos promedio |
 
@@ -178,15 +177,16 @@ chmod +x create_service_account.sh
 
 ## 👥 Equipo Requerido
 
-| Rol | Cantidad | Días | Tarifa Diaria |
-|-----|----------|------|---------------|
-| SAP Basis Senior | 1 | 15 | $800 |
-| SAP ABAP Developer | 1 | 10 | $700 |
-| Google Cloud Architect | 1 | 8 | $900 |
-| SAP SD/MM Functional | 1 | 7 | $750 |
-| Data Engineer | 1 | 10 | $800 |
-| DevOps Engineer | 1 | 8 | $750 |
-| Project Manager | 1 | 12 | $900 |
+| Rol | Cantidad | Esfuerzo (días) |
+|-----|----------|-----------------|
+| SAP Basis Senior | 1 | 15 |
+| SAP ABAP Developer | 1 | 10 |
+| Google Cloud Architect | 1 | 8 |
+| SAP SD/MM Functional | 1 | 7 |
+| Data Engineer | 1 | 10 |
+| DevOps Engineer | 1 | 8 |
+| Project Manager | 1 | 12 |
+| **TOTAL** | **7 roles** | **70 días-persona** |
 
 ---
 
@@ -349,8 +349,8 @@ Este documento es propiedad de **Elanco Power** y contiene información confiden
 
 ## 🎯 Próximos Pasos Inmediatos
 
-1. ✅ **Aprobar presupuesto:** $122,595 para año 1
-2. ✅ **Conformar equipo:** Contratar/asignar 7 roles especializados
+1. ✅ **Aprobar presupuesto:** Cotizar recursos humanos + $55,200 infraestructura año 1
+2. ✅ **Conformar equipo:** Contratar/asignar 7 roles especializados (70 días-persona)
 3. ✅ **Adquirir licencias:** SAP SLT + BigQuery Connector
 4. ✅ **Aprovisionar servidor:** Linux server con specs requeridas
 5. ✅ **Kick-off meeting:** Semana del [FECHA A DEFINIR]

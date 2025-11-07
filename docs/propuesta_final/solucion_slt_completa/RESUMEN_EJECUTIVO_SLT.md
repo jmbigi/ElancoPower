@@ -85,18 +85,18 @@ SAP S/4HANA
 
 ## 💰 Inversión Requerida
 
-### Costos de Implementación (One-time)
+### Recursos Humanos Requeridos (One-time)
 
-| Concepto | Cantidad | Costo |
-|----------|----------|-------|
-| **Recursos Humanos** | 70 días-persona | $56,250 |
-| SAP Basis Senior | 15 días | $12,000 |
-| SAP ABAP Developer | 10 días | $7,000 |
-| Google Cloud Architect | 8 días | $7,200 |
-| SAP SD/MM Functional | 7 días | $5,250 |
-| Data Engineer | 10 días | $8,000 |
-| DevOps Engineer | 8 días | $6,000 |
-| Project Manager | 12 días | $10,800 |
+| Rol | Esfuerzo (días) |
+|-----|-----------------|
+| SAP Basis Senior | 15 |
+| SAP ABAP Developer | 10 |
+| Google Cloud Architect | 8 |
+| SAP SD/MM Functional | 7 |
+| Data Engineer | 10 |
+| DevOps Engineer | 8 |
+| Project Manager | 12 |
+| **TOTAL** | **70 días-persona** |
 
 ### Costos Operacionales (Mensual)
 
@@ -116,10 +116,10 @@ SAP S/4HANA
 
 | Concepto | Costo |
 |----------|-------|
-| Implementación (One-time) | $56,250 |
-| Operación Año 1 | $55,200 |
-| Contingencia (10%) | $11,145 |
-| **TOTAL AÑO 1** | **$122,595** |
+| Implementación (RRHH) | Por cotizar según mercado |
+| Operación Año 1 (Infraestructura) | $55,200 |
+| Contingencia (10%) | A calcular sobre total |
+| **TOTAL AÑO 1** | **Por cotizar + $55,200** |
 
 ---
 

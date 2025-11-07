@@ -8,7 +8,7 @@
 > 4. **Este documento (PARTE 1)** - Guía técnica de implementación (FASES 1-3)
 > 5. **Solucion_SLT_CONNECTOR_Y_PLAN_VA05_PARTE2.md** - Monitoreo, troubleshooting, cronograma y costos
 >
-> **Total:** 50+ scripts funcionales, 10 semanas implementación, $122,595 año 1
+> **Total:** 50+ scripts funcionales, 10 semanas implementación, 70 días-persona
 
 ---
 
@@ -43,7 +43,7 @@
 - Problemas comunes y soluciones (5 problemas detallados)
 - Cronograma detallado (10 semanas, 70 días-persona)
 - Entregables finales del proyecto
-- Costos estimados ($122,595)
+- Costos estimados (Infraestructura: $55,200 año 1)
 - Plan de soporte post-implementación
 - Criterios de aceptación
 

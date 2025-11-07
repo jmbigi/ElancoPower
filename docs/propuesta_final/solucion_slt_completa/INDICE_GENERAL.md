@@ -107,9 +107,9 @@
   - Documentación de usuario
 
 - **COSTOS ESTIMADOS**
-  - Recursos humanos: $56,250
+  - Recursos humanos: 70 días-persona (por cotizar)
   - Infraestructura año 1: $55,200
-  - Total con contingencia: $122,595
+  - Total: Por cotizar + $55,200
 
 - **CRITERIOS DE ACEPTACIÓN**
   - 7 criterios detallados

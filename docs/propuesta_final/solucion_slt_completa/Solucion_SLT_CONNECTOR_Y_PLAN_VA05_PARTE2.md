@@ -785,18 +785,18 @@ user_docs/
 
 ## 💰 COSTOS ESTIMADOS
 
-### Costos de Recursos Humanos
+### Recursos Humanos Requeridos
 
-| Rol | Tarifa Diaria | Días | Subtotal |
-|-----|---------------|------|----------|
-| SAP Basis Senior | $800 | 15 | $12,000 |
-| SAP ABAP Developer | $700 | 10 | $7,000 |
-| Google Cloud Architect | $900 | 8 | $7,200 |
-| SAP SD/MM Functional | $750 | 7 | $5,250 |
-| Data Engineer | $800 | 10 | $8,000 |
-| DevOps Engineer | $750 | 8 | $6,000 |
-| Project Manager | $900 | 12 | $10,800 |
-| **TOTAL RRHH** | | **70** | **$56,250** |
+| Rol | Días |
+|-----|------|
+| SAP Basis Senior | 15 |
+| SAP ABAP Developer | 10 |
+| Google Cloud Architect | 8 |
+| SAP SD/MM Functional | 7 |
+| Data Engineer | 10 |
+| DevOps Engineer | 8 |
+| Project Manager | 12 |
+| **TOTAL** | **70 días-persona** |
 
 ### Costos de Infraestructura (Mensual)
 
@@ -816,10 +816,10 @@ user_docs/
 
 | Concepto | Costo |
 |----------|-------|
-| Implementación (RRHH) | $56,250 |
+| Implementación (RRHH) | Por cotizar |
 | Infraestructura Año 1 | $55,200 |
-| Contingencia (10%) | $11,145 |
-| **TOTAL PROYECTO AÑO 1** | **$122,595** |
+| Contingencia (10%) | A calcular sobre total |
+| **TOTAL PROYECTO AÑO 1** | **Por cotizar + $55,200** |
 
 ---
 

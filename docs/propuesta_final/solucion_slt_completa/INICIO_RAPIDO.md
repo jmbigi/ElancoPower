@@ -11,7 +11,7 @@
 ### Si eres EJECUTIVO / SPONSOR:
 ```
 1. Lee: RESUMEN_EJECUTIVO_SLT.md (15 min)
-2. Revisa: Sección de costos ($122,595 año 1)
+2. Revisa: Sección de costos (RRHH + $55,200 infraestructura)
 3. Decide: Aprobar o rechazar el proyecto
 4. Acción: Firma de aprobación
 ```
@@ -69,8 +69,7 @@
 | **Duración** | 10 semanas (70 días calendario) |
 | **Esfuerzo** | 70 días-persona |
 | **Equipo** | 7 roles especializados |
-| **Costo Implementación** | $56,250 |
-| **Costo Año 1** | $122,595 (incluye operación) |
+| **Costo Infraestructura Año 1** | $55,200 |
 | **Tablas Replicadas** | 6 tablas SAP SD |
 | **Scripts Incluidos** | 50+ scripts funcionales |
 | **Vistas BigQuery** | 7 vistas analíticas |
@@ -145,8 +144,8 @@ SAP S/4HANA
 ### Checklist Rápido:
 
 #### Prerrequisitos Organizacionales:
-- [ ] Presupuesto aprobado ($122,595)
-- [ ] Equipo de 7 personas disponible
+- [ ] Presupuesto aprobado (Recursos humanos + $55,200 infraestructura)
+- [ ] Equipo de 7 personas disponible (70 días-persona)
 - [ ] 10 semanas de calendario disponibles
 - [ ] Sponsor ejecutivo asignado
 
@@ -168,7 +167,7 @@ SAP S/4HANA
 ### Paso 1: APROBAR (Esta Semana)
 ```
 Ejecutivos leen:  RESUMEN_EJECUTIVO_SLT.md
-Decisión:         Aprobar presupuesto $122,595
+Decisión:         Aprobar presupuesto (RRHH + $55,200 infraestructura)
 Output:           PO emitido, proyecto green-light
 ```
 
