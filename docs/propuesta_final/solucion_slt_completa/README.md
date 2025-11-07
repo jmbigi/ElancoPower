@@ -8,16 +8,36 @@
 
 ---
 
-## 🎯 IMPORTANTE: Actualización de Alcance
+## ⚡ INICIO ULTRA-RÁPIDO (30 SEGUNDOS)
+
+### ¿Eres Ejecutivo/Sponsor?
+👉 **Lee:** `RESUMEN_EJECUTIVO_AUDITORIA.md` (15 min)  
+🎯 **Decisión:** Aprobar Fase 0 (VA05) = 70 días + $13,800  
+📊 **Full Scope:** 18 trans = 660-845 días + $72K-$87K
+
+### ¿Eres Project Manager?
+👉 **Lee:** `AUDITORIA_CONSISTENCIA_Y_TRANSACCIONES.md` (45 min)  
+📋 **Entenderás:** GAP de 1 vs 18 transacciones  
+✅ **Acción:** Presentar hallazgos a Steering Committee
+
+### ¿Eres Técnico/Arquitecto?
+👉 **Lee:** `SOLUCION_EXPANDIDA_18_TRANSACCIONES.md` (1-2 hrs)  
+🔧 **Para implementar VA05:** `Solucion_SLT_CONNECTOR_Y_PLAN_VA05.md`  
+📊 **Catálogo:** 18 transacciones detalladas
+
+---
+
+## 🎯 IMPORTANTE: Actualización de Alcance v2.0
 
 **⚠️ CAMBIO IMPORTANTE:** La documentación ha sido actualizada para reflejar el alcance real de **18 transacciones SAP** (no solo VA05).
 
 ### Estado Actual de Documentación:
 
-| Alcance | Transacciones | Estado |
-|---------|---------------|--------|
-| **FASE 0 (Piloto)** | 1 (VA05 únicamente) | ✅ **COMPLETAMENTE DOCUMENTADO** |
-| **FASE 1-3 (Expansión)** | 17 adicionales | 📋 **PROPUESTA DOCUMENTADA** |
+| Alcance | Transacciones | Tablas | Esfuerzo | Estado |
+|---------|---------------|--------|----------|--------|
+| **FASE 0 (Piloto)** | 1 (VA05) | 6 | 70 días | ✅ **LISTO** |
+| **FASE 1-3 (Expansión)** | 17 adicionales | 40-44 | 590-775 días | 📋 **PROPUESTA** |
+| **TOTAL** | **18** | **46-50** | **660-845 días** | 📋 **15-19 meses** |
 
 ---
 

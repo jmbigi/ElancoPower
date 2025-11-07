@@ -45,13 +45,13 @@ FASE 3: Transacciones Complementarias
 | **SD** (Sales & Distribution) | 2 | 11% | 80-95 días |
 | **Z-Custom** (Transacciones Elanco) | 2 | 11% | 100-140 días |
 | **MD** (Master Data) | 1 | 6% | 15-20 días |
-| **TOTAL** | **18** | **100%** | **760-955 días-persona** |
+| **TOTAL** | **18** | **100%** | **660-845 días-persona** |
 
 ### Inversión Total Estimada
 
 | Concepto | Valor |
 |----------|-------|
-| **Esfuerzo RRHH Total** | 760-955 días-persona |
+| **Esfuerzo RRHH Total** | 660-845 días-persona |
 | **Duración Total** | 66-83 semanas (15-19 meses) |
 | **Infraestructura (Año 1-2)** | $82,800 - $87,400 |
 | **Consultoría Especializada (Trans. Z)** | $2,500 - $5,000 |
