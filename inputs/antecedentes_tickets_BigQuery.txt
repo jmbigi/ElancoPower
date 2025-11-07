@@ -1,0 +1,25 @@
+Datos de tickets:
+
+SAP : SAP Landscape Transformation Server (SLT) which hosts the BigQuery Connector for SAP appears to have lost connectivity with Google Cloud.
+Number: INC0290249Opened: 2024-05-08 19:35:21Submitted For: Daniel LoftsPriority: 4 - LowState: ClosedCategory: Business ApplicationsAssignment group: IT-TechOps-ServiceDesk-IN
+Additional Information: SAP Landscape Transformation Server (SLT) which hosts the BigQuery Connector for SAP appears to have lost connectivity with Google Cloud Platform at 5:43 AM EST and no new data has been received after that point across all tables. Google BigQuery and EEDP are working fine, but we have a latency of 9 hours and counting [...]
+
+GCP Migration : User mentioned that SAP SLT Development (LTD) replication of tables to Google BigQuery is not working
+Number: INC0257934Opened: 2023-11-30 09:59:51Submitted For: Trevert EricksonPriority: 4 - LowState: ClosedCategory: Business ApplicationsAssignment group: IT-TechOps-ServiceDesk-IN
+Additional Information: SAP SLT Development (LTD) replication of tables to Google BigQuery is not working from 11/13/2023 following the GCP Migration. Please check any of these examples: Maximum Timestamp S4 Table S4 Description 11/13/2023 10:15 LIKP SD Document: Delivery Header Data 11/13/2023 10:15 VBFA Sales Document Flow 11/13/2023 10:15 [...]
+
+SAP Basis : BW and Google BigQuery replication from SLT has not resumed following the planned outage.
+Number: INC0347587Opened: 2025-02-16 10:23:35Submitted For: Trevert EricksonPriority: 4 - LowState: ClosedCategory: NoneAssignment group: IT-TechOps-ServiceDesk-IN
+BW and Google BigQuery replication from SLT has not resumed following the planned outage. IT-SolutionOps-SAP-Basis-L2
+
+SAP-O2C | table names of the following transactions to relate them to the repository in BigQuery.
+Number: INC0395502Opened: 2025-05-07 12:36:55Submitted For: Maria MartinezPriority: 4 - LowState: ClosedCategory: NoneAssignment group: IT-TechOps-ServiceDesk-EMEA
+Additional Information : I am developing a Power BI + SAP integration, and I need to know the table names of the following transactions to relate them to the repository in BigQuery. ME2L - PO MM60 - Std Cost VA05 - Sales Order MB59 ZLEL008 - Inventario KSB1 Opex KE24 - VENTA VA05 - ÓRDENES ABIERTA FB03 - DOCUMENTOS DE VENTA ZVEL015 - [...]
+INC0290249	2024-05-08 19:35:21	SAP : SAP Landscape Transformation Server (SLT) which hosts the BigQuery Connector for SAP appears to have lost connectivity with Google Cloud.	Trevert Erickson	Daniel Lofts	English	Applications	4 - Low	Closed	IT-TechOps-ServiceDesk-IN	Raghini Kannan			UK - Hook		2024-05-26 14:00:05	system	
+		INC0290248	2024-05-08 19:30:43	SAP : SAP Server(SLT) has lost connection with Google Cloud.
+Copied : SAP Landscape Transformation Server (SLT) which hosts the BigQuery Connector for SAP appears to have lost connectivity with Google Cloud Platform at 5:43 AM EST and no new data has been received after that point across all tables. Google BigQuery and EEDP are working fine, but we have a latency of 9 hours and counting on all data instead of 1-2 minutes.
+
+
+
+Additional Information : SAP Landscape Transformation Server (SLT) which hosts the BigQuery Connector for SAP appears to have lost connectivity with Google Cloud Platform at 5:43 AM EST and no new data has been received after that point across all tables. Google BigQuery and EEDP are working fine, but we have a latency of 9 hours and counting on all data instead of 1-2 minutes.
+
