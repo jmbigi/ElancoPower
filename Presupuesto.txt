@@ -18,6 +18,7 @@ Alcance de la propuesta
 2.5. Requisitos técnicos y administrativos iniciales.
 
 Transacciones incluidas en la propuesta y proyecto: ME2L, MM60, VA05, MB59, ZLEL008, KSB1, KE24, FB03, ZVEL015, ME23N, FAGLL03, FBL1N, F.08, F.01, XK03, XD03, FBL5N, MB5B.
+Nota: Tablas de las transacciones incluidas (44 tablas).
 
 Fases:
 Fase 0 – Revisión del alcance, factibilidad y piloto
