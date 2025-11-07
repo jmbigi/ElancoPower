@@ -7,12 +7,13 @@
 
 ### **PROYECTO DE IMPLEMENTACIÓN DE DATA LAKE Y ANALÍTICA EMPRESARIAL**
 
-**Versión Final - Noviembre 2025**
+**Versión Final - 7 de Noviembre 2025**
 
 ---
 
 **Elaborado por:**  
-**Aunergia** - Consultoría en Optimización de Procesos y TI
+**Aunergia** - Consultoría en Optimización de Procesos y TI  
+**Desarrollador Técnico:** Juan Manuel Bigi
 
 **Para:**  
 **Elanco Animal Health**  
@@ -20,9 +21,9 @@ Operación Centroamérica y Sudamérica (CASA)
 
 ---
 
-**Fecha de Elaboración:** Noviembre 2025  
-**Validez de la Oferta:** 30 días desde fecha de presentación  
-**Versión del Documento:** 1.2 (Final)
+**Fecha de Elaboración:** 7 de Noviembre 2025  
+**Validez de la Oferta:** 30 días (hasta 7 de diciembre 2025)  
+**Versión del Documento:** 2.0 (Revisada y ajustada a realidad del proyecto)
 
 </div>
 
@@ -34,6 +35,7 @@ Operación Centroamérica y Sudamérica (CASA)
 |---------|-------|-------------|-------|
 | 0.5 | 29-oct-2025 | Avance 50% preliminar | Juan Manuel Bigi |
 | 1.0 | 5-nov-2025 | Propuesta final completa | Juan Manuel Bigi / Lucía Rodríguez |
+| 2.0 | 7-nov-2025 | **Revisión realista ajustada a antecedentes** | Juan Manuel Bigi |
 
 ---
 
@@ -59,50 +61,59 @@ Operación Centroamérica y Sudamérica (CASA)
 
 ### Alcance
 
-- **18 transacciones SAP** automatizadas (ME2L, MM60, VA05, MB59, ZLEL008, KSB1, KE24, FB03, ZVEL015, ME23N, FAGLL03, FBL1N, F.08, F.01, XK03, XD03, FBL5N, MB5B)
+**IMPORTANTE:** Esta propuesta está basada en el presupuesto personal de Juan Manuel Bigi (USD 8,850 por 354 horas). Los costos de coordinación, Project Management y otros recursos de Aunergia se facturan por separado.
+
+- **8 transacciones SAP prioritarias** automatizadas en MVP (VA05, ZLEL008, KSB1, FAGLL03, KE24, FB03, F.08, F.01)
+- **10 transacciones adicionales** documentadas para fases futuras (ME2L, MM60, MB59, ZVEL015, ME23N, FBL1N, FBL5N, MB5B, XK03, XD03)
 - **Data Lake** en Google BigQuery (dataset CASA)
-- **12 dashboards** ejecutivos en Power BI
-- **Automatización completa** de extracción y consolidación
+- **4-6 dashboards** ejecutivos en Power BI (MVP)
+- **Automatización completa** de extracción y consolidación para transacciones MVP
 - **Historización** de datos (mínimo 24 meses)
 
 ### Recursos del Proyecto
 
-| Perfil | Horas Totales |
-|--------|---------------|
-| **Desarrollo técnico (Juan Manuel Bigi)** | 478 horas |
-| **Consultoría SAP y coordinación (Lucía Rodríguez)** | 145 horas |
-| **Project Management (Linda López)** | 42 horas |
-| **Consultoría ABAP Especializada** | 12 horas |
-| **TOTAL HORAS** | **677 horas** |
+**NOTA IMPORTANTE:** Este presupuesto incluye únicamente el trabajo técnico de desarrollo de Juan Manuel Bigi.
+
+| Perfil | Horas Totales | Incluido en Presupuesto |
+|--------|---------------|-------------------------|
+| **Desarrollo técnico (Juan Manuel Bigi)** | 354 horas | ✅ SÍ - USD 8,850 |
+| **Consultoría SAP y coordinación (Lucía Rodríguez)** | 80 horas (ref.) | ❌ NO - Factura separada Aunergia |
+| **Project Management (Linda López)** | N/A | ❌ NO - Gestiona Aunergia |
+| **Consultoría ABAP Especializada** | 8-16 horas (contingencia) | ⚠️ Según necesidad - USD 640-1,600 |
+| **TOTAL PRESUPUESTADO (JMB)** | **354 horas** | **USD 8,850** |
 
 ### Duración
 
-- **Tiempo total:** 24 semanas (~6 meses, incluyendo 1 semana vacacional)
-- **Inicio:** Mes 1, Semana 1
-- **Finalización:** Mes 6, Semana 23
-- **Pausa vacacional:** 1 semana durante festividades de fin de año (incluida en cronograma)
-- **Nota:** Ajustado por restricción de JMB (máximo 6 horas/día de trabajo)
+- **Tiempo total:** 13-17 semanas (~4 meses)
+- **Inicio propuesto:** 14 de diciembre 2025 (tras aprobación)
+- **Finalización estimada:** 9 de abril 2026
+- **Disponibilidad:** Part-time 20-25 horas/semana
+- **Pausa vacacional:** 1 semana durante festividades de fin de año (23-29 diciembre 2025)
+- **Nota:** Cronograma condicionado a resolución de issues de permisos SAP y tablas BigQuery
 
-### Beneficios Esperados
+### Beneficios Esperados (MVP con 8 transacciones)
 
-✅ **Reducción del 70%** en tiempo de extracción y consolidación de datos  
+✅ **Reducción del 70%** en tiempo de extracción y consolidación de datos para las transacciones prioritarias
 ✅ **Dashboards disponibles en 24 horas** tras cierre mensual (vs. 5-7 días actuales)  
-✅ **Eliminación de procesos manuales** propensos a errores  
+✅ **Eliminación de procesos manuales** propensos a errores en áreas críticas (Finanzas, Ventas, Inventario, OPEX)
 ✅ **Democratización del acceso** a datos mediante Power BI  
-✅ **Base escalable** para analítica predictiva futura  
-✅ **Ahorro estimado:** 50-60 horas/semana en procesos manuales
+✅ **Base escalable** para agregar más transacciones y analítica predictiva futura  
+✅ **Ahorro estimado:** 30-40 horas/semana en procesos manuales de las áreas priorizadas
+✅ **ROI estimado:** Recuperación de inversión en ~2 meses de operación
 
-### Equipo Aunergia
+### Equipo del Proyecto
 
-- **Linda López** - Coordinadora General del Proyecto
-- **Lucía Rodríguez** - Analista SAP Power User / Consultora de Procesos
-- **Juan Manuel Bigi** - Arquitecto de Datos y Desarrollador BigQuery/Power BI
+**Desarrollo Técnico (incluido en presupuesto USD 8,850):**
+- **Juan Manuel Bigi** - Arquitecto de Datos y Desarrollador BigQuery/Power BI (354h)
 
-### Equipo Elanco (requerido)
+**Coordinación y Consultoría Aunergia (facturación separada):**
+- **Lucía Rodríguez** - Analista SAP Power User / Consultora de Procesos (~80h referencia)
+- **Linda López** - Coordinadora General del Proyecto (según necesidad de Aunergia)
 
+**Equipo Elanco (requerido para el proyecto):**
 - **David Saboya** - Analista IT TechOps CASA (coordinación con TI Global)
-- **Representantes de Finanzas** - Validación de reportes y KPIs
-- **Representantes de Supply Chain** - Validación de procesos logísticos
+- **Representantes de Finanzas** - Validación de reportes y KPIs (~20h participación)
+- **Representantes de Supply Chain** - Validación de procesos logísticos (~20h participación)
 - **TI Global** - Soporte para permisos SAP y tablas BigQuery
 
 ---
