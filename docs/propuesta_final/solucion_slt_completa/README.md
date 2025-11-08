@@ -96,7 +96,6 @@ Esta carpeta contiene la **documentación completa** para implementar la integra
 
 3. **RESUMEN_EJECUTIVO_SLT.md** 💼 PARA C-LEVEL (VA05)
    - Objetivos y beneficios
-   - ROI (70 días-persona + $55,200/año)
    - Timeline de 10 semanas
    - **NOTA:** Este documento cubre SOLO VA05
 

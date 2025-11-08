@@ -61,7 +61,6 @@ Los siguientes documentos se crearán a continuación:
 - ✅ **Reducción 70%** en tiempo de consolidación
 - ✅ **Dashboards en 24h** post-cierre mensual
 - ✅ **Eliminación procesos manuales**
-- ✅ **ROI: 6-8 meses**
 
 ---
 

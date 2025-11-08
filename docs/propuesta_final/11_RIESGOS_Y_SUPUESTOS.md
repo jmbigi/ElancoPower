@@ -360,7 +360,7 @@ Usuarios finales prefieren seguir usando Excel y reportes SAP tradicionales, baj
 | 🟡 Media (35%) | 🟡 Medio | 🟡 **MEDIO** | Post Go-Live |
 
 **Impacto Potencial:**
-- 📉 ROI bajo del proyecto
+- 📉 Bajo aprovechamiento de beneficios esperados
 - 😤 Frustración del equipo y Management
 - 📊 Dashboards subutilizados
 
@@ -749,7 +749,7 @@ Costos mensuales de BigQuery (almacenamiento + procesamiento) mayores a lo estim
 
 2. **Contingencia:**
    - Revisión de queries más costosos (Query Plan Analyzer)
-   - Implementar políticas de retención (ej. datos > 3 años a archival storage)
+   - Optimizar uso de almacenamiento (archival de datos muy antiguos)
    - Evaluar slots reservados si costo sostenido alto
 
 **Responsable:** TI Elanco + Juan Manuel Bigi

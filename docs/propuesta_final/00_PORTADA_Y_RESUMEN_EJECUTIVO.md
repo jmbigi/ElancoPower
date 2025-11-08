@@ -5,7 +5,7 @@
 
 ### **PROYECTO DE IMPLEMENTACIÓN DE DATA LAKE Y ANALÍTICA EMPRESARIAL**
 
-**Versión Final - 7 de Noviembre 2025**
+**Versión Final - 8 de Noviembre 2025**
 
 ---
 
@@ -33,8 +33,8 @@ Operación Centroamérica y Sudamérica (CASA)
 |---------|-------|-------------|-------|
 | 0.5 | 29-oct-2025 | Avance 50% preliminar | Juan Manuel Bigi |
 | 1.0 | 5-nov-2025 | Propuesta final completa | Juan Manuel Bigi / Lucía Rodríguez |
-| 2.0 | 7-nov-2025 | **Revisión realista ajustada a antecedentes** | Juan Manuel Bigi |
-| 3.0 | 8-nov-2025 | Ajuste inicio 6-ene-2026, limpieza de redacción post go-live | Juan Manuel Bigi |
+| 2.0 | 7-nov-2025 | Revisión realista ajustada a antecedentes | Juan Manuel Bigi |
+| 3.0 | 8-nov-2025 | Unificación a 1,590h en 42 semanas y depuración (sin ROI/retención) | Juan Manuel Bigi |
 
 ---
 
@@ -77,12 +77,12 @@ Operación Centroamérica y Sudamérica (CASA)
 
 **Nota:** No se incluye consultoría ABAP adicional, Lucía cuenta con expertise SAP necesario.
 
-### Duración
+### Duración Unificada
 
 - **Tiempo total:** 42 semanas (~10 meses)
 - **Inicio propuesto:** 6 de enero de 2026
 - **Finalización estimada:** Mediados de octubre 2026
-- **Disponibilidad:** Part-time con intensidad variable según fase
+- **Distribución por fase:** Fase 0: 6 semanas (235h) · Fase 1: 22 semanas (696h) · Fase 2: 14 semanas (659h)
 - **Nota:** Juan Manuel Bigi trabaja máximo 6 horas/día (30h/semana)
 
 ### Beneficios Esperados
@@ -93,7 +93,6 @@ Operación Centroamérica y Sudamérica (CASA)
 ✅ **Democratización del acceso** a datos mediante 12 dashboards Power BI (promedio ~3 hojas/páginas por dashboard)  
 ✅ **Plataforma completa** con 18 transacciones SAP automatizadas
 ✅ **Ahorro estimado:** 3,620 horas/año en procesos manuales
-✅ **ROI estimado:** Recuperación de inversión en ~2 meses de operación
 
 ### Equipo del Proyecto
 

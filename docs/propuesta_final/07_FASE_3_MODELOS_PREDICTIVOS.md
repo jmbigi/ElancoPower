@@ -550,14 +550,6 @@ Similar a GCP pero usando:
 
 **Duración:** 6-8 meses para MVP + 2 modelos
 
-### 7.7.4. ROI Esperado
-
-**Beneficios cuantificables:**
-- Reducción inventario: 15-20% (USD $150K-$200K/año)
-- Mejora accuracy presupuesto: 25-30% ($100K/año)
-- Reducción obsolescencia: 10-15% ($50K/año)
-
-**ROI:** 200-300% en primer año
 
 ---
 

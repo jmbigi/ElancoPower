@@ -1,6 +1,6 @@
-# 5. FASE 1 | **Duración:** | 10 semanas (sprints de 2 semanas, con holguras para ajustes) |
-| **Fecha inicio** | 13 de enero de 2026 |
-| **Fecha fin** | 23 de marzo de 2026 |ONSTRUCCIÓN DE DATA LAKE
+# 5. FASE 1 | **Duración Unificada:** 22 semanas (según consolidado 1,590h / 42 semanas) |
+| **Fecha inicio estimada** | Febrero 2026 |
+| **Fecha fin estimada** | Julio 2026 | CONSTRUCCIÓN DE DATA LAKE
 
 ## 5.1. Objetivo de la Fase
 
@@ -8,14 +8,14 @@
 
 ---
 
-## 5.2. Duración y Recursos
+## 5.2. Duración y Recursos (Normalizado)
 
 | Parámetro | Valor |
 |-----------|-------|
-| **Duración estimada** | 10 semanas (sprints de 2 semanas, con holguras para ajustes) |
-| **Fase del proyecto** | Mes 2-3, Semanas 6-15 |
-| **Horas totales** | 267 horas |
-| **Equipo** | Juan Manuel Bigi (180h) + Lucía Rodríguez (60h) + Linda López (15h) + Consultor ABAP (12h contingencia) |
+| **Duración estimada** | 22 semanas (Semanas 6-28 del proyecto global) |
+| **Fase del proyecto** | Semanas 6-28 |
+| **Horas totales** | 696 horas (ver sección 08 para desglose) |
+| **Equipo** | Juan Manuel Bigi (446h) · Lucía Rodríguez (206h) · Linda López (44h) |
 
 ---
 
@@ -77,7 +77,6 @@ SAP ECC                    BIGQUERY DATASET: CASA
 **Nomenclatura:** `raw_<nombre_tabla_sap>`
 - Ejemplo: `raw_vbak`, `raw_ekko`, `raw_bkpf`
 
-**Retención:** 36 meses (3 años)
 
 ---
 
@@ -96,8 +95,6 @@ SAP ECC                    BIGQUERY DATASET: CASA
 **Nomenclatura:** `prc_<concepto_negocio>`
 - Ejemplo: `prc_sales_orders`, `prc_purchase_orders`, `prc_gl_items`
 
-**Retención:** 24 meses (2 años)
-
 ---
 
 #### **CURATED LAYER (Zona Oro)**
@@ -115,8 +112,6 @@ SAP ECC                    BIGQUERY DATASET: CASA
 **Nomenclatura:** `cur_<concepto_negocio>`
 - Ejemplo: `cur_ventas`, `cur_inventario`, `cur_gl_balance`
 
-**Retención:** 24 meses (2 años)
-
 ---
 
 ## 5.4. Actividades Detalladas
@@ -132,7 +127,7 @@ SAP ECC                    BIGQUERY DATASET: CASA
 | # | Actividad | Horas | Entregable |
 |---|-----------|-------|------------|
 | 1 | Creación de datasets por zona (RAW, PROCESSED, CURATED) | 2h | Datasets configurados |
-| 2 | Definición de políticas de retención | 2h | Políticas documentadas |
+| 2 | Definición de historización y particionamiento | 2h | Esquema de particiones y clustering documentado |
 | 3 | Configuración de particionamiento y clustering | 4h | Tablas optimizadas |
 | 4 | Setup de conectores SAP ECC ↔ BigQuery | 4h | Conectores funcionales |
 | 5 | Configuración de service accounts y permisos | 2h | IAM roles asignados |
@@ -470,15 +465,16 @@ FROM bigquery_target_table;
 
 ---
 
-## 5.7. Esfuerzo de Fase 1
+## 5.7. Esfuerzo de Fase 1 (Actualizado)
 
 | Recurso | Horas |
 |---------|-------|
-| **Juan Manuel Bigi** | 180h |
-| **Lucía Rodríguez** | 60h |
-| **Linda López (PM)** | 15h |
-| **Consultor ABAP** (contingencia) | 12h |
-| **TOTAL FASE 1** | **267h** |
+| **Juan Manuel Bigi** | 446h |
+| **Lucía Rodríguez** | 206h |
+| **Linda López (PM)** | 44h |
+| **TOTAL FASE 1** | **696h** |
+
+<!-- Consultoría ABAP contingente incluida dentro de horas de análisis/tareas técnicas de JMB/Lucía; no se explicita separación adicional -->
 
 ---
 

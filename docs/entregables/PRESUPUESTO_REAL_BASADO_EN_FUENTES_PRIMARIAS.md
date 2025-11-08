@@ -566,7 +566,7 @@ Este presupuesto se basa en:
 - Horas Lucía Rodríguez: 80h (según contrato Aunergia-Elanco)
 - Consultoría ABAP (contingencia): según necesidad
 
-### ROI esperado:
+### Beneficios esperados:
 - Reducción 70% tiempo consolidación reportes
 - Dashboard financiero disponible en 24h tras cierre de mes
 - Eliminación de procesos manuales de "estrellado" de Excel

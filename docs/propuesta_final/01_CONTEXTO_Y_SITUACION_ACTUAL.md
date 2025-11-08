@@ -344,8 +344,6 @@ Basado en el documento **"Que_se_va_a_usar.txt"** (actualizado 10-oct-2025), ali
 | Reducción errores de consolidación | 500 horas/año |
 | **Total Ahorro Anual** | **~3,620 horas/año** |
 
-**Periodo de recuperación:** ~2 meses de operación  
-**Ratio de Retorno:** 6:1 (6 horas ahorradas por cada hora invertida)
 
 ---
 

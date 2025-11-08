@@ -48,7 +48,7 @@
 │   └── Para navegar todo el contenido
 │
 ├── 💼 RESUMEN_EJECUTIVO_SLT.md            ← Para C-Level
-│   └── Beneficios, ROI, costos, timeline
+│   └── Beneficios, costos, timeline
 │
 ├── 📖 README_SOLUCION_COMPLETA_SLT.md     ← Para PM
 │   └── Overview, métricas, checklist
@@ -223,7 +223,7 @@ Output:           Sistema en producción, usuarios capacitados
 ## 💡 Tips Rápidos
 
 ### Para Ejecutivos:
-> "Enfócate en el ROI: payback en 12 meses, ahorro de 200 hrs/mes en reportes manuales"
+> "Enfócate en beneficios: ahorro de 200 hrs/mes en reportes manuales"
 
 ### Para Project Managers:
 > "El cronograma es realista: 10 semanas con equipo de 7 personas, buffer del 10% incluido"

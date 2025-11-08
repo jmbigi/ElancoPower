@@ -27,11 +27,9 @@ Implementar una solución empresarial de integración entre SAP S/4HANA y Google
 - ✅ Predictive analytics sobre demanda y ventas
 - ✅ Democratización de acceso a datos para áreas de negocio
 
-### ROI Estimado
 - **Ahorro en consultas manuales:** 200 horas/mes × $50/hora = $10,000/mes
 - **Mejora en toma de decisiones:** Decisiones 10x más rápidas con datos actualizados
 - **Reducción de errores:** 95% menos errores vs exports manuales
-- **Payback period:** 12 meses
 
 ---
 
@@ -385,6 +383,5 @@ Esta solución proporciona una **arquitectura empresarial, probada y escalable**
 - ✅ **Empresarial:** Arquitectura recomendada por SAP y Google
 - ✅ **Escalable:** Diseñada para crecer con el negocio
 - ✅ **Operable:** Monitoreo 24/7 y lineamientos de operación
-- ✅ **ROI Claro:** Payback en 12 meses
 
 **Recomendación:** APROBAR e iniciar implementación inmediatamente para comenzar a obtener beneficios en Q1 2026.

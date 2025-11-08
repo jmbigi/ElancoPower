@@ -46,7 +46,7 @@ La Fase 3 entregará un documento descriptivo con catálogo de casos de uso de M
 BENEFICIOS ESPERADOS
 
 El proyecto generará ahorros operativos significativos. Se estima una reducción del 70% en tiempo de extracción y consolidación de datos, liberando una cantidad sustancial de horas al año considerando las áreas principales de Finanzas, Supply Chain y otras áreas operativas. Los dashboards estarán disponibles en 24 horas tras cierre mensual comparado con los 5 a 7 días actuales. Se eliminan procesos manuales propensos a errores en áreas críticas de Finanzas, Ventas, Inventario y OPEX.
-La democratización del acceso a datos mediante Power BI permitirá que usuarios de diferentes niveles organizacionales puedan consultar información sin depender de TI. Se establece una versión única de la verdad con trazabilidad completa de cambios. El retorno de la inversión será medido durante la Fase 0 con base en métricas reales de tiempo actualmente dedicado a procesos manuales.
+La democratización del acceso a datos mediante Power BI permitirá que usuarios de diferentes niveles organizacionales puedan consultar información sin depender de TI. Se establece una versión única de la verdad con trazabilidad completa de cambios.
 
 
 REQUISITOS Y DEPENDENCIAS CRÍTICAS

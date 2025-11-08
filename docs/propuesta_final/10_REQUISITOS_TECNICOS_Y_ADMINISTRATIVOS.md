@@ -116,7 +116,7 @@ Estos requisitos **DEBEN** estar resueltos antes del kick-off:
 | **BigQuery Datasets** | 3 datasets (dev/qa/prod) | TI Global Elanco |
 | **Almacenamiento** | ~500GB-1TB (estimado inicial) | TI Global Elanco |
 | **Procesamiento** | On-demand (sin slots reservados) | TI Global Elanco |
-| **Conectores SAP** | Google Cloud Data Fusion o Fivetran | TI Global Elanco |
+| **Conectores SAP** | SAP SLT (Landscape Transformation Server) | TI Global Elanco |
 | **Networking** | VPN/Private Service Connect (si req.) | TI Global Elanco |
 
 **Costos Operativos Mensuales (asumidos por Elanco):**
@@ -135,9 +135,9 @@ Estos requisitos **DEBEN** estar resueltos antes del kick-off:
 
 ```
 ┌────────────┐         ┌─────────────────┐         ┌──────────────┐
-│  SAP ECC   │────────▶│  Connector      │────────▶│  BigQuery    │
-│  (On-prem) │  RFC/   │  (Data Fusion/  │  HTTPS  │  (GCP Cloud) │
-│            │  BAPI   │   Fivetran)     │         │              │
+│  SAP ECC   │────────▶│  SAP SLT Server │────────▶│  BigQuery    │
+│  (On-prem) │  RFC/   │  (Replicación   │  HTTPS  │  (GCP Cloud) │
+│            │  DB Log │   en tiempo real)│        │              │
 └────────────┘         └─────────────────┘         └──────────────┘
                                                             │
                                                             │ ODBC/
@@ -324,15 +324,15 @@ Estos requisitos **DEBEN** estar resueltos antes del kick-off:
 - ✅ Log de accesos a dashboards Power BI
 - ✅ Registro de cambios en datos (audit trail)
 
-**Retención:** Mínimo 12 meses
+
 
 ### 10.7.3. Backup y Disaster Recovery
 
-| Elemento | Frecuencia Backup | Retención | RPO | RTO |
-|----------|-------------------|-----------|-----|-----|
-| **Datos BigQuery** | Automático (GCP) | 7 días | 24h | 4h |
-| **Código SQL** | Cada commit (Git) | Indefinido | 0 | 1h |
-| **Dashboards Power BI** | Semanal | 30 días | 7 días | 4h |
+| Elemento | Frecuencia Backup | RPO | RTO |
+|----------|-------------------|-----|-----|
+| **Datos BigQuery** | Automático (GCP) | 24h | 4h |
+| **Código SQL** | Cada commit (Git) | 0 | 1h |
+| **Dashboards Power BI** | Semanal | 7 días | 4h |
 
 **Responsable:** TI Elanco (infraestructura) + Aunergia (código)
 

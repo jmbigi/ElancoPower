@@ -14,8 +14,7 @@
 ### 1. RESUMEN_EJECUTIVO_SLT.md
 **Para:** C-Level, Sponsors, Gerentes  
 **Contenido:** 
-- Objetivos y beneficios de negocio
-- ROI y justificación financiera
+ - Objetivos y beneficios de negocio
 - Timeline y recursos
 - Riesgos y mitigaciones
 - Criterios de aprobación

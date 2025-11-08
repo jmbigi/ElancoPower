@@ -54,7 +54,6 @@ A continuación se detalla la lista exhaustiva de todos los entregables del proy
 - ✅ Diseño de tablas (DDL scripts)
 - ✅ Estrategia de particionamiento y clustering
 - ✅ Nomenclatura de tablas y campos (convenciones)
-- ✅ Política de retención de datos
 - ✅ Estrategia de seguridad (Row-Level Security, permisos)
 - ✅ Documentación de flujos de datos (ETL pipelines)
 
@@ -393,7 +392,6 @@ A continuación se detalla la lista exhaustiva de todos los entregables del proy
   - Datos requeridos (fuentes, volumen, calidad)
   - Técnicas de ML aplicables (regresión, clasificación, clustering, time series)
   - Estimación de esfuerzo (horas) y complejidad (baja/media/alta)
-  - ROI estimado (cualitativo)
 
 - ✅ Recomendación de priorización (Quick-wins vs. Long-term)
 - ✅ Roadmap sugerido para implementación (Fase 3 futura)
@@ -575,7 +573,7 @@ A continuación se detalla la lista exhaustiva de todos los entregables del proy
 
 3. **Desarrollo Adicional:**
    - Transacciones SAP adicionales (más de las 18 planificadas)
-   - Dashboards adicionales (más de los 6 incluidos)
+   - Dashboards adicionales (más de los 12 incluidos)
    - Integraciones con otros sistemas (ej. CRM, HR, WMS)
    - Implementación de modelos predictivos (Fase 3 es solo descripción)
 

@@ -349,11 +349,9 @@
 |---------|-------|
 | **Esfuerzo del Proyecto** | 1,590 horas (42 semanas) |
 | **Ahorro Operativo Anual** | ~3,620 horas/año |
-| **Ratio de Retorno** | **2.3:1** (2.3 horas ahorradas por cada hora invertida) |
-| **Tiempo de Recuperación** | **~5 meses de operación** |
 | **Beneficio Neto 3 años** | >10,000 horas liberadas para tareas estratégicas |
 
-**Conclusión:** Proyecto rentable con recuperación de esfuerzo dentro del primer año, liberando recurso humano para actividades de mayor valor agregado. La solución completa con 18 transacciones y 12 dashboards proporciona una plataforma robusta y escalable.
+**Conclusión:** El proyecto libera capacidad significativa para actividades de mayor valor agregado. La solución completa con 18 transacciones y 12 dashboards proporciona una plataforma robusta y escalable.
 
 ---
 
