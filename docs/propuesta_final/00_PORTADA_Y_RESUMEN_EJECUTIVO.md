@@ -61,59 +61,52 @@ Operación Centroamérica y Sudamérica (CASA)
 
 ### Alcance
 
-**IMPORTANTE:** Esta propuesta está basada en el presupuesto personal de Juan Manuel Bigi (USD 8,850 por 354 horas). Los costos de coordinación, Project Management y otros recursos de Aunergia se facturan por separado.
-
-- **8 transacciones SAP prioritarias** automatizadas en MVP (VA05, ZLEL008, KSB1, FAGLL03, KE24, FB03, F.08, F.01)
-- **10 transacciones adicionales** documentadas para fases futuras (ME2L, MM60, MB59, ZVEL015, ME23N, FBL1N, FBL5N, MB5B, XK03, XD03)
-- **Data Lake** en Google BigQuery (dataset CASA)
-- **4-6 dashboards** ejecutivos en Power BI (MVP)
-- **Automatización completa** de extracción y consolidación para transacciones MVP
+- **18 transacciones SAP** completas automatizadas (FI, SD, MM, CO)
+- **Data Lake** en Google BigQuery (dataset CASA) con arquitectura de 3 capas
+- **12 dashboards** ejecutivos en Power BI con RLS
+- **Automatización completa** de extracción y consolidación
 - **Historización** de datos (mínimo 24 meses)
 
 ### Recursos del Proyecto
 
-**NOTA IMPORTANTE:** Este presupuesto incluye únicamente el trabajo técnico de desarrollo de Juan Manuel Bigi.
+| Perfil | Horas Totales |
+|--------|---------------|
+| **Desarrollo técnico (Juan Manuel Bigi)** | 961 horas |
+| **Consultoría SAP y coordinación (Lucía Rodríguez)** | 484 horas |
+| **Project Management (Linda López)** | 145 horas |
+| **TOTAL PROYECTO** | **1,590 horas** |
 
-| Perfil | Horas Totales | Incluido en Presupuesto |
-|--------|---------------|-------------------------|
-| **Desarrollo técnico (Juan Manuel Bigi)** | 354 horas | ✅ SÍ - USD 8,850 |
-| **Consultoría SAP y coordinación (Lucía Rodríguez)** | 80 horas (ref.) | ❌ NO - Factura separada Aunergia |
-| **Project Management (Linda López)** | N/A | ❌ NO - Gestiona Aunergia |
-| **Consultoría ABAP Especializada** | 8-16 horas (contingencia) | ⚠️ Según necesidad - USD 640-1,600 |
-| **TOTAL PRESUPUESTADO (JMB)** | **354 horas** | **USD 8,850** |
+**Nota:** No se incluye consultoría ABAP adicional, Lucía cuenta con expertise SAP necesario.
 
 ### Duración
 
-- **Tiempo total:** 13-17 semanas (~4 meses)
-- **Inicio propuesto:** 14 de diciembre 2025 (tras aprobación)
-- **Finalización estimada:** 9 de abril 2026
-- **Disponibilidad:** Part-time 20-25 horas/semana
-- **Pausa vacacional:** 1 semana durante festividades de fin de año (23-29 diciembre 2025)
-- **Nota:** Cronograma condicionado a resolución de issues de permisos SAP y tablas BigQuery
+- **Tiempo total:** 42 semanas (~10 meses)
+- **Inicio propuesto:** 1 de diciembre 2025
+- **Finalización estimada:** Mediados de octubre 2026
+- **Disponibilidad:** Part-time con intensidad variable según fase
+- **Nota:** Juan Manuel Bigi trabaja máximo 6 horas/día (30h/semana)
 
-### Beneficios Esperados (MVP con 8 transacciones)
+### Beneficios Esperados
 
-✅ **Reducción del 70%** en tiempo de extracción y consolidación de datos para las transacciones prioritarias
+✅ **Reducción del 70%** en tiempo de extracción y consolidación de datos para todas las áreas
 ✅ **Dashboards disponibles en 24 horas** tras cierre mensual (vs. 5-7 días actuales)  
 ✅ **Eliminación de procesos manuales** propensos a errores en áreas críticas (Finanzas, Ventas, Inventario, OPEX)
-✅ **Democratización del acceso** a datos mediante Power BI  
-✅ **Base escalable** para agregar más transacciones y analítica predictiva futura  
-✅ **Ahorro estimado:** 30-40 horas/semana en procesos manuales de las áreas priorizadas
+✅ **Democratización del acceso** a datos mediante 12 dashboards Power BI  
+✅ **Plataforma completa** con 18 transacciones SAP automatizadas
+✅ **Ahorro estimado:** 3,620 horas/año en procesos manuales
 ✅ **ROI estimado:** Recuperación de inversión en ~2 meses de operación
 
 ### Equipo del Proyecto
 
-**Desarrollo Técnico (incluido en presupuesto USD 8,850):**
-- **Juan Manuel Bigi** - Arquitecto de Datos y Desarrollador BigQuery/Power BI (354h)
-
-**Coordinación y Consultoría Aunergia (facturación separada):**
-- **Lucía Rodríguez** - Analista SAP Power User / Consultora de Procesos (~80h referencia)
-- **Linda López** - Coordinadora General del Proyecto (según necesidad de Aunergia)
+**Equipo Aunergia:**
+- **Juan Manuel Bigi** - Arquitecto de Datos y Desarrollador BigQuery/Power BI (961h)
+- **Lucía Rodríguez** - Analista SAP Power User / Consultoría Funcional (484h)
+- **Linda López** - Project Manager (145h)
 
 **Equipo Elanco (requerido para el proyecto):**
 - **David Saboya** - Analista IT TechOps CASA (coordinación con TI Global)
-- **Representantes de Finanzas** - Validación de reportes y KPIs (~20h participación)
-- **Representantes de Supply Chain** - Validación de procesos logísticos (~20h participación)
+- **Representantes de Finanzas** - Validación de reportes y KPIs
+- **Representantes de Supply Chain** - Validación de procesos logísticos
 - **TI Global** - Soporte para permisos SAP y tablas BigQuery
 
 ---

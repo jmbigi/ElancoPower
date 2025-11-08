@@ -6,42 +6,47 @@
 
 | Fase | Horas |
 |------|-------|
-| **Fase 0 - Due Diligence** | 116h |
-| **Fase 1 - Data Lake** | 267h |
-| **Fas### Calendario del Proyecto
+| **Fase 0 - Due Diligence** | 235h |
+| **Fase 1 - Data Lake** | **Desarrollo Técnico (Juan Manuel Bigi)** | 961h | 60.4% |
+| **Consultoría SAP (Lucía Rodríguez)** | 484h | 30.4% |
+| **Project Management (Linda López)** | 145h | 9.1% |
+| **TOTAL ESFUERZO** | **1,590h** | **100%** |
+
+**Nota:** Totales según CSV del cronograma detallado de tareas. |
+| **Fase 2 - Dashboards Power BI** | 659h |
+| **Fase 3 - ML Roadmap** | Descripción conceptual |
+| **TOTAL HORAS** | **1,590h** |
+
+### Calendario del Proyecto
 
 | Fase | Horas | Duración | Fecha Inicio | Fecha Fin |
 |------|-------|----------|--------------|-----------|
 | **Inicio del Proyecto** | - | - | 1-dic-2025 | 1-dic-2025 |
-| **Fase 0 (Revisión y Alcance)** | 116h | 5 sem | 1-dic-2025 | 12-ene-2026 |
-| **Pausa Vacacional** 🎄 | - | 1 sem | 23-dic-2025 | 29-dic-2025 |
-| **Fase 1 (Data Lake)** | 267h | 10 sem | 13-ene-2026 | 23-mar-2026 |
-| **Fase 2 (12 Dashboards)** | 294h | 8 sem | 24-mar-2026 | 18-may-2026 |
-| **Go-Live y Cierre** | - | - | 12-may-2026 | 18-may-2026 |
-| **TOTAL ESFUERZO** | **677h** | **24 sem** | **1-dic-2025** | **18-may-2026** |
+| **Fase 0 (Revisión y Alcance)** | 235h | 6 sem | 1-dic-2025 | 12-ene-2026 |
+| **Fase 1 (Data Lake)** | 696h | 22 sem | 13-ene-2026 | 14-jun-2026 |
+| **Fase 2 (12 Dashboards)** | 659h | 14 sem | 15-jun-2026 | 20-sep-2026 |
+| **Go-Live y Cierre** | - | - | 14-sep-2026 | 20-sep-2026 |
+| **TOTAL ESFUERZO** | **1,590h** | **42 sem** | **1-dic-2025** | **20-sep-2026** |
 
-**Nota:** La duración de 24 semanas incluye 1 semana de pausa vacacional (23-29 diciembre 2025).  
-**Restricción JMB:** Máximo 6h/día (30h/semana), Fase 2 ajustada de 7 a 8 semanas.ashboards Power BI** | 294h |
-| **Fase 3 - ML Roadmap** | Descripción conceptual |
-| **TOTAL HORAS** | **677h** |
+**Restricción JMB:** Máximo 6h/día (30h/semana) por restricciones personales.
 
 ### Duración Total
 
-- **Tiempo estimado:** 24 semanas (~6 meses, incluyendo 1 semana vacacional)
-- **Inicio:** Mes 1, Semana 1
-- **Finalización:** Mes 6, Semana 23
-- **Nota:** Incluye 1 semana de pausa vacacional durante festividades de fin de año
+- **Tiempo estimado:** 42 semanas (~10 meses)
+- **Inicio:** 1 de diciembre 2025
+- **Finalización:** 20 de septiembre 2026
 - **Restricción:** Juan Manuel Bigi trabaja máximo 6 horas/día (30h/semana)
 
 ### Equipo
 
 | Perfil | Horas Totales |
 |--------|---------------|
-| **Juan Manuel Bigi** - Arquitecto de Datos / Desarrollador | 478h |
-| **Lucía Rodríguez** - Analista SAP Power User | 145h |
-| **Linda López** - Project Manager | 42h |
-| **Consultor ABAP Especializado** | 12h |
-| **TOTAL** | **677h** |
+| **Juan Manuel Bigi** - Arquitecto de Datos / Desarrollador | 961h |
+| **Lucía Rodríguez** - Analista SAP Power User | 484h |
+| **Linda López** - Project Manager | 145h |
+| **TOTAL** | **1,590h** |
+
+**Nota:** No se incluye consultoría ABAP adicional, Lucía cuenta con expertise SAP necesario.
 
 ---
 
@@ -49,114 +54,95 @@
 
 ### 8.2.1. Fase 0 - Revisión del Alcance y Factibilidad
 
-| **Duración estimada** | 5 semanas (incluyendo 1 sem vacacional) |
-| **Fase del proyecto:** | Mes 1, Semanas 1-5  |
-| **Pausa vacacional:** | Durante Semana 4 (festividades de fin de año) |
+| **Duración estimada** | 6 semanas |
+| **Fase del proyecto:** | Semanas 0-6  |
 
-#### Desglose de Horas por Actividad
+#### Desglose de Horas por Actividad (del CSV)
 
-| Actividad | Lucía R. | Juan M. B. | Stakeholders | Total |
-|-----------|----------|------------|--------------|-------|
-| Gestión de permisos SAP y tickets BigQuery | 20h | - | - | 20h |
-| Análisis técnico arquitectura BigQuery | - | 24h | - | 24h |
-| Workshop priorización transacciones | 4h | 8h | 12h | 24h |
-| Análisis transacciones custom (Z) | 4h | 4h | - | 8h |
-| Definición requisitos técnicos iniciales | - | 16h | - | 16h |
-| Elaboración plan de riesgos | 4h | 4h | - | 8h |
-| Reunión Go/No-Go | 2h | 2h | 4h | 8h |
-| **SUBTOTAL FASE 0** | **34h** | **58h** | **16h** | **108h** |
+| Actividad | JMB | Lucía | Linda | Total |
+|-----------|-----|-------|-------|-------|
+| Diseño arquitectura preliminar | 6h | 4h | 0h | 10h |
+| Estimación esfuerzos ETL | 8h | 6h | 0h | 14h |
+| Kick-off y alineamiento | 3h | 4h | 3h | 10h |
+| Inventario técnico completo | 20h | 18h | 3h | 41h |
+| Gestión de tickets críticos | 8h | 22h | 5h | 35h |
+| Workshops y análisis Z | 20h | 36h | 10h | 66h |
+| Diseño y POC | 24h | 12h | 0h | 36h |
+| Documentación y Go/No-Go | 6h | 10h | 7h | 23h |
+| **TOTAL FASE 0** | **95h** | **112h** | **28h** | **235h** |
 
 #### Distribución de Horas Fase 0
 
 | Recurso | Horas |
 |---------|-------|
-| Lucía Rodríguez | 48h |
-| Juan Manuel Bigi | 58h |
-| Linda López (PM) | 10h |
-| Stakeholders Elanco | 16h (sin costo) |
-| **TOTAL FASE 0** | **116h** |
+| Juan Manuel Bigi | 95h |
+| Lucía Rodríguez | 112h |
+| Linda López (PM) | 28h |
+| **TOTAL FASE 0** | **235h** |
 
 ---
 
 ### 8.2.2. Fase 1 - Construcción de Data Lake
 
-**Duración:** 10 semanas  
-**Fase del proyecto:** Mes 2-3, Semanas 6-15
+**Duración:** 22 semanas  
+**Fase del proyecto:** Semanas 6-28
 
-#### Desglose de Horas por Módulo SAP
+#### Desglose de Horas por Actividad (del CSV)
 
-| Módulo | Transacciones | Horas Desarrollo | Horas Validación | Total |
-|--------|---------------|------------------|------------------|-------|
-| **Setup Infraestructura** | - | 16h | - | 16h |
-| **Módulo FI** | FAGLL03, FB03, F.08, F.01 | 36h | 4h | 40h |
-| **Módulo SD** | VA05 | 14h | 2h | 16h |
-| **Módulo MM** | ZLEL008, ME2L, MB5B | 42h | 6h | 48h |
-| **Módulo CO** | KSB1, KE24 | 24h | 4h | 28h |
-| **Testing integral** | Todas | - | 16h | 16h |
-| **Documentación** | Todas | 12h | - | 12h |
-| **Gestión y ajustes** | Todas | 16h | - | 16h |
-| **SUBTOTAL** | **18 trans** | **160h** | **32h** | **192h** |
-
-#### Distribución por Recurso
-
-| Recurso | Actividades | Horas |
-|---------|-------------|-------|
-| **Juan Manuel Bigi** | Desarrollo pipelines, infraestructura, documentación | 156h |
-| **Lucía Rodríguez** | Validación funcional, análisis Z-tables, coordinación | 40h |
-| **Consultor ABAP** | Análisis ZLEL008 (contingencia) | 8h |
+| Actividad | JMB | Lucía | Linda | Total |
+|-----------|-----|-------|-------|-------|
+| Setup infraestructura completa | 60h | 6h | 7h | 73h |
+| Pipelines Módulo FI (4 trans) | 60h | 26h | 3h | 89h |
+| Pipelines Módulo SD (2 trans) | 38h | 20h | 3h | 61h |
+| Pipelines MM Procurement (3 trans) | 44h | 24h | 3h | 71h |
+| Pipelines MM Inventory (3 trans) | 42h | 20h | 3h | 65h |
+| Pipeline ZLEL008 (custom MRP) | 48h | 26h | 3h | 77h |
+| Pipelines CO y FI-AP/AR (4 trans) | 56h | 30h | 6h | 92h |
+| Pipelines Master Data y ZVEL015 | 48h | 28h | 6h | 82h |
+| Optimización y automatización | 50h | 26h | 10h | 86h |
+| **TOTAL FASE 1** | **446h** | **206h** | **44h** | **696h** |
 
 #### Distribución de Horas Fase 1
 
 | Recurso | Horas |
 |---------|-------|
-| Juan Manuel Bigi | 180h |
-| Lucía Rodríguez | 60h |
-| Linda López (PM) | 15h |
-| Consultor ABAP | 12h |
-| **TOTAL FASE 1** | **267h** |
+| Juan Manuel Bigi | 446h |
+| Lucía Rodríguez | 206h |
+| Linda López (PM) | 44h |
+| **TOTAL FASE 1** | **696h** |
 
 ---
 
 ### 8.2.3. Fase 2 - Modelado de Datos y 12 Dashboards
 
-**Duración:** 8 semanas  
-**Fase del proyecto:** Mes 4-6, Semanas 16-23  
-**Nota:** Extendida de 7 a 8 semanas para cumplir restricción de JMB (máx 6h/día = 30h/sem)
+**Duración:** 14 semanas  
+**Fase del proyecto:** Semanas 28-42
 
-#### Desglose de Horas por Actividad
+#### Desglose de Horas por Actividad (del CSV)
 
-| Actividad | Horas JMB | Horas LR | Horas Stakeholders | Total |
-|-----------|-----------|----------|--------------------|-------|
-| Diseño modelo dimensional | 32h | - | 4h | 36h |
-| Desarrollo capa semántica BigQuery | 20h | - | - | 20h |
-| Desarrollo Dashboard 1: Financiero General | 10h | - | 2h | 12h |
-| Desarrollo Dashboard 2: Ventas (Sales) | 10h | - | 2h | 12h |
-| Desarrollo Dashboard 3: Inventario | 10h | - | 2h | 12h |
-| Desarrollo Dashboard 4: OPEX | 10h | - | 2h | 12h |
-| Desarrollo Dashboard 5: Ejecutivo | 10h | - | 2h | 12h |
-| Desarrollo Dashboard 6: Supply Chain | 10h | - | 2h | 12h |
-| Desarrollo Dashboard 7: Compras (Procurement) | 10h | - | 2h | 12h |
-| Desarrollo Dashboard 8: Rentabilidad por Producto | 10h | - | 2h | 12h |
-| Desarrollo Dashboard 9: Cuentas por Pagar | 10h | - | 2h | 12h |
-| Desarrollo Dashboard 10: Cuentas por Cobrar | 10h | - | 2h | 12h |
-| Desarrollo Dashboard 11: Controlling (CO) | 10h | - | 2h | 12h |
-| Desarrollo Dashboard 12: Estadístico Regional | 10h | - | 2h | 12h |
-| Configuración RLS (12 dashboards) | 18h | - | - | 18h |
-| Testing con usuarios (UAT) | 12h | 6h | 12h | 30h |
-| Documentación | 8h | 6h | - | 14h |
-| Capacitación usuarios | 8h | 8h | 16h | 32h |
-| Ajustes post-UAT | 20h | - | - | 20h |
-| **SUBTOTAL FASE 2** | **218h** | **20h** | **54h** | **292h** |
+| Actividad | JMB | Lucía | Linda | Total |
+|-----------|-----|-------|-------|-------|
+| Modelo dimensional completo | 86h | 22h | 8h | 116h |
+| Dashboards Financieros (3) | 64h | 14h | 4h | 82h |
+| Dashboards Ventas y Rentabilidad (3) | 68h | 14h | 4h | 86h |
+| Dashboards Supply Chain (3) | 62h | 12h | 4h | 78h |
+| Dashboards Tesorería y Ejecutivo (3) | 66h | 14h | 7h | 87h |
+| Testing y UAT completo | 41h | 55h | 26h | 122h |
+| Ajustes finales, documentación, capacitación y Go-Live | 33h | 35h | 20h | 88h |
+| **TOTAL FASE 2** | **420h** | **166h** | **73h** | **659h** |
+
+**Nota:** El CSV muestra 626h de las tareas registradas (no incluye todo el detalle de subtareas).
 
 #### Distribución de Horas Fase 2
 
 | Recurso | Horas |
 |---------|-------|
-| Juan Manuel Bigi | 240h |
-| Lucía Rodríguez | 37h |
-| Linda López (PM) | 17h |
-| Stakeholders Elanco | 54h (sin costo) |
-| **TOTAL FASE 2** | **294h** |
+| Juan Manuel Bigi | 324h |
+| Lucía Rodríguez | 120h |
+| Linda López (PM) | 52h |
+| **TOTAL FASE 2** | **496h** |
+
+**Nota ajustada:** Según CSV las tareas principales suman 626h (116+82+86+78+87+122+88). La distribución por persona del CSV es: JMB=324h, Lucía=120h, Linda=52h totalizando 496h de las 626h registradas en tareas.
 
 ---
 
@@ -181,23 +167,20 @@
 
 ## 8.3. Consolidado por Recurso
 
-### 8.3.1. Horas Totales por Persona
+### 8.3.1. Horas Totales por Persona (según CSV)
 
 | Recurso | Fase 0 | Fase 1 | Fase 2 | Fase 3 | Total |
 |---------|--------|--------|--------|--------|-------|
-| **Juan Manuel Bigi** | 58h | 180h | 240h | (incl) | **478h** |
-| **Lucía Rodríguez** | 48h | 60h | 37h | - | **145h** |
-| **Linda López (PM)** | 10h | 15h | 17h | - | **42h** |
-| **Consultor ABAP** | - | 12h | - | - | **12h** |
-| **SUBTOTAL EQUIPO** | **116h** | **267h** | **294h** | **0h** | **677h** |
+| **Juan Manuel Bigi** | 95h | 446h | 420h | (incl) | **961h** |
+| **Lucía Rodríguez** | 112h | 206h | 166h | - | **484h** |
+| **Linda López (PM)** | 28h | 44h | 73h | - | **145h** |
+| **SUBTOTAL EQUIPO** | **235h** | **696h** | **659h** | **0h** | **1,590h** |
+
+**Nota:** Totales según CSV del cronograma. Las 1,590h son el esfuerzo total del equipo distribuido en 42 semanas.
 
 ### 8.3.2. Consultoría ABAP Especializada
 
-| Concepto | Horas | Justificación |
-|----------|-------|---------------|
-| Análisis transacciones custom (ZLEL008, ZVEL015) | 12h | Complejidad Z-tables y lógica de negocio custom |
-
-**Nota:** No se incluyen contingencias adicionales. Cualquier cambio de alcance mayor requerirá cotización adicional.
+**No incluida:** Lucía Rodríguez cuenta con expertise SAP funcional y ABAP suficiente para analizar transacciones custom (ZLEL008, ZVEL015). Las 484 horas de Lucía ya contemplan este análisis.
 
 ---
 
@@ -207,44 +190,46 @@
 
 | Recurso | Horas | % del Total |
 |---------|-------|-------------|
-| **Desarrollo Técnico (Juan Manuel Bigi)** | 478h | 70.6% |
-| **Consultoría SAP (Lucía Rodríguez)** | 145h | 21.4% |
-| **Project Management (Linda López)** | 42h | 6.2% |
-| **Consultoría ABAP Especializada** | 12h | 1.8% |
-| **TOTAL ESFUERZO** | **677h** | **100%** |
+| **Desarrollo Técnico (Juan Manuel Bigi)** | 961h | 60.6% |
+| **Consultoría SAP (Lucía Rodríguez)** | 484h | 30.7% |
+| **Project Management (Linda López)** | 145h | 8.7% |
+| **TOTAL ESFUERZO** | **1,590h** | **100%** |
+
+**Nota:** Totales según CSV del cronograma detallado de tareas.
 
 ### 8.4.2. Calendario del Proyecto
 
 | Fase | Horas | Duración | Periodo |
 |------|-------|----------|---------|
-| **Inicio del Proyecto** | - | - | Mes 1, Semana 1 |
-| **Fase 0 (Revisión y Alcance)** | 116h | 5 semanas | Mes 1, Semanas 1-5 |
-| **Fase 1 (Data Lake)** | 267h | 10 semanas | Mes 2-3, Semanas 6-15 |
-| **Fase 2 (12 Dashboards)** | 294h | 8 semanas | Mes 4-6, Semanas 16-23 |
-| **Cierre y Go-Live** | - | - | Mes 6, Semana 23 |
-| **TOTAL ESFUERZO** | **677h** | **24 semanas** | **~6 meses** |
+| **Inicio del Proyecto** | - | - | Semana 0 |
+| **Fase 0 (Revisión y Alcance)** | 235h | 6 semanas | Semanas 0-6 |
+| **Fase 1 (Data Lake)** | 696h | 22 semanas | Semanas 6-28 |
+| **Fase 2 (12 Dashboards)** | 659h | 14 semanas | Semanas 28-42 |
+| **Cierre y Go-Live** | - | - | Semana 42 |
+| **TOTAL ESFUERZO** | **1,590h** | **42 semanas** | **~10 meses** |
 
 ---
 
 ## 8.5. Comparativa de Alcance
 
-### Alcance Inicial (Oct 2025) vs. Alcance Final (Nov 2025)
+### Evolución del Cronograma
 
-| Concepto | Oct 2025 | Nov 2025 | Dic 2025 (Final) | Comentario |
-|----------|----------|----------|------------------|------------|
-| **Transacciones SAP** | 8 | 18 | 18 | Alcance completo MM/SD/FI/CO |
-| **Fase 0** | 2-3 sem | 4-5 sem | 5 sem | Más tiempo para validaciones |
-| **Fase 1** | 6-8 sem | 8-10 sem | 10 sem | Incluye transacciones custom ABAP |
-| **Fase 2** | 4-5 sem | 6-7 sem | 8 sem | Ajustado por restricción 6h/día JMB |
-| **PM Formalizado** | No | Sí (Linda) | Sí (Linda) | Project Management explícito |
-| **TOTAL** | **12-16 sem** | **18-20 sem** | **24 sem** | Restricción JMB: máx 6h/día |
+| Concepto | Versión Original | Versión Comprimida | Comentario |
+|----------|------------------|-------------------|------------|
+| **Transacciones SAP** | 18 | 18 | Alcance completo mantenido |
+| **Fase 0** | 9 sem | 6 sem | Comprimido 33% |
+| **Fase 1** | 31 sem | 22 sem | Comprimido 29% |
+| **Fase 2** | 16 sem | 14 sem | Comprimido 12% |
+| **PM Formalizado** | Sí (Linda) | Sí (Linda) | Mantenido |
+| **TOTAL** | **56 sem** | **42 sem** | **Reducción 25%** |
+| **Horas totales** | **1,590h** | **1,590h** | **Mismas horas** |
 
-**Justificación de la expansión:**
-- ✅ Alcance expandido: 18 transacciones (vs. 8 iniciales)
-- ✅ PM formalizado (Linda López)
-- ✅ Tiempos más holgados para calidad
-- ✅ Consultoría ABAP especializada contemplada
-- ✅ Revisión exhaustiva de alcance y factibilidad (Fase 0)
+**Justificación de la compresión:**
+- ✅ Mismas 1,590 horas distribuidas en menos semanas
+- ✅ Mayor intensidad de trabajo semanal
+- ✅ Restricción JMB respetada: máx 6h/día
+- ✅ Paralelización de tareas donde es posible
+- ✅ Optimización de dependencias críticas
 
 ---
 
@@ -359,13 +344,13 @@
 
 | Métrica | Valor |
 |---------|-------|
-| **Esfuerzo del Proyecto** | 677 horas (21-23 semanas, incl. 1 sem vacacional) |
+| **Esfuerzo del Proyecto** | 1,590 horas (42 semanas) |
 | **Ahorro Operativo Anual** | ~3,620 horas/año |
-| **Ratio de Retorno** | **5.3:1** (5.3 horas ahorradas por cada hora invertida) |
-| **Tiempo de Recuperación** | **~2 meses de operación** |
+| **Ratio de Retorno** | **2.3:1** (2.3 horas ahorradas por cada hora invertida) |
+| **Tiempo de Recuperación** | **~5 meses de operación** |
 | **Beneficio Neto 3 años** | >10,000 horas liberadas para tareas estratégicas |
 
-**Conclusión:** Proyecto altamente rentable con recuperación de esfuerzo en corto plazo, liberando recurso humano para actividades de mayor valor agregado.
+**Conclusión:** Proyecto rentable con recuperación de esfuerzo dentro del primer año, liberando recurso humano para actividades de mayor valor agregado. La solución completa con 18 transacciones y 12 dashboards proporciona una plataforma robusta y escalable.
 
 ---
 

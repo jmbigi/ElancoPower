@@ -2,344 +2,236 @@
 
 ## 9.1. Vista General del Cronograma
 
-**Duración Total:** 24 semanas (~6 meses, incluyendo 1 semana vacacional)  
-**Inicio:** Mes 1, Semana 1  
-**Finalización:** Mes 6, Semana 23
+**Duración Total:** 42 semanas (~10 meses)  
+**Inicio:** Semana 0 (1 de diciembre 2025)  
+**Finalización:** Semana 42 (Mediados de septiembre 2026)
 
 ```
-FASE 0          VACACIONES  FASE 1                    FASE 2          
-────────        ─────────   ──────────────────────    ──────────────────────    
-5 sem           1 sem       10 sem                    8 sem         
-███████         ░░░░░░░     ███████████████████████   ████████████████████████  
+FASE 0          FASE 1                                           FASE 2          
+────────        ──────────────────────────────────────────────   ──────────────────────────    
+6 sem           22 sem                                           14 sem         
+███████         ██████████████████████████████████████████████   ████████████████████████████  
                                                           
-Mes 1           Sem 4       Mes 2                     Mes 4      Mes 6
-Sem 1-5         (pausa)     Sem 6-15                  Sem 16-23
+Sem 0-6         Sem 6-28                                         Sem 28-42
 ```
 
-**Nota:** Se incluye 1 semana de pausa vacacional durante festividades de fin de año (incluida en el cronograma).  
-**Restricción:** Juan Manuel Bigi trabaja máximo 6 horas/día (30h/semana), ajustando Fase 2 a 8 semanas.
+**Restricción:** Juan Manuel Bigi trabaja máximo 6 horas/día (30h/semana). Cronograma comprimido manteniendo las mismas 1,590 horas totales.
 
 ---
 
-## 9.2. FASE 0 - Due Diligence (Mes 1, Semanas 1-5)
+## 9.2. FASE 0 - Due Diligence (Semanas 0-6)
 
-### Semana 1: Kick-off y Análisis Inicial
+### Semana 0: Diseño Arquitectura Preliminar y Estimación
 
-| Actividad | Responsable | Horas | Entregable |
-|-----------|-------------|-------|------------|
-| Kick-off meeting con stakeholders | Linda + Todos + Stakeholders | 3h | Minutas kick-off |
-| Análisis dataset CASA en BigQuery | JMB | 8h | Inventario tablas disponibles |
-| Seguimiento Ticket SAP-48219 (permisos) | Lucía | 4h | Status report |
-| Prueba conectividad Power BI ↔ BigQuery | JMB | 4h | POC funcional (.pbix) |
-| Seguimiento Tickets BQ (tablas) | Lucía | 4h | Status report |
-| Preparación workshop priorización | Lucía + JMB | 4h | Agenda + materiales |
+**Actividades principales:**
+- Diseño arquitectura BigQuery 3 capas + conectividad SAP SLT (JMB: 6h, Lucía: 4h)
+- Análisis volumetría y complejidad 18 transacciones SAP (JMB: 8h, Lucía: 6h)
 
-**Hito Semana 1:** ✅ Inventario técnico completado, status de tickets críticos
+**Horas totales:** 24h (JMB: 14h, Lucía: 10h)
 
----
+### Semana 1: Kick-off y Alineamiento
 
-### Semana 2: Workshops y Validación
+**Actividades principales:**
+- Kick-off meeting con stakeholders (3h + 4h + 3h = 10h)
+- Inicio inventario técnico completo
 
-| Actividad | Responsable | Horas | Entregable |
-|-----------|-------------|-------|------------|
-| Workshop Finanzas (priorización trans) | Todos + Stakeholders | 4h + 4h stakeholders | Scoring transacciones FI/CO |
-| Workshop Supply (priorización trans) | Todos + Stakeholders | 4h + 4h stakeholders | Scoring transacciones MM/SD |
-| Análisis de transacciones custom (ZLEL008) | Lucía | 4h | Documentación tablas Z |
-| Benchmarks performance BigQuery | JMB | 6h | Resultados queries |
-| Workshop consolidación (priorización) | Todos + Stakeholders | 4h + 4h stakeholders | Backlog priorizado |
+**Horas totales:** 10h
 
-**Hito Semana 2:** ✅ Backlog de 18 transacciones priorizado y aprobado
+### Semanas 1-3: Inventario Técnico Completo
 
----
+**Actividades principales:**
+- Revisión dataset CASA BigQuery
+- Análisis permisos SAP y estado actual
+- Listado tablas por módulo y documentación
+- **Horas totales:** 41h (JMB: 20h, Lucía: 18h, Linda: 3h)
 
-### Semana 3: Planificación Detallada
+### Semanas 2-3: Gestión de Tickets Críticos
 
-| Actividad | Responsable | Horas | Entregable |
-|-----------|-------------|-------|------------|
-| Plan de extracción por módulo SAP | JMB | 6h | Roadmap Fase 1 |
-| Definición arquitectura zonas (RAW/PROCESSED/CURATED) | JMB | 4h | Diagrama arquitectura |
-| Análisis de riesgos y mitigaciones | Lucía + JMB | 4h | Matriz de riesgos |
-| Estimación de esfuerzos Fase 1 | JMB | 4h | Matriz estimación horas |
-| Seguimiento tickets críticos | Lucía | 4h | Status report |
+**Actividades principales:**
+- Revisión problemas detectados (permisos, tablas faltantes)
+- Seguimiento tickets SAP y BigQuery
+- **Horas totales:** 35h (JMB: 8h, Lucía: 22h, Linda: 5h)
 
-**Hito Semana 3:** ✅ Plan técnico Fase 1 completo
+### Semanas 2-4: Workshops y Análisis Z
 
----
+**Actividades principales:**
+- Workshops priorización 18 transacciones
+- Análisis profundo ZLEL008 y ZVEL015
+- Definición tablas Z
+- **Horas totales:** 66h (JMB: 20h, Lucía: 36h, Linda: 10h)
 
-### **PAUSA VACACIONAL (Durante Semana 4)** 🎄
+### Semanas 4-5: Diseño y POC
 
-⏸️ **Semana de pausa por festividades de fin de año**
-- Sin actividades programadas
-- Equipo en descanso vacacional
-- Proyecto se retoma después de la pausa
+**Actividades principales:**
+- Arquitectura 3 capas definitiva
+- POC técnico end-to-end
+- Validación funcional SAP
+- **Horas totales:** 36h (JMB: 24h, Lucía: 12h)
 
----
+### Semanas 5-6: Documentación y Go/No-Go
 
-### Semana 4: Documentación y Preparación Go/No-Go
+**Actividades principales:**
+- Documento arquitectura
+- Backlog priorizado
+- Listado completo tablas SAP
+- Plan detallado
+- **Reunión Go/No-Go**
+- **Horas totales:** 23h (JMB: 6h, Lucía: 10h, Linda: 7h)
 
-| Actividad | Responsable | Horas | Entregable |
-|-----------|-------------|-------|------------|
-| Documentación entregables Fase 0 | JMB | 8h | 7 documentos Fase 0 |
-| Revisión interna documentos | Linda + Lucía + JMB | 4h | Documentos revisados |
-| Validación con TI (David Saboya) | Lucía + JMB | 2h | Confirmaciones técnicas |
-| Preparación presentación Go/No-Go | Linda + JMB | 4h | Presentación |
+**Hito Semana 6:** ✅✅ Decisión Go/No-Go emitida, Fase 1 aprobada para iniciar
 
-**Nota:** Semana post-vacacional, puede tener días festivos según país.
-
-**Hito Semana 4:** ✅ Documentación Fase 0 completa
+**TOTAL FASE 0:** 235h (JMB: 95h, Lucía: 112h, Linda: 28h)
 
 ---
 
-### Semana 5: Go/No-Go y Cierre Fase 0
+## 9.3. FASE 1 - Construcción Data Lake (Semanas 6-28)
 
-| Actividad | Responsable | Horas | Entregable |
-|-----------|-------------|-------|------------|
-| Distribución materiales Go/No-Go | Linda | 2h | Documentos enviados |
-| **Reunión Go/No-Go** | Todos + Stakeholders + Management | 2h | Decisión documentada |
-| Ajustes post Go/No-Go (si aplica) | JMB | 4h | Plan actualizado |
-| Preparación kick-off Fase 1 | Todos | 3h | Agenda Fase 1 |
-| Cierre administrativo Fase 0 | Linda | 2h | Reporte cierre |
+### Semanas 6-8: Setup Infraestructura Completa
 
-**Hito Semana 5:** ✅✅ Decisión Go/No-Go emitida, Fase 1 aprobada para iniciar
+**Actividades principales:**
+- Datasets BigQuery + particionamiento
+- Service accounts + conectores SAP SLT
+- Cloud Functions + validación accesos tablas SAP
+- **Horas totales:** 73h (JMB: 60h, Lucía: 6h, Linda: 7h)
+- **Hito:** ✅ Infraestructura BigQuery lista
 
----
+### Semanas 8-11: Pipelines Módulo FI (4 transacciones)
 
-## 9.3. FASE 1 - Construcción Data Lake (Mes 2-3, Semanas 6-15)
+**Transacciones:** FAGLL03, FB03, F.08, F.01
+**Tablas SAP:** FAGLFLEXA, BKPF, BSEG, FAGLFLEXT, SKA1, BSID, BSAD
+- Desarrollo + validación + testing
+- **Horas totales:** 89h (JMB: 60h, Lucía: 26h, Linda: 3h)
+- **Hito:** ✅ Módulo FI completo
 
-### Semana 6: Setup Infraestructura + Inicio Módulo FI
+### Semanas 11-13: Pipelines Módulo SD (2 transacciones)
 
-| Actividad | Responsable | Horas | Entregable |
-|-----------|-------------|-------|------------|
-| Kick-off Fase 1 | Todos | 2h | Minutas |
-| Setup datasets BigQuery (RAW/PROCESSED/CURATED) | JMB | 6h | Datasets configurados |
-| Configuración conectores SAP ↔ BigQuery | JMB | 6h | Conectores activos |
-| Inicio desarrollo FAGLL03 (mayor general) | JMB | 8h | Pipeline RAW FAGLL03 |
+**Transacciones:** VA05, KE24
+**Tablas SAP:** VBAK, VBAP, VBEP, KNA1, CE1xxxx, CE4xxxx
+- Desarrollo + validación + testing
+- **Horas totales:** 61h (JMB: 38h, Lucía: 20h, Linda: 3h)
+- **Hito:** ✅ Módulo SD completo
 
-**Hito Semana 6:** ✅ Infraestructura BigQuery lista
+### Semanas 13-15: Pipelines MM Procurement (3 transacciones)
 
----
+**Transacciones:** ME2L, ME23N, MM60
+**Tablas SAP:** EKKO, EKPO, MBEW, CKMLCR
+- Desarrollo + validación + testing
+- **Horas totales:** 71h (JMB: 44h, Lucía: 24h, Linda: 3h)
+- **Hito:** ✅ MM Procurement completo
 
-### Semana 7: Módulo FI - Parte 1
+### Semanas 15-17: Pipelines MM Inventory (3 transacciones)
 
-| Actividad | Responsable | Horas | Entregable |
-|-----------|-------------|-------|------------|
-| FAGLL03 - Layers PROCESSED y CURATED | JMB | 10h | Pipeline completo FAGLL03 |
-| Validación FAGLL03 con Finanzas | Lucía + Stakeholders | 3h | Validación OK |
-| Desarrollo FB03 (documentos contables) | JMB | 8h | Pipeline RAW/PROCESSED FB03 |
+**Transacciones:** MB59, MB5B, MCHB
+**Tablas SAP:** MSEG, MARD, MCHB
+- Desarrollo + validación + testing
+- **Horas totales:** 65h (JMB: 42h, Lucía: 20h, Linda: 3h)
+- **Hito:** ✅ MM Inventory completo
 
-**Hito Semana 7:** ✅ FAGLL03 completo y validado
+### Semanas 17-20: Pipeline ZLEL008 (custom MRP)
 
----
+**Transacción custom compleja**
+**Z-tables** suministradas por SAP Functional
+- Análisis + desarrollo + validación funcional + testing extendido
+- **Horas totales:** 77h (JMB: 48h, Lucía: 26h, Linda: 3h)
+- **Hito:** ✅ ZLEL008 completo (transacción custom más compleja)
 
-### Semana 8: Módulo FI - Parte 2
+### Semanas 20-23: Pipelines CO y FI-AP/AR (4 transacciones)
 
-| Actividad | Responsable | Horas | Entregable |
-|-----------|-------------|-------|------------|
-| FB03 - Layer CURATED | JMB | 4h | Pipeline completo FB03 |
-| Desarrollo F.08 (balance comprobación) | JMB | 8h | Pipeline F.08 |
-| Desarrollo F.01 (estado situación) | JMB | 8h | Pipeline F.01 |
-| Testing integral módulo FI | JMB + Lucía | 4h | 4 transacciones validadas |
+**Transacciones:** KSB1, KE24 análisis, FBL1N, FBL5N
+**Tablas SAP:** COBK, COEP, AUFK, BSIK, BSAK
+- Desarrollo + validación + testing
+- **Horas totales:** 92h (JMB: 56h, Lucía: 30h, Linda: 6h)
+- **Hito:** ✅ Módulo CO y AP/AR completo
 
-**Hito Semana 8:** ✅ Módulo FI completo (4 transacciones)
+### Semanas 23-26: Pipelines Master Data y ZVEL015
 
----
+**Transacciones:** XK03, XD03, ZVEL015 (pricing)
+**Tablas SAP:** LFA1, LFB1, LFM1, KNA1, KNB1, KNVV + Z-pricing
+- Desarrollo + validación + testing
+- **Horas totales:** 82h (JMB: 48h, Lucía: 28h, Linda: 6h)
+- **Hito:** ✅ Master Data y ZVEL015 completo
 
-### Semana 9: Módulo SD
+### Semanas 26-28: Optimización y Automatización
 
-| Actividad | Responsable | Horas | Entregable |
-|-----------|-------------|-------|------------|
-| Desarrollo VA05 (órdenes abiertas) - RAW | JMB | 8h | Pipeline RAW VA05 |
-| VA05 - PROCESSED (joins, cálculos) | JMB | 8h | Pipeline PROCESSED VA05 |
-| VA05 - CURATED y testing | JMB | 6h | Pipeline completo VA05 |
+**Actividades principales:**
+- Tuning queries + CI/CD + monitoreo
+- Testing integral 18 transacciones
+- Validación funcional SAP
+- Documentación técnica
+- **Horas totales:** 86h (JMB: 50h, Lucía: 26h, Linda: 10h)
+- **Hito:** ✅✅ Fase 1 completa, Data Lake operativo con 18 transacciones
 
-**Hito Semana 9:** ✅ VA05 completo y validado
-
----
-
-### Semana 10: Módulo MM - Parte 1
-
-| Actividad | Responsable | Horas | Entregable |
-|-----------|-------------|-------|------------|
-| Validación VA05 con Supply | Lucía + Stakeholders | 2h | Validación OK |
-| Desarrollo ME2L (purchase orders) | JMB | 10h | Pipeline completo ME2L |
-| Desarrollo MB5B (stock materiales) | JMB | 10h | Pipeline completo MB5B |
-
-**Hito Semana 10:** ✅ ME2L y MB5B completos
-
----
-
-### Semana 11: Módulo MM - ZLEL008 (Parte 1 - Custom)
-
-| Actividad | Responsable | Horas | Entregable |
-|-----------|-------------|-------|------------|
-| Análisis técnico ZLEL008 (código ABAP) | Lucía + Consultor ABAP | 6h | Documentación tablas Z |
-| Identificación tablas fuente ZLEL008 | JMB | 8h | Mapeo tablas SAP |
-| Desarrollo pipeline RAW ZLEL008 | JMB | 8h | Pipeline RAW ZLEL008 |
-
-**Hito Semana 11:** ✅ Análisis ZLEL008 completo, pipeline RAW funcional
+**TOTAL FASE 1:** 696h (JMB: 446h, Lucía: 206h, Linda: 44h)
 
 ---
 
-### Semana 12: Módulo MM - ZLEL008 (Parte 2)
+## 9.4. FASE 2 - Dashboards Power BI (Semanas 28-42)
 
-| Actividad | Responsable | Horas | Entregable |
-|-----------|-------------|-------|------------|
-| ZLEL008 - Replicación lógica en BigQuery SQL | JMB | 10h | Pipeline PROCESSED |
-| ZLEL008 - Layer CURATED | JMB | 4h | Pipeline completo ZLEL008 |
-| Validación exhaustiva ZLEL008 | JMB + Lucía | 4h | Reconciliación SAP ↔ BQ |
-| Ajustes ZLEL008 (si necesario) | JMB | 4h | Pipeline ajustado |
+### Semanas 28-30: Modelo Dimensional Completo
 
-**Hito Semana 12:** ✅ ZLEL008 completo (transacción custom más compleja)
+**Actividades principales:**
+- Star schema: 8 dimensiones + 6 tablas hechos
+- Vistas SQL + capa semántica
+- Definición KPIs con SAP Functional
+- **Horas totales:** 116h (JMB: 86h, Lucía: 22h, Linda: 8h)
+- **Hito:** ✅ Modelo dimensional diseñado y validado
 
----
+### Semanas 30-32: Dashboards Financieros (3)
 
-### Semana 13: Módulo CO
+**Dashboards:** Financiero General, OPEX, Controlling
+**Definición SAP Functional + desarrollo**
+**Tablas:** BKPF, BSEG, FAGLFLEXA, COEP, COBK
+- 3 dashboards con RLS
+- **Horas totales:** 82h (JMB: 64h, Lucía: 14h, Linda: 4h)
+- **Hito:** ✅ Dashboards Financieros completos
 
-| Actividad | Responsable | Horas | Entregable |
-|-----------|-------------|-------|------------|
-| Desarrollo KSB1 (OPEX) | JMB | 12h | Pipeline completo KSB1 |
-| Validación KSB1 con Finanzas | Lucía + Stakeholders | 2h | Validación OK |
-| Desarrollo KE24 (CO-PA rentabilidad) | JMB | 10h | Pipeline completo KE24 |
+### Semanas 30-32: Dashboards Ventas y Rentabilidad (3) - EN PARALELO
 
-**Hito Semana 13:** ✅ Módulo CO completo (2 transacciones)
+**Dashboards:** Ventas, Rentabilidad, Regional
+**Definición SAP Functional + desarrollo**
+**Tablas:** VBAK, VBAP, CE1xxxx
+- 3 dashboards con RLS
+- **Horas totales:** 86h (JMB: 68h, Lucía: 14h, Linda: 4h)
+- **Hito:** ✅ Dashboards Ventas completos
 
----
+### Semanas 30-32: Dashboards Supply Chain (3) - EN PARALELO
 
-### Semana 14: Testing Integral y Documentación
+**Dashboards:** Inventario, Supply Chain, Compras
+**Definición SAP Functional + desarrollo**
+**Tablas:** MARD, MCHB, MSEG, EKKO, EKPO
+- 3 dashboards con RLS
+- **Horas totales:** 78h (JMB: 62h, Lucía: 12h, Linda: 4h)
+- **Hito:** ✅ Dashboards Supply Chain completos
 
-| Actividad | Responsable | Horas | Entregable |
-|-----------|-------------|-------|------------|
-| Testing integral 18 transacciones | JMB + Lucía | 6h | Matriz validación |
-| Ajustes identificados en testing | JMB | 6h | Pipelines ajustados |
-| Documentación diccionarios de datos | JMB | 6h | 18 diccionarios |
-| Documentación técnica arquitectura | JMB | 4h | Guía arquitectura |
-| Documentación runbooks operativos | JMB | 4h | Runbooks |
+### Semanas 32-35: Dashboards Tesorería y Ejecutivo (3)
 
-**Hito Semana 14:** ✅ Testing completo, documentación técnica entregada
+**Dashboards:** CxP, CxC, Dashboard Ejecutivo
+**Definición SAP Functional + desarrollo**
+**Tablas:** BSIK, BSAK, BSID, BSAD + consolidado
+- 3 dashboards con RLS
+- **Horas totales:** 87h (JMB: 66h, Lucía: 14h, Linda: 7h)
+- **Hito:** ✅ 12 dashboards completos con RLS
 
----
+### Semanas 35-39: Testing y UAT Completo
 
-### Semana 15: Transacciones Restantes y Cierre Fase 1
+**Actividades principales:**
+- Testing integrado + coordinación SAP Functional
+- 4 fases UAT (Financiero + Comercial + Supply + Ejecutivo)
+- Ajustes post-UAT
+- **Horas totales:** 122h (JMB: 41h, Lucía: 55h, Linda: 26h)
+- **Hito:** ✅ UAT completado, dashboards validados
 
-| Actividad | Responsable | Horas | Entregable |
-|-----------|-------------|-------|------------|
-| Desarrollo transacciones pendientes (si aplica) | JMB | 8h | Pipelines adicionales |
-| Testing transacciones adicionales | JMB + Lucía | 4h | Validaciones |
-| Revisión final calidad de datos | JMB | 4h | Reporte calidad |
-| Preparación demo Fase 1 | Todos | 3h | Presentación |
-| **Demo Fase 1 + Cierre** | Todos + Stakeholders | 2h | Aceptación Fase 1 |
+### Semanas 39-42: Ajustes Finales, Documentación, Capacitación y Go-Live
 
-**Hito Semana 15:** ✅✅ Fase 1 completa, Data Lake operativo con 18 transacciones
+**Actividades principales:**
+- Documentación funcional con SAP Functional
+- Capacitación usuarios
+- Preparación + Go-Live
+- Cierre proyecto
+- **Horas totales:** 88h (JMB: 33h, Lucía: 35h, Linda: 20h)
+- **Hito:** ✅✅✅ **PROYECTO CERRADO FORMALMENTE - GO-LIVE EXITOSO**
 
----
-
-## 9.4. FASE 2 - Dashboards Power BI (Mes 4-6, Semanas 16-23)
-
-### Semana 16: Modelado Dimensional
-
-| Actividad | Responsable | Horas | Entregable |
-|-----------|-------------|-------|------------|
-| Kick-off Fase 2 | Todos | 2h | Minutas |
-| Diseño de dimensiones (8 dimensiones) | JMB | 12h | ERD dimensiones |
-| Diseño de tablas de hechos (6 hechos) | JMB | 12h | ERD hechos |
-| Definición de relaciones | JMB | 4h | Diagrama relaciones |
-
-**Hito Semana 16:** ✅ Modelo dimensional diseñado
-
----
-
-### Semana 17: Capa Semántica y Desarrollo Dashboards (Parte 1)
-
-| Actividad | Responsable | Horas | Entregable |
-|-----------|-------------|-------|------------|
-| Desarrollo vistas BigQuery (vw_ventas, vw_inventario, etc.) | JMB | 8h | 10 vistas de negocio |
-| Validación modelo con stakeholders | Todos + Stakeholders | 3h | Modelo aprobado |
-| Desarrollo Dashboard Financiero (página 1-2) | JMB | 8h | Dashboard 40% |
-| Dashboard Financiero (página 3 + ajustes) | JMB | 8h | Dashboard Financiero v1 |
-
-**Hito Semana 17:** ✅ Dashboard Financiero funcional
-
----
-
-### Semana 18: Desarrollo Dashboards (Parte 2)
-
-| Actividad | Responsable | Horas | Entregable |
-|-----------|-------------|-------|------------|
-| Desarrollo Dashboard de Ventas | JMB | 10h | Dashboard Ventas v1 |
-| Desarrollo Dashboard de Inventario | JMB | 10h | Dashboard Inventario v1 |
-| Revisión iterativa con usuarios | Lucía + Stakeholders | 4h | Feedback |
-
-**Hito Semana 18:** ✅ 3 dashboards funcionales
-
----
-
-### Semana 19: Dashboards Finales + RLS
-
-| Actividad | Responsable | Horas | Entregable |
-|-----------|-------------|-------|------------|
-| Desarrollo Dashboard OPEX | JMB | 8h | Dashboard OPEX v1 |
-| Desarrollo Dashboard Ejecutivo | JMB | 8h | Dashboard Ejecutivo v1 |
-| Desarrollo dashboards adicionales (Supply, Compras, etc.) | JMB | 6h | Dashboards adicionales v1 |
-| Configuración Row-Level Security (RLS) | JMB | 10h | RLS configurado |
-
-**Hito Semana 19:** ✅ Todos los dashboards con RLS
-
----
-
-### Semana 20: UAT y Ajustes
-
-| Actividad | Responsable | Horas | Entregable |
-|-----------|-------------|-------|------------|
-| UAT con Finanzas (dashboards FI, OPEX, Ejecutivo) | Todos + Stakeholders | 4h + 4h stakeholders | Feedback Finanzas |
-| UAT con Supply (dashboards Ventas, Inventario, Supply) | Todos + Stakeholders | 4h + 4h stakeholders | Feedback Supply |
-| Consolidación feedback y priorización ajustes | Todos | 3h | Lista ajustes |
-| Implementación ajustes post-UAT | JMB | 12h | Dashboards ajustados |
-
-**Hito Semana 20:** ✅ UAT completado, ajustes implementados
-
----
-
-### Semana 21: Capacitación y Preparación Go-Live
-
-| Actividad | Responsable | Horas | Entregable |
-|-----------|-------------|-------|------------|
-| Documentación Manual de Usuario | JMB + Lucía | 6h | Manual usuarios |
-| Grabación videos tutoriales (6 videos) | JMB + Lucía | 4h | 6 videos |
-| Capacitación Power Users | Lucía + JMB | 4h | Certificados |
-| Capacitación Usuarios Finanzas | Lucía + JMB | 3h | Certificados |
-| Capacitación Usuarios Supply | Lucía + JMB | 3h | Certificados |
-| Sesión de refuerzo (todos) | Lucía + JMB | 2h | Certificados |
-| Preparación final go-live | Todos | 2h | Checklist go-live |
-
-**Hito Semana 21:** ✅ Capacitación completa, preparación go-live
-
----
-
-### Semana 22: Ajustes Finales y Testing
-
-| Actividad | Responsable | Horas | Entregable |
-|-----------|-------------|-------|------------|
-| Ajustes finales post-UAT | JMB | 12h | Dashboards refinados |
-| Testing integral de todos los dashboards | JMB + Lucía | 6h | Checklist completo |
-| Validación de RLS por todos los roles | JMB | 4h | RLS verificado |
-| Revisión final con stakeholders | Todos + Stakeholders | 4h | Aprobación final |
-
-**Hito Semana 22:** ✅ Todos los dashboards listos para go-live
-
----
-
-### Semana 23: Go-Live y Cierre del Proyecto
-
-| Actividad | Responsable | Horas | Entregable |
-|-----------|-------------|-------|------------|
-| **Go-Live Power BI** 🎉 | Todos | 2h | Dashboards en producción |
-| Monitoreo post go-live | Todos | 4h | Reporte incidentes |
-| Elaboración entregables Fase 3 (ML Roadmap) | JMB | 6h | Documentos Fase 3 |
-| Documentación cierre proyecto | Linda | 4h | Reporte cierre |
-| Reunión de cierre con stakeholders | Todos + Stakeholders | 2h | Acta de aceptación |
-| Transferencia de conocimiento a TI | JMB + David Saboya | 3h | Handover técnico |
-
-**Hito Semana 23:** ✅✅✅ **PROYECTO CERRADO FORMALMENTE**
+**TOTAL FASE 2:** 659h según tareas CSV (distribución: JMB: 420h, Lucía: 166h, Linda: 73h)
 
 ---
 
@@ -347,12 +239,12 @@ Sem 1-5         (pausa)     Sem 6-15                  Sem 16-23
 
 | Hito | Semana | Descripción |
 |------|--------|-------------|
-| **Inicio Proyecto** | Mes 1, Sem 1 | Kick-off y análisis inicial |
-| **Go/No-Go** | Mes 1, Sem 5 | Decisión de continuar a Fase 1 |
-| **Fin Fase 1** | Mes 3, Sem 15 | Data Lake operativo |
-| **Fin UAT** | Mes 5, Sem 20 | Dashboards validados |
-| **Go-Live** | Mes 6, Sem 23 | Sistema en producción |
-| **Cierre Formal** | Mes 6, Sem 23 | Proyecto completado |
+| **Inicio Proyecto** | Semana 0 | Kick-off y diseño preliminar |
+| **Go/No-Go** | Semana 6 | Decisión de continuar a Fase 1 |
+| **Fin Fase 1** | Semana 28 | Data Lake operativo con 18 transacciones |
+| **Fin UAT** | Semana 39 | Dashboards validados |
+| **Go-Live** | Semana 42 | Sistema en producción |
+| **Cierre Formal** | Semana 42 | Proyecto completado |
 
 ---
 
@@ -360,46 +252,47 @@ Sem 1-5         (pausa)     Sem 6-15                  Sem 16-23
 
 ```
 PROYECTO ELANCO - CENTRALIZACIÓN DE DATOS DE ANÁLISIS
-Duración: 24 semanas (incl. 1 semana vacacional) | ~6 meses
+Duración: 42 semanas | ~10 meses
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-FASE 0: Due Diligence (Semanas 1-5)
-███████████ (Mes 1)
+FASE 0: Due Diligence (Semanas 0-6)
+███████████████ 
     │
-    ├─ S1: Kick-off + análisis inicial
-    ├─ S2: Workshops priorización
-    ├─ S3: Planificación detallada
-    ├─ PAUSA VACACIONAL 🎄 (Sem 4)
-    ├─ S4: Documentación
-    └─ S5: Go/No-Go ✓
+    ├─ S0-1: Diseño arquitectura + kick-off
+    ├─ S1-3: Inventario técnico completo
+    ├─ S2-3: Gestión tickets críticos
+    ├─ S2-4: Workshops y análisis Z
+    ├─ S4-5: Diseño y POC
+    └─ S5-6: Documentación y Go/No-Go ✓
 
-FASE 1: Data Lake (Semanas 6-15)
-            ██████████████████████████████████████ (Mes 2-3)
+FASE 1: Data Lake (Semanas 6-28)
+               ████████████████████████████████████████████████████████████████
                     │
-                    ├─ S6: Setup infraestructura
-                    ├─ S7-8: Módulo FI (4 trans)
-                    ├─ S9: Módulo SD (1 trans)
-                    ├─ S10-12: Módulo MM (3 trans, incl. custom)
-                    ├─ S13: Módulo CO (2 trans)
-                    ├─ S14: Testing + documentación
-                    └─ S15: Cierre Fase 1 ✓
+                    ├─ S6-8: Setup infraestructura (73h)
+                    ├─ S8-11: Módulo FI - 4 trans (89h)
+                    ├─ S11-13: Módulo SD - 2 trans (61h)
+                    ├─ S13-15: MM Procurement - 3 trans (71h)
+                    ├─ S15-17: MM Inventory - 3 trans (65h)
+                    ├─ S17-20: ZLEL008 custom (77h)
+                    ├─ S20-23: CO y FI-AP/AR - 4 trans (92h)
+                    ├─ S23-26: Master Data y ZVEL015 (82h)
+                    └─ S26-28: Optimización (86h) ✓
 
-FASE 2: Dashboards (Semanas 16-23)
-                                                ██████████████████████████ (Mes 4-6)
-                                                        │
-                                                        ├─ S16: Modelado dimensional
-                                                        ├─ S17-18: Dashboards (Parte 1)
-                                                        ├─ S19: Dashboards (Parte 2) + RLS
-                                                        ├─ S20: UAT + ajustes
-                                                        ├─ S21: Capacitación
-                                                        ├─ S22: Testing final
-                                                        └─ S23: Go-Live ✓✓✓
+FASE 2: Dashboards (Semanas 28-42)
+                                                                              ██████████████████████████████████
+                                                                                    │
+                                                                                    ├─ S28-30: Modelo dimensional (116h)
+                                                                                    ├─ S30-32: 9 Dashboards paralelos (246h)
+                                                                                    ├─ S32-35: Dashboards finales (87h)
+                                                                                    ├─ S35-39: Testing y UAT (122h)
+                                                                                    └─ S39-42: Capacitación y Go-Live (88h) ✓✓✓
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 HITOS CLAVE:
-🎄 Vacaciones (Sem 4) | ✓ Go/No-Go (Sem 5) | ✓ Data Lake (Sem 15) | ✓✓✓ Go-Live (Sem 23)
+✓ Go/No-Go (S6) | ✓ Data Lake (S28) | ✓ UAT (S39) | ✓✓✓ Go-Live (S42)
 
-NOTA: Fase 2 de 8 semanas para cumplir restricción de JMB (máx 6h/día)
+ESFUERZO TOTAL: 1,590 horas | JMB: 961h | Lucía: 484h | Linda: 145h
+Cronograma comprimido 25% manteniendo mismas horas
 ```
 
 ---
@@ -462,14 +355,13 @@ NOTA: Fase 2 de 8 semanas para cumplir restricción de JMB (máx 6h/día)
 
 ### Carga de Trabajo por Persona
 
-| Semana | Lucía R. | Juan M. B. | Linda L. | Stakeholders | Horas Totales |
-|--------|----------|------------|----------|--------------|---------------|
-| S1-5 (Fase 0) | 4-6h/sem | 10-12h/sem | 2h/sem | 4h/sem | 20-24h/sem |
-| S6-15 (Fase 1) | 3-4h/sem | 15-18h/sem | 1h/sem | 1h/sem | 20-24h/sem |
-| S16-22 (Fase 2) | 2-3h/sem | 28-30h/sem | 1h/sem | 2-4h/sem | 33-38h/sem |
-| S23 (Cierre) | 2h | 6h | 4h | 2h | 14h |
+| Fase | Lucía R. | Juan M. B. | Linda L. | Promedio Semanal |
+|------|----------|------------|----------|------------------|
+| S0-6 (Fase 0) | 112h / 6sem = 19h/sem | 95h / 6sem = 16h/sem | 28h / 6sem = 5h/sem | Total: 40h/sem |
+| S6-28 (Fase 1) | 206h / 22sem = 9h/sem | 446h / 22sem = 20h/sem | 44h / 22sem = 2h/sem | Total: 31h/sem |
+| S28-42 (Fase 2) | 166h / 14sem = 12h/sem | 420h / 14sem = 30h/sem | 73h / 14sem = 5h/sem | Total: 47h/sem |
 
-**Nota:** Cargas part-time respetadas. JMB trabaja máximo 6h/día (30h/sem), trabajo sostenible.
+**Nota:** JMB trabaja máximo 30h/semana (6h/día), cumplido en todas las fases. Fase 2 es la más intensiva para JMB.
 
 ---
 
