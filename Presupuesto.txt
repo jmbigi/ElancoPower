@@ -25,3 +25,12 @@ Fase 0 – Revisión del alcance, factibilidad y piloto
 Fase 1 – Transferencia de datos a repositorio
 Fase 2 – Modelado de datos y generación de tableros
 Fase 3 – Predicción (solo descripción)
+
+
+Presupuesto para la Elaboración de la Propuesta de Centralización de Datos de Análisis
+
+Descripción General: Este documento presenta el presupuesto para desarrollar la propuesta técnica de un proyecto de centralización de datos de análisis. El proyecto se estructura en tres fases ejecutivas: la Fase 1 para la construcción de un repositorio (Data Lake), la Fase 2 para el desarrollo de modelos y tableros de análisis, y una Fase 3 dedicada a modelos de predicción, la cual solo se describe a nivel conceptual sin una estimación de esfuerzo asociada en esta instancia.
+
+Alcance de la Propuesta: El trabajo de elaboración de la propuesta incluye: 1) El análisis de los antecedentes. 2) La redacción de un documento de propuesta que contenga: los alcances del proyecto y de la propuesta misma; la lista de tablas y transacciones SAP consideradas (ME2L, MM60, VA05, MB59, ZLEL008, KSB1, KE24, FB03, ZVEL015, ME23N, FAGLL03, FBL1N, F.08, F.01, XK03, XD03, FBL5N, MB5B), abarcando 44 tablas en total; un listado y descripción de las tareas para las Fases 0, 1 y 2; la estimación de esfuerzo en horas para los perfiles técnicos requeridos; un cronograma semanal de actividades; y los requisitos técnicos y administrativos iniciales para el proyecto.
+
+Fases del Proyecto Definidas: Fase 0 – Revisión de alcance, estudio de factibilidad y piloto técnico. Fase 1 – Transferencia y carga de datos hacia el repositorio central (Data Lake). Fase 2 – Modelado de los datos y generación de tableros de visualización (dashboards). Fase 3 – Desarrollo de modelos de predicción (descripción detallada únicamente).
