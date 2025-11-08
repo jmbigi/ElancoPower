@@ -814,9 +814,9 @@ Nota: Las fechas exactas y semanas del proyecto se rigen por `09_CRONOGRAMA_SEMA
 
 | Recurso | Horas |
 |---------|-------|
-| **Consultor BI** | 416h |
-| **Funcional SAP** | 104h |
-| **Project Manager** | 61h |
+| **Consultor BI** | 420h |
+| **Funcional SAP** | 166h |
+| **Project Manager** | 73h |
 | **Stakeholders Elanco** | 78h (sin costo) |
 | **TOTAL FASE 2** | **659h** |
 
