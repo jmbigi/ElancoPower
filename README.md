@@ -1,6 +1,6 @@
 # Elanco Power – Documentación del Proyecto
 
-**Actualizado:** 10 de octubre de 2025  
+**Actualizado:** 7 de noviembre de 2025  
 **Proyecto:** Automatización SAP → BigQuery → Power BI  
 **Cliente:** Elanco Animal Health  
 **Consultoría:** Aunergia
@@ -156,21 +156,20 @@ Automatizar la extracción de datos desde **SAP ECC** y centralizarlos en **Goog
 
 ### Fases del Proyecto:
 1. **Fase 0 (3-4 sem):** Due Diligence y habilitación de permisos
-2. **Fase 1 (6-8 sem):** Automatización SAP → BigQuery (8 transacciones)
-3. **Fase 2 (4-5 sem):** Modelado Power BI y dashboards (4-6 dashboards)
+2. **Fase 1 (6-8 sem):** Automatización SAP → BigQuery (18 transacciones)
+3. **Fase 2 (4-5 sem):** Modelado Power BI y dashboards (12 dashboards)
 4. **Fase 3 (futuro):** Analítica predictiva (opcional)
 
-### Presupuesto Personal Juan Manuel Bigi:
+### Esfuerzo Personal Juan Manuel Bigi:
 
-| Concepto | Horas | Costo |
-|----------|-------|-------|
-| Elaboración presupuesto | 10h | USD 250 |
-| Fase 0 - Due Diligence | 40h | USD 1,000 |
-| Fase 1 - Automatización | 156h | USD 3,900 |
-| Fase 2 - Power BI | 148h | USD 3,700 |
-| **TOTAL** | **354h** | **USD 8,850** |
+| Concepto | Horas |
+|----------|-------|
+| Elaboración presupuesto | 10h |
+| Fase 0 - Due Diligence | 40h |
+| Fase 1 - Automatización | 156h |
+| Fase 2 - Power BI | 148h |
+| **TOTAL** | **354h** |
 
-**Tarifa:** USD 25/hora  
 **Duración:** 13-17 semanas (~4 meses)  
 **Inicio propuesto:** 14-oct-2025
 

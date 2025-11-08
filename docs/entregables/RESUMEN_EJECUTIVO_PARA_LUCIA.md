@@ -17,24 +17,22 @@ Aquí está mi presupuesto personal para el trabajo técnico que puedo aportar.
 
 ---
 
-## 💰 PRESUPUESTO JUAN MANUEL BIGI
+## 💰 ESFUERZO JUAN MANUEL BIGI
 
 ### Resumen:
-- **Costo total:** USD 8,850
 - **Horas totales:** 354 horas
-- **Tarifa:** USD 25/hora
 - **Duración:** 13-17 semanas (~4 meses)
 - **Disponibilidad:** Part-time (20-25h/semana)
 
 ### Desglose por fase:
 
-| Fase | Duración | Horas | Costo |
-|------|----------|-------|-------|
-| **Elaboración presupuesto** | - | 10h | USD 250 |
-| **Fase 0 - Due Diligence** | 3-4 semanas | 40h | USD 1,000 |
-| **Fase 1 - Automatización** | 6-8 semanas | 156h | USD 3,900 |
-| **Fase 2 - Power BI** | 4-5 semanas | 148h | USD 3,700 |
-| **TOTAL** | **~4 meses** | **354h** | **USD 8,850** |
+| Fase | Duración | Horas |
+|------|----------|-------|
+| **Elaboración presupuesto** | - | 10h |
+| **Fase 0 - Due Diligence** | 3-4 semanas | 40h |
+| **Fase 1 - Automatización** | 6-8 semanas | 156h |
+| **Fase 2 - Power BI** | 4-5 semanas | 148h |
+| **TOTAL** | **~4 meses** | **354h** |
 
 ---
 
@@ -58,13 +56,19 @@ Aquí está mi presupuesto personal para el trabajo técnico que puedo aportar.
 
 ### ✅ FASE 2: Power BI (148h)
 - Modelo de datos Power BI (conexión BigQuery)
-- Desarrollo de **4-6 dashboards:**
-  1. Dashboard Financiero
+- Desarrollo de **12 dashboards:**
+  1. Dashboard Financiero General
   2. Dashboard Ventas
   3. Dashboard Inventario
   4. Dashboard OPEX
-  5. Dashboard Ejecutivo
-  6. Dashboard Supply Chain
+  5. Dashboard Supply Chain
+  6. Dashboard Compras
+  7. Dashboard Rentabilidad
+  8. Dashboard Cuentas por Pagar
+  9. Dashboard Cuentas por Cobrar
+  10. Dashboard Controlling
+  11. Dashboard Ejecutivo
+  12. Dashboard Regional Estadístico
 - Configuración Row-Level Security (RLS) por país
 - Testing con usuarios (UAT)
 - Documentación para usuarios
@@ -77,7 +81,7 @@ Aquí está mi presupuesto personal para el trabajo técnico que puedo aportar.
 - Project Management y gobernanza
 - Horas de Lucía Rodríguez (las factura Aunergia)
 - QA formal / Compliance corporativo
-- Consultoría ABAP externa (estimo USD 640-1,600 si es necesario)
+- Consultoría ABAP externa (si es necesario)
 - Análisis de negocio profundo
 - Capacitación avanzada (solo capacitación básica incluida)
 
@@ -139,9 +143,9 @@ Según el correo de **David Saboya** (09-oct-2025), Elanco tiene estos issues:
 4. ✅ Backlog priorizado (lo hacemos en Fase 0)
 
 ### Forma de pago propuesta:
-- 30% al aprobar Fase 0: **USD 2,655**
-- 40% al completar Fase 1: **USD 3,540**
-- 30% al completar Fase 2: **USD 2,655**
+- 30% al aprobar Fase 0
+- 40% al completar Fase 1
+- 30% al completar Fase 2
 
 ### Facturo a:
 - Aunergia (ustedes me pagan, ustedes facturan a Elanco)
@@ -151,21 +155,19 @@ Según el correo de **David Saboya** (09-oct-2025), Elanco tiene estos issues:
 
 ## 📊 COMPARATIVA (para tu información)
 
-Tu presupuesto completo de Aunergia es **USD 48,000** con equipo completo.
+Tu presupuesto completo de Aunergia incluye equipo completo con todas las horas y roles necesarios.
 
-Mi presupuesto es **USD 8,850** solo para el trabajo técnico.
-
-**Diferencia:** -81.5% (USD 39,150 menos)
+Mi presupuesto es solo para el trabajo técnico de desarrollo (354 horas).
 
 ### ¿Por qué la diferencia?
-- El de USD 48,000 incluye PM, Arquitectos Senior, QA, Analistas, tu tiempo, overhead
-- El de USD 8,850 es solo mi trabajo de desarrollo técnico
+- El presupuesto completo incluye PM, Arquitectos Senior, QA, Analistas, tu tiempo, overhead
+- Mi presupuesto es solo mi trabajo de desarrollo técnico
 - Los dos son correctos, depende de qué modelo quieran usar
 
 ### Opciones para ustedes:
-1. **Propuesta completa Aunergia:** USD 48,000 (llave en mano)
-2. **Solo yo + ustedes coordinan:** USD 8,850 + sus costos
-3. **Híbrido:** USD ~25,000 (yo + Lucía + PM mínimo + QA)
+1. **Propuesta completa Aunergia:** Equipo completo (llave en mano)
+2. **Solo yo + ustedes coordinan:** Mis 354h + sus costos internos
+3. **Híbrido:** Yo + Lucía + PM mínimo + QA
 
 ---
 
@@ -200,7 +202,7 @@ He creado 3 documentos en la carpeta del proyecto:
 
 ### Si prefieren buscar otro recurso:
 - No hay problema, los documentos quedan para referencia
-- Cobro solo las 10h de elaboración del presupuesto: **USD 250**
+- Cobro solo las 10h de elaboración del presupuesto
 
 ---
 
@@ -211,7 +213,7 @@ He creado 3 documentos en la carpeta del proyecto:
    - Mi presupuesto asume que ustedes coordinan
 
 2. **¿Las horas de consultoría ABAP las gestiona Aunergia?**
-   - Estimé 8-16h (USD 640-1,600) para ZLEL008
+   - Estimé 8-16h para ZLEL008
    - ¿Ustedes lo contratan o lo incluyo en mi presupuesto?
 
 3. **¿Facturación directa o a través de Aunergia?**
@@ -235,11 +237,11 @@ He creado 3 documentos en la carpeta del proyecto:
 
 ## ✅ CONCLUSIÓN
 
-**Mi presupuesto: USD 8,850 por 354 horas de desarrollo técnico.**
+**Mi esfuerzo: 354 horas de desarrollo técnico.**
 
 Incluye:
-- ✅ 8 pipelines SAP → BigQuery
-- ✅ 4-6 dashboards Power BI
+- ✅ 18 transacciones SAP → BigQuery
+- ✅ 12 dashboards Power BI
 - ✅ Documentación completa
 - ✅ Testing y validación
 - ✅ Soporte durante implementación

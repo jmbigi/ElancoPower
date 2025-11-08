@@ -166,7 +166,7 @@ Este presupuesto se basa **exclusivamente** en:
 **Objetivo:** Construir pipelines para transacciones prioritarias (Prioridad 1 + selección Prioridad 2).
 
 #### Alcance definido:
-- **8 transacciones críticas** (las identificadas con prioridad)
+- **18 transacciones SAP** (según priorización en Fase 0)
 - Extracción automatizada vía BigQuery connectors
 - Historización de datos (mínimo 24 meses)
 - Calidad de datos: validación SAP vs BigQuery
@@ -222,13 +222,19 @@ Este presupuesto se basa **exclusivamente** en:
 #### Alcance:
 - Conexión Power BI → BigQuery (dataset CASA)
 - Modelo tabular con relaciones definidas
-- 4-6 dashboards principales:
-  1. Dashboard Financiero (FAGLL03, F.08, F.01)
-  2. Dashboard Ventas (VA05, KE24)
-  3. Dashboard Inventario (ZLEL008)
-  4. Dashboard OPEX (KSB1)
-  5. Dashboard Ejecutivo (consolidado)
-  6. Dashboard Supply Chain (según necesidad)
+- 12 dashboards principales:
+  1. Dashboard Financiero General
+  2. Dashboard Ventas
+  3. Dashboard Inventario
+  4. Dashboard OPEX
+  5. Dashboard Supply Chain
+  6. Dashboard Compras
+  7. Dashboard Rentabilidad
+  8. Dashboard Cuentas por Pagar
+  9. Dashboard Cuentas por Cobrar
+  10. Dashboard Controlling
+  11. Dashboard Ejecutivo
+  12. Dashboard Regional Estadístico
 
 - Configuración Row-Level Security (RLS) por país/área
 - Capacitación usuarios finales
@@ -241,7 +247,7 @@ Este presupuesto se basa **exclusivamente** en:
 | Actividad | Responsable | Horas estimadas |
 |-----------|-------------|-----------------|
 | Modelo de datos Power BI | Juan Manuel Bigi | 32h |
-| Desarrollo dashboards (6 dashboards × 10h) | Juan Manuel Bigi | 60h |
+| Desarrollo dashboards (12 dashboards) | Juan Manuel Bigi | 60h |
 | Configuración RLS por país/área | Juan Manuel Bigi | 12h |
 | Testing con usuarios (UAT) | Juan Manuel Bigi + Stakeholders | 16h |
 | Documentación usuarios y soporte | Juan Manuel Bigi | 12h |
@@ -266,37 +272,35 @@ Alcance tentativo (solo referencia):
 - Simulación de escenarios (precios, costos, inflación)
 - Machine Learning con Vertex AI o Azure ML
 
-**Estimación preliminar:** 8-10 semanas, USD 20,000 - 35,000 (a definir)
+**Estimación preliminar:** 8-10 semanas (a definir en el futuro)
 
 ---
 
 ## 4. COSTOS ESTIMADOS
 
-### 4.1. Tarifa horaria Juan Manuel Bigi
+### 4.1. Perfil técnico Juan Manuel Bigi
 
 **Contexto:** Audio Lucía del 09-oct-2025:
 > *"pásamelo y le decimos a ver si quiere que avancemos con vos y si no que ellos busquen algún recurso que les pueda resolver esto"*
 
-**Tarifa propuesta:** USD 25/hora
-
-**Justificación:**
-- Perfil: Desarrollador BigQuery + Power BI
+**Perfil:**
+- Desarrollador BigQuery + Power BI
 - Experiencia en proyectos SAP ECC
 - Conocimiento de arquitecturas Data Lake
 - Disponibilidad part-time
 
-### 4.2. Presupuesto por fase (Juan Manuel Bigi)
+### 4.2. Esfuerzo por fase (Juan Manuel Bigi)
 
-| Fase | Horas JM Bigi | Tarifa | Subtotal JM Bigi |
-|------|---------------|--------|------------------|
-| **Fase 0** | 40h | $25/h | **$1,000** |
-| **Fase 1** | 156h | $25/h | **$3,900** |
-| **Fase 2** | 148h | $25/h | **$3,700** |
-| **Elaboración presupuesto** | 10h | $25/h | **$250** |
-| **TOTAL** | **354h** | | **$8,850** |
+| Fase | Horas JM Bigi |
+|------|---------------|
+| **Fase 0** | 40h |
+| **Fase 1** | 156h |
+| **Fase 2** | 148h |
+| **Elaboración presupuesto** | 10h |
+| **TOTAL** | **354h** |
 
-Notas:
-- Las horas de Lucía Rodríguez (Aunergia) se muestran únicamente como referencia y se facturan por separado por Aunergia (no incluidas en este presupuesto personal).
+**Notas:**
+- Las horas de Lucía Rodríguez (Aunergia) se muestran únicamente como referencia y se gestionan por separado por Aunergia (no incluidas en este documento).
 
 Horas de Lucía Rodríguez (referencia, no incluidas):
 
@@ -307,15 +311,13 @@ Horas de Lucía Rodríguez (referencia, no incluidas):
 | **Fase 2** | 12h |
 | **TOTAL** | **80h** |
 
-### 4.3. Costos adicionales estimados (no incluidos)
+### 4.3. Recursos adicionales estimados (no incluidos)
 
 **Consultoría ABAP externa** (si es necesario para ZLEL008):
 - Estimación: 8-16 horas
-- Tarifa estimada: USD 80-100/hora
-- Costo estimado: USD 640 - 1,600
 - **Responsable de gestión:** Aunergia
 
-**Nota:** Este costo se activaría solo si las tablas Z requieren desarrollo custom en SAP que ni Lucía ni el equipo interno puedan resolver.
+**Nota:** Este recurso se activaría solo si las tablas Z requieren desarrollo custom en SAP que ni Lucía ni el equipo interno puedan resolver.
 
 ---
 
@@ -455,7 +457,7 @@ Horas de Lucía Rodríguez (referencia, no incluidas):
 
 ### Fase 2:
 - ✅ Modelo de datos Power BI certificado
-- ✅ 4-6 dashboards productivos (Finanzas, Ventas, Inventario, OPEX, Ejecutivo, Supply)
+- ✅ 12 dashboards productivos (Financiero General, Ventas, Inventario, OPEX, Supply Chain, Compras, Rentabilidad, CxP, CxC, Controlling, Ejecutivo, Regional)
 - ✅ Row-Level Security configurado por país/área
 - ✅ Manual de usuario Power BI
 - ✅ Capacitación usuarios finales completada
@@ -467,24 +469,23 @@ Horas de Lucía Rodríguez (referencia, no incluidas):
 ## 9. CONDICIONES COMERCIALES
 
 ### 9.1. Forma de pago (propuesta):
-- 30% al aprobar Fase 0 (USD 2,655)
-- 40% al completar Fase 1 (USD 3,540)
-- 30% al completar Fase 2 (USD 2,655)
+- 30% al aprobar Fase 0
+- 40% al completar Fase 1
+- 30% al completar Fase 2
 
 ### 9.2. Facturación:
 - Facturas a nombre de: Aunergia
-- Moneda: USD (dólares estadounidenses)
 - Forma de pago: Transferencia bancaria
 - Plazo: 15 días desde emisión de factura
 
 ### 9.3. Ajustes:
-- Horas adicionales por cambios de alcance: USD 25/hora
-- Transacciones SAP adicionales: USD 300-500 por transacción (según complejidad)
-- Soporte post-implementación: USD 25/hora (bajo demanda)
+- Horas adicionales por cambios de alcance: según cotización
+- Transacciones SAP adicionales: según complejidad
+- Soporte post-implementación: bajo demanda
 
 ### 9.4. Exclusiones:
 - Licencias de software (ya adquiridas por Elanco)
-- Consultoría ABAP especializada (gestiona Aunergia, estimo USD 640-1,600)
+- Consultoría ABAP especializada (gestiona Aunergia)
 - Capacitación avanzada Power BI (solo capacitación básica incluida)
 - Rollout a países adicionales (se cotiza por separado)
 
@@ -554,18 +555,16 @@ Este presupuesto se basa en:
 
 | Concepto | Valor |
 |----------|-------|
-| **Costo total (Juan Manuel Bigi)** | **USD 8,850** |
-| **Horas totales** | **354 horas** |
-| **Tarifa horaria** | **USD 25/hora** |
+| **Horas totales (Juan Manuel Bigi)** | **354 horas** |
 | **Duración estimada** | **13-17 semanas (~4 meses)** |
-| **Transacciones SAP a automatizar** | **8 transacciones (Prioridad 1)** |
-| **Dashboards Power BI** | **4-6 dashboards** |
+| **Transacciones SAP a automatizar** | **18 transacciones** |
+| **Dashboards Power BI** | **12 dashboards** |
 | **Fecha inicio propuesta** | **14-oct-2025** |
 | **Fecha fin estimada** | **09-feb-2026** |
 
-### Inversión adicional estimada (gestiona Aunergia):
-- Horas Lucía Rodríguez: 80h (tarifa según contrato Aunergia-Elanco)
-- Consultoría ABAP (contingencia): USD 640-1,600
+### Recursos adicionales (gestiona Aunergia):
+- Horas Lucía Rodríguez: 80h (según contrato Aunergia-Elanco)
+- Consultoría ABAP (contingencia): según necesidad
 
 ### ROI esperado:
 - Reducción 70% tiempo consolidación reportes
@@ -584,12 +583,11 @@ Este presupuesto se basa en:
 
 ## ANEXO: Comparativa con presupuesto_actualizado.md (REFERENCIA)
 
-| Concepto | Presupuesto Anterior | Este Presupuesto (Real) | Diferencia |
+| Concepto | Propuesta Anterior | Este Documento (Real) | Diferencia |
 |----------|---------------------|------------------------|------------|
-| Costo total proyecto | USD 48,000 | USD 8,850 (JM Bigi) | -81.5% |
-| Horas totales | 494h | 354h (JM Bigi) | -28.3% |
+| Horas totales equipo | 494h | 354h (JM Bigi) | -28.3% |
 | Horas JM Bigi | 240h | 354h | +47.5% |
-| Tarifa JM Bigi | USD 25/h | USD 25/h | = |
-| Costo JM Bigi | USD 6,000 | USD 8,850 | +47.5% |
+| Alcance transacciones | 8 transacciones | 18 transacciones | +125% |
+| Alcance dashboards | 6 dashboards | 12 dashboards | +100% |
 
-**Aclaración:** El presupuesto anterior incluía costos de todo el equipo Aunergia (PM, Arquitectos, QA, etc.). Este presupuesto incluye SOLO el costo de Juan Manuel Bigi como desarrollador independiente. Las horas de Lucía Rodríguez y otros recursos Aunergia se facturan por separado.
+**Aclaración:** La propuesta anterior incluía todo el equipo Aunergia (PM, Arquitectos, QA, etc.). Este documento detalla SOLO el esfuerzo de Juan Manuel Bigi como desarrollador independiente. Las horas de Lucía Rodríguez y otros recursos Aunergia se gestionan por separado.

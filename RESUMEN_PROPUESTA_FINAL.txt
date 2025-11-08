@@ -1,6 +1,7 @@
 RESUMEN DE LA PROPUESTA FINAL DE CENTRALIZACIÓN DE DATOS
 Proyecto: Data Lake y Analítica Empresarial para Elanco Animal Health (Operación CASA)
 Fecha: 7 de noviembre de 2025
+Norma: Menos de 2500 palabras
 ================================================================================
 
 CONTEXTO GENERAL
