@@ -51,7 +51,7 @@ Los permisos SAP solicitados (RFC, tablas, transacciones custom) no se otorgan c
 - 📊 Status del ticket SAP-48219 (revisión semanal)
 - 📊 % de transacciones con permisos confirmados
 
-**Responsable:** David Saboya (Elanco TI) + Linda López (PM Aunergia)
+**Responsable:** David Saboya (Elanco TI) + Project Manager
 
 ---
 
@@ -86,7 +86,7 @@ Las tablas SAP necesarias (COEP, CE1*, CE4*, Z-tables) no están replicadas en B
    - ⚠️ Si 8-11 transacciones → **GO con alcance reducido**
    - 🚫 Si < 8 transacciones → **NO-GO** (replantear)
 
-**Responsable:** Juan Manuel Bigi (Arquitecto) + TI Global Elanco
+**Responsable:** Consultor BI (Arquitecto) + TI Global Elanco
 
 ---
 
@@ -117,7 +117,7 @@ Las transacciones custom ZLEL008 (Comparativo de Precios) y ZVEL015 (Ventas Esta
    - Simplificar alcance: replicar solo outputs críticos, no toda la lógica
    - Postergar a Fase 2 si no bloquea otros dashboards
 
-**Responsable:** Lucía Rodríguez (SAP Analyst) + Consultor ABAP
+**Responsable:** Funcional SAP (SAP Analyst) + Consultor ABAP
 
 ---
 
@@ -149,7 +149,7 @@ Datos en SAP con problemas de calidad: valores nulos, duplicados, inconsistencia
    - Comunicar limitaciones a usuarios finales
    - Plan de limpieza gradual en Fase 2
 
-**Responsable:** Juan Manuel Bigi + Lucía Rodríguez
+**Responsable:** Consultor BI + Funcional SAP
 
 ---
 
@@ -180,7 +180,7 @@ Consultas BigQuery lentas o costosas por mal diseño de particiones, falta de cl
    - Implementar caché en Power BI (Import mode vs DirectQuery)
    - Optimización de tablas (re-clustering, deduplicación)
 
-**Responsable:** Juan Manuel Bigi (Arquitecto)
+**Responsable:** Consultor BI (Arquitecto)
 
 ---
 
@@ -230,7 +230,7 @@ Limitaciones del conector nativo Power BI - BigQuery: tipos de datos no soportad
    - Usar Power Query (M) para transformaciones cliente-side
    - Evaluar conector Simba ODBC si conector nativo insuficiente
 
-**Responsable:** Juan Manuel Bigi
+**Responsable:** Consultor BI
 
 ---
 
@@ -256,7 +256,7 @@ Pérdida accidental de datos durante desarrollo/testing en ambientes dev o qa.
    - Rollback desde Git
    - Re-ejecución de pipelines ETL
 
-**Responsable:** Juan Manuel Bigi + TI Elanco
+**Responsable:** Consultor BI + TI Elanco
 
 ---
 
@@ -316,7 +316,7 @@ Stakeholders clave (Finanzas, Supply) no disponibles para workshops, validacione
    - Aprobar por etapas parciales (no todo-o-nada)
    - Escalar a Product Owner o Management
 
-**Responsable:** Linda López (PM) + Product Owner
+**Responsable:** Project Manager + Product Owner
 
 ---
 
@@ -346,7 +346,7 @@ Durante el proyecto, Elanco decide priorizar otras iniciativas (ej. implementaci
    - Entrega de artefactos hasta el punto alcanzado
    - Opción de pausa/retoma en 6-12 meses
 
-**Responsable:** Linda López (PM) + Sponsor Elanco
+**Responsable:** Project Manager + Sponsor Elanco
 
 ---
 
@@ -377,7 +377,7 @@ Usuarios finales prefieren seguir usando Excel y reportes SAP tradicionales, baj
    - Champions por área (power users evangelizadores)
    - Comunicación de éxitos tempranos (tiempo ahorrado, insights obtenidos)
 
-**Responsable:** Linda López + Product Owner
+**Responsable:** Project Manager + Product Owner
 
 ---
 
@@ -402,7 +402,7 @@ El Product Owner designado no tiene autoridad para tomar decisiones, debe escala
    - Escalar a Management con opciones y recomendación
    - Buffer de tiempo para aprobaciones (3-5 días)
 
-**Responsable:** Linda López (PM)
+**Responsable:** Project Manager
 
 ---
 
@@ -427,14 +427,14 @@ Requerimientos funcionales ambiguos o incompletos, descubiertos tarde en el proy
    - Priorizar MVP (Minimum Viable Product) primero
    - Cambios mayores → Change Request (posible costo/tiempo adicional)
 
-**Responsable:** Linda López + Lucía Rodríguez
+**Responsable:** Project Manager + Funcional SAP
 
 ---
 
 ### 🟢 R-O-06: Rotación de Personal Clave
 
 **Descripción:**  
-Salida de personal clave de Elanco (Product Owner, stakeholders, Lucía) o Aunergia (JMB) durante el proyecto.
+Salida de personal clave de Elanco (Product Owner, stakeholders, Funcional SAP) o del equipo (Consultor BI) durante el proyecto.
 
 | **Probabilidad** | **Impacto** | **Exposición** | **Fase Afectada** |
 |------------------|-------------|----------------|-------------------|
@@ -445,23 +445,23 @@ Salida de personal clave de Elanco (Product Owner, stakeholders, Lucía) o Auner
 1. **Preventiva:**
    - ✅ Documentación exhaustiva (permite handover)
    - ✅ Usuarios backup identificados
-   - ✅ Equipo Aunergia con redundancia (Lucía conoce el proyecto)
+   - ✅ Equipo con redundancia (Funcional SAP conoce el proyecto)
 
 2. **Contingencia:**
    - Período de transición de 2 semanas (handover)
    - Revisión de prioridades con nuevo responsable
    - Ajuste de cronograma si necesario
 
-**Responsable:** Linda López + Management Elanco
+**Responsable:** Project Manager + Management Elanco
 
 ---
 
 ## 11.4. Riesgos de Recursos
 
-### 🔴 R-R-01: Sobrecarga de Lucía Rodríguez (SAP Analyst)
+### 🔴 R-R-01: Sobrecarga del Funcional SAP (SAP Analyst)
 
 **Descripción:**  
-Lucía tiene demandas competentes de su rol operativo SAP (atención a usuarios, cierres, ad-hocs), no puede dedicar 15-20h/semana al proyecto.
+El Funcional SAP tiene demandas de su rol operativo (atención a usuarios, cierres, ad-hocs) y podría no dedicar 15-20h/semana al proyecto.
 
 | **Probabilidad** | **Impacto** | **Exposición** | **Fase Afectada** |
 |------------------|-------------|----------------|-------------------|
@@ -470,14 +470,14 @@ Lucía tiene demandas competentes de su rol operativo SAP (atención a usuarios,
 **Impacto Potencial:**
 - ⏱️ Retraso en análisis de transacciones SAP
 - 📉 Calidad subóptima por trabajo apresurado
-- 😰 Burnout de Lucía
+- 😰 Burnout del Funcional SAP
 
 **Estrategias de Mitigación:**
 
 1. **Preventiva:**
    - ✅ Cronograma ajustado a 4-6h/semana (ya aplicado)
    - ✅ Priorizar semanas con baja carga operativa
-   - ✅ Asistencia de JMB en tareas SAP técnicas
+   - ✅ Asistencia del Consultor BI en tareas SAP técnicas
    - ✅ Designar backup en área SAP de Elanco
 
 2. **Contingencia:**
@@ -485,14 +485,14 @@ Lucía tiene demandas competentes de su rol operativo SAP (atención a usuarios,
    - Contratar SAP Analyst adicional (costo adicional)
    - Re-priorizar transacciones: hacer TOP 10 primero
 
-**Responsable:** Linda López (PM) + Lucía Rodríguez
+**Responsable:** Project Manager + Funcional SAP
 
 ---
 
-### 🟡 R-R-02: Dependencia de Juan Manuel Bigi (Single Point of Failure)
+### 🟡 R-R-02: Dependencia del Consultor BI (Single Point of Failure)
 
 **Descripción:**  
-JMB es el único arquitecto/desarrollador; si no disponible (enfermedad, vacaciones, otro proyecto), el proyecto se detiene.
+El Consultor BI es el único arquitecto/desarrollador; si no está disponible (enfermedad, vacaciones, otro proyecto), el proyecto se detiene.
 
 | **Probabilidad** | **Impacto** | **Exposición** | **Fase Afectada** |
 |------------------|-------------|----------------|-------------------|
@@ -502,16 +502,16 @@ JMB es el único arquitecto/desarrollador; si no disponible (enfermedad, vacacio
 
 1. **Preventiva:**
    - ✅ Documentación técnica detallada (permite handover)
-   - ✅ Code reviews con Lucía (conocimiento compartido)
+   - ✅ Code reviews con Funcional SAP (conocimiento compartido)
    - ✅ Versionado en Git (trazabilidad)
    - ✅ Coordinación de vacaciones con antelación
 
 2. **Contingencia:**
-   - Lucía puede asumir tareas SQL básicas
+   - Funcional SAP puede asumir tareas SQL básicas
    - Contratar desarrollador BigQuery freelance (red de Aunergia)
    - Pausar proyecto temporalmente si ausencia > 2 semanas
 
-**Responsable:** Linda López (PM)
+**Responsable:** Project Manager
 
 ---
 
@@ -543,7 +543,7 @@ TI Global de Elanco tiene baja capacidad para atender tickets (permisos SAP, tab
 ### 🟢 R-R-04: Cambio de Prioridades de Aunergia
 
 **Descripción:**  
-Aunergia asigna a JMB o Lucía a otro proyecto de mayor prioridad/rentabilidad, reduciendo su disponibilidad.
+Aunergia asigna al Consultor BI o al Funcional SAP a otro proyecto de mayor prioridad/rentabilidad, reduciendo su disponibilidad.
 
 | **Probabilidad** | **Impacto** | **Exposición** | **Fase Afectada** |
 |------------------|-------------|----------------|-------------------|
@@ -613,7 +613,7 @@ La auditoría de factibilidad (Fase 0) identifica más problemas de los esperado
    - Documentar bloqueantes y elevar a Management
    - Si > 7 semanas → Evaluar viabilidad del proyecto (posible NO-GO)
 
-**Responsable:** Linda López (PM) + Product Owner
+**Responsable:** Project Manager + Product Owner
 
 ---
 
@@ -638,7 +638,7 @@ Dependencias de TI Global (permisos, tablas, ambientes) se retrasan, impactando 
    - Ajustar cronograma con aprobación de Product Owner
    - Cláusula de extensión sin penalización si retraso > 2 semanas
 
-**Responsable:** David Saboya + Linda López
+**Responsable:** David Saboya + Project Manager
 
 ---
 
@@ -668,7 +668,7 @@ Stakeholders solicitan funcionalidades adicionales no contempladas (más transac
    - Cambios mayores: Cotización adicional + extensión de plazo
    - Priorizar: MVP en Fase 2, mejoras en Fase post-proyecto
 
-**Responsable:** Linda López (PM) + Product Owner
+**Responsable:** Project Manager + Product Owner
 
 ---
 
@@ -692,7 +692,7 @@ Período de vacaciones (Diciembre 2025, Enero 2026) reduce disponibilidad del eq
    - Ajustar expectativas de entregables en esas semanas
    - Adelantar o postergar tareas críticas
 
-**Responsable:** Linda López (PM)
+**Responsable:** Project Manager
 
 ---
 
@@ -723,7 +723,7 @@ El proyecto requiere más horas de las estimadas (ej. complejidad transacciones 
    - Solicitar aprobación formal para extensión de horas si necesario
    - Reducir alcance funcional (postergar transacciones de prioridad 3)
 
-**Responsable:** Linda López (PM) + Management Elanco
+**Responsable:** Project Manager + Management Elanco
 
 ---
 
@@ -752,7 +752,7 @@ Costos mensuales de BigQuery (almacenamiento + procesamiento) mayores a lo estim
    - Optimizar uso de almacenamiento (archival de datos muy antiguos)
    - Evaluar slots reservados si costo sostenido alto
 
-**Responsable:** TI Elanco + Juan Manuel Bigi
+**Responsable:** TI Elanco + Consultor BI
 
 ---
 
@@ -802,7 +802,7 @@ Se requieren recursos no planificados: consultor ABAP adicional, desarrollador B
    - Solicitar aprobación formal para recursos adicionales si necesario
    - Re-priorizar transacciones según recursos disponibles
 
-**Responsable:** Linda López (PM)
+**Responsable:** Project Manager
 
 ---
 

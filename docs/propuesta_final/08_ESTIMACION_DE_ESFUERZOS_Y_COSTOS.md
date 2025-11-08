@@ -52,7 +52,7 @@
 | **Project Manager** - Project Manager | 145h |
 | **TOTAL** | **1,590h** |
 
-**Nota:** No se incluye consultoría ABAP adicional, Lucía cuenta con expertise SAP necesario.
+**Nota:** No se incluye consultoría ABAP adicional; el Funcional SAP cuenta con el expertise SAP necesario.
 
 ---
 
@@ -224,7 +224,7 @@
 | **Fase 0** | 9 sem | 6 sem | Comprimido 33% |
 | **Fase 1** | 31 sem | 22 sem | Comprimido 29% |
 | **Fase 2** | 16 sem | 14 sem | Comprimido 12% |
-| **PM Formalizado** | Sí (Linda) | Sí (Linda) | Mantenido |
+| **PM Formalizado** | Sí (Project Manager) | Sí (Project Manager) | Mantenido |
 | **TOTAL** | **56 sem** | **42 sem** | **Reducción 25%** |
 | **Horas totales** | **1,590h** | **1,590h** | **Mismas horas** |
 

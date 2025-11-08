@@ -48,7 +48,7 @@ Esta carpeta contiene la **documentación completa** para implementar la integra
 ### 🆕 Documentos Nuevos v2.0 (3 documentos)
 
 1. **RESUMEN_EJECUTIVO_AUDITORIA.md** ⭐⭐⭐ **EMPIEZA AQUÍ**
-   - **Para:** Lucía, Sponsors, Directores
+   - **Para:** Funcional SAP, Sponsors, Directores
    - **Tiempo:** 15 minutos
    - **Contenido:**
      - Hallazgos de auditoría (consistencia 95/100)
@@ -265,7 +265,7 @@ NUEVA RUTA v2.0:
 
 ### Hallazgo 2: GAP Crítico de Alcance
 - ⚠️ Documentación original cubre 1 de 18 transacciones (5.6%)
-- ⚠️ 17 transacciones adicionales identificadas en CSV de Lucía
+- ⚠️ 17 transacciones adicionales identificadas en CSV del Funcional SAP
 - ⚠️ Esfuerzo real: 10x más que lo documentado inicialmente
 
 **Recomendación:** Revisar estrategia en fases (0, 1, 2, 3)
@@ -462,7 +462,7 @@ Este documento contiene información propietaria y confidencial.
 - ✅ Agregado RESUMEN_EJECUTIVO_AUDITORIA.md
 - ✅ Agregado AUDITORIA_CONSISTENCIA_Y_TRANSACCIONES.md
 - ✅ Agregado SOLUCION_EXPANDIDA_18_TRANSACCIONES.md
-- ✅ Identificadas 18 transacciones del CSV de Lucía
+- ✅ Identificadas 18 transacciones del CSV del Funcional SAP
 - ✅ Actualizado README con nueva navegación
 - ✅ Análisis de GAP 1 vs 18 transacciones
 - ✅ Estimaciones actualizadas (660-845 días-persona)

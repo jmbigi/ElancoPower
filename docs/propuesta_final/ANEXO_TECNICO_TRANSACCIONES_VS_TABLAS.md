@@ -238,12 +238,12 @@ ENTRADAS (Fase 0)              PROCESO                    SALIDAS
 
 | # | Actividad | Responsable | Horas |
 |---|-----------|-------------|-------|
-| 1 | Análisis de cada transacción para identificar tablas | Lucía + JMB | 16h |
+| 1 | Análisis de cada transacción para identificar tablas | Funcional SAP + Consultor BI | 16h |
 | 2 | Análisis de transacciones custom (Z) con código ABAP | Consultor ABAP | 12h |
 | 3 | Validación de disponibilidad de tablas en BigQuery | TI Global | (no factura) |
-| 4 | Análisis de relaciones entre tablas (joins) | JMB | 8h |
-| 5 | Estimación de volúmenes por tabla | Lucía + JMB | 4h |
-| 6 | Documentación de mapeo completo | JMB | 8h |
+| 4 | Análisis de relaciones entre tablas (joins) | Consultor BI | 8h |
+| 5 | Estimación de volúmenes por tabla | Funcional SAP + Consultor BI | 4h |
+| 6 | Documentación de mapeo completo | Consultor BI | 8h |
 
 ### 5.3. Riesgos Identificados
 

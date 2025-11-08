@@ -218,7 +218,7 @@ Según correo de **David Saboya** (Analista IT TechOps CASA) del 9 de octubre de
 - Conocimiento de procesos de negocio SAP
 - Experiencia con herramientas BI (Power BI, Alteryx, etc.)
 
-**Perfil actual:** Lucía Rodríguez (Aunergia) cumple con skills técnicos pero trabaja como consultora externa. Requiere validación de accesos.
+**Perfil actual:** Funcional SAP (consultoría externa) cumple con los skills técnicos pero trabaja como recurso externo. Requiere validación de accesos y formalización de accesos corporativos.
 
 ---
 
@@ -296,7 +296,7 @@ Basado en el documento **"Que_se_va_a_usar.txt"** (actualizado 10-oct-2025), ali
 ### Personal
 
 ✅ **Power User Primario:**
-- Lucía Rodríguez (Aunergia)
+- Funcional SAP (consultoría externa)
 - Perfil: Consultoría SAP y análisis de procesos
 - Skills: SQL intermedio, conocimiento módulos SAP MM/SD/FI
 

@@ -76,7 +76,7 @@ A continuación se detalla la lista exhaustiva de todos los entregables del proy
 
 **Formato:** MS Project / Smartsheet / Excel + PDF  
 **Fecha Entrega:** Semana 5 (10-feb-2026)  
-**Aprobador:** Product Owner + Linda López (PM)
+**Aprobador:** Product Owner + Project Manager (PM)
 
 ---
 
@@ -135,7 +135,7 @@ A continuación se detalla la lista exhaustiva de todos los entregables del proy
 
 **Formato:** Dataset BigQuery `casa_bi_prod` con tablas pobladas  
 **Fecha Entrega:** Semana 15 (2-mar-2026)  
-**Aprobador:** Lucía Rodríguez + TI Elanco (Validación técnica)
+**Aprobador:** Funcional SAP + TI Elanco (Validación técnica)
 
 ---
 
@@ -157,7 +157,7 @@ A continuación se detalla la lista exhaustiva de todos los entregables del proy
 
 **Formato:** Código versionado en Git + Documentación técnica  
 **Fecha Entrega:** Semana 15 (2-mar-2026)  
-**Aprobador:** Juan Manuel Bigi + TI Elanco
+**Aprobador:** Consultor BI + TI Elanco
 
 ---
 
@@ -190,7 +190,7 @@ A continuación se detalla la lista exhaustiva de todos los entregables del proy
 
 **Formato:** Documento Excel/PDF (20-30 páginas)  
 **Fecha Entrega:** Semana 15 (2-mar-2026)  
-**Aprobador:** Lucía Rodríguez + Stakeholders
+**Aprobador:** Funcional SAP + Stakeholders
 
 ---
 
@@ -315,7 +315,7 @@ A continuación se detalla la lista exhaustiva de todos los entregables del proy
 
 **Formato:** Documentos PDF + Presentación PowerPoint  
 **Fecha Entrega:** Semana 20 (13-abr-2026)  
-**Aprobador:** Product Owner + Lucía Rodríguez
+**Aprobador:** Product Owner + Funcional SAP
 
 ---
 
@@ -367,7 +367,7 @@ A continuación se detalla la lista exhaustiva de todos los entregables del proy
 
 **Formato:** Sesiones virtuales (Zoom/Teams) con grabación  
 **Fecha Entrega:** Semanas 19-21  
-**Responsable:** Juan Manuel Bigi + Lucía Rodríguez
+**Responsable:** Consultor BI + Funcional SAP
 
 ---
 
@@ -435,7 +435,7 @@ A continuación se detalla la lista exhaustiva de todos los entregables del proy
 
 **Formato:** Documento Word/Google Doc  
 **Frecuencia:** Después de cada reunión (24h)  
-**Responsable:** Linda López (PM)
+**Responsable:** Project Manager (PM)
 
 ---
 
@@ -527,9 +527,9 @@ A continuación se detalla la lista exhaustiva de todos los entregables del proy
 **✅ Incluido en el Alcance del Proyecto:**
 
 1. **Recursos Humanos:**
-   - Linda López (Project Manager): 145 horas
-   - Lucía Rodríguez (SAP Analyst / Data Analyst): 484 horas
-   - Juan Manuel Bigi (Data Architect / Developer): 961 horas
+   - Project Manager (PM): 145 horas
+   - Funcional SAP (SAP Analyst / Data Analyst): 484 horas
+   - Consultor BI (Data Architect / Developer): 961 horas
    - **Total Esfuerzo:** 1,590 horas
 
 2. **Entregables:**
@@ -644,7 +644,7 @@ A continuación se detalla la lista exhaustiva de todos los entregables del proy
 
 **Cambios Menores (< 10 horas esfuerzo):**
 - Se evalúan dentro del buffer de proyecto
-- Requieren aprobación de PM (Linda López)
+- Requieren aprobación de PM (Project Manager)
 - Se documentan en minutas
 
 **Cambios Mayores (> 10 horas esfuerzo):**
@@ -655,7 +655,7 @@ A continuación se detalla la lista exhaustiva de todos los entregables del proy
 
 **Procedimiento de Change Request:**
 1. Stakeholder solicita cambio (por escrito)
-2. Linda López evalúa impacto (horas, costo, plazo)
+2. Project Manager evalúa impacto (horas, costo, plazo)
 3. Aunergia emite cotización (dentro de 5 días hábiles)
 4. Product Owner aprueba o rechaza
 5. Si aprueba: Se actualiza contrato/cronograma
@@ -675,7 +675,7 @@ A continuación se detalla la lista exhaustiva de todos los entregables del proy
 
 ✅ **Fase 1 (Data Lake):**
 - Datos cargados en BigQuery con completitud > 95%
-- Validación cruzada con SAP aprobada por Lucía
+- Validación cruzada con SAP aprobada por el Funcional SAP
 - Pipelines ETL corriendo automáticamente sin errores críticos
 - Documentación técnica completa
 
@@ -740,7 +740,7 @@ A continuación se detalla la lista exhaustiva de todos los entregables del proy
 - Contrato regido por leyes de [PAÍS - A definir según ubicación de Elanco CASA]
 
 **Resolución de Conflictos:**
-- Primera instancia: Negociación directa entre Linda López (PM) y Product Owner
+- Primera instancia: Negociación directa entre el Project Manager (PM) y el Product Owner
 - Segunda instancia: Mediación entre Management de ambas partes
 - Tercera instancia: Arbitraje según leyes locales
 
@@ -749,11 +749,11 @@ A continuación se detalla la lista exhaustiva de todos los entregables del proy
 ### 12.4.11. Contactos del Proyecto
 
 **Por Aunergia:**
-- **Project Manager:** Linda López  
-  Email: linda.lopez@aunergia.com | Tel: [TBD]
+- **Project Manager:** [A DESIGNAR]  
+   Email: [TBD] | Tel: [TBD]
 
-- **Technical Lead:** Juan Manuel Bigi  
-  Email: jmbigi@aunergia.com | Tel: [TBD]
+- **Technical Lead (Consultor BI):** [A DESIGNAR]  
+   Email: [TBD] | Tel: [TBD]
 
 **Por Elanco:**
 - **Product Owner:** [A DESIGNAR]  
@@ -795,10 +795,9 @@ Para cualquier necesidad posterior se definirá: descripción, esfuerzo estimado
 
 ---
 
-**Linda López**  
-Project Manager  
+**Project Manager**  
 Aunergia S.A.  
-Email: linda.lopez@aunergia.com
+Email: [TBD]
 
 ---
 

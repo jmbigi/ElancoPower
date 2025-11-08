@@ -637,7 +637,7 @@ RETURN
 #### Sesiones de Capacitación
 
 **Capacitación Power Users (4h)**
-- Participantes: Lucía + 2 backups
+- Participantes: Funcional SAP + 2 backups
 - Contenido:
   - Uso avanzado de dashboards
   - Creación de bookmarks

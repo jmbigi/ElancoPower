@@ -2,7 +2,7 @@
 
 **Versión:** 2.0 - Alcance Completo  
 **Fecha:** 7 de noviembre de 2025  
-**Basado en:** Solución Piloto VA05 (v1.0) + Attach_2 CSV de Lucía  
+**Basado en:** Solución Piloto VA05 (v1.0) + Attach_2 CSV del Funcional SAP  
 **Estado:** 📋 PROPUESTA PARA REVISIÓN
 
 ---

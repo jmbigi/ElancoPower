@@ -375,7 +375,7 @@ Cronograma comprimido 25% manteniendo mismas horas
 | **Daily Stand-up** | Lun-Vie | Funcional SAP + Consultor BI | 15 min | Sincronización diaria |
 | **Weekly Status** | Viernes | Project Manager + Funcional SAP + Consultor BI | 30 min | Reporte semanal |
 | **Sprint Review** | Cada 2 sem | Todos + Stakeholders | 1h | Demo de avances |
-| **Steering Committee** | Mensual | Linda + Management | 1h | Status ejecutivo |
+| **Steering Committee** | Mensual | Project Manager + Management | 1h | Status ejecutivo |
 
 ### Reportes
 

@@ -21,7 +21,7 @@
 | **Duración estimada** | 6 semanas (Semanas 1–6 del proyecto) |
 | **Fechas** | Ver cronograma unificado en `09_CRONOGRAMA_SEMANAL.md` |
 | **Horas totales** | 235 horas |
-| **Equipo** | Juan Manuel Bigi (95h) · Lucía Rodríguez (112h) · Linda López (28h) · Stakeholders Elanco (12h, sin costo) |
+| **Equipo** | Consultor BI (95h) · Funcional SAP (112h) · Project Manager (28h) · Stakeholders Elanco (12h, sin costo) |
 
 ---
 
@@ -29,7 +29,7 @@
 
 ### 4.3.1. Gestión de Permisos SAP y Tickets BigQuery
 
-**Responsable:** Lucía Rodríguez  
+**Responsable:** Funcional SAP  
 **Duración:** 20 horas  
 **Semanas:** 1-4 (continuo)
 
@@ -66,7 +66,7 @@
 
 ### 4.3.2. Análisis Técnico de Arquitectura BigQuery
 
-**Responsable:** Juan Manuel Bigi  
+**Responsable:** Consultor BI  
 **Duración:** 24 horas  
 **Semanas:** 1-2
 
@@ -115,19 +115,19 @@ Calcular costo mensual de:
 
 ### 4.3.3. Workshop de Priorización de Transacciones
 
-**Responsables:** Lucía Rodríguez + Juan Manuel Bigi + Stakeholders Elanco  
+**Responsables:** Funcional SAP + Consultor BI + Stakeholders Elanco  
 **Duración:** 12 horas (equipo técnico) + 12 horas (stakeholders)  
 **Semana:** 2
 
 #### Estructura del Workshop
 
 **Sesión 1: Finanzas (4 horas)**
-- Participantes: Controller, Analistas Finanzas, Lucía, JMB
+- Participantes: Controller, Analistas Finanzas, Funcional SAP, Consultor BI
 - Objetivo: Priorizar transacciones FI/CO
 - Transacciones a revisar: FAGLL03, KSB1, KE24, FB03, F.08, F.01, FBL1N, FBL5N
 
 **Sesión 2: Supply Chain (4 horas)**
-- Participantes: Supply Manager, Planeadores, Lucía, JMB
+- Participantes: Supply Manager, Planeadores, Funcional SAP, Consultor BI
 - Objetivo: Priorizar transacciones MM/SD
 - Transacciones a revisar: VA05, ZLEL008, ME2L, MM60, MB59, ME23N, MB5B
 
@@ -155,7 +155,7 @@ Calcular costo mensual de:
 
 ### 4.3.4. Análisis de Transacciones Custom (Z)
 
-**Responsable:** Lucía Rodríguez + Consultor ABAP (si necesario)  
+**Responsable:** Funcional SAP + Consultor ABAP (si necesario)  
 **Duración:** 8 horas  
 **Semana:** 2-3
 
@@ -180,7 +180,7 @@ Si el análisis requiere conocimientos ABAP especializados:
 
 ### 4.3.5. Definición de Requisitos Técnicos Iniciales
 
-**Responsable:** Juan Manuel Bigi  
+**Responsable:** Consultor BI  
 **Duración:** 16 horas  
 **Semana:** 2-3
 
@@ -222,7 +222,7 @@ Si el análisis requiere conocimientos ABAP especializados:
 
 ### 4.3.6. Elaboración de Plan de Riesgos y Mitigaciones
 
-**Responsable:** Lucía Rodríguez + Juan Manuel Bigi  
+**Responsable:** Funcional SAP + Consultor BI  
 **Duración:** 8 horas  
 **Semana:** 3
 
@@ -247,7 +247,7 @@ Cada riesgo incluye:
 
 ### 4.3.7. Reunión Go/No-Go para Fase 1
 
-**Responsables:** Linda López + Stakeholders Elanco  
+**Responsables:** Project Manager + Stakeholders Elanco  
 **Duración:** 2 horas  
 **Fecha:** 7 de diciembre de 2025 (Semana 4)
 
@@ -261,7 +261,7 @@ Cada riesgo incluye:
 | 2 | ✅ Mínimo 12 de 18 transacciones con tablas disponibles en BigQuery | ⏳ | TI Global |
 | 3 | ✅ Accesos Data Editor activos para equipo desarrollo | ⏳ | TI Elanco |
 | 4 | ✅ Backlog priorizado y aprobado por stakeholders | ⏳ | Finanzas/Supply |
-| 5 | ✅ BigQuery validado técnicamente (performance OK, sin limitaciones bloqueantes) | ⏳ | Juan Manuel Bigi |
+| 5 | ✅ BigQuery validado técnicamente (performance OK, sin limitaciones bloqueantes) | ⏳ | Consultor BI |
 
 **Decisiones Posibles:**
 
@@ -289,14 +289,14 @@ Cada riesgo incluye:
 
 | # | Entregable | Páginas | Responsable |
 |---|------------|---------|-------------|
-| 1 | **Backlog Definitivo de Transacciones SAP Priorizado** | 10-15 | Lucía + JMB |
-| 2 | **Arquitectura Técnica SAP → BigQuery → Power BI Aprobada** | 15-20 | JMB |
-| 3 | **Checklist de Permisos Completo** (SAP + BigQuery) | 3-5 | Lucía |
-| 4 | **Plan de Extracción por Módulo** (MM, SD, FI, CO) | 8-10 | JMB |
-| 5 | **Matriz de Riesgos Actualizada** | 10-12 | Lucía + JMB |
-| 6 | **Criterios de Calidad de Datos Definidos** | 5-8 | JMB |
-| 7 | **Documento Go/No-Go para Fase 1** | 5-7 | Linda + Stakeholders |
-| 8 | **Plan Técnico Detallado Fase 1** (cronograma semanal) | 12-15 | JMB |
+| 1 | **Backlog Definitivo de Transacciones SAP Priorizado** | 10-15 | Funcional SAP + Consultor BI |
+| 2 | **Arquitectura Técnica SAP → BigQuery → Power BI Aprobada** | 15-20 | Consultor BI |
+| 3 | **Checklist de Permisos Completo** (SAP + BigQuery) | 3-5 | Funcional SAP |
+| 4 | **Plan de Extracción por Módulo** (MM, SD, FI, CO) | 8-10 | Consultor BI |
+| 5 | **Matriz de Riesgos Actualizada** | 10-12 | Funcional SAP + Consultor BI |
+| 6 | **Criterios de Calidad de Datos Definidos** | 5-8 | Consultor BI |
+| 7 | **Documento Go/No-Go para Fase 1** | 5-7 | Project Manager + Stakeholders |
+| 8 | **Plan Técnico Detallado Fase 1** (cronograma semanal) | 12-15 | Consultor BI |
 
 ### 4.4.2. Artefactos Técnicos
 
@@ -320,11 +320,11 @@ Cada riesgo incluye:
 
 | Día | Actividad | Responsable | Horas |
 |-----|-----------|-------------|-------|
-| Lun | Kick-off meeting con stakeholders | Linda + Todos | 2h |
-| Lun-Mar | Análisis dataset CASA BigQuery | JMB | 8h |
-| Mar-Mie | Seguimiento tickets SAP/BigQuery | Lucía | 4h |
-| Mie-Jue | Prueba conectividad Power BI | JMB | 4h |
-| Vie | Preparación workshop priorización | Lucía + JMB | 4h |
+| Lun | Kick-off meeting con stakeholders | Project Manager + Todos | 2h |
+| Lun-Mar | Análisis dataset CASA BigQuery | Consultor BI | 8h |
+| Mar-Mie | Seguimiento tickets SAP/BigQuery | Funcional SAP | 4h |
+| Mie-Jue | Prueba conectividad Power BI | Consultor BI | 4h |
+| Vie | Preparación workshop priorización | Funcional SAP + Consultor BI | 4h |
 
 **Hito:** Hallazgos técnicos preliminares
 
@@ -336,8 +336,8 @@ Cada riesgo incluye:
 |-----|-----------|-------------|-------|
 | Lun | Workshop Finanzas (4h) | Todos | 4h + 4h stakeholders |
 | Mar | Workshop Supply (4h) | Todos | 4h + 4h stakeholders |
-| Mie | Análisis transacciones custom | Lucía | 4h |
-| Jue | Benchmarks performance BigQuery | JMB | 6h |
+| Mie | Análisis transacciones custom | Funcional SAP | 4h |
+| Jue | Benchmarks performance BigQuery | Consultor BI | 6h |
 | Vie | Workshop consolidación (4h) | Todos | 4h + 4h stakeholders |
 
 **Hito:** Backlog priorizado aprobado
@@ -348,11 +348,11 @@ Cada riesgo incluye:
 
 | Día | Actividad | Responsable | Horas |
 |-----|-----------|-------------|-------|
-| Lun | Plan extracción por módulo | JMB | 4h |
-| Mar | Definición arquitectura zonas datos | JMB | 4h |
-| Mie | Análisis de riesgos | Lucía + JMB | 4h |
-| Jue | Estimación esfuerzos Fase 1 | JMB | 4h |
-| Vie | Seguimiento tickets críticos | Lucía | 4h |
+| Lun | Plan extracción por módulo | Consultor BI | 4h |
+| Mar | Definición arquitectura zonas datos | Consultor BI | 4h |
+| Mie | Análisis de riesgos | Funcional SAP + Consultor BI | 4h |
+| Jue | Estimación esfuerzos Fase 1 | Consultor BI | 4h |
+| Vie | Seguimiento tickets críticos | Funcional SAP | 4h |
 
 **Hito:** Plan técnico Fase 1 completo
 
@@ -363,20 +363,20 @@ Cada riesgo incluye:
 
 | Día | Actividad | Responsable | Horas |
 |-----|-----------|-------------|-------|
-| Mar | Revisión interna documentos | Linda + Lucía + JMB | 4h |
-| Mie | Preparación presentación Go/No-Go | Linda + JMB | 4h |
+| Mar | Revisión interna documentos | Project Manager + Funcional SAP + Consultor BI | 4h |
+| Mie | Preparación presentación Go/No-Go | Project Manager + Consultor BI | 4h |
 | Jue | Reunión Go/No-Go (2h) | Todos + Stakeholders | 2h |
-| Vie | Ajustes post Go/No-Go | JMB | 4h |
+| Vie | Ajustes post Go/No-Go | Consultor BI | 4h |
 
 **Hito:** Decisión Go/No-Go documentada (10-feb-2026)
 
 | Día | Actividad | Responsable | Horas |
 |-----|-----------|-------------|-------|
-| Lun | Documentación entregables Fase 0 | JMB | 6h |
-| Mar | Revisión interna documentos | Linda + Lucía + JMB | 4h |
-| Mie | Preparación presentación Go/No-Go | Linda + JMB | 4h |
+| Lun | Documentación entregables Fase 0 | Consultor BI | 6h |
+| Mar | Revisión interna documentos | Project Manager + Funcional SAP + Consultor BI | 4h |
+| Mie | Preparación presentación Go/No-Go | Project Manager + Consultor BI | 4h |
 | Jue | Reunión Go/No-Go (2h) | Todos + Stakeholders | 2h |
-| Vie | Ajustes post Go/No-Go | JMB | 4h |
+| Vie | Ajustes post Go/No-Go | Consultor BI | 4h |
 
 **Hito:** Decisión Go/No-Go documentada
 
@@ -386,9 +386,9 @@ Cada riesgo incluye:
 
 | Recurso | Horas |
 |---------|-------|
-| **Juan Manuel Bigi** | 95h |
-| **Lucía Rodríguez** | 112h |
-| **Linda López (PM)** | 28h |
+| **Consultor BI** | 95h |
+| **Funcional SAP** | 112h |
+| **Project Manager (PM)** | 28h |
 | **Stakeholders Elanco** | 12h (sin costo) |
 | **TOTAL FASE 0** | **235h** |
 

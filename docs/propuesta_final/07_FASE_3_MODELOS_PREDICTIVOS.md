@@ -48,7 +48,7 @@
 
 ## 7.3. Casos de Uso de Machine Learning Identificados
 
-Basado en el audio de Lucía (09-oct-2025):
+Basado en el audio del Funcional SAP (09-oct-2025):
 
 > *"armar predicciones, decir por ejemplo tocando algunas variables de precios, variables de costos, variables de inflación estimada por país y que se yo poner a armar predicciones de venta de los próximos tres años"*
 
@@ -539,7 +539,7 @@ Similar a GCP pero usando:
 - 1 Data Scientist (ML Engineer)
 - 1 MLOps Engineer
 - 1 Analista de Negocio (Subject Matter Expert)
-- Participación acotada del equipo actual (Lucía, JMB)
+- Participación acotada del equipo actual (Funcional SAP, Consultor BI)
 
 ### 7.7.3. Inversión Estimada
 
