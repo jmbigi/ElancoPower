@@ -80,13 +80,13 @@ El esfuerzo total es de 1590 horas distribuidas en 42 semanas. Las condiciones c
 EXCLUSIONES DEL ALCANCE
 
 No están incluidos en el presupuesto los costos de infraestructura como licencias de Google Cloud Platform, las licencias Power BI Pro ya fueron adquiridas por Elanco, ni herramientas ETL de terceros como Fivetran o Airbyte. Tampoco se incluyen transacciones SAP adicionales más allá de las 18 planificadas, dashboards adicionales más de los 12 contemplados, ni integraciones con otros sistemas como CRM o HRIS.
-La implementación de modelos predictivos de la Fase 3 no está incluida, solo se entrega la descripción conceptual. El soporte después de los 30 días incluidos requiere contrato separado, al igual que el mantenimiento evolutivo para nuevas funcionalidades. Cualquier cambio de alcance mayor que requiera más de 10 horas adicionales necesita Change Request formal con cotización y aprobación.
+La implementación de modelos predictivos de la Fase 3 no está incluida, solo se entrega la descripción conceptual. Cualquier cambio de alcance mayor que requiera más de 10 horas adicionales necesita Change Request formal con cotización y aprobación.
 
 
 CRITERIOS DE ÉXITO
 
 El proyecto se considerará exitoso si se cumplen varios criterios cuantitativos y cualitativos. Debe haber 100% de las tablas SAP identificadas replicadas en BigQuery, aproximadamente 70 a 90 tablas asociadas a las 18 transacciones. La reducción de tiempo de consolidación debe ser al menos del 70%, pasando de 3-5 días a menos de 1 día. Los dashboards deben actualizarse en máximo 24 horas desde cierre de periodo.
-La exactitud de datos entre SAP y BigQuery debe ser mayor o igual al 99.5%. La disponibilidad del sistema debe ser al menos 99% en horario hábil. Se deben capacitar al menos 15 usuarios entre power users y usuarios finales. La adopción de dashboards debe alcanzar al menos 80% de usuarios activos a 30 días del go-live. La satisfacción de usuarios debe ser de al menos 4.0 sobre 5.0 en encuesta post-implementación.
+La exactitud de datos entre SAP y BigQuery debe ser mayor o igual al 95%. Se deben capacitar al menos 15 usuarios entre power users y usuarios finales. La adopción de dashboards debe alcanzar al menos 80% de usuarios activos a 30 días del go-live. La satisfacción de usuarios debe ser de al menos 4.0 sobre 5.0 en encuesta post-implementación.
 
 
 PRÓXIMOS PASOS

@@ -213,7 +213,7 @@ Sem 10:  Go-Live               ░░░░░░░░░░░░░░░░�
 | **Latencia de Replicación** | < 2 min promedio | Cloud Monitoring métricas |
 | **Uptime del Sistema** | 99.5% | Monitoreo 24/7 |
 | **Satisfacción Usuarios** | > 4.5/5 | Survey post go-live |
-| **Queries Exitosos** | > 99% | BigQuery job logs |
+| **Queries Exitosos** | > 95% | BigQuery job logs |
 | **Tiempo de Resolución P1** | < 4 horas | Ticketing system |
 
 ---

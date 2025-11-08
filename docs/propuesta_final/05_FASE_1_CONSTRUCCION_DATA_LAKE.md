@@ -447,7 +447,7 @@ FROM bigquery_target_table;
 ### 5.6.2. Datos
 
 ✅ Historización de 24 meses de datos para 18 transacciones  
-✅ Datos validados (reconciliación SAP ↔ BigQuery > 99%)  
+✅ Datos validados (reconciliación SAP ↔ BigQuery > 95%)  
 ✅ Calidad de datos documentada (matriz de validación)  
 
 ### 5.6.3. Documentación
@@ -484,7 +484,7 @@ FROM bigquery_target_table;
 
 1. ✅ 18 transacciones SAP automatizadas (o mínimo 16 si hubo issues técnicos)
 2. ✅ Datos históricos completos (24 meses) disponibles en BigQuery
-3. ✅ Validación SAP ↔ BigQuery > 99% de exactitud
+3. ✅ Validación SAP ↔ BigQuery > 95% de exactitud
 4. ✅ Pipelines ejecutándose automáticamente (diario/semanal según transacción)
 5. ✅ Documentación técnica completa entregada
 6. ✅ Primer dashboard operativo funcional con datos reales (adelanto de Fase 2)

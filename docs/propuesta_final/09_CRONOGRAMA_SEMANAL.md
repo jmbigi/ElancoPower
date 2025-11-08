@@ -305,7 +305,7 @@ Cronograma comprimido 25% manteniendo mismas horas
 | Hito | Semana | Criterio de Aceptación | Responsable Aprobación |
 |------|--------|------------------------|------------------------|
 | **Go/No-Go Fase 1** | Mes 1, Semana 5 | Permisos SAP OK, ≥12 transacciones con tablas disponibles | Management Elanco |
-| **Aceptación Fase 1** | Mes 3, Semana 15 | 18 transacciones funcionales, validación >99% | Finanzas + Supply |
+| **Aceptación Fase 1** | Mes 3, Semana 15 | 18 transacciones funcionales, validación > 95% | Finanzas + Supply |
 | **Aceptación UAT** | Mes 5, Semana 20 | Dashboards aprobados, RLS validado | Stakeholders |
 | **Go-Live Final** | Mes 6, Semana 23 | Capacitación completa, documentación entregada | Management Elanco |
 | **Cierre Formal** | Mes 6, Semana 23 | Transferencia conocimiento, acta firmada | Management Elanco |

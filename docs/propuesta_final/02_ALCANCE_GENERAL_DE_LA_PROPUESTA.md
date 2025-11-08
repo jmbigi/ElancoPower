@@ -229,8 +229,7 @@ El proyecto se divide en **4 fases** con objetivos específicos:
 | **Transacciones SAP con datos disponibles** | 18 de 18 (100%) |
 | **Reducción tiempo de consolidación** | ≥ 70% (de 3-5 días a < 1 día) |
 | **Tiempo de actualización de dashboards** | ≤ 24 horas desde cierre de periodo |
-| **Exactitud de datos (SAP vs BigQuery)** | ≥ 99.5% |
-| **Disponibilidad del sistema** | ≥ 99% (horario hábil) |
+| **Exactitud de datos (SAP vs BigQuery)** | ≥ 95% |
 | **Usuarios capacitados** | ≥ 15 usuarios (power users + finales) |
 | **Adopción de dashboards** | ≥ 80% de usuarios activos a 30 días post go-live |
 | **Satisfacción de usuarios** | ≥ 4.0/5.0 en encuesta post-implementación |
