@@ -41,12 +41,12 @@ Implementar una **solución integral de centralización de datos de análisis** 
 
 #### ✅ Sistemas Fuente
 - **SAP S/4HANA:** Datos de 18 transacciones priorizadas (ver sección 3)
-  - *Nota técnica:* Se replicarán las **tablas SAP subyacentes** (estimado 70-90 tablas) asociadas a estas transacciones
+   - *Nota técnica:* Se replicarán las **tablas SAP subyacentes** (estimado ~76-85 tablas) asociadas a estas transacciones
   - Las transacciones SAP son interfaces de usuario; lo que se replica mediante SLT son las tablas de base de datos
 - **Módulos SAP:** MM, SD, FI, CO
 - **Países:** Todos los países de la operación CASA (~10 países)
 - **Historización:** Mínimo 24 meses de datos históricos
-- **Volumen de Tablas:** Estimación de **70-90 tablas SAP** a replicar.
+- **Volumen de Tablas:** Estimación de **~76-85 tablas SAP** a replicar.
 
 #### ✅ Infraestructura de Datos
 - **Data Lake:** Google BigQuery (dataset casa_bi: entornos dev / qa / prod)
@@ -225,7 +225,7 @@ El proyecto se divide en **4 fases** con objetivos específicos:
 
 | Métrica | Objetivo |
 |---------|----------|
-| **Tablas SAP replicadas** | 100% de las tablas identificadas para las 18 transacciones (~70-90 tablas) |
+| **Tablas SAP replicadas** | 100% de las tablas identificadas para las 18 transacciones (~76-85 tablas) |
 | **Transacciones SAP con datos disponibles** | 18 de 18 (100%) |
 | **Reducción tiempo de consolidación** | ≥ 70% (de 3-5 días a < 1 día) |
 | **Tiempo de actualización de dashboards** | ≤ 24 horas desde cierre de periodo |
