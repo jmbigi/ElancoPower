@@ -1,4 +1,5 @@
 # ESTIMACIÓN DE HORAS POR PERFIL Y ETAPA
+> Nota de versión (8-nov-2025): Esta vista suma horas por función (multi‑rol de JMB) y puede diferir del consolidado oficial por persona. La línea base canónica es `CRONOGRAMA_DETALLADO_TAREAS.csv` (JMB **961h**, Lucía **484h**, Linda **145h**; total **1,590h**).
 
 **Proyecto:** Elanco Power - Centralización de Datos y Analítica  
 **Fecha:** 7 de noviembre de 2025  

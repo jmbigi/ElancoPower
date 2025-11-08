@@ -1,4 +1,5 @@
 # 6. FASE 2 - MODELADO DE DATOS Y GENERACIÓN DE DASHBOARDS
+> Nota de versión (8-nov-2025): La estimación oficial de Fase 2 es de **659h** conforme a `CRONOGRAMA_DETALLADO_TAREAS.csv` y `08_ESTIMACION_DE_ESFUERZOS_Y_COSTOS.md`. Este archivo conserva una estimación inicial de **294h** a modo histórico. Ante cualquier discrepancia, prevalece el CSV canónico.
 
 ## 6.1. Objetivo de la Fase
 
