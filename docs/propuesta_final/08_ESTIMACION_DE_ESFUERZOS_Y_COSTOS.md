@@ -7,15 +7,21 @@
 | Fase | Horas |
 |------|-------|
 | **Fase 0 - Due Diligence** | 235h |
-| **Fase 1 - Data Lake** | **Desarrollo Técnico (Juan Manuel Bigi)** | 961h | 60.4% |
+| **Fase 1 - Data Lake** | 696h |
+| **Fase 2 - Dashboards Power BI** | 659h |
+| **Fase 3 - ML Roadmap** | Descripción conceptual |
+| **TOTAL HORAS** | **1,590h** |
+
+### Distribución por Recurso
+
+| Recurso | Horas | Porcentaje |
+|---------|-------|------------|
+| **Desarrollo Técnico (Juan Manuel Bigi)** | 961h | 60.4% |
 | **Consultoría SAP (Lucía Rodríguez)** | 484h | 30.4% |
 | **Project Management (Linda López)** | 145h | 9.1% |
 | **TOTAL ESFUERZO** | **1,590h** | **100%** |
 
-**Nota:** Totales según CSV del cronograma detallado de tareas. |
-| **Fase 2 - Dashboards Power BI** | 659h |
-| **Fase 3 - ML Roadmap** | Descripción conceptual |
-| **TOTAL HORAS** | **1,590h** |
+**Nota:** Totales según CSV del cronograma detallado de tareas.
 
 ### Calendario del Proyecto
 
