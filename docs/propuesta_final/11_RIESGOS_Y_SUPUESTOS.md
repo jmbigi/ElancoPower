@@ -820,7 +820,7 @@ Los siguientes supuestos son críticos para la viabilidad del proyecto. Si algun
 | **S-T-04** | SAP ECC está estable (no hay plan de migración a S/4HANA en 2025-2026) | 🟡 ALTO | TI Elanco |
 | **S-T-05** | Conectividad SAP ↔ BigQuery es técnicamente viable | 🟡 ALTO | TI Global |
 | **S-T-06** | Power BI Pro puede conectarse a BigQuery vía conector nativo | 🟢 MEDIO | Aunergia |
-| **S-T-07** | Datos históricos de mínimo 24 meses están disponibles en SAP | 🟢 MEDIO | Lucía + Stakeholders |
+| **S-T-07** | Datos históricos de mínimo 24 meses están disponibles en SAP | 🟢 MEDIO | Funcional SAP + Stakeholders |
 
 ### 11.7.2. Supuestos Organizacionales
 
@@ -837,9 +837,9 @@ Los siguientes supuestos son críticos para la viabilidad del proyecto. Si algun
 
 | # | Supuesto | Criticidad | Responsable Validación |
 |---|----------|------------|------------------------|
-| **S-R-01** | Equipo Aunergia (Linda, Lucía, JMB) está disponible con la dedicación planificada | 🔴 CRÍTICO | Aunergia Management |
-| **S-R-02** | Lucía Rodríguez puede dedicar 4-6h/semana al proyecto (sin sobrecarga) | 🟡 ALTO | Lucía + Linda López |
-| **S-R-03** | Juan Manuel Bigi puede dedicar 15-22h/semana sin conflictos con otros proyectos | 🟡 ALTO | Aunergia Management |
+| **S-R-01** | Equipo Aunergia (Project Manager, Funcional SAP, Consultor BI) está disponible con la dedicación planificada | 🔴 CRÍTICO | Aunergia Management |
+| **S-R-02** | Funcional SAP puede dedicar 4-6h/semana al proyecto (sin sobrecarga) | 🟡 ALTO | Funcional SAP + Project Manager |
+| **S-R-03** | Consultor BI puede dedicar 15-22h/semana sin conflictos con otros proyectos | 🟡 ALTO | Aunergia Management |
 | **S-R-04** | TI Global tiene capacidad para atender tickets del proyecto en SLA de 1-2 semanas | 🟡 ALTO | TI Global Elanco |
 | **S-R-05** | David Saboya (TechOps) actúa como enlace efectivo con TI Global | 🟢 MEDIO | David Saboya |
 
@@ -847,7 +847,7 @@ Los siguientes supuestos son críticos para la viabilidad del proyecto. Si algun
 
 | # | Supuesto | Criticidad | Responsable Validación |
 |---|----------|------------|------------------------|
-| **S-C-01** | Kick-off se realiza el 6 de enero de 2026 como planificado | 🟡 ALTO | Product Owner + Linda López |
+| **S-C-01** | Kick-off se realiza el 6 de enero de 2026 como planificado | 🟡 ALTO | Product Owner + Project Manager |
 | **S-C-02** | No hay extensiones de vacaciones o feriados no planificados | 🟢 MEDIO | Todos |
 | **S-C-03** | Go/No-Go se aprueba al final de Fase 0 (10-feb-2026) | 🟡 ALTO | Product Owner |
 | **S-C-04** | No hay interrupciones mayores por auditorías, cierres especiales, etc. | 🟢 MEDIO | Finanzas/Supply |
@@ -881,10 +881,10 @@ Los siguientes supuestos son críticos para la viabilidad del proyecto. Si algun
 
 | Rol | Responsabilidad |
 |-----|-----------------|
-| **Linda López (PM)** | Monitoreo general, actualización de registro de riesgos, escalación |
+| **Project Manager (PM)** | Monitoreo general, actualización de registro de riesgos, escalación |
 | **Product Owner** | Decisión sobre riesgos organizacionales y presupuesto |
-| **Juan Manuel Bigi** | Identificación y mitigación de riesgos técnicos |
-| **Lucía Rodríguez** | Identificación de riesgos SAP y datos |
+| **Consultor BI** | Identificación y mitigación de riesgos técnicos |
+| **Funcional SAP** | Identificación de riesgos SAP y datos |
 | **David Saboya (TI)** | Mitigación de riesgos de infraestructura y permisos |
 
 ### 11.8.3. Escalación
