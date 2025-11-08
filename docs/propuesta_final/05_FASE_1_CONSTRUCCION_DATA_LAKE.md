@@ -1,5 +1,5 @@
 # 5. FASE 1 | **Duración Unificada:** 22 semanas (según consolidado 1,590h / 42 semanas) |
-| **Fecha inicio estimada** | Febrero 2026 |
+| **Fecha inicio estimada** | Segunda mitad de Febrero 2026 (tras Go/No-Go 10-feb-2026) |
 | **Fecha fin estimada** | Julio 2026 | CONSTRUCCIÓN DE DATA LAKE
 
 ## 5.1. Objetivo de la Fase
@@ -24,7 +24,7 @@
 ### 5.3.1. Modelo de Zonas (Layers)
 
 ```
-SAP S/4HANA                    BIGQUERY DATASET: CASA
+SAP S/4HANA                    BIGQUERY DATASET: casa_bi (dev / qa / prod)
 ┌──────────────┐          ┌─────────────────────────────────────┐
 │              │          │                                     │
 │  Módulos:    │  Extract │  ┌────────────────────────────┐    │

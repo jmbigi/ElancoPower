@@ -321,7 +321,7 @@
 
 | Riesgo | Probabilidad | Impacto en Tiempo | Mitigación Incluida |
 |--------|--------------|-------------------|---------------------|
-| Transacciones Z más complejas de lo estimado | Media | +10-15h | Consultoría ABAP (12h incluidas) |
+| Transacciones Z más complejas de lo estimado | Media | +10-15h | Consultoría ABAP (hasta 12h vía Change Request, no incluidas en esfuerzo base) |
 | Cambios de alcance durante desarrollo | Media | Requiere cotización adicional | Proceso formal de Change Request |
 | Tablas BigQuery no disponibles (requiere workaround) | Baja | Incluido en esfuerzo | Plan B en Fase 0 |
 | Issues de performance BigQuery | Baja | Incluido en esfuerzo | Optimización en diseño |
@@ -359,12 +359,12 @@
 
 ### 8.10.1. Validez de la Propuesta
 
-- **Validez:** 30 días desde fecha de emisión (5-nov-2025 a 5-dic-2025)
+- **Validez:** 30 días desde fecha de emisión (8-nov-2025 a 8-dic-2025)
 - **Vigencia:** Sujeto a confirmación si inicio es posterior a 10-feb-2026 (Go/No-Go)
 
 ### 8.10.2. Garantías
 
-- ✅ **Garantía de calidad:** Reconciliación SAP ↔ BigQuery >99%
+- ✅ **Garantía de calidad:** Reconciliación SAP ↔ BigQuery ≥95%
 - ✅ **Garantía de funcionalidad:** Dashboards operativos según especificaciones
 - ✅ **Garantía de documentación:** Entrega completa de documentación técnica y funcional
 

@@ -19,9 +19,9 @@ Operación Centroamérica y Sudamérica (CASA)
 
 ---
 
-**Fecha de Elaboración:** 7 de Noviembre 2025  
-**Validez de la Oferta:** 30 días a partir de la fecha de elaboración  
-**Versión del Documento:** 2.0 (Revisada y ajustada a realidad del proyecto)
+**Fecha de Elaboración:** 8 de Noviembre 2025  
+**Validez de la Oferta:** 30 días a partir de la fecha de elaboración (hasta 8 de diciembre de 2025)  
+**Versión del Documento:** 3.0 (Versión Final consolidada)
 
 </div>
 
@@ -61,7 +61,7 @@ Operación Centroamérica y Sudamérica (CASA)
 ### Alcance
 
 - **18 transacciones SAP** completas automatizadas (FI, SD, MM, CO)
-- **Data Lake** en Google BigQuery (dataset CASA) con arquitectura de 3 capas
+- **Data Lake** en Google BigQuery (dataset casa_bi) con arquitectura de 3 capas
 - **12 dashboards** ejecutivos en Power BI con RLS
 - **Automatización completa** de extracción y consolidación
 - **Historización** de datos (mínimo 24 meses)
@@ -188,5 +188,5 @@ Clientes en: México, Centroamérica, Brasil, Chile, Perú, Uruguay, Colombia, E
 
 ---
 
-*Documento generado: Noviembre 2025*  
-*Versión 1.2 - Propuesta Final*
+*Documento generado: 8 de Noviembre 2025*  
+*Versión 3.0 - Propuesta Final*

@@ -49,7 +49,7 @@ Implementar una **solución integral de centralización de datos de análisis** 
 - **Volumen de Tablas:** Estimación de **70-90 tablas SAP** a replicar.
 
 #### ✅ Infraestructura de Datos
-- **Data Lake:** Google BigQuery (dataset CASA)
+- **Data Lake:** Google BigQuery (dataset casa_bi: entornos dev / qa / prod)
 - **Arquitectura:** Zonas RAW → PROCESSED → CURATED
 - **Conectores:** **SAP SLT (Landscape Transformation Server)** para replicación en tiempo real SAP S/4HANA ↔ BigQuery
   - *Nota: La instalación y configuración de SLT es responsabilidad del cliente (Elanco) con soporte del equipo SAP Basis*

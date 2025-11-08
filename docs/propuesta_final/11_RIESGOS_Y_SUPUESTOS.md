@@ -814,7 +814,7 @@ Los siguientes supuestos son críticos para la viabilidad del proyecto. Si algun
 
 | # | Supuesto | Criticidad | Responsable Validación |
 |---|----------|------------|------------------------|
-| **S-T-01** | Google BigQuery está disponible y configurado con dataset CASA | 🔴 CRÍTICO | TI Global Elanco |
+| **S-T-01** | Google BigQuery está disponible y configurado con dataset casa_bi (dev / qa / prod) | 🔴 CRÍTICO | TI Global Elanco |
 | **S-T-02** | Mínimo 12 de 18 transacciones SAP tienen tablas disponibles en BigQuery | 🔴 CRÍTICO | TI Global + Aunergia (Fase 0) |
 | **S-T-03** | Permisos SAP se otorgan en máximo 3 semanas (Ticket SAP-48219) | 🔴 CRÍTICO | TI Global Elanco |
 | **S-T-04** | SAP S/4HANA está estable (no hay plan de migración a S/4HANA en 2025-2026) | 🟡 ALTO | TI Elanco |

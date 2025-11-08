@@ -131,7 +131,7 @@ A continuación se detalla la lista exhaustiva de todos los entregables del proy
 **Calidad de Datos:**
 - ✅ Data Quality checks automáticos (validaciones SQL)
 - ✅ Completitud > 95% en campos críticos
-- ✅ Reconciliación SAP ↔ BigQuery > 99% en métricas financieras clave (FAGLL03, KSB1, VA05)
+- ✅ Reconciliación SAP ↔ BigQuery ≥99.5% en métricas financieras clave (FAGLL03, KSB1, VA05)
 - ✅ Trazabilidad: metadata de carga (fecha, fuente, usuario)
 
 **Formato:** Dataset BigQuery `casa_bi_prod` con tablas pobladas  
@@ -605,7 +605,7 @@ A continuación se detalla la lista exhaustiva de todos los entregables del proy
 
 ✅ **Calidad de Entregables:**
 - Dashboards funcionales y sin errores críticos (bloqueantes)
-- Datos validados con precisión > 99% vs. SAP
+- Datos validados con precisión ≥99.5% vs. SAP
 - Documentación completa y comprensible
 - Código limpio y documentado (buenas prácticas)
 

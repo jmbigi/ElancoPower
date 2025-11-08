@@ -34,7 +34,8 @@ La solución se construirá sobre un stack tecnológico moderno y robusto, confi
 FASES DEL PROYECTO
 
 El proyecto se ejecuta en Fases 0 a 2 que suman 42 semanas. La Fase 0 de Revisión de Alcance y Factibilidad durará 6 semanas. En esta etapa se realizará una auditoría técnica completa, se validará la disponibilidad de tablas SAP en BigQuery, se priorizarán las 18 transacciones con stakeholders, se elaborará un plan detallado, y se realizará un POC técnico end-to-end. Al finalizar habrá una reunión crítica de Go/No-Go donde se decidirá si continuar con el proyecto.
-La Fase 1 de Construcción del Data Lake tomará 22 semanas. Se implementarán pipelines automatizados para extraer y transformar datos de las 18 transacciones SAP hacia BigQuery. Se configurarán las tres zonas de datos, se implementará historización de al menos 24 meses, y se realizarán validaciones exhaustivas comparando datos de SAP contra BigQuery para asegurar precisión mayor al 99%. Esta fase incluye la construcción secuencial de pipelines por módulos: FI, SD, MM, CO, y transacciones custom complejas (ZLEL008, ZVEL015).
+La Fase 1 de Construcción del Data Lake tomará 22 semanas. Se implementarán pipelines automatizados para extraer y transformar datos de las 18 transacciones SAP hacia BigQuery. Se configurarán las tres zonas de datos, se implementará historización de al menos 24 meses, y se realizarán validaciones comparando datos de SAP contra BigQuery para asegurar precisión. Esta fase incluye la construcción secuencial de pipelines por módulos: FI, SD, MM, CO, y transacciones custom complejas (ZLEL008, ZVEL015).
+La Fase 1 de Construcción del Data Lake tomará 22 semanas.
 La Fase 2 de Modelado y Dashboards durará 14 semanas. Se diseñará el modelo dimensional con dimensiones de Tiempo, Geografía, Producto, Cliente, Proveedor, Centro y Cuenta Contable. Se desarrollarán los 12 dashboards en Power BI con sus respectivas visualizaciones interactivas, se configurará RLS por país y área, se realizarán pruebas de aceptación de usuario (UAT) en 4 semanas, y se capacitará a los usuarios finales antes del Go-Live.
 La Fase 3 es solo una descripción conceptual de modelos predictivos sin implementación. Se identificarán 8 casos de uso potenciales como pronóstico de ventas, optimización de inventarios, predicción de morosidad, detección de fraudes, segmentación de clientes, entre otros. Se entregará un documento con análisis exploratorio y propuesta de arquitectura para Machine Learning, junto con un roadmap para futura implementación.
 
@@ -74,7 +75,6 @@ Existe riesgo de que TI Global retrase respuestas a tickets, por eso se incorpor
 CONDICIONES COMERCIALES Y GARANTÍAS
 
 El esfuerzo total es de 1590 horas distribuidas en 42 semanas. Las condiciones comerciales específicas y esquema de facturación serán definidas en acuerdo separado. Si el proyecto se detiene en Fase 0 con decisión de NO-GO, solo se factura el esfuerzo de esa fase que son 235 horas.
-El proyecto incluye garantías de calidad con dashboards funcionales sin errores críticos, datos validados con precisión mayor al 99% contra SAP, documentación completa, y código limpio versionado. Se incluyen 30 días de soporte post go-live desde la finalización del proyecto (mediados de octubre 2026), cubriendo corrección de bugs, ajustes menores, troubleshooting de errores, y soporte a usuarios en horario laboral de lunes a viernes de 9 AM a 6 PM.
 
 
 EXCLUSIONES DEL ALCANCE
