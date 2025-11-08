@@ -122,11 +122,11 @@ VBAK (Cabecera Orden)
 
 ```
 ┌──────────────────────────────────────────────────────┐
-│              SAP S/4HANA (Sistema Fuente)                │
+│              SAP S/4HANA (Sistema Fuente)            │
 │                                                      │
-│  Transacción VA05  ───▶  Tablas: VBAK, VBAP, VBEP  │
-│  Transacción KSB1  ───▶  Tablas: COBK, COEP, AUFK  │
-│  Transacción FAGLL03 ─▶  Tabla: FAGLFLEXA          │
+│  Transacción VA05  ───▶  Tablas: VBAK, VBAP, VBUK, VBUP  │
+│  Transacción KSB1  ───▶  Tablas: ACDOCA, AUFK, CSKS      │
+│  Transacción FAGLL03 ─▶  Tablas: ACDOCA, BKPF            │
 │                                                      │
 └──────────────────────┬───────────────────────────────┘
                        │
@@ -137,11 +137,12 @@ VBAK (Cabecera Orden)
 ┌──────────────────────────────────────────────────────┐
 │           Google BigQuery (Destino)                  │
 │                                                      │
-│  raw_vbak  ◀── Réplica de VBAK                      │
-│  raw_vbap  ◀── Réplica de VBAP                      │
-│  raw_vbep  ◀── Réplica de VBEP                      │
-│  raw_cobk  ◀── Réplica de COBK                      │
-│  raw_coep  ◀── Réplica de COEP                      │
+│  raw_vbak  ◀── Réplica de VBAK                       │
+│  raw_vbap  ◀── Réplica de VBAP                       │
+│  raw_vbuk  ◀── Réplica de VBUK                       │
+│  raw_vbup  ◀── Réplica de VBUP                       │
+│  raw_acdoca◀── Réplica de ACDOCA                     │
+│  raw_bkpf  ◀── Réplica de BKPF                       │
 │  ...                                                 │
 │                                                      │
 └──────────────────────────────────────────────────────┘
@@ -177,9 +178,8 @@ En SLT se configura:
 ### Ejemplo 2: KSB1 (OPEX / Controlling)
 
 **Transacción:** KSB1
-**Tablas Requeridas (Ejemplos):**
-- `COBK` (Cabecera de documentos CO)
-- `COEP` (Partidas individuales CO - ¡muy grande!)
+**Tablas Requeridas (Ejemplos en S/4HANA):**
+- `ACDOCA` (Universal Journal: reemplaza COEP/FAGLFLEXA/BSEG)
 - `AUFK` (Maestro de órdenes internas)
 - `CSKS` (Maestro de centros de costo)
 - `CSKA` (Maestro de elementos de costo)
@@ -189,10 +189,9 @@ En SLT se configura:
 ### Ejemplo 3: FAGLL03 (Mayor General)
 
 **Transacción:** FAGLL03
-**Tablas Requeridas (Ejemplos):**
-- `FAGLFLEXA` (Partidas individuales del nuevo GL - ¡volumen masivo!)
+**Tablas Requeridas (Ejemplos en S/4HANA):**
+- `ACDOCA` (Partidas individuales del Universal Journal)
 - `BKPF` (Cabecera de documentos contables)
-- `BSEG` (Segmentos de documentos contables)
 - `SKA1` (Plan de cuentas)
 **Total Estimado:** ~4 tablas
 **Complejidad Muy Alta:** `FAGLFLEXA` es una de las tablas más grandes y críticas de SAP FI, requiriendo estrategias de particionamiento y filtros eficientes.
@@ -201,10 +200,10 @@ En SLT se configura:
 
 | Categoría | Cantidad | Tablas Estimadas | Complejidad |
 |-------------------------------|----------|------------------|-----------------|
-| Transacciones Prioridad 1 | 4 | ~19-21 | Alta a Muy Alta |
-| Transacciones Prioridad 2 | 4 | ~11-13 | Media a Muy Alta |
-| Transacciones Pendientes | 10 | ~40-45 | Baja a Compleja |
-| **TOTAL ESTIMADO** | **18** | **~76-85 tablas** | **Mixta** |
+| Transacciones Prioridad 1 | 4 | ~12-18 | Media a Alta |
+| Transacciones Prioridad 2 | 4 | ~8-12 | Media |
+| Transacciones Pendientes | 10 | ~15-35 | Baja a Media |
+| **TOTAL ESTIMADO** | **18** | **~35-65 tablas** | **Mixta (optimizada por S/4)** |
 
 ---
 
@@ -251,8 +250,8 @@ ENTRADAS (Fase 0)              PROCESO                    SALIDAS
 |--------|--------------|---------|------------|
 | Tablas no disponibles en BigQuery | Media | Alto | Ticket a TI Global en Fase 0 |
 | Transacciones Z con tablas desconocidas | Media | Medio | Análisis ABAP (12h incluidas) |
-| Más tablas de lo estimado (>90) | Baja | Medio | Ajuste de alcance en Fase 0 |
-| Tablas con volúmenes muy altos | Media | Medio | Estrategia de particionamiento |
+| Más tablas de lo estimado (>65) | Baja | Medio | Ajuste de alcance en Fase 0 |
+| Tablas con volúmenes muy altos (ACDOCA) | Media | Medio | Estrategia de particionamiento y filtros |
 
 ### 5.4. Decisión Go/No-Go
 
@@ -261,9 +260,9 @@ ENTRADAS (Fase 0)              PROCESO                    SALIDAS
 ✅ **Mínimo 80% de las tablas identificadas disponibles en BigQuery**
 
 Por ejemplo:
-- Si se identifican 80 tablas necesarias
-- Mínimo 64 tablas deben estar disponibles
-- Si <64 disponibles: Evaluar plan B (escalamiento a TI Global, uso de extractores RFC, etc.)
+- Si se identifican 50 tablas necesarias (S/4 optimizado)
+- Mínimo 40 tablas deben estar disponibles
+- Si <40 disponibles: Evaluar plan B (escalamiento a TI Global, uso de extractores RFC, etc.)
 
 ---
 
@@ -409,7 +408,7 @@ Luego recreas el informe en Power BI usando esos datos.
 
 ### P5: ¿Cuántas tablas SAP existen en total?
 
-**R:** SAP S/4HANA tiene >100,000 tablas. Este proyecto solo replica las ~76-85 necesarias para las 18 transacciones priorizadas (rango canónico consolidado tras análisis).
+**R:** SAP S/4HANA tiene >100,000 tablas. Este proyecto replica aproximadamente **~35-65** tablas, optimizado por el uso de **ACDOCA** (Universal Journal) que reemplaza múltiples tablas históricas.
 
 ---
 
@@ -431,4 +430,4 @@ Luego recreas el informe en Power BI usando esos datos.
 
 **Fin del Anexo Técnico**
 
-*Versión: 1.0 - 7 de noviembre de 2025*
+*Versión: 1.1 - 8 de noviembre de 2025*

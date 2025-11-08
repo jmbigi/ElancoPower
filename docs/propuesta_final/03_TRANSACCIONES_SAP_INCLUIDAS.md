@@ -41,12 +41,12 @@ TRANSACCIÓN SAP (UI)          TABLAS SAP (Datos)         REPLICACIÓN SLT
 
 ### Distribución por Prioridad
 
-| Prioridad | Cantidad | Porcentaje | Estimado de Tablas SAP |
-|-----------|----------|------------|------------------------|
-| **Prioridad 1 (Críticas)** | 4 | 22% | ~15-20 tablas |
-| **Prioridad 2 (Importantes)** | 4 | 22% | ~15-20 tablas |
-| **Pendientes de clasificar** | 10 | 56% | ~40-45 tablas |
-| **TOTAL** | **18** | **100%** | **~76-85 tablas SAP** |
+| Prioridad | Cantidad | Porcentaje | Estimado de Tablas SAP (S/4HANA) |
+|-----------|----------|------------|----------------------------------|
+| **Prioridad 1 (Críticas)** | 4 | 22% | ~12-18 tablas |
+| **Prioridad 2 (Importantes)** | 4 | 22% | ~8-12 tablas |
+| **Pendientes de clasificar** | 10 | 56% | ~15-35 tablas |
+| **TOTAL** | **18** | **100%** | **~35-65 tablas SAP** |
 
 **Nota:** Una transacción puede requerir múltiples tablas. Por ejemplo, VA05 requiere al menos 3 tablas (VBAK, VBAP, VBEP).
 
@@ -228,14 +228,14 @@ Visualización de partidas individuales del libro mayor (General Ledger). Transa
 **Diaria** (batch nocturno) - Datos contables del día anterior
 
 #### Complejidad de Implementación
-**Media-Alta** - Tabla FAGLFLEXA de gran volumen, requiere filtros eficientes
+**Media-Alta** - Tabla ACDOCA de gran volumen, requiere filtros eficientes y particionamiento
 
 #### Volumen Estimado (Basado en ACDOCA)
 - Registros históricos: ~5M-10M partidas (24 meses)
 - Crecimiento mensual: ~200K-400K partidas
 
 #### Observaciones
-⚠️ **Riesgo:** Tabla FAGLFLEXA puede no estar completa en BigQuery. **Ticket BQ-7721 pendiente** de validación con TI Global.
+⚠️ **Riesgo:** Validar disponibilidad y cobertura de **ACDOCA** en BigQuery (histórico + delta). **Ticket BQ-7721** pendiente de validación con TI Global.
 
 ---
 

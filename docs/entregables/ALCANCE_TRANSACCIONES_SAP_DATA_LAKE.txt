@@ -157,5 +157,32 @@ PRÓXIMOS PASOS
 [ ] Definición de SLA para cada prioridad
 
 ================================================================================
+ADENDA 08-NOV-2025 — Optimización por S/4HANA (Universal Journal)
+================================================================================
+
+Resumen ejecutivo técnico:
+- Sistema fuente confirmado: S/4HANA.
+- Estrategia pivota al **Universal Journal**: replicar **ACDOCA** (partidas) y **ACDOCA_T** (totales).
+- Beneficio: Sustituye BSEG/FAGLFLEXA/COEP, reduciendo el alcance total a **~35-65 tablas** (antes ~76-85).
+
+Tablas complementarias prioritarias:
+- FI/CO: BKPF (cabecera), SKA1 (plan de cuentas), CSKS/CSKA (CO), AUFK (órdenes CO).
+- SD: VBAK/VBAP (documentos), **VBUK/VBUP** (estatus), KNA1/BUT000 (BP/cliente).
+- MM: EKKO/EKPO (OC), MKPF/MSEG (movimientos), **MBEW** (valoración), MARD/MCHB (stocks).
+- Textos: STXL (si se requieren textos; requiere declustering en SLT).
+
+Pendientes de confirmación con TI Global (actualizados):
+- Disponibilidad/cobertura histórica de **ACDOCA / ACDOCA_T** en BigQuery (histórico + delta).
+- Estrategia de replicación y particionamiento: ACDOCA por ejercicio/periodo y sociedad; clustering recomendado por cuenta/centro de costo.
+- Validación de tablas SD/MM/MD complementarias: VBUK/VBUP, MBEW, MARD, etc.
+
+Ajustes de próximos pasos:
+- Priorizar configuración de **ACDOCA** (diaria) y **ACDOCA_T** (mensual al cierre).
+- Mantener SD/MM diarios; CO-PA (KE24) semanal.
+- Actualizar estimación de volumen centrada en ACDOCA (24 meses históricos + crecimiento mensual) y revisar SLA.
+
+Nota: Este addendum no invalida el alcance previo; lo optimiza para S/4HANA.
+
+================================================================================
 FIN DEL DOCUMENTO
 ================================================================================
