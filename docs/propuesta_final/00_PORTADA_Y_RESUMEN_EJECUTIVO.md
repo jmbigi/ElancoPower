@@ -138,11 +138,6 @@ Esta propuesta está organizada en los siguientes documentos:
 - **11_RIESGOS_Y_SUPUESTOS.md** - Análisis de riesgos y mitigaciones
 - **12_ENTREGABLES_Y_CONDICIONES_COMERCIALES.md** - Productos y términos contractuales
 
-### 📄 **Anexos**
-- **ANEXO_A_METODOLOGIA_DE_TRABAJO.md** - Enfoque y prácticas de desarrollo
-- **ANEXO_B_PERFILES_TECNICOS.md** - CVs y experiencia del equipo
-- **ANEXO_C_CASOS_DE_EXITO.md** - Referencias de proyectos similares
-
 ---
 
 ## INFORMACIÓN DE CONTACTO

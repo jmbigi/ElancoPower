@@ -31,7 +31,7 @@ La Fase 3 es solo una descripción conceptual de modelos predictivos sin impleme
 ESFUERZO Y RECURSOS
 
 El esfuerzo total del proyecto es de 1590 horas distribuidas en 42 semanas. La Fase 0 requiere 235 horas (6 semanas), la Fase 1 necesita 696 horas (22 semanas), y la Fase 2 demanda 659 horas (14 semanas). El equipo estará compuesto por Juan Manuel Bigi como Arquitecto de Datos y Desarrollador principal con 961 horas, Lucía Rodríguez como Analista SAP y Power User con 484 horas, y Linda López como Project Manager con 145 horas. No se incluye consultoría ABAP adicional ya que Lucía y Juan cuentan con expertise SAP.
-Es importante destacar que Juan Manuel Bigi trabaja máximo 6 horas por día (30 horas semanales) por restricciones personales, lo cual fue considerado en la planificación del cronograma comprimido. El proyecto iniciaría el 1 de diciembre de 2025 y finalizaría aproximadamente el 20 de septiembre de 2026.
+Es importante destacar que Juan Manuel Bigi trabaja máximo 6 horas por día (30 horas semanales) por restricciones personales, lo cual fue considerado en la planificación del cronograma. El proyecto iniciaría el 1 de diciembre de 2025 y finalizaría aproximadamente a mediados de septiembre de 2026 (semana 42 del cronograma).
 
 
 ENTREGABLES PRINCIPALES
@@ -63,7 +63,7 @@ Existe riesgo de que TI Global retrase respuestas a tickets, por eso se incorpor
 CONDICIONES COMERCIALES Y GARANTÍAS
 
 El esfuerzo total es de 1590 horas distribuidas en 42 semanas. Las condiciones comerciales específicas y esquema de facturación serán definidas en acuerdo separado. Si el proyecto se detiene en Fase 0 con decisión de NO-GO, solo se factura el esfuerzo de esa fase que son 235 horas.
-El proyecto incluye garantías de calidad con dashboards funcionales sin errores críticos, datos validados con precisión mayor al 95% contra SAP, documentación completa, y código limpio versionado. Se incluyen 30 días de soporte post go-live desde el 20 de septiembre hasta el 20 de octubre de 2026, cubriendo corrección de bugs, ajustes menores, troubleshooting de errores, y soporte a usuarios en horario laboral de lunes a viernes de 9 AM a 6 PM.
+El proyecto incluye garantías de calidad con dashboards funcionales sin errores críticos, datos validados con precisión mayor al 95% contra SAP, documentación completa, y código limpio versionado. Se incluyen 30 días de soporte post go-live desde la finalización del proyecto (mediados de septiembre 2026), cubriendo corrección de bugs, ajustes menores, troubleshooting de errores, y soporte a usuarios en horario laboral de lunes a viernes de 9 AM a 6 PM.
 
 
 EXCLUSIONES DEL ALCANCE
