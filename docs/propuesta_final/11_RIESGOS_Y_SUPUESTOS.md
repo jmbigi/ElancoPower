@@ -861,6 +861,8 @@ Los siguientes supuestos son críticos para la viabilidad del proyecto. Si algun
 | **S-P-03** | Recurso SAP Basis estará disponible on-demand para configuración de SLT y administración SAP | 🔴 CRÍTICO | TI Elanco |
 | **S-P-04** | No se requieren herramientas de terceros adicionales (ej. Fivetran, Tableau) | 🟢 MEDIO | Aunergia |
 | **S-P-05** | El esfuerzo estimado se mantiene constante durante el proyecto (42 semanas comprimidas) | 🟢 MEDIO | Aunergia Management |
+| **S-P-06** | El cliente proveerá todas las herramientas de software y licencias necesarias (SLT, conectores, Power BI, BigQuery) sin costo para Aunergia | 🔴 CRÍTICO | TI Elanco + Finance |
+| **S-P-07** | Costos operativos mensuales (almacenamiento, procesamiento, networking) de GCP/BigQuery no forman parte del alcance económico del servicio profesional | 🔴 CRÍTICO | Finance Elanco |
 
 ---
 

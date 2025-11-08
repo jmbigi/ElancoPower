@@ -98,9 +98,14 @@ Verificar disponibilidad de tablas para cada transacción:
 **2. Benchmarks de Performance**
 
 Ejecutar queries representativos:
-- Query de agregación simple: < 2 segundos
-- Query con JOINs múltiples: < 10 segundos
-- Query de histórico completo (24 meses): < 30 segundos
+- Query de agregación simple: < 2 segundos y ≤ 200 MB escaneados
+- Query con JOINs múltiples: < 10 segundos y ≤ 2 GB escaneados
+- Query de histórico completo (24 meses): < 30 segundos y ≤ 10 GB escaneados
+
+Si se exceden los umbrales de bytes escaneados:
+1. Revisar particionamiento por fecha contable y aplicar clustering (company_code, material, país según corresponda).
+2. Evaluar creación de vista materializada para agregaciones recurrentes.
+3. Ajustar filtros y proyecciones de columnas (evitar SELECT * en tablas de gran volumen).
 
 **3. Estimación de Costos**
 
@@ -382,6 +387,88 @@ Cada riesgo incluye:
 | **TOTAL FASE 0** | **235h** |
 
 Nota: El detalle semanal de esta sección es orientativo. Para planificación detallada y fechas, prevalecen `08_ESTIMACION_DE_ESFUERZOS_Y_COSTOS.md` y `CRONOGRAMA_DETALLADO_TAREAS.csv`.
+
+## 4.6. Supuestos y Requisitos Específicos de Fase 0
+
+Esta sección consolida los **supuestos y requisitos operativos críticos** que deben verificarse durante Fase 0 para habilitar el inicio de la Fase 1 sin bloqueos. Complementa y referencia las secciones `10_REQUISITOS_TECNICOS_Y_ADMINISTRATIVOS.md` y `11_RIESGOS_Y_SUPUESTOS.md`.
+
+### Mini-Checklist "Go Readiness" (Seguimiento Semanal)
+
+- [ ] SLT operativo (1 tabla estándar replicada sin errores)
+- [ ] Conectividad SAP → SLT → BigQuery validada (latencia < 100ms)
+- [ ] Accesos BigQuery (Data Editor / Viewer / Admin) activos
+- [ ] Datasets dev/qa/prod creados y etiquetados (env, area)
+- [ ] ≥ 12 transacciones con tablas base disponibles o plan alternativo documentado
+- [ ] Exportación masiva SAP sin límites (autorizaciones confirmadas)
+
+### 4.6.1. Requisitos Técnicos Operativos (Semana 1–2)
+
+| # | Requisito / Condición | Descripción de Verificación | Responsable | Estado Inicial |
+|---|-----------------------|-----------------------------|-------------|----------------|
+| 1 | **SLT Configurado y Operativo** | SAP SLT (Landscape Transformation Server) instalado, conectado a SAP S/4 y con al menos 1 tabla estándar replicada de prueba (log de replicación sin errores). | TI Global Elanco / SAP Basis | ⏳ |
+| 2 | **Conectividad SAP → SLT → BigQuery** | Prueba de extremo a extremo: latencia < 100 ms; puertos RFC abiertos; certificados vigentes; credenciales de service account funcionales. | TI Global + TechOps | ⏳ |
+| 3 | **Permisos BigQuery Equipo Proyecto** | Roles asignados: Data Editor (Funcional SAP, Consultor BI), Viewer (PM, Stakeholders), Admin (TechOps). Service account con permisos BigQuery Job User + Data Editor. | TI Elanco | ⏳ |
+| 4 | **Infraestructura BigQuery Proveída** | Proyecto GCP aprobado, datasets `casa_bi_dev`, `casa_bi_qa`, `casa_bi_prod` creados, política de acceso aplicada. | TI Global Elanco | ⏳ |
+| 5 | **Tablas SAP Prioritarias en Proceso de Replicación** | Solicitudes de replicación para tablas críticas (FAGLFLEXA, CE1*/CE4*, COBK/COEP, VBAK/VBAP, Z-tables) registradas y/o en ejecución. | TI Global / SAP Basis | ⏳ |
+| 6 | **Exportación Masiva SAP Autorizada** | Perfil con autorizaciones S_TABU_DIS / S_TABU_RFC y sin límites restrictivos de volumen en extracción. | SAP Basis / TI Global | ⏳ |
+
+#### RACI de Requisitos Técnicos Operativos
+
+| Requisito | R (Responsible) | A (Accountable) | C (Consulted) | I (Informed) |
+|-----------|-----------------|-----------------|--------------|--------------|
+| SLT Configurado y Operativo | SAP Basis | TI Global | Consultor BI | Project Manager |
+| Conectividad SAP → SLT → BigQuery | TechOps | TI Global | SAP Basis | Stakeholders |
+| Permisos BigQuery Equipo Proyecto | TI Elanco | TI Global | Consultor BI | Project Manager |
+| Infraestructura BigQuery Proveída | TI Global | TI Global | Consultor BI | Aunergia Equipo |
+| Tablas SAP Prioritarias Replicación | SAP Basis | TI Global | Funcional SAP | Project Manager |
+| Exportación Masiva SAP Autorizada | SAP Basis | TI Global | Funcional SAP | Stakeholders |
+
+### 4.6.2. Supuestos Financieros y de Licenciamiento
+
+| Código | Supuesto | Alcance | Referencia |
+|--------|----------|---------|------------|
+| S-F-01 | **Costos de infraestructura no incluidos** | Almacenamiento y procesamiento BigQuery, licencias SLT y operación de conectores asumidos 100% por Elanco. | 11 (S-P-01) |
+| S-F-02 | **Cliente provee herramientas y licencias** | SAP SLT, BigQuery Connector, cuentas GCP, licencias Power BI Pro ya disponibles antes de Fase 1. | 10.3 / 10.2 / 11 (nuevo) |
+| S-F-03 | **Sin adquisición de software adicional** | No se requiere compra de herramientas de terceros (ETL externas, BI alternativo) para ejecutar el alcance comprometido. | 11 (S-P-04) |
+
+### 4.6.3. Dependencias Críticas y Impacto Go/No-Go
+
+| Dependencia | Fecha Límite Recomendada | Impacto si NO se cumple | Decisión Potencial |
+|-------------|--------------------------|-------------------------|--------------------|
+| SLT operativo (Requisito #1) | Fin Semana 2 | Imposibilidad de flujo de replicación; se evalúa extracción alternativa RFC (mayor esfuerzo). | ⚠️ Go Condicionado / Replanificar |
+| Permisos BigQuery (Requisito #3) | Fin Semana 2 | Bloqueo en validaciones técnicas y backlog técnico; retraso ≥ 1 semana. | ⚠️ Go Condicionado |
+| Infraestructura BigQuery (Requisito #4) | Semana 1 | No se puede ejecutar inventario ni benchmarks. | ⛔ No-Go temporal |
+| Replicación tablas críticas (#5) ≥ 12 transacciones | Semana 3 | Alcance reducido y/o re-plan (ver criterios sección 11.9). | ⚠️ Go Ajustado /
+| Exportación masiva SAP (#6) | Semana 3 | Retrasos en obtención de datasets históricos; riesgo de calidad. | ⚠️ Go Condicionado |
+
+### 4.6.4. Validación y Evidencias
+
+Durante Fase 0 se generarán evidencias mínimas para cada requisito:
+1. Captura de pantalla de consola SLT con estado de replicación OK.
+2. Log de prueba de conectividad (ping/trazado o reporte técnico interno) y latencia medida.
+3. Listado de roles BigQuery asignados (export IAM / captura). 
+4. Inventario de datasets y estructura inicial (`SHOW SCHEMAS` / exportación). 
+5. Matriz de tablas solicitadas vs. status (archivo compartido en repositorio). 
+6. Checklist de autorizaciones SAP firmado por SAP Basis.
+
+### 4.6.5. Escenario de Contingencia (Resumen)
+
+| Escenario | Acción Inmediata | Mitigación | Implicación Cronograma |
+|-----------|------------------|------------|------------------------|
+| SLT no operativo Semana 3 | Activar Plan B (extracción batch RFC) | Limitar alcance a TOP 10 transacciones | +1 a +2 semanas |
+| <12 transacciones disponibles | Definir subset mínimo viable | Repriorizar backlog y documentar alcance reducido | Sin cambio si ≥10; +1 semana si <10 |
+| Costos BigQuery superiores | Optimizar particiones / clustering | Monitoreo y ajuste de queries | Sin impacto técnico inicial |
+
+### 4.6.6. Resumen Ejecutivo (Fase 0)
+
+Para declarar Fase 0 exitosa se espera:
+1. SLT probado y estable (flujo replicación base).
+2. Accesos BigQuery completos (Data Editor / Viewer / Admin).
+3. Infraestructura GCP con datasets listos y service account funcional.
+4. Mínimo 12 transacciones con tablas base confirmadas o plan alternativo documentado.
+5. Confirmación formal de que los costos de infraestructura y licencias son asumidos por Elanco.
+
+Si alguno de los puntos 1–4 no se cumple, se activa evaluación Go/No-Go ajustada (ver 11.9).
 
 ## 4.7. Criterios de Éxito de Fase 0
 

@@ -1,5 +1,7 @@
 # 10. REQUISITOS TÉCNICOS Y ADMINISTRATIVOS
 
+Nota de referencia cruzada: Ver también la sección `4.6 Supuestos y Requisitos Específicos de Fase 0` para los pre-requisitos operativos y criterios de Go/No-Go asociados al patrón de integración SAP SLT → BigQuery.
+
 ## 10.1. Requisitos Previos al Inicio del Proyecto
 
 ### 10.1.1. Requisitos Administrativos CRÍTICOS
@@ -418,6 +420,8 @@ Ver sección 9.10 del documento [09_CRONOGRAMA_SEMANAL.md](09_CRONOGRAMA_SEMANAL
 8. ✅ **Disponibilidad Stakeholders:** Asegurar participación en workshops/UAT
 9. ✅ **Coordinación TI:** Gestión con TI Global para tickets
 10. ✅ **Backup y DR:** Responsabilidad de infraestructura
+
+**Nota:** La **operación y monitoreo continuo** de SAP SLT (jobs, colas de replicación, alerts) y conectores asociados **no están incluidos** en las horas del servicio profesional de Aunergia y son **responsabilidad de Elanco** (TI Global/SAP Basis). Aunergia puede apoyar en diagnóstico puntual dentro de las horas de proyecto o mediante cotización adicional.
 
 ---
 
