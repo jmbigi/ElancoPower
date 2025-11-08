@@ -27,20 +27,20 @@
 
 | Fase | Horas | Duración | Fecha Inicio | Fecha Fin |
 |------|-------|----------|--------------|-----------|
-| **Inicio del Proyecto** | - | - | 1-dic-2025 | 1-dic-2025 |
-| **Fase 0 (Revisión y Alcance)** | 235h | 6 sem | 1-dic-2025 | 12-ene-2026 |
-| **Fase 1 (Data Lake)** | 696h | 22 sem | 13-ene-2026 | 14-jun-2026 |
-| **Fase 2 (12 Dashboards)** | 659h | 14 sem | 15-jun-2026 | 20-sep-2026 |
-| **Go-Live y Cierre** | - | - | 14-sep-2026 | 20-sep-2026 |
-| **TOTAL ESFUERZO** | **1,590h** | **42 sem** | **1-dic-2025** | **20-sep-2026** |
+| **Inicio del Proyecto** | - | - | Ene-2026 | Ene-2026 |
+| **Fase 0 (Revisión y Alcance)** | 235h | 6 sem | Ene-2026 | Feb-2026 |
+| **Fase 1 (Data Lake)** | 696h | 22 sem | Feb-2026 | Jul-2026 |
+| **Fase 2 (12 Dashboards)** | 659h | 14 sem | Jul-2026 | Oct-2026 |
+| **Go-Live y Cierre** | - | - | Oct-2026 | Oct-2026 |
+| **TOTAL ESFUERZO** | **1,590h** | **42 sem** | **Ene-2026** | **Oct-2026** |
 
 **Restricción JMB:** Máximo 6h/día (30h/semana) por restricciones personales.
 
 ### Duración Total
 
 - **Tiempo estimado:** 42 semanas (~10 meses)
-- **Inicio:** 1 de diciembre 2025
-- **Finalización:** 20 de septiembre 2026
+- **Inicio:** Enero 2026
+- **Finalización:** Octubre 2026
 - **Restricción:** Juan Manuel Bigi trabaja máximo 6 horas/día (30h/semana)
 
 ### Equipo
@@ -119,7 +119,7 @@
 
 ---
 
-### 8.2.3. Fase 2 - Modelado de Datos y 12 Dashboards
+### 8.2.3. Fase 2 - Modelado de Datos y 12 Dashboards (promedio ~3 hojas por dashboard)
 
 **Duración:** 14 semanas  
 **Fase del proyecto:** Semanas 28-42
@@ -137,18 +137,16 @@
 | Ajustes finales, documentación, capacitación y Go-Live | 33h | 35h | 20h | 88h |
 | **TOTAL FASE 2** | **420h** | **166h** | **73h** | **659h** |
 
-**Nota:** El CSV muestra 626h de las tareas registradas (no incluye todo el detalle de subtareas).
+**Nota:** El CSV muestra 626h de las tareas registradas (no incluye todo el detalle de subtareas). La distribución por recurso fue normalizada para reflejar el total de 659h.
 
 #### Distribución de Horas Fase 2
 
 | Recurso | Horas |
 |---------|-------|
-| Juan Manuel Bigi | 324h |
-| Lucía Rodríguez | 120h |
-| Linda López (PM) | 52h |
-| **TOTAL FASE 2** | **496h** |
-
-**Nota ajustada:** Según CSV las tareas principales suman 626h (116+82+86+78+87+122+88). La distribución por persona del CSV es: JMB=324h, Lucía=120h, Linda=52h totalizando 496h de las 626h registradas en tareas.
+| Juan Manuel Bigi | 420h |
+| Lucía Rodríguez | 166h |
+| Linda López (PM) | 73h |
+| **TOTAL FASE 2** | **659h** |
 
 ---
 
@@ -267,10 +265,10 @@
 - Estimado: 50-60 horas (workshops, validaciones, UAT)
 - Sin costo (personal interno)
 
-❌ **Soporte TI Global**
+❌ **Participación de TI Global**
 - Tickets de permisos SAP
 - Tickets de tablas BigQuery
-- Sin costo (soporte corporativo)
+- Sin costo (gestión interna del cliente)
 
 ### 8.6.3. Alcance Futuro
 
@@ -278,9 +276,8 @@
 - Solo se entrega descripción conceptual
 - Implementación: Requiere proyecto separado
 
-❌ **Soporte Post Go-Live (>30 días)**
-- Incluido: 30 días de soporte (horario hábil, incidentes menores)
-- Post 30 días: Contrato de soporte separado
+❌ **Actividades Post Go-Live prolongadas**
+- Ajustes o evolución posteriores al cierre requieren acuerdo separado
 
 ❌ **Mantenimiento Evolutivo**
 - Nuevos dashboards, transacciones SAP o KPIs requieren cotización separada
@@ -372,7 +369,7 @@
 - ✅ **Garantía de calidad:** Reconciliación SAP ↔ BigQuery >99%
 - ✅ **Garantía de funcionalidad:** Dashboards operativos según especificaciones
 - ✅ **Garantía de documentación:** Entrega completa de documentación técnica y funcional
-- ✅ **Soporte post go-live:** 30 días incluidos (horario hábil, incidentes menores)
+
 
 ### 8.10.3. Exclusiones de Garantía
 

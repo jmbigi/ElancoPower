@@ -3,8 +3,6 @@
 
 ---
 
-<div align="center">
-
 ### **PROYECTO DE IMPLEMENTACIÓN DE DATA LAKE Y ANALÍTICA EMPRESARIAL**
 
 **Versión Final - 7 de Noviembre 2025**
@@ -81,7 +79,7 @@ Operación Centroamérica y Sudamérica (CASA)
 ### Duración
 
 - **Tiempo total:** 42 semanas (~10 meses)
-- **Inicio propuesto:** 1 de diciembre 2025
+- **Inicio propuesto:** Enero 2026
 - **Finalización estimada:** Mediados de octubre 2026
 - **Disponibilidad:** Part-time con intensidad variable según fase
 - **Nota:** Juan Manuel Bigi trabaja máximo 6 horas/día (30h/semana)
@@ -91,7 +89,7 @@ Operación Centroamérica y Sudamérica (CASA)
 ✅ **Reducción del 70%** en tiempo de extracción y consolidación de datos para todas las áreas
 ✅ **Dashboards disponibles en 24 horas** tras cierre mensual (vs. 5-7 días actuales)  
 ✅ **Eliminación de procesos manuales** propensos a errores en áreas críticas (Finanzas, Ventas, Inventario, OPEX)
-✅ **Democratización del acceso** a datos mediante 12 dashboards Power BI  
+✅ **Democratización del acceso** a datos mediante 12 dashboards Power BI (promedio ~3 hojas/páginas por dashboard)  
 ✅ **Plataforma completa** con 18 transacciones SAP automatizadas
 ✅ **Ahorro estimado:** 3,620 horas/año en procesos manuales
 ✅ **ROI estimado:** Recuperación de inversión en ~2 meses de operación
@@ -107,7 +105,6 @@ Operación Centroamérica y Sudamérica (CASA)
 - **David Saboya** - Analista IT TechOps CASA (coordinación con TI Global)
 - **Representantes de Finanzas** - Validación de reportes y KPIs
 - **Representantes de Supply Chain** - Validación de procesos logísticos
-- **TI Global** - Soporte para permisos SAP y tablas BigQuery
 
 ---
 
