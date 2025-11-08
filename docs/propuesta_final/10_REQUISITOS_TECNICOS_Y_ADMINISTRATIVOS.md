@@ -6,10 +6,10 @@
 
 Estos requisitos **DEBEN** estar resueltos antes del kick-off:
 
-| # | Requisito | Responsable | Fecha Límite | Bloqueante |
-|---|-----------|-------------|--------------|------------|
-| 1 | **Aprobación del proyecto (677 horas)** | Management Elanco | 10-nov-2025 | ⛔ SÍ |
-| 2 | **Firma de contrato Aunergia-Elanco** | Legal ambas partes | 10-nov-2025 | ⛔ SÍ |
+| # | Requisito | Responsable | Fecha Límite | ¿Bloquea Inicio? |
+|---|-----------|-------------|--------------|------------------|
+| 1 | **Aprobación del proyecto (1,590 horas)** | Management Elanco | 30-nov-2025 | ⛔ SÍ |
+| 2 | **Firma de contrato** | Legal Aunergia + Elanco | 30-nov-2025 | ⛔ SÍ |
 | 3 | **Designación de Product Owner** | Management Elanco | 10-nov-2025 | ⛔ SÍ |
 | 4 | **Confirmación disponibilidad stakeholders** | Finanzas/Supply | 10-nov-2025 | ⚠️ Alta |
 | 5 | **Acuerdo de confidencialidad (NDA) vigente** | Legal ambas partes | 10-nov-2025 | ⛔ SÍ |
@@ -377,15 +377,15 @@ Ver sección 9.10 del documento [09_CRONOGRAMA_SEMANAL.md](09_CRONOGRAMA_SEMANAL
 
 ## 10.10. Checklist de Inicio de Proyecto
 
-### ✅ Antes del Kick-off (11-nov-2025)
+### ✅ Antes del Kick-off (1-dic-2025)
 
 - [ ] Contrato firmado
-- [ ] Proyecto aprobado (677 horas, 21-23 semanas incluyendo 1 semana vacacional)
+- [ ] Proyecto aprobado (1,590 horas, 42 semanas)
 - [ ] Product Owner designado
 - [ ] NDA vigente
 - [ ] Kick-off meeting agendado (2-3 horas)
 
-### ✅ Durante Fase 0 (Semanas 1-2)
+### ✅ Durante Fase 0 (Semanas 0-6)
 
 - [ ] Accesos SAP solicitados (Ticket SAP-48219)
 - [ ] Accesos BigQuery solicitados
@@ -394,7 +394,7 @@ Ver sección 9.10 del documento [09_CRONOGRAMA_SEMANAL.md](09_CRONOGRAMA_SEMANAL
 - [ ] Documentación base entregada
 - [ ] Stakeholders confirmados y disponibles
 
-### ✅ Antes de Inicio Fase 1 (16-dic-2025)
+### ✅ Antes de Inicio Fase 1 (13-ene-2026)
 
 - [ ] Permisos SAP completos confirmados ✓
 - [ ] Mínimo 12 transacciones con tablas en BigQuery ✓

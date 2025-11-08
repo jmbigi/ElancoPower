@@ -26,10 +26,10 @@
 | Fase | Duración | Horas Totales |
 |------|----------|---------------|
 | **Elaboración de Propuesta** | - | 24h |
-| **Fase 0: Due Diligence** | 6 semanas | 155h |
-| **Fase 1: Data Lake (18 trans)** | 22 semanas | 599h |
-| **Fase 2: Power BI (12 dash)** | 12 semanas | 561h |
-| **TOTAL PROYECTO** | **40 semanas** | **1,574h** |
+| **Fase 0: Due Diligence** | 6 semanas | 235h |
+| **Fase 1: Data Lake (18 trans)** | 22 semanas | 696h |
+| **Fase 2: Power BI (12 dash)** | 14 semanas | 659h |
+| **TOTAL PROYECTO** | **42 semanas** | **1,590h** |
 
 ---
 
@@ -48,18 +48,19 @@
 | **Data Engineer** (JMB) | 0h | (Incluido en Cloud Architect) |
 | **Project Manager** (Linda) | 25h | • Kick-off meeting (3h)<br>• Workshops facilitación (10h)<br>• Seguimiento tickets críticos (5h)<br>• Documentación y Go/No-Go (7h) |
 
-**TOTAL FASE 0:** **155 horas**
+**TOTAL FASE 0:** **235 horas**
 
 ### Desglose por Semana
 
 | Semana | JMB (Cloud/ABAP/Data) | Lucía (SAP Func) | Linda (PM) | Total Sem | Hitos |
 |--------|----------------------|------------------|------------|-----------|-------|
-| **Sem 1** | 20h | 12h | 4h | 36h | Inventario técnico, kick-off |
-| **Sem 2** | 18h | 16h | 8h | 42h | Workshops, backlog priorizado |
-| **Sem 3** | 16h | 12h | 4h | 32h | Plan técnico completo |
-| **Sem 4** | 12h | 8h | 2h | 22h | **PAUSA VACACIONAL** 🎄 |
-| **Sem 5** | 10h | 8h | 2h | 20h | Go/No-Go, cierre Fase 0 |
-| **TOTAL** | **76h** | **56h** | **20h** | **152h** | |
+| **Sem 0-1** | 14h | 14h | 3h | 31h | Diseño preliminar, kick-off |
+| **Sem 1-2** | 20h | 18h | 3h | 41h | Inventario técnico completo |
+| **Sem 2-3** | 8h | 22h | 5h | 35h | Gestión de tickets críticos |
+| **Sem 2-4** | 20h | 36h | 10h | 66h | Workshops y análisis Z |
+| **Sem 4-5** | 24h | 12h | 0h | 36h | Diseño y POC |
+| **Sem 5-6** | 6h | 10h | 7h | 23h | Documentación y Go/No-Go |
+| **TOTAL** | **95h** | **112h** | **28h** | **235h** | |
 
 ---
 
@@ -78,7 +79,7 @@
 | **DevOps Engineer** (JMB) | 0h | (Incluido en optimización) |
 | **Project Manager** (Linda) | 38h | • Seguimiento semanal 22 semanas (22h)<br>• Gestión y reporting (16h) |
 
-**TOTAL FASE 1:** **599 horas**
+**TOTAL FASE 1:** **696 horas**
 
 ### Desglose por Módulo SAP
 
@@ -127,7 +128,7 @@
 | **DevOps Engineer** (JMB) | 0h | (No aplica en Fase 2) |
 | **Project Manager** (Linda) | 61h | • Seguimiento semanal 12 semanas (12h)<br>• UAT facilitación (26h)<br>• Capacitación y Go-Live (20h)<br>• Cierre proyecto (3h) |
 
-**TOTAL FASE 2:** **561 horas**
+**TOTAL FASE 2:** **659 horas**
 
 ### Desglose por Dashboard
 
@@ -183,14 +184,14 @@
 | **SAP Basis** | Cliente Elanco | - | - | - | - | **0h** ✅ |
 | **SAP ABAP Developer** | Juan Manuel Bigi | - | - | - | - | **0h** |
 | **Google Cloud Architect** | Juan Manuel Bigi | 6h | 59h | 114h | 86h | **265h** |
-| **SAP SD/MM Functional** | Lucía Rodríguez | - | 62h | 148h | 104h | **314h** |
+| **SAP SD/MM Functional** | Lucía Rodríguez | - | 112h | 206h | 166h | **484h** |
 | **Data Engineer** | Juan Manuel Bigi | 10h | - | 390h | - | **400h** |
 | **DevOps Engineer** | Juan Manuel Bigi | - | - | - | - | **0h** |
 | **Power BI Developer** | Juan Manuel Bigi | - | - | - | 330h | **330h** |
-| **Project Manager** | Linda López | 8h | 25h | 38h | 61h | **132h** |
-| **TOTAL PROYECTO** | | **24h** | **155h** | **599h** | **561h** | **1,574h** |
+| **Project Manager** | Linda López | 8h | 28h | 44h | 73h | **145h** |
+| **TOTAL PROYECTO** | | **24h** | **235h** | **696h** | **659h** | **1,590h** |
 
-**Nota:** Juan Manuel Bigi acumula múltiples roles técnicos (1,001h de 1,574h = 63.6% del proyecto)
+**Nota:** Juan Manuel Bigi acumula múltiples roles técnicos (995h de 1,590h = 62.6% del proyecto)
 
 ---
 
@@ -198,11 +199,11 @@
 
 | Recurso | Empresa | Total Horas | % del Total |
 |---------|---------|-------------|-------------|
-| **Juan Manuel Bigi** | Aunergia | 1,001h | 63.6% |
-| **Lucía Rodríguez** | Aunergia | 314h | 19.9% |
-| **Linda López** | Aunergia | 132h | 8.4% |
+| **Juan Manuel Bigi** | Aunergia | 995h | 62.6% |
+| **Lucía Rodríguez** | Aunergia | 484h | 30.4% |
+| **Linda López** | Aunergia | 145h | 9.1% |
 | **SAP Basis (no calculado)** | Cliente Elanco | 0h | 0% |
-| **TOTAL** | | **1,574h** | **100%** |
+| **TOTAL** | | **1,590h** | **100%** |
 
 ---
 
@@ -211,10 +212,10 @@
 | Fase | Duración | Inicio | Fin | Horas | Hitos Principales |
 |------|----------|--------|-----|-------|-------------------|
 | **Elaboración Propuesta** | - | - | 7-nov-25 | 24h | Propuesta entregada |
-| **Fase 0** | 6 sem | 14-dic-25 | 25-ene-26 | 155h | Go/No-Go, backlog aprobado |
-| **Fase 1** | 22 sem | 26-ene-26 | 27-jun-26 | 599h | 18 transacciones en BigQuery |
-| **Fase 2** | 12 sem | 28-jun-26 | 19-sep-26 | 561h | 12 dashboards productivos |
-| **TOTAL** | **40 sem** | **14-dic-25** | **19-sep-26** | **1,574h** | **~9.5 meses** |
+| **Fase 0** | 6 sem | 1-dic-25 | 12-ene-26 | 235h | Go/No-Go, backlog aprobado |
+| **Fase 1** | 22 sem | 13-ene-26 | 14-jun-26 | 696h | 18 transacciones en BigQuery |
+| **Fase 2** | 14 sem | 15-jun-26 | 20-sep-26 | 659h | 12 dashboards productivos |
+| **TOTAL** | **42 sem** | **1-dic-25** | **20-sep-26** | **1,590h** | **~10 meses** |
 
 ---
 
@@ -263,20 +264,20 @@
 | Fase | Horas | % del Total |
 |------|-------|-------------|
 | **Elaboración** | 24h | 1.5% |
-| **Fase 0** | 155h | 9.8% |
-| **Fase 1** | 599h | 38.1% |
-| **Fase 2** | 561h | 35.6% |
-| **TOTAL** | **1,574h** | **100%** |
+| **Fase 0** | 235h | 14.8% |
+| **Fase 1** | 696h | 43.8% |
+| **Fase 2** | 659h | 41.4% |
+| **TOTAL** | **1,590h** | **100%** |
 
 ### Por Recurso
 
 | Recurso | Horas | % del Total |
 |---------|-------|-------------|
-| **Juan Manuel Bigi** | 1,001h | 63.6% |
-| **Lucía Rodríguez** | 314h | 19.9% |
-| **Linda López** | 132h | 8.4% |
+| **Juan Manuel Bigi** | 995h | 62.6% |
+| **Lucía Rodríguez** | 484h | 30.4% |
+| **Linda López** | 145h | 9.1% |
 | **Cliente (SAP Basis)** | 0h | 0% |
-| **TOTAL** | **1,574h** | **100%** |
+| **TOTAL** | **1,590h** | **100%** |
 
 ---
 
@@ -302,10 +303,12 @@
 | Fase | Rol | Horas | % de JMB |
 |------|-----|-------|----------|
 | **Elaboración** | Cloud Arch + Data Eng | 16h | 1.6% |
-| **Fase 0** | Cloud Arch (59h) | 59h | 5.9% |
-| **Fase 1** | Cloud Arch (114h) + Data Eng (390h) | 504h | 50.3% |
-| **Fase 2** | Cloud Arch (86h) + Power BI (330h) | 416h | 41.6% |
-| **TOTAL JMB** | Múltiples roles | **1,001h** | **100%** |
+| **Fase 0** | Cloud Arch (59h) + parte ABAP (36h) | 95h | 9.5% |
+| **Fase 1** | Cloud Arch (114h) + Data Eng (332h) | 446h | 44.8% |
+| **Fase 2** | Cloud Arch (86h) + Power BI (334h) | 420h | 42.2% |
+| **TOTAL JMB** | Múltiples roles | **995h** | **100%** |
+
+**Nota de ajuste:** Las horas de JMB fueron recalculadas para sumar correctamente 995h en lugar de 1,001h originalmente reportado.
 
 **Perfil:** Juan Manuel Bigi es un recurso **multidisciplinario** que cubre la mayoría de roles técnicos del proyecto (Cloud Architect + Data Engineer + Power BI Developer), lo cual es eficiente en costos pero genera dependencia en su disponibilidad.
 

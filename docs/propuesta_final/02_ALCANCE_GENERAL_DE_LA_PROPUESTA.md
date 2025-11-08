@@ -302,16 +302,16 @@ El proyecto se divide en **4 fases** con objetivos específicos:
 
 ### 2.6.1. Restricciones de Esfuerzo
 
-- **Esfuerzo total estimado:** 677 horas (20-22 semanas)
+- **Esfuerzo total estimado:** 1,590 horas (42 semanas)
 - **No se admiten incrementos de esfuerzo** sin aprobación previa por cambios de alcance
-- **Consultoría ABAP externa:** 12 horas incluidas
+- **Equipo completo:** JMB (961h), Lucía (484h), Linda (145h)
 
 ### 2.6.2. Restricciones Temporales
 
-- **Duración total:** 20-22 semanas (5 meses)
-- **Fecha inicio deseada:** 11 de noviembre de 2025
-- **Fecha límite para Fase 2:** 16 de abril de 2026
-- **Consideraciones:** Evitar periodo de cierre de año (20-dic a 6-ene)
+- **Duración total:** 42 semanas (~10 meses)
+- **Fecha inicio deseada:** 1 de diciembre de 2025
+- **Fecha límite para Fase 2:** 20 de septiembre de 2026
+- **Consideraciones:** Juan Manuel Bigi trabaja máximo 6h/día (30h/semana)
 
 ### 2.6.3. Restricciones Tecnológicas
 

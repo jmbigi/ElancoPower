@@ -497,11 +497,10 @@ A continuación se detalla la lista exhaustiva de todos los entregables del proy
 | Fase | Descripción | Horas |
 |------|-------------|-------|
 | **Fase 0** | Revisión de Alcance y Factibilidad (4-5 semanas) | 116h |
-| **Fase 1** | Construcción de Data Lake (8-10 semanas) | 267h |
-| **Fase 2** | Modelado y Dashboards (6-8 semanas) | 294h |
+| **Fase 1** | Construcción de Data Lake (22 semanas) | 696h |
+| **Fase 2** | Modelado y Dashboards (14 semanas) | 659h |
 | **Fase 3** | Modelos Predictivos (solo descripción) | Incluido en Fase 2 |
-| **Consultoría ABAP** | Análisis transacciones custom | 12h |
-| **TOTAL** | **24 semanas (incluyendo 1 semana vacacional)** | **677h** |
+| **TOTAL** | **42 semanas** | **1,590h** |
 
 ---
 
@@ -512,16 +511,16 @@ A continuación se detalla la lista exhaustiva de todos los entregables del proy
 | Hito | Fecha Estimada | % del Esfuerzo | Horas | Condición de Aceptación |
 |------|----------------|----------------|-------|-------------------------|
 | **Hito 1: Inicio del Proyecto** | 1-dic-2025 | - | - | Contrato firmado, Kick-off realizado |
-| **Hito 2: Entrega Go/No-Go (Fase 0)** | 15-dic-2025 | 17% | 116h | Aprobación de Go/No-Go |
-| **Hito 3: Data Lake Completado (Fase 1)** | 23-mar-2026 | 39% | 267h | Aprobación técnica Data Lake |
-| **Hito 4: 12 Dashboards UAT (Fase 2)** | 18-may-2026 | 43% | 294h | Aprobación UAT por stakeholders |
-| **Hito 5: Go-Live y Cierre** | 18-may-2026 | - | - | Go-Live exitoso + Cierre |
-| **TOTAL** | | **100%** | **677h** | |
+| **Hito 2: Entrega Go/No-Go (Fase 0)** | 12-ene-2026 | 15% | 235h | Aprobación de Go/No-Go |
+| **Hito 3: Data Lake Completado (Fase 1)** | 14-jun-2026 | 44% | 696h | Aprobación técnica Data Lake |
+| **Hito 4: 12 Dashboards UAT (Fase 2)** | 20-sep-2026 | 41% | 659h | Aprobación UAT por stakeholders |
+| **Hito 5: Go-Live y Cierre** | 20-sep-2026 | - | - | Go-Live exitoso + Cierre |
+| **TOTAL** | | **100%** | **1,590h** | |
 
 **Nota sobre Condiciones Comerciales:**
 - Las condiciones comerciales y esquema de facturación serán definidas en acuerdo separado
-- Esfuerzo total del proyecto: 677 horas distribuidas en 24 semanas (incluyendo 1 semana vacacional)
-- Si el proyecto se detiene en Fase 0 (NO-GO), se factura solo el esfuerzo de Fase 0 (116 horas)
+- Esfuerzo total del proyecto: 1,590 horas distribuidas en 42 semanas
+- Si el proyecto se detiene en Fase 0 (NO-GO), se factura solo el esfuerzo de Fase 0 (235 horas)
 
 ---
 
@@ -530,11 +529,10 @@ A continuación se detalla la lista exhaustiva de todos los entregables del proy
 **✅ Incluido en el Alcance del Proyecto:**
 
 1. **Recursos Humanos:**
-   - Linda López (Project Manager): 42 horas
-   - Lucía Rodríguez (SAP Analyst / Data Analyst): 145 horas
-   - Juan Manuel Bigi (Data Architect / Developer): 478 horas
-   - Consultor ABAP (externo): 12 horas
-   - **Total Esfuerzo:** 677 horas
+   - Linda López (Project Manager): 145 horas
+   - Lucía Rodríguez (SAP Analyst / Data Analyst): 484 horas
+   - Juan Manuel Bigi (Data Architect / Developer): 961 horas
+   - **Total Esfuerzo:** 1,590 horas
 
 2. **Entregables:**
    - Los 20 entregables listados en sección 12.2
@@ -878,10 +876,10 @@ Al firmar abajo, Elanco Animal Health acepta los términos y condiciones de esta
 Una vez aceptada esta propuesta:
 
 1. ✅ **Firma de Contrato:** Aunergia preparará contrato formal (3-5 días hábiles)
-2. ✅ **Acuerdo Comercial:** Definir términos de facturación basados en 677 horas de esfuerzo
-3. ✅ **Kick-off Meeting:** Programar para 11-nov-2025 (2-3 horas)
+2. ✅ **Acuerdo Comercial:** Definir términos de facturación basados en 1,590 horas de esfuerzo
+3. ✅ **Kick-off Meeting:** Programar para 1-dic-2025 (2-3 horas)
 4. ✅ **Solicitud de Accesos:** Iniciar trámites de permisos SAP, BigQuery, Power BI
-5. ✅ **Inicio Fase 0:** 11-nov-2025 (Semana 1)
+5. ✅ **Inicio Fase 0:** 1-dic-2025 (Semana 0)
 
 ---
 

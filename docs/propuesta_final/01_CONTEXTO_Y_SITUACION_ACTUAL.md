@@ -332,7 +332,7 @@ Basado en el documento **"Que_se_va_a_usar.txt"** (actualizado 10-oct-2025), ali
 
 ### Justificación de la Inversión
 
-**Esfuerzo estimado:** 677 horas (21-23 semanas, incluyendo 1 semana vacacional)
+**Esfuerzo estimado:** 1,590 horas (42 semanas)
 
 **Beneficios Proyectados:**
 

@@ -19,8 +19,8 @@
 - ⏳ **07_FASE_3_MODELOS_PREDICTIVOS.md** - Arquitectura ML (solo descripción)
 
 #### Parte 4: Planificación
-- ✅ **08_ESTIMACION_DE_ESFUERZOS_Y_COSTOS.md** - Estimación de esfuerzos detallada (677 horas)
-- ✅ **09_CRONOGRAMA_SEMANAL.md** - Planificación temporal 18-20 semanas (4.5 meses)
+- ✅ **08_ESTIMACION_DE_ESFUERZOS_Y_COSTOS.md** - Estimación de esfuerzos detallada (1,590 horas)
+- ✅ **09_CRONOGRAMA_SEMANAL.md** - Planificación temporal 42 semanas (~10 meses)
 
 #### Parte 5: Cierre
 - ⏳ **10_REQUISITOS_TECNICOS_Y_ADMINISTRATIVOS.md** - Prerrequisitos
@@ -39,33 +39,20 @@ Los siguientes documentos se crearán a continuación:
 
 ---
 
-## 📊 RESUMEN DE LA PROPUESTA
+## Resumen Ejecutivo de la Propuesta
 
-### Esfuerzo Total: 677 horas
+### Alcance: 18 transacciones SAP + 12 dashboards Power BI
+
+### Esfuerzo Total: 1,590 horas
 
 | Fase | Duración | Horas |
 |------|----------|-------|
-| Fase 0 - Due Diligence | 5 sem | 116h |
-| Pausa Vacacional 🎄 | 1 sem | - |
-| Fase 1 - Data Lake | 10 sem | 267h |
-| Fase 2 - 12 Dashboards | 7 sem | 294h |
-| Fase 3 - ML Roadmap | - | Descripción conceptual |
-| **TOTAL** | **23 sem** | **677h** |
-
-### Alcance
-
-- ✅ **18 transacciones SAP** automatizadas
-- ✅ **Data Lake** en Google BigQuery
-- ✅ **12 dashboards** Power BI
-- ✅ **Historización** 24 meses
-- ✅ **Documentación** completa
-- ✅ **Capacitación** usuarios
+| **Fase 0** | 6 sem | 235h |
+| **Fase 1** | 22 sem | 696h |
+| **Fase 2** | 14 sem | 659h |
+| **TOTAL** | **42 sem** | **1,590h** |
 
 ### Equipo
-
-- **Linda López** - Project Manager
-- **Lucía Rodríguez** - Analista SAP Power User
-- **Juan Manuel Bigi** - Arquitecto de Datos / Desarrollador
 
 ---
 
