@@ -1,126 +1,66 @@
 ================================================================================
-MAPEO DE REFERENCIA: TRANSACCIONES SAP A TABLAS
-Resumen Ejecutivo: Mapeo de Transacciones y Tablas SAP
+MAPEO DE REFERENCIA S/4HANA: TRANSACCIONES SAP A TABLAS
+Resumen Ejecutivo: Mapeo de Transacciones y Tablas SAP para S/4HANA
 ================================================================================
 Proyecto: Elanco Power
 Fecha: 8 de noviembre de 2025
 Propósito: Referencia técnica rápida para desarrolladores y analistas.
-Propósito: Resumen estratégico sobre la replicación de tablas SAP para el proyecto.
 ================================================================================
 
-El objetivo del proyecto es replicar los datos subyacentes de 18 transacciones SAP clave en BigQuery. Es fundamental entender que se replican las TABLAS de la base de datos, no las transacciones en sí. Las transacciones son solo la interfaz que el negocio utiliza para ver los datos.
+La confirmación de que el sistema fuente es **S/4HANA** define la estrategia de replicación. El foco principal es la tabla **`ACDOCA` (Universal Journal)**.
 
 --------------------------------------------------------------------------------
-SECCIÓN 1: MAPEO TRANSACCIÓN -> TABLAS
-1. Alcance: 18 Transacciones Priorizadas
+SECCIÓN 1: EL FOCO PRINCIPAL - UNIVERSAL JOURNAL (FI/CO)
 --------------------------------------------------------------------------------
 
-PRIORIDAD 1 (CRÍTICAS)
-----------------------
-Las 18 transacciones identificadas se agrupan por módulo y prioridad:
+| Módulo | Transacción | Tabla Clave S/4HANA | Observación |
+| :--- | :--- | :--- | :--- |
+| **FI/CO** | FAGLL03, KSB1, FB03, F.08, F.01 | **ACDOCA** (Universal Journal) | **CRÍTICA #1.** Contiene todas las partidas individuales y la información de la mayoría de las tablas clásicas (BSEG, FAGLFLEXA, COEP, etc.). **Replica solo esta en lugar de 10+ tablas antiguas.** |
+| **FI/CO** | FAGLL03, F.08, F.01 | **ACDOCA_T** | Contiene los totales pre-agregados, muy útil para reportes de balance de comprobación. |
+| **Maestros CO** | KSB1 | **CSKS, CSKA, AUFK** | Maestros de Centros de Costo, Elementos de Costo y Órdenes Internas. (Se mantienen iguales). |
+| **FI Clásico** | FBL1N, FBL5N | **BKPF** | Cabecera de documento (aún necesaria). Las partidas (`BSID/K/A/S`) **NO son necesarias** si se replica `ACDOCA`. |
 
-VA05 (Órdenes de Venta):
-    - VBAK (Cabecera de orden de venta)
-    - VBAP (Posiciones de la orden)
-    - VBEP (Fechas de entrega programadas)
-    - KNA1 (Maestro de clientes)
-    - MARA (Maestro de materiales)
-**Prioridad 1 (Críticas):**
-- **VA05** (Ventas - SD)
-- **ZLEL008** (Inventario - Custom)
-- **KSB1** (Costos/OPEX - CO)
-- **FAGLL03** (Mayor General - FI)
-
-ZLEL008 (Inventario Consolidado - Custom):
-    - MARD (Stock por almacén - posible)
-    - MSKA (Stock especial - posible)
-    - MSEG (Movimientos de material - posible)
-    - NOTA: Requiere análisis de código ABAP para confirmación.
-**Prioridad 2 (Importantes):**
-- **KE24** (Rentabilidad - CO-PA)
-- **FB03** (Documentos Contables - FI)
-- **F.08 y F.01** (Balances - FI)
-
-KSB1 (OPEX / Controlling):
-    - COBK (Cabecera de documentos CO)
-    - COEP (Partidas individuales CO)
-    - AUFK (Maestro de órdenes internas)
-    - CSKS (Maestro de centros de costo)
-    - CSKA (Maestro de elementos de costo)
-**Pendientes de Clasificar (10 transacciones):** Incluyen gestión de compras (ME2L), movimientos de material (MB59), partidas de clientes/proveedores (FBL5N, FBL1N) y datos maestros (XK03, XD03).
-
-FAGLL03 (Mayor General):
-    - FAGLFLEXA (Partidas individuales del nuevo GL)
-    - BKPF (Cabecera de documentos contables)
-    - BSEG (Segmentos de documentos contables)
-    - SKA1 (Plan de cuentas)
 --------------------------------------------------------------------------------
-2. Mapeo General: Transacción → Tablas Clave por Módulo
+SECCIÓN 2: MATERIALES Y LOGÍSTICA (MM/SD)
 --------------------------------------------------------------------------------
 
-En lugar de una lista exhaustiva, este es el mapeo conceptual por área funcional:
+| Módulo | Transacción | Tabla Clave | Propósito |
+| :--- | :--- | :--- | :--- |
+| **MM** | ME2L, ME23N | **EKKO, EKPO** | Cabecera y Posición de Pedidos de Compra. |
+| **MM** | MB59, MB5B | **MKPF, MSEG** | Cabecera y Posición de Movimientos de Material. |
+| **MM** | MM60 | **MBEW** | Valoración y Costo Estándar del Material (CRÍTICA). |
+| **MM** | ZLEL008, MB5B | **MARD, MCHB** | Stock por Almacén y Stock por Lote (si se usa). |
+| **SD** | VA05 | **VBAK, VBAP** | Cabecera y Posición de Órdenes de Venta. |
+| **SD** | VA05 | **VBUK, VBUP** | **CRÍTICA #2.** Estatus de Cabecera y Posición de Documentos de Venta. |
 
-PRIORIDAD 2 (IMPORTANTES)
--------------------------
-| Módulo SAP | Transacciones Clave | Tablas Principales a Replicar |
+--------------------------------------------------------------------------------
+SECCIÓN 3: DATOS MAESTROS Y CONDICIONES
+--------------------------------------------------------------------------------
+
+| Módulo | Transacción | Tabla Clave | Propósito |
+| :--- | :--- | :--- | :--- |
+| **Maestros** | XK03, XD03 | **BUT000** | Tabla principal de *Business Partner* (BP). **CRÍTICA.** |
+| **Maestros** | XK03, XD03 | KNA1, LFA1 | Tablas de clientes/proveedores (aún existen por compatibilidad). |
+| **Maestros** | MM60, VA05 | MARA, MAKT | Maestro de materiales y textos. |
+| **Precios** | ZVEL015 | **KONV, KONP** | Condiciones de documentos y maestro de condiciones. |
+
+--------------------------------------------------------------------------------
+SECCIÓN 4: TABLAS ESPECIALES (CLUSTER Y CUSTOM)
+--------------------------------------------------------------------------------
+
+| Módulo | Tabla | T-Code Asociado | Estrategia S/4HANA |
+| :--- | :--- | :--- | :--- |
+| **FI** | **BSEG** | N/A | **OBSOLETA** para replicación. La información está en **`ACDOCA`**. **No se debe replicar.** |
+| **Global** | **STXL** | (Textos) | **Mantiene el estatus de Clúster.** Si necesita textos de documentos (ej. de pedidos), **SÍ debe replicar `STXL`** y aplicar la lógica de *declustering* en SLT. |
+| **Custom** | ZLEL008, ZVEL015 | N/A | **ANÁLISIS ABAP OBLIGATORIO** para identificar las tablas `Zxxxx` subyacentes. |
+
+--------------------------------------------------------------------------------
+SECCIÓN 5: CONCLUSIÓN DEL MAPEO
+--------------------------------------------------------------------------------
+
+| Prioridad | Tablas / Estrategia | Razón |
 | :--- | :--- | :--- |
-| **FI (Finanzas)** | FAGLL03, FBL1N, FBL5N, FB03 | `FAGLFLEXA`, `BKPF`, `BSID`, `BSAD`, `BSIK`, `BSAK` |
-| **CO (Controlling)** | KSB1, KE24 | `COBK`, `COEP`, `AUFK`, `CE1xxxx` (dinámica) |
-| **SD (Ventas)** | VA05 | `VBAK`, `VBAP`, `VBEP` |
-| **MM (Materiales)** | ME2L, MB59, MB5B, ZLEL008 | `EKKO`, `EKPO`, `MSEG`, `MARD`, `MCHB` |
-| **MD (Datos Maestros)** | XK03, XD03 | `KNA1` (Clientes), `LFA1` (Proveedores), `MARA` (Materiales) |
-
-KE24 (Venta / CO-PA):
-    - CE1xxxx (Partidas reales CO-PA - dinámica)
-    - CE4xxxx (Partidas plan CO-PA - dinámica)
-En total, se han identificado aproximadamente 34 tablas únicas como punto de partida, lo cual se alinea con la estimación del proyecto de replicar entre 30 y 60 tablas principales.
-
-FB03 (Documentos de Venta):
-    - BKPF (Cabecera de documentos contables)
-    - BSEG (Segmentos de documentos contables)
-    - BSID (Partidas abiertas de deudores)
-    - BSAD (Partidas compensadas de deudores)
---------------------------------------------------------------------------------
-3. Estrategia de Replicación Técnica (La Clave del Éxito)
---------------------------------------------------------------------------------
-
-F.08 (Balance de Comprobación):
-    - FAGLFLEXA (Partidas individuales del nuevo GL)
-    - FAGLFLEXT (Tabla de totales del nuevo GL)
-No todas las tablas se tratan igual. La estrategia es fundamental para la eficiencia y la integridad de los datos:
-
-F.01 (Estado de Situación):
-    - FAGLFLEXA (Partidas individuales del nuevo GL)
-    - SKA1 (Plan de cuentas)
-**Tablas Transparentes (Replicación Directa):**
-La mayoría de las tablas (`VBAK`, `EKKO`, `COEP`, `FAGLFLEXA`, etc.) son transparentes. Se replicarán directamente a BigQuery.
-
-**Tablas de Clúster (Tratamiento Especial):**
-- **BSEG (Obsoleto en S/4HANA para reporting):** La estrategia de replicar índices secundarios (`BSID`, `BSAD`, etc.) ya no es necesaria. La tabla `ACDOCA` reemplaza y contiene toda esta información en un formato transparente y de alto rendimiento.
-
-- **STXL (Textos):** Es otra tabla clúster (tipo INDX) que almacena textos largos de documentos.
-- **Estrategia:** Si el negocio requiere los textos de cabecera/posición, se debe implementar una lógica de *declustering* específica en SLT, similar a la de `BSEG`.
-
-**Tablas Dinámicas (CO-PA):**
-- **Identificación:** Las tablas `CE1xxxx` (reales) y `CE4xxxx` (plan) son dinámicas.
-- **Acción Requerida:** Antes de replicar `KE24`, se debe confirmar el nombre exacto de la tabla (ej. `CE11000`) consultando el "Operating Concern" en la configuración de CO-PA. **No se puede replicar `CE1xxxx` directamente.**
-
-**Transacciones Custom (Z):**
-- Las transacciones **ZLEL008** (Inventario) y **ZVEL015** (Precios) son un riesgo conocido.
-- **Estrategia:** El **análisis de código ABAP es una medida CRÍTICA y OBLIGATORIA**. No se debe iniciar la replicación sin obtener el nombre exacto de las tablas `Z` subyacentes.
-
-Este enfoque garantiza que los datos en BigQuery sean performantes, legibles y consistentes con lo que los usuarios ven en SAP, evitando los cuellos de botella técnicos comunes en este tipo de proyectos.
-
---------------------------------------------------------------------------------
-4. Estrategia Definitiva para S/4HANA: Foco en `ACDOCA`
---------------------------------------------------------------------------------
-
-Dado que el sistema fuente es **SAP S/4HANA**, la estrategia de replicación para Finanzas y Controlling se simplifica y se centra en la Tabla Universal.
-
-**Tabla Universal Journal (`ACDOCA`):**
-- En S/4HANA, `ACDOCA` se convierte en la **única fuente de la verdad** para todos los datos de FI y CO.
-- Contiene la información combinada de `FAGLFLEXA`, `COEP`, `BSEG` y las tablas de índice (`BSID`, `BSIK`, etc.) en un formato transparente y optimizado.
-
-**Estrategia de Replicación Adoptada:**
-- **Prioridad Máxima:** Si la fuente es S/4HANA, **`ACDOCA` debe ser la tabla de mayor prioridad a replicar**.
-- **Ventaja Clave:** Replicar `ACDOCA` anula la necesidad de replicar aproximadamente 8 tablas complejas (`FAGLFLEXA`, `COEP`, `BSID`, `BSAD`, `BSIK`, `BSAK`, etc.) para documentos modernos, reduciendo la complejidad, el costo de almacenamiento y el tiempo de desarrollo. Las tablas de índice antiguas solo se considerarán si es necesario para datos históricos migrados de un sistema ECC anterior.
+| **CRÍTICA A** | Replicar **`ACDOCA`** y **`ACDOCA_T`**. | Sustituye a casi todas las tablas de Finanzas y Controlling (FI/CO) antiguas, resolviendo el problema de `BSEG` y `FAGLFLEXA`. |
+| **CRÍTICA B** | Replicar **`VBUK/VBUP`** y **`MBEW`**. | Tablas esenciales para el estatus de documentos (SD) y la valoración de inventario (MM). |
+| **ANÁLISIS Z** | Análisis ABAP de `ZLEL008` y `ZVEL015`. | Obtener la tabla **`Zxxxx`** subyacente para añadirla al alcance de SLT. |
+| **CLUSTER** | Replicar **`STXL`** con *declustering*. | Si se necesita cualquier texto de documento de SAP. |

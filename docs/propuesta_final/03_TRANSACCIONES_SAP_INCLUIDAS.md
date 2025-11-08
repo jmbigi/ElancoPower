@@ -86,6 +86,7 @@ Transacción para consultar órdenes de venta abiertas (pendientes de facturaci�
 
 #### Datos Clave
 - **Tablas SAP principales:** VBAK (cabecera), VBAP (posiciones), VBEP (schedule lines)
+- **Tablas SAP principales en S/4HANA:** VBAK (cabecera), VBAP (posiciones), VBUK (status cabecera), VBUP (status posición)
 - **Campos críticos:**
   - Número de orden (VBELN)
   - Cliente (KUNNR)
@@ -169,6 +170,7 @@ Reporte de partidas reales de órdenes de costos (órdenes internas de CO). Util
 
 #### Datos Clave
 - **Tablas SAP principales:** COBK (cabecera doc CO), COEP (partidas individuales), AUFK (maestro de órdenes)
+- **Tablas SAP principales en S/4HANA:** ACDOCA (Universal Journal), AUFK (maestro de órdenes), CSKS (maestro centros de costo)
 - **Campos críticos:**
   - Orden CO (AUFNR)
   - Centro de costo (KOSTL)
@@ -207,6 +209,7 @@ Visualización de partidas individuales del libro mayor (General Ledger). Transa
 
 #### Datos Clave
 - **Tablas SAP principales:** FAGLFLEXA (partidas individuales nuevo GL), BKPF (cabecera documento), BSEG (segmento documento)
+- **Tablas SAP principales en S/4HANA:** ACDOCA (Universal Journal), BKPF (cabecera documento)
 - **Campos críticos:**
   - Sociedad (BUKRS)
   - Cuenta de mayor (RACCT)
@@ -227,7 +230,7 @@ Visualización de partidas individuales del libro mayor (General Ledger). Transa
 #### Complejidad de Implementación
 **Media-Alta** - Tabla FAGLFLEXA de gran volumen, requiere filtros eficientes
 
-#### Volumen Estimado
+#### Volumen Estimado (Basado en ACDOCA)
 - Registros históricos: ~5M-10M partidas (24 meses)
 - Crecimiento mensual: ~200K-400K partidas
 
@@ -250,6 +253,7 @@ Reporte de partidas individuales de CO-PA (Cuenta de Resultados). Análisis de r
 
 #### Datos Clave
 - **Tablas SAP principales:** CE1xxxx (partidas reales), CE4xxxx (partidas plan)
+- **Tablas SAP principales en S/4HANA:** ACDOCA (Universal Journal, si CO-PA es basado en cuenta), CE1xxxx (si es CO-PA basado en costos)
 - **Campos críticos:**
   - Cliente (KUNNR)
   - Material (MATNR)
@@ -287,6 +291,7 @@ Visualización de documentos contables (facturas, notas de crédito, pagos). Tra
 
 #### Datos Clave
 - **Tablas SAP principales:** BKPF (cabecera), BSEG (posiciones), BSID/BSAD (partidas deudores)
+- **Tablas SAP principales en S/4HANA:** BKPF (cabecera), ACDOCA (posiciones)
 - **Campos críticos:**
   - Número documento (BELNR)
   - Tipo documento (BLART)
@@ -324,6 +329,7 @@ Balance de comprobación (Trial Balance) por cuenta de mayor. Resume saldos inic
 
 #### Datos Clave
 - **Tablas SAP principales:** FAGLFLEXA (partidas), FAGLFLEXT (totales periodo)
+- **Tablas SAP principales en S/4HANA:** ACDOCA (partidas), ACDOCA_T (totales periodo)
 - **Campos críticos:**
   - Cuenta de mayor (RACCT)
   - Saldo inicial
@@ -358,6 +364,7 @@ Balance General (Balance Sheet) con estructura jerárquica de cuentas.
 
 #### Datos Clave
 - **Tablas SAP principales:** FAGLFLEXA, SKA1 (plan de cuentas)
+- **Tablas SAP principales en S/4HANA:** ACDOCA, SKA1 (plan de cuentas)
 - **Campos críticos:**
   - Cuenta de mayor (RACCT)
   - Grupo de cuentas
@@ -465,7 +472,7 @@ Visualización individual de pedidos de compra.
 #### Descripción Preliminar
 Partidas individuales de proveedores (cuentas por pagar).
 
-**Tablas SAP principales:** BSIK (partidas abiertas), BSAK (partidas compensadas)
+**Tablas SAP principales en S/4HANA:** BKPF, ACDOCA (filtrando por tipo de cuenta 'K')
 
 ---
 
@@ -479,7 +486,7 @@ Partidas individuales de proveedores (cuentas por pagar).
 #### Descripción Preliminar
 Partidas individuales de clientes (cuentas por cobrar).
 
-**Tablas SAP principales:** BSID (partidas abiertas), BSAD (partidas compensadas)
+**Tablas SAP principales en S/4HANA:** BKPF, ACDOCA (filtrando por tipo de cuenta 'D')
 
 ---
 
@@ -507,7 +514,7 @@ Stock de materiales por centro/almacén.
 #### Descripción Preliminar
 Visualización de maestro de proveedores.
 
-**Tablas SAP principales:** LFA1 (general), LFB1 (datos sociedad), LFM1 (datos organización compras)
+**Tablas SAP principales en S/4HANA:** BUT000 (datos generales BP), LFA1, LFB1 (vistas de compatibilidad)
 
 ---
 
@@ -521,7 +528,7 @@ Visualización de maestro de proveedores.
 #### Descripción Preliminar
 Visualización de maestro de clientes.
 
-**Tablas SAP principales:** KNA1 (general), KNB1 (datos sociedad), KNVV (datos ventas)
+**Tablas SAP principales en S/4HANA:** BUT000 (datos generales BP), KNA1, KNB1, KNVV (vistas de compatibilidad)
 
 ---
 

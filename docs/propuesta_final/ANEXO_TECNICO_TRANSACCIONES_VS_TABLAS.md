@@ -431,4 +431,4 @@ Luego recreas el informe en Power BI usando esos datos.
 
 **Fin del Anexo Técnico**
 
-*Versión: 1.1 - 8 de noviembre de 2025 (unificación rango tablas ~76-85, aclaraciones de proceso y consistencia de numeraciones)*
+*Versión: 1.0 - 7 de noviembre de 2025*
