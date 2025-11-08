@@ -194,7 +194,7 @@ En SLT se configura:
 - `BKPF` (Cabecera de documentos contables)
 - `SKA1` (Plan de cuentas)
 **Total Estimado:** ~4 tablas
-**Complejidad Muy Alta:** `FAGLFLEXA` es una de las tablas más grandes y críticas de SAP FI, requiriendo estrategias de particionamiento y filtros eficientes.
+**Complejidad Muy Alta:** `ACDOCA` es una de las tablas más grandes y críticas en S/4HANA FI/CO, requiriendo estrategias de particionamiento y filtros eficientes.
 
 ### Estimación para el Proyecto
 
@@ -218,7 +218,7 @@ ENTRADAS (Fase 0)              PROCESO                    SALIDAS
 ─────────────────              ───────                    ────────
 ┌─────────────────┐           ┌──────────────────┐      ┌────────────────┐
 │ 18 Transacciones│──────────▶│ Análisis de      │─────▶│ Lista de       │
-│ SAP priorizadas │           │ Tablas           │      │ 76-85 Tablas   │
+│ SAP priorizadas │           │ Tablas           │      │ 35-65 Tablas   │
 └─────────────────┘           │ Subyacentes      │      │ SAP a Replicar │
                               └──────────────────┘      └────────────────┘
                                        │
@@ -301,7 +301,7 @@ Por ejemplo:
 
 ---
 
-## 7. Configuración Típica de SLT
+## 7. Configuración Típica de SLT y Optimización BigQuery (S/4HANA)
 
 ### 7.1. Configuración por Tabla
 
@@ -310,7 +310,7 @@ Para cada tabla a replicar:
 ```sql
 -- Ejemplo conceptual de configuración SLT para tabla VBAK
 
-SOURCE_SYSTEM: SAP_ECC_PRD
+SOURCE_SYSTEM: SAP_S4_PRD
 SOURCE_TABLE: VBAK
 TARGET_SYSTEM: BIGQUERY
 TARGET_TABLE: casa_bi_prod.raw_vbak
@@ -340,6 +340,78 @@ SLT proporciona:
 - Número de registros replicados
 - Errores y advertencias
 
+### 7.3. Recomendaciones BigQuery para ACDOCA (Universal Journal)
+
+Objetivo: rendimiento consistente y costos controlados en consultas contables y de controlling.
+
+- Modelo por capas (nombres referenciales):
+  - raw_acdoca: réplica 1:1 desde SLT (columnas técnicas incluidas)
+  - stg_acdoca: tipado y normalización (conversiones de fecha/moneda)
+  - fact_acdoca: tabla de hechos optimizada para analítica
+  - mv_acdoca_totales: vista/materialización de totales mensuales (uso de ACDOCA_T cuando aplique)
+
+- Particionamiento recomendado:
+  - Por fecha de contabilización: BUDAT_DATE (DATE) derivado de BUDAT
+  - Alternativa: partición por entero de periodo fiscal (INT RANGE sobre GJAHR_POPER = GJAHR*100 + POPER)
+  - Retención: histórico de 24-36 meses particionado; particiones antiguas opcionalmente archivadas
+
+- Clustering recomendado (hasta 4 columnas por tabla, ajustable por caso de uso):
+  - FI/CO general: BUKRS, RLDNR, RACCT, KOSTL
+  - Opcional según uso: PRCTR, AUFNR, SEGMENT
+  - Para análisis SD en ACDOCA: KUNNR, MATNR (si están pobladas)
+
+- Clave técnica y unicidad:
+  - Componer doc_key = CONCAT_WS('|', RLDNR, BUKRS, GJAHR, BELNR, DOCLN)
+  - Mantener columnas de operación CDC del conector (op_type I/U/D o _CHANGE_TYPE) y un flag _is_deleted
+
+- Tipos de datos y normalización:
+  - Importes (CURR/DEC): BigQuery NUMERIC/ BIGNUMERIC según precisión
+  - Fechas: convertir DATS (YYYYMMDD) a DATE; tiempos a DATETIME/TIMESTAMP con TZ definida
+  - Monedas: mantener CUKY (WAERS) y considerar tablas TCUR* si se requieren conversiones
+
+- Seguridad y gobierno:
+  - Row-level security por BUKRS y/o RLDNR cuando aplique
+  - Etiquetas/tags: sistema=SAP, dominio=FI, criticidad=alta, retencion=36m
+
+- Optimización de consultas típicas:
+  - Trial Balance: preferir ACDOCA_T o materializar totales por BUKRS/RLDNR/RACCT/GJAHR/POPER
+  - Conciliaciones: filtrar por periodo y sociedad; evitar scans cross-ledger innecesarios
+
+- Costos y mantenimiento:
+  - Programar vaciado de particiones históricas si no se requiere >36m
+  - Auditoría de bytes escaneados por dashboard para ajustar clustering
+
+### 7.4. Checklist de Validación con TI Global (S/4HANA → BigQuery)
+
+1) Disponibilidad ACDOCA y ACDOCA_T
+   - Profundidad histórica (meses) y cobertura delta
+   - Frecuencia y latencia objetivo (diaria o near-real-time)
+
+2) Configuración SLT / Conector
+   - Modo de replicación (RT vs batch) y colas
+   - Marcadores de operación (I/U/D) y manejo de borrados
+
+3) Integridad y llaves
+   - Conformidad de clave (RLDNR, BUKRS, GJAHR, BELNR, DOCLN)
+   - Join con BKPF validado (BELNR/BUKRS/GJAHR)
+
+4) Tablas complementarias críticas
+   - SD: VBUK/VBUP para estatus; VBAK/VBAP para cabecera/posiciones
+   - MM: MBEW (valoración), MARD/MCHB (stock), MKPF/MSEG (movimientos)
+   - Textos: STXL declustering si se requieren textos
+
+5) Estándares de datos
+   - Mapeo de tipos SAP → BigQuery (DEC→NUMERIC, DATS→DATE)
+   - Zona horaria y calendario fiscal (períodos POPER)
+
+6) Seguridad y cumplimiento
+   - RLS por sociedad (BUKRS)
+   - Encriptación y etiquetado de datasets/tablas
+
+7) Operación y monitoreo
+   - Dashboards de replicación (lag, errores)
+   - Procedimiento de re-procesamiento inicial y reintentos
+
 ---
 
 ## 8. Resumen Ejecutivo
@@ -368,7 +440,7 @@ Luego recreas el informe en Power BI usando esos datos.
 **Proceso Completo:**
 
 1. **Negocio identifica** 18 transacciones críticas
-2. **Fase 0 mapea** transacciones → ~76-85 tablas SAP (rango canónico refinado)
+2. **Fase 0 mapea** transacciones → ~35-65 tablas SAP (optimizado por ACDOCA)
 3. **TI Global confirma** disponibilidad de tablas en BigQuery
 4. **SLT replica** tablas configuradas a BigQuery
 5. **BigQuery procesa** datos (limpieza, transformaciones)
@@ -430,4 +502,4 @@ Luego recreas el informe en Power BI usando esos datos.
 
 **Fin del Anexo Técnico**
 
-*Versión: 1.1 - 8 de noviembre de 2025*
+*Versión: 1.2 - 8 de noviembre de 2025*
