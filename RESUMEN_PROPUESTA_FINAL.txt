@@ -1,6 +1,6 @@
 RESUMEN DE LA PROPUESTA FINAL DE CENTRALIZACIÓN DE DATOS
 Proyecto: Data Lake y Analítica Empresarial para Elanco Animal Health (Operación CASA)
-Fecha: 7 de noviembre de 2025
+Fecha: 8 de noviembre de 2025
 Norma: Menos de 2500 palabras
 ================================================================================
 
@@ -26,14 +26,14 @@ PIPELINE TECNOLÓGICO
 La solución se construirá sobre un stack tecnológico moderno y robusto, confirmado por las áreas de Finanzas y Operaciones de Elanco.
 - **Fuente de Datos (ERP):** SAP S/4HANA, utilizando los módulos de Finanzas (FI), Controlling (CO), Ventas y Distribución (SD) y Gestión de Materiales (MM).
 - **Servidor de Replicación:** Se usará SAP Landscape Transformation Server (SLT) para la replicación de datos en tiempo real desde SAP.
-- **Data Lake:** Google BigQuery será el repositorio centralizado de datos, utilizando el dataset `CASA`.
+- **Data Lake:** Google BigQuery será el repositorio centralizado de datos, utilizando el dataset `casa_bi` (ambientes dev/qa/prod).
 - **Visualización (BI):** Microsoft Power BI para la creación de los 12 dashboards interactivos. Elanco ya ha adquirido 8 licencias Pro.
 - **Herramientas de Soporte:** El proyecto se apoyará en BigQuery Studio para consultas.
 
 
 FASES DEL PROYECTO
 
-El proyecto se divide en tres fases que suman 42 semanas. La Fase 0 de Revisión de Alcance y Factibilidad durará 6 semanas. En esta etapa se realizará una auditoría técnica completa, se validará la disponibilidad de tablas SAP en BigQuery, se priorizarán las 18 transacciones con stakeholders, se elaborará un plan detallado, y se realizará un POC técnico end-to-end. Al finalizar habrá una reunión crítica de Go/No-Go donde se decidirá si continuar con el proyecto.
+El proyecto se ejecuta en Fases 0 a 2 que suman 42 semanas. La Fase 0 de Revisión de Alcance y Factibilidad durará 6 semanas. En esta etapa se realizará una auditoría técnica completa, se validará la disponibilidad de tablas SAP en BigQuery, se priorizarán las 18 transacciones con stakeholders, se elaborará un plan detallado, y se realizará un POC técnico end-to-end. Al finalizar habrá una reunión crítica de Go/No-Go donde se decidirá si continuar con el proyecto.
 La Fase 1 de Construcción del Data Lake tomará 22 semanas. Se implementarán pipelines automatizados para extraer y transformar datos de las 18 transacciones SAP hacia BigQuery. Se configurarán las tres zonas de datos, se implementará historización de al menos 24 meses, y se realizarán validaciones exhaustivas comparando datos de SAP contra BigQuery para asegurar precisión mayor al 99%. Esta fase incluye la construcción secuencial de pipelines por módulos: FI, SD, MM, CO, y transacciones custom complejas (ZLEL008, ZVEL015).
 La Fase 2 de Modelado y Dashboards durará 14 semanas. Se diseñará el modelo dimensional con dimensiones de Tiempo, Geografía, Producto, Cliente, Proveedor, Centro y Cuenta Contable. Se desarrollarán los 12 dashboards en Power BI con sus respectivas visualizaciones interactivas, se configurará RLS por país y área, se realizarán pruebas de aceptación de usuario (UAT) en 4 semanas, y se capacitará a los usuarios finales antes del Go-Live.
 La Fase 3 es solo una descripción conceptual de modelos predictivos sin implementación. Se identificarán 8 casos de uso potenciales como pronóstico de ventas, optimización de inventarios, predicción de morosidad, detección de fraudes, segmentación de clientes, entre otros. Se entregará un documento con análisis exploratorio y propuesta de arquitectura para Machine Learning, junto con un roadmap para futura implementación.
@@ -42,7 +42,7 @@ La Fase 3 es solo una descripción conceptual de modelos predictivos sin impleme
 ESFUERZO Y RECURSOS
 
 El esfuerzo total del proyecto es de 1590 horas distribuidas en 42 semanas. La Fase 0 requiere 235 horas (6 semanas), la Fase 1 necesita 696 horas (22 semanas), y la Fase 2 demanda 659 horas (14 semanas). El equipo estará compuesto por Juan Manuel Bigi como Arquitecto de Datos y Desarrollador principal con 961 horas, Lucía Rodríguez como Analista SAP y Power User con 484 horas, y Linda López como Project Manager con 145 horas. No se incluye consultoría ABAP adicional ya que Lucía y Juan cuentan con expertise SAP.
-Es importante destacar que Juan Manuel Bigi trabaja máximo 6 horas por día (30 horas semanales) por restricciones personales, lo cual fue considerado en la planificación del cronograma. El proyecto iniciaría el 1 de diciembre de 2025 y finalizaría aproximadamente a mediados de septiembre de 2026 (semana 42 del cronograma).
+El inicio propuesto es el 6 de enero de 2026 y la finalización estimada a mediados de octubre de 2026 (semana 42 del cronograma).
 
 
 ENTREGABLES PRINCIPALES
@@ -67,14 +67,14 @@ Los stakeholders de Finanzas y Supply Chain deben estar disponibles aproximadame
 
 RIESGOS Y MITIGACIONES
 
-Existen varios riesgos identificados en el proyecto. El principal es que las transacciones custom (ZLEL008, ZVEL015) sean más complejas de lo estimado, para lo cual se incluyen 12 horas de consultoría ABAP especializada. Otro riesgo es que las tablas SAP requeridas no estén disponibles en BigQuery, lo cual se mitigó con un análisis exhaustivo en Fase 0 y se contempló usar workarounds si es necesario.
+Existen varios riesgos identificados en el proyecto. El principal es que las transacciones custom (ZLEL008, ZVEL015) sean más complejas de lo estimado, para lo cual, si fuera necesario, se considerará hasta 12 horas de consultoría ABAP especializada mediante Change Request (no incluidas en el esfuerzo base). Otro riesgo es que las tablas SAP requeridas no estén disponibles en BigQuery, lo cual se mitigó con un análisis exhaustivo en Fase 0 y se contempló usar workarounds si es necesario.
 Existe riesgo de que TI Global retrase respuestas a tickets, por eso se incorporaron holguras en el cronograma de 2 a 3 semanas. Los cambios de alcance durante desarrollo se manejan mediante un proceso formal de Change Request que requiere cotización adicional y aprobación. Si hay problemas de performance en BigQuery se aplicarán técnicas de optimización como particionamiento y clustering que ya están consideradas en el diseño.
 
 
 CONDICIONES COMERCIALES Y GARANTÍAS
 
 El esfuerzo total es de 1590 horas distribuidas en 42 semanas. Las condiciones comerciales específicas y esquema de facturación serán definidas en acuerdo separado. Si el proyecto se detiene en Fase 0 con decisión de NO-GO, solo se factura el esfuerzo de esa fase que son 235 horas.
-El proyecto incluye garantías de calidad con dashboards funcionales sin errores críticos, datos validados con precisión mayor al 95% contra SAP, documentación completa, y código limpio versionado. Se incluyen 30 días de soporte post go-live desde la finalización del proyecto (mediados de septiembre 2026), cubriendo corrección de bugs, ajustes menores, troubleshooting de errores, y soporte a usuarios en horario laboral de lunes a viernes de 9 AM a 6 PM.
+El proyecto incluye garantías de calidad con dashboards funcionales sin errores críticos, datos validados con precisión mayor al 99% contra SAP, documentación completa, y código limpio versionado. Se incluyen 30 días de soporte post go-live desde la finalización del proyecto (mediados de octubre 2026), cubriendo corrección de bugs, ajustes menores, troubleshooting de errores, y soporte a usuarios en horario laboral de lunes a viernes de 9 AM a 6 PM.
 
 
 EXCLUSIONES DEL ALCANCE
@@ -91,8 +91,8 @@ La exactitud de datos entre SAP y BigQuery debe ser mayor o igual al 99.5%. La d
 
 PRÓXIMOS PASOS
 
-Una vez aceptada la propuesta, los próximos pasos son firmar el contrato formal que Aunergia preparará en 3 a 5 días hábiles, definir el acuerdo comercial basado en las 1590 horas de esfuerzo, programar la reunión de kick-off para el 1 de diciembre de 2025 con duración de 2 a 3 horas, iniciar trámites de accesos a SAP, BigQuery y Power BI, y comenzar formalmente la Fase 0 en la primera semana de diciembre.
-La validez de esta propuesta es de 30 días desde su emisión, hasta el 7 de diciembre de 2025. El proyecto representa una transformación digital significativa que modernizará los procesos de análisis de datos de Elanco, eliminará tareas manuales repetitivas, y habilitará toma de decisiones basada en información actualizada y confiable para toda la operación CASA.
+Una vez aceptada la propuesta, los próximos pasos son firmar el contrato formal que Aunergia preparará en 3 a 5 días hábiles, definir el acuerdo comercial basado en las 1590 horas de esfuerzo, programar la reunión de kick-off para el 6 de enero de 2026 con duración de 2 a 3 horas, iniciar trámites de accesos a SAP, BigQuery y Power BI, y comenzar formalmente la Fase 0 en la primera semana de enero.
+La validez de esta propuesta es de 30 días desde su emisión, hasta el 8 de diciembre de 2025. El proyecto representa una transformación digital significativa que modernizará los procesos de análisis de datos de Elanco, eliminará tareas manuales repetitivas, y habilitará toma de decisiones basada en información actualizada y confiable para toda la operación CASA.
 
 
 INFORMACIÓN DE CONTACTO
