@@ -30,7 +30,7 @@ La Fase 3 es solo una descripción conceptual de modelos predictivos sin impleme
 
 ESFUERZO Y RECURSOS
 
-El esfuerzo total del proyecto es de 1590 horas distribuidas en 42 semanas. La Fase 0 requiere 235 horas (6 semanas), la Fase 1 necesita 696 horas (22 semanas), y la Fase 2 demanda 659 horas (14 semanas). El equipo estará compuesto por Juan Manuel Bigi como Arquitecto de Datos y Desarrollador principal con 961 horas, Lucía Rodríguez como Analista SAP y Power User con 484 horas, y Linda López como Project Manager con 145 horas. No se incluye consultoría ABAP adicional ya que Lucía cuenta con expertise SAP.
+El esfuerzo total del proyecto es de 1590 horas distribuidas en 42 semanas. La Fase 0 requiere 235 horas (6 semanas), la Fase 1 necesita 696 horas (22 semanas), y la Fase 2 demanda 659 horas (14 semanas). El equipo estará compuesto por Juan Manuel Bigi como Arquitecto de Datos y Desarrollador principal con 961 horas, Lucía Rodríguez como Analista SAP y Power User con 484 horas, y Linda López como Project Manager con 145 horas. No se incluye consultoría ABAP adicional ya que Lucía y Juan cuentan con expertise SAP.
 Es importante destacar que Juan Manuel Bigi trabaja máximo 6 horas por día (30 horas semanales) por restricciones personales, lo cual fue considerado en la planificación del cronograma comprimido. El proyecto iniciaría el 1 de diciembre de 2025 y finalizaría aproximadamente el 20 de septiembre de 2026.
 
 
@@ -44,8 +44,8 @@ La Fase 3 entregará un documento descriptivo con catálogo de casos de uso de M
 
 BENEFICIOS ESPERADOS
 
-El proyecto generará ahorros operativos significativos. Se estima una reducción del 70% en tiempo de extracción y consolidación de datos, liberando aproximadamente 3,620 horas al año considerando tres áreas principales. Los dashboards estarán disponibles en 24 horas tras cierre mensual comparado con los 5 a 7 días actuales. Se eliminan procesos manuales propensos a errores en áreas críticas de Finanzas, Ventas, Inventario y OPEX.
-La democratización del acceso a datos mediante Power BI permitirá que usuarios de diferentes niveles organizacionales puedan consultar información sin depender de TI. Se establece una versión única de la verdad con trazabilidad completa de cambios. El periodo de recuperación de la inversión se estima en aproximadamente 2 meses de operación, con un ratio de retorno de 5.3 horas ahorradas por cada hora invertida en el proyecto.
+El proyecto generará ahorros operativos significativos. Se estima una reducción del 70% en tiempo de extracción y consolidación de datos, liberando una cantidad sustancial de horas al año considerando las áreas principales de Finanzas, Supply Chain y otras áreas operativas. Los dashboards estarán disponibles en 24 horas tras cierre mensual comparado con los 5 a 7 días actuales. Se eliminan procesos manuales propensos a errores en áreas críticas de Finanzas, Ventas, Inventario y OPEX.
+La democratización del acceso a datos mediante Power BI permitirá que usuarios de diferentes niveles organizacionales puedan consultar información sin depender de TI. Se establece una versión única de la verdad con trazabilidad completa de cambios. El retorno de la inversión será medido durante la Fase 0 con base en métricas reales de tiempo actualmente dedicado a procesos manuales.
 
 
 REQUISITOS Y DEPENDENCIAS CRÍTICAS
