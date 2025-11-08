@@ -24,18 +24,17 @@ Se desarrollarán 12 dashboards ejecutivos en Power BI que cubrirán áreas clav
 PIPELINE TECNOLÓGICO
 
 La solución se construirá sobre un stack tecnológico moderno y robusto, confirmado por las áreas de Finanzas y Operaciones de Elanco.
-- **Fuente de Datos (ERP):** SAP S/4HANA, utilizando los módulos de Finanzas (FI), Controlling (CO), Ventas y Distribución (SD) y Gestión de Materiales (MM).
-- **Servidor de Replicación:** Se usará SAP Landscape Transformation Server (SLT) para la replicación de datos en tiempo real desde SAP.
-- **Data Lake:** Google BigQuery será el repositorio centralizado de datos, utilizando el dataset `casa_bi` (ambientes dev/qa/prod).
-- **Visualización (BI):** Microsoft Power BI para la creación de los 12 dashboards interactivos. Elanco ya ha adquirido 8 licencias Pro.
-- **Herramientas de Soporte:** El proyecto se apoyará en BigQuery Studio para consultas.
+- Fuente de Datos (ERP): SAP S/4HANA, utilizando los módulos de Finanzas (FI), Controlling (CO), Ventas y Distribución (SD) y Gestión de Materiales (MM).
+- Servidor de Replicación: Se usará SAP Landscape Transformation Server (SLT) para la replicación de datos en tiempo real desde SAP.
+- Data Lake:** Google BigQuery será el repositorio centralizado de datos, utilizando el dataset `casa_bi` (ambientes dev/qa/prod).
+- Visualización (BI): Microsoft Power BI para la creación de los 12 dashboards interactivos. Elanco ya ha adquirido 8 licencias Pro.
+- Herramientas de Soporte: El proyecto se apoyará en BigQuery Studio para consultas.
 
 
 FASES DEL PROYECTO
 
 El proyecto se ejecuta en Fases 0 a 2 que suman 42 semanas. La Fase 0 de Revisión de Alcance y Factibilidad durará 6 semanas. En esta etapa se realizará una auditoría técnica completa, se validará la disponibilidad de tablas SAP en BigQuery, se priorizarán las 18 transacciones con stakeholders, se elaborará un plan detallado, y se realizará un POC técnico end-to-end. Al finalizar habrá una reunión crítica de Go/No-Go donde se decidirá si continuar con el proyecto.
 La Fase 1 de Construcción del Data Lake tomará 22 semanas. Se implementarán pipelines automatizados para extraer y transformar datos de las 18 transacciones SAP hacia BigQuery. Se configurarán las tres zonas de datos, se implementará historización de al menos 24 meses, y se realizarán validaciones comparando datos de SAP contra BigQuery para asegurar precisión. Esta fase incluye la construcción secuencial de pipelines por módulos: FI, SD, MM, CO, y transacciones custom complejas (ZLEL008, ZVEL015).
-La Fase 1 de Construcción del Data Lake tomará 22 semanas.
 La Fase 2 de Modelado y Dashboards durará 14 semanas. Se diseñará el modelo dimensional con dimensiones de Tiempo, Geografía, Producto, Cliente, Proveedor, Centro y Cuenta Contable. Se desarrollarán los 12 dashboards en Power BI con sus respectivas visualizaciones interactivas, se configurará RLS por país y área, se realizarán pruebas de aceptación de usuario (UAT) en 4 semanas, y se capacitará a los usuarios finales antes del Go-Live.
 La Fase 3 es solo una descripción conceptual de modelos predictivos sin implementación. Se identificarán 8 casos de uso potenciales como pronóstico de ventas, optimización de inventarios, predicción de morosidad, detección de fraudes, segmentación de clientes, entre otros. Se entregará un documento con análisis exploratorio y propuesta de arquitectura para Machine Learning, junto con un roadmap para futura implementación.
 

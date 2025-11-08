@@ -170,7 +170,6 @@ chmod +x create_service_account.sh
 | **Scripts Incluidos** | 50+ scripts completos y funcionales |
 | **Vistas Creadas** | 7 vistas analíticas + 1 materializada |
 | **Costo Infraestructura Año 1** | $55,200 USD |
-| **Uptime Esperado** | 99.5% SLT + 99.9% BigQuery |
 | **Lag de Replicación** | < 2 minutos promedio |
 
 ---
@@ -279,7 +278,7 @@ chmod +x create_service_account.sh
 - **Horario:** Lunes a Viernes 8:00-18:00 (GMT-5)
 
 ### Para Emergencias (P1)
-- **Teléfono:** +1-XXX-XXX-XXXX (24/7 on-call)
+- **Teléfono:** +1-XXX-XXX-XXXX (on-call)
 - **Email:** sap-critical@elanco.com
 
 ### Para Consultas de Negocio

@@ -109,9 +109,9 @@ SAP S/4HANA
     │               │
     │               └──[Monitoring]──► Cloud Monitoring
     │                                       │
-    │                                       └─► Alertas 24/7
+    │                                       └─► Alertas
     └──────────────────────────────────────────────────────────┘
-         Lag < 2 min | Uptime 99.5% | 640K registros
+        Lag < 2 min | 640K registros
 ```
 
 ---
@@ -197,7 +197,7 @@ Output:           Sistema en producción, usuarios capacitados
 **Daily Standup:** 9:00 AM
 
 ### Emergencias:
-**On-call:** +1-XXX-XXX-XXXX (24/7)  
+**On-call:** +1-XXX-XXX-XXXX  
 **Email:** sap-critical@elanco.com
 
 ---
@@ -272,7 +272,7 @@ Output:           Sistema en producción, usuarios capacitados
 ### Semana 10: Go-Live ✅
 - [ ] Sistema en producción
 - [ ] Usuarios capacitados
-- [ ] Monitoreo activo 24/7
+- [ ] Monitoreo activo
 - [ ] Documentación entregada
 
 ---
@@ -281,7 +281,6 @@ Output:           Sistema en producción, usuarios capacitados
 
 | KPI | Target | Medición |
 |-----|--------|----------|
-| **Uptime** | > 99.5% | Cloud Monitoring |
 | **Lag de Replicación** | < 2 min | Métrica custom |
 | **Completitud Datos** | > 99.9% | Reconciliation report |
 | **Satisfacción Usuario** | > 4.5/5 | Survey post-training |
