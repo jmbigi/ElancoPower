@@ -88,7 +88,7 @@ FASE 3: Transacciones Complementarias
 - ✅ 50+ scripts (bash, python, ABAP, SQL)
 - ✅ Vista VA05_SALES_ORDERS
 - ✅ Dashboard de KPIs
-- ✅ Sistema de monitoreo 24/7
+- ✅ Sistema de monitoreo
 - ✅ Documentación completa
 
 #### Referencia

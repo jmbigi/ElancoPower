@@ -358,7 +358,6 @@ docs/propuesta_final/solucion_slt_completa/    📁 ESTA CARPETA
 | **Scripts Incluidos** | 50+ funcionales y listos |
 | **Vistas BigQuery** | 7 vistas analíticas |
 | **Lag de Replicación** | < 2 minutos |
-| **Uptime Esperado** | 99.5% |
 
 ---
 

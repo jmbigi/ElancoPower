@@ -50,9 +50,9 @@ SAP S/4HANA
     │               │
     │               └──[Monitoring]──► Cloud Monitoring
     │                                       │
-    │                                       └─► Alertas 24/7
+    │                                       └─► Alertas
     └──────────────────────────────────────────────────────────┘
-         Lag < 2 min | Uptime 99.5% | 640K registros
+       Lag < 2 min | 640K registros
 ```
 
 ---
@@ -140,9 +140,9 @@ Sem 10:  Go-Live               ░░░░░░░░░░░░░░░░�
 |------|--------|------------|
 | **Kick-off** | 0 | Equipo conformado |
 | **Infraestructura Lista** | 2 | SLT + GCP operativos |
-| **Replicación Activa** | 5 | CDC funcionando 24/7 |
+| **Replicación Activa** | 5 | CDC funcionando |
 | **Vistas Disponibles** | 6 | VA05 accesible en BigQuery |
-| **Monitoreo Activo** | 7 | Sistema monitoreado 24/7 |
+| **Monitoreo Activo** | 7 | Sistema monitoreado |
 | **UAT Completado** | 9 | Testing exitoso |
 | **Go-Live** | 10 | Producción ✅ |
 
@@ -177,7 +177,7 @@ Sem 10:  Go-Live               ░░░░░░░░░░░░░░░░�
 - Proyecto GCP completo
 - 3 datasets BigQuery (replicas, staging, analytics)
 - Túnel seguro SAP Cloud Connector
-- Sistema de monitoreo 24/7
+- Sistema de monitoreo
 
 ---
 
@@ -185,8 +185,6 @@ Sem 10:  Go-Live               ░░░░░░░░░░░░░░░░�
 
 ### Performance
 - **Latencia de Replicación:** < 2 minutos (promedio)
-- **Uptime SLT:** 99.5% (downtime < 3.6 hrs/mes)
-- **Uptime BigQuery:** 99.9% (SLA de Google)
 - **Query Performance:** < 5 segundos (queries simples)
 - **Dashboard Load Time:** < 10 segundos
 
@@ -210,8 +208,7 @@ Sem 10:  Go-Live               ░░░░░░░░░░░░░░░░�
 | KPI | Objetivo | Método de Medición |
 |-----|----------|-------------------|
 | **Completitud de Datos** | 99.9% | Comparación conteos SAP vs BQ |
-| **Latencia de Replicación** | < 2 min promedio | Cloud Monitoring métricas |
-| **Uptime del Sistema** | 99.5% | Monitoreo 24/7 |
+| **Latencia de Replicación** | < 2 min promedio | Métricas técnicas |
 | **Satisfacción Usuarios** | > 4.5/5 | Survey post go-live |
 | **Queries Exitosos** | > 95% | BigQuery job logs |
 | **Tiempo de Resolución P1** | < 4 horas | Ticketing system |
@@ -297,7 +294,7 @@ Sem 10:  Go-Live               ░░░░░░░░░░░░░░░░�
 - [ ] Replicación de 6 tablas al 100%
 - [ ] Diferencia de conteos < 0.1%
 - [ ] Lag de replicación < 2 minutos
-- [ ] CDC activo 24/7 sin errores
+- [ ] CDC activo sin errores
 
 #### Operacionales ✅
 - [ ] Monitoreo funcionando
@@ -382,6 +379,6 @@ Esta solución proporciona una **arquitectura empresarial, probada y escalable**
 - ✅ **Lista para usar:** Código funcional y probado
 - ✅ **Empresarial:** Arquitectura recomendada por SAP y Google
 - ✅ **Escalable:** Diseñada para crecer con el negocio
-- ✅ **Operable:** Monitoreo 24/7 y lineamientos de operación
+- ✅ **Operable:** Monitoreo y lineamientos de operación
 
 **Recomendación:** APROBAR e iniciar implementación inmediatamente para comenzar a obtener beneficios en Q1 2026.

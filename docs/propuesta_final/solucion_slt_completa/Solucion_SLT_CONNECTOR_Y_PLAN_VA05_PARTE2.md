@@ -586,7 +586,7 @@ WRITE: / 'Todas las replicaciones programadas'.
 | 51 | Documentación de troubleshooting | DevOps + SAP Basis | 8h | ⬜ |
 
 **Entregables Semana 7:**
-- ✅ Sistema de monitoreo activo 24/7
+- ✅ Sistema de monitoreo activo
 - ✅ Alertas configuradas
 - ✅ Dashboards operativos
 - ✅ Runbooks de troubleshooting
@@ -748,7 +748,7 @@ user_docs/
 
 ### Asistencia Técnica
 - **Equipo:** Data Engineer + DevOps (2 personas)
-- **Horario:** 24/7 (on-call para incidentes críticos)
+- **Horario:** On-call para incidentes críticos
 - **Responsabilidades:**
   - Monitoreo de sistema
   - Resolución de issues de performance
@@ -757,7 +757,7 @@ user_docs/
 
 ### Operación de Infraestructura
 - **Equipo:** SAP Basis + Cloud Architect (2 personas)
-- **Horario:** 24/7 (on-call para incidentes críticos)
+- **Horario:** On-call para incidentes críticos
 - **Responsabilidades:**
   - Administración servidor SLT
   - Gestión de conectividad RFC
@@ -833,12 +833,9 @@ user_docs/
 ### Criterio 2: Latencia de Replicación
 - ✅ Lag promedio de replicación < 2 minutos
 - ✅ 95% de cambios replicados en < 5 minutos
-- ✅ CDC funcionando 24/7 sin interrupciones
+- ✅ CDC funcionando sin interrupciones
 
-### Criterio 3: Disponibilidad del Sistema
-- ✅ Uptime SLT > 99.5%
-- ✅ Uptime BigQuery > 99.9% (SLA de Google)
-- ✅ Sistema operativo 24/7
+### (Criterio de disponibilidad omitido por requerimiento del cliente)
 
 ### Criterio 4: Performance de Consultas
 - ✅ Queries simples < 5 segundos
@@ -853,7 +850,7 @@ user_docs/
 ### Criterio 6: Monitoreo y Alertas
 - ✅ Sistema de monitoreo operativo
 - ✅ Alertas funcionando correctamente
-- ✅ Dashboard de monitoreo accesible 24/7
+- ✅ Dashboard de monitoreo accesible
 
 ### Criterio 7: Documentación
 - ✅ Documentación técnica completa
@@ -922,7 +919,7 @@ Este documento proporciona una **solución completa, detallada e implementable**
 3. **Lista para Usar:** Todos los códigos son funcionales y están listos para ejecutarse
 4. **Documentada:** Cada componente está explicado con su propósito y uso
 5. **Probada:** Incluye scripts de validación y troubleshooting
-6. **Mantenible:** Sistema de monitoreo 24/7 con alertas automáticas
+6. **Mantenible:** Sistema de monitoreo con alertas automáticas
 7. **Escalable:** Diseñada para crecer con más transacciones y módulos SAP
 
 ### Próximos Pasos Recomendados:

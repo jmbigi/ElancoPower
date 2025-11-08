@@ -121,10 +121,10 @@ Los archivos históricos previamente referenciados (`presupuesto_actualizado.md`
 | Presupuesto | Ubicación | Monto / Horas | Para quién | Estado |
 |-------------|-----------|---------------|------------|--------|
 | **Solución SLT Completa** | `docs/propuesta_final/solucion_slt_completa/` | **USD 122,595** | Cliente/Ejecutivos | ⭐ **NUEVO Nov 2025** |
-| **Propuesta Integral Data Lake** | `docs/propuesta_final/` | **1,590 horas** | Equipo Aunergia/Elanco | ✅ Consolidado |
-| **Personal JM Bigi** | `docs/entregables/PRESUPUESTO_REAL_...` | **354 horas** | Lucía/Linda/Elanco | ✅ Histórico |
-| **Resumen Ejecutivo** | `docs/entregables/RESUMEN_EJECUTIVO_...` | 354 horas (resumen) | Lucía (formato corto) | ✅ Completo |
-| Propuesta Aunergia (histórica) | (archivo removido) | USD 48,000 | Referencia histórica | 📚 Fuera del repo |
+| **Propuesta Integral Data Lake** | `docs/propuesta_final/` | **1,590 horas** | Equipo Aunergia/Elanco | ✅ **CANÓNICO** |
+| **Personal JM Bigi (Inicial)** | `docs/entregables/PRESUPUESTO_REAL_...` | **354 horas** | Lucía/Linda/Elanco | 📚 Histórico |
+| **Resumen Ejecutivo (Inicial)** | `docs/entregables/RESUMEN_EJECUTIVO_...` | 354 horas (resumen) | Lucía (formato corto) | 📚 Histórico |
+| Propuesta Aunergia (Antigua) | (archivo removido) | USD 48,000 | Referencia histórica | 📚 Fuera del repo |
 
 ---
 
@@ -153,10 +153,10 @@ Automatizar la extracción de datos desde **SAP S/4HANA** y centralizarlos en **
 ### Fases del Proyecto (cronograma unificado 42 semanas):
 1. **Fase 0 (6 sem):** Revisión de alcance, factibilidad y piloto (Due Diligence + Go/No-Go)
 2. **Fase 1 (22 sem):** Construcción del Data Lake y automatización SAP → BigQuery (18 transacciones)
-3. **Fase 2 (14 sem):** Modelo dimensional y 12 dashboards Power BI (incluye UAT y capacitación)
+3. **Fase 2 (14 sem):** Modelo dimensional y 12 dashboards en Power BI (incluye UAT y capacitación)
 4. **Fase 3 (conceptual):** Modelos predictivos (arquitectura y roadmap, sin implementación)
 
-### Esfuerzo Personal Juan Manuel Bigi (histórico inicial):
+### Esfuerzo Personal Juan Manuel Bigi (Estimación Inicial - Desactualizada):
 
 | Concepto | Horas |
 |----------|-------|
@@ -167,7 +167,6 @@ Automatizar la extracción de datos desde **SAP S/4HANA** y centralizarlos en **
 | **TOTAL (versión inicial)** | **354h** |
 
 Nota: Bloque histórico de presupuesto personal reducido (10-oct-2025). El esfuerzo consolidado final del proyecto es **1,590h** (JMB 961h, Lucía 484h, Linda 145h) – ver `docs/propuesta_final/08_ESTIMACION_DE_ESFUERZOS_Y_COSTOS.md` y `docs/propuesta_final/CRONOGRAMA_DETALLADO_TAREAS.csv`.
-
 ---
 
 ## 🔧 STACK TECNOLÓGICO
@@ -244,7 +243,7 @@ ME2L, MM60, MB59, ZVEL015, ME23N, FBL1N, FBL5N, MB5B, XK03, XD03
 | Fin Fase 2 / Go-Live dashboards (Semana 42) | 14-oct-2026 | Equipo completo | 🗓️ Estimado |
 | Soporte post go-live (30 días) | Oct-Nov 2026 | Consultor BI + Funcional SAP | 🗓️ Planificado |
 
-**Duración total:** 42 semanas (~10 meses).  
+**Duración total:** 42 semanas (~10 meses).
 **Restricción:** Consultor BI trabaja máximo 6h/día (30h/semana) – contemplado en las 1,590h.
 
 ## 🔄 Consistencia de Datos (resumen rápido – fuentes únicas y prevalentes)
@@ -254,7 +253,7 @@ ME2L, MM60, MB59, ZVEL015, ME23N, FBL1N, FBL5N, MB5B, XK03, XD03
 | Transacciones SAP | 18 | `docs/propuesta_final/03_TRANSACCIONES_SAP_INCLUIDAS.md` | Unificado (Prioridad 1/2 + restantes) |
 | Dashboards Power BI | 12 | `docs/propuesta_final/06_FASE_2_MODELADO_Y_DASHBOARDS.md` | Consistente tras correcciones 8-nov |
 | Horas totales | 1,590 | `docs/propuesta_final/08_ESTIMACION_DE_ESFUERZOS_Y_COSTOS.md` + `docs/propuesta_final/CRONOGRAMA_DETALLADO_TAREAS.csv` | JMB 961 / Lucía 484 / Linda 145 (bloques históricos marcados) |
-| Duración | 42 semanas | `docs/propuesta_final/09_CRONOGRAMA_SEMANAL.md` | Sustituye duración previa de 24 semanas |
+| Duración | 42 semanas | `docs/propuesta_final/09_CRONOGRAMA_SEMANAL.md` | Sustituye duraciones previas |
 | Tablas SAP estimadas | 70–90 | `docs/propuesta_final/ANEXO_TECNICO_TRANSACCIONES_VS_TABLAS.md` | Baseline histórico inicial: 44 tablas |
 | Go/No-Go mínimo | ≥12 transacciones viables | `docs/propuesta_final/11_RIESGOS_Y_SUPUESTOS.md` | Criterio Fase 0 |
 | Tickets críticos | SAP-48219 / BQ-7713 / BQ-7721 | `docs/propuesta_final/10_REQUISITOS_TECNICOS_Y_ADMINISTRATIVOS.md` | Seguimiento Fase 0 |
@@ -305,9 +304,9 @@ ME2L, MM60, MB59, ZVEL015, ME23N, FBL1N, FBL5N, MB5B, XK03, XD03
 4. **Pagos:** `docs/internos/DESGLOSE_PAGOS_POR_ETAPA.md`
 
 **Opciones a decidir:**
-- Opción A: USD 48,000 (equipo completo Aunergia)
-- Opción B: USD 8,850 (solo JM Bigi) + costos Aunergia
-- Opción C: USD ~25,000 (híbrido)
+- Opción A: Propuesta Aunergia histórica (USD 48,000)
+- Opción B: Propuesta personal JM Bigi histórica (USD 8,850)
+- Opción C: Propuesta integral actual (1,590 horas)
 
 ### 🏢 Si eres **stakeholder Elanco**:
 1. **Contexto:** `inputs/conversaciones_con_lucia.md`
@@ -338,9 +337,9 @@ ME2L, MM60, MB59, ZVEL015, ME23N, FBL1N, FBL5N, MB5B, XK03, XD03
 
 ### 💰 Presupuestos:
 | Documento | Ubicación | Monto |
-|-----------|-----------|-------|
-| Presupuesto JM Bigi | `docs/entregables/PRESUPUESTO_REAL_...` | USD 8,850 |
-| Presupuesto Aunergia | `docs/historicos/presupuesto_actualizado.md` | USD 48,000 |
+|-----------|-----------|-------------|
+| Presupuesto JM Bigi (Histórico) | `docs/entregables/PRESUPUESTO_REAL_...` | 354 horas |
+| Presupuesto Aunergia (Histórico) | (archivo removido) | USD 48,000 |
 
 ### 📊 Datos Técnicos:
 | Dato | Ubicación |
