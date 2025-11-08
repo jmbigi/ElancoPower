@@ -7,7 +7,7 @@ Fecha: 8 de noviembre de 2025
 Propósito: Referencia técnica rápida para desarrolladores y analistas.
 ================================================================================
 
-La confirmación de que el sistema fuente es **S/4HANA** define la estrategia de replicación. El foco principal es la tabla **`ACDOCA` (Universal Journal)**.
+La confirmación de que el sistema fuente es **S/4HANA** define la estrategia de replicación. El foco principal es la tabla **`ACDOCA` (Universal Journal)**. Rango vigente (MVP) de tablas a replicar: **19 núcleo + hasta 6 condicionales = 19–25**. Este documento se actualizó el 08-nov-2025 para reflejar la optimización basada en Universal Journal, reemplazando rangos históricos (~35–65, ~70–90, ~76–85).
 
 --------------------------------------------------------------------------------
 SECCIÓN 1: EL FOCO PRINCIPAL - UNIVERSAL JOURNAL (FI/CO)
@@ -15,10 +15,10 @@ SECCIÓN 1: EL FOCO PRINCIPAL - UNIVERSAL JOURNAL (FI/CO)
 
 | Módulo | Transacción | Tabla Clave S/4HANA | Observación |
 | :--- | :--- | :--- | :--- |
-| **FI/CO** | FAGLL03, KSB1, FB03, F.08, F.01 | **ACDOCA** (Universal Journal) | **CRÍTICA #1.** Contiene todas las partidas individuales y la información de la mayoría de las tablas clásicas (BSEG, FAGLFLEXA, COEP, etc.). **Replica solo esta en lugar de 10+ tablas antiguas.** |
-| **FI/CO** | FAGLL03, F.08, F.01 | **ACDOCA_T** | Contiene los totales pre-agregados, muy útil para reportes de balance de comprobación. |
-| **Maestros CO** | KSB1 | **CSKS, CSKA, AUFK** | Maestros de Centros de Costo, Elementos de Costo y Órdenes Internas. (Se mantienen iguales). |
-| **FI Clásico** | FBL1N, FBL5N | **BKPF** | Cabecera de documento (aún necesaria). Las partidas (`BSID/K/A/S`) **NO son necesarias** si se replica `ACDOCA`. |
+| **FI/CO** | FAGLL03, KSB1, FB03, F.08, F.01 | **ACDOCA** (Universal Journal) | **CRÍTICA #1.** Sustituye BSEG, COEP, FAGLFLEXA. Eliminamos replicación de tablas antiguas para reducir alcance. |
+| **FI/CO** | FAGLL03, F.08, F.01 | **ACDOCA_T** | Totales pre-agregados (balance / trial balance) – mejora performance de saldos. |
+| **Maestros CO** | KSB1 | **CSKS, CSKA, AUFK** | Dimensiones y órdenes internas (sin cambios en S/4). |
+| **FI Clásico** | FBL1N, FBL5N | **BKPF** | Cabecera de documento. Partidas individuales derivan de ACDOCA (filtradas por tipo de cuenta). |
 
 --------------------------------------------------------------------------------
 SECCIÓN 2: MATERIALES Y LOGÍSTICA (MM/SD)
@@ -26,12 +26,14 @@ SECCIÓN 2: MATERIALES Y LOGÍSTICA (MM/SD)
 
 | Módulo | Transacción | Tabla Clave | Propósito |
 | :--- | :--- | :--- | :--- |
-| **MM** | ME2L, ME23N | **EKKO, EKPO** | Cabecera y Posición de Pedidos de Compra. |
-| **MM** | MB59, MB5B | **MKPF, MSEG** | Cabecera y Posición de Movimientos de Material. |
-| **MM** | MM60 | **MBEW** | Valoración y Costo Estándar del Material (CRÍTICA). |
-| **MM** | ZLEL008, MB5B | **MARD, MCHB** | Stock por Almacén y Stock por Lote (si se usa). |
-| **SD** | VA05 | **VBAK, VBAP** | Cabecera y Posición de Órdenes de Venta. |
-| **SD** | VA05 | **VBUK, VBUP** | **CRÍTICA #2.** Estatus de Cabecera y Posición de Documentos de Venta. |
+| **MM** | ME2L, ME23N | **EKKO, EKPO** | Cabecera y posición de pedidos de compra. |
+| **MM** | MB59, MB5B | **MKPF, MSEG** | Movimientos de material (cabecera/posición). |
+| **MM** | MM60 | **MBEW** | Valoración y costos estándar (CRÍTICA). |
+| **MM** | ZLEL008, MB5B | **MARD** | Stock por almacén (núcleo). |
+| **MM (Condicional)** | MB5B (detalle lote), ZLEL008 (si requiere lote) | **MCHB** | Stock por lote (solo si KPI exige granularidad). |
+| **SD** | VA05 | **VBAK, VBAP** | Cabecera y posiciones de órdenes de venta. |
+| **SD** | VA05 | **VBUK, VBUP** | Estatus de cabecera y posición (CRÍTICO). |
+| **SD (Opcional)** | VA05 | **VBEP** | Schedule lines (fechas programadas) – evaluar en Fase 0 según KPIs. |
 
 --------------------------------------------------------------------------------
 SECCIÓN 3: DATOS MAESTROS Y CONDICIONES
@@ -39,10 +41,14 @@ SECCIÓN 3: DATOS MAESTROS Y CONDICIONES
 
 | Módulo | Transacción | Tabla Clave | Propósito |
 | :--- | :--- | :--- | :--- |
-| **Maestros** | XK03, XD03 | **BUT000** | Tabla principal de *Business Partner* (BP). **CRÍTICA.** |
-| **Maestros** | XK03, XD03 | KNA1, LFA1 | Tablas de clientes/proveedores (aún existen por compatibilidad). |
-| **Maestros** | MM60, VA05 | MARA, MAKT | Maestro de materiales y textos. |
-| **Precios** | ZVEL015 | **KONV, KONP** | Condiciones de documentos y maestro de condiciones. |
+| **Maestros** | XK03, XD03 | **BUT000** | Business Partner unificado (CRÍTICO). |
+| **Maestros** | XD03 | **KNA1** | Cliente (incluida núcleo). |
+| **Maestros (Compatibilidad / Condicional)** | XK03 | **LFA1, LFB1** | Proveedor (compatibilidad – fuera de MVP salvo requerimiento P2P). |
+| **Maestros (Compatibilidad / Condicional)** | XD03 | **KNB1, KNVV** | Vistas cliente (contratos/segmentos) – incluir solo si KPI exige. |
+| **Maestros** | MM60, VA05 | **MARA** | Maestro material (incluida núcleo). |
+| **Maestros (Condicional)** | MM60, VA05 | **MAKT** | Textos de material (solo si se requieren descripciones legibles). |
+| **Precios (Condicional)** | ZVEL015 | **KONV, KONP** | Pricing detallado (incluir solo si caso de uso pricing histórico). |
+| **Plan de Cuentas (Condicional)** | F.01 | **SKA1** | Jerarquías contables para reporte estructurado. |
 
 --------------------------------------------------------------------------------
 SECCIÓN 4: TABLAS ESPECIALES (CLUSTER Y CUSTOM)
@@ -50,9 +56,11 @@ SECCIÓN 4: TABLAS ESPECIALES (CLUSTER Y CUSTOM)
 
 | Módulo | Tabla | T-Code Asociado | Estrategia S/4HANA |
 | :--- | :--- | :--- | :--- |
-| **FI** | **BSEG** | N/A | **OBSOLETA** para replicación. La información está en **`ACDOCA`**. **No se debe replicar.** |
-| **Global** | **STXL** | (Textos) | **Mantiene el estatus de Clúster.** Si necesita textos de documentos (ej. de pedidos), **SÍ debe replicar `STXL`** y aplicar la lógica de *declustering* en SLT. |
-| **Custom** | ZLEL008, ZVEL015 | N/A | **ANÁLISIS ABAP OBLIGATORIO** para identificar las tablas `Zxxxx` subyacentes. |
+| **FI** | **BSEG** | N/A | **OBSOLETA** (Sustituida por ACDOCA). No replicar. |
+| **FI** | **COEP** | N/A | **OBSOLETA** (Sustituida por ACDOCA). No replicar. |
+| **FI** | **FAGLFLEXA** | N/A | **OBSOLETA** (Sustituida por ACDOCA). No replicar. |
+| **Global (Condicional)** | **STXL** | (Textos) | Replicar solo si se requieren textos largos; requiere declustering SLT. |
+| **Custom** | ZLEL008, ZVEL015 | N/A | Análisis ABAP para confirmar tablas subyacentes antes de definir alcance final. |
 
 --------------------------------------------------------------------------------
 SECCIÓN 5: CONCLUSIÓN DEL MAPEO
@@ -60,7 +68,36 @@ SECCIÓN 5: CONCLUSIÓN DEL MAPEO
 
 | Prioridad | Tablas / Estrategia | Razón |
 | :--- | :--- | :--- |
-| **CRÍTICA A** | Replicar **`ACDOCA`** y **`ACDOCA_T`**. | Sustituye a casi todas las tablas de Finanzas y Controlling (FI/CO) antiguas, resolviendo el problema de `BSEG` y `FAGLFLEXA`. |
-| **CRÍTICA B** | Replicar **`VBUK/VBUP`** y **`MBEW`**. | Tablas esenciales para el estatus de documentos (SD) y la valoración de inventario (MM). |
-| **ANÁLISIS Z** | Análisis ABAP de `ZLEL008` y `ZVEL015`. | Obtener la tabla **`Zxxxx`** subyacente para añadirla al alcance de SLT. |
-| **CLUSTER** | Replicar **`STXL`** con *declustering*. | Si se necesita cualquier texto de documento de SAP. |
+| **CRÍTICA A** | Replicar **`ACDOCA`** y **`ACDOCA_T`** | Sustituye estructuras FI/CO legacy (BSEG, COEP, FAGLFLEXA). |
+| **CRÍTICA B** | Replicar **`VBUK/VBUP`** y **`MBEW`** | Estatus SD y valorización MM esenciales para KPIs. |
+| **CORE INVENTARIO** | Replicar **`MARD`** | Stock por almacén (base inventario). |
+| **ANÁLISIS Z** | Código ABAP `ZLEL008` y `ZVEL015` | Identificar tablas Z antes de activar replicación. |
+| **CONDICIONAL PRICING** | Evaluar **`KONV/KONP`** | Activar si caso de uso detallado pricing histórico confirmado. |
+| **CONDICIONAL TEXTOS** | Evaluar **`STXL`** | Activar si se requieren textos largos (declustering). |
+| **CONDICIONAL LOTE** | Evaluar **`MCHB`** | Solo si KPIs requieren granularidad por lote. |
+| **CONDICIONAL DESCRIPCIONES** | Evaluar **`MAKT`** | Descripciones legibles de materiales (UX). |
+| **CONDICIONAL PLAN CUENTAS** | Evaluar **`SKA1`** | Jerarquías contables avanzadas. |
+
+--------------------------------------------------------------------------------
+SECCIÓN 6: RESUMEN NUMÉRICO DEL ALCANCE (MVP)
+--------------------------------------------------------------------------------
+
+| Categoría | Conteo | Estado |
+|-----------|--------|--------|
+| Tablas núcleo (incluir) | 19 | Confirmadas en CSV detallado |
+| Tablas condicionales | 6 | Activación sujeta a validación KPI/caso uso |
+| Tablas obsoletas | 3 | Excluidas (BSEG, COEP, FAGLFLEXA) |
+| Opcional adicional (VBEP) | 1 | Evaluar si fechas programadas requeridas |
+| Total potencial | 19–25 | Rango vigente |
+
+Nota: Tablas de compatibilidad (LFA1, LFB1, KNB1, KNVV) fuera de MVP salvo requerimiento explícito en procesos P2P o segmentación extendida de clientes/proveedores.
+
+--------------------------------------------------------------------------------
+SECCIÓN 7: NOTA DE CONSISTENCIA
+--------------------------------------------------------------------------------
+Este documento está alineado con:
+- `docs/internos/mapeo_transacciones_tablas_detallado.csv` (estado_inclusion)
+- `docs/entregables/ALCANCE_TABLAS_E_INDICES.md` (política de particionamiento y clustering)
+- `docs/propuesta_final/ANEXO_TECNICO_TRANSACCIONES_VS_TABLAS.md` (rango 19–25)
+
+Última actualización: 08-nov-2025

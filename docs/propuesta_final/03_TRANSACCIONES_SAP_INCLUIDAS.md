@@ -10,7 +10,7 @@ En este documento se hace referencia a "transacciones SAP" como punto de partida
 
 - Las **transacciones SAP** (VA05, KSB1, FAGLL03, etc.) son **interfaces de usuario** que consultan y muestran datos almacenados en tablas de la base de datos SAP
 - Lo que se implementará mediante **SAP SLT (Landscape Transformation Server)** es la **replicación de las tablas subyacentes** que contienen los datos mostrados por esas transacciones
-- Por ejemplo: La transacción **VA05** consulta las tablas **VBAK, VBAP, VBEP**, y son estas tablas las que se replicarán a BigQuery
+- Por ejemplo: La transacción **VA05** consulta principalmente **VBAK (cabecera)** y **VBAP (posiciones)**; se agregan estatus desde **VBUK/VBUP**. La tabla **VBEP** (schedule lines) se evaluará en Fase 0 solo si algún KPI requiere fechas de entrega programadas.
 
 **Proceso Técnico:**
 
@@ -43,10 +43,10 @@ TRANSACCIÓN SAP (UI)          TABLAS SAP (Datos)         REPLICACIÓN SLT
 
 | Prioridad | Cantidad | Porcentaje | Estimado de Tablas SAP (S/4HANA) |
 |-----------|----------|------------|----------------------------------|
-| **Prioridad 1 (Críticas)** | 4 | 22% | ~12-18 tablas |
-| **Prioridad 2 (Importantes)** | 4 | 22% | ~8-12 tablas |
-| **Pendientes de clasificar** | 10 | 56% | ~15-35 tablas |
-| **TOTAL** | **18** | **100%** | **~35-65 tablas SAP** |
+| **Prioridad 1 (Críticas)** | 4 | 22% | 10–14 tablas |
+| **Prioridad 2 (Importantes)** | 4 | 22% | 6–8 tablas |
+| **Pendientes de clasificar** | 10 | 56% | 3–5 tablas (aportes marginales/condicionales) |
+| **TOTAL** | **18** | **100%** | **19–25 tablas SAP (MVP)** |
 
 **Nota:** Una transacción puede requerir múltiples tablas. Por ejemplo, VA05 requiere al menos 3 tablas (VBAK, VBAP, VBEP).
 
@@ -85,7 +85,7 @@ TRANSACCIÓN SAP (UI)          TABLAS SAP (Datos)         REPLICACIÓN SLT
 Transacción para consultar órdenes de venta abiertas (pendientes de facturación o entrega). Permite visualizar el backlog de órdenes, montos comprometidos y fechas de entrega programadas.
 
 #### Datos Clave
-- **Tablas SAP principales:** VBAK (cabecera), VBAP (posiciones), VBEP (schedule lines)
+- **Tablas SAP principales:** VBAK (cabecera), VBAP (posiciones)
 - **Tablas SAP principales en S/4HANA:** VBAK (cabecera), VBAP (posiciones), VBUK (status cabecera), VBUP (status posición)
 - **Campos críticos:**
   - Número de orden (VBELN)
@@ -208,7 +208,7 @@ Reporte de partidas reales de órdenes de costos (órdenes internas de CO). Util
 Visualización de partidas individuales del libro mayor (General Ledger). Transacción fundamental para análisis contable detallado, conciliaciones y auditoría.
 
 #### Datos Clave
-- **Tablas SAP principales:** FAGLFLEXA (partidas individuales nuevo GL), BKPF (cabecera documento), BSEG (segmento documento)
+- **Tablas SAP principales:** BKPF (cabecera documento) (S/4HANA sustituye FAGLFLEXA/BSEG por ACDOCA)
 - **Tablas SAP principales en S/4HANA:** ACDOCA (Universal Journal), BKPF (cabecera documento)
 - **Campos críticos:**
   - Sociedad (BUKRS)
@@ -328,8 +328,7 @@ Visualización de documentos contables (facturas, notas de crédito, pagos). Tra
 Balance de comprobación (Trial Balance) por cuenta de mayor. Resume saldos iniciales, movimientos del periodo y saldos finales.
 
 #### Datos Clave
-- **Tablas SAP principales:** FAGLFLEXA (partidas), FAGLFLEXT (totales periodo)
-- **Tablas SAP principales en S/4HANA:** ACDOCA (partidas), ACDOCA_T (totales periodo)
+- **Tablas SAP principales:** ACDOCA (partidas), ACDOCA_T (totales periodo) (reemplazan FAGLFLEXA/FAGLFLEXT)
 - **Campos críticos:**
   - Cuenta de mayor (RACCT)
   - Saldo inicial
@@ -363,8 +362,7 @@ Balance de comprobación (Trial Balance) por cuenta de mayor. Resume saldos inic
 Balance General (Balance Sheet) con estructura jerárquica de cuentas.
 
 #### Datos Clave
-- **Tablas SAP principales:** FAGLFLEXA, SKA1 (plan de cuentas)
-- **Tablas SAP principales en S/4HANA:** ACDOCA, SKA1 (plan de cuentas)
+- **Tablas SAP principales:** ACDOCA, SKA1 (plan de cuentas) (FAGLFLEXA ya consolidada en ACDOCA)
 - **Campos críticos:**
   - Cuenta de mayor (RACCT)
   - Grupo de cuentas
@@ -639,7 +637,7 @@ Para cada transacción se debe validar en Fase 0:
 
 📋 **"Mapeo Completo: Transacciones → Tablas SAP → BigQuery"**
 - 18 transacciones clasificadas por prioridad
-- Listado completo de tablas SAP requeridas (~76-85 tablas)
+- Listado completo de tablas SAP requeridas (MVP 19–25 tablas)
 - Confirmación de disponibilidad de cada tabla en BigQuery
 - Estimación de esfuerzo por tabla (configuración SLT, validación, transformaciones)
 - Orden de implementación para Fase 1

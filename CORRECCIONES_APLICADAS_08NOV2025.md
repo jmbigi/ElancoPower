@@ -19,11 +19,12 @@ Unificar cifras y criterios entre documentos de `docs/propuesta_final` y elimina
 4. Este archivo creado para trazabilidad de cambios.
 5. `03_TRANSACCIONES_SAP_INCLUIDAS.md`
   - Unificada estimación de tablas a rango canónico ~76-85.
+    - (Obsoleto) Rango ~76-85 reemplazado por 19–25 (19 núcleo + hasta 6 condicionales). Se deja registro histórico.
   - Añadida nota explícita de consolidación histórico (22 líneas originales → 18 transacciones únicas finales).
   - Incluida corrección tipográfica: "Supple-Finanzas" → "Supply-Finanzas".
 6. `ANEXO_TECNICO_TRANSACCIONES_VS_TABLAS.md`
-  - Sustituido rango previo (~70-90 / ~70-84) por rango único ~76-85 en todas las ocurrencias.
-  - Ajustadas categorías: pendientes ~40-45 y total ~76-85.
+  - Sustituido rango previo (~70-90 / ~70-84 / ~76-85) por rango vigente 19–25 en todas las ocurrencias activas.
+  - Ajustadas categorías: nueva distribución (Prioridad 1: 10–14 tablas; Prioridad 2: 6–8; Pendientes: 3–5) totalizando 19–25.
   - Actualizada respuesta FAQ y diagrama Fase 0 con nuevo rango.
 7. `05_FASE_1_CONSTRUCCION_DATA_LAKE.md`
   - Añadida nota de interpretación: semanas listadas son internas a la fase; mapeo a semanas globales 7–20.
@@ -37,14 +38,14 @@ Unificar cifras y criterios entre documentos de `docs/propuesta_final` y elimina
 - Cobertura mínima refleja 18 transacciones (4+4+10).
 - No quedan referencias a “116 horas” de Fase 0 en documentos vigentes.
 - Reconciliación >95% alineada con riesgos y supuestos (sección 11).
-- Rango de tablas unificado: todas las menciones anteriores (~70-84, ~70-90) reemplazadas por ~76-85.
+- Rango de tablas unificado y optimizado: todas las menciones anteriores (~70-84, ~70-90, ~76-85) reemplazadas por 19–25.
 - Semántica de semanas aclarada (global vs. internas) en 05 y 09.
 - Origen histórico de 22 líneas vs. 18 transacciones documentado claramente.
 
 ### Pendientes (No Cambiados)
 - Validar si algún otro documento externo (p.e. `RESUMEN_PROPUESTA_FINAL.txt`) contiene aún la cifra de 116h (no crítico para versión cliente, pero recomendable revisar en próxima iteración).
 - Revisar si en la solución SLT completa hay referencias a distribución antigua de dashboards.
-- Automatizar chequeo de consistencia numérica (script futuro) para asegurar mantenimiento del rango ~76-85.
+- Automatizar chequeo de consistencia numérica (script futuro) para asegurar mantenimiento del rango 19–25.
 
 ### Responsable
 Consultor BI (auditoría interna de consistencia documental).

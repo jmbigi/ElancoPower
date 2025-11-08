@@ -6,14 +6,14 @@ Este archivo consolida el **estado** (vigente / histórico / auxiliar) de los pr
 
 - No se modifica nada dentro de `inputs/` (fuentes históricas recibidas de Elanco)
 - Cada documento "vigente" debe declarar explícitamente si reemplaza una versión previa
-- El alcance funcional (18 transacciones) y el rango de tablas (~76-85) tienen UNA sola fuente canónica
+- El alcance funcional (18 transacciones) y el rango de tablas (19–25) tienen UNA sola fuente canónica
 
 ## 2. Fuentes Canónicas Actualizadas
 
 | Dominio | Documento | Rol | Comentario |
 |---------|-----------|-----|------------|
 | Alcance Transacciones | `docs/propuesta_final/03_TRANSACCIONES_SAP_INCLUIDAS.md` | Vigente (Canónico) | Define las 18 transacciones finales; explica normalización 22→18 |
-| Tablas Estimadas | `docs/propuesta_final/ANEXO_TECNICO_TRANSACCIONES_VS_TABLAS.md` | Vigente (Canónico) | Rango consolidado ~76-85 tablas |
+| Tablas Estimadas | `docs/propuesta_final/ANEXO_TECNICO_TRANSACCIONES_VS_TABLAS.md` | Vigente (Canónico) | Rango consolidado 19–25 tablas (19 núcleo + hasta 6 condicionales) |
 | Esfuerzo & Costos | `docs/propuesta_final/08_ESTIMACION_DE_ESFUERZOS_Y_COSTOS.md` | Vigente (Canónico) | Total 1,590h consistente |
 | Cronograma Global | `docs/propuesta_final/09_CRONOGRAMA_SEMANAL.md` | Vigente (Canónico) | 42 semanas totales |
 | Fase 1 (Detalle Data Lake) | `docs/propuesta_final/05_FASE_1_CONSTRUCCION_DATA_LAKE.md` | Vigente | Incluye aclaración semanas internas vs globales |
@@ -40,7 +40,7 @@ Este archivo consolida el **estado** (vigente / histórico / auxiliar) de los pr
 | Aspecto | Valor Canónico | Consistencia |
 |---------|----------------|--------------|
 | Transacciones | 18 | OK |
-| Tablas Estimadas | ~76-85 | OK (unificado) |
+| Tablas Estimadas | 19–25 | OK (optimizado por Universal Journal) |
 | Dashboards | 12 | OK |
 | Esfuerzo Total | 1,590h | OK |
 | Duración | 42 semanas | OK |

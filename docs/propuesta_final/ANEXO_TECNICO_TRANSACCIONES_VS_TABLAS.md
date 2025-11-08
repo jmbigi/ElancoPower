@@ -200,10 +200,10 @@ En SLT se configura:
 
 | Categoría | Cantidad | Tablas Estimadas | Complejidad |
 |-------------------------------|----------|------------------|-----------------|
-| Transacciones Prioridad 1 | 4 | ~12-18 | Media a Alta |
-| Transacciones Prioridad 2 | 4 | ~8-12 | Media |
-| Transacciones Pendientes | 10 | ~15-35 | Baja a Media |
-| **TOTAL ESTIMADO** | **18** | **~35-65 tablas** | **Mixta (optimizada por S/4)** |
+| Transacciones Prioridad 1 | 4 | 10–14 | Media a Alta |
+| Transacciones Prioridad 2 | 4 | 6–8 | Media |
+| Transacciones Pendientes | 10 | 3–5 (aportes marginales/condicionales) | Baja a Media |
+| **TOTAL ESTIMADO (MVP)** | **18** | **19–25 tablas** | **Mixta (optimizada por S/4)** |
 
 ---
 
@@ -504,18 +504,16 @@ Luego recreas el informe en Power BI usando esos datos.
 
 ---
 
-## 11. Plan de Optimización del Rango de Tablas (Poda Controlada)
+## 11. Rango Canónico y Poda Controlada
 
 Esta sección documenta el proceso propuesto para reducir el rango operativo de tablas replicadas manteniendo cobertura de KPIs y evitando regresiones de calidad.
 
-### 11.1. Estado Actual vs. Objetivo
-| Concepto | Valor Vigente (Canónico) | Objetivo Tentativo (Exploratorio) | Condición de Cambio |
-|----------|---------------------------|-----------------------------------|---------------------|
-| Rango de Tablas | ~76–85 | ~35–65 | Validación completa de poda y no-impacto en KPIs |
-| Tablas Obsoletas Excluidas | BSEG, COEP, FAGLFLEXA | (sin cambios) | Confirmado por uso de ACDOCA |
-| Tablas Condicionales | STXL, KONV, KONP, MCHB, MAKT | Incluir solo si caso de uso confirmado | Aprobación Funcional + BI |
-
-Mientras no se complete la validación formal, el rango ~76–85 continúa siendo el único valor canónico.
+### 11.1. Estado Canónico (Vigente) y Gestión
+| Concepto | Valor Vigente (Canónico) | Notas |
+|----------|---------------------------|-------|
+| Rango de Tablas (MVP) | 19–25 | 19 núcleo + hasta 6 condicionales. Sustituye rangos previos (~35–65, ~70–90, ~76–85). |
+| Tablas Obsoletas Excluidas | BSEG, COEP, FAGLFLEXA | Confirmado por uso de ACDOCA/ACDOCA_T (S/4HANA). |
+| Tablas Condicionales | STXL, KONV, KONP, MCHB, MAKT, SKA1 | Incluir solo si caso de uso confirmado y validado. |
 
 ### 11.2. Clasificación de Tablas
 Categorías utilizadas en `docs/internos/mapeo_transacciones_tablas_detallado.csv`:
@@ -547,11 +545,11 @@ Categorías utilizadas en `docs/internos/mapeo_transacciones_tablas_detallado.cs
 ### 11.6. Próximos Entregables
 - Checklist KPI→Tabla.
 - Informe de poda (v1) con conteo por categoría.
-- Actualización opcional de este anexo elevando nuevo rango (si aprobado).
+- Documento `docs/entregables/ALCANCE_TABLAS_E_INDICES.md` (vigente) como referencia operativa.
 
 ### 11.7. Nota de Transparencia
 Las menciones a "~35–65" en documentos de entregables se consideran EXPLORATORIAS hasta que este anexo se actualice elevando el nuevo rango y `estado_documentos.md` refleje el cambio.
 
 ---
 
-*Versión: 1.3 - 8 de noviembre de 2025 (añadida sección 11)*
+*Versión: 1.4 - 8 de noviembre de 2025 (actualizado rango canónico a 19–25 y referencias de índices)*

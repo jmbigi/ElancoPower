@@ -1,0 +1,65 @@
+core_tables:
+  - ACDOCA
+  - ACDOCA_T
+  - BKPF
+  - AUFK
+  - CSKS
+  - CSKA
+  - VBAK
+  - VBAP
+  - VBUK
+  - VBUP
+  - EKKO
+  - EKPO
+  - MKPF
+  - MSEG
+  - MARD
+  - MBEW
+  - MARA
+  - KNA1
+  - BUT000
+
+conditional_tables:
+  - MAKT
+  - MCHB
+  - SKA1
+  - KONV
+  - KONP
+  - STXL
+
+excluded_tables:
+  - BSEG
+  - COEP
+  - FAGLFLEXA
+
+optional_tables:
+  - VBEP  # Schedule lines (delivery dates)
+
+recommended_additional_candidates:
+  CEPC: "Profit Center master (needed if PRCTR dimensional analytics beyond code list)"
+  SKB1: "G/L account company code data (if statements need local attributes)"
+  VBFA: "Sales document flow (for pipeline and conversion funnel metrics)"
+  LFA1: "Vendor master (if supplier analytics or AP dashboards extend)"
+  KNB1: "Customer master company code view (credit control, payment terms)"
+  KNVV: "Customer sales view (sales area, distribution channel, division)"
+  TCURR: "Exchange rates (if multi-currency normalization is required)"
+  TCURF: "Exchange rate types (support for currency conversion logic)"
+  MSKA: "Special stock (consignment) if inventory KPIs need it"
+  CKMLCR: "Material ledger cost component split (if detailed cost analysis required)"
+  MARC: "Plant-specific material data (if WERKS-level attributes missing)"
+  MAST: "Material to BOM link (if future manufacturing analytics considered)"
+  T001: "Company codes master (attributes, currency)"
+  T001W: "Plants / Storage locations extended attributes"
+  CE1XXXX: "CO-PA actuals (only if cost-based profitability analysis, account-based covered by ACDOCA)"
+  CE4XXXX: "CO-PA planning (only if plan vs actual at segment level)"
+
+rules:
+  max_core_tables: 25
+  min_core_tables: 15
+  expected_core_count: 19
+  max_total_tables: 30
+  include_optional_if: "Confirmed KPI dependency (delivery schedule / backlog aging)"
+
+metadata:
+  version: "2025-11-08"
+  note: "Canonical MVP scope for Elanco Power SAP→BigQuery project."
