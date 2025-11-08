@@ -7,7 +7,7 @@
 ### Objetivos Específicos
 
 1. ✅ Diseñar modelo dimensional optimizado para analítica
-2. ✅ Desarrollar 12 dashboards ejecutivos en Power BI
+2. ✅ Desarrollar 12 dashboards ejecutivos en Power BI (promedio ~3 hojas cada uno)
 3. ✅ Implementar Row-Level Security (RLS) por país/área
 4. ✅ Capacitar usuarios finales en uso de dashboards
 5. ✅ Establecer proceso de actualización programada
@@ -835,21 +835,9 @@ RETURN
 
 ---
 
-## 6.8. Post Go-Live
+### 6.3.8. Post Go-Live
 
-### Soporte Incluido (30 días)
-
-**Incluido en el presupuesto:**
-- Resolución de incidentes menores (horario hábil)
-- Ajustes cosméticos (<2h por ajuste)
-- Soporte a usuarios vía email/chat
-- Monitoreo de errores de actualización
-
-**No incluido (cotización adicional):**
-- Nuevos dashboards
-- Nuevas métricas no contempladas
-- Cambios estructurales del modelo
-- Capacitaciones adicionales
+Período posterior a la puesta en producción sin compromisos de soporte incluidos: cualquier ajuste o evolución se evalúa y cotiza aparte. No se contemplan actividades operativas continuas en este documento.
 
 ---
 

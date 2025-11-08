@@ -258,7 +258,7 @@ Estos requisitos **DEBEN** estar resueltos antes del kick-off:
 | **Finanzas** | Controller / Analista Senior | Workshops, validaciones, UAT | 2-3h/semana |
 | **Supply Chain** | Manager / Planeador | Workshops, validaciones, UAT | 2-3h/semana |
 | **TI TechOps** | David Saboya | Coordinación TI Global, tickets | 2h/semana |
-| **TI Global** | SAP Basis / BigQuery Admin | Soporte permisos, tablas | On-demand |
+| **TI Global** | SAP Basis / BigQuery Admin | Gestión de permisos y tablas | On-demand |
 | **SAP Basis (ELANCO)** | Administrador SAP | **RECURSO PROVISTO POR EL CLIENTE**<br>- Gestión de usuarios y perfiles SAP<br>- Gestión de órdenes de transporte<br>- Instalación y configuración de SLT Server<br>- Monitoreo del sistema SAP<br>- Aplicación de SAP Notes<br>- Configuración de conexiones RFC<br>- Punto de contacto para incidencias técnicas SAP | On-demand durante el proyecto |
 
 #### Usuarios Finales (Capacitación)
@@ -409,14 +409,14 @@ Ver sección 9.10 del documento [09_CRONOGRAMA_SEMANAL.md](09_CRONOGRAMA_SEMANAL
 **Responsabilidades que Elanco DEBE asumir:**
 
 1. ✅ **SAP Landscape Transformation Server (SLT):** Instalación, configuración, licenciamiento y operación del servidor SLT
-2. ✅ **Recurso SAP Basis:** Proveer administrador SAP Basis para soporte en configuración de SLT, permisos, y administración del sistema SAP
+2. ✅ **Recurso SAP Basis:** Proveer administrador SAP Basis para configuración de SLT, permisos y administración del sistema SAP
 3. ✅ **Infraestructura GCP:** Provisión y costos de BigQuery
 4. ✅ **Licencias:** Power BI Pro (ya adquiridas), licencias SLT y BigQuery Connector
 5. ✅ **Permisos y Accesos:** Gestión de tickets con TI Global
 6. ✅ **Ambientes:** Provisión de ambientes dev/qa/prod
 7. ✅ **Documentación Base:** Entregar documentación SAP y procesos
 8. ✅ **Disponibilidad Stakeholders:** Asegurar participación en workshops/UAT
-9. ✅ **Soporte TI:** Coordinación con TI Global para tickets
+9. ✅ **Coordinación TI:** Gestión con TI Global para tickets
 10. ✅ **Backup y DR:** Responsabilidad de infraestructura
 
 ---
@@ -431,7 +431,7 @@ Ver sección 9.10 del documento [09_CRONOGRAMA_SEMANAL.md](09_CRONOGRAMA_SEMANAL
 4. ✅ **Documentación:** Técnica, funcional y de usuario
 5. ✅ **Capacitación:** Usuarios finales y power users
 6. ✅ **Project Management:** Coordinación y seguimiento
-7. ✅ **Soporte (30 días):** Post go-live incluido
+7. ✅ **Periodo Post Go-Live:** Ajustes menores sujetos a evaluación (sin compromiso incluido)
 
 ---
 

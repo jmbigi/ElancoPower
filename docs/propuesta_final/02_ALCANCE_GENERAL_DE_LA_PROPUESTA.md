@@ -51,7 +51,7 @@ Implementar una **solución integral de centralización de datos de análisis** 
 - **Data Lake:** Google BigQuery (dataset CASA)
 - **Arquitectura:** Zonas RAW → PROCESSED → CURATED
 - **Conectores:** **SAP SLT (Landscape Transformation Server)** para replicación en tiempo real SAP ECC ↔ BigQuery
-  - *Nota: La instalación y configuración de SLT es responsabilidad del cliente (Elanco) con soporte del equipo SAP Basis*
+   - *Nota: La instalación y configuración de SLT es responsabilidad del cliente (Elanco) a cargo del equipo SAP Basis*
 - **Procesamiento:** Pipelines ETL/ELT con BigQuery SQL
 - **Monitoreo:** Logs de ejecución, alertas de errores, dashboards operativos
 
@@ -135,11 +135,10 @@ Implementar una **solución integral de centralización de datos de análisis** 
 - Ambientes de desarrollo/QA/producción - provisionados por TI Global
 - **Recurso SAP Basis:** Provisto por Elanco para tareas de administración SAP y configuración de SLT
 
-#### ❌ Soporte Post-Implementación
-- Soporte operativo 24/7 - responsabilidad de TI Elanco
+#### ❌ Operación Post-Implementación
+- Operación y mantenimiento posteriores - responsabilidad de TI Elanco
 - Mantenimiento evolutivo continuo - se cotiza por separado
 - Desarrollo de nuevos dashboards - se cotiza por separado
-- Soporte incluido: **30 días post go-live** (horario hábil, esfuerzo menor)
 
 #### ❌ Rollout a Nuevas Regiones
 - Alcance limitado a **operación CASA** (Centroamérica y Sudamérica)
@@ -280,7 +279,7 @@ El proyecto se divide en **4 fases** con objetivos específicos:
 |---|----------|----------------------|
 | 1 | Lucía Rodríguez tendrá permisos SAP completos al iniciar Fase 1 | TI Global / David Saboya |
 | 2 | El equipo de Finanzas/Supply estará disponible para validaciones (~4h/semana) | Sponsor del proyecto |
-| 3 | TI Global dará soporte para tickets de tablas BigQuery (respuesta < 1 semana) | David Saboya |
+| 3 | TI Global atenderá tickets de tablas BigQuery (respuesta < 1 semana) | David Saboya |
 | 4 | Los 8 usuarios Power BI Pro tienen sus licencias activas | TI Elanco |
 | 5 | Existe acuerdo de confidencialidad vigente Aunergia-Elanco | Legal |
 | 6 | Ambiente de desarrollo/QA en BigQuery estará disponible | TI Global |
@@ -309,7 +308,7 @@ El proyecto se divide en **4 fases** con objetivos específicos:
 ### 2.6.2. Restricciones Temporales
 
 - **Duración total:** 42 semanas (~10 meses)
-- **Fecha inicio deseada:** 1 de diciembre de 2025
+- **Fecha inicio deseada:** 6 de enero de 2026
 - **Fecha límite para Fase 2:** 20 de septiembre de 2026
 - **Consideraciones:** Juan Manuel Bigi trabaja máximo 6h/día (30h/semana)
 
@@ -324,7 +323,7 @@ El proyecto se divide en **4 fases** con objetivos específicos:
 
 - **Personal Aunergia:** 2-3 personas (Linda, Lucía, JMB)
 - **Disponibilidad part-time:** No hay dedicación full-time
-- **Soporte TI Global:** Limitado a tickets (no desarrollo)
+- **TI Global:** Atención de tickets (no desarrollo)
 - **Power users Elanco:** Disponibilidad limitada por tareas operativas
 
 ---
@@ -385,7 +384,7 @@ El proyecto se divide en **4 fases** con objetivos específicos:
 5. Manual de usuario Power BI (español)
 6. Videos tutoriales (<5 min por dashboard)
 7. Capacitación usuarios finales completada (registro de asistencia)
-8. Plan de soporte y mantenimiento
+8. Plan de operación post go-live (ajustes menores bajo evaluación)
 9. UAT firmado por stakeholders
 
 #### **Fase 3: ML Roadmap** (Solo Descripción)

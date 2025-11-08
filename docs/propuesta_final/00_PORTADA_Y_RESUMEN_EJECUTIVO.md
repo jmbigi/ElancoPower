@@ -79,7 +79,7 @@ Operación Centroamérica y Sudamérica (CASA)
 ### Duración
 
 - **Tiempo total:** 42 semanas (~10 meses)
-- **Inicio propuesto:** Enero 2026
+- **Inicio propuesto:** 6 de enero de 2026
 - **Finalización estimada:** Mediados de octubre 2026
 - **Disponibilidad:** Part-time con intensidad variable según fase
 - **Nota:** Juan Manuel Bigi trabaja máximo 6 horas/día (30h/semana)

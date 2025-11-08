@@ -3,8 +3,8 @@
 ## 9.1. Vista General del Cronograma
 
 **Duración Total:** 42 semanas (~10 meses)  
-**Inicio:** Semana 0 (1 de diciembre 2025)  
-**Finalización:** Semana 42 (Mediados de septiembre 2026)
+**Inicio:** Semana 0 (6 de enero 2026)  
+**Finalización:** Semana 42 (Mediados de octubre 2026)
 
 ```
 FASE 0          FASE 1                                           FASE 2          
@@ -12,14 +12,14 @@ FASE 0          FASE 1                                           FASE 2
 6 sem           22 sem                                           14 sem         
 ███████         ██████████████████████████████████████████████   ████████████████████████████  
                                                           
-Sem 0-6         Sem 6-28                                         Sem 28-42
+Sem 0-6         Sem 6-28                                         Sem 28-42 (ajustado a nuevo inicio)
 ```
 
 **Restricción:** Juan Manuel Bigi trabaja máximo 6 horas/día (30h/semana). Cronograma comprimido manteniendo las mismas 1,590 horas totales.
 
 ---
 
-## 9.2. FASE 0 - Due Diligence (Semanas 0-6)
+## 9.2. FASE 0 - Due Diligence (Semanas 0-6) (Inicio 6-ene-2026)
 
 ### Semana 0: Diseño Arquitectura Preliminar y Estimación
 
@@ -80,11 +80,12 @@ Sem 0-6         Sem 6-28                                         Sem 28-42
 
 **Hito Semana 6:** ✅✅ Decisión Go/No-Go emitida, Fase 1 aprobada para iniciar
 
-**TOTAL FASE 0:** 235h (JMB: 95h, Lucía: 112h, Linda: 28h)
+**TOTAL FASE 0:** 235h (JMB: 95h, Lucía: 112h, Linda: 28h)  
+Inicio efectivo: 6-ene-2026 (considera feriados y disponibilidad inicial)
 
 ---
 
-## 9.3. FASE 1 - Construcción Data Lake (Semanas 6-28)
+## 9.3. FASE 1 - Construcción Data Lake (Semanas 6-28) (Inicio estimado segunda mitad febrero 2026 tras Fase 0)
 
 ### Semanas 6-8: Setup Infraestructura Completa
 
@@ -165,7 +166,7 @@ Sem 0-6         Sem 6-28                                         Sem 28-42
 
 ---
 
-## 9.4. FASE 2 - Dashboards Power BI (Semanas 28-42)
+## 9.4. FASE 2 - Dashboards Power BI (Semanas 28-42) (Inicio aproximado julio 2026)
 
 ### Semanas 28-30: Modelo Dimensional Completo
 
@@ -239,11 +240,11 @@ Sem 0-6         Sem 6-28                                         Sem 28-42
 
 | Hito | Semana | Descripción |
 |------|--------|-------------|
-| **Inicio Proyecto** | Semana 0 | Kick-off y diseño preliminar |
-| **Go/No-Go** | Semana 6 | Decisión de continuar a Fase 1 |
-| **Fin Fase 1** | Semana 28 | Data Lake operativo con 18 transacciones |
-| **Fin UAT** | Semana 39 | Dashboards validados |
-| **Go-Live** | Semana 42 | Sistema en producción |
+| **Inicio Proyecto** | Semana 0 (6-ene-2026) | Kick-off y diseño preliminar |
+| **Go/No-Go** | Semana 6 (mediados feb 2026) | Decisión de continuar a Fase 1 |
+| **Fin Fase 1** | Semana 28 (mediados jul 2026) | Data Lake operativo con 18 transacciones |
+| **Fin UAT** | Semana 39 (sept 2026) | Dashboards validados |
+| **Go-Live** | Semana 42 (oct 2026) | Sistema en producción |
 | **Cierre Formal** | Semana 42 | Proyecto completado |
 
 ---

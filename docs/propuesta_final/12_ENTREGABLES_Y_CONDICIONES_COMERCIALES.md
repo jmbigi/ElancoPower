@@ -23,7 +23,7 @@ A continuación se detalla la lista exhaustiva de todos los entregables del proy
 - ✅ Recomendaciones técnicas
 
 **Formato:** Documento PDF/DOCX (30-40 páginas)  
-**Fecha Entrega:** Semana 3 (29-nov-2025)  
+**Fecha Entrega:** Semana 3 (27-ene-2026)  
 **Aprobador:** Product Owner + TI Elanco
 
 ---
@@ -40,7 +40,7 @@ A continuación se detalla la lista exhaustiva de todos los entregables del proy
 - ✅ Propuesta de MVP (Minimum Viable Product) para Fase 1
 
 **Formato:** Excel/Google Sheets + Documento PDF  
-**Fecha Entrega:** Semana 4 (6-dic-2025)  
+**Fecha Entrega:** Semana 4 (03-feb-2026)  
 **Aprobador:** Product Owner + Stakeholders
 
 ---
@@ -59,7 +59,7 @@ A continuación se detalla la lista exhaustiva de todos los entregables del proy
 - ✅ Documentación de flujos de datos (ETL pipelines)
 
 **Formato:** Documento PDF + Archivos SQL  
-**Fecha Entrega:** Semana 4 (6-dic-2025)  
+**Fecha Entrega:** Semana 4 (03-feb-2026)  
 **Aprobador:** TI Elanco + Arquitecto Aunergia
 
 ---
@@ -76,7 +76,7 @@ A continuación se detalla la lista exhaustiva de todos los entregables del proy
 - ✅ Métricas de éxito (KPIs del proyecto)
 
 **Formato:** MS Project / Smartsheet / Excel + PDF  
-**Fecha Entrega:** Semana 5 (13-dic-2025)  
+**Fecha Entrega:** Semana 5 (10-feb-2026)  
 **Aprobador:** Product Owner + Linda López (PM)
 
 ---
@@ -93,7 +93,7 @@ A continuación se detalla la lista exhaustiva de todos los entregables del proy
 - ✅ Si NO-GO: Alternativas y próximos pasos
 
 **Formato:** Presentación PowerPoint (15-20 slides) + Documento ejecutivo (5-7 páginas)  
-**Fecha Entrega:** 15-dic-2025 (Workshop con Product Owner y Stakeholders)  
+**Fecha Entrega:** 10-feb-2026 (Workshop con Product Owner y Stakeholders)  
 **Aprobador:** Product Owner + Management Elanco
 
 **Criterio:** Si NO-GO → Proyecto se detiene. Aunergia cobra solo Fase 0 (116 horas).
@@ -510,7 +510,7 @@ A continuación se detalla la lista exhaustiva de todos los entregables del proy
 
 | Hito | Fecha Estimada | % del Esfuerzo | Horas | Condición de Aceptación |
 |------|----------------|----------------|-------|-------------------------|
-| **Hito 1: Inicio del Proyecto** | 1-dic-2025 | - | - | Contrato firmado, Kick-off realizado |
+| **Hito 1: Inicio del Proyecto** | 6-ene-2026 | - | - | Contrato firmado, Kick-off realizado |
 | **Hito 2: Entrega Go/No-Go (Fase 0)** | 12-ene-2026 | 15% | 235h | Aprobación de Go/No-Go |
 | **Hito 3: Data Lake Completado (Fase 1)** | 14-jun-2026 | 44% | 696h | Aprobación técnica Data Lake |
 | **Hito 4: 12 Dashboards UAT (Fase 2)** | 20-sep-2026 | 41% | 659h | Aprobación UAT por stakeholders |
@@ -541,11 +541,11 @@ A continuación se detalla la lista exhaustiva de todos los entregables del proy
    - Análisis de requerimientos (workshops)
    - Diseño de arquitectura
    - Desarrollo de pipelines ETL
-   - Desarrollo de 12 dashboards Power BI
+   - Desarrollo de 12 dashboards Power BI (promedio ~3 hojas por dashboard)
    - Documentación técnica y funcional
    - Capacitaciones (12 horas totales)
    - UAT y validaciones
-   - Soporte post go-live (30 días)
+   - Post go-live: coordinación de ajustes menores si corresponde (sin compromisos de operación continua incluidos)
 
 4. **Reuniones:**
    - Kick-off
@@ -589,9 +589,9 @@ A continuación se detalla la lista exhaustiva de todos los entregables del proy
    - Consultoría de arquitectura de datos avanzada (Data Mesh, etc.)
    - Consultoría de Machine Learning / Data Science (para Fase 3 futura)
 
-5. **Soporte Extendido:**
-   - Soporte después de los 30 días incluidos
-   - SLA de soporte 24/7 (solo 9 AM - 6 PM incluido)
+5. **Servicios post go-live (opcionales):**
+   - Evolutivos o nuevos requerimientos posteriores al proyecto
+   - Monitoreo y operación a demanda
    - Mantenimiento evolutivo (nuevas funcionalidades post-proyecto)
 
 6. **Cambios de Alcance Mayores:**
@@ -620,10 +620,8 @@ A continuación se detalla la lista exhaustiva de todos los entregables del proy
 - Si retrasos por causa de Aunergia > 2 semanas: Sin costo adicional de horas extras
 - Si retrasos por causa de Elanco (ej. permisos): Extensión de plazo sin penalización
 
-✅ **Soporte Post Go-Live:**
-- 30 días de soporte incluido (corrección de bugs, ajustes menores)
-- Tiempo de respuesta: 24-48 horas para consultas
-- Tiempo de resolución: 5 días hábiles para bugs no críticos
+✅ **Post Go-Live:**
+- Ajustes menores y corrección de bugs evaluados y planificados caso a caso
 
 ✅ **Confidencialidad:**
 - NDA (Non-Disclosure Agreement) vigente

@@ -373,7 +373,7 @@ Usuarios finales prefieren seguir usando Excel y reportes SAP tradicionales, baj
    - ✅ Quick-wins: reemplazar reportes más dolorosos primero
 
 2. **Contingencia:**
-   - Capacitaciones de refuerzo (incluidas en soporte 30 días)
+   - Capacitaciones de refuerzo (incluidas)
    - Champions por área (power users evangelizadores)
    - Comunicación de éxitos tempranos (tiempo ahorrado, insights obtenidos)
 
@@ -477,7 +477,7 @@ Lucía tiene demandas competentes de su rol operativo SAP (soporte usuarios, cie
 1. **Preventiva:**
    - ✅ Cronograma ajustado a 4-6h/semana (ya aplicado)
    - ✅ Priorizar semanas con baja carga operativa
-   - ✅ Soporte de JMB en tareas SAP técnicas
+   - ✅ Asistencia de JMB en tareas SAP técnicas
    - ✅ Designar backup en área SAP de Elanco
 
 2. **Contingencia:**
@@ -518,7 +518,7 @@ JMB es el único arquitecto/desarrollador; si no disponible (enfermedad, vacacio
 ### 🟡 R-R-03: Falta de Recursos TI Global
 
 **Descripción:**  
-TI Global de Elanco tiene baja capacidad para atender tickets (permisos SAP, tablas BigQuery, soporte infraestructura), tiempos de respuesta > 2 semanas.
+TI Global de Elanco tiene baja capacidad para atender tickets (permisos SAP, tablas BigQuery, gestión de infraestructura), tiempos de respuesta > 2 semanas.
 
 | **Probabilidad** | **Impacto** | **Exposición** | **Fase Afectada** |
 |------------------|-------------|----------------|-------------------|
@@ -847,7 +847,7 @@ Los siguientes supuestos son críticos para la viabilidad del proyecto. Si algun
 
 | # | Supuesto | Criticidad | Responsable Validación |
 |---|----------|------------|------------------------|
-| **S-C-01** | Kick-off se realiza el 1 de diciembre de 2025 como planificado | 🟡 ALTO | Product Owner + Linda López |
+| **S-C-01** | Kick-off se realiza el 6 de enero de 2026 como planificado | 🟡 ALTO | Product Owner + Linda López |
 | **S-C-02** | No hay extensiones de vacaciones o feriados no planificados | 🟢 MEDIO | Todos |
 | **S-C-03** | Go/No-Go se aprueba al final de Fase 0 (15-dic-2025) | 🟡 ALTO | Product Owner |
 | **S-C-04** | No hay interrupciones mayores por auditorías, cierres especiales, etc. | 🟢 MEDIO | Finanzas/Supply |
