@@ -2,7 +2,7 @@ Actualización 10-oct-2025 – alineado con Finanzas y Operaciones.
 
 Qué se va a usar (plataformas confirmadas):
 1. SAP S/4HANA (power users con roles MM, SD, FI, CO).
-2. Google BigQuery (dataset CASA y ERP Enterprise Data Product).
+2. Google BigQuery (dataset casa_bi: dev / qa / prod, y ERP Enterprise Data Product).
 3. Microsoft Power BI (workspaces corporativos y RLS aplicado).
 
 Por el momento no se va a usar:

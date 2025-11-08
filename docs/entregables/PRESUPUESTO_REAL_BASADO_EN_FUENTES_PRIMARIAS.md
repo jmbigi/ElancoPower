@@ -56,7 +56,7 @@ Este presupuesto se basa **exclusivamente** en:
 
 ✅ **Confirmado por Finanzas y Operaciones:**
 1. SAP S/4HANA (power users con roles MM, SD, FI, CO)
-2. Google BigQuery (dataset CASA y ERP Enterprise Data Product)
+2. Google BigQuery (dataset casa_bi y ERP Enterprise Data Product)
 3. Microsoft Power BI (workspaces corporativos y RLS aplicado)
 4. Herramientas de apoyo: BigQuery Studio, ODBC Simba, Confluence/SharePoint
 
@@ -148,7 +148,7 @@ Este presupuesto se basa **exclusivamente** en:
 | Actividad | Responsable | Horas estimadas | Justificación |
 |-----------|-------------|-----------------|---------------|
 | Coordinación permisos SAP + tickets BigQuery | Lucía Rodríguez | 20h | Gestión con TI Global, seguimiento tickets |
-| Análisis técnico arquitectura BigQuery | Juan Manuel Bigi | 24h | Evaluación dataset CASA, performance, costos |
+| Análisis técnico arquitectura BigQuery | Juan Manuel Bigi | 24h | Evaluación dataset casa_bi, performance, costos |
 | Workshop priorización transacciones | Lucía + JMB | 12h | 3 sesiones × 4h con Finanzas/Supply/TechOps |
 | Documentación y backlog | Juan Manuel Bigi | 16h | Análisis CSV, mapeo tablas SAP, plan extracción |
 | Validación con TI Global | Lucía Rodríguez | 8h | Reuniones con David Saboya, Carolina Rondón |
@@ -220,7 +220,7 @@ Este presupuesto se basa **exclusivamente** en:
 **Objetivo:** Consumir datos desde BigQuery y crear dashboards ejecutivos.
 
 #### Alcance:
-- Conexión Power BI → BigQuery (dataset CASA)
+- Conexión Power BI → BigQuery (dataset casa_bi)
 - Modelo tabular con relaciones definidas
 - 12 dashboards principales:
   1. Dashboard Financiero General

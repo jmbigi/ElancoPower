@@ -596,7 +596,7 @@ Para cada transacción se debe validar en Fase 0:
 3. ✅ **Campos clave** requeridos para análisis (pueden replicarse subconjuntos de campos)
 4. ✅ **Relaciones entre tablas** (claves foráneas, joins necesarios)
 5. ✅ **Frecuencia de replicación SLT** adecuada (tiempo real, batch diario, etc.)
-6. ✅ **Disponibilidad en dataset CASA** de BigQuery (confirmar que tablas ya están siendo replicadas)
+6. ✅ **Disponibilidad en dataset casa_bi** de BigQuery (confirmar que tablas ya están siendo replicadas)
 7. ✅ **Volúmenes estimados** de datos (24 meses históricos + crecimiento)
 8. ✅ **Lógica de cálculo** en transacciones custom (Z) que debe recrearse en BigQuery
 

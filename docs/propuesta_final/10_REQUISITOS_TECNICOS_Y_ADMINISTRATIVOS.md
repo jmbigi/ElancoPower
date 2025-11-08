@@ -51,12 +51,12 @@ Estos requisitos **DEBEN** estar resueltos antes del kick-off:
 
 | Usuario | Rol BigQuery | Permisos | Status |
 |---------|--------------|----------|--------|
-| **Funcional SAP** | BigQuery Data Editor | Read/Write dataset CASA | ⏳ Pendiente |
-| **Consultor BI** | BigQuery Data Editor | Read/Write dataset CASA | ⏳ Pendiente |
-| **Project Manager** | BigQuery Data Viewer | Read-only dataset CASA | ⏳ Pendiente |
+| **Funcional SAP** | BigQuery Data Editor | Read/Write dataset casa_bi | ⏳ Pendiente |
+| **Consultor BI** | BigQuery Data Editor | Read/Write dataset casa_bi | ⏳ Pendiente |
+| **Project Manager** | BigQuery Data Viewer | Read-only dataset casa_bi | ⏳ Pendiente |
 | **David Saboya (TI)** | BigQuery Admin | Full access | ✅ OK |
-| **Usuarios Finanzas (2)** | BigQuery Data Viewer | Read-only dataset CASA | ⏳ Pendiente |
-| **Usuarios Supply (2)** | BigQuery Data Viewer | Read-only dataset CASA | ⏳ Pendiente |
+| **Usuarios Finanzas (2)** | BigQuery Data Viewer | Read-only dataset casa_bi | ⏳ Pendiente |
+| **Usuarios Supply (2)** | BigQuery Data Viewer | Read-only dataset casa_bi | ⏳ Pendiente |
 
 **Proyectos y Datasets:**
 - **Proyecto GCP:** `elanco-casa-bi` o `elanco-erp`

@@ -72,7 +72,7 @@ Las tablas SAP necesarias (COEP, CE1*, CE4*, Z-tables) no están replicadas en B
 **Estrategias de Mitigación:**
 
 1. **Preventiva (Fase 0 - Semana 1):**
-   - ✅ Auditoría completa de tablas disponibles en dataset CASA
+   - ✅ Auditoría completa de tablas disponibles en dataset casa_bi
    - ✅ Solicitar replicación de tablas faltantes (ticket TI Global)
    - ✅ Validar integridad de datos: registros, fechas, completitud
 

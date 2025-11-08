@@ -137,9 +137,9 @@ Elanco ha implementado **Google BigQuery** como plataforma de Data Lake corporat
   - ODBC Simba (conectividad con herramientas BI)
   - Gemini AI Cloud Companion (asistencia SQL - opcional)
 
-### 1.3.2. Piloto en Sudamérica (Dataset CASA)
+### 1.3.2. Piloto en Sudamérica (dataset casa_bi)
 
-Para la región de Sudamérica, TI Global inició un piloto con el **dataset CASA** en BigQuery. El objetivo era replicar el éxito de otras regiones y centralizar datos SAP de los países CASA.
+Para la región de Sudamérica, TI Global inició un piloto con el **dataset casa_bi** en BigQuery (anteriormente referido como “CASA”). El objetivo era replicar el éxito de otras regiones y centralizar datos SAP de los países CASA.
 
 #### Resultados del Piloto
 
@@ -173,7 +173,7 @@ Según correo de **David Saboya** (Analista IT TechOps CASA) del 9 de octubre de
 > *"Algunas tablas [SAP] no se encuentran en el dataset de BigQuery y hay que solicitar el ingreso de estas por tickets de TI"*
 
 **Detalles:**
-- Las tablas necesarias para algunas transacciones no están replicadas en el dataset CASA
+- Las tablas necesarias para algunas transacciones no están replicadas en el dataset casa_bi
 - Particularmente afecta a:
   - Transacciones custom (ZLEL008, ZVEL015)
   - Tablas CO-PA (CE1*, CE4* para KE24)
@@ -323,7 +323,7 @@ Basado en el documento **"Que_se_va_a_usar.txt"** (actualizado 10-oct-2025), ali
 
 ### Oportunidades Identificadas
 
-1. ✅ **Infraestructura BigQuery disponible** (dataset CASA)
+1. ✅ **Infraestructura BigQuery disponible** (dataset casa_bi)
 2. ✅ **Licencias Power BI adquiridas** (8 licencias Pro)
 3. ✅ **Experiencia corporativa** con BigQuery en otras regiones
 4. ✅ **Apoyo de TI Global** para resolución de issues

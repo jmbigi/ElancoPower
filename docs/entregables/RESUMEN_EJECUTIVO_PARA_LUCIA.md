@@ -139,7 +139,7 @@ Según el correo de **David Saboya** (09-oct-2025), Elanco tiene estos issues:
 ### Para que pueda arrancar necesito:
 1. ✅ Que el Funcional SAP tenga permisos SAP completos (Ticket SAP-48219)
 2. ✅ Que las tablas críticas estén en BigQuery o tengamos plan B
-3. ✅ Acceso a dataset CASA en BigQuery (ya confirmado)
+3. ✅ Acceso a dataset casa_bi en BigQuery (ya confirmado)
 4. ✅ Backlog priorizado (lo hacemos en Fase 0)
 
 ### Forma de pago propuesta:

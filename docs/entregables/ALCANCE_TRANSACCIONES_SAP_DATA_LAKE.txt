@@ -126,7 +126,7 @@ OBSERVACIONES IMPORTANTES
    - Nombres de tablas SAP específicas (VBAK, EKPO, etc.)
    - Campos clave de cada transacción
    - Frecuencia de sincronización requerida
-   - Disponibilidad de tablas en dataset CASA
+    - Disponibilidad de tablas en dataset casa_bi
 
 5. Plataforma Data Lake (CONFIRMADO):
    - BigQuery (Google Cloud Platform)
@@ -148,7 +148,7 @@ PRÓXIMOS PASOS
 
 [ ] Documentación de mapeo de campos SAP → BigQuery
 
-[✓] Plataforma confirmada: BigQuery en dataset CASA
+[✓] Plataforma confirmada: BigQuery en dataset casa_bi
 
 [ ] Conexión Power BI → BigQuery validada (nativa o ODBC Simba)
 

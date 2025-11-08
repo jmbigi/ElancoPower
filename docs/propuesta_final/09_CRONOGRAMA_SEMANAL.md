@@ -40,7 +40,7 @@ Sem 0-6         Sem 6-28                                         Sem 28-42 (ajus
 ### Semanas 1-3: Inventario Técnico Completo
 
 **Actividades principales:**
-- Revisión dataset CASA BigQuery
+- Revisión dataset casa_bi BigQuery
 - Análisis permisos SAP y estado actual
 - Listado tablas por módulo y documentación
 - **Horas totales:** 41h (Consultor BI: 20h, Funcional SAP: 18h, Project Manager: 3h)

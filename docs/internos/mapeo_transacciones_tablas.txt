@@ -1,0 +1,77 @@
+================================================================================
+MAPEO DE REFERENCIA: TRANSACCIONES SAP A TABLAS
+================================================================================
+Proyecto: Elanco Power
+Fecha: 8 de noviembre de 2025
+Propósito: Referencia técnica rápida para desarrolladores y analistas.
+================================================================================
+
+
+--------------------------------------------------------------------------------
+SECCIÓN 1: MAPEO TRANSACCIÓN -> TABLAS
+--------------------------------------------------------------------------------
+
+PRIORIDAD 1 (CRÍTICAS)
+----------------------
+
+VA05 (Órdenes de Venta):
+    - VBAK (Cabecera de orden de venta)
+    - VBAP (Posiciones de la orden)
+    - VBEP (Fechas de entrega programadas)
+    - KNA1 (Maestro de clientes)
+    - MARA (Maestro de materiales)
+
+ZLEL008 (Inventario Consolidado - Custom):
+    - MARD (Stock por almacén - posible)
+    - MSKA (Stock especial - posible)
+    - MSEG (Movimientos de material - posible)
+    - NOTA: Requiere análisis de código ABAP para confirmación.
+
+KSB1 (OPEX / Controlling):
+    - COBK (Cabecera de documentos CO)
+    - COEP (Partidas individuales CO)
+    - AUFK (Maestro de órdenes internas)
+    - CSKS (Maestro de centros de costo)
+    - CSKA (Maestro de elementos de costo)
+
+FAGLL03 (Mayor General):
+    - FAGLFLEXA (Partidas individuales del nuevo GL)
+    - BKPF (Cabecera de documentos contables)
+    - BSEG (Segmentos de documentos contables)
+    - SKA1 (Plan de cuentas)
+
+
+PRIORIDAD 2 (IMPORTANTES)
+-------------------------
+
+KE24 (Venta / CO-PA):
+    - CE1xxxx (Partidas reales CO-PA - dinámica)
+    - CE4xxxx (Partidas plan CO-PA - dinámica)
+
+FB03 (Documentos de Venta):
+    - BKPF (Cabecera de documentos contables)
+    - BSEG (Segmentos de documentos contables)
+    - BSID (Partidas abiertas de deudores)
+    - BSAD (Partidas compensadas de deudores)
+
+F.08 (Balance de Comprobación):
+    - FAGLFLEXA (Partidas individuales del nuevo GL)
+    - FAGLFLEXT (Tabla de totales del nuevo GL)
+
+F.01 (Estado de Situación):
+    - FAGLFLEXA (Partidas individuales del nuevo GL)
+    - SKA1 (Plan de cuentas)
+
+
+PENDIENTES DE CLASIFICAR
+------------------------
+
+ME2L / ME23N (Pedidos de Compra): EKKO, EKPO
+MM60 (Costos Estándar): MBEW, CKMLCR
+MB59 (Movimientos de Material): MSEG, MARD
+ZVEL015 (Condiciones de Precio): Tablas por determinar
+FBL1N (Partidas de Proveedores): BSIK, BSAK
+FBL5N (Partidas de Clientes): BSID, BSAD
+MB5B (Stock por Material): MARD, MCHB
+XK03 (Maestro de Proveedores): LFA1, LFB1, LFM1
+XD03 (Maestro de Clientes): KNA1, KNB1, KNVV

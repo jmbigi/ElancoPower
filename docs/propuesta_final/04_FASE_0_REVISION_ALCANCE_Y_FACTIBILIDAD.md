@@ -50,7 +50,7 @@
 - Módulo CO (Controlling)
 - Autorización para exportación masiva de datos
 
-✅ **Tablas BigQuery:** Disponibles en dataset CASA:
+✅ **Tablas BigQuery:** Disponibles en dataset casa_bi:
 - Tablas custom (ZLEL008, ZVEL015)
 - Tablas CO-PA (CE1*, CE4* para KE24)
 - Tabla FAGLFLEXA (mayor general)
@@ -74,7 +74,7 @@
 
 | # | Actividad | Horas | Entregable |
 |---|-----------|-------|------------|
-| 1 | Análisis de dataset CASA en BigQuery | 8h | Inventario de tablas disponibles |
+| 1 | Análisis de dataset casa_bi en BigQuery | 8h | Inventario de tablas disponibles |
 | 2 | Evaluación de performance con volúmenes reales | 6h | Benchmarks de queries |
 | 3 | Validación de conectividad Power BI ↔ BigQuery | 4h | Prueba de concepto funcional |
 | 4 | Análisis de costos BigQuery proyectados | 4h | Estimación de costos mensual |
@@ -321,7 +321,7 @@ Cada riesgo incluye:
 | Día | Actividad | Responsable | Horas |
 |-----|-----------|-------------|-------|
 | Lun | Kick-off meeting con stakeholders | Project Manager + Todos | 2h |
-| Lun-Mar | Análisis dataset CASA BigQuery | Consultor BI | 8h |
+| Lun-Mar | Análisis dataset casa_bi BigQuery | Consultor BI | 8h |
 | Mar-Mie | Seguimiento tickets SAP/BigQuery | Funcional SAP | 4h |
 | Mie-Jue | Prueba conectividad Power BI | Consultor BI | 4h |
 | Vie | Preparación workshop priorización | Funcional SAP + Consultor BI | 4h |
@@ -358,8 +358,7 @@ Cada riesgo incluye:
 
 ---
 
-### Semana 4 (27 ene - 2 feb 2026): Preparación de Cierre y Go/No-Go
-### Semana 5 (3-9 feb 2026): Cierre y Go/No-Go
+### Semana 4-5 (27 ene - 9 feb 2026): Preparación de Cierre y Go/No-Go
 
 | Día | Actividad | Responsable | Horas |
 |-----|-----------|-------------|-------|
@@ -369,16 +368,6 @@ Cada riesgo incluye:
 | Vie | Ajustes post Go/No-Go | Consultor BI | 4h |
 
 **Hito:** Decisión Go/No-Go documentada (10-feb-2026)
-
-| Día | Actividad | Responsable | Horas |
-|-----|-----------|-------------|-------|
-| Lun | Documentación entregables Fase 0 | Consultor BI | 6h |
-| Mar | Revisión interna documentos | Project Manager + Funcional SAP + Consultor BI | 4h |
-| Mie | Preparación presentación Go/No-Go | Project Manager + Consultor BI | 4h |
-| Jue | Reunión Go/No-Go (2h) | Todos + Stakeholders | 2h |
-| Vie | Ajustes post Go/No-Go | Consultor BI | 4h |
-
-**Hito:** Decisión Go/No-Go documentada
 
 ### Presupuesto de Fase 0 (consolidado oficial)
 

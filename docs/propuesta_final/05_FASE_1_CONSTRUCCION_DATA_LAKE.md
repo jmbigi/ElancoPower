@@ -1,6 +1,8 @@
-# 5. FASE 1 | **Duración Unificada:** 22 semanas (según consolidado 1,590h / 42 semanas) |
-| **Fecha inicio estimada** | Segunda mitad de Febrero 2026 (tras Go/No-Go 10-feb-2026) |
-| **Fecha fin estimada** | Julio 2026 | CONSTRUCCIÓN DE DATA LAKE
+# 5. FASE 1 — CONSTRUCCIÓN DE DATA LAKE
+
+**Duración unificada:** 22 semanas (consolidado 1,590h / 42 semanas)  
+**Fecha inicio estimada:** Segunda mitad de febrero 2026 (tras Go/No-Go 10-feb-2026)  
+**Fecha fin estimada:** Julio 2026
 
 ## 5.1. Objetivo de la Fase
 

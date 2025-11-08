@@ -59,6 +59,15 @@ ElancoPower/
 
 ## 🎯 INICIO RÁPIDO
 
+### (Histórico) Referencias a "Solución SLT Completa"
+
+Las referencias a una carpeta `docs/propuesta_final/solucion_slt_completa/` y su documentación específica fueron removidas porque **esa carpeta no existe en el repositorio actual**. El contenido relevante sobre replicación mediante **SAP SLT** fue absorbido en las secciones técnicas de la propuesta final (ver `05_FASE_1_CONSTRUCCION_DATA_LAKE.md` y `ANEXO_TECNICO_TRANSACCIONES_VS_TABLAS.md`).
+
+Si en el futuro se desea reinstaurar una documentación separada para una "Solución SLT Completa", deberá crearse primero la carpeta y luego incorporar un índice propio. Mientras tanto el **SSOT** permanece en `docs/propuesta_final/`.
+
+> Nota: Presupuesto histórico asociado (USD 122,595) marcado como referencia histórica; no altera cifras canónicas del proyecto integral (1,590h).
+
+---
 
 ### 📦 Documentos para Entregar a Elanco
 
@@ -71,20 +80,7 @@ ElancoPower/
 
 ### 📊 Documentos Internos de Trabajo (solo referencia, no alteran cifras canónicas)
 
-**Carpeta:** `docs/internos/`
-
-| Documento | Propósito |
-|-----------|-----------|
-| ANALISIS_DIFERENCIAS_PRESUPUESTOS.md | Comparativa USD 8,850 vs USD 48,000 |
-| AUDITORIA_FINAL_CONSOLIDACION.md | Auditoría completa de consolidación (99/100) |
-| DESGLOSE_PAGOS_POR_ETAPA.md | Distribución de pagos por fase |
-| INDICE_COMPLETO.md | Guía de navegación completa |
-| REORGANIZACION_COMPLETADA.md | Documentación de reorganización |
-| VERIFICACION_DE_FUENTES.md | Certificación de datos verificables |
-| REPORTE_REVISION_FINAL.md | QA final del proyecto |
-| REVISION_FINAL_QA.md | Control de calidad exhaustivo |
-| checklist_permisos_y_licencias.md | Estado de accesos SAP/BigQuery/Power BI |
-| transacciones_sap_backlog.md | Backlog priorizado de transacciones |
+Nota sobre `docs/internos/`: Se eliminaron referencias a documentos internos específicos porque esa carpeta no contiene archivos en este repo. Cuando haga falta, se podrán reintroducir como documentación de trabajo no canónica. El SSOT sigue siendo `docs/propuesta_final/` y `docs/entregables/`.
 
 ### 📚 Archivos Históricos (removidos)
 
@@ -96,6 +92,7 @@ Los archivos históricos previamente referenciados (`presupuesto_actualizado.md`
 
 | Presupuesto | Ubicación | Monto / Horas | Para quién | Estado |
 |-------------|-----------|---------------|------------|--------|
+| **Solución SLT Completa (Histórico)** | (carpeta no presente) | **USD 122,595** | Cliente/Ejecutivos | 📚 Histórico |
 | **Propuesta Integral Data Lake** | `docs/propuesta_final/` | **1,590 horas** | Equipo Aunergia/Elanco | ✅ **CANÓNICO** |
 | **Personal JM Bigi (Inicial)** | `docs/entregables/PRESUPUESTO_REAL_...` | **354 horas** | Lucía/Linda/Elanco | 📚 Histórico |
 | **Resumen Ejecutivo (Inicial)** | `docs/entregables/RESUMEN_EJECUTIVO_...` | 354 horas (resumen) | Lucía (formato corto) | 📚 Histórico |
@@ -151,7 +148,7 @@ Nota: Bloque histórico de presupuesto personal reducido (10-oct-2025). El esfue
 | Componente | Herramienta | Estado |
 |------------|-------------|--------|
 | **ERP** | SAP S/4HANA (roles MM, SD, FI, CO) | ✅ Confirmado |
-| **Data Lake** | Google BigQuery (dataset CASA) | ✅ Confirmado |
+| **Data Lake** | Google BigQuery (dataset casa_bi: dev / qa / prod) | ✅ Confirmado |
 | **BI** | Microsoft Power BI | ✅ 8 licencias Pro adquiridas |
 | **Herramientas** | BigQuery Studio, ODBC Simba, Confluence | ✅ Disponibles |
 | **AI (opcional)** | Gemini AI Cloud Companion | 🟡 Opcional |
@@ -180,7 +177,7 @@ ME2L, MM60, MB59, ZVEL015, ME23N, FBL1N, FBL5N, MB5B, XK03, XD03
 ## ⚠️ ISSUES CRÍTICOS
 
 **Fuente:** `inputs/correo_1_de_lucia.md` (David Saboya, 09-oct-2025)  
-**Estado actual:** `docs/internos/checklist_permisos_y_licencias.md`
+Estado de permisos: consolidado en `docs/propuesta_final/10_REQUISITOS_TECNICOS_Y_ADMINISTRATIVOS.md`.
 
 ### Issue #1: Permisos SAP insuficientes
 > *"El usuario asignado como 'power user' no contaba con todos los permisos para visualizar ciertas transacciones en SAP"*
@@ -253,7 +250,7 @@ ME2L, MM60, MB59, ZVEL015, ME23N, FBL1N, FBL5N, MB5B, XK03, XD03
 1. **Ejecutivos/Sponsors:** 
    - Empieza: `INICIO_RAPIDO.md` (5 min)
    - Lee: `RESUMEN_EJECUTIVO_SLT.md` (15 min)
-   - Decide: Aprobar presupuesto
+   - Decide: Aprobar presupuesto $122,595
 
 2. **Project Managers:**
    - Empieza: `INICIO_RAPIDO.md` (5 min)
@@ -267,16 +264,14 @@ ME2L, MM60, MB59, ZVEL015, ME23N, FBL1N, FBL5N, MB5B, XK03, XD03
    - Acción: Ejecutar scripts de tu fase
 
 **Auditoría y QA:**
-- Ver: `docs/internos/AUDITORIA_CONSISTENCIA_SOLUCION_SLT_COMPLETA.md`
-- Ver: `docs/internos/RESUMEN_CORRECCIONES_SLT_COMPLETA.md`
+Referencias a auditorías internas específicas fueron removidas del índice por no existir en este repo.
 
 ---
 
 ### 👤 Si eres **Lucía / Linda (Aunergia)**:
 1. **Empieza aquí:** `docs/entregables/RESUMEN_EJECUTIVO_PARA_LUCIA.md` ⭐
 2. **Presupuesto completo:** `docs/entregables/PRESUPUESTO_REAL_BASADO_EN_FUENTES_PRIMARIAS.md`
-3. **Comparativa:** `docs/internos/ANALISIS_DIFERENCIAS_PRESUPUESTOS.md`
-4. **Pagos:** `docs/internos/DESGLOSE_PAGOS_POR_ETAPA.md`
+Documentación comparativa y pagos: mantener fuera del repo público o en `docs/historicos/` si hiciera falta.
 
 **Opciones a decidir:**
 - Opción A: Propuesta Aunergia histórica (USD 48,000)
@@ -287,27 +282,24 @@ ME2L, MM60, MB59, ZVEL015, ME23N, FBL1N, FBL5N, MB5B, XK03, XD03
 1. **Contexto:** `inputs/conversaciones_con_lucia.md`
 2. **Issues técnicos:** `inputs/correo_1_de_lucia.md`
 3. **Presupuesto:** `docs/entregables/PRESUPUESTO_REAL_BASADO_EN_FUENTES_PRIMARIAS.md`
-4. **Checklist:** `docs/internos/checklist_permisos_y_licencias.md`
+Checklist de permisos: ver `docs/propuesta_final/10_REQUISITOS_TECNICOS_Y_ADMINISTRATIVOS.md`.
 
 ### 👨‍💻 Si eres **Juan Manuel Bigi**:
 1. **Tu presupuesto:** `docs/entregables/PRESUPUESTO_REAL_BASADO_EN_FUENTES_PRIMARIAS.md`
 2. **Transacciones:** `inputs/Attach_2_Correo_1_Transacciones SAP.csv` (o `.normalized.csv`)
 3. **Issues:** `inputs/correo_1_de_lucia.md`
 4. **Especificaciones:** `inputs/Attach_1_Correo_1_Texto_de_Imagen.md`
-5. **Backlog:** `docs/internos/transacciones_sap_backlog.md`
+Backlog: incluido dentro de `docs/propuesta_final/04_FASE_0_REVISION_ALCANCE_Y_FACTIBILIDAD.md`.
 
 ---
 
 ## 🔍 REFERENCIAS RÁPIDAS
 
-### 🌟 Solución SLT Completa (NUEVO):
-| Documento | Ubicación |
-|-----------|-----------|
-| Resumen Ejecutivo | `docs/propuesta_final/solucion_slt_completa/RESUMEN_EJECUTIVO_SLT.md` |
-| Guía Técnica Parte 1 | `docs/propuesta_final/solucion_slt_completa/Solucion_SLT_CONNECTOR_Y_PLAN_VA05.md` |
-| Guía Técnica Parte 2 | `docs/propuesta_final/solucion_slt_completa/Solucion_..._PARTE2.md` |
-| Índice Completo | `docs/propuesta_final/solucion_slt_completa/INDICE_GENERAL.md` |
-| Auditoría | `docs/internos/AUDITORIA_CONSISTENCIA_SOLUCION_SLT_COMPLETA.md` |
+### Referencias Eliminadas (Solución SLT Completa)
+
+La tabla anterior de documentos específicos SLT fue removida; la solución se documenta ahora de forma integrada. Ver:
+- Arquitectura y conectores: `05_FASE_1_CONSTRUCCION_DATA_LAKE.md`
+- Replicación tablas vs transacciones: `ANEXO_TECNICO_TRANSACCIONES_VS_TABLAS.md`
 
 ### 💰 Presupuestos:
 | Documento | Ubicación | Monto |
@@ -322,8 +314,8 @@ ME2L, MM60, MB59, ZVEL015, ME23N, FBL1N, FBL5N, MB5B, XK03, XD03
 | Transacciones (normalizado) | `inputs/Attach_2_Correo_1_Transacciones SAP.normalized.csv` |
 | Plataformas confirmadas | `inputs/Que_se_va_a_usar.txt` |
 | Issues reportados | `inputs/correo_1_de_lucia.md` |
-| Checklist permisos | `docs/internos/checklist_permisos_y_licencias.md` |
-| Backlog priorizado | `docs/internos/transacciones_sap_backlog.md` |
+| Checklist permisos | `docs/propuesta_final/10_REQUISITOS_TECNICOS_Y_ADMINISTRATIVOS.md` |
+| Backlog priorizado | `docs/propuesta_final/04_FASE_0_REVISION_ALCANCE_Y_FACTIBILIDAD.md` |
 
 ### 📝 Contexto:
 | Documento | Ubicación |
@@ -331,7 +323,7 @@ ME2L, MM60, MB59, ZVEL015, ME23N, FBL1N, FBL5N, MB5B, XK03, XD03
 | Audio transcrito (04:39) | `inputs/conversaciones_con_lucia.md` |
 | Power User Persona | `inputs/Attach_1_Correo_1_Texto_de_Imagen.md` |
 | Participantes | `inputs/quienes_somos.txt` |
-| Índice completo | `docs/internos/INDICE_COMPLETO.md` |
+| Índice completo | `docs/propuesta_final/README.md` |
 
 ---
 
@@ -351,10 +343,10 @@ ME2L, MM60, MB59, ZVEL015, ME23N, FBL1N, FBL5N, MB5B, XK03, XD03
 
 - ✅ **inputs/**: Contiene fuentes primarias verificables (NO modificar)
 - ✅ **docs/entregables/**: Documentos listos para enviar a cliente
-- ✅ **docs/internos/**: Documentos de trabajo y análisis
+   (Se removieron referencias a `docs/internos/` inexistentes en este repo; usar propuesta_final y entregables como fuentes vigentes.)
 - ✅ **docs/historicos/**: Archivos de referencia histórica
 
-**Para más detalles:** Ver `docs/internos/INDICE_COMPLETO.md`
+Para más detalles, navegar `docs/propuesta_final/` y sus secciones 00–12.
 
 ---
 
@@ -363,8 +355,9 @@ ME2L, MM60, MB59, ZVEL015, ME23N, FBL1N, FBL5N, MB5B, XK03, XD03
 **Estructura:** inputs/ (fuentes) + docs/ (entregables, propuesta_final, internos, históricos)
 
 **Novedades Noviembre 2025:**
-- ⭐ Solución SLT Completa en `docs/propuesta_final/solucion_slt_completa/`
+   (Se eliminó referencia a carpeta inexistente `solucion_slt_completa/`)
 - ⭐ 50+ scripts funcionales listos para implementación
 - ⭐ Documentación auditada y aprobada (98/100 puntos)
+- ⭐ Presupuesto completo: $122,595 año 1, 10 semanas
 
 ````

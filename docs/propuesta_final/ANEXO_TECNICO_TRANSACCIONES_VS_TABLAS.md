@@ -419,7 +419,7 @@ Luego recreas el informe en Power BI usando esos datos.
 
 - `03_TRANSACCIONES_SAP_INCLUIDAS.md` - Lista de 18 transacciones con tablas identificadas
 - `05_FASE_1_CONSTRUCCION_DATA_LAKE.md` - Arquitectura de replicación
-- `solucion_slt_completa/` - Documentación técnica de SLT
+- (Referencia histórica eliminada) La documentación técnica específica de SLT antes listada en `solucion_slt_completa/` fue absorbida en este anexo y en `05_FASE_1_CONSTRUCCION_DATA_LAKE.md`.
 
 ### Enlaces Externos
 

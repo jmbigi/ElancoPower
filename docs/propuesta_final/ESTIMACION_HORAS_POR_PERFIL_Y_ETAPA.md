@@ -43,7 +43,7 @@
 
 | Perfil | Horas | Actividades Principales |
 |--------|-------|------------------------|
-| **Google Cloud Architect** (Consultor BI) | 59h | • Análisis dataset CASA BigQuery (24h)<br>• Diseño arquitectura 3 capas (28h)<br>• Documentación arquitectura (7h) |
+| **Google Cloud Architect** (Consultor BI) | 59h | • Análisis dataset casa_bi BigQuery (24h)<br>• Diseño arquitectura 3 capas (28h)<br>• Documentación arquitectura (7h) |
 | **SAP SD/MM Functional** (Funcional SAP) | 62h | • Gestión permisos SAP (Ticket SAP-48219) (18h)<br>• Gestión tickets BigQuery tablas (BQ-7713, BQ-7721) (18h)<br>• Workshops priorización transacciones (28h)<br>• Análisis transacciones custom Z (parcial) (parcial en workshops)<br>• Validación POC (6h) |
 | **SAP ABAP Developer** (Consultor BI) | 0h | (Análisis Z incluido en workshops) |
 | **Data Engineer** (Consultor BI) | 0h | (Incluido en Cloud Architect) |
