@@ -20,7 +20,7 @@ Operación Centroamérica y Sudamérica (CASA)
 ---
 
 **Fecha de Elaboración:** 7 de Noviembre 2025  
-**Validez de la Oferta:** 30 días (hasta 7 de diciembre 2025)  
+**Validez de la Oferta:** 30 días a partir de la fecha de elaboración  
 **Versión del Documento:** 2.0 (Revisada y ajustada a realidad del proyecto)
 
 </div>
@@ -34,6 +34,7 @@ Operación Centroamérica y Sudamérica (CASA)
 | 0.5 | 29-oct-2025 | Avance 50% preliminar | Juan Manuel Bigi |
 | 1.0 | 5-nov-2025 | Propuesta final completa | Juan Manuel Bigi / Lucía Rodríguez |
 | 2.0 | 7-nov-2025 | **Revisión realista ajustada a antecedentes** | Juan Manuel Bigi |
+| 3.0 | 8-nov-2025 | Ajuste inicio 6-ene-2026, limpieza de redacción post go-live | Juan Manuel Bigi |
 
 ---
 

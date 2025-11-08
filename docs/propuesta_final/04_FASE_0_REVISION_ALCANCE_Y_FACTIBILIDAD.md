@@ -18,9 +18,9 @@
 
 | Parámetro | Valor |
 |-----------|-------|
-| **Duración estimada** | 4-5 semanas |
-| **Fecha inicio** | 1 de diciembre de 2025 |
-| **Fecha fin** | 15 de diciembre de 2025 |
+| **Duración estimada** | 5 semanas |
+| **Fecha inicio** | 6 de enero de 2026 |
+| **Fecha fin** | 10 de febrero de 2026 |
 | **Horas totales** | 80 horas |
 | **Equipo** | Lucía Rodríguez (28h) + Juan Manuel Bigi (40h) + Stakeholders Elanco (12h) |
 
@@ -317,7 +317,7 @@ Cada riesgo incluye:
 
 ## 4.5. Cronograma Semanal de Fase 0
 
-### Semana 1 (11-17 nov 2025): Kick-off y Análisis Inicial
+### Semana 1 (6-12 ene 2026): Kick-off y Análisis Inicial
 
 | Día | Actividad | Responsable | Horas |
 |-----|-----------|-------------|-------|
@@ -331,7 +331,7 @@ Cada riesgo incluye:
 
 ---
 
-### Semana 2 (18-24 nov 2025): Workshops y Validación
+### Semana 2 (13-19 ene 2026): Workshops y Validación
 
 | Día | Actividad | Responsable | Horas |
 |-----|-----------|-------------|-------|
@@ -345,7 +345,7 @@ Cada riesgo incluye:
 
 ---
 
-### Semana 3 (25 nov - 1 dic 2025): Planificación Detallada
+### Semana 3 (20-26 ene 2026): Planificación Detallada
 
 | Día | Actividad | Responsable | Horas |
 |-----|-----------|-------------|-------|
@@ -359,7 +359,17 @@ Cada riesgo incluye:
 
 ---
 
-### Semana 4 (2-8 dic 2025): Cierre y Go/No-Go
+### Semana 4 (27 ene - 2 feb 2026): Preparación de Cierre y Go/No-Go
+### Semana 5 (3-9 feb 2026): Cierre y Go/No-Go
+
+| Día | Actividad | Responsable | Horas |
+|-----|-----------|-------------|-------|
+| Mar | Revisión interna documentos | Linda + Lucía + JMB | 4h |
+| Mie | Preparación presentación Go/No-Go | Linda + JMB | 4h |
+| Jue | Reunión Go/No-Go (2h) | Todos + Stakeholders | 2h |
+| Vie | Ajustes post Go/No-Go | JMB | 4h |
+
+**Hito:** Decisión Go/No-Go documentada (10-feb-2026)
 
 | Día | Actividad | Responsable | Horas |
 |-----|-----------|-------------|-------|

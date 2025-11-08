@@ -46,7 +46,7 @@ La solución está dividida en dos documentos principales:
 - Entregables finales del proyecto
 - Costos estimados
 - Criterios de aceptación
-- Plan de soporte
+- Post go-live (operación)
 
 **Secciones:**
 1. Dashboard de monitoreo en Cloud Monitoring
@@ -59,7 +59,7 @@ La solución está dividida en dos documentos principales:
    - Servidor SLT sobrecargado
 4. Cronograma detallado (10 semanas, 70 días-persona)
 5. Entregables finales completos
-6. Plan de soporte post-implementación
+6. Post go-live (operación)
 7. Costos estimados (Infraestructura: $55,200 año 1)
 8. Criterios de aceptación
 
@@ -271,7 +271,7 @@ chmod +x create_service_account.sh
 
 ---
 
-## 📞 Soporte y Contacto
+## 📞 Contacto
 
 ### Para Consultas Técnicas
 - **Email:** sap-bigquery-support@elanco.com

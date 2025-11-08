@@ -362,7 +362,7 @@
 ### 8.10.1. Validez de la Propuesta
 
 - **Validez:** 30 días desde fecha de emisión (5-nov-2025 a 5-dic-2025)
-- **Vigencia:** Sujeto a confirmación si inicio es posterior a 15-dic-2025
+- **Vigencia:** Sujeto a confirmación si inicio es posterior a 10-feb-2026 (Go/No-Go)
 
 ### 8.10.2. Garantías
 

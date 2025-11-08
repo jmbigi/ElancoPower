@@ -461,7 +461,7 @@ Salida de personal clave de Elanco (Product Owner, stakeholders, Lucía) o Auner
 ### 🔴 R-R-01: Sobrecarga de Lucía Rodríguez (SAP Analyst)
 
 **Descripción:**  
-Lucía tiene demandas competentes de su rol operativo SAP (soporte usuarios, cierres, ad-hocs), no puede dedicar 15-20h/semana al proyecto.
+Lucía tiene demandas competentes de su rol operativo SAP (atención a usuarios, cierres, ad-hocs), no puede dedicar 15-20h/semana al proyecto.
 
 | **Probabilidad** | **Impacto** | **Exposición** | **Fase Afectada** |
 |------------------|-------------|----------------|-------------------|
@@ -849,7 +849,7 @@ Los siguientes supuestos son críticos para la viabilidad del proyecto. Si algun
 |---|----------|------------|------------------------|
 | **S-C-01** | Kick-off se realiza el 6 de enero de 2026 como planificado | 🟡 ALTO | Product Owner + Linda López |
 | **S-C-02** | No hay extensiones de vacaciones o feriados no planificados | 🟢 MEDIO | Todos |
-| **S-C-03** | Go/No-Go se aprueba al final de Fase 0 (15-dic-2025) | 🟡 ALTO | Product Owner |
+| **S-C-03** | Go/No-Go se aprueba al final de Fase 0 (10-feb-2026) | 🟡 ALTO | Product Owner |
 | **S-C-04** | No hay interrupciones mayores por auditorías, cierres especiales, etc. | 🟢 MEDIO | Finanzas/Supply |
 
 ### 11.7.5. Supuestos de Presupuesto

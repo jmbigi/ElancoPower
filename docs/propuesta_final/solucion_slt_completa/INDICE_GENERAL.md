@@ -33,7 +33,7 @@
 - Índice de todos los scripts (50+)
 - Métricas del proyecto
 - Checklist de implementación
-- Plan de soporte
+- Post go-live: operación (ajustes menores bajo evaluación)
 
 **Lectura:** 30 minutos  
 **Acción:** ORGANIZAR equipo y recursos
@@ -115,8 +115,8 @@
   - 7 criterios detallados
   - Checklist de validación
 
-- **PLAN DE SOPORTE**
-  - 3 niveles de soporte
+- **POST GO-LIVE (OPERACIÓN)**
+  - Lineamientos de operación y monitoreo
   - SLAs por severidad
   - Contactos de escalamiento
 
@@ -149,7 +149,7 @@ docs/propuesta_final/solucion_slt_completa/
         ├── Cronograma detallado
         ├── Entregables finales
         ├── Costos
-        └── Plan de soporte
+  └── Post go-live (operación)
 ```
 
 ---
@@ -171,7 +171,7 @@ docs/propuesta_final/solucion_slt_completa/
 2. README_SOLUCION_COMPLETA_SLT.md             (30 min)
 3. Parte 2 > Cronograma detallado              (30 min)
 4. Parte 2 > Entregables finales               (20 min)
-5. Parte 2 > Plan de soporte                   (15 min)
+5. Parte 2 > Post go-live (operación)          (15 min)
 → ACCIÓN: Organizar equipo, iniciar proyecto
 ```
 
@@ -199,7 +199,7 @@ docs/propuesta_final/solucion_slt_completa/
 2. Solucion_SLT_CONNECTOR_Y_PLAN_VA05.md (PARTE 1) > FASE 4: Monitoreo (inicio) (30 min)
 3. Parte 2 > FASE 4: Monitoreo (completo)      (60 min)
 4. Parte 2 > Todos los Problemas (1-5)         (60 min)
-5. Parte 2 > Plan de soporte                   (15 min)
+5. Parte 2 > Post go-live (operación)          (15 min)
 → ACCIÓN: Implementar monitoreo, crear runbooks
 ```
 
@@ -208,7 +208,7 @@ docs/propuesta_final/solucion_slt_completa/
 1. RESUMEN_EJECUTIVO > Beneficios              (10 min)
 2. Solucion_SLT_CONNECTOR_Y_PLAN_VA05.md (PARTE 1) > Vista VA05_SALES_ORDERS (20 min)
 3. PARTE 1 > Diccionario de datos              (20 min)
-4. Parte 2 > Plan de soporte > Nivel 1         (10 min)
+4. Parte 2 > Post go-live > Procedimientos     (10 min)
 → ACCIÓN: Participar en UAT, dar feedback
 ```
 
@@ -345,7 +345,7 @@ docs/propuesta_final/solucion_slt_completa/
 - [x] Cronograma detallado
 - [x] Recursos y costos
 - [x] Entregables
-- [x] Plan de soporte
+- [x] Post go-live (operación)
 - [x] Criterios de aceptación
 
 ---
@@ -357,13 +357,13 @@ docs/propuesta_final/solucion_slt_completa/
 ✅ **Bien Documentada:** Explicaciones detalladas en cada sección  
 ✅ **Probada:** Basada en best practices de SAP y Google  
 ✅ **Escalable:** Diseñada para crecer con el negocio  
-✅ **Mantenible:** Sistema de monitoreo y soporte incluido  
+✅ **Mantenible:** Sistema de monitoreo operativo  
 ✅ **Segura:** Consideraciones de seguridad en cada capa  
 ✅ **Costeada:** Presupuesto detallado con contingencia  
 
 ---
 
-## 📞 Contacto y Soporte
+## 📞 Contacto
 
 **Para consultas sobre este documento:**
 - Email: sap-bigquery-team@elanco.com

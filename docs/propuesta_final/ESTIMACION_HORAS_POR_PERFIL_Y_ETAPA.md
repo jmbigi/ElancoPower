@@ -11,7 +11,7 @@
 
 | Perfil Técnico | Recurso Asignado | Empresa | Observaciones |
 |----------------|------------------|---------|---------------|
-| **SAP Basis** | Cliente (Elanco) | Elanco | Soporte infraestructura SAP, no se calculan horas |
+| **SAP Basis** | Cliente (Elanco) | Elanco | Infraestructura SAP (sin horas estimadas en alcance) |
 | **SAP ABAP Developer** | Juan Manuel Bigi | Aunergia | Análisis transacciones Z, optimización queries |
 | **Google Cloud Architect** | Juan Manuel Bigi | Aunergia | Diseño arquitectura BigQuery, infraestructura GCP |
 | **SAP SD/MM Functional** | Lucía Rodríguez | Aunergia | Consultoría funcional, validaciones de negocio |

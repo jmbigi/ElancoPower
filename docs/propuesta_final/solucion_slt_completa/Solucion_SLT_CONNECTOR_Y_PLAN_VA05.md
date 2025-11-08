@@ -44,7 +44,7 @@
 - Cronograma detallado (10 semanas, 70 días-persona)
 - Entregables finales del proyecto
 - Costos estimados (Infraestructura: $55,200 año 1)
-- Plan de soporte post-implementación
+- Lineamientos de operación post go-live
 - Criterios de aceptación
 
 ---

@@ -268,9 +268,9 @@ Sem 10:  Go-Live               ░░░░░░░░░░░░░░░░�
 - Navegación de vistas VA05
 - Uso de dashboards
 - Interpretación de datos
-- Soporte y escalamiento
+- Operación post go-live y escalamiento
 
-### Equipo de Soporte (8 horas)
+### Equipo de Operación Post Go-Live (8 horas)
 - Arquitectura de la solución
 - Monitoreo y alertas
 - Troubleshooting común
@@ -384,7 +384,7 @@ Esta solución proporciona una **arquitectura empresarial, probada y escalable**
 - ✅ **Lista para usar:** Código funcional y probado
 - ✅ **Empresarial:** Arquitectura recomendada por SAP y Google
 - ✅ **Escalable:** Diseñada para crecer con el negocio
-- ✅ **Soportada:** Monitoreo 24/7 y plan de soporte
+- ✅ **Operable:** Monitoreo 24/7 y lineamientos de operación
 - ✅ **ROI Claro:** Payback en 12 meses
 
 **Recomendación:** APROBAR e iniciar implementación inmediatamente para comenzar a obtener beneficios en Q1 2026.

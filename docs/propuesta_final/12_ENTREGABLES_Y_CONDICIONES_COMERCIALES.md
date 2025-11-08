@@ -467,7 +467,7 @@ A continuación se detalla la lista exhaustiva de todos los entregables del proy
 - ✅ Métricas finales (horas consumidas, presupuesto, cronograma)
 - ✅ Lecciones aprendidas
 - ✅ Recomendaciones para futuras fases
-- ✅ Plan de soporte post go-live (30 días)
+ 
 
 **Formato:** Documento PDF (15-20 páginas) + Presentación ejecutiva (10 slides)  
 **Fecha Entrega:** 27-abr-2026 (1 semana post go-live)  
@@ -511,7 +511,7 @@ A continuación se detalla la lista exhaustiva de todos los entregables del proy
 | Hito | Fecha Estimada | % del Esfuerzo | Horas | Condición de Aceptación |
 |------|----------------|----------------|-------|-------------------------|
 | **Hito 1: Inicio del Proyecto** | 6-ene-2026 | - | - | Contrato firmado, Kick-off realizado |
-| **Hito 2: Entrega Go/No-Go (Fase 0)** | 12-ene-2026 | 15% | 235h | Aprobación de Go/No-Go |
+| **Hito 2: Entrega Go/No-Go (Fase 0)** | 10-feb-2026 | 15% | 235h | Aprobación de Go/No-Go |
 | **Hito 3: Data Lake Completado (Fase 1)** | 14-jun-2026 | 44% | 696h | Aprobación técnica Data Lake |
 | **Hito 4: 12 Dashboards UAT (Fase 2)** | 20-sep-2026 | 41% | 659h | Aprobación UAT por stakeholders |
 | **Hito 5: Go-Live y Cierre** | 20-sep-2026 | - | - | Go-Live exitoso + Cierre |
@@ -555,12 +555,7 @@ A continuación se detalla la lista exhaustiva de todos los entregables del proy
    - UAT con stakeholders
    - Go-Live
 
-5. **Soporte Post Go-Live:**
-   - 30 días de soporte incluido (desde 20-abr-2026 hasta 20-may-2026)
-   - Atención a incidencias (L-V, 9 AM - 6 PM GMT-3/GMT-5)
-   - Correcciones de bugs identificados en UAT o post go-live
-   - Ajustes menores a dashboards (sin cambio de alcance)
-   - Capacitaciones de refuerzo (si necesarias)
+ 
 
 ---
 
@@ -784,62 +779,15 @@ Los siguientes documentos forman parte integral del contrato:
 
 ---
 
-## 12.5. Términos de Soporte Post Go-Live
+## 12.5. Post Go-Live
 
-### 12.5.1. Soporte Incluido (Primeros 30 Días)
+No se incluyen compromisos de operación o mantenimiento continuos dentro de esta propuesta. Los ajustes menores o correcciones identificadas tras el go-live se coordinarán y presupuestarán aparte, según su alcance y prioridad.
 
-**Período:** 20-abr-2026 al 20-may-2026
-
-**Alcance del Soporte:**
-- ✅ Corrección de bugs identificados en go-live o durante uso
-- ✅ Ajustes menores a dashboards (sin cambio de alcance)
-- ✅ Troubleshooting de errores en pipelines ETL
-- ✅ Soporte a usuarios (consultas sobre uso de dashboards)
-- ✅ Sesiones de capacitación de refuerzo (si necesarias)
-
-**SLA (Service Level Agreement):**
-- **Horario:** Lunes a Viernes, 9:00 AM - 6:00 PM (GMT-3 o GMT-5)
-- **Tiempo de Respuesta:** 24-48 horas para consultas
-- **Tiempo de Resolución:**
-  - Bugs críticos (bloqueantes): 48 horas
-  - Bugs no críticos: 5 días hábiles
-  - Consultas: Respuesta en 24-48 horas
-
-**Canales de Soporte:**
-- Email: soporte-elanco@aunergia.com
-- MS Teams / Slack (si canal habilitado)
-- Reunión semanal de seguimiento (1 hora)
-
-**Exclusiones:**
-- Nuevas funcionalidades (requieren cotización)
-- Cambios de alcance mayores (requieren Change Request)
-- Soporte fuera de horario laboral (24/7)
-
----
-
-### 12.5.2. Soporte Extendido (Opcional - Post 30 Días)
-
-**Modalidad 1: Soporte On-Demand (Pay-per-Use)**
-- A cotizar según necesidad
-- Sin compromiso mínimo
-- Facturación mensual por horas consumidas
-- Ideal para: Soporte esporádico, pequeños ajustes
-
-**Modalidad 2: Retainer Mensual**
-- Paquete: Horas mensuales acordadas
-- Incluye: Soporte continuo, pequeñas mejoras, monitoreo
-- Ideal para: Mantenimiento evolutivo, nuevas transacciones
-
-**Modalidad 3: Proyecto de Fase 3 (Modelos Predictivos)**
-- Implementación completa de modelos de ML
-- Cotización por separado según alcance específico
-- Duración estimada: 12-16 semanas
-
----
+Para cualquier necesidad posterior se definirá: descripción, esfuerzo estimado en horas y validación de prioridad por el Product Owner antes de ejecución.
 
 ## 12.6. Firma y Aceptación
 
-**PROPUESTA VÁLIDA POR:** 30 días desde la fecha de emisión (hasta 10-dic-2025)
+**PROPUESTA VÁLIDA POR:** 30 días desde la fecha de emisión
 
 **EMISIÓN DE PROPUESTA:**
 - **Fecha:** [Fecha actual]
@@ -875,9 +823,9 @@ Una vez aceptada esta propuesta:
 
 1. ✅ **Firma de Contrato:** Aunergia preparará contrato formal (3-5 días hábiles)
 2. ✅ **Acuerdo Comercial:** Definir términos de facturación basados en 1,590 horas de esfuerzo
-3. ✅ **Kick-off Meeting:** Programar para 1-dic-2025 (2-3 horas)
+3. ✅ **Kick-off Meeting:** Programar para 6-ene-2026 (2-3 horas)
 4. ✅ **Solicitud de Accesos:** Iniciar trámites de permisos SAP, BigQuery, Power BI
-5. ✅ **Inicio Fase 0:** 1-dic-2025 (Semana 0)
+5. ✅ **Inicio Fase 0:** 6-ene-2026 (Semana 0)
 
 ---
 

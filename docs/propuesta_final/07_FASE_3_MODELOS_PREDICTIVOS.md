@@ -539,7 +539,7 @@ Similar a GCP pero usando:
 - 1 Data Scientist (ML Engineer)
 - 1 MLOps Engineer
 - 1 Analista de Negocio (Subject Matter Expert)
-- Soporte de equipo actual (Lucía, JMB)
+- Participación acotada del equipo actual (Lucía, JMB)
 
 ### 7.7.3. Inversión Estimada
 

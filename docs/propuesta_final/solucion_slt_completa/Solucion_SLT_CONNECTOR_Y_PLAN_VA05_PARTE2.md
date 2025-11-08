@@ -620,7 +620,7 @@ WRITE: / 'Todas las replicaciones programadas'.
 | Día | Actividad | Responsable | Horas | Estado |
 |-----|-----------|-------------|-------|--------|
 | 63 | Capacitación usuarios finales | SD Functional + Data Engineer | 4h | ⬜ |
-| 64 | Capacitación equipo de soporte | SAP Basis + DevOps | 4h | ⬜ |
+| 64 | Capacitación equipo operativo | SAP Basis + DevOps | 4h | ⬜ |
 | 65 | Preparación documentación final | Project Manager | 8h | ⬜ |
 | 66 | Revisión pre-producción | Equipo completo | 4h | ⬜ |
 | 67 | Go-Live en producción | Equipo completo | 8h | ⬜ |
@@ -731,14 +731,14 @@ user_docs/
 └── FAQ.md
 ```
 
-### 5. Plan de Soporte
+### 5. Post Go-Live (Operación)
 
 ```markdown
-# Plan de Soporte Post-Implementación
+# Operación Post Go-Live
 
-## Niveles de Soporte
+## Lineamientos de Operación
 
-### Nivel 1: Soporte al Usuario Final
+### Atención al Usuario Final
 - **Equipo:** SD Functional (1 persona)
 - **Horario:** Lunes a Viernes, 8:00 - 18:00
 - **Responsabilidades:**
@@ -746,7 +746,7 @@ user_docs/
   - Interpretar datos y reportes
   - Validar resultados funcionales
 
-### Nivel 2: Soporte Técnico
+### Asistencia Técnica
 - **Equipo:** Data Engineer + DevOps (2 personas)
 - **Horario:** 24/7 (on-call para incidentes críticos)
 - **Responsabilidades:**
@@ -755,7 +755,7 @@ user_docs/
   - Troubleshooting de queries BigQuery
   - Ajustes a vistas y transformaciones
 
-### Nivel 3: Soporte Infraestructura
+### Operación de Infraestructura
 - **Equipo:** SAP Basis + Cloud Architect (2 personas)
 - **Horario:** 24/7 (on-call para incidentes críticos)
 - **Responsabilidades:**

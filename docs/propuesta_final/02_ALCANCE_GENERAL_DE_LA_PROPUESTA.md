@@ -334,20 +334,20 @@ El proyecto se divide en **4 fases** con objetivos específicos:
 
 | Dependencia | Responsable | Fecha Límite | Impacto si No se Cumple |
 |-------------|-------------|--------------|-------------------------|
-| **Permisos SAP completos** (Ticket SAP-48219) | TI Global | 10-nov-2025 | ⛔ Bloquea inicio Fase 1 |
-| **Tablas BigQuery disponibles** (Tickets BQ-7713, BQ-7721) | TI Global | 17-nov-2025 | ⚠️ Retrasa Fase 1 (~2 semanas) |
-| **Accesos Data Editor BigQuery** (6 usuarios) | TI Elanco | 14-nov-2025 | ⚠️ Retrasa inicio desarrollo |
-| **Aprobación presupuesto** | Finanzas Elanco | 10-nov-2025 | ⛔ Bloquea proyecto completo |
-| **Definición de Product Owner** | Management Elanco | 11-nov-2025 | ⚠️ Retrasa decisiones |
+| **Permisos SAP completos** (Ticket SAP-48219) | TI Global | 03-ene-2026 | ⛔ Bloquea inicio Fase 1 |
+| **Tablas BigQuery disponibles** (Tickets BQ-7713, BQ-7721) | TI Global | 03-ene-2026 | ⚠️ Retrasa Fase 1 (~2 semanas) |
+| **Accesos Data Editor BigQuery** (6 usuarios) | TI Elanco | 03-ene-2026 | ⚠️ Retrasa inicio desarrollo |
+| **Aprobación presupuesto** | Finanzas Elanco | 20-dic-2025 | ⛔ Bloquea proyecto completo |
+| **Definición de Product Owner** | Management Elanco | 20-dic-2025 | ⚠️ Retrasa decisiones |
 
 ### 2.7.2. Dependencias Internas (Gestionables)
 
 | Dependencia | Responsable | Fecha Límite | Mitigación |
 |-------------|-------------|--------------|------------|
-| **Workshop priorización transacciones** | Lucía + Áreas negocio | 18-nov-2025 | Sesiones virtuales asíncronas |
-| **Validación arquitectura BigQuery** | Juan Manuel Bigi | 15-nov-2025 | Iniciar análisis antes de kick-off |
-| **Definición de KPIs** | Finanzas + Supply | 25-nov-2025 | Usar KPIs estándar como base |
-| **Ambiente desarrollo BigQuery** | TI Elanco | 14-nov-2025 | Usar ambiente compartido temporalmente |
+| **Workshop priorización transacciones** | Lucía + Áreas negocio | 13-ene-2026 | Sesiones virtuales asíncronas |
+| **Validación arquitectura BigQuery** | Juan Manuel Bigi | 13-ene-2026 | Iniciar análisis antes de kick-off |
+| **Definición de KPIs** | Finanzas + Supply | 20-ene-2026 | Usar KPIs estándar como base |
+| **Ambiente desarrollo BigQuery** | TI Elanco | 03-ene-2026 | Usar ambiente compartido temporalmente |
 
 ---
 

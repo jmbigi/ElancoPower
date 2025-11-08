@@ -112,7 +112,7 @@ Esta carpeta contiene la **documentación completa** para implementar la integra
    - Cronograma detallado día por día
    - Entregables finales
    - Costos estimados
-   - Plan de soporte
+   - Post go-live (operación)
 
 ---
 
@@ -422,7 +422,7 @@ Lee: Solucion_SLT_CONNECTOR_Y_PLAN_VA05.md (PARTE 1)
 
 ---
 
-## 📞 Soporte y Contacto
+## 📞 Contacto
 
 **Para consultas sobre esta documentación:**
 - Email: sap-bigquery-team@elanco.com

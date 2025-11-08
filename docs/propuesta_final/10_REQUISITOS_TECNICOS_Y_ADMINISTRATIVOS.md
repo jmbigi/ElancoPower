@@ -8,11 +8,11 @@ Estos requisitos **DEBEN** estar resueltos antes del kick-off:
 
 | # | Requisito | Responsable | Fecha Límite | ¿Bloquea Inicio? |
 |---|-----------|-------------|--------------|------------------|
-| 1 | **Aprobación del proyecto (1,590 horas)** | Management Elanco | 30-nov-2025 | ⛔ SÍ |
-| 2 | **Firma de contrato** | Legal Aunergia + Elanco | 30-nov-2025 | ⛔ SÍ |
-| 3 | **Designación de Product Owner** | Management Elanco | 10-nov-2025 | ⛔ SÍ |
-| 4 | **Confirmación disponibilidad stakeholders** | Finanzas/Supply | 10-nov-2025 | ⚠️ Alta |
-| 5 | **Acuerdo de confidencialidad (NDA) vigente** | Legal ambas partes | 10-nov-2025 | ⛔ SÍ |
+| 1 | **Aprobación del proyecto (1,590 horas)** | Management Elanco | 03-ene-2026 | ⛔ SÍ |
+| 2 | **Firma de contrato** | Legal Aunergia + Elanco | 03-ene-2026 | ⛔ SÍ |
+| 3 | **Designación de Product Owner** | Management Elanco | 20-dic-2025 | ⛔ SÍ |
+| 4 | **Confirmación disponibilidad stakeholders** | Finanzas/Supply | 20-dic-2025 | ⚠️ Alta |
+| 5 | **Acuerdo de confidencialidad (NDA) vigente** | Legal ambas partes | 20-dic-2025 | ⛔ SÍ |
 
 ---
 
@@ -41,7 +41,7 @@ Estos requisitos **DEBEN** estar resueltos antes del kick-off:
 - Carolina Rondón (TI) - Mismo perfil
 - Juan Sebastián Ravelo - Mismo perfil
 
-**Fecha límite resolución:** 10 de noviembre de 2025 (antes de kick-off)
+**Fecha límite resolución:** 03 de enero de 2026 (antes de kick-off)
 
 ---
 
@@ -68,7 +68,7 @@ Estos requisitos **DEBEN** estar resueltos antes del kick-off:
 - `sa-bigquery-etl@elanco-casa-bi.iam.gserviceaccount.com` (para pipelines)
 - Permisos: BigQuery Job User, BigQuery Data Editor
 
-**Fecha límite resolución:** 14 de noviembre de 2025 (antes de inicio Fase 1)
+**Fecha límite resolución:** 03 de enero de 2026 (antes de inicio Fase 1)
 
 ---
 
@@ -272,7 +272,7 @@ Estos requisitos **DEBEN** estar resueltos antes del kick-off:
 
 | Rol | Responsabilidades | Dedicación Requerida |
 |-----|-------------------|---------------------|
-| **SAP Basis Administrator** | **RECURSO PROVISTO POR ELANCO**<br><br>**Responsabilidades:**<br>- Instalación y configuración de SAP Landscape Transformation Server (SLT)<br>- Gestión de usuarios y perfiles SAP (creación, modificación, autorizaciones)<br>- Gestión de órdenes de transporte SAP<br>- Aplicación de SAP Notes requeridas para el proyecto<br>- Configuración de conexiones RFC (Remote Function Call)<br>- Monitoreo del sistema SAP y servidor SLT<br>- Troubleshooting de incidencias técnicas SAP<br>- Soporte en la configuración del BigQuery Connector<br>- Punto de contacto técnico para el equipo del proyecto | **On-demand durante el proyecto**<br><br>Estimado: 2-4h/semana durante Fase 1<br><br>Picos de actividad:<br>- Fase 0: Setup inicial de permisos<br>- Fase 1: Configuración de SLT |
+| **SAP Basis Administrator** | **RECURSO PROVISTO POR ELANCO**<br><br>**Responsabilidades:**<br>- Instalación y configuración de SAP Landscape Transformation Server (SLT)<br>- Gestión de usuarios y perfiles SAP (creación, modificación, autorizaciones)<br>- Gestión de órdenes de transporte SAP<br>- Aplicación de SAP Notes requeridas para el proyecto<br>- Configuración de conexiones RFC (Remote Function Call)<br>- Monitoreo del sistema SAP y servidor SLT<br>- Troubleshooting de incidencias técnicas SAP<br>- Asistencia en la configuración del BigQuery Connector<br>- Punto de contacto técnico para el equipo del proyecto | **On-demand durante el proyecto**<br><br>Estimado: 2-4h/semana durante Fase 1<br><br>Picos de actividad:<br>- Fase 0: Setup inicial de permisos<br>- Fase 1: Configuración de SLT |
 
 **Nota Importante:** La disponibilidad de un recurso SAP Basis es **CRÍTICA** para el éxito del proyecto, especialmente durante la implementación de SAP SLT (Landscape Transformation Server) en la Fase 1.
 
@@ -377,7 +377,7 @@ Ver sección 9.10 del documento [09_CRONOGRAMA_SEMANAL.md](09_CRONOGRAMA_SEMANAL
 
 ## 10.10. Checklist de Inicio de Proyecto
 
-### ✅ Antes del Kick-off (1-dic-2025)
+### ✅ Antes del Kick-off (6-ene-2026)
 
 - [ ] Contrato firmado
 - [ ] Proyecto aprobado (1,590 horas, 42 semanas)

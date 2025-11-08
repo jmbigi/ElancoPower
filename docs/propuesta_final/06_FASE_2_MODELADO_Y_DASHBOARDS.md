@@ -837,7 +837,7 @@ RETURN
 
 ### 6.3.8. Post Go-Live
 
-Período posterior a la puesta en producción sin compromisos de soporte incluidos: cualquier ajuste o evolución se evalúa y cotiza aparte. No se contemplan actividades operativas continuas en este documento.
+Periodo posterior a la puesta en producción sin compromisos operativos incluidos: cualquier ajuste o evolución se evalúa y cotiza aparte. No se contemplan actividades de operación continua en este documento.
 
 ---
 
