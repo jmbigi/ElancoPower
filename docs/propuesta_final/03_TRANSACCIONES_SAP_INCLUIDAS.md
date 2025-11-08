@@ -569,7 +569,7 @@ Durante el **Workshop de Fase 0** (estimado semana 2), se priorizarán las 10 tr
 
 ### 3.6.1. Fuente de Datos
 
-✅ **Todas las 18 transacciones** provienen del archivo original **"Attach_2_Correo_1_Transacciones SAP.csv"** proporcionado por Lucía Rodríguez (Elanco).
+✅ **Todas las 18 transacciones** provienen del archivo original **"Attach_2_Correo_1_Transacciones SAP.csv"** proporcionado por Funcional SAP (Elanco).
 
 ✅ **No se han agregado transacciones adicionales** sin confirmación de Elanco.
 

@@ -1,7 +1,7 @@
 # RESUMEN EJECUTIVO - PRESUPUESTO ELANCO POWER
 
-**Para:** Lucía Rodríguez (Aunergia)  
-**De:** Juan Manuel Bigi  
+**Para:** Funcional SAP (Aunergia)  
+**De:** Consultor BI  
 **Fecha:** 10 de octubre de 2025  
 **Asunto:** Presupuesto personal para proyecto Elanco Power
 
@@ -17,7 +17,7 @@ Aquí está mi presupuesto personal para el trabajo técnico que puedo aportar.
 
 ---
 
-## 💰 ESFUERZO JUAN MANUEL BIGI
+## 💰 ESFUERZO CONSULTOR BI
 
 ### Resumen:
 - **Horas totales:** 354 horas
@@ -79,7 +79,7 @@ Aquí está mi presupuesto personal para el trabajo técnico que puedo aportar.
 ## ❌ QUÉ NO INCLUYE (lo gestiona Aunergia o Elanco)
 
 - Project Management y gobernanza
-- Horas de Lucía Rodríguez (las factura Aunergia)
+- Horas del Funcional SAP (las factura Aunergia)
 - QA formal / Compliance corporativo
 - Consultoría ABAP externa (si es necesario)
 - Análisis de negocio profundo
@@ -92,7 +92,7 @@ Aquí está mi presupuesto personal para el trabajo técnico que puedo aportar.
 Según el correo de **David Saboya** (09-oct-2025), Elanco tiene estos issues:
 
 ### ✅ Issue #1: Permisos SAP insuficientes
-**Mi aporte:** No gestiono permisos (eso es de Lucía), pero diseño la arquitectura para trabajar con los permisos que se obtengan.
+**Mi aporte:** No gestiono permisos (eso es del Funcional SAP), pero diseño la arquitectura para trabajar con los permisos que se obtengan.
 
 ### ✅ Issue #2: Tablas no disponibles en BigQuery
 **Mi aporte:** Identifico qué tablas faltan, preparo los tickets técnicos y diseño el workaround mientras se aprueban.
@@ -137,7 +137,7 @@ Según el correo de **David Saboya** (09-oct-2025), Elanco tiene estos issues:
 ## ⚠️ CONDICIONES Y SUPUESTOS
 
 ### Para que pueda arrancar necesito:
-1. ✅ Que Lucía tenga permisos SAP completos (Ticket SAP-48219)
+1. ✅ Que el Funcional SAP tenga permisos SAP completos (Ticket SAP-48219)
 2. ✅ Que las tablas críticas estén en BigQuery o tengamos plan B
 3. ✅ Acceso a dataset CASA en BigQuery (ya confirmado)
 4. ✅ Backlog priorizado (lo hacemos en Fase 0)
@@ -167,7 +167,7 @@ Mi presupuesto es solo para el trabajo técnico de desarrollo (354 horas).
 ### Opciones para ustedes:
 1. **Propuesta completa Aunergia:** Equipo completo (llave en mano)
 2. **Solo yo + ustedes coordinan:** Mis 354h + sus costos internos
-3. **Híbrido:** Yo + Lucía + PM mínimo + QA
+3. **Híbrido:** Consultor BI + Funcional SAP + PM mínimo + QA
 
 ---
 
@@ -220,7 +220,7 @@ He creado 3 documentos en la carpeta del proyecto:
    - ¿Prefieren que facture a Aunergia y ustedes a Elanco?
    - ¿O directamente a Elanco?
 
-4. **¿Disponibilidad de Lucía en cada fase?**
+4. **¿Disponibilidad del Funcional SAP en cada fase?**
    - Estimé 28h Fase 0, 40h Fase 1, 12h Fase 2
    - ¿Es realista con su agenda?
 
@@ -228,7 +228,7 @@ He creado 3 documentos en la carpeta del proyecto:
 
 ## 📞 CONTACTO
 
-**Juan Manuel Bigi**
+**Consultor BI**
 - Email: [pending - confirmar]
 - Disponibilidad: Part-time 20-25h/semana
 - Inicio disponible: 14-oct-2025
@@ -248,14 +248,14 @@ Incluye:
 
 No incluye:
 - ❌ PM y gobernanza (ustedes)
-- ❌ Horas de Lucía (ustedes)
+- ❌ Horas del Funcional SAP (ustedes)
 - ❌ QA formal externo (ustedes o Elanco)
 - ❌ Consultoría ABAP (estimar aparte)
 
 **¿Avanzamos?** Espero tu confirmación.
 
 Saludos,  
-**JMB**
+**Consultor BI**
 
 ---
 

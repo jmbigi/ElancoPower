@@ -229,9 +229,9 @@ ME2L, MM60, MB59, ZVEL015, ME23N, FBL1N, FBL5N, MB5B, XK03, XD03
 
 | Nombre | Rol | Organización | Email |
 |--------|-----|--------------|-------|
-| **Juan Manuel Bigi** | Desarrollador BigQuery/Power BI | Independiente | [pending] |
-| **Lucía Rodríguez** | Analista SAP / Power User | Aunergia | lucia.rodriguez@aunergia.com.ar |
-| **Linda López** | Coordinadora Proyecto | Aunergia | linda.lopez@aunergia.com.ar |
+| **Consultor BI** | Desarrollador BigQuery/Power BI | Independiente | [pending] |
+| **Funcional SAP** | Analista SAP / Power User | Aunergia | lucia.rodriguez@aunergia.com.ar |
+| **Project Manager** | Coordinadora Proyecto | Aunergia | linda.lopez@aunergia.com.ar |
 | **David Saboya** | Analista IT TechOps CASA | Elanco | david.saboya@network.elancoah.com |
 | **Carolina Rondón** | [Rol TBD] | Elanco | carolina.rondon@elancoah.com |
 | **Juan Sebastián Ravelo** | [Rol TBD] | Elanco | juan_sebastian.ravelo@elancoah.com |
@@ -242,15 +242,15 @@ ME2L, MM60, MB59, ZVEL015, ME23N, FBL1N, FBL5N, MB5B, XK03, XD03
 
 | Hito | Fecha estimada | Responsable | Estado |
 |------|----------------|-------------|--------|
-| Aprobación propuesta consolidada | Nov-2025 | Linda López | ✅ Actualizado |
-| Kick-off Fase 0 (Semana 1) | 1-dic-2025 | Lucía + JMB | 🗓️ Programado |
+| Aprobación propuesta consolidada | Nov-2025 | Project Manager | ✅ Actualizado |
+| Kick-off Fase 0 (Semana 1) | 1-dic-2025 | Funcional SAP + Consultor BI | 🗓️ Programado |
 | Go/No-Go (Fin Fase 0, Semana 6) | 10-ene-2026 | Equipo completo | 🗓️ Programado |
 | Fin Fase 1 (Semana 28) | 21-jun-2026 | Equipo técnico | 🗓️ Estimado |
 | Fin Fase 2 / Go-Live dashboards (Semana 42) | 20-sep-2026 | Equipo completo | 🗓️ Estimado |
-| Soporte post go-live (30 días) | Sep-Oct 2026 | JMB + Lucía | 🗓️ Planificado |
+| Soporte post go-live (30 días) | Sep-Oct 2026 | Consultor BI + Funcional SAP | 🗓️ Planificado |
 
 **Duración total:** 42 semanas (~10 meses).  
-**Restricción:** JMB trabaja máximo 6h/día (30h/semana) – ya contemplado en las 1,590h.
+**Restricción:** Consultor BI trabaja máximo 6h/día (30h/semana) – ya contemplado en las 1,590h.
 
 ## 🔄 Consistencia de Datos (resumen rápido – fuentes únicas y prevalentes)
 
@@ -370,11 +370,11 @@ ME2L, MM60, MB59, ZVEL015, ME23N, FBL1N, FBL5N, MB5B, XK03, XD03
 ## 📞 CONTACTO
 
 **Para consultas sobre presupuesto:**
-- Lucía Rodríguez: lucia.rodriguez@aunergia.com.ar
-- Linda López: linda.lopez@aunergia.com.ar
+- Funcional SAP: lucia.rodriguez@aunergia.com.ar
+- Project Manager: linda.lopez@aunergia.com.ar
 
 **Para consultas técnicas:**
-- Juan Manuel Bigi: [email pendiente]
+- Consultor BI: [email pendiente]
 - David Saboya (Elanco TI): david.saboya@network.elancoah.com
 
 ---

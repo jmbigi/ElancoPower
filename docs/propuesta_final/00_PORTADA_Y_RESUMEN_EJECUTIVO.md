@@ -11,7 +11,7 @@
 
 **Elaborado por:**  
 **Aunergia** - Consultoría en Optimización de Procesos y TI  
-**Desarrollador Técnico:** Juan Manuel Bigi
+**Consultor BI:** Consultor BI
 
 **Para:**  
 **Elanco Animal Health**  
@@ -31,10 +31,10 @@ Operación Centroamérica y Sudamérica (CASA)
 
 | Versión | Fecha | Descripción | Autor |
 |---------|-------|-------------|-------|
-| 0.5 | 29-oct-2025 | Avance 50% preliminar | Juan Manuel Bigi |
-| 1.0 | 5-nov-2025 | Propuesta final completa | Juan Manuel Bigi / Lucía Rodríguez |
-| 2.0 | 7-nov-2025 | Revisión realista ajustada a antecedentes | Juan Manuel Bigi |
-| 3.0 | 8-nov-2025 | Unificación a 1,590h en 42 semanas y depuración (sin ROI/retención) | Juan Manuel Bigi |
+| 0.5 | 29-oct-2025 | Avance 50% preliminar | Consultor BI |
+| 1.0 | 5-nov-2025 | Propuesta final completa | Consultor BI / Funcional SAP |
+| 2.0 | 7-nov-2025 | Revisión realista ajustada a antecedentes | Consultor BI |
+| 3.0 | 8-nov-2025 | Unificación a 1,590h en 42 semanas y depuración (sin ROI/retención) | Consultor BI |
 
 ---
 
@@ -70,12 +70,12 @@ Operación Centroamérica y Sudamérica (CASA)
 
 | Perfil | Horas Totales |
 |--------|---------------|
-| **Desarrollo técnico (Juan Manuel Bigi)** | 961 horas |
-| **Consultoría SAP y coordinación (Lucía Rodríguez)** | 484 horas |
-| **Project Management (Linda López)** | 145 horas |
+| **Consultor BI** | 961 horas |
+| **Funcional SAP** | 484 horas |
+| **Project Manager** | 145 horas |
 | **TOTAL PROYECTO** | **1,590 horas** |
 
-**Nota:** No se incluye consultoría ABAP adicional, Lucía cuenta con expertise SAP necesario.
+**Nota:** No se incluye consultoría ABAP adicional, el Funcional SAP cuenta con el expertise SAP necesario.
 
 ### Duración Unificada
 
@@ -83,7 +83,7 @@ Operación Centroamérica y Sudamérica (CASA)
 - **Inicio propuesto:** 6 de enero de 2026
 - **Finalización estimada:** Mediados de octubre 2026
 - **Distribución por fase consolidada:** Fase 0: 6 semanas (235h) · Fase 1: 22 semanas (696h) · Fase 2: 14 semanas (659h) = 42 semanas / 1,590h totales
-- **Nota:** Juan Manuel Bigi trabaja máximo 6 horas/día (30h/semana)
+- **Nota:** Consultor BI trabaja máximo 6 horas/día (30h/semana)
 
 ### Beneficios Esperados
 
@@ -97,9 +97,9 @@ Operación Centroamérica y Sudamérica (CASA)
 ### Equipo del Proyecto
 
 **Equipo Aunergia:**
-- **Juan Manuel Bigi** - Arquitecto de Datos y Desarrollador BigQuery/Power BI (961h)
-- **Lucía Rodríguez** - Analista SAP Power User / Consultoría Funcional (484h)
-- **Linda López** - Project Manager (145h)
+- **Consultor BI** - Arquitecto de Datos y Desarrollador BigQuery/Power BI (961h)
+- **Funcional SAP** - Analista SAP Power User / Consultoría Funcional (484h)
+- **Project Manager** - Project Manager (145h)
 
 **Equipo Elanco (requerido para el proyecto):**
 - **David Saboya** - Analista IT TechOps CASA (coordinación con TI Global)
@@ -141,16 +141,16 @@ Esta propuesta está organizada en los siguientes documentos:
 
 ### Aunergia
 
-**Coordinadora del Proyecto:**  
-Linda López  
+**Coordinación de Proyecto:**  
+Project Manager  
 *Información de contacto será proporcionada por Aunergia*
 
 **Consultoría SAP:**  
-Lucía Rodríguez  
+Funcional SAP  
 *Información de contacto será proporcionada por Aunergia*
 
-**Arquitecto de Datos:**  
-Juan Manuel Bigi  
+**Arquitectura de Datos / BI:**  
+Consultor BI  
 *Información de contacto será proporcionada por Aunergia*
 
 ### Elanco Animal Health

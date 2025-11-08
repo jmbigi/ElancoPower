@@ -20,7 +20,7 @@ Estos requisitos **DEBEN** estar resueltos antes del kick-off:
 
 ### 10.2.1. Accesos SAP ECC
 
-**Power User Primario: Lucía Rodríguez**
+**Power User Primario: Funcional SAP**
 
 | Módulo | Rol Requerido | Transacciones Clave | Status | Ticket |
 |--------|---------------|---------------------|--------|--------|
@@ -51,9 +51,9 @@ Estos requisitos **DEBEN** estar resueltos antes del kick-off:
 
 | Usuario | Rol BigQuery | Permisos | Status |
 |---------|--------------|----------|--------|
-| **Lucía Rodríguez** | BigQuery Data Editor | Read/Write dataset CASA | ⏳ Pendiente |
-| **Juan Manuel Bigi** | BigQuery Data Editor | Read/Write dataset CASA | ⏳ Pendiente |
-| **Linda López** | BigQuery Data Viewer | Read-only dataset CASA | ⏳ Pendiente |
+| **Funcional SAP** | BigQuery Data Editor | Read/Write dataset CASA | ⏳ Pendiente |
+| **Consultor BI** | BigQuery Data Editor | Read/Write dataset CASA | ⏳ Pendiente |
+| **Project Manager** | BigQuery Data Viewer | Read-only dataset CASA | ⏳ Pendiente |
 | **David Saboya (TI)** | BigQuery Admin | Full access | ✅ OK |
 | **Usuarios Finanzas (2)** | BigQuery Data Viewer | Read-only dataset CASA | ⏳ Pendiente |
 | **Usuarios Supply (2)** | BigQuery Data Viewer | Read-only dataset CASA | ⏳ Pendiente |
@@ -88,8 +88,8 @@ Estos requisitos **DEBEN** estar resueltos antes del kick-off:
 - `CASA_BI_Production` (producción)
 
 **Permisos Requeridos:**
-- Juan Manuel Bigi: Power BI Pro (temporal durante proyecto) o acceso como External Guest
-- Lucía Rodríguez: Viewer en workspaces para validación
+- Consultor BI: Power BI Pro (temporal durante proyecto) o acceso como External Guest
+- Funcional SAP: Viewer en workspaces para validación
 
 **Fecha límite configuración:** 20 de noviembre de 2025
 
@@ -100,7 +100,7 @@ Estos requisitos **DEBEN** estar resueltos antes del kick-off:
 | Sistema/Herramienta | Usuario | Propósito | Status |
 |---------------------|---------|-----------|--------|
 | **Confluence/SharePoint** | Equipo Aunergia | Documentación colaborativa | ⏳ |
-| **Git Repository** | Juan Manuel Bigi | Versionado código SQL | ⏳ |
+| **Git Repository** | Consultor BI | Versionado código SQL | ⏳ |
 | **Cloud Storage** | Equipo Aunergia | Almacenamiento artefactos | ⏳ |
 
 ---
@@ -227,9 +227,9 @@ Estos requisitos **DEBEN** estar resueltos antes del kick-off:
 
 | Rol | Nombre | Disponibilidad | Dedicación |
 |-----|--------|----------------|------------|
-| **Project Manager** | Linda López | Part-time | 4h/semana |
-| **Analista SAP / Power User** | Lucía Rodríguez | Part-time | 15-20h/semana |
-| **Arquitecto de Datos / Desarrollador** | Juan Manuel Bigi | Part-time | 20-25h/semana |
+| **Project Manager** | Project Manager | Part-time | 4h/semana |
+| **Analista SAP / Power User** | Funcional SAP | Part-time | 15-20h/semana |
+| **Arquitecto de Datos / Desarrollador** | Consultor BI | Part-time | 20-25h/semana |
 
 **Horarios de Trabajo:**
 - Zona horaria: GMT-3 (Argentina) / GMT-5 (Colombia/Perú)

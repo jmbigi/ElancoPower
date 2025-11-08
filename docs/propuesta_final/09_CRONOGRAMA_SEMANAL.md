@@ -15,7 +15,7 @@ FASE 0          FASE 1                                           FASE 2
 Sem 0-6         Sem 6-28                                         Sem 28-42 (ajustado a nuevo inicio)
 ```
 
-**Restricción:** Juan Manuel Bigi trabaja máximo 6 horas/día (30h/semana). Cronograma comprimido manteniendo las mismas 1,590 horas totales.
+**Restricción:** Consultor BI trabaja máximo 6 horas/día (30h/semana). Cronograma comprimido manteniendo las mismas 1,590 horas totales.
 
 ---
 
@@ -24,10 +24,10 @@ Sem 0-6         Sem 6-28                                         Sem 28-42 (ajus
 ### Semana 0: Diseño Arquitectura Preliminar y Estimación
 
 **Actividades principales:**
-- Diseño arquitectura BigQuery 3 capas + conectividad SAP SLT (JMB: 6h, Lucía: 4h)
-- Análisis volumetría y complejidad 18 transacciones SAP (JMB: 8h, Lucía: 6h)
+- Diseño arquitectura BigQuery 3 capas + conectividad SAP SLT (Consultor BI: 6h, Funcional SAP: 4h)
+- Análisis volumetría y complejidad 18 transacciones SAP (Consultor BI: 8h, Funcional SAP: 6h)
 
-**Horas totales:** 24h (JMB: 14h, Lucía: 10h)
+**Horas totales:** 24h (Consultor BI: 14h, Funcional SAP: 10h)
 
 ### Semana 1: Kick-off y Alineamiento
 
@@ -43,14 +43,14 @@ Sem 0-6         Sem 6-28                                         Sem 28-42 (ajus
 - Revisión dataset CASA BigQuery
 - Análisis permisos SAP y estado actual
 - Listado tablas por módulo y documentación
-- **Horas totales:** 41h (JMB: 20h, Lucía: 18h, Linda: 3h)
+- **Horas totales:** 41h (Consultor BI: 20h, Funcional SAP: 18h, Project Manager: 3h)
 
 ### Semanas 2-3: Gestión de Tickets Críticos
 
 **Actividades principales:**
 - Revisión problemas detectados (permisos, tablas faltantes)
 - Seguimiento tickets SAP y BigQuery
-- **Horas totales:** 35h (JMB: 8h, Lucía: 22h, Linda: 5h)
+- **Horas totales:** 35h (Consultor BI: 8h, Funcional SAP: 22h, Project Manager: 5h)
 
 ### Semanas 2-4: Workshops y Análisis Z
 
@@ -58,7 +58,7 @@ Sem 0-6         Sem 6-28                                         Sem 28-42 (ajus
 - Workshops priorización 18 transacciones
 - Análisis profundo ZLEL008 y ZVEL015
 - Definición tablas Z
-- **Horas totales:** 66h (JMB: 20h, Lucía: 36h, Linda: 10h)
+- **Horas totales:** 66h (Consultor BI: 20h, Funcional SAP: 36h, Project Manager: 10h)
 
 ### Semanas 4-5: Diseño y POC
 
@@ -66,7 +66,7 @@ Sem 0-6         Sem 6-28                                         Sem 28-42 (ajus
 - Arquitectura 3 capas definitiva
 - POC técnico end-to-end
 - Validación funcional SAP
-- **Horas totales:** 36h (JMB: 24h, Lucía: 12h)
+- **Horas totales:** 36h (Consultor BI: 24h, Funcional SAP: 12h)
 
 ### Semanas 5-6: Documentación y Go/No-Go
 
@@ -76,11 +76,11 @@ Sem 0-6         Sem 6-28                                         Sem 28-42 (ajus
 - Listado completo tablas SAP
 - Plan detallado
 - **Reunión Go/No-Go**
-- **Horas totales:** 23h (JMB: 6h, Lucía: 10h, Linda: 7h)
+- **Horas totales:** 23h (Consultor BI: 6h, Funcional SAP: 10h, Project Manager: 7h)
 
 **Hito Semana 6:** ✅✅ Decisión Go/No-Go emitida, Fase 1 aprobada para iniciar
 
-**TOTAL FASE 0:** 235h (JMB: 95h, Lucía: 112h, Linda: 28h)  
+**TOTAL FASE 0:** 235h (Consultor BI: 95h, Funcional SAP: 112h, Project Manager: 28h)  
 Inicio efectivo: 6-ene-2026 (considera feriados y disponibilidad inicial)
 
 ---
@@ -93,7 +93,7 @@ Inicio efectivo: 6-ene-2026 (considera feriados y disponibilidad inicial)
 - Datasets BigQuery + particionamiento
 - Service accounts + conectores SAP SLT
 - Cloud Functions + validación accesos tablas SAP
-- **Horas totales:** 73h (JMB: 60h, Lucía: 6h, Linda: 7h)
+- **Horas totales:** 73h (Consultor BI: 60h, Funcional SAP: 6h, Project Manager: 7h)
 - **Hito:** ✅ Infraestructura BigQuery lista
 
 ### Semanas 8-11: Pipelines Módulo FI (4 transacciones)
@@ -101,7 +101,7 @@ Inicio efectivo: 6-ene-2026 (considera feriados y disponibilidad inicial)
 **Transacciones:** FAGLL03, FB03, F.08, F.01
 **Tablas SAP:** FAGLFLEXA, BKPF, BSEG, FAGLFLEXT, SKA1, BSID, BSAD
 - Desarrollo + validación + testing
-- **Horas totales:** 89h (JMB: 60h, Lucía: 26h, Linda: 3h)
+- **Horas totales:** 89h (Consultor BI: 60h, Funcional SAP: 26h, Project Manager: 3h)
 - **Hito:** ✅ Módulo FI completo
 
 ### Semanas 11-13: Pipelines Módulo SD (2 transacciones)
@@ -109,7 +109,7 @@ Inicio efectivo: 6-ene-2026 (considera feriados y disponibilidad inicial)
 **Transacciones:** VA05, KE24
 **Tablas SAP:** VBAK, VBAP, VBEP, KNA1, CE1xxxx, CE4xxxx
 - Desarrollo + validación + testing
-- **Horas totales:** 61h (JMB: 38h, Lucía: 20h, Linda: 3h)
+- **Horas totales:** 61h (Consultor BI: 38h, Funcional SAP: 20h, Project Manager: 3h)
 - **Hito:** ✅ Módulo SD completo
 
 ### Semanas 13-15: Pipelines MM Procurement (3 transacciones)
@@ -117,7 +117,7 @@ Inicio efectivo: 6-ene-2026 (considera feriados y disponibilidad inicial)
 **Transacciones:** ME2L, ME23N, MM60
 **Tablas SAP:** EKKO, EKPO, MBEW, CKMLCR
 - Desarrollo + validación + testing
-- **Horas totales:** 71h (JMB: 44h, Lucía: 24h, Linda: 3h)
+- **Horas totales:** 71h (Consultor BI: 44h, Funcional SAP: 24h, Project Manager: 3h)
 - **Hito:** ✅ MM Procurement completo
 
 ### Semanas 15-17: Pipelines MM Inventory (3 transacciones)
@@ -125,7 +125,7 @@ Inicio efectivo: 6-ene-2026 (considera feriados y disponibilidad inicial)
 **Transacciones:** MB59, MB5B, MCHB
 **Tablas SAP:** MSEG, MARD, MCHB
 - Desarrollo + validación + testing
-- **Horas totales:** 65h (JMB: 42h, Lucía: 20h, Linda: 3h)
+- **Horas totales:** 65h (Consultor BI: 42h, Funcional SAP: 20h, Project Manager: 3h)
 - **Hito:** ✅ MM Inventory completo
 
 ### Semanas 17-20: Pipeline ZLEL008 (custom MRP)
@@ -133,7 +133,7 @@ Inicio efectivo: 6-ene-2026 (considera feriados y disponibilidad inicial)
 **Transacción custom compleja**
 **Z-tables** suministradas por SAP Functional
 - Análisis + desarrollo + validación funcional + testing extendido
-- **Horas totales:** 77h (JMB: 48h, Lucía: 26h, Linda: 3h)
+- **Horas totales:** 77h (Consultor BI: 48h, Funcional SAP: 26h, Project Manager: 3h)
 - **Hito:** ✅ ZLEL008 completo (transacción custom más compleja)
 
 ### Semanas 20-23: Pipelines CO y FI-AP/AR (4 transacciones)
@@ -141,7 +141,7 @@ Inicio efectivo: 6-ene-2026 (considera feriados y disponibilidad inicial)
 **Transacciones:** KSB1, KE24 análisis, FBL1N, FBL5N
 **Tablas SAP:** COBK, COEP, AUFK, BSIK, BSAK
 - Desarrollo + validación + testing
-- **Horas totales:** 92h (JMB: 56h, Lucía: 30h, Linda: 6h)
+- **Horas totales:** 92h (Consultor BI: 56h, Funcional SAP: 30h, Project Manager: 6h)
 - **Hito:** ✅ Módulo CO y AP/AR completo
 
 ### Semanas 23-26: Pipelines Master Data y ZVEL015
@@ -149,7 +149,7 @@ Inicio efectivo: 6-ene-2026 (considera feriados y disponibilidad inicial)
 **Transacciones:** XK03, XD03, ZVEL015 (pricing)
 **Tablas SAP:** LFA1, LFB1, LFM1, KNA1, KNB1, KNVV + Z-pricing
 - Desarrollo + validación + testing
-- **Horas totales:** 82h (JMB: 48h, Lucía: 28h, Linda: 6h)
+- **Horas totales:** 82h (Consultor BI: 48h, Funcional SAP: 28h, Project Manager: 6h)
 - **Hito:** ✅ Master Data y ZVEL015 completo
 
 ### Semanas 26-28: Optimización y Automatización
@@ -159,10 +159,10 @@ Inicio efectivo: 6-ene-2026 (considera feriados y disponibilidad inicial)
 - Testing integral 18 transacciones
 - Validación funcional SAP
 - Documentación técnica
-- **Horas totales:** 86h (JMB: 50h, Lucía: 26h, Linda: 10h)
+- **Horas totales:** 86h (Consultor BI: 50h, Funcional SAP: 26h, Project Manager: 10h)
 - **Hito:** ✅✅ Fase 1 completa, Data Lake operativo con 18 transacciones
 
-**TOTAL FASE 1:** 696h (JMB: 446h, Lucía: 206h, Linda: 44h)
+**TOTAL FASE 1:** 696h (Consultor BI: 446h, Funcional SAP: 206h, Project Manager: 44h)
 
 ---
 
@@ -174,7 +174,7 @@ Inicio efectivo: 6-ene-2026 (considera feriados y disponibilidad inicial)
 - Star schema: 8 dimensiones + 6 tablas hechos
 - Vistas SQL + capa semántica
 - Definición KPIs con SAP Functional
-- **Horas totales:** 116h (JMB: 86h, Lucía: 22h, Linda: 8h)
+- **Horas totales:** 116h (Consultor BI: 86h, Funcional SAP: 22h, Project Manager: 8h)
 - **Hito:** ✅ Modelo dimensional diseñado y validado
 
 ### Semanas 30-32: Dashboards Financieros (3)
@@ -183,7 +183,7 @@ Inicio efectivo: 6-ene-2026 (considera feriados y disponibilidad inicial)
 **Definición SAP Functional + desarrollo**
 **Tablas:** BKPF, BSEG, FAGLFLEXA, COEP, COBK
 - 3 dashboards con RLS
-- **Horas totales:** 82h (JMB: 64h, Lucía: 14h, Linda: 4h)
+- **Horas totales:** 82h (Consultor BI: 64h, Funcional SAP: 14h, Project Manager: 4h)
 - **Hito:** ✅ Dashboards Financieros completos
 
 ### Semanas 30-32: Dashboards Ventas y Rentabilidad (3) - EN PARALELO
@@ -192,7 +192,7 @@ Inicio efectivo: 6-ene-2026 (considera feriados y disponibilidad inicial)
 **Definición SAP Functional + desarrollo**
 **Tablas:** VBAK, VBAP, CE1xxxx
 - 3 dashboards con RLS
-- **Horas totales:** 86h (JMB: 68h, Lucía: 14h, Linda: 4h)
+- **Horas totales:** 86h (Consultor BI: 68h, Funcional SAP: 14h, Project Manager: 4h)
 - **Hito:** ✅ Dashboards Ventas completos
 
 ### Semanas 30-32: Dashboards Supply Chain (3) - EN PARALELO
@@ -201,7 +201,7 @@ Inicio efectivo: 6-ene-2026 (considera feriados y disponibilidad inicial)
 **Definición SAP Functional + desarrollo**
 **Tablas:** MARD, MCHB, MSEG, EKKO, EKPO
 - 3 dashboards con RLS
-- **Horas totales:** 78h (JMB: 62h, Lucía: 12h, Linda: 4h)
+- **Horas totales:** 78h (Consultor BI: 62h, Funcional SAP: 12h, Project Manager: 4h)
 - **Hito:** ✅ Dashboards Supply Chain completos
 
 ### Semanas 32-35: Dashboards Tesorería y Ejecutivo (3)
@@ -210,7 +210,7 @@ Inicio efectivo: 6-ene-2026 (considera feriados y disponibilidad inicial)
 **Definición SAP Functional + desarrollo**
 **Tablas:** BSIK, BSAK, BSID, BSAD + consolidado
 - 3 dashboards con RLS
-- **Horas totales:** 87h (JMB: 66h, Lucía: 14h, Linda: 7h)
+- **Horas totales:** 87h (Consultor BI: 66h, Funcional SAP: 14h, Project Manager: 7h)
 - **Hito:** ✅ 12 dashboards completos con RLS
 
 ### Semanas 35-39: Testing y UAT Completo
@@ -219,7 +219,7 @@ Inicio efectivo: 6-ene-2026 (considera feriados y disponibilidad inicial)
 - Testing integrado + coordinación SAP Functional
 - 4 fases UAT (Financiero + Comercial + Supply + Ejecutivo)
 - Ajustes post-UAT
-- **Horas totales:** 122h (JMB: 41h, Lucía: 55h, Linda: 26h)
+- **Horas totales:** 122h (Consultor BI: 41h, Funcional SAP: 55h, Project Manager: 26h)
 - **Hito:** ✅ UAT completado, dashboards validados
 
 ### Semanas 39-42: Ajustes Finales, Documentación, Capacitación y Go-Live
@@ -229,10 +229,10 @@ Inicio efectivo: 6-ene-2026 (considera feriados y disponibilidad inicial)
 - Capacitación usuarios
 - Preparación + Go-Live
 - Cierre proyecto
-- **Horas totales:** 88h (JMB: 33h, Lucía: 35h, Linda: 20h)
+- **Horas totales:** 88h (Consultor BI: 33h, Funcional SAP: 35h, Project Manager: 20h)
 - **Hito:** ✅✅✅ **PROYECTO CERRADO FORMALMENTE - GO-LIVE EXITOSO**
 
-**TOTAL FASE 2:** 659h según tareas CSV (distribución: JMB: 420h, Lucía: 166h, Linda: 73h)
+**TOTAL FASE 2:** 659h según tareas CSV (distribución: Consultor BI: 420h, Funcional SAP: 166h, Project Manager: 73h)
 
 ---
 
@@ -292,7 +292,7 @@ FASE 2: Dashboards (Semanas 28-42)
 HITOS CLAVE:
 ✓ Go/No-Go (S6) | ✓ Data Lake (S28) | ✓ UAT (S39) | ✓✓✓ Go-Live (S42)
 
-ESFUERZO TOTAL: 1,590 horas | JMB: 961h | Lucía: 484h | Linda: 145h
+ESFUERZO TOTAL: 1,590 horas | Consultor BI: 961h | Funcional SAP: 484h | Project Manager: 145h
 Cronograma comprimido 25% manteniendo mismas horas
 ```
 
@@ -356,13 +356,13 @@ Cronograma comprimido 25% manteniendo mismas horas
 
 ### Carga de Trabajo por Persona
 
-| Fase | Lucía R. | Juan M. B. | Linda L. | Promedio Semanal |
-|------|----------|------------|----------|------------------|
+| Fase | Funcional SAP | Consultor BI | Project Manager | Promedio Semanal |
+|------|--------------|-------------|----------------|------------------|
 | S0-6 (Fase 0) | 112h / 6sem = 19h/sem | 95h / 6sem = 16h/sem | 28h / 6sem = 5h/sem | Total: 40h/sem |
 | S6-28 (Fase 1) | 206h / 22sem = 9h/sem | 446h / 22sem = 20h/sem | 44h / 22sem = 2h/sem | Total: 31h/sem |
 | S28-42 (Fase 2) | 166h / 14sem = 12h/sem | 420h / 14sem = 30h/sem | 73h / 14sem = 5h/sem | Total: 47h/sem |
 
-**Nota:** JMB trabaja máximo 30h/semana (6h/día), cumplido en todas las fases. Fase 2 es la más intensiva para JMB.
+**Nota:** El Consultor BI trabaja máximo 30h/semana (6h/día), cumplido en todas las fases. Fase 2 es la más intensiva para este rol.
 
 ---
 
@@ -372,8 +372,8 @@ Cronograma comprimido 25% manteniendo mismas horas
 
 | Reunión | Frecuencia | Participantes | Duración | Objetivo |
 |---------|------------|---------------|----------|----------|
-| **Daily Stand-up** | Lun-Vie | Lucía + JMB | 15 min | Sincronización diaria |
-| **Weekly Status** | Viernes | Linda + Lucía + JMB | 30 min | Reporte semanal |
+| **Daily Stand-up** | Lun-Vie | Funcional SAP + Consultor BI | 15 min | Sincronización diaria |
+| **Weekly Status** | Viernes | Project Manager + Funcional SAP + Consultor BI | 30 min | Reporte semanal |
 | **Sprint Review** | Cada 2 sem | Todos + Stakeholders | 1h | Demo de avances |
 | **Steering Committee** | Mensual | Linda + Management | 1h | Status ejecutivo |
 
@@ -381,10 +381,10 @@ Cronograma comprimido 25% manteniendo mismas horas
 
 | Reporte | Frecuencia | Responsable | Destinatarios |
 |---------|------------|-------------|---------------|
-| Status Report Semanal | Viernes | Linda | Stakeholders Elanco |
-| Dashboard de Seguimiento | Continuo | Linda | Equipo proyecto |
-| Reporte de Riesgos | Quincenal | Linda + JMB | Management |
-| Reporte Mensual Ejecutivo | Mensual | Linda | Management Elanco |
+| Status Report Semanal | Viernes | Project Manager | Stakeholders Elanco |
+| Dashboard de Seguimiento | Continuo | Project Manager | Equipo proyecto |
+| Reporte de Riesgos | Quincenal | Project Manager + Consultor BI | Management |
+| Reporte Mensual Ejecutivo | Mensual | Project Manager | Management Elanco |
 
 ---
 

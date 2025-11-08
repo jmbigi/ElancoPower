@@ -22,8 +22,8 @@
 | **Duración estimada** | 14 semanas |
 | **Fase del proyecto** | Semanas 28-42 (ver `09_CRONOGRAMA_SEMANAL.md`) |
 | **Horas totales** | 659 horas |
-| **Equipo** | Juan Manuel Bigi (416h) · Lucía Rodríguez (104h) · Linda López (61h) |
-| **Restricción** | JMB trabaja máximo 6h/día = 30h/semana |
+| **Equipo** | Consultor BI (416h) · Funcional SAP (104h) · Project Manager (61h) |
+| **Restricción** | Consultor BI trabaja máximo 6h/día = 30h/semana |
 
 ---
 
@@ -31,7 +31,7 @@
 
 ### 6.3.1. Diseño de Modelo Dimensional
 
-**Responsable:** Juan Manuel Bigi  
+**Responsable:** Consultor BI  
 **Duración:** 32 horas  
 **Semanas:** 1-2
 
@@ -100,7 +100,7 @@
 
 ### 6.3.2. Desarrollo de Capa Semántica en BigQuery
 
-**Responsable:** Juan Manuel Bigi  
+**Responsable:** Consultor BI  
 **Duración:** 20 horas  
 **Semanas:** 2-3
 
@@ -164,7 +164,7 @@ GROUP BY 1,2,3,4,5,6,7;
 
 ### 6.3.3. Desarrollo de Dashboards Power BI
 
-**Responsable:** Juan Manuel Bigi  
+**Responsable:** Consultor BI  
 **Duración:** 60 horas  
 **Semanas:** 3-5
 
@@ -509,7 +509,7 @@ GROUP BY 1,2,3,4,5,6,7;
 
 ### 6.3.4. Configuración de Row-Level Security (RLS)
 
-**Responsable:** Juan Manuel Bigi  
+**Responsable:** Consultor BI  
 **Duración:** 18 horas  
 **Semana:** 5
 
@@ -555,7 +555,7 @@ RETURN
 
 ### 6.3.5. Testing con Usuarios (UAT)
 
-**Responsables:** Juan Manuel Bigi + Lucía Rodríguez + Stakeholders  
+**Responsables:** Consultor BI + Funcional SAP + Stakeholders  
 **Duración:** 30 horas equipo técnico + 12 horas stakeholders  
 **Semanas:** 6-7
 
@@ -610,7 +610,7 @@ RETURN
 
 ### 6.3.6. Documentación y Capacitación
 
-**Responsables:** Juan Manuel Bigi + Lucía Rodríguez  
+**Responsables:** Consultor BI + Funcional SAP  
 **Duración:** 24 horas (12h cada uno)  
 **Semana:** 6
 
@@ -661,7 +661,7 @@ RETURN
 
 ### 6.3.7. Ajustes Post-UAT
 
-**Responsable:** Juan Manuel Bigi  
+**Responsable:** Consultor BI  
 **Duración:** 16 horas  
 **Semana:** 6
 
@@ -741,8 +741,8 @@ Nota: Las fechas exactas y semanas del proyecto se rigen por `09_CRONOGRAMA_SEMA
 
 | Actividad | Responsable | Horas |
 |-----------|-------------|-------|
-| Diseño dimensiones y hechos | JMB | 24h |
-| Desarrollo vistas BigQuery | JMB | 16h |
+| Diseño dimensiones y hechos | Consultor BI | 24h |
+| Desarrollo vistas BigQuery | Consultor BI | 16h |
 | Revisión con stakeholders | Todos | 4h |
 
 **Hito:** Modelo dimensional aprobado
@@ -753,9 +753,9 @@ Nota: Las fechas exactas y semanas del proyecto se rigen por `09_CRONOGRAMA_SEMA
 
 | Actividad | Responsable | Horas |
 |-----------|-------------|-------|
-| Dashboard Financiero | JMB | 10h |
-| Dashboard Ventas | JMB | 10h |
-| Dashboard Inventario | JMB | 10h |
+| Dashboard Financiero | Consultor BI | 10h |
+| Dashboard Ventas | Consultor BI | 10h |
+| Dashboard Inventario | Consultor BI | 10h |
 | Revisiones iterativas | Todos | 6h |
 
 **Hito:** 3 dashboards funcionales
@@ -766,9 +766,9 @@ Nota: Las fechas exactas y semanas del proyecto se rigen por `09_CRONOGRAMA_SEMA
 
 | Actividad | Responsable | Horas |
 |-----------|-------------|-------|
-| Dashboard OPEX | JMB | 10h |
-| Dashboard Ejecutivo | JMB | 10h |
-| Dashboards adicionales (Supply, Compras, etc.) | JMB | 10h |
+| Dashboard OPEX | Consultor BI | 10h |
+| Dashboard Ejecutivo | Consultor BI | 10h |
+| Dashboards adicionales (Supply, Compras, etc.) | Consultor BI | 10h |
 
 **Hito:** Todos los dashboards base completos
 
@@ -778,9 +778,9 @@ Nota: Las fechas exactas y semanas del proyecto se rigen por `09_CRONOGRAMA_SEMA
 
 | Actividad | Responsable | Horas |
 |-----------|-------------|-------|
-| Configuración RLS (12 dashboards) | JMB | 18h |
+| Configuración RLS (12 dashboards) | Consultor BI | 18h |
 | UAT con Finanzas | Todos + Stakeholders | 6h |
-| Ajustes UAT iniciales | JMB | 8h |
+| Ajustes UAT iniciales | Consultor BI | 8h |
 
 **Hito:** RLS configurado, UAT Finanzas iniciado
 
@@ -791,8 +791,8 @@ Nota: Las fechas exactas y semanas del proyecto se rigen por `09_CRONOGRAMA_SEMA
 | Actividad | Responsable | Horas |
 |-----------|-------------|-------|
 | UAT con Supply | Todos + Stakeholders | 6h |
-| Ajustes post-UAT | JMB | 16h |
-| Documentación | JMB + Lucía | 8h |
+| Ajustes post-UAT | Consultor BI | 16h |
+| Documentación | Consultor BI + Funcional SAP | 8h |
 
 **Hito:** UAT completo, ajustes implementados
 
@@ -802,8 +802,8 @@ Nota: Las fechas exactas y semanas del proyecto se rigen por `09_CRONOGRAMA_SEMA
 
 | Actividad | Responsable | Horas |
 |-----------|-------------|-------|
-| Capacitación usuarios | Lucía + JMB | 12h |
-| Testing final | JMB | 4h |
+| Capacitación usuarios | Funcional SAP + Consultor BI | 12h |
+| Testing final | Consultor BI | 4h |
 | **Go-Live Power BI** 🎉 | Todos | 2h |
 | Cierre Fase 2 | Todos | 4h |
 
@@ -815,9 +815,9 @@ Nota: Las fechas exactas y semanas del proyecto se rigen por `09_CRONOGRAMA_SEMA
 
 | Recurso | Horas |
 |---------|-------|
-| **Juan Manuel Bigi** | 416h |
-| **Lucía Rodríguez** | 104h |
-| **Linda López (PM)** | 61h |
+| **Consultor BI** | 416h |
+| **Funcional SAP** | 104h |
+| **Project Manager** | 61h |
 | **Stakeholders Elanco** | 78h (sin costo) |
 | **TOTAL FASE 2** | **659h** |
 

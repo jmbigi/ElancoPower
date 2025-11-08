@@ -15,7 +15,7 @@
 | **Duración estimada** | 22 semanas (Semanas 6-28 del proyecto global) |
 | **Fase del proyecto** | Semanas 6-28 |
 | **Horas totales** | 696 horas (ver sección 08 para desglose) |
-| **Equipo** | Juan Manuel Bigi (446h) · Lucía Rodríguez (206h) · Linda López (44h) |
+| **Equipo** | Consultor BI (446h) · Funcional SAP (206h) · Project Manager (44h) |
 
 ---
 
@@ -118,7 +118,7 @@ SAP ECC                    BIGQUERY DATASET: CASA
 
 ### 5.4.1. Configuración de Infraestructura BigQuery
 
-**Responsable:** Juan Manuel Bigi  
+**Responsable:** Consultor BI  
 **Duración:** 16 horas  
 **Semana:** 1 (Fase 1)
 
@@ -149,7 +149,7 @@ SAP ECC                    BIGQUERY DATASET: CASA
 
 ### 5.4.2. Desarrollo de Pipelines ETL - Módulo FI
 
-**Responsable:** Juan Manuel Bigi  
+**Responsable:** Consultor BI  
 **Duración:** 40 horas  
 **Semanas:** 2-4 (Sprint 1-2)
 
@@ -221,7 +221,7 @@ GROUP BY 1,2,3,4;
 
 ### 5.4.3. Desarrollo de Pipelines ETL - Módulo SD
 
-**Responsable:** Juan Manuel Bigi  
+**Responsable:** Consultor BI  
 **Duración:** 16 horas  
 **Semanas:** 5-6 (Sprint 3)
 
@@ -240,8 +240,8 @@ GROUP BY 1,2,3,4;
 
 ### 5.4.4. Desarrollo de Pipelines ETL - Módulo MM
 
-**Responsable:** Juan Manuel Bigi + Lucía Rodríguez  
-**Duración:** 48 horas (40h JMB + 8h Lucía)  
+**Responsable:** Consultor BI + Funcional SAP  
+**Duración:** 48 horas (40h Consultor BI + 8h Funcional SAP)  
 **Semanas:** 7-10 (Sprint 4-5)
 
 #### Transacciones Módulo MM
@@ -263,7 +263,7 @@ GROUP BY 1,2,3,4;
 
 ### 5.4.5. Desarrollo de Pipelines ETL - Módulo CO
 
-**Responsable:** Juan Manuel Bigi  
+**Responsable:** Consultor BI  
 **Duración:** 28 horas  
 **Semanas:** 11-12 (Sprint 6)
 
@@ -283,8 +283,8 @@ GROUP BY 1,2,3,4;
 
 ### 5.4.6. Testing y Validación de Calidad
 
-**Responsables:** Juan Manuel Bigi + Lucía Rodríguez  
-**Duración:** 24 horas (16h JMB + 8h Lucía)  
+**Responsables:** Consultor BI + Funcional SAP  
+**Duración:** 24 horas (16h Consultor BI + 8h Funcional SAP)  
 **Semanas:** 13-14 (continuo durante desarrollo)
 
 #### Tipos de Validación
@@ -339,7 +339,7 @@ FROM bigquery_target_table;
 
 ### 5.4.7. Documentación Técnica
 
-**Responsable:** Juan Manuel Bigi  
+**Responsable:** Consultor BI  
 **Duración:** 12 horas  
 **Semanas:** 13-14 (final de Fase 1)
 
@@ -370,7 +370,7 @@ FROM bigquery_target_table;
 
 ### 5.4.8. Ajustes y Gestión de Issues
 
-**Responsable:** Lucía Rodríguez  
+**Responsable:** Funcional SAP  
 **Duración:** 16 horas  
 **Semanas:** 1-14 (continuo)
 
@@ -469,12 +469,12 @@ FROM bigquery_target_table;
 
 | Recurso | Horas |
 |---------|-------|
-| **Juan Manuel Bigi** | 446h |
-| **Lucía Rodríguez** | 206h |
-| **Linda López (PM)** | 44h |
+| **Consultor BI** | 446h |
+| **Funcional SAP** | 206h |
+| **Project Manager** | 44h |
 | **TOTAL FASE 1** | **696h** |
 
-<!-- Consultoría ABAP contingente incluida dentro de horas de análisis/tareas técnicas de JMB/Lucía; no se explicita separación adicional -->
+<!-- Consultoría ABAP contingente incluida dentro de horas de análisis/tareas técnicas del Consultor BI / Funcional SAP; no se explicita separación adicional -->
 
 ---
 

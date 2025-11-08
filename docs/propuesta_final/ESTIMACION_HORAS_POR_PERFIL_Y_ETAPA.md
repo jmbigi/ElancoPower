@@ -1,5 +1,5 @@
 # ESTIMACIÓN DE HORAS POR PERFIL Y ETAPA
-> Nota de versión (8-nov-2025): Esta vista suma horas por función (multi‑rol de JMB) y puede diferir del consolidado oficial por persona. La línea base canónica es `CRONOGRAMA_DETALLADO_TAREAS.csv` (JMB **961h**, Lucía **484h**, Linda **145h**; total **1,590h**).
+> Nota de versión (8-nov-2025): Esta vista suma horas por función (multi‑rol del Consultor BI) y puede diferir del consolidado oficial por persona. La línea base canónica es `CRONOGRAMA_DETALLADO_TAREAS.csv` (Consultor BI **961h**, Funcional SAP **484h**, Project Manager **145h**; total **1,590h**).
 
 **Proyecto:** Elanco Power - Centralización de Datos y Analítica  
 **Fecha:** 7 de noviembre de 2025  
@@ -13,12 +13,12 @@
 | Perfil Técnico | Recurso Asignado | Empresa | Observaciones |
 |----------------|------------------|---------|---------------|
 | **SAP Basis** | Cliente (Elanco) | Elanco | Infraestructura SAP (sin horas estimadas en alcance) |
-| **SAP ABAP Developer** | Juan Manuel Bigi | Aunergia | Análisis transacciones Z, optimización queries |
-| **Google Cloud Architect** | Juan Manuel Bigi | Aunergia | Diseño arquitectura BigQuery, infraestructura GCP |
-| **SAP SD/MM Functional** | Lucía Rodríguez | Aunergia | Consultoría funcional, validaciones de negocio |
-| **Data Engineer** | Juan Manuel Bigi | Aunergia | Desarrollo pipelines ETL, replicación tablas SAP |
-| **DevOps Engineer** | Juan Manuel Bigi | Aunergia | CI/CD, monitoreo, automatización despliegues |
-| **Project Manager** | Linda López | Aunergia | Coordinación general, seguimiento, comunicación stakeholders |
+| **SAP ABAP Developer** | Consultor BI | Aunergia | Análisis transacciones Z, optimización queries |
+| **Google Cloud Architect** | Consultor BI | Aunergia | Diseño arquitectura BigQuery, infraestructura GCP |
+| **SAP SD/MM Functional** | Funcional SAP | Aunergia | Consultoría funcional, validaciones de negocio |
+| **Data Engineer** | Consultor BI | Aunergia | Desarrollo pipelines ETL, replicación tablas SAP |
+| **DevOps Engineer** | Consultor BI | Aunergia | CI/CD, monitoreo, automatización despliegues |
+| **Project Manager** | Project Manager | Aunergia | Coordinación general, seguimiento, comunicación stakeholders |
 
 ---
 
@@ -43,17 +43,17 @@
 
 | Perfil | Horas | Actividades Principales |
 |--------|-------|------------------------|
-| **Google Cloud Architect** (JMB) | 59h | • Análisis dataset CASA BigQuery (24h)<br>• Diseño arquitectura 3 capas (28h)<br>• Documentación arquitectura (7h) |
-| **SAP SD/MM Functional** (Lucía) | 62h | • Gestión permisos SAP (Ticket SAP-48219) (18h)<br>• Gestión tickets BigQuery tablas (BQ-7713, BQ-7721) (18h)<br>• Workshops priorización transacciones (28h)<br>• Análisis transacciones custom Z (parcial) (parcial en workshops)<br>• Validación POC (6h) |
-| **SAP ABAP Developer** (JMB) | 0h | (Análisis Z incluido en workshops) |
-| **Data Engineer** (JMB) | 0h | (Incluido en Cloud Architect) |
-| **Project Manager** (Linda) | 25h | • Kick-off meeting (3h)<br>• Workshops facilitación (10h)<br>• Seguimiento tickets críticos (5h)<br>• Documentación y Go/No-Go (7h) |
+| **Google Cloud Architect** (Consultor BI) | 59h | • Análisis dataset CASA BigQuery (24h)<br>• Diseño arquitectura 3 capas (28h)<br>• Documentación arquitectura (7h) |
+| **SAP SD/MM Functional** (Funcional SAP) | 62h | • Gestión permisos SAP (Ticket SAP-48219) (18h)<br>• Gestión tickets BigQuery tablas (BQ-7713, BQ-7721) (18h)<br>• Workshops priorización transacciones (28h)<br>• Análisis transacciones custom Z (parcial) (parcial en workshops)<br>• Validación POC (6h) |
+| **SAP ABAP Developer** (Consultor BI) | 0h | (Análisis Z incluido en workshops) |
+| **Data Engineer** (Consultor BI) | 0h | (Incluido en Cloud Architect) |
+| **Project Manager** (Project Manager) | 25h | • Kick-off meeting (3h)<br>• Workshops facilitación (10h)<br>• Seguimiento tickets críticos (5h)<br>• Documentación y Go/No-Go (7h) |
 
 **TOTAL FASE 0:** **235 horas**
 
 ### Desglose por Semana
 
-| Semana | JMB (Cloud/ABAP/Data) | Lucía (SAP Func) | Linda (PM) | Total Sem | Hitos |
+| Semana | Consultor BI (Cloud/ABAP/Data) | Funcional SAP (SAP Func) | Project Manager (PM) | Total Sem | Hitos |
 |--------|----------------------|------------------|------------|-----------|-------|
 | **Sem 0-1** | 14h | 14h | 3h | 31h | Diseño preliminar, kick-off |
 | **Sem 1-2** | 20h | 18h | 3h | 41h | Inventario técnico completo |
@@ -74,11 +74,11 @@
 
 | Perfil | Horas | Actividades Principales |
 |--------|-------|------------------------|
-| **Google Cloud Architect** (JMB) | 114h | • Setup infraestructura BigQuery + SLT (56h)<br>• Optimización y tuning (58h) |
-| **Data Engineer** (JMB) | 390h | **Desarrollo Pipelines ETL (18 transacciones agrupadas):**<br>• Módulo FI (4 trans): FAGLL03, FB03, F.08, F.01 (70h)<br>• Módulo SD (2 trans): VA05, KE24 (44h)<br>• MM Procurement (3 trans): ME2L, ME23N, MM60 (52h)<br>• MM Inventory (3 trans): MB59, MB5B, MCHB (48h)<br>• Z-Custom ZLEL008 (MRP compleja) (56h)<br>• CO + FI-AP/AR (4 trans): KSB1, KE24, FBL1N, FBL5N (64h)<br>• Master Data + ZVEL015 (3 trans): XK03, XD03, ZVEL015 (56h) |
-| **SAP SD/MM Functional** (Lucía) | 148h | • Validación funcional por módulo (100h)<br>• Análisis tablas Z profundo (38h)<br>• Testing y documentación (18h) |
-| **DevOps Engineer** (JMB) | 0h | (Incluido en optimización) |
-| **Project Manager** (Linda) | 38h | • Seguimiento semanal 22 semanas (22h)<br>• Gestión y reporting (16h) |
+| **Google Cloud Architect** (Consultor BI) | 114h | • Setup infraestructura BigQuery + SLT (56h)<br>• Optimización y tuning (58h) |
+| **Data Engineer** (Consultor BI) | 390h | **Desarrollo Pipelines ETL (18 transacciones agrupadas):**<br>• Módulo FI (4 trans): FAGLL03, FB03, F.08, F.01 (70h)<br>• Módulo SD (2 trans): VA05, KE24 (44h)<br>• MM Procurement (3 trans): ME2L, ME23N, MM60 (52h)<br>• MM Inventory (3 trans): MB59, MB5B, MCHB (48h)<br>• Z-Custom ZLEL008 (MRP compleja) (56h)<br>• CO + FI-AP/AR (4 trans): KSB1, KE24, FBL1N, FBL5N (64h)<br>• Master Data + ZVEL015 (3 trans): XK03, XD03, ZVEL015 (56h) |
+| **SAP SD/MM Functional** (Funcional SAP) | 148h | • Validación funcional por módulo (100h)<br>• Análisis tablas Z profundo (38h)<br>• Testing y documentación (18h) |
+| **DevOps Engineer** (Consultor BI) | 0h | (Incluido en optimización) |
+| **Project Manager** (Project Manager) | 38h | • Seguimiento semanal 22 semanas (22h)<br>• Gestión y reporting (16h) |
 
 **TOTAL FASE 1:** **696 horas**
 
@@ -98,7 +98,7 @@
 
 ### Desglose por Semana (Fase 1)
 
-| Semana | JMB (Cloud/Data/ABAP/DevOps) | Lucía | Linda | Total | Sprint / Módulo |
+| Semana | Consultor BI (Cloud/Data/ABAP/DevOps) | Funcional SAP | Project Manager | Total | Sprint / Módulo |
 |--------|------------------------------|-------|-------|-------|-----------------|
 | **Sem 6** | 24h | 6h | 2h | 32h | Sprint 1: Setup + FI (inicio) |
 | **Sem 7** | 26h | 8h | 2h | 36h | Sprint 1: FI (cont.) |
@@ -123,11 +123,11 @@
 
 | Perfil | Horas | Actividades Principales |
 |--------|-------|------------------------|
-| **Google Cloud Architect** (JMB) | 86h | • Diseño modelo dimensional (star schema) + dimensiones + hechos + vistas (86h) |
-| **Power BI Developer** (JMB) | 330h | **Desarrollo Dashboards (12 dashboards agrupados):**<br>• Dashboards Financieros (3): General + OPEX + Controlling (70h)<br>• Dashboards Ventas y Rentabilidad (3): Ventas + Rentabilidad + Regional (74h)<br>• Dashboards Supply Chain (3): Inventario + Supply + Compras (66h)<br>• Dashboards Tesorería + Ejecutivo (3): CxP + CxC + Ejecutivo (70h)<br>• Testing + UAT + ajustes (52h) |
-| **SAP SD/MM Functional** (Lucía) | 104h | • Definición KPIs de negocio (22h)<br>• Validación dashboards (16h)<br>• UAT (4 fases) (44h)<br>• Documentación y capacitación (32h) |
-| **DevOps Engineer** (JMB) | 0h | (No aplica en Fase 2) |
-| **Project Manager** (Linda) | 61h | • Seguimiento semanal 12 semanas (12h)<br>• UAT facilitación (26h)<br>• Capacitación y Go-Live (20h)<br>• Cierre proyecto (3h) |
+| **Google Cloud Architect** (Consultor BI) | 86h | • Diseño modelo dimensional (star schema) + dimensiones + hechos + vistas (86h) |
+| **Power BI Developer** (Consultor BI) | 330h | **Desarrollo Dashboards (12 dashboards agrupados):**<br>• Dashboards Financieros (3): General + OPEX + Controlling (70h)<br>• Dashboards Ventas y Rentabilidad (3): Ventas + Rentabilidad + Regional (74h)<br>• Dashboards Supply Chain (3): Inventario + Supply + Compras (66h)<br>• Dashboards Tesorería + Ejecutivo (3): CxP + CxC + Ejecutivo (70h)<br>• Testing + UAT + ajustes (52h) |
+| **SAP SD/MM Functional** (Funcional SAP) | 104h | • Definición KPIs de negocio (22h)<br>• Validación dashboards (16h)<br>• UAT (4 fases) (44h)<br>• Documentación y capacitación (32h) |
+| **DevOps Engineer** (Consultor BI) | 0h | (No aplica en Fase 2) |
+| **Project Manager** (Project Manager) | 61h | • Seguimiento semanal 12 semanas (12h)<br>• UAT facilitación (26h)<br>• Capacitación y Go-Live (20h)<br>• Cierre proyecto (3h) |
 
 **TOTAL FASE 2:** **659 horas**
 
@@ -152,7 +152,7 @@
 
 ### Desglose por Semana (Fase 2)
 
-| Semana | JMB (Cloud/Data/BI/DevOps) | Lucía | Linda | Total | Dashboards |
+| Semana | Consultor BI (Cloud/Data/BI/DevOps) | Funcional SAP | Project Manager | Total | Dashboards |
 |--------|---------------------------|-------|-------|-------|------------|
 | **Sem 16** | 28h | 4h | 4h | 36h | Modelo dimensional + vistas |
 | **Sem 17** | 30h | 4h | 4h | 38h | Dashboards 1-2 (Financiero, Ventas) |
@@ -170,9 +170,9 @@
 
 | Perfil | Horas | Actividades |
 |--------|-------|------------|
-| **Google Cloud Architect** (JMB) | 4h | • Diseño arquitectura preliminar |
-| **Data Engineer** (JMB) | 8h | • Estimación esfuerzos ETL<br>• Análisis volumetría |
-| **Project Manager** (Linda) | 6h | • Estructuración propuesta<br>• Presupuesto y cronograma |
+| **Google Cloud Architect** (Consultor BI) | 4h | • Diseño arquitectura preliminar |
+| **Data Engineer** (Consultor BI) | 8h | • Estimación esfuerzos ETL<br>• Análisis volumetría |
+| **Project Manager** (Project Manager) | 6h | • Estructuración propuesta<br>• Presupuesto y cronograma |
 
 **TOTAL ELABORACIÓN:** **18 horas**
 
@@ -183,16 +183,16 @@
 | Perfil | Recurso | Elab | Fase 0 | Fase 1 | Fase 2 | **TOTAL** |
 |--------|---------|------|--------|--------|--------|-----------|
 | **SAP Basis** | Cliente Elanco | - | - | - | - | **0h** ✅ |
-| **SAP ABAP Developer** | Juan Manuel Bigi | - | - | - | - | **0h** |
-| **Google Cloud Architect** | Juan Manuel Bigi | 6h | 59h | 114h | 86h | **265h** |
-| **SAP SD/MM Functional** | Lucía Rodríguez | - | 112h | 206h | 166h | **484h** |
-| **Data Engineer** | Juan Manuel Bigi | 10h | - | 390h | - | **400h** |
-| **DevOps Engineer** | Juan Manuel Bigi | - | - | - | - | **0h** |
-| **Power BI Developer** | Juan Manuel Bigi | - | - | - | 330h | **330h** |
-| **Project Manager** | Linda López | 8h | 28h | 44h | 73h | **145h** |
+| **SAP ABAP Developer** | Consultor BI | - | - | - | - | **0h** |
+| **Google Cloud Architect** | Consultor BI | 6h | 59h | 114h | 86h | **265h** |
+| **SAP SD/MM Functional** | Funcional SAP | - | 112h | 206h | 166h | **484h** |
+| **Data Engineer** | Consultor BI | 10h | - | 390h | - | **400h** |
+| **DevOps Engineer** | Consultor BI | - | - | - | - | **0h** |
+| **Power BI Developer** | Consultor BI | - | - | - | 330h | **330h** |
+| **Project Manager** | Project Manager | 8h | 28h | 44h | 73h | **145h** |
 | **TOTAL PROYECTO** | | **24h** | **235h** | **696h** | **659h** | **1,590h** |
 
-**Nota:** Juan Manuel Bigi acumula múltiples roles técnicos (995h de 1,590h = 62.6% del proyecto)
+**Nota:** El Consultor BI acumula múltiples roles técnicos (995h de 1,590h = 62.6% del proyecto)
 
 ---
 
@@ -200,9 +200,9 @@
 
 | Recurso | Empresa | Total Horas | % del Total |
 |---------|---------|-------------|-------------|
-| **Juan Manuel Bigi** | Aunergia | 995h | 62.6% |
-| **Lucía Rodríguez** | Aunergia | 484h | 30.4% |
-| **Linda López** | Aunergia | 145h | 9.1% |
+| **Consultor BI** | Aunergia | 995h | 62.6% |
+| **Funcional SAP** | Aunergia | 484h | 30.4% |
+| **Project Manager** | Aunergia | 145h | 9.1% |
 | **SAP Basis (no calculado)** | Cliente Elanco | 0h | 0% |
 | **TOTAL** | | **1,590h** | **100%** |
 
@@ -226,9 +226,9 @@
 
 | Recurso | Disponibilidad | Horas/Semana |
 |---------|----------------|--------------|
-| Juan Manuel Bigi | Part-time (6h/día máx) | 25-30h |
-| Lucía Rodríguez | Part-time según proyecto | 15-20h |
-| Linda López | Dedicación parcial | 3-5h |
+| Consultor BI | Part-time (6h/día máx) | 25-30h |
+| Funcional SAP | Part-time según proyecto | 15-20h |
+| Project Manager | Dedicación parcial | 3-5h |
 
 ### Factores de Riesgo en Estimación
 
@@ -274,9 +274,9 @@
 
 | Recurso | Horas | % del Total |
 |---------|-------|-------------|
-| **Juan Manuel Bigi** | 995h | 62.6% |
-| **Lucía Rodríguez** | 484h | 30.4% |
-| **Linda López** | 145h | 9.1% |
+| **Consultor BI** | 995h | 62.6% |
+| **Funcional SAP** | 484h | 30.4% |
+| **Project Manager** | 145h | 9.1% |
 | **Cliente (SAP Basis)** | 0h | 0% |
 | **TOTAL** | **1,590h** | **100%** |
 
@@ -286,7 +286,7 @@
 
 1. **Revisar y aprobar estimación de horas** (stakeholders Aunergia + Elanco)
 2. **Definir tarifas comerciales** (acuerdo Aunergia-Elanco)
-3. **Confirmar disponibilidad recursos** (JMB, Lucía, Linda)
+3. **Confirmar disponibilidad recursos** (Consultor BI, Funcional SAP, Project Manager)
 4. **Validar cronograma** con restricciones de negocio
 5. **Preparar propuesta comercial formal** con costos definitivos
 
@@ -299,19 +299,19 @@
 
 ---
 
-## ANEXO: DESGLOSE DETALLADO JUAN MANUEL BIGI
+## ANEXO: DESGLOSE DETALLADO CONSULTOR BI
 
-| Fase | Rol | Horas | % de JMB |
+| Fase | Rol | Horas | % del Consultor BI |
 |------|-----|-------|----------|
 | **Elaboración** | Cloud Arch + Data Eng | 16h | 1.6% |
 | **Fase 0** | Cloud Arch (59h) + parte ABAP (36h) | 95h | 9.5% |
 | **Fase 1** | Cloud Arch (114h) + Data Eng (332h) | 446h | 44.8% |
 | **Fase 2** | Cloud Arch (86h) + Power BI (334h) | 420h | 42.2% |
-| **TOTAL JMB** | Múltiples roles | **995h** | **100%** |
+| **TOTAL Consultor BI** | Múltiples roles | **995h** | **100%** |
 
-**Nota de ajuste:** Las horas de JMB fueron recalculadas para sumar correctamente 995h en lugar de 1,001h originalmente reportado.
+**Nota de ajuste:** Las horas del Consultor BI fueron recalculadas para sumar correctamente 995h en lugar de 1,001h originalmente reportado.
 
-**Perfil:** Juan Manuel Bigi es un recurso **multidisciplinario** que cubre la mayoría de roles técnicos del proyecto (Cloud Architect + Data Engineer + Power BI Developer), lo cual es eficiente en costos pero genera dependencia en su disponibilidad.
+**Perfil:** El Consultor BI es un recurso **multidisciplinario** que cubre la mayoría de roles técnicos del proyecto (Cloud Architect + Data Engineer + Power BI Developer), lo cual es eficiente en costos pero genera dependencia en su disponibilidad.
 
 ---
 

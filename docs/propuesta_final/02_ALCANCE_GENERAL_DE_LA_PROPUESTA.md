@@ -91,7 +91,7 @@ Implementar una **solución integral de centralización de datos de análisis** 
   - SLAs y métricas de calidad
 
 #### ✅ Capacitación y Transferencia de Conocimiento
-- **Power users:** 3 sesiones de capacitación técnica (Lucía Rodríguez + 2 backups)
+- **Power users:** 3 sesiones de capacitación técnica (Funcional SAP + 2 backups)
 - **Usuarios finales:** 2 sesiones por área (Finanzas, Supply Chain)
 - **TI:** 1 sesión de handover técnico (David Saboya y equipo)
 - **Materiales:** Videos tutoriales, guías paso a paso
@@ -170,8 +170,8 @@ El proyecto se ejecutará siguiendo principios de **metodología ágil** adaptad
 
 #### Roles y Responsabilidades Claras
 - **Product Owner:** Representante de Finanzas/Supply (Elanco)
-- **Scrum Master:** Linda López (Aunergia) - facilita, no controla
-- **Development Team:** Lucía Rodríguez + Juan Manuel Bigi
+- **Scrum Master:** Project Manager (Aunergia) - facilita, no controla
+- **Development Team:** Funcional SAP + Consultor BI
 - **Stakeholders:** TI Global, áreas de negocio
 
 ### 2.3.2. Fases del Proyecto
@@ -277,7 +277,7 @@ El proyecto se divide en **4 fases** con objetivos específicos:
 
 | # | Supuesto | Responsable Validación |
 |---|----------|----------------------|
-| 1 | Lucía Rodríguez tendrá permisos SAP completos al iniciar Fase 1 | TI Global / David Saboya |
+| 1 | Funcional SAP tendrá permisos SAP completos al iniciar Fase 1 | TI Global / David Saboya |
 | 2 | El equipo de Finanzas/Supply estará disponible para validaciones (~4h/semana) | Sponsor del proyecto |
 | 3 | TI Global dará soporte para tickets de tablas BigQuery (respuesta < 1 semana) | David Saboya |
 | 4 | Los 8 usuarios Power BI Pro tienen sus licencias activas | TI Elanco |
@@ -289,8 +289,8 @@ El proyecto se divide en **4 fases** con objetivos específicos:
 
 | # | Supuesto | Implicación |
 |---|----------|-------------|
-| 1 | Disponibilidad part-time: 20-25h/semana Juan Manuel Bigi | Duración: 13-17 semanas |
-| 2 | Disponibilidad de Lucía según gestión de Aunergia (~15-20h/semana) | Sin impacto |
+| 1 | Disponibilidad part-time: 20-25h/semana Consultor BI | Duración: 13-17 semanas |
+| 2 | Disponibilidad de Funcional SAP según gestión de Aunergia (~15-20h/semana) | Sin impacto |
 | 3 | Respuestas de TI Global en máximo 1 semana para tickets críticos | Holguras en cronograma |
 | 4 | Validaciones con usuarios en máximo 3 días hábiles | Planificado en sprints |
 | 5 | No hay periodos de bloqueo (vacaciones, cierre de año) | Ajustar cronograma |
@@ -303,14 +303,14 @@ El proyecto se divide en **4 fases** con objetivos específicos:
 
 - **Esfuerzo total estimado:** 1,590 horas (42 semanas)
 - **No se admiten incrementos de esfuerzo** sin aprobación previa por cambios de alcance
-- **Equipo completo:** JMB (961h), Lucía (484h), Linda (145h)
+- **Equipo completo:** Consultor BI (961h), Funcional SAP (484h), Project Manager (145h)
 
 ### 2.6.2. Restricciones Temporales
 
 - **Duración total:** 42 semanas (~10 meses)
 - **Fecha inicio deseada:** 6 de enero de 2026
 - **Fecha límite para Fase 2:** 20 de septiembre de 2026
-- **Consideraciones:** Juan Manuel Bigi trabaja máximo 6h/día (30h/semana)
+- **Consideraciones:** Consultor BI trabaja máximo 6h/día (30h/semana)
 
 ### 2.6.3. Restricciones Tecnológicas
 
@@ -321,7 +321,7 @@ El proyecto se divide en **4 fases** con objetivos específicos:
 
 ### 2.6.4. Restricciones de Recursos
 
-- **Personal Aunergia:** 2-3 personas (Linda, Lucía, JMB)
+- **Personal Aunergia:** 2-3 personas (Project Manager, Funcional SAP, Consultor BI)
 - **Disponibilidad part-time:** No hay dedicación full-time
 - **Soporte TI Global:** Limitado a tickets (no desarrollo)
 - **Power users Elanco:** Disponibilidad limitada por tareas operativas
@@ -344,8 +344,8 @@ El proyecto se divide en **4 fases** con objetivos específicos:
 
 | Dependencia | Responsable | Fecha Límite | Mitigación |
 |-------------|-------------|--------------|------------|
-| **Workshop priorización transacciones** | Lucía + Áreas negocio | 18-nov-2025 | Sesiones virtuales asíncronas |
-| **Validación arquitectura BigQuery** | Juan Manuel Bigi | 15-nov-2025 | Iniciar análisis antes de kick-off |
+| **Workshop priorización transacciones** | Funcional SAP + Áreas negocio | 18-nov-2025 | Sesiones virtuales asíncronas |
+| **Validación arquitectura BigQuery** | Consultor BI | 15-nov-2025 | Iniciar análisis antes de kick-off |
 | **Definición de KPIs** | Finanzas + Supply | 25-nov-2025 | Usar KPIs estándar como base |
 | **Ambiente desarrollo BigQuery** | TI Elanco | 14-nov-2025 | Usar ambiente compartido temporalmente |
 

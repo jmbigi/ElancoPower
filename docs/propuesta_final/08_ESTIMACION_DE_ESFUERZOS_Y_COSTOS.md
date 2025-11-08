@@ -16,9 +16,9 @@
 
 | Recurso | Horas | Porcentaje |
 |---------|-------|------------|
-| **Desarrollo Técnico (Juan Manuel Bigi)** | 961h | 60.4% |
-| **Consultoría SAP (Lucía Rodríguez)** | 484h | 30.4% |
-| **Project Management (Linda López)** | 145h | 9.1% |
+| **Consultor BI** | 961h | 60.4% |
+| **Funcional SAP** | 484h | 30.4% |
+| **Project Manager** | 145h | 9.1% |
 | **TOTAL ESFUERZO** | **1,590h** | **100%** |
 
 **Nota:** Totales según CSV del cronograma detallado de tareas.
@@ -34,22 +34,22 @@
 | **Go-Live y Cierre** | - | - | Oct-2026 | Oct-2026 |
 | **TOTAL ESFUERZO** | **1,590h** | **42 sem** | **Ene-2026** | **Oct-2026** |
 
-**Restricción JMB:** Máximo 6h/día (30h/semana) por restricciones personales.
+**Restricción Consultor BI:** Máximo 6h/día (30h/semana) por restricciones personales.
 
 ### Duración Total
 
 - **Tiempo estimado:** 42 semanas (~10 meses)
 - **Inicio:** Enero 2026
 - **Finalización:** Octubre 2026
-- **Restricción:** Juan Manuel Bigi trabaja máximo 6 horas/día (30h/semana)
+- **Restricción:** Consultor BI trabaja máximo 6 horas/día (30h/semana)
 
 ### Equipo
 
 | Perfil | Horas Totales |
 |--------|---------------|
-| **Juan Manuel Bigi** - Arquitecto de Datos / Desarrollador | 961h |
-| **Lucía Rodríguez** - Analista SAP Power User | 484h |
-| **Linda López** - Project Manager | 145h |
+| **Consultor BI** - Arquitecto de Datos / Desarrollador | 961h |
+| **Funcional SAP** - Analista SAP Power User | 484h |
+| **Project Manager** - Project Manager | 145h |
 | **TOTAL** | **1,590h** |
 
 **Nota:** No se incluye consultoría ABAP adicional, Lucía cuenta con expertise SAP necesario.
@@ -65,7 +65,7 @@
 
 #### Desglose de Horas por Actividad (del CSV)
 
-| Actividad | JMB | Lucía | Linda | Total |
+| Actividad | Consultor BI | Funcional SAP | Project Manager | Total |
 |-----------|-----|-------|-------|-------|
 | Diseño arquitectura preliminar | 6h | 4h | 0h | 10h |
 | Estimación esfuerzos ETL | 8h | 6h | 0h | 14h |
@@ -81,9 +81,9 @@
 
 | Recurso | Horas |
 |---------|-------|
-| Juan Manuel Bigi | 95h |
-| Lucía Rodríguez | 112h |
-| Linda López (PM) | 28h |
+| Consultor BI | 95h |
+| Funcional SAP | 112h |
+| Project Manager | 28h |
 | **TOTAL FASE 0** | **235h** |
 
 ---
@@ -95,7 +95,7 @@
 
 #### Desglose de Horas por Actividad (del CSV)
 
-| Actividad | JMB | Lucía | Linda | Total |
+| Actividad | Consultor BI | Funcional SAP | Project Manager | Total |
 |-----------|-----|-------|-------|-------|
 | Setup infraestructura completa | 60h | 6h | 7h | 73h |
 | Pipelines Módulo FI (4 trans) | 60h | 26h | 3h | 89h |
@@ -112,9 +112,9 @@
 
 | Recurso | Horas |
 |---------|-------|
-| Juan Manuel Bigi | 446h |
-| Lucía Rodríguez | 206h |
-| Linda López (PM) | 44h |
+| Consultor BI | 446h |
+| Funcional SAP | 206h |
+| Project Manager | 44h |
 | **TOTAL FASE 1** | **696h** |
 
 ---
@@ -126,7 +126,7 @@
 
 #### Desglose de Horas por Actividad (del CSV)
 
-| Actividad | JMB | Lucía | Linda | Total |
+| Actividad | Consultor BI | Funcional SAP | Project Manager | Total |
 |-----------|-----|-------|-------|-------|
 | Modelo dimensional completo | 86h | 22h | 8h | 116h |
 | Dashboards Financieros (3) | 64h | 14h | 4h | 82h |
@@ -143,9 +143,9 @@
 
 | Recurso | Horas |
 |---------|-------|
-| Juan Manuel Bigi | 420h |
-| Lucía Rodríguez | 166h |
-| Linda López (PM) | 73h |
+| Consultor BI | 420h |
+| Funcional SAP | 166h |
+| Project Manager | 73h |
 | **TOTAL FASE 2** | **659h** |
 
 ---
@@ -175,16 +175,16 @@
 
 | Recurso | Fase 0 | Fase 1 | Fase 2 | Fase 3 | Total |
 |---------|--------|--------|--------|--------|-------|
-| **Juan Manuel Bigi** | 95h | 446h | 420h | (incl) | **961h** |
-| **Lucía Rodríguez** | 112h | 206h | 166h | - | **484h** |
-| **Linda López (PM)** | 28h | 44h | 73h | - | **145h** |
+| **Consultor BI** | 95h | 446h | 420h | (incl) | **961h** |
+| **Funcional SAP** | 112h | 206h | 166h | - | **484h** |
+| **Project Manager** | 28h | 44h | 73h | - | **145h** |
 | **SUBTOTAL EQUIPO** | **235h** | **696h** | **659h** | **0h** | **1,590h** |
 
 **Nota:** Totales según CSV del cronograma. Las 1,590h son el esfuerzo total del equipo distribuido en 42 semanas.
 
 ### 8.3.2. Consultoría ABAP Especializada
 
-**No incluida:** Lucía Rodríguez cuenta con expertise SAP funcional y ABAP suficiente para analizar transacciones custom (ZLEL008, ZVEL015). Las 484 horas de Lucía ya contemplan este análisis.
+**No incluida:** Funcional SAP cuenta con expertise SAP funcional y ABAP suficiente para analizar transacciones custom (ZLEL008, ZVEL015). Las 484 horas del Funcional SAP ya contemplan este análisis.
 
 ---
 
@@ -194,9 +194,9 @@
 
 | Recurso | Horas | % del Total |
 |---------|-------|-------------|
-| **Desarrollo Técnico (Juan Manuel Bigi)** | 961h | 60.6% |
-| **Consultoría SAP (Lucía Rodríguez)** | 484h | 30.7% |
-| **Project Management (Linda López)** | 145h | 8.7% |
+| **Consultor BI** | 961h | 60.6% |
+| **Funcional SAP** | 484h | 30.7% |
+| **Project Manager** | 145h | 8.7% |
 | **TOTAL ESFUERZO** | **1,590h** | **100%** |
 
 **Nota:** Totales según CSV del cronograma detallado de tareas.
@@ -231,7 +231,7 @@
 **Justificación de la compresión:**
 - ✅ Mismas 1,590 horas distribuidas en menos semanas
 - ✅ Mayor intensidad de trabajo semanal
-- ✅ Restricción JMB respetada: máx 6h/día
+- ✅ Restricción Consultor BI respetada: máx 6h/día
 - ✅ Paralelización de tareas donde es posible
 - ✅ Optimización de dependencias críticas
 
@@ -301,7 +301,7 @@
 
 ### 8.7.2. Supuestos de Recursos
 
-✅ Lucía Rodríguez tendrá permisos SAP completos al iniciar Fase 1  
+✅ Funcional SAP tendrá permisos SAP completos al iniciar Fase 1  
 ✅ Equipo Finanzas/Supply disponible ~4h/semana para validaciones  
 ✅ TI Global responde tickets en < 1 semana (críticos)  
 ✅ 8 licencias Power BI Pro activas  
