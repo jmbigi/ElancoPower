@@ -1,4 +1,4 @@
-ID,Fase,Tarea,Descripcion,Depende_de,Semana_Inicio,Semana_Fin,Duracion_Semanas,JMB_Horas,Lucia_Horas,Linda_Horas,Total_Horas
+ID,Fase,Tarea,Descripcion,Depende_de,Semana_Inicio,Semana_Fin,Duracion_Semanas,Horas_Consultor_BI,Horas_Funcional_SAP,Horas_Project_Manager,Total_Horas
 1,Fase_0,Diseño arquitectura preliminar,Arquitectura BigQuery 3 capas + conectividad SAP SLT + definición preliminar tablas SAP,,0,0,1,6,4,0,10
 2,Fase_0,Estimación esfuerzos ETL,Análisis volumetría y complejidad 18 transacciones SAP + identificación tablas por módulo,,0,0,1,8,6,0,14
 3,Fase_0,Kick-off y alineamiento,Reunión inicial con todos los stakeholders + presentación plan,2,1,1,1,3,4,3,10
