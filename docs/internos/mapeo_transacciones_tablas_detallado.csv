@@ -1,0 +1,47 @@
+transaccion,descripcion_tabla,tabla,categoria_tabla,prioridad_transaccion,categoria_replicacion,estado_inclusion,justificacion
+VA05,Cabecera orden de venta,VBAK,Transaccional,1,core,incluir,Clave funcional para métricas de pipeline de ventas
+VA05,Posición orden de venta,VBAP,Transaccional,1,core,incluir,Necesario para detalle de ítems y métricas de fill-rate
+VA05,Estatus cabecera,VBUK,Transaccional,1,core,incluir,Requerido para semáforos y estado ciclo de pedido
+VA05,Estatus posición,VBUP,Transaccional,1,core,incluir,Detalla cumplimiento a nivel de ítem
+VA05,Maestro material,MARA,Maestro,1,core,incluir,Clave para joins de producto
+VA05,Textos material,MAKT,Maestro,1,derivada,candidato_incluir,Solo para descripciones legibles (UX)
+VA05,Maestro cliente,KNA1,Maestro,1,core,incluir,Dimensión cliente
+VA05,Business Partner,BUT000,Maestro,1,core,incluir,Unifica cliente/proveedor (S/4)
+KSB1,Universal Journal,ACDOCA,Finanzas,1,core,incluir,Sustituye COEP/BSEG/FAGLFLEXA
+KSB1,Universal Journal Totales,ACDOCA_T,Finanzas,1,derivada,incluir,Mejora performance para saldos/agrupaciones
+KSB1,Orden interna,AUFK,Maestro,1,core,incluir,Necesario para análisis de órdenes de gasto
+KSB1,Centro de costo,CSKS,Maestro,1,core,incluir,Dimensión costo
+KSB1,Elemento de costo,CSKA,Maestro,1,core,incluir,Clasificación de gastos
+FAGLL03,Universal Journal,ACDOCA,Finanzas,1,core,incluir,Base de mayor general
+FAGLL03,Cabecera documento,BKPF,Finanzas,1,core,incluir,Metadatos de documentos
+FAGLL03,Plan de cuentas,SKA1,Maestro,1,derivada,candidato_incluir,Jerarquías contables
+ZLEL008,Stock almacén,MARD,Inventario,1,core,incluir,KPIs de inventario por almacén
+ZLEL008,Stock por lote,MCHB,Inventario,1,derivada,candidato_incluir,Solo si se requiere granularidad por lote
+ZLEL008,Valoración material,MBEW,Inventario,1,core,incluir,Costos estándar y valorización
+ZLEL008,Movimientos cabecera,MKPF,Inventario,1,core,incluir,Metadatos logística
+ZLEL008,Movimientos posición,MSEG,Inventario,1,core,incluir,Detalle de movimientos
+ZLEL008,Stock ubicación (opcional),MARD,Inventario,1,core,incluir,Consolidado ya listado para ZLEL008
+KE24,Universal Journal,ACDOCA,Finanzas,2,core,incluir,Base CO-PA
+KE24,Condiciones de documento,KONV,Precios,2,derivada,candidato_incluir,Detalle de condiciones de pricing
+KE24,Maestro condiciones,KONP,Precios,2,derivada,candidato_incluir,Soporte analítico pricing histórico
+FB03,Universal Journal,ACDOCA,Finanzas,2,core,incluir,Detalle partidas contables
+FB03,Cabecera documento,BKPF,Finanzas,2,core,incluir,Metadatos aprobación
+F.08,Universal Journal,ACDOCA,Finanzas,2,core,incluir,Saldos balance comprobación
+F.01,Universal Journal Totales,ACDOCA_T,Finanzas,2,derivada,incluir,Acelera estados agregados
+ME2L,Pedido compra cabecera,EKKO,Compras,pendiente,core,incluir,Base de compras
+ME2L,Pedido compra posición,EKPO,Compras,pendiente,core,incluir,Detalle ítems
+MM60,Valoración material,MBEW,Inventario,pendiente,core,incluir,Ya incluido (evitar duplicación lógica)
+MB59,Movimientos cabecera,MKPF,Inventario,pendiente,core,incluir,Ya incluido (evitar duplicación lógica)
+MB59,Movimientos posición,MSEG,Inventario,pendiente,core,incluir,Ya incluido (evitar duplicación lógica)
+ZVEL015,Condiciones de documento,KONV,Precios,pendiente,derivada,candidato_incluir,Reutiliza estructura de pricing
+ZVEL015,Maestro condiciones,KONP,Precios,pendiente,derivada,candidato_incluir,Reutiliza estructura de pricing
+ME23N,Pedido compra cabecera,EKKO,Compras,pendiente,core,incluir,Reutiliza tabla
+FBL1N,Universal Journal,ACDOCA,Finanzas,pendiente,core,incluir,Partidas acreedores (derivado de ACDOCA)
+FBL5N,Universal Journal,ACDOCA,Finanzas,pendiente,core,incluir,Partidas clientes (derivado de ACDOCA)
+MB5B,Stock histórico,MARD,Inventario,pendiente,core,incluir,Stock corte fecha (derivado)
+XK03,Business Partner,BUT000,Maestro,pendiente,core,incluir,Ya incluido (BP)
+XD03,Business Partner,BUT000,Maestro,pendiente,core,incluir,Ya incluido (BP)
+TEXTOS,Textos generales,STXL,Cluster,pendiente,condicional,candidato_incluir,Solo si se requieren textos largos
+LEGACY,Partidas clásicas,BSEG,Finanzas,NA,obsoleta,excluir,Sustituida por ACDOCA
+LEGACY,Partidas CO,COEP,Finanzas,NA,obsoleta,excluir,Sustituida por ACDOCA
+LEGACY,Ledger flexible,FAGLFLEXA,Finanzas,NA,obsoleta,excluir,Sustituida por ACDOCA

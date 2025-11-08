@@ -502,4 +502,56 @@ Luego recreas el informe en Power BI usando esos datos.
 
 **Fin del Anexo Técnico**
 
-*Versión: 1.2 - 8 de noviembre de 2025*
+---
+
+## 11. Plan de Optimización del Rango de Tablas (Poda Controlada)
+
+Esta sección documenta el proceso propuesto para reducir el rango operativo de tablas replicadas manteniendo cobertura de KPIs y evitando regresiones de calidad.
+
+### 11.1. Estado Actual vs. Objetivo
+| Concepto | Valor Vigente (Canónico) | Objetivo Tentativo (Exploratorio) | Condición de Cambio |
+|----------|---------------------------|-----------------------------------|---------------------|
+| Rango de Tablas | ~76–85 | ~35–65 | Validación completa de poda y no-impacto en KPIs |
+| Tablas Obsoletas Excluidas | BSEG, COEP, FAGLFLEXA | (sin cambios) | Confirmado por uso de ACDOCA |
+| Tablas Condicionales | STXL, KONV, KONP, MCHB, MAKT | Incluir solo si caso de uso confirmado | Aprobación Funcional + BI |
+
+Mientras no se complete la validación formal, el rango ~76–85 continúa siendo el único valor canónico.
+
+### 11.2. Clasificación de Tablas
+Categorías utilizadas en `docs/internos/mapeo_transacciones_tablas_detallado.csv`:
+- core: Imprescindible para KPIs de los 12 dashboards.
+- derivada: Puede reconstruirse mediante joins / vistas; aporta comodidad o performance.
+- condicional: Depende de un caso de uso específico (textos, pricing detallado, lote, etc.).
+- obsoleta: Sustituida por estructura consolidada (ej. ACDOCA).
+
+### 11.3. Criterios de Exclusión
+1. Sustituida completamente por ACDOCA/ACDOCA_T.
+2. Aporta solo descripciones no críticas (etiquetas) y puede diferirse (ej. MAKT si se tolera código de material inicialmente).
+3. Uso eventual que puede resolverse on-demand (pricing histórico detallado).
+4. Alto costo de replicación vs. bajo aporte analítico incremental.
+
+### 11.4. Metodología de Validación
+1. Trazar cada KPI de los 12 dashboards → campos → tabla origen.
+2. Marcar tablas sin KPIs dependientes: candidatas a exclusión.
+3. Simular (en análisis) dataset sin derivadas y confirmar que ningún dashboard pierde métrica / dimensión.
+4. Documentar en informe de poda (internos) impacto y ahorro estimado (almacenamiento + bytes escaneados).
+5. Someter a aprobación conjunta (Funcional SAP + Consultor BI + PM).
+
+### 11.5. Riesgos y Mitigaciones
+| Riesgo | Impacto | Mitigación |
+|--------|---------|------------|
+| Exclusión prematura rompe un KPI | Alto | Validación sistemática KPI→Tabla antes de excluir |
+| Reincorporación tardía añade reprocesos | Medio | Mantener checklist de reversión rápida |
+| Subestimación de necesidad de textos | Bajo | Implementar fallback: vista sintética de descripciones externas |
+
+### 11.6. Próximos Entregables
+- Checklist KPI→Tabla.
+- Informe de poda (v1) con conteo por categoría.
+- Actualización opcional de este anexo elevando nuevo rango (si aprobado).
+
+### 11.7. Nota de Transparencia
+Las menciones a "~35–65" en documentos de entregables se consideran EXPLORATORIAS hasta que este anexo se actualice elevando el nuevo rango y `estado_documentos.md` refleje el cambio.
+
+---
+
+*Versión: 1.3 - 8 de noviembre de 2025 (añadida sección 11)*

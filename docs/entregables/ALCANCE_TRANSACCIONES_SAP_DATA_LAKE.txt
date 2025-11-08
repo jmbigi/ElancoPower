@@ -164,6 +164,7 @@ Resumen ejecutivo técnico:
 - Sistema fuente confirmado: S/4HANA.
 - Estrategia pivota al **Universal Journal**: replicar **ACDOCA** (partidas) y **ACDOCA_T** (totales).
 - Beneficio: Sustituye BSEG/FAGLFLEXA/COEP, reduciendo el alcance total a **~35-65 tablas** (antes ~76-85).
+    [NOTA EXPLORATORIA] Este rango 35–65 es una optimización propuesta sujeta a validación. El valor canónico vigente para el proyecto sigue siendo **~76–85** tablas hasta completar la poda controlada (ver `docs/propuesta_final/ANEXO_TECNICO_TRANSACCIONES_VS_TABLAS.md`, sección 11).
 
 Tablas complementarias prioritarias:
 - FI/CO: BKPF (cabecera), SKA1 (plan de cuentas), CSKS/CSKA (CO), AUFK (órdenes CO).
