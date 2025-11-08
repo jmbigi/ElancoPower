@@ -1,4 +1,4 @@
-# 6. FASE 2 - MODELADO DE DATOS Y GENERACIÓN DE DASHBOARDS
+# 6. FASE 2 - MODELADO DE DATOS Y GENERACIÓN DE DASHBOARDS *(Versión 1.1 - 8-nov-2025)*
 > Nota de versión (8-nov-2025): Cifras actualizadas al consolidado oficial. La estimación histórica (294h, 8 semanas) fue normalizada a **659h** en **14 semanas**. Ante cualquier discrepancia, prevalecen `CRONOGRAMA_DETALLADO_TAREAS.csv` y `08_ESTIMACION_DE_ESFUERZOS_Y_COSTOS.md`.
 
 ## 6.1. Objetivo de la Fase
@@ -590,7 +590,7 @@ RETURN
 - Sign-off final
 - Recopilación de feedback
 
-**Sesión 3: Management (2h)**
+**Sesión 5: Management (2h)**
 - Validación Dashboard Ejecutivo
 - Aprobación general
 - Solicitud de ajustes menores
@@ -844,3 +844,5 @@ Periodo posterior a la puesta en producción sin compromisos operativos incluido
 ---
 
 *Siguiente sección: [07_FASE_3_MODELOS_PREDICTIVOS.md](07_FASE_3_MODELOS_PREDICTIVOS.md)*
+
+*Histórico:* Versión 1.0 (7-nov-2025); Versión 1.1 renumera sesiones UAT y alinea cifras con estimación consolidada sin cambios de alcance.

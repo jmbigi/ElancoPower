@@ -1,4 +1,4 @@
-# 9. CRONOGRAMA SEMANAL DEL PROYECTO
+# 9. CRONOGRAMA SEMANAL DEL PROYECTO *(Versión 1.1 - 8-nov-2025)*
 
 ## 9.1. Vista General del Cronograma
 
@@ -14,6 +14,8 @@ FASE 0          FASE 1                                           FASE 2
                                                           
 Sem 0-6         Sem 6-28                                         Sem 28-42 (ajustado a nuevo inicio)
 ```
+
+> Nota de interpretación: En este documento, las semanas indicadas son **semanas globales del proyecto**. En las secciones de cada fase (p. ej., `05_FASE_1_CONSTRUCCION_DATA_LAKE.md`) se emplean "semanas internas de fase" para el detalle operativo. Ambas vistas están alineadas: Fase 1 corresponde a las semanas globales 6–28; Fase 2 a 28–42.
 
 **Restricción:** Consultor BI trabaja máximo 6 horas/día (30h/semana). Cronograma comprimido manteniendo las mismas 1,590 horas totales.
 
@@ -389,3 +391,5 @@ Cronograma comprimido 25% manteniendo mismas horas
 ---
 
 *Siguiente sección: [10_REQUISITOS_TECNICOS_Y_ADMINISTRATIVOS.md](10_REQUISITOS_TECNICOS_Y_ADMINISTRATIVOS.md)*
+
+*Histórico:* Versión 1.0 (7-nov-2025) sin nota aclaratoria; Versión 1.1 incluye nota de diferencia semanas globales vs. internas y mantiene cifras.

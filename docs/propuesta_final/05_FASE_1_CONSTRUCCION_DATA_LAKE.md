@@ -1,4 +1,4 @@
-# 5. FASE 1 — CONSTRUCCIÓN DE DATA LAKE
+# 5. FASE 1 — CONSTRUCCIÓN DE DATA LAKE *(Versión 1.1 - 8-nov-2025)*
 
 **Duración unificada:** 22 semanas (consolidado 1,590h / 42 semanas)  
 **Fecha inicio estimada:** Segunda mitad de febrero 2026 (tras Go/No-Go 10-feb-2026)  
@@ -390,6 +390,8 @@ FROM bigquery_target_table;
 
 ### Sprint 1-2: Módulo FI (Semanas 1-4)
 
+> Nota de interpretación: Las semanas listadas a continuación son "Semanas Internas de Fase 1" (no acumulativas con las semanas globales del proyecto). En el cronograma maestro (`09_CRONOGRAMA_SEMANAL.md`) esta fase se ubica dentro de las semanas globales 7 a 20 del proyecto.
+
 | Semana | Actividades Principales | Horas | Hitos |
 |--------|------------------------|-------|-------|
 | 1 | Setup infraestructura + FAGLL03 | 20h | Infraestructura lista |
@@ -494,3 +496,5 @@ FROM bigquery_target_table;
 ---
 
 *Siguiente sección: [06_FASE_2_MODELADO_Y_DASHBOARDS.md](06_FASE_2_MODELADO_Y_DASHBOARDS.md)*
+
+*Histórico:* Versión 1.0 (7-nov-2025) sin nota de semanas internas; Versión 1.1 añade aclaración de semanas internas vs. globales, sin cambio de horas.

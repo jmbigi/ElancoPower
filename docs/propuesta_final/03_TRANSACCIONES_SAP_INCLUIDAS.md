@@ -37,14 +37,16 @@ TRANSACCIÓN SAP (UI)          TABLAS SAP (Datos)         REPLICACIÓN SLT
 **Fuente:** Attach_2_Correo_1_Transacciones SAP.csv (normalizado)  
 **Validación:** 100% de transacciones provienen de documento original de Elanco
 
+> Nota de consolidación (histórico → final): El archivo original de Elanco enumeraba 22 líneas con repeticiones y variaciones de formato. Tras la normalización y eliminación de duplicados, el set final y canónico queda en 18 transacciones únicas. Los archivos en `inputs/` se conservan como fuente histórica sin modificaciones; este documento es la referencia vigente para alcance.
+
 ### Distribución por Prioridad
 
 | Prioridad | Cantidad | Porcentaje | Estimado de Tablas SAP |
 |-----------|----------|------------|------------------------|
 | **Prioridad 1 (Críticas)** | 4 | 22% | ~15-20 tablas |
 | **Prioridad 2 (Importantes)** | 4 | 22% | ~15-20 tablas |
-| **Pendientes de clasificar** | 10 | 56% | ~40-50 tablas |
-| **TOTAL** | **18** | **100%** | **~70-90 tablas SAP** |
+| **Pendientes de clasificar** | 10 | 56% | ~40-45 tablas |
+| **TOTAL** | **18** | **100%** | **~76-85 tablas SAP** |
 
 **Nota:** Una transacción puede requerir múltiples tablas. Por ejemplo, VA05 requiere al menos 3 tablas (VBAK, VBAP, VBEP).
 
@@ -70,9 +72,9 @@ TRANSACCIÓN SAP (UI)          TABLAS SAP (Datos)         REPLICACIÓN SLT
 
 ---
 
-## 3.2. PRIORIDAD 1 - Transacciones Críticas
+## 3.3. PRIORIDAD 1 - Transacciones Críticas
 
-### 3.2.1. VA05 - Sales Order / Órdenes Abiertas
+### 3.3.1. VA05 - Sales Order / Órdenes Abiertas
 
 **Código:** VA05  
 **Módulo SAP:** SD (Sales & Distribution)  
@@ -110,7 +112,7 @@ Transacción para consultar órdenes de venta abiertas (pendientes de facturaci�
 
 ---
 
-### 3.2.2. ZLEL008 - Inventario Consolidado
+### 3.3.2. ZLEL008 - Inventario Consolidado
 
 **Código:** ZLEL008  
 **Módulo SAP:** Z-Custom (Transacción customizada Elanco)  
@@ -155,7 +157,7 @@ Transacción **custom** desarrollada específicamente para Elanco que consolida 
 
 ---
 
-### 3.2.3. KSB1 - OPEX / Órdenes CO
+### 3.3.3. KSB1 - OPEX / Órdenes CO
 
 **Código:** KSB1  
 **Módulo SAP:** CO (Controlling)  
@@ -193,7 +195,7 @@ Reporte de partidas reales de órdenes de costos (órdenes internas de CO). Util
 
 ---
 
-### 3.2.4. FAGLL03 - Mayor General
+### 3.3.4. FAGLL03 - Mayor General
 
 **Código:** FAGLL03  
 **Módulo SAP:** FI (Financial Accounting)  
@@ -234,9 +236,9 @@ Visualización de partidas individuales del libro mayor (General Ledger). Transa
 
 ---
 
-## 3.3. PRIORIDAD 2 - Transacciones Importantes
+## 3.4. PRIORIDAD 2 - Transacciones Importantes
 
-### 3.3.1. KE24 - Venta / CO-PA
+### 3.4.1. KE24 - Venta / CO-PA
 
 **Código:** KE24  
 **Módulo SAP:** CO (Controlling) - CO-PA (Profitability Analysis)  
@@ -273,7 +275,7 @@ Reporte de partidas individuales de CO-PA (Cuenta de Resultados). Análisis de r
 
 ---
 
-### 3.3.2. FB03 - Documentos de Venta
+### 3.4.2. FB03 - Documentos de Venta
 
 **Código:** FB03  
 **Módulo SAP:** FI (Financial Accounting)  
@@ -310,7 +312,7 @@ Visualización de documentos contables (facturas, notas de crédito, pagos). Tra
 
 ---
 
-### 3.3.3. F.08 - Balance de Comprobación
+### 3.4.3. F.08 - Balance de Comprobación
 
 **Código:** F.08  
 **Módulo SAP:** FI (Financial Accounting)  
@@ -344,7 +346,7 @@ Balance de comprobación (Trial Balance) por cuenta de mayor. Resume saldos inic
 
 ---
 
-### 3.3.4. F.01 - Estado de Situación
+### 3.4.4. F.01 - Estado de Situación
 
 **Código:** F.01  
 **Módulo SAP:** FI (Financial Accounting)  
@@ -377,11 +379,11 @@ Balance General (Balance Sheet) con estructura jerárquica de cuentas.
 
 ---
 
-## 3.4. PENDIENTES DE CLASIFICAR (Sin prioridad asignada)
+## 3.5. PENDIENTES DE CLASIFICAR (Sin prioridad asignada)
 
 Las siguientes **10 transacciones** están identificadas en el documento original pero **no tienen prioridad asignada**. Se clasificarán durante el **Workshop de Fase 0** con Finanzas, Supply Chain y TechOps.
 
-### 3.4.1. ME2L - Purchase Orders (PO)
+### 3.5.1. ME2L - Purchase Orders (PO)
 
 **Código:** ME2L  
 **Módulo SAP:** MM (Materials Management)  
@@ -395,7 +397,7 @@ Lista de pedidos de compra por proveedor. Utilizada para seguimiento de órdenes
 
 ---
 
-### 3.4.2. MM60 - Standard Cost (Costos Estándar)
+### 3.5.2. MM60 - Standard Cost (Costos Estándar)
 
 **Código:** MM60  
 **Módulo SAP:** MM (Materials Management)  
@@ -409,7 +411,7 @@ Visualización de costos estándar de materiales por centro.
 
 ---
 
-### 3.4.3. MB59 - Movimientos de Material
+### 3.5.3. MB59 - Movimientos de Material
 
 **Código:** MB59  
 **Módulo SAP:** MM (Materials Management)  
@@ -423,7 +425,7 @@ Análisis de stock por fecha de recepción (SLED/BBD analysis).
 
 ---
 
-### 3.4.4. ZVEL015 - Condiciones de Precio
+### 3.5.4. ZVEL015 - Condiciones de Precio
 
 **Código:** ZVEL015  
 **Módulo SAP:** Z-Custom  
@@ -439,7 +441,7 @@ Transacción custom para consulta de condiciones de pricing.
 
 ---
 
-### 3.4.5. ME23N - Display Purchase Order
+### 3.5.5. ME23N - Display Purchase Order
 
 **Código:** ME23N  
 **Módulo SAP:** MM (Materials Management)  
@@ -453,7 +455,7 @@ Visualización individual de pedidos de compra.
 
 ---
 
-### 3.4.6. FBL1N - Vendor Line Items
+### 3.5.6. FBL1N - Vendor Line Items
 
 **Código:** FBL1N  
 **Módulo SAP:** FI (Financial Accounting)  
@@ -467,7 +469,7 @@ Partidas individuales de proveedores (cuentas por pagar).
 
 ---
 
-### 3.4.7. FBL5N - Customer Line Items
+### 3.5.7. FBL5N - Customer Line Items
 
 **Código:** FBL5N  
 **Módulo SAP:** FI (Financial Accounting)  
@@ -481,7 +483,7 @@ Partidas individuales de clientes (cuentas por cobrar).
 
 ---
 
-### 3.4.8. MB5B - Stock for Material
+### 3.5.8. MB5B - Stock for Material
 
 **Código:** MB5B  
 **Módulo SAP:** MM (Materials Management)  
@@ -495,7 +497,7 @@ Stock de materiales por centro/almacén.
 
 ---
 
-### 3.4.9. XK03 - Display Vendor Master
+### 3.5.9. XK03 - Display Vendor Master
 
 **Código:** XK03  
 **Módulo SAP:** MD (Master Data)  
@@ -509,7 +511,7 @@ Visualización de maestro de proveedores.
 
 ---
 
-### 3.4.10. XD03 - Display Customer Master
+### 3.5.10. XD03 - Display Customer Master
 
 **Código:** XD03  
 **Módulo SAP:** MD (Master Data)  
@@ -523,7 +525,7 @@ Visualización de maestro de clientes.
 
 ---
 
-## 3.5. Estrategia de Priorización para Fase 0
+## 3.6. Estrategia de Priorización para Fase 0
 
 Durante el **Workshop de Fase 0** (estimado semana 2), se priorizarán las 10 transacciones pendientes utilizando los siguientes criterios:
 
@@ -565,7 +567,7 @@ Durante el **Workshop de Fase 0** (estimado semana 2), se priorizarán las 10 tr
 
 ---
 
-## 3.6. Observaciones Importantes
+## 3.7. Observaciones Importantes
 
 ### 3.6.1. Fuente de Datos
 
@@ -586,6 +588,7 @@ Durante la normalización se eliminaron duplicados:
 Corregidas durante normalización:
 - **xk03 → XK03** (minúsculas a mayúsculas)
 - **xd03 → XD03** (minúsculas a mayúsculas)
+- **Supple-Finanzas → Supply-Finanzas** (corrección tipográfica en fuente original)
 
 ### 3.6.4. Pendientes de Confirmación con TI Global
 
@@ -613,7 +616,7 @@ Para cada transacción se debe validar en Fase 0:
 
 ---
 
-## 3.7. Próximos Pasos (Fase 0)
+## 3.8. Próximos Pasos (Fase 0)
 
 ### Semana 1-2 de Fase 0
 
@@ -629,7 +632,7 @@ Para cada transacción se debe validar en Fase 0:
 
 📋 **"Mapeo Completo: Transacciones → Tablas SAP → BigQuery"**
 - 18 transacciones clasificadas por prioridad
-- Listado completo de tablas SAP requeridas (~70-90 tablas)
+- Listado completo de tablas SAP requeridas (~76-85 tablas)
 - Confirmación de disponibilidad de cada tabla en BigQuery
 - Estimación de esfuerzo por tabla (configuración SLT, validación, transformaciones)
 - Orden de implementación para Fase 1
@@ -638,3 +641,5 @@ Para cada transacción se debe validar en Fase 0:
 ---
 
 *Siguiente sección: [04_FASE_0_REVISION_ALCANCE_Y_FACTIBILIDAD.md](04_FASE_0_REVISION_ALCANCE_Y_FACTIBILIDAD.md)*
+
+*Versión 1.1 - 8-nov-2025*

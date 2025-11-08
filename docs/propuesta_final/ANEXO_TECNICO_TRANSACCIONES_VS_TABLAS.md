@@ -203,8 +203,8 @@ En SLT se configura:
 |-------------------------------|----------|------------------|-----------------|
 | Transacciones Prioridad 1 | 4 | ~19-21 | Alta a Muy Alta |
 | Transacciones Prioridad 2 | 4 | ~11-13 | Media a Muy Alta |
-| Transacciones Pendientes | 10 | ~40-50 | Baja a Compleja |
-| **TOTAL ESTIMADO** | **18** | **~70-84 tablas** | **Mixta** |
+| Transacciones Pendientes | 10 | ~40-45 | Baja a Compleja |
+| **TOTAL ESTIMADO** | **18** | **~76-85 tablas** | **Mixta** |
 
 ---
 
@@ -219,7 +219,7 @@ ENTRADAS (Fase 0)              PROCESO                    SALIDAS
 ─────────────────              ───────                    ────────
 ┌─────────────────┐           ┌──────────────────┐      ┌────────────────┐
 │ 18 Transacciones│──────────▶│ Análisis de      │─────▶│ Lista de       │
-│ SAP priorizadas │           │ Tablas           │      │ 70-90 Tablas   │
+│ SAP priorizadas │           │ Tablas           │      │ 76-85 Tablas   │
 └─────────────────┘           │ Subyacentes      │      │ SAP a Replicar │
                               └──────────────────┘      └────────────────┘
                                        │
@@ -369,7 +369,7 @@ Luego recreas el informe en Power BI usando esos datos.
 **Proceso Completo:**
 
 1. **Negocio identifica** 18 transacciones críticas
-2. **Fase 0 mapea** transacciones → ~70-90 tablas SAP
+2. **Fase 0 mapea** transacciones → ~76-85 tablas SAP (rango canónico refinado)
 3. **TI Global confirma** disponibilidad de tablas en BigQuery
 4. **SLT replica** tablas configuradas a BigQuery
 5. **BigQuery procesa** datos (limpieza, transformaciones)
@@ -409,7 +409,7 @@ Luego recreas el informe en Power BI usando esos datos.
 
 ### P5: ¿Cuántas tablas SAP existen en total?
 
-**R:** SAP S/4HANA tiene >100,000 tablas. Este proyecto solo replica las ~70-90 necesarias para las 18 transacciones priorizadas.
+**R:** SAP S/4HANA tiene >100,000 tablas. Este proyecto solo replica las ~76-85 necesarias para las 18 transacciones priorizadas (rango canónico consolidado tras análisis).
 
 ---
 
@@ -431,4 +431,4 @@ Luego recreas el informe en Power BI usando esos datos.
 
 **Fin del Anexo Técnico**
 
-*Versión: 1.0 - 7 de noviembre de 2025*
+*Versión: 1.1 - 8 de noviembre de 2025 (unificación rango tablas ~76-85, aclaraciones de proceso y consistencia de numeraciones)*

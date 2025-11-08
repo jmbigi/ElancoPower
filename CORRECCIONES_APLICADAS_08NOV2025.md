@@ -17,16 +17,34 @@ Unificar cifras y criterios entre documentos de `docs/propuesta_final` y elimina
 3. `03_TRANSACCIONES_SAP_INCLUIDAS.md`
   - Corregida tabla de distribución por módulo: SD=1 transacción; MD=2 transacciones.
 4. Este archivo creado para trazabilidad de cambios.
+5. `03_TRANSACCIONES_SAP_INCLUIDAS.md`
+  - Unificada estimación de tablas a rango canónico ~76-85.
+  - Añadida nota explícita de consolidación histórico (22 líneas originales → 18 transacciones únicas finales).
+  - Incluida corrección tipográfica: "Supple-Finanzas" → "Supply-Finanzas".
+6. `ANEXO_TECNICO_TRANSACCIONES_VS_TABLAS.md`
+  - Sustituido rango previo (~70-90 / ~70-84) por rango único ~76-85 en todas las ocurrencias.
+  - Ajustadas categorías: pendientes ~40-45 y total ~76-85.
+  - Actualizada respuesta FAQ y diagrama Fase 0 con nuevo rango.
+7. `05_FASE_1_CONSTRUCCION_DATA_LAKE.md`
+  - Añadida nota de interpretación: semanas listadas son internas a la fase; mapeo a semanas globales 7–20.
+8. `09_CRONOGRAMA_SEMANAL.md`
+  - Añadida nota aclaratoria sobre diferencia entre semanas globales y semanas internas de fase (evita ambigüedad al leer ambos documentos).
+9. `docs/internos/estado_documentos.md`
+  - Archivo nuevo que categoriza documentos vigentes vs. históricos; define fuentes canónicas (18 transacciones, ~76-85 tablas, 1,590h, 42 semanas).
 
 ### Criterios de Verificación Post-Cambio
 - Totales de horas por fase y rol coinciden con documento canónico (`08_ESTIMACION_DE_ESFUERZOS_Y_COSTOS.md`).
-- Cobertura mínima ahora refleja realmente 18 transacciones (4+4+10).
+- Cobertura mínima refleja 18 transacciones (4+4+10).
 - No quedan referencias a “116 horas” de Fase 0 en documentos vigentes.
 - Reconciliación >95% alineada con riesgos y supuestos (sección 11).
+- Rango de tablas unificado: todas las menciones anteriores (~70-84, ~70-90) reemplazadas por ~76-85.
+- Semántica de semanas aclarada (global vs. internas) en 05 y 09.
+- Origen histórico de 22 líneas vs. 18 transacciones documentado claramente.
 
 ### Pendientes (No Cambiados)
 - Validar si algún otro documento externo (p.e. `RESUMEN_PROPUESTA_FINAL.txt`) contiene aún la cifra de 116h (no crítico para versión cliente, pero recomendable revisar en próxima iteración).
 - Revisar si en la solución SLT completa hay referencias a distribución antigua de dashboards.
+- Automatizar chequeo de consistencia numérica (script futuro) para asegurar mantenimiento del rango ~76-85.
 
 ### Responsable
 Consultor BI (auditoría interna de consistencia documental).
