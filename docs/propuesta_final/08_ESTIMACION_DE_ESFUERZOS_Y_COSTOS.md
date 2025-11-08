@@ -194,9 +194,9 @@
 
 | Recurso | Horas | % del Total |
 |---------|-------|-------------|
-| **Consultor BI** | 961h | 60.6% |
-| **Funcional SAP** | 484h | 30.7% |
-| **Project Manager** | 145h | 8.7% |
+| **Consultor BI** | 961h | 60.4% |
+| **Funcional SAP** | 484h | 30.4% |
+| **Project Manager** | 145h | 9.1% |
 | **TOTAL ESFUERZO** | **1,590h** | **100%** |
 
 **Nota:** Totales según CSV del cronograma detallado de tareas.

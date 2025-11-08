@@ -16,26 +16,23 @@
 - ✅ **04_FASE_0_REVISION_ALCANCE_Y_FACTIBILIDAD.md** - Due diligence (6 semanas, 235h consolidado)
 - ✅ **05_FASE_1_CONSTRUCCION_DATA_LAKE.md** - Automatización SAP→BigQuery (22 semanas, 696h consolidado)
 - ✅ **06_FASE_2_MODELADO_Y_DASHBOARDS.md** - Power BI y reportería (14 semanas, 659h consolidado)
-- ⏳ **07_FASE_3_MODELOS_PREDICTIVOS.md** - Arquitectura ML (solo descripción)
+- ✅ **07_FASE_3_MODELOS_PREDICTIVOS.md** - Arquitectura ML (solo descripción)
 
 #### Parte 4: Planificación
 - ✅ **08_ESTIMACION_DE_ESFUERZOS_Y_COSTOS.md** - Estimación de esfuerzos detallada (1,590 horas)
 - ✅ **09_CRONOGRAMA_SEMANAL.md** - Planificación temporal 42 semanas (~10 meses)
 
 #### Parte 5: Cierre
-- ⏳ **10_REQUISITOS_TECNICOS_Y_ADMINISTRATIVOS.md** - Prerrequisitos
-- ⏳ **11_RIESGOS_Y_SUPUESTOS.md** - Análisis de riesgos
-- ⏳ **12_ENTREGABLES_Y_CONDICIONES_COMERCIALES.md** - Términos contractuales
+- ✅ **10_REQUISITOS_TECNICOS_Y_ADMINISTRATIVOS.md** - Prerrequisitos
+- ✅ **11_RIESGOS_Y_SUPUESTOS.md** - Análisis de riesgos
+- ✅ **12_ENTREGABLES_Y_CONDICIONES_COMERCIALES.md** - Términos contractuales
 
-### ⏳ DOCUMENTOS PENDIENTES DE CREACIÓN
+### 📌 Estado de documentos
 
-Los siguientes documentos se crearán a continuación:
-
-- (Ya consolidados) 06_FASE_2_MODELADO_Y_DASHBOARDS.md actualizado a 659h/14 semanas
-- 07_FASE_3_MODELOS_PREDICTIVOS.md (Descripción conceptual sin horas)
-- 10_REQUISITOS_TECNICOS_Y_ADMINISTRATIVOS.md
-- 11_RIESGOS_Y_SUPUESTOS.md
-- 12_ENTREGABLES_Y_CONDICIONES_COMERCIALES.md
+Toda la propuesta está completa y consistente. Cifras canónicas:
+- 18 transacciones SAP
+- 12 dashboards Power BI
+- 1,590 horas totales (42 semanas)
 
 ---
 
@@ -64,5 +61,5 @@ Los siguientes documentos se crearán a continuación:
 
 ---
 
-*Documento generado: 5 de noviembre de 2025*  
-*Versión: 1.0*
+*Documento actualizado: 8 de noviembre de 2025*  
+*Versión: 1.1*

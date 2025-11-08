@@ -8,7 +8,7 @@ A continuación se detalla la lista exhaustiva de todos los entregables del proy
 
 ## 12.2. Entregables por Fase
 
-### 📋 FASE 0: Revisión de Alcance y Factibilidad (Semanas 1-5)
+### 📋 FASE 0: Revisión de Alcance y Factibilidad (Semanas 0-6)
 
 #### Documento 1: Reporte de Auditoría Técnica
 **Descripción:** Análisis exhaustivo de la disponibilidad y calidad de datos en BigQuery y SAP.
@@ -23,7 +23,7 @@ A continuación se detalla la lista exhaustiva de todos los entregables del proy
 - ✅ Recomendaciones técnicas
 
 **Formato:** Documento PDF/DOCX (30-40 páginas)  
-**Fecha Entrega:** Semana 3 (27-ene-2026)  
+**Fecha Entrega:** Semana 3 (ver 09_CRONOGRAMA_SEMANAL.md)  
 **Aprobador:** Product Owner + TI Elanco
 
 ---
@@ -40,7 +40,7 @@ A continuación se detalla la lista exhaustiva de todos los entregables del proy
 - ✅ Propuesta de MVP (Minimum Viable Product) para Fase 1
 
 **Formato:** Excel/Google Sheets + Documento PDF  
-**Fecha Entrega:** Semana 4 (03-feb-2026)  
+**Fecha Entrega:** Semana 4 (ver 09_CRONOGRAMA_SEMANAL.md)  
 **Aprobador:** Product Owner + Stakeholders
 
 ---
@@ -58,7 +58,7 @@ A continuación se detalla la lista exhaustiva de todos los entregables del proy
 - ✅ Documentación de flujos de datos (ETL pipelines)
 
 **Formato:** Documento PDF + Archivos SQL  
-**Fecha Entrega:** Semana 4 (03-feb-2026)  
+**Fecha Entrega:** Semana 4 (ver 09_CRONOGRAMA_SEMANAL.md)  
 **Aprobador:** TI Elanco + Arquitecto Aunergia
 
 ---
@@ -75,7 +75,7 @@ A continuación se detalla la lista exhaustiva de todos los entregables del proy
 - ✅ Métricas de éxito (KPIs del proyecto)
 
 **Formato:** MS Project / Smartsheet / Excel + PDF  
-**Fecha Entrega:** Semana 5 (10-feb-2026)  
+**Fecha Entrega:** Semana 6 (ver 09_CRONOGRAMA_SEMANAL.md)  
 **Aprobador:** Product Owner + Project Manager (PM)
 
 ---
@@ -92,14 +92,14 @@ A continuación se detalla la lista exhaustiva de todos los entregables del proy
 - ✅ Si NO-GO: Alternativas y próximos pasos
 
 **Formato:** Presentación PowerPoint (15-20 slides) + Documento ejecutivo (5-7 páginas)  
-**Fecha Entrega:** 10-feb-2026 (Workshop con Product Owner y Stakeholders)  
+**Fecha Entrega:** Semana 6 (Workshop con Product Owner y Stakeholders; ver 09_CRONOGRAMA_SEMANAL.md)  
 **Aprobador:** Product Owner + Management Elanco
 
 **Criterio:** Si NO-GO → Proyecto se detiene. Aunergia cobra solo Fase 0 (116 horas).
 
 ---
 
-### 🏗️ FASE 1: Construcción del Repositorio (Data Lake) (Semanas 6-15)
+### 🏗️ FASE 1: Construcción del Repositorio (Data Lake) (Semanas 6-28)
 
 #### Entregable 6: Base de Datos BigQuery en Producción
 **Descripción:** Data Lake operativo en BigQuery con datos de las transacciones SAP priorizadas.
@@ -134,7 +134,7 @@ A continuación se detalla la lista exhaustiva de todos los entregables del proy
 - ✅ Trazabilidad: metadata de carga (fecha, fuente, usuario)
 
 **Formato:** Dataset BigQuery `casa_bi_prod` con tablas pobladas  
-**Fecha Entrega:** Semana 15 (2-mar-2026)  
+**Fecha Entrega:** Semana 28 (ver 09_CRONOGRAMA_SEMANAL.md)  
 **Aprobador:** Funcional SAP + TI Elanco (Validación técnica)
 
 ---
@@ -156,7 +156,7 @@ A continuación se detalla la lista exhaustiva de todos los entregables del proy
 - Dashboards: Refresh automático (según Power BI)
 
 **Formato:** Código versionado en Git + Documentación técnica  
-**Fecha Entrega:** Semana 15 (2-mar-2026)  
+**Fecha Entrega:** Semana 28 (ver 09_CRONOGRAMA_SEMANAL.md)  
 **Aprobador:** Consultor BI + TI Elanco
 
 ---
@@ -173,7 +173,7 @@ A continuación se detalla la lista exhaustiva de todos los entregables del proy
 - ✅ **Anexo:** Scripts SQL de ejemplo, queries útiles
 
 **Formato:** Documento PDF/DOCX (60-80 páginas) + Wiki/Confluence  
-**Fecha Entrega:** Semana 15 (2-mar-2026)  
+**Fecha Entrega:** Semana 28 (ver 09_CRONOGRAMA_SEMANAL.md)  
 **Aprobador:** TI Elanco
 
 ---
@@ -189,12 +189,12 @@ A continuación se detalla la lista exhaustiva de todos los entregables del proy
 - ✅ Casos de borde o excepciones documentadas
 
 **Formato:** Documento Excel/PDF (20-30 páginas)  
-**Fecha Entrega:** Semana 15 (2-mar-2026)  
+**Fecha Entrega:** Semana 28 (ver 09_CRONOGRAMA_SEMANAL.md)  
 **Aprobador:** Funcional SAP + Stakeholders
 
 ---
 
-### 📊 FASE 2: Modelado y Construcción de Dashboards (Semanas 16-22)
+### 📊 FASE 2: Modelado y Construcción de Dashboards (Semanas 28-42)
 
 #### Entregable 10: Dashboards Operativos en Power BI (12 dashboards)
 **Descripción:** Dashboards interactivos publicados en Power BI Service para usuarios finales.
@@ -270,7 +270,7 @@ A continuación se detalla la lista exhaustiva de todos los entregables del proy
 - ✅ Drill-down en gráficos clave
 
 **Formato:** Archivos .pbix + Publicados en Power BI Service (Workspace `CASA_BI_Production`)  
-**Fecha Entrega:** Semana 20 (13-abr-2026)  
+**Fecha Entrega:** Semana 35 (ver 09_CRONOGRAMA_SEMANAL.md)  
 **Aprobador:** Stakeholders (UAT) + Product Owner
 
 ---
@@ -287,7 +287,7 @@ A continuación se detalla la lista exhaustiva de todos los entregables del proy
 - ✅ Troubleshooting (¿Qué hacer si no veo datos?)
 
 **Formato:** Documento PDF/DOCX (30-40 páginas) con screenshots  
-**Fecha Entrega:** Semana 20 (13-abr-2026)  
+**Fecha Entrega:** Semana 35 (ver 09_CRONOGRAMA_SEMANAL.md)  
 **Aprobador:** Product Owner
 
 ---
@@ -314,7 +314,7 @@ A continuación se detalla la lista exhaustiva de todos los entregables del proy
   - Ejercicios prácticos con datos reales
 
 **Formato:** Documentos PDF + Presentación PowerPoint  
-**Fecha Entrega:** Semana 20 (13-abr-2026)  
+**Fecha Entrega:** Semanas 35-39 (ver 09_CRONOGRAMA_SEMANAL.md)  
 **Aprobador:** Product Owner + Funcional SAP
 
 ---
@@ -330,7 +330,7 @@ A continuación se detalla la lista exhaustiva de todos los entregables del proy
 - ✅ Acta de aceptación firmada por stakeholders
 
 **Formato:** Documento Excel + Acta de Aceptación PDF  
-**Fecha Entrega:** Semana 21 (20-abr-2026)  
+**Fecha Entrega:** Semana 39 (ver 09_CRONOGRAMA_SEMANAL.md)  
 **Aprobador:** Stakeholders + Product Owner (FIRMA)
 
 ---
@@ -346,7 +346,7 @@ A continuación se detalla la lista exhaustiva de todos los entregables del proy
 - ✅ Monitoreo de errores activo (alertas)
 - ✅ Comunicación a usuarios (email con enlaces y guías)
 
-**Fecha Go-Live:** 20-abr-2026 (Lunes - Inicio de semana laboral)  
+**Fecha Go-Live:** Semana 42 (ver 09_CRONOGRAMA_SEMANAL.md)  
 **Aprobador:** Product Owner + TI Elanco
 
 ---
@@ -366,7 +366,7 @@ A continuación se detalla la lista exhaustiva de todos los entregables del proy
 **Total:** 12 horas de capacitación incluidas en el proyecto
 
 **Formato:** Sesiones virtuales (Zoom/Teams) con grabación  
-**Fecha Entrega:** Semanas 19-21  
+**Fecha Entrega:** Semanas 35-39  
 **Responsable:** Consultor BI + Funcional SAP
 
 ---
@@ -399,7 +399,7 @@ A continuación se detalla la lista exhaustiva de todos los entregables del proy
 **IMPORTANTE:** Este entregable es **descriptivo/conceptual solamente**. NO incluye implementación de código, modelos entrenados, ni despliegue en producción.
 
 **Formato:** Documento PDF/DOCX (40-50 páginas)  
-**Fecha Entrega:** Semana 21 (20-abr-2026)  
+**Fecha Entrega:** Semana 39 (ver 09_CRONOGRAMA_SEMANAL.md)  
 **Aprobador:** Product Owner + Stakeholders
 
 ---
@@ -494,7 +494,7 @@ A continuación se detalla la lista exhaustiva de todos los entregables del proy
 
 | Fase | Descripción | Horas |
 |------|-------------|-------|
-| **Fase 0** | Revisión de Alcance y Factibilidad (4-5 semanas) | 116h |
+| **Fase 0** | Revisión de Alcance y Factibilidad (6 semanas) | 235h |
 | **Fase 1** | Construcción de Data Lake (22 semanas) | 696h |
 | **Fase 2** | Modelado y Dashboards (14 semanas) | 659h |
 | **Fase 3** | Modelos Predictivos (solo descripción) | Incluido en Fase 2 |
@@ -509,10 +509,10 @@ A continuación se detalla la lista exhaustiva de todos los entregables del proy
 | Hito | Fecha Estimada | % del Esfuerzo | Horas | Condición de Aceptación |
 |------|----------------|----------------|-------|-------------------------|
 | **Hito 1: Inicio del Proyecto** | 6-ene-2026 | - | - | Contrato firmado, Kick-off realizado |
-| **Hito 2: Entrega Go/No-Go (Fase 0)** | 10-feb-2026 | 15% | 235h | Aprobación de Go/No-Go |
-| **Hito 3: Data Lake Completado (Fase 1)** | 14-jun-2026 | 44% | 696h | Aprobación técnica Data Lake |
-| **Hito 4: 12 Dashboards UAT (Fase 2)** | 20-sep-2026 | 41% | 659h | Aprobación UAT por stakeholders |
-| **Hito 5: Go-Live y Cierre** | 20-sep-2026 | - | - | Go-Live exitoso + Cierre |
+| **Hito 2: Entrega Go/No-Go (Fase 0)** | 17-feb-2026 | 15% | 235h | Aprobación de Go/No-Go |
+| **Hito 3: Data Lake Completado (Fase 1)** | 19-jul-2026 | 44% | 696h | Aprobación técnica Data Lake |
+| **Hito 4: 12 Dashboards UAT (Fase 2)** | 30-sep-2026 | 41% | 659h | Aprobación UAT por stakeholders |
+| **Hito 5: Go-Live y Cierre** | 14-oct-2026 | - | - | Go-Live exitoso + Cierre |
 | **TOTAL** | | **100%** | **1,590h** | |
 
 **Nota sobre Condiciones Comerciales:**

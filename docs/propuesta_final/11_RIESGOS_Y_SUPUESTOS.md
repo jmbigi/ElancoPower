@@ -860,7 +860,7 @@ Los siguientes supuestos son críticos para la viabilidad del proyecto. Si algun
 | **S-P-02** | Licencias Power BI Pro (8 usuarios) ya están adquiridas y disponibles | 🔴 CRÍTICO | TI Elanco |
 | **S-P-03** | Recurso SAP Basis estará disponible on-demand para configuración de SLT y administración SAP | 🔴 CRÍTICO | TI Elanco |
 | **S-P-04** | No se requieren herramientas de terceros adicionales (ej. Fivetran, Tableau) | 🟢 MEDIO | Aunergia |
-| **S-P-05** | El esfuerzo estimado se mantiene constante durante el proyecto (24 semanas) | 🟢 MEDIO | Aunergia Management |
+| **S-P-05** | El esfuerzo estimado se mantiene constante durante el proyecto (42 semanas comprimidas) | 🟢 MEDIO | Aunergia Management |
 
 ---
 
@@ -927,7 +927,7 @@ Al final de la **Fase 0** (semana 5), se evaluará si continuar con el proyecto:
 ### ⚠️ Criterios GO CON AJUSTES
 
 - ⚠️ 8-11 transacciones viables → Reducir alcance, ajustar esfuerzos
-- ⚠️ Complejidad mayor a la esperada → Extender cronograma (20-24 semanas) o ajustar recursos
+- ⚠️ Complejidad mayor a la esperada → Extender cronograma (hasta +10 semanas sobre 42) o ajustar recursos
 - ⚠️ Riesgos ALTO manejables → Implementar planes de contingencia
 
 ---

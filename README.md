@@ -110,14 +110,9 @@ ElancoPower/
 | checklist_permisos_y_licencias.md | Estado de accesos SAP/BigQuery/Power BI |
 | transacciones_sap_backlog.md | Backlog priorizado de transacciones |
 
-### 📚 Archivos Históricos
+### 📚 Archivos Históricos (removidos)
 
-**Carpeta:** `docs/historicos/`
-
-| Documento | Estado |
-|-----------|--------|
-| presupuesto_actualizado.md | Propuesta Aunergia completa (USD 48,000) - Referencia |
-| confirmacion_necesaria.txt | Borrador histórico (basado en USD 48k) |
+Los archivos históricos previamente referenciados (`presupuesto_actualizado.md`, `confirmacion_necesaria.txt`) ya no están presentes en el repositorio. Se eliminan referencias para mantener consistencia. Si se requiere recuperarlos, crear la carpeta `docs/historicos/` y restaurar su contenido.
 
 ---
 
@@ -129,7 +124,7 @@ ElancoPower/
 | **Propuesta Integral Data Lake** | `docs/propuesta_final/` | **1,590 horas** | Equipo Aunergia/Elanco | ✅ Consolidado |
 | **Personal JM Bigi** | `docs/entregables/PRESUPUESTO_REAL_...` | **354 horas** | Lucía/Linda/Elanco | ✅ Histórico |
 | **Resumen Ejecutivo** | `docs/entregables/RESUMEN_EJECUTIVO_...` | 354 horas (resumen) | Lucía (formato corto) | ✅ Completo |
-| Propuesta Aunergia (histórica) | `docs/historicos/presupuesto_actualizado.md` | USD 48,000 | Referencia histórica | 📚 Histórico |
+| Propuesta Aunergia (histórica) | (archivo removido) | USD 48,000 | Referencia histórica | 📚 Fuera del repo |
 
 ---
 
@@ -238,19 +233,19 @@ ME2L, MM60, MB59, ZVEL015, ME23N, FBL1N, FBL5N, MB5B, XK03, XD03
 
 ---
 
-## 📅 CRONOGRAMA PROPUESTO (unificado – este reemplaza cronogramas abreviados previos)
+## 📅 CRONOGRAMA PROPUESTO (alineado a `docs/propuesta_final/09_CRONOGRAMA_SEMANAL.md`)
 
 | Hito | Fecha estimada | Responsable | Estado |
 |------|----------------|-------------|--------|
 | Aprobación propuesta consolidada | Nov-2025 | Project Manager | ✅ Actualizado |
-| Kick-off Fase 0 (Semana 1) | 1-dic-2025 | Funcional SAP + Consultor BI | 🗓️ Programado |
-| Go/No-Go (Fin Fase 0, Semana 6) | 10-ene-2026 | Equipo completo | 🗓️ Programado |
-| Fin Fase 1 (Semana 28) | 21-jun-2026 | Equipo técnico | 🗓️ Estimado |
-| Fin Fase 2 / Go-Live dashboards (Semana 42) | 20-sep-2026 | Equipo completo | 🗓️ Estimado |
-| Soporte post go-live (30 días) | Sep-Oct 2026 | Consultor BI + Funcional SAP | 🗓️ Planificado |
+| Kick-off Fase 0 (Semana 0) | 6-ene-2026 | Funcional SAP + Consultor BI | 🗓️ Programado |
+| Go/No-Go (Fin Fase 0, Semana 6) | 17-feb-2026 | Equipo completo | 🗓️ Programado |
+| Fin Fase 1 (Semana 28) | 19-jul-2026 | Equipo técnico | 🗓️ Estimado |
+| Fin Fase 2 / Go-Live dashboards (Semana 42) | 14-oct-2026 | Equipo completo | 🗓️ Estimado |
+| Soporte post go-live (30 días) | Oct-Nov 2026 | Consultor BI + Funcional SAP | 🗓️ Planificado |
 
 **Duración total:** 42 semanas (~10 meses).  
-**Restricción:** Consultor BI trabaja máximo 6h/día (30h/semana) – ya contemplado en las 1,590h.
+**Restricción:** Consultor BI trabaja máximo 6h/día (30h/semana) – contemplado en las 1,590h.
 
 ## 🔄 Consistencia de Datos (resumen rápido – fuentes únicas y prevalentes)
 
