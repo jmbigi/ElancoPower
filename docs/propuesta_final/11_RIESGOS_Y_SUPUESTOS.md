@@ -817,7 +817,7 @@ Los siguientes supuestos son críticos para la viabilidad del proyecto. Si algun
 | **S-T-01** | Google BigQuery está disponible y configurado con dataset CASA | 🔴 CRÍTICO | TI Global Elanco |
 | **S-T-02** | Mínimo 12 de 18 transacciones SAP tienen tablas disponibles en BigQuery | 🔴 CRÍTICO | TI Global + Aunergia (Fase 0) |
 | **S-T-03** | Permisos SAP se otorgan en máximo 3 semanas (Ticket SAP-48219) | 🔴 CRÍTICO | TI Global Elanco |
-| **S-T-04** | SAP ECC está estable (no hay plan de migración a S/4HANA en 2025-2026) | 🟡 ALTO | TI Elanco |
+| **S-T-04** | SAP S/4HANA está estable (no hay plan de migración a S/4HANA en 2025-2026) | 🟡 ALTO | TI Elanco |
 | **S-T-05** | Conectividad SAP ↔ BigQuery es técnicamente viable | 🟡 ALTO | TI Global |
 | **S-T-06** | Power BI Pro puede conectarse a BigQuery vía conector nativo | 🟢 MEDIO | Aunergia |
 | **S-T-07** | Datos históricos de mínimo 24 meses están disponibles en SAP | 🟢 MEDIO | Funcional SAP + Stakeholders |

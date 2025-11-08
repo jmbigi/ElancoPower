@@ -18,7 +18,7 @@ Estos requisitos **DEBEN** estar resueltos antes del kick-off:
 
 ## 10.2. Requisitos de Accesos y Permisos
 
-### 10.2.1. Accesos SAP ECC
+### 10.2.1. Accesos SAP S/4HANA
 
 **Power User Primario: Funcional SAP**
 
@@ -135,7 +135,7 @@ Estos requisitos **DEBEN** estar resueltos antes del kick-off:
 
 ```
 ┌────────────┐         ┌─────────────────┐         ┌──────────────┐
-│  SAP ECC   │────────▶│  SAP SLT Server │────────▶│  BigQuery    │
+│  SAP S/4HANA   │────────▶│  SAP SLT Server │────────▶│  BigQuery    │
 │  (On-prem) │  RFC/   │  (Replicación   │  HTTPS  │  (GCP Cloud) │
 │            │  DB Log │   en tiempo real)│        │              │
 └────────────┘         └─────────────────┘         └──────────────┘

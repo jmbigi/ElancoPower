@@ -4,7 +4,7 @@
 
 ## 5.1. Objetivo de la Fase
 
-**Automatizar la extracción de datos desde SAP ECC hacia BigQuery**, creando un repositorio centralizado (Data Lake) con datos históricos de las 18 transacciones priorizadas, implementando controles de calidad y estableciendo procesos de sincronización periódica.
+**Automatizar la extracción de datos desde SAP S/4HANA hacia BigQuery**, creando un repositorio centralizado (Data Lake) con datos históricos de las 18 transacciones priorizadas, implementando controles de calidad y estableciendo procesos de sincronización periódica.
 
 ---
 
@@ -24,7 +24,7 @@
 ### 5.3.1. Modelo de Zonas (Layers)
 
 ```
-SAP ECC                    BIGQUERY DATASET: CASA
+SAP S/4HANA                    BIGQUERY DATASET: CASA
 ┌──────────────┐          ┌─────────────────────────────────────┐
 │              │          │                                     │
 │  Módulos:    │  Extract │  ┌────────────────────────────┐    │
@@ -129,14 +129,14 @@ SAP ECC                    BIGQUERY DATASET: CASA
 | 1 | Creación de datasets por zona (RAW, PROCESSED, CURATED) | 2h | Datasets configurados |
 | 2 | Definición de historización y particionamiento | 2h | Esquema de particiones y clustering documentado |
 | 3 | Configuración de particionamiento y clustering | 4h | Tablas optimizadas |
-| 4 | Setup de conectores SAP ECC ↔ BigQuery | 4h | Conectores funcionales |
+| 4 | Setup de conectores SAP S/4HANA ↔ BigQuery | 4h | Conectores funcionales |
 | 5 | Configuración de service accounts y permisos | 2h | IAM roles asignados |
 | 6 | Setup de monitoreo de costos | 2h | Dashboard de costos activo |
 
 #### Conectores SAP ↔ BigQuery
 
 **Método de Replicación:**
-- **SAP SLT (Landscape Transformation Server):** Se utilizará como la solución principal para la replicación de datos en tiempo real desde SAP ECC a Google BigQuery. SLT captura los cambios en las tablas de origen de SAP a nivel de base de datos y los replica de manera eficiente en el destino.
+- **SAP SLT (Landscape Transformation Server):** Se utilizará como la solución principal para la replicación de datos en tiempo real desde SAP S/4HANA a Google BigQuery. SLT captura los cambios en las tablas de origen de SAP a nivel de base de datos y los replica de manera eficiente en el destino.
 
 **Ventajas de SLT:**
 - **Replicación en Tiempo Real:** Permite tener datos actualizados en BigQuery con una latencia mínima.

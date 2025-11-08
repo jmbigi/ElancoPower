@@ -128,7 +128,7 @@ Inicio efectivo: 6-ene-2026 (considera feriados y disponibilidad inicial)
 - **Horas totales:** 65h (Consultor BI: 42h, Funcional SAP: 20h, Project Manager: 3h)
 - **Hito:** ✅ MM Inventory completo
 
-### Semanas 17-20: Pipeline ZLEL008 (custom MRP)
+### Semanas 17-20: Pipeline ZLEL008 (custom Inventario consolidado)
 
 **Transacción custom compleja**
 **Z-tables** suministradas por SAP Functional

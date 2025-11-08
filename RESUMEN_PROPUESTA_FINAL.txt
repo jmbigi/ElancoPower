@@ -21,6 +21,16 @@ El proyecto abarca 18 transacciones SAP prioritarias distribuidas en cuatro mód
 Se desarrollarán 12 dashboards ejecutivos en Power BI que cubrirán áreas clave como Financiero General, Ventas, Inventario, OPEX, Supply Chain, Compras, Rentabilidad, Cuentas por Pagar, Cuentas por Cobrar, Controlling, y un Dashboard Ejecutivo consolidado. Todos los dashboards tendrán seguridad a nivel de fila (RLS) configurada por país y área, además de actualización automatizada programada.
 
 
+PIPELINE TECNOLÓGICO
+
+La solución se construirá sobre un stack tecnológico moderno y robusto, confirmado por las áreas de Finanzas y Operaciones de Elanco.
+- **Fuente de Datos (ERP):** SAP S/4HANA, utilizando los módulos de Finanzas (FI), Controlling (CO), Ventas y Distribución (SD) y Gestión de Materiales (MM).
+- **Servidor de Replicación:** Se usará SAP Landscape Transformation Server (SLT) para la replicación de datos en tiempo real desde SAP.
+- **Data Lake:** Google BigQuery será el repositorio centralizado de datos, utilizando el dataset `CASA`.
+- **Visualización (BI):** Microsoft Power BI para la creación de los 12 dashboards interactivos. Elanco ya ha adquirido 8 licencias Pro.
+- **Herramientas de Soporte:** El proyecto se apoyará en BigQuery Studio para consultas.
+
+
 FASES DEL PROYECTO
 
 El proyecto se divide en tres fases que suman 42 semanas. La Fase 0 de Revisión de Alcance y Factibilidad durará 6 semanas. En esta etapa se realizará una auditoría técnica completa, se validará la disponibilidad de tablas SAP en BigQuery, se priorizarán las 18 transacciones con stakeholders, se elaborará un plan detallado, y se realizará un POC técnico end-to-end. Al finalizar habrá una reunión crítica de Go/No-Go donde se decidirá si continuar con el proyecto.

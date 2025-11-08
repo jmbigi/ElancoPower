@@ -95,7 +95,7 @@ A continuación se detalla la lista exhaustiva de todos los entregables del proy
 **Fecha Entrega:** Semana 6 (Workshop con Product Owner y Stakeholders; ver 09_CRONOGRAMA_SEMANAL.md)  
 **Aprobador:** Product Owner + Management Elanco
 
-**Criterio:** Si NO-GO → Proyecto se detiene. Aunergia cobra solo Fase 0 (116 horas).
+**Criterio:** Si NO-GO → Proyecto se detiene. Aunergia cobra solo Fase 0 (235 horas). (Corrección: el esfuerzo real de Fase 0 es 235h, ver 08_ESTIMACION_DE_ESFUERZOS_Y_COSTOS.md)
 
 ---
 
@@ -124,13 +124,14 @@ A continuación se detalla la lista exhaustiva de todos los entregables del proy
 
 **Cobertura Mínima:**
 - ✅ Mínimo **12 de 18 transacciones** implementadas
-- ✅ Prioridad 1 (TOP 6): 100% completadas
-- ✅ Prioridad 2 (MID 6): 80% completadas
-- ✅ Prioridad 3 (LOW 6): Best-effort
+- ✅ Prioridad 1 (4): 100% completadas
+- ✅ Prioridad 2 (4): 100% completadas (criterio ajustado por compresión de cronograma)
+- ✅ Pendientes de clasificar (10): al menos 4 completadas para alcanzar 12 totales
 
 **Calidad de Datos:**
 - ✅ Data Quality checks automáticos (validaciones SQL)
 - ✅ Completitud > 95% en campos críticos
+- ✅ Reconciliación SAP ↔ BigQuery > 99% en métricas financieras clave (FAGLL03, KSB1, VA05)
 - ✅ Trazabilidad: metadata de carga (fecha, fuente, usuario)
 
 **Formato:** Dataset BigQuery `casa_bi_prod` con tablas pobladas  
@@ -358,10 +359,10 @@ A continuación se detalla la lista exhaustiva de todos los entregables del proy
 
 | Audiencia | Duración | Contenido | Fecha |
 |-----------|----------|-----------|-------|
-| **Power Users (2 personas)** | 4 horas | Uso avanzado dashboards, troubleshooting, validación datos | Semana 19 |
-| **Usuarios Finanzas (4-6 personas)** | 3 horas | Navegación básica, dashboards financieros, exportación | Semana 20 |
-| **Usuarios Supply (2-4 personas)** | 3 horas | Navegación básica, dashboards supply/inventarios | Semana 20 |
-| **Sesión de Refuerzo (todos)** | 2 horas | Q&A, casos avanzados, tips & tricks | Semana 21 |
+| **Power Users (2 personas)** | 4 horas | Uso avanzado dashboards, troubleshooting, validación datos | Semanas 35-39 |
+| **Usuarios Finanzas (4-6 personas)** | 3 horas | Navegación básica, dashboards financieros, exportación | Semanas 35-39 |
+| **Usuarios Supply (2-4 personas)** | 3 horas | Navegación básica, dashboards supply/inventarios | Semanas 35-39 |
+| **Sesión de Refuerzo (todos)** | 2 horas | Q&A, casos avanzados, tips & tricks | Semanas 35-39 |
 
 **Total:** 12 horas de capacitación incluidas en el proyecto
 
@@ -468,7 +469,7 @@ A continuación se detalla la lista exhaustiva de todos los entregables del proy
  
 
 **Formato:** Documento PDF (15-20 páginas) + Presentación ejecutiva (10 slides)  
-**Fecha Entrega:** 27-abr-2026 (1 semana post go-live)  
+**Fecha Entrega:** 21-oct-2026 (1 semana post go-live)  
 **Aprobador:** Product Owner + Management Elanco
 
 ---
@@ -604,7 +605,7 @@ A continuación se detalla la lista exhaustiva de todos los entregables del proy
 
 ✅ **Calidad de Entregables:**
 - Dashboards funcionales y sin errores críticos (bloqueantes)
-- Datos validados con precisión > 95% vs. SAP
+- Datos validados con precisión > 99% vs. SAP
 - Documentación completa y comprensible
 - Código limpio y documentado (buenas prácticas)
 
@@ -713,7 +714,7 @@ A continuación se detalla la lista exhaustiva de todos los entregables del proy
 
 **Terminación por NO-GO (Fase 0):**
 - Si al final de Fase 0 se decide NO-GO, el proyecto se detiene
-- Se factura solo el esfuerzo de Fase 0 (116 horas)
+- Se factura solo el esfuerzo de Fase 0 (235 horas)
 - No hay penalizaciones para ninguna parte
 
 ---

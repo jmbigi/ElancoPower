@@ -54,10 +54,10 @@ TRANSACCIÓN SAP (UI)          TABLAS SAP (Datos)         REPLICACIÓN SLT
 |--------|-------------|---------------|
 | **FI** | Financial Accounting | 6 transacciones |
 | **CO** | Controlling | 2 transacciones |
-| **SD** | Sales & Distribution | 2 transacciones |
+| **SD** | Sales & Distribution | 1 transacción |
 | **MM** | Materials Management | 5 transacciones |
 | **Z-Custom** | Transacciones customizadas | 2 transacciones |
-| **MD** | Master Data | 1 transacción |
+| **MD** | Master Data | 2 transacciones |
 
 ### Áreas de Negocio Involucradas
 

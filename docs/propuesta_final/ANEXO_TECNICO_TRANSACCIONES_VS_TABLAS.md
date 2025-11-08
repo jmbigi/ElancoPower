@@ -122,7 +122,7 @@ VBAK (Cabecera Orden)
 
 ```
 ┌──────────────────────────────────────────────────────┐
-│              SAP ECC (Sistema Fuente)                │
+│              SAP S/4HANA (Sistema Fuente)                │
 │                                                      │
 │  Transacción VA05  ───▶  Tablas: VBAK, VBAP, VBEP  │
 │  Transacción KSB1  ───▶  Tablas: COBK, COEP, AUFK  │
@@ -409,7 +409,7 @@ Luego recreas el informe en Power BI usando esos datos.
 
 ### P5: ¿Cuántas tablas SAP existen en total?
 
-**R:** SAP ECC tiene >100,000 tablas. Este proyecto solo replica las ~70-90 necesarias para las 18 transacciones priorizadas.
+**R:** SAP S/4HANA tiene >100,000 tablas. Este proyecto solo replica las ~70-90 necesarias para las 18 transacciones priorizadas.
 
 ---
 

@@ -26,7 +26,7 @@ Esta operación regional maneja volúmenes significativos de transacciones comer
 
 Los equipos de **Finanzas**, **Supply Chain** y otras áreas de negocio actualmente realizan procesos manuales intensivos para obtener información de análisis:
 
-#### Extracción Manual desde SAP ECC
+#### Extracción Manual desde SAP S/4HANA
 
 - Los usuarios acceden diariamente a **múltiples transacciones SAP** (VA05, ZLEL008, KSB1, FAGLL03, KE24, FB03, entre otras)
 - Descargan reportes individuales de cada transacción
@@ -131,7 +131,7 @@ Elanco ha implementado **Google BigQuery** como plataforma de Data Lake corporat
 - **Plataforma:** Google Cloud Platform (GCP)
 - **Data Lake:** Google BigQuery
 - **Dataset corporativo:** ERP Enterprise Data Product
-- **Datos SAP:** Replicados desde SAP ECC mediante conectores certificados
+- **Datos SAP:** Replicados desde SAP S/4HANA mediante conectores certificados
 - **Herramientas complementarias:**
   - BigQuery Studio (entorno de desarrollo SQL)
   - ODBC Simba (conectividad con herramientas BI)
@@ -228,8 +228,8 @@ Basado en el documento **"Que_se_va_a_usar.txt"** (actualizado 10-oct-2025), ali
 
 ### ✅ Tecnologías Confirmadas
 
-#### 1. **SAP ECC** (Sistema Fuente)
-- Versión: SAP ECC 6.0 (por confirmar versión exacta)
+#### 1. **SAP S/4HANA** (Sistema Fuente)
+- Versión: SAP S/4HANA 6.0 (por confirmar versión exacta)
 - Power users con roles: MM, SD, FI, CO
 - Módulos involucrados:
   - **MM** - Materials Management (compras, inventarios)

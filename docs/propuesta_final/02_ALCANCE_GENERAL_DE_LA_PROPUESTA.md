@@ -4,7 +4,7 @@
 
 ### 2.1.1. Objetivo General
 
-Implementar una **solución integral de centralización de datos de análisis** que permita a Elanco Animal Health (Operación CASA) automatizar la extracción, consolidación y análisis de información empresarial desde SAP ECC, utilizando Google BigQuery como Data Lake central y Microsoft Power BI como plataforma de reportería y analítica.
+Implementar una **solución integral de centralización de datos de análisis** que permita a Elanco Animal Health (Operación CASA) automatizar la extracción, consolidación y análisis de información empresarial desde SAP S/4HANA, utilizando Google BigQuery como Data Lake central y Microsoft Power BI como plataforma de reportería y analítica.
 
 ### 2.1.2. Objetivos Específicos
 
@@ -40,7 +40,7 @@ Implementar una **solución integral de centralización de datos de análisis** 
 ### 2.2.1. Incluido en el Alcance
 
 #### ✅ Sistemas Fuente
-- **SAP ECC:** Datos de 18 transacciones priorizadas (ver sección 3)
+- **SAP S/4HANA:** Datos de 18 transacciones priorizadas (ver sección 3)
   - *Nota técnica:* Se replicarán las **tablas SAP subyacentes** (estimado 70-90 tablas) asociadas a estas transacciones
   - Las transacciones SAP son interfaces de usuario; lo que se replica mediante SLT son las tablas de base de datos
 - **Módulos SAP:** MM, SD, FI, CO
@@ -51,7 +51,7 @@ Implementar una **solución integral de centralización de datos de análisis** 
 #### ✅ Infraestructura de Datos
 - **Data Lake:** Google BigQuery (dataset CASA)
 - **Arquitectura:** Zonas RAW → PROCESSED → CURATED
-- **Conectores:** **SAP SLT (Landscape Transformation Server)** para replicación en tiempo real SAP ECC ↔ BigQuery
+- **Conectores:** **SAP SLT (Landscape Transformation Server)** para replicación en tiempo real SAP S/4HANA ↔ BigQuery
   - *Nota: La instalación y configuración de SLT es responsabilidad del cliente (Elanco) con soporte del equipo SAP Basis*
 - **Procesamiento:** Pipelines ETL/ELT con BigQuery SQL
 - **Monitoreo:** Logs de ejecución, alertas de errores, dashboards operativos
@@ -106,7 +106,7 @@ Implementar una **solución integral de centralización de datos de análisis** 
 ### 2.2.2. Excluido del Alcance
 
 #### ❌ Sistemas Adicionales (Fuera del Alcance Inicial)
-- Datos de sistemas diferentes a SAP ECC
+- Datos de sistemas diferentes a SAP S/4HANA
 - Integración con CRM, HRIS u otros sistemas transaccionales
 - Datos de redes sociales o fuentes externas
 - Datos de sensores IoT o dispositivos móviles
@@ -314,7 +314,7 @@ El proyecto se divide en **4 fases** con objetivos específicos:
 
 ### 2.6.3. Restricciones Tecnológicas
 
-- **Plataformas mandatorias:** SAP ECC, BigQuery, Power BI (definidas por Elanco)
+- **Plataformas mandatorias:** SAP S/4HANA, BigQuery, Power BI (definidas por Elanco)
 - **No se pueden usar herramientas de terceros** sin aprobación de TI Global
 - **Cumplimiento de políticas corporativas** de seguridad y privacidad de datos
 - **Restricciones de red:** Acceso a BigQuery desde red corporativa Elanco

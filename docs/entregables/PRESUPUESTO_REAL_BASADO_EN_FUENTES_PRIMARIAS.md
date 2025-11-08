@@ -55,7 +55,7 @@ Este presupuesto se basa **exclusivamente** en:
 ### 1.3. Herramientas confirmadas (Que_se_va_a_usar.txt, 10-oct-2025)
 
 ✅ **Confirmado por Finanzas y Operaciones:**
-1. SAP ECC (power users con roles MM, SD, FI, CO)
+1. SAP S/4HANA (power users con roles MM, SD, FI, CO)
 2. Google BigQuery (dataset CASA y ERP Enterprise Data Product)
 3. Microsoft Power BI (workspaces corporativos y RLS aplicado)
 4. Herramientas de apoyo: BigQuery Studio, ODBC Simba, Confluence/SharePoint
@@ -285,7 +285,7 @@ Alcance tentativo (solo referencia):
 
 **Perfil:**
 - Desarrollador BigQuery + Power BI
-- Experiencia en proyectos SAP ECC
+- Experiencia en proyectos SAP S/4HANA
 - Conocimiento de arquitecturas Data Lake
 - Disponibilidad part-time
 

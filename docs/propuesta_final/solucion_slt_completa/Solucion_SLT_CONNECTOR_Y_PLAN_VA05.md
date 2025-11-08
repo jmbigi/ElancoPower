@@ -457,7 +457,7 @@ echo "  Password inicial: manage"
       "internalHost": "sap-prod.elanco.local",
       "internalPort": 3300,
       "protocol": "RFC",
-      "description": "SAP ECC Production System"
+      "description": "SAP S/4HANA Production System"
     }
   ]
 }

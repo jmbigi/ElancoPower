@@ -1,7 +1,7 @@
 Actualización 10-oct-2025 – alineado con Finanzas y Operaciones.
 
 Qué se va a usar (plataformas confirmadas):
-1. SAP ECC (power users con roles MM, SD, FI, CO).
+1. SAP S/4HANA (power users con roles MM, SD, FI, CO).
 2. Google BigQuery (dataset CASA y ERP Enterprise Data Product).
 3. Microsoft Power BI (workspaces corporativos y RLS aplicado).
 

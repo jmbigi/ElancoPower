@@ -22,7 +22,7 @@
 | **Duración estimada** | 14 semanas |
 | **Fase del proyecto** | Semanas 28-42 (ver `09_CRONOGRAMA_SEMANAL.md`) |
 | **Horas totales** | 659 horas |
-| **Equipo** | Consultor BI (416h) · Funcional SAP (104h) · Project Manager (61h) |
+| **Equipo** | Consultor BI (420h) · Funcional SAP (166h) · Project Manager (73h) |
 | **Restricción** | Consultor BI trabaja máximo 6h/día = 30h/semana |
 
 ---
@@ -706,7 +706,6 @@ RETURN
 10. Dashboard de Cuentas por Cobrar
 11. Dashboard de Controlling (CO)
 12. Dashboard Estadístico Regional
-6. Dashboard Supply Chain (opcional)
 
 ✅ Row-Level Security configurado  
 ✅ Scheduled refresh programado (diario/semanal)

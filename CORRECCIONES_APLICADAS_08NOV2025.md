@@ -1,3 +1,38 @@
+## Correcciones de Consistencia Aplicadas el 08-nov-2025
+
+### Objetivo
+Unificar cifras y criterios entre documentos de `docs/propuesta_final` y eliminar discrepancias detectadas durante auditoría interna.
+
+### Resumen de Cambios
+1. `06_FASE_2_MODELADO_Y_DASHBOARDS.md`
+  - Actualizada la distribución de horas por rol (Consultor BI 420h, Funcional SAP 166h, PM 73h) para que coincida con `08_ESTIMACION_DE_ESFUERZOS_Y_COSTOS.md` (total 659h).
+  - Eliminada línea duplicada residual de dashboard.
+2. `12_ENTREGABLES_Y_CONDICIONES_COMERCIALES.md`
+  - Corregido esfuerzo de Fase 0 en cláusulas NO-GO (de 116h → 235h).
+  - Ajustada cobertura mínima: Prioridad 1 (4), Prioridad 2 (4), pendientes (10) con criterio ≥12 transacciones.
+  - Añadido requisito de reconciliación >99% para métricas clave (FAGLL03, KSB1, VA05).
+  - Reprogramada fecha de documento de cierre post go-live (21-oct-2026).
+  - Reubicadas fechas de sesiones de capacitación a semanas 35-39 para alinear con cronograma real.
+  - Actualizada garantía de calidad (>99% datos) y horas en terminación NO-GO.
+3. `03_TRANSACCIONES_SAP_INCLUIDAS.md`
+  - Corregida tabla de distribución por módulo: SD=1 transacción; MD=2 transacciones.
+4. Este archivo creado para trazabilidad de cambios.
+
+### Criterios de Verificación Post-Cambio
+- Totales de horas por fase y rol coinciden con documento canónico (`08_ESTIMACION_DE_ESFUERZOS_Y_COSTOS.md`).
+- Cobertura mínima ahora refleja realmente 18 transacciones (4+4+10).
+- No quedan referencias a “116 horas” de Fase 0 en documentos vigentes.
+- Reconciliación >99% alineada con riesgos y supuestos (sección 11).
+
+### Pendientes (No Cambiados)
+- Validar si algún otro documento externo (p.e. `RESUMEN_PROPUESTA_FINAL.txt`) contiene aún la cifra de 116h (no crítico para versión cliente, pero recomendable revisar en próxima iteración).
+- Revisar si en la solución SLT completa hay referencias a distribución antigua de dashboards.
+
+### Responsable
+Consultor BI (auditoría interna de consistencia documental).
+
+---
+*Fin del registro de correcciones 08-nov-2025.*
 # CORRECCIONES APLICADAS - 8 de Noviembre de 2025
 
 ## ✅ RESUMEN DE CORRECCIONES

@@ -44,7 +44,7 @@ Operación Centroamérica y Sudamérica (CASA)
 
 **Elanco Animal Health** es una compañía global líder en salud animal, con operaciones en Centroamérica y Sudamérica (CASA) que abarcan más de 10 países. Actualmente, los equipos de Finanzas, Supply Chain y otras áreas de negocio enfrentan desafíos significativos en la gestión y análisis de información empresarial:
 
-- **Procesos manuales intensivos** de extracción de datos desde SAP ECC
+- **Procesos manuales intensivos** de extracción de datos desde SAP S/4HANA
 - **Consolidación manual en Excel** de información de múltiples países
 - **Falta de centralización** que impide análisis integrados y toma de decisiones ágil
 - **Reportería desconectada** en Power BI sobre datos fragmentados

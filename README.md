@@ -148,7 +148,7 @@ Los archivos históricos previamente referenciados (`presupuesto_actualizado.md`
 ## 🎯 RESUMEN EJECUTIVO
 
 ### Objetivo del Proyecto:
-Automatizar la extracción de datos desde **SAP ECC** y centralizarlos en **Google BigQuery** para habilitar analítica corporativa con **Microsoft Power BI**.
+Automatizar la extracción de datos desde **SAP S/4HANA** y centralizarlos en **Google BigQuery** para habilitar analítica corporativa con **Microsoft Power BI**.
 
 ### Fases del Proyecto (cronograma unificado 42 semanas):
 1. **Fase 0 (6 sem):** Revisión de alcance, factibilidad y piloto (Due Diligence + Go/No-Go)
@@ -176,7 +176,7 @@ Nota: Bloque histórico de presupuesto personal reducido (10-oct-2025). El esfue
 
 | Componente | Herramienta | Estado |
 |------------|-------------|--------|
-| **ERP** | SAP ECC (roles MM, SD, FI, CO) | ✅ Confirmado |
+| **ERP** | SAP S/4HANA (roles MM, SD, FI, CO) | ✅ Confirmado |
 | **Data Lake** | Google BigQuery (dataset CASA) | ✅ Confirmado |
 | **BI** | Microsoft Power BI | ✅ 8 licencias Pro adquiridas |
 | **Herramientas** | BigQuery Studio, ODBC Simba, Confluence | ✅ Disponibles |
