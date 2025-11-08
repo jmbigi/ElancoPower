@@ -18,11 +18,10 @@
 
 | Parámetro | Valor |
 |-----------|-------|
-| **Duración estimada** | 5 semanas |
-| **Fecha inicio** | 6 de enero de 2026 |
-| **Fecha fin** | 10 de febrero de 2026 |
-| **Horas totales** | 80 horas |
-| **Equipo** | Lucía Rodríguez (28h) + Juan Manuel Bigi (40h) + Stakeholders Elanco (12h) |
+| **Duración estimada** | 6 semanas (Semanas 1–6 del proyecto) |
+| **Fechas** | Ver cronograma unificado en `09_CRONOGRAMA_SEMANAL.md` |
+| **Horas totales** | 235 horas |
+| **Equipo** | Juan Manuel Bigi (95h) · Lucía Rodríguez (112h) · Linda López (28h) · Stakeholders Elanco (12h, sin costo) |
 
 ---
 
@@ -381,17 +380,19 @@ Cada riesgo incluye:
 
 **Hito:** Decisión Go/No-Go documentada
 
-### Presupuesto de Fase 0
+### Presupuesto de Fase 0 (consolidado oficial)
 
 #### Desglose de Horas
 
 | Recurso | Horas |
 |---------|-------|
-| **Juan Manuel Bigi** | 40h |
-| **Lucía Rodríguez** | 28h |
-| **Linda López (PM)** | 8h |
+| **Juan Manuel Bigi** | 95h |
+| **Lucía Rodríguez** | 112h |
+| **Linda López (PM)** | 28h |
 | **Stakeholders Elanco** | 12h (sin costo) |
-| **TOTAL FASE 0** | **76h** |
+| **TOTAL FASE 0** | **235h** |
+
+Nota: El detalle semanal de esta sección es orientativo. Para planificación detallada y fechas, prevalecen `08_ESTIMACION_DE_ESFUERZOS_Y_COSTOS.md` y `CRONOGRAMA_DETALLADO_TAREAS.csv`.
 
 ## 4.7. Criterios de Éxito de Fase 0
 

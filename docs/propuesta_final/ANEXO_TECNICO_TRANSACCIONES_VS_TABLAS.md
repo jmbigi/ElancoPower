@@ -164,46 +164,47 @@ En SLT se configura:
 
 ### Ejemplo 1: VA05 (Órdenes de Venta)
 
-| Transacción | Tablas SAP Requeridas | Propósito de la Tabla |
-|-------------|----------------------|----------------------|
-| **VA05** | VBAK | Cabecera de orden de venta |
-|          | VBAP | Posiciones (líneas) de la orden |
-|          | VBEP | Fechas de entrega programadas |
-|          | KNA1 | Maestro de clientes (para nombre) |
-|          | MARA | Maestro de materiales (para descripción) |
-
-**Total: ~5 tablas**
+**Transacción:** VA05
+**Tablas Requeridas (Ejemplos):**
+- `VBAK` (Cabecera de orden de venta)
+- `VBAP` (Posiciones de la orden)
+- `VBEP` (Fechas de entrega programadas)
+- `KNA1` (Maestro de clientes)
+- `MARA` (Maestro de materiales)
+**Total Estimado:** ~5 tablas
+**Complejidad Media:** Implica joins entre tablas transaccionales y maestras.
 
 ### Ejemplo 2: KSB1 (OPEX / Controlling)
 
-| Transacción | Tablas SAP Requeridas | Propósito de la Tabla |
-|-------------|----------------------|----------------------|
-| **KSB1** | COBK | Cabecera de documentos CO |
-|          | COEP | Partidas individuales CO |
-|          | AUFK | Maestro de órdenes internas |
-|          | CSKS | Maestro de centros de costo |
-|          | CSKA | Maestro de elementos de costo |
-
-**Total: ~5 tablas**
+**Transacción:** KSB1
+**Tablas Requeridas (Ejemplos):**
+- `COBK` (Cabecera de documentos CO)
+- `COEP` (Partidas individuales CO - ¡muy grande!)
+- `AUFK` (Maestro de órdenes internas)
+- `CSKS` (Maestro de centros de costo)
+- `CSKA` (Maestro de elementos de costo)
+**Total Estimado:** ~5 tablas
+**Complejidad Alta:** La tabla `COEP` es de alto volumen y el módulo CO tiene una lógica dimensional compleja.
 
 ### Ejemplo 3: FAGLL03 (Mayor General)
 
-| Transacción | Tablas SAP Requeridas | Propósito de la Tabla |
-|-------------|----------------------|----------------------|
-| **FAGLL03** | FAGLFLEXA | Partidas individuales del nuevo GL |
-|             | BKPF | Cabecera de documentos contables |
-|             | BSEG | Segmentos de documentos contables |
-|             | SKA1 | Plan de cuentas |
-
-**Total: ~4 tablas**
+**Transacción:** FAGLL03
+**Tablas Requeridas (Ejemplos):**
+- `FAGLFLEXA` (Partidas individuales del nuevo GL - ¡volumen masivo!)
+- `BKPF` (Cabecera de documentos contables)
+- `BSEG` (Segmentos de documentos contables)
+- `SKA1` (Plan de cuentas)
+**Total Estimado:** ~4 tablas
+**Complejidad Muy Alta:** `FAGLFLEXA` es una de las tablas más grandes y críticas de SAP FI, requiriendo estrategias de particionamiento y filtros eficientes.
 
 ### Estimación para el Proyecto
 
-| Categoría | Estimado |
-|-----------|----------|
-| 18 transacciones identificadas | Ver doc 03 |
-| Tablas promedio por transacción | 3-5 tablas |
-| **Total estimado de tablas SAP** | **~70-90 tablas** |
+| Categoría | Cantidad | Tablas Estimadas | Complejidad |
+|-------------------------------|----------|------------------|-----------------|
+| Transacciones Prioridad 1 | 4 | ~19-21 | Alta a Muy Alta |
+| Transacciones Prioridad 2 | 4 | ~11-13 | Media a Muy Alta |
+| Transacciones Pendientes | 10 | ~40-50 | Baja a Compleja |
+| **TOTAL ESTIMADO** | **18** | **~70-84 tablas** | **Mixta** |
 
 ---
 

@@ -13,9 +13,9 @@
 - ✅ **03_TRANSACCIONES_SAP_INCLUIDAS.md** - Detalle de 18 transacciones SAP
 
 #### Parte 3: Fases del Proyecto
-- ✅ **04_FASE_0_REVISION_ALCANCE_Y_FACTIBILIDAD.md** - Due diligence (3-4 semanas, 80h)
-- ✅ **05_FASE_1_CONSTRUCCION_DATA_LAKE.md** - Automatización SAP→BigQuery (6-8 semanas, 204h)
-- ⏳ **06_FASE_2_MODELADO_Y_DASHBOARDS.md** - Power BI y reportería (4-5 semanas, 160h)
+- ✅ **04_FASE_0_REVISION_ALCANCE_Y_FACTIBILIDAD.md** - Due diligence (6 semanas, 235h consolidado)
+- ✅ **05_FASE_1_CONSTRUCCION_DATA_LAKE.md** - Automatización SAP→BigQuery (22 semanas, 696h consolidado)
+- ✅ **06_FASE_2_MODELADO_Y_DASHBOARDS.md** - Power BI y reportería (14 semanas, 659h consolidado)
 - ⏳ **07_FASE_3_MODELOS_PREDICTIVOS.md** - Arquitectura ML (solo descripción)
 
 #### Parte 4: Planificación
@@ -31,8 +31,8 @@
 
 Los siguientes documentos se crearán a continuación:
 
-- 06_FASE_2_MODELADO_Y_DASHBOARDS.md (Pendiente)
-- 07_FASE_3_MODELOS_PREDICTIVOS.md (Pendiente)
+- (Ya consolidados) 06_FASE_2_MODELADO_Y_DASHBOARDS.md actualizado a 659h/14 semanas
+- 07_FASE_3_MODELOS_PREDICTIVOS.md (Descripción conceptual sin horas)
 - 10_REQUISITOS_TECNICOS_Y_ADMINISTRATIVOS.md
 - 11_RIESGOS_Y_SUPUESTOS.md
 - 12_ENTREGABLES_Y_CONDICIONES_COMERCIALES.md

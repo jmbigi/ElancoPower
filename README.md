@@ -7,7 +7,7 @@
 
 ---
 
-## � ESTRUCTURA DEL REPOSITORIO
+## 📁 ESTRUCTURA DEL REPOSITORIO
 
 ```
 ElancoPower/
@@ -93,7 +93,7 @@ ElancoPower/
 | **PRESUPUESTO_REAL_BASADO_EN_FUENTES_PRIMARIAS.md** | Presupuesto oficial (USD 8,850) | 29 |
 | **RESUMEN_EJECUTIVO_PARA_LUCIA.md** | Versión resumida para Lucía | 8 |
 
-### 📊 Documentos Internos de Trabajo
+### 📊 Documentos Internos de Trabajo (solo referencia, no alteran cifras canónicas)
 
 **Carpeta:** `docs/internos/`
 
@@ -121,14 +121,15 @@ ElancoPower/
 
 ---
 
-## � PRESUPUESTOS DISPONIBLES
+## 💰 PRESUPUESTOS DISPONIBLES
 
-| Presupuesto | Ubicación | Monto | Para quién | Estado |
-|-------------|-----------|-------|------------|--------|
+| Presupuesto | Ubicación | Monto / Horas | Para quién | Estado |
+|-------------|-----------|---------------|------------|--------|
 | **Solución SLT Completa** | `docs/propuesta_final/solucion_slt_completa/` | **USD 122,595** | Cliente/Ejecutivos | ⭐ **NUEVO Nov 2025** |
-| **Personal JM Bigi** | `docs/entregables/PRESUPUESTO_REAL_...` | **USD 8,850** | Lucía/Linda/Elanco | ✅ Completo |
-| **Resumen Ejecutivo** | `docs/entregables/RESUMEN_EJECUTIVO_...` | USD 8,850 | Lucía (formato corto) | ✅ Completo |
-| Propuesta Aunergia | `docs/historicos/presupuesto_actualizado.md` | USD 48,000 | Referencia histórica | 📚 Histórico |
+| **Propuesta Integral Data Lake** | `docs/propuesta_final/` | **1,590 horas** | Equipo Aunergia/Elanco | ✅ Consolidado |
+| **Personal JM Bigi** | `docs/entregables/PRESUPUESTO_REAL_...` | **354 horas** | Lucía/Linda/Elanco | ✅ Histórico |
+| **Resumen Ejecutivo** | `docs/entregables/RESUMEN_EJECUTIVO_...` | 354 horas (resumen) | Lucía (formato corto) | ✅ Completo |
+| Propuesta Aunergia (histórica) | `docs/historicos/presupuesto_actualizado.md` | USD 48,000 | Referencia histórica | 📚 Histórico |
 
 ---
 
@@ -154,24 +155,23 @@ ElancoPower/
 ### Objetivo del Proyecto:
 Automatizar la extracción de datos desde **SAP ECC** y centralizarlos en **Google BigQuery** para habilitar analítica corporativa con **Microsoft Power BI**.
 
-### Fases del Proyecto:
-1. **Fase 0 (3-4 sem):** Due Diligence y habilitación de permisos
-2. **Fase 1 (6-8 sem):** Automatización SAP → BigQuery (18 transacciones)
-3. **Fase 2 (4-5 sem):** Modelado Power BI y dashboards (12 dashboards)
-4. **Fase 3 (futuro):** Analítica predictiva (opcional)
+### Fases del Proyecto (cronograma unificado 42 semanas):
+1. **Fase 0 (6 sem):** Revisión de alcance, factibilidad y piloto (Due Diligence + Go/No-Go)
+2. **Fase 1 (22 sem):** Construcción del Data Lake y automatización SAP → BigQuery (18 transacciones)
+3. **Fase 2 (14 sem):** Modelo dimensional y 12 dashboards Power BI (incluye UAT y capacitación)
+4. **Fase 3 (conceptual):** Modelos predictivos (arquitectura y roadmap, sin implementación)
 
-### Esfuerzo Personal Juan Manuel Bigi:
+### Esfuerzo Personal Juan Manuel Bigi (histórico inicial):
 
 | Concepto | Horas |
 |----------|-------|
 | Elaboración presupuesto | 10h |
-| Fase 0 - Due Diligence | 40h |
-| Fase 1 - Automatización | 156h |
-| Fase 2 - Power BI | 148h |
-| **TOTAL** | **354h** |
+| Fase 0 - Due Diligence (estimación inicial) | 40h |
+| Fase 1 - Automatización (estimación inicial) | 156h |
+| Fase 2 - Power BI (estimación inicial) | 148h |
+| **TOTAL (versión inicial)** | **354h** |
 
-**Duración:** 13-17 semanas (~4 meses)  
-**Inicio propuesto:** 14-oct-2025
+Nota: Bloque histórico de presupuesto personal reducido (10-oct-2025). El esfuerzo consolidado final del proyecto es **1,590h** (JMB 961h, Lucía 484h, Linda 145h) – ver `docs/propuesta_final/08_ESTIMACION_DE_ESFUERZOS_Y_COSTOS.md` y `docs/propuesta_final/CRONOGRAMA_DETALLADO_TAREAS.csv`.
 
 ---
 
@@ -238,19 +238,31 @@ ME2L, MM60, MB59, ZVEL015, ME23N, FBL1N, FBL5N, MB5B, XK03, XD03
 
 ---
 
-## 📅 CRONOGRAMA PROPUESTO
+## 📅 CRONOGRAMA PROPUESTO (unificado – este reemplaza cronogramas abreviados previos)
 
-| Hito | Fecha | Responsable | Estado |
-|------|-------|-------------|--------|
-| Aprobación presupuesto | 14-oct-2025 | Linda López | ⏳ Pendiente |
-| Kick-off Fase 0 | 1-dic-2025 | Lucía + JMB | 🗓️ Programado |
-| Go/No-Go Fase 1 | 12-ene-2026 | Equipo completo | 🗓️ Programado |
-| Fin Fase 0 | 12-ene-2026 | - | 🗓️ Estimado |
-| Fin Fase 1 | 23-mar-2026 | - | 🗓️ Estimado |
-| Fin Fase 2 | 18-may-2026 | - | 🗓️ Estimado |
+| Hito | Fecha estimada | Responsable | Estado |
+|------|----------------|-------------|--------|
+| Aprobación propuesta consolidada | Nov-2025 | Linda López | ✅ Actualizado |
+| Kick-off Fase 0 (Semana 1) | 1-dic-2025 | Lucía + JMB | 🗓️ Programado |
+| Go/No-Go (Fin Fase 0, Semana 6) | 10-ene-2026 | Equipo completo | 🗓️ Programado |
+| Fin Fase 1 (Semana 28) | 21-jun-2026 | Equipo técnico | 🗓️ Estimado |
+| Fin Fase 2 / Go-Live dashboards (Semana 42) | 20-sep-2026 | Equipo completo | 🗓️ Estimado |
+| Soporte post go-live (30 días) | Sep-Oct 2026 | JMB + Lucía | 🗓️ Planificado |
 
-**Duración total:** ~6 meses (24 semanas, incl. 1 sem vacacional)  
-**Restricción:** JMB trabaja máximo 6h/día (30h/semana)
+**Duración total:** 42 semanas (~10 meses).  
+**Restricción:** JMB trabaja máximo 6h/día (30h/semana) – ya contemplado en las 1,590h.
+
+## 🔄 Consistencia de Datos (resumen rápido – fuentes únicas y prevalentes)
+
+| Dimensión | Valor actual | Fuente canónica | Observaciones |
+|-----------|--------------|-----------------|---------------|
+| Transacciones SAP | 18 | `docs/propuesta_final/03_TRANSACCIONES_SAP_INCLUIDAS.md` | Unificado (Prioridad 1/2 + restantes) |
+| Dashboards Power BI | 12 | `docs/propuesta_final/06_FASE_2_MODELADO_Y_DASHBOARDS.md` | Consistente tras correcciones 8-nov |
+| Horas totales | 1,590 | `docs/propuesta_final/08_ESTIMACION_DE_ESFUERZOS_Y_COSTOS.md` + `docs/propuesta_final/CRONOGRAMA_DETALLADO_TAREAS.csv` | JMB 961 / Lucía 484 / Linda 145 (bloques históricos marcados) |
+| Duración | 42 semanas | `docs/propuesta_final/09_CRONOGRAMA_SEMANAL.md` | Sustituye duración previa de 24 semanas |
+| Tablas SAP estimadas | 70–90 | `docs/propuesta_final/ANEXO_TECNICO_TRANSACCIONES_VS_TABLAS.md` | Baseline histórico inicial: 44 tablas |
+| Go/No-Go mínimo | ≥12 transacciones viables | `docs/propuesta_final/11_RIESGOS_Y_SUPUESTOS.md` | Criterio Fase 0 |
+| Tickets críticos | SAP-48219 / BQ-7713 / BQ-7721 | `docs/propuesta_final/10_REQUISITOS_TECNICOS_Y_ADMINISTRATIVOS.md` | Seguimiento Fase 0 |
 
 ---
 

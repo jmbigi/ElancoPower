@@ -53,10 +53,10 @@ Operación Centroamérica y Sudamérica (CASA)
 
 **Aunergia** propone un proyecto integral de **Centralización de Datos de Análisis** en 4 fases:
 
-1. **Fase 0:** Revisión del alcance y factibilidad técnica (3-4 semanas)
-2. **Fase 1:** Construcción de Data Lake con automatización SAP → BigQuery (6-8 semanas)
-3. **Fase 2:** Modelado de datos y dashboards Power BI (4-5 semanas)
-4. **Fase 3:** Arquitectura para modelos predictivos (descripción conceptual)
+1. **Fase 0:** Revisión del alcance y factibilidad técnica (6 semanas, 235h)
+2. **Fase 1:** Construcción de Data Lake con automatización SAP → BigQuery (22 semanas, 696h)
+3. **Fase 2:** Modelado de datos y dashboards Power BI (14 semanas, 659h)
+4. **Fase 3:** Arquitectura para modelos predictivos (descripción conceptual, sin horas incluidas)
 
 ### Alcance
 
@@ -82,7 +82,7 @@ Operación Centroamérica y Sudamérica (CASA)
 - **Tiempo total:** 42 semanas (~10 meses)
 - **Inicio propuesto:** 6 de enero de 2026
 - **Finalización estimada:** Mediados de octubre 2026
-- **Distribución por fase:** Fase 0: 6 semanas (235h) · Fase 1: 22 semanas (696h) · Fase 2: 14 semanas (659h)
+- **Distribución por fase consolidada:** Fase 0: 6 semanas (235h) · Fase 1: 22 semanas (696h) · Fase 2: 14 semanas (659h) = 42 semanas / 1,590h totales
 - **Nota:** Juan Manuel Bigi trabaja máximo 6 horas/día (30h/semana)
 
 ### Beneficios Esperados

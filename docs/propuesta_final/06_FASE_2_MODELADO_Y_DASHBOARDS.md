@@ -1,5 +1,5 @@
 # 6. FASE 2 - MODELADO DE DATOS Y GENERACIÓN DE DASHBOARDS
-> Nota de versión (8-nov-2025): La estimación oficial de Fase 2 es de **659h** conforme a `CRONOGRAMA_DETALLADO_TAREAS.csv` y `08_ESTIMACION_DE_ESFUERZOS_Y_COSTOS.md`. Este archivo conserva una estimación inicial de **294h** a modo histórico. Ante cualquier discrepancia, prevalece el CSV canónico.
+> Nota de versión (8-nov-2025): Cifras actualizadas al consolidado oficial. La estimación histórica (294h, 8 semanas) fue normalizada a **659h** en **14 semanas**. Ante cualquier discrepancia, prevalecen `CRONOGRAMA_DETALLADO_TAREAS.csv` y `08_ESTIMACION_DE_ESFUERZOS_Y_COSTOS.md`.
 
 ## 6.1. Objetivo de la Fase
 
@@ -19,10 +19,10 @@
 
 | Parámetro | Valor |
 |-----------|-------|
-| **Duración estimada** | 8 semanas (ajustado por restricción 6h/día JMB) |
-| **Fase del proyecto** | Mes 4-5, Semanas 16-23 |
-| **Horas totales** | 294 horas |
-| **Equipo** | Juan Manuel Bigi (240h) + Lucía Rodríguez (37h) + Linda López (17h) |
+| **Duración estimada** | 14 semanas |
+| **Fase del proyecto** | Semanas 28-42 (ver `09_CRONOGRAMA_SEMANAL.md`) |
+| **Horas totales** | 659 horas |
+| **Equipo** | Juan Manuel Bigi (416h) · Lucía Rodríguez (104h) · Linda López (61h) |
 | **Restricción** | JMB trabaja máximo 6h/día = 30h/semana |
 
 ---
@@ -735,7 +735,9 @@ RETURN
 
 ## 6.5. Cronograma Semanal Fase 2
 
-### Semana 1-2 (24 feb - 9 mar): Modelado
+Nota: Las fechas exactas y semanas del proyecto se rigen por `09_CRONOGRAMA_SEMANAL.md` (Semanas 28–42). A continuación se muestra la secuencia de actividades.
+
+### Semana 1-2: Modelado
 
 | Actividad | Responsable | Horas |
 |-----------|-------------|-------|
@@ -747,7 +749,7 @@ RETURN
 
 ---
 
-### Semana 3-4 (10-23 mar): Desarrollo Dashboards (Parte 1)
+### Semana 3-4: Desarrollo Dashboards (Parte 1)
 
 | Actividad | Responsable | Horas |
 |-----------|-------------|-------|
@@ -760,7 +762,7 @@ RETURN
 
 ---
 
-### Semana 5 (21-27 abr): Dashboards Finales + RLS
+### Semana 5: Dashboards Finales + RLS
 
 | Actividad | Responsable | Horas |
 |-----------|-------------|-------|
@@ -772,7 +774,7 @@ RETURN
 
 ---
 
-### Semana 6 (28 abr - 4 may): RLS y UAT Inicio
+### Semana 6: RLS y UAT Inicio
 
 | Actividad | Responsable | Horas |
 |-----------|-------------|-------|
@@ -784,7 +786,7 @@ RETURN
 
 ---
 
-### Semana 7 (5-11 may): UAT y Ajustes
+### Semana 7: UAT y Ajustes
 
 | Actividad | Responsable | Horas |
 |-----------|-------------|-------|
@@ -796,7 +798,7 @@ RETURN
 
 ---
 
-### Semana 8 (12-18 may): Capacitación y Go-Live
+### Semana 8-14: Capacitación, ajustes y Go-Live
 
 | Actividad | Responsable | Horas |
 |-----------|-------------|-------|
@@ -805,7 +807,7 @@ RETURN
 | **Go-Live Power BI** 🎉 | Todos | 2h |
 | Cierre Fase 2 | Todos | 4h |
 
-**Hito:** Go-live exitoso de Power BI
+**Hito:** Go-live exitoso de Power BI (al cierre de Semana 14)
 
 ---
 
@@ -813,11 +815,11 @@ RETURN
 
 | Recurso | Horas |
 |---------|-------|
-| **Juan Manuel Bigi** | 240h |
-| **Lucía Rodríguez** | 37h |
-| **Linda López (PM)** | 17h |
-| **Stakeholders Elanco** | 54h (sin costo) |
-| **TOTAL FASE 2** | **294h** |
+| **Juan Manuel Bigi** | 416h |
+| **Lucía Rodríguez** | 104h |
+| **Linda López (PM)** | 61h |
+| **Stakeholders Elanco** | 78h (sin costo) |
+| **TOTAL FASE 2** | **659h** |
 
 ---
 

@@ -46,12 +46,13 @@ Implementar una **solución integral de centralización de datos de análisis** 
 - **Módulos SAP:** MM, SD, FI, CO
 - **Países:** Todos los países de la operación CASA (~10 países)
 - **Historización:** Mínimo 24 meses de datos históricos
+- **Volumen de Tablas:** Estimación de **70-90 tablas SAP** a replicar.
 
 #### ✅ Infraestructura de Datos
 - **Data Lake:** Google BigQuery (dataset CASA)
 - **Arquitectura:** Zonas RAW → PROCESSED → CURATED
 - **Conectores:** **SAP SLT (Landscape Transformation Server)** para replicación en tiempo real SAP ECC ↔ BigQuery
-   - *Nota: La instalación y configuración de SLT es responsabilidad del cliente (Elanco) a cargo del equipo SAP Basis*
+  - *Nota: La instalación y configuración de SLT es responsabilidad del cliente (Elanco) con soporte del equipo SAP Basis*
 - **Procesamiento:** Pipelines ETL/ELT con BigQuery SQL
 - **Monitoreo:** Logs de ejecución, alertas de errores, dashboards operativos
 
@@ -135,8 +136,7 @@ Implementar una **solución integral de centralización de datos de análisis** 
 - Ambientes de desarrollo/QA/producción - provisionados por TI Global
 - **Recurso SAP Basis:** Provisto por Elanco para tareas de administración SAP y configuración de SLT
 
-#### ❌ Operación Post-Implementación
-- Operación y mantenimiento posteriores - responsabilidad de TI Elanco
+#### ❌ Soporte Post-Implementación
 - Mantenimiento evolutivo continuo - se cotiza por separado
 - Desarrollo de nuevos dashboards - se cotiza por separado
 
@@ -179,35 +179,35 @@ El proyecto se ejecutará siguiendo principios de **metodología ágil** adaptad
 El proyecto se divide en **4 fases** con objetivos específicos:
 
 ```
-┌─────────────────────────────────────────────────────────────────┐
-│                         ROADMAP GENERAL                          │
-├─────────────────────────────────────────────────────────────────┤
-│                                                                  │
-│  FASE 0          FASE 1              FASE 2          FASE 3     │
-│  ────────        ────────────────    ────────────    ────────   │
-│  Due             Data Lake           Dashboards      ML          │
-│  Diligence       Construction        Power BI        Roadmap     │
-│                                                                  │
-│  3-4 sem         6-8 sem             4-5 sem         (concepto) │
-│  ▓▓▓▓            ▓▓▓▓▓▓▓▓▓▓▓▓        ▓▓▓▓▓▓▓▓                    │
-│                                                                  │
-│  └─ Go/No-Go                                                     │
-│     Decision                                                     │
-│                                                                  │
-└─────────────────────────────────────────────────────────────────┘
+┌──────────────────────────────────────────────────────────────────────────┐
+│                             ROADMAP CONSOLIDADO                           │
+├──────────────────────────────────────────────────────────────────────────┤
+│                                                                          │
+│  FASE 0 (6 sem / 235h)   FASE 1 (22 sem / 696h)   FASE 2 (14 sem / 659h)  │
+│  ────────────────────    ──────────────────────   ─────────────────────   │
+│  Due Diligence           Data Lake Construction   Dashboards Power BI     │
+│                                                                          │
+│  FASE 3 (Roadmap ML conceptual, sin horas incluidas en total 1,590h)      │
+│                                                                          │
+│  Duración total proyecto (Fases 0-2): 42 semanas / 1,590h                │
+│                                                                          │
+│  └─ Go/No-Go                                                             │
+│     Decision al cierre de Fase 0                                         │
+│                                                                          │
+└──────────────────────────────────────────────────────────────────────────┘
 ```
 
-#### **Fase 0: Revisión del Alcance y Factibilidad** (3-4 semanas)
+#### **Fase 0: Revisión del Alcance y Factibilidad** (6 semanas, 235h consolidado)
 - **Objetivo:** Validar viabilidad técnica, resolver issues de permisos, definir backlog
 - **Entregables:** Plan técnico, backlog priorizado, Go/No-Go documentado
 - **Decisión crítica:** ¿Continuar con Fase 1 o replantear enfoque?
 
-#### **Fase 1: Construcción de Data Lake** (6-8 semanas)
+#### **Fase 1: Construcción de Data Lake** (22 semanas, 696h consolidado)
 - **Objetivo:** Automatizar extracción SAP → BigQuery para 18 transacciones
 - **Entregables:** Pipelines funcionales, datos centralizados, validaciones de calidad
 - **Hito:** Primer dashboard operativo con datos reales
 
-#### **Fase 2: Modelado y Dashboards Power BI** (4-5 semanas)
+#### **Fase 2: Modelado y Dashboards Power BI** (14 semanas, 659h consolidado)
 - **Objetivo:** Crear capa semántica y dashboards ejecutivos
 - **Entregables:** 12 dashboards, RLS configurado, usuarios capacitados
 - **Hito:** Go-live de reportería centralizada
@@ -279,7 +279,7 @@ El proyecto se divide en **4 fases** con objetivos específicos:
 |---|----------|----------------------|
 | 1 | Lucía Rodríguez tendrá permisos SAP completos al iniciar Fase 1 | TI Global / David Saboya |
 | 2 | El equipo de Finanzas/Supply estará disponible para validaciones (~4h/semana) | Sponsor del proyecto |
-| 3 | TI Global atenderá tickets de tablas BigQuery (respuesta < 1 semana) | David Saboya |
+| 3 | TI Global dará soporte para tickets de tablas BigQuery (respuesta < 1 semana) | David Saboya |
 | 4 | Los 8 usuarios Power BI Pro tienen sus licencias activas | TI Elanco |
 | 5 | Existe acuerdo de confidencialidad vigente Aunergia-Elanco | Legal |
 | 6 | Ambiente de desarrollo/QA en BigQuery estará disponible | TI Global |
@@ -323,7 +323,7 @@ El proyecto se divide en **4 fases** con objetivos específicos:
 
 - **Personal Aunergia:** 2-3 personas (Linda, Lucía, JMB)
 - **Disponibilidad part-time:** No hay dedicación full-time
-- **TI Global:** Atención de tickets (no desarrollo)
+- **Soporte TI Global:** Limitado a tickets (no desarrollo)
 - **Power users Elanco:** Disponibilidad limitada por tareas operativas
 
 ---
@@ -334,20 +334,20 @@ El proyecto se divide en **4 fases** con objetivos específicos:
 
 | Dependencia | Responsable | Fecha Límite | Impacto si No se Cumple |
 |-------------|-------------|--------------|-------------------------|
-| **Permisos SAP completos** (Ticket SAP-48219) | TI Global | 03-ene-2026 | ⛔ Bloquea inicio Fase 1 |
-| **Tablas BigQuery disponibles** (Tickets BQ-7713, BQ-7721) | TI Global | 03-ene-2026 | ⚠️ Retrasa Fase 1 (~2 semanas) |
-| **Accesos Data Editor BigQuery** (6 usuarios) | TI Elanco | 03-ene-2026 | ⚠️ Retrasa inicio desarrollo |
-| **Aprobación presupuesto** | Finanzas Elanco | 20-dic-2025 | ⛔ Bloquea proyecto completo |
-| **Definición de Product Owner** | Management Elanco | 20-dic-2025 | ⚠️ Retrasa decisiones |
+| **Permisos SAP completos** (Ticket SAP-48219) | TI Global | 10-nov-2025 | ⛔ Bloquea inicio Fase 1 |
+| **Tablas BigQuery disponibles** (Tickets BQ-7713, BQ-7721) | TI Global | 17-nov-2025 | ⚠️ Retrasa Fase 1 (~2 semanas) |
+| **Accesos Data Editor BigQuery** (6 usuarios) | TI Elanco | 14-nov-2025 | ⚠️ Retrasa inicio desarrollo |
+| **Aprobación presupuesto** | Finanzas Elanco | 10-nov-2025 | ⛔ Bloquea proyecto completo |
+| **Definición de Product Owner** | Management Elanco | 11-nov-2025 | ⚠️ Retrasa decisiones |
 
 ### 2.7.2. Dependencias Internas (Gestionables)
 
 | Dependencia | Responsable | Fecha Límite | Mitigación |
 |-------------|-------------|--------------|------------|
-| **Workshop priorización transacciones** | Lucía + Áreas negocio | 13-ene-2026 | Sesiones virtuales asíncronas |
-| **Validación arquitectura BigQuery** | Juan Manuel Bigi | 13-ene-2026 | Iniciar análisis antes de kick-off |
-| **Definición de KPIs** | Finanzas + Supply | 20-ene-2026 | Usar KPIs estándar como base |
-| **Ambiente desarrollo BigQuery** | TI Elanco | 03-ene-2026 | Usar ambiente compartido temporalmente |
+| **Workshop priorización transacciones** | Lucía + Áreas negocio | 18-nov-2025 | Sesiones virtuales asíncronas |
+| **Validación arquitectura BigQuery** | Juan Manuel Bigi | 15-nov-2025 | Iniciar análisis antes de kick-off |
+| **Definición de KPIs** | Finanzas + Supply | 25-nov-2025 | Usar KPIs estándar como base |
+| **Ambiente desarrollo BigQuery** | TI Elanco | 14-nov-2025 | Usar ambiente compartido temporalmente |
 
 ---
 
@@ -384,7 +384,7 @@ El proyecto se divide en **4 fases** con objetivos específicos:
 5. Manual de usuario Power BI (español)
 6. Videos tutoriales (<5 min por dashboard)
 7. Capacitación usuarios finales completada (registro de asistencia)
-8. Plan de operación post go-live (ajustes menores bajo evaluación)
+8. Plan de soporte y mantenimiento
 9. UAT firmado por stakeholders
 
 #### **Fase 3: ML Roadmap** (Solo Descripción)
