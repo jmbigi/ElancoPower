@@ -32,6 +32,9 @@ Unificar cifras y criterios entre documentos de `docs/propuesta_final` y elimina
   - Añadida nota aclaratoria sobre diferencia entre semanas globales y semanas internas de fase (evita ambigüedad al leer ambos documentos).
 9. `docs/internos/estado_documentos.md`
   - Archivo nuevo que categoriza documentos vigentes vs. históricos; define fuentes canónicas (18 transacciones, 24–31 tablas, 1,590h, 42 semanas).
+10. `CRONOGRAMA_DETALLADO_TAREAS.csv`
+  - Añadida columna `Nota_S4HANA` aclarando sustitución de tablas clásicas (BSEG, COEP, FAGLFLEXA, BSID, BSAD, BSIK, BSAK) por ACDOCA/ACDOCA_T en filas FI/CO y dashboards financieros.
+  - Descripciones de tareas ajustadas para anteponer tablas canónicas (ACDOCA, ACDOCA_T, BKPF, etc.) y relegar listas históricas a un paréntesis "histórico:" preservando trazabilidad sin inducir replicación de tablas obsoletas.
 
 ### Criterios de Verificación Post-Cambio
 - Totales de horas por fase y rol coinciden con documento canónico (`08_ESTIMACION_DE_ESFUERZOS_Y_COSTOS.md`).
@@ -40,6 +43,7 @@ Unificar cifras y criterios entre documentos de `docs/propuesta_final` y elimina
 - Reconciliación >95% alineada con riesgos y supuestos (sección 11).
 - (HISTÓRICO) Número de tablas unificado y optimizado: todas las menciones a rangos anteriores (~70-84, ~70-90, ~76-85, 19–25) reemplazadas por 25.
  - (HISTÓRICO) Número de tablas unificado y optimizado: todas las menciones a rangos anteriores (~70-84, ~70-90, ~76-85, 19–25) reemplazadas por 24–31.
+ - Cronograma actualizado no impulsa replicación de tablas obsoletas; todas las filas con referencias clásicas contienen nota S/4HANA explícita.
 - Semántica de semanas aclarada (global vs. internas) en 05 y 09.
 - Origen histórico de 22 líneas vs. 18 transacciones documentado claramente.
 
