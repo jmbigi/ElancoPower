@@ -31,7 +31,7 @@ Unificar cifras y criterios entre documentos de `docs/propuesta_final` y elimina
 8. `09_CRONOGRAMA_SEMANAL.md`
   - Añadida nota aclaratoria sobre diferencia entre semanas globales y semanas internas de fase (evita ambigüedad al leer ambos documentos).
 9. `docs/internos/estado_documentos.md`
-  - Archivo nuevo que categoriza documentos vigentes vs. históricos; define fuentes canónicas (18 transacciones, 24–31 tablas, 1,590h, 42 semanas).
+  - Archivo nuevo que categoriza documentos vigentes vs. históricos; define fuentes canónicas (18 transacciones, 32–38 tablas, 1,590h, 42 semanas).
 10. `CRONOGRAMA_DETALLADO_TAREAS.csv`
   - Añadida columna `Nota_S4HANA` aclarando sustitución de tablas clásicas (BSEG, COEP, FAGLFLEXA, BSID, BSAD, BSIK, BSAK) por ACDOCA/ACDOCA_T en filas FI/CO y dashboards financieros.
   - Descripciones de tareas ajustadas para anteponer tablas canónicas (ACDOCA, ACDOCA_T, BKPF, etc.) y relegar listas históricas a un paréntesis "histórico:" preservando trazabilidad sin inducir replicación de tablas obsoletas.
@@ -42,7 +42,7 @@ Unificar cifras y criterios entre documentos de `docs/propuesta_final` y elimina
 - No quedan referencias a “116 horas” de Fase 0 en documentos vigentes.
 - Reconciliación >95% alineada con riesgos y supuestos (sección 11).
 - (HISTÓRICO) Número de tablas unificado y optimizado: todas las menciones a rangos anteriores (~70-84, ~70-90, ~76-85, 19–25) reemplazadas por 25.
- - (HISTÓRICO) Número de tablas unificado y optimizado: todas las menciones a rangos anteriores (~70-84, ~70-90, ~76-85, 19–25) reemplazadas por 24–31.
+ - (HISTÓRICO) Número de tablas unificado y optimizado: todas las menciones a rangos anteriores (~70-84, ~70-90, ~76-85, 19–25, 24–31) reemplazadas por 32–38.
  - Cronograma actualizado no impulsa replicación de tablas obsoletas; todas las filas con referencias clásicas contienen nota S/4HANA explícita.
 - Semántica de semanas aclarada (global vs. internas) en 05 y 09.
 - Origen histórico de 22 líneas vs. 18 transacciones documentado claramente.
@@ -51,7 +51,7 @@ Unificar cifras y criterios entre documentos de `docs/propuesta_final` y elimina
 - Validar si algún otro documento externo (p.e. `RESUMEN_PROPUESTA_FINAL.txt`) contiene aún la cifra de 116h (no crítico para versión cliente, pero recomendable revisar en próxima iteración).
 - Revisar si en la solución SLT completa hay referencias a distribución antigua de dashboards.
 - Automatizar chequeo de consistencia numérica (script futuro) para asegurar mantenimiento del número 25.
- - Automatizar chequeo de consistencia numérica (script futuro) para asegurar mantenimiento del rango 24–31.
+- Automatizar chequeo de consistencia numérica (script futuro) para asegurar mantenimiento del rango 32–38.
 
 ### 11. Refuerzo de Redundancia Canónica (8-nov-2025, segunda iteración)
 Se añadieron bloques "Ficha Técnica Canónica" y líneas de distribución de horas en:
@@ -62,9 +62,9 @@ Se añadieron bloques "Ficha Técnica Canónica" y líneas de distribución de h
 Objetivo: Facilitar verificación manual rápida sin depender de scripts; asegurar que cualquier lectura aislada expone todas las métricas canónicas.
 
 Verificación post-cambio:
-- Fichas contienen exactamente las cifras ya auditadas (18 / 12 / 1,590 / 42 / 24–31 / distribución por fase).
+- Fichas contienen exactamente las cifras ya auditadas (18 / 12 / 1,590 / 42 / 32–38 / distribución por fase).
 - No se introducen cifras nuevas; solo redundancia controlada.
-- Formato de miles consistente (1,590) y rango tablas con EN DASH (24–31).
+- Formato de miles consistente (1,590) y rango tablas con EN DASH (32–38).
 
 Responsable: Asistente IA (refuerzo documental).
 

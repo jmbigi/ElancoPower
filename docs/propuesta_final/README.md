@@ -33,7 +33,7 @@ Toda la propuesta está completa y consistente. Cifras canónicas:
 - 18 transacciones SAP
 - 12 dashboards Power BI
 - 1,590 horas totales (42 semanas)
-- Rango de Tablas (MVP): 24–31 tablas (24 núcleo + hasta 7 condicionales)
+- Rango de Tablas (MVP): 32–38 tablas (32 núcleo + hasta 6 condicionales)
 
 ### 📄 Ficha Técnica Canónica
 | Métrica | Valor |
@@ -41,7 +41,7 @@ Toda la propuesta está completa y consistente. Cifras canónicas:
 | Transacciones SAP | 18 |
 | Dashboards Power BI | 12 |
 | Esfuerzo Total | 1,590 horas (42 semanas) |
-| Rango Tablas SAP (MVP) | 24–31 (24 núcleo + hasta 7 condicionales) |
+| Rango Tablas SAP (MVP) | 32–38 (32 núcleo + hasta 6 condicionales) |
 | Distribución Fases | F0: 235h (6 sem) · F1: 696h (22 sem) · F2: 659h (14 sem) |
 
 Nota de canonicidad: Ante cualquier discrepancia prevalecen `03_TRANSACCIONES_SAP_INCLUIDAS.md`, `ANEXO_TECNICO_TRANSACCIONES_VS_TABLAS.md`, `08_ESTIMACION_DE_ESFUERZOS_Y_COSTOS.md` y `09_CRONOGRAMA_SEMANAL.md`.

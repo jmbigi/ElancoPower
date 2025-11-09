@@ -34,7 +34,9 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 # Canonical definitions
 CANONICAL = {
     "transacciones": 18,
-    "tablas_rango": (24, 31),  # inclusive (ampliado para CO-PA + textos)
+    # Nuevo rango canónico tras promoción de 8 tablas semánticas críticas
+    # 32 base (core) + hasta 7 condicionales = 32–39. Se limita a 32–38 en propuesta (máximo esperado activado inicialmente).
+    "tablas_rango": (32, 38),
     "dashboards": 12,
     "horas_total": 1590,
     "semanas": 42,
@@ -66,7 +68,7 @@ EXPECTED_DOCS = {
 }
 
 HISTORICAL_MARKERS = {
-    "19–25", "20–26", "19-25", "20-26", "24–28", "24-28"
+    "19–25", "20–26", "19-25", "20-26", "24–28", "24-28", "24–31", "24-31"
 }
 
 def read_text(rel_path: str) -> str:

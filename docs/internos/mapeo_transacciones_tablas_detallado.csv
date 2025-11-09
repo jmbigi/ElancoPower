@@ -52,3 +52,14 @@ ZLEL008,Material por planta,MARC,Maestro,1,core,incluir,Atributos por planta par
 XK03,Maestro proveedor,LFA1,Maestro,pendiente,core,incluir,Dimensión proveedor (BP complemento)
 VA05,Schedule lines (fechas programadas),VBEP,Transaccional,1,derivada,candidato_incluir,Backlog/aging y cumplimiento de entrega
 VA05,Flujo de documentos,VBFA,Transaccional,1,derivada,candidato_incluir,Pipeline Pedido→Entrega→Factura
+FAGLL03,Textos plan de cuentas,SKAT,Maestro,1,core,incluir,Descripciones de cuentas GL para reportes contables
+VA05,Cliente por sociedad,KNB1,Maestro,1,core,incluir,Condiciones de pago y grupo de cuentas por sociedad
+VA05,Cliente por área de ventas,KNVV,Maestro,1,core,incluir,Segmentación comercial por canal/sector/oficina
+XD03,Cliente por sociedad,KNB1,Maestro,pendiente,core,incluir,Dimensión contable de cliente para CxC
+XD03,Cliente por área de ventas,KNVV,Maestro,pendiente,core,incluir,Dimensión comercial de cliente
+XK03,Proveedor por sociedad,LFB1,Maestro,pendiente,core,incluir,Condiciones de pago y atributos AP por sociedad
+ZLEL008,Plantas/centros,T001W,Maestro,1,core,incluir,Nombres legibles de centros para inventario multi-planta
+ME2L,Programación entregas OC,EKET,Transaccional,pendiente,core,incluir,KPIs de cumplimiento de proveedores (fecha programada)
+ME23N,Programación entregas OC,EKET,Transaccional,pendiente,core,incluir,Detalle de fechas de entrega a nivel posición
+MM60,Cost component split,CKMLCR,Finanzas,pendiente,core,incluir,Desglose de costo estándar por componente (Material Ledger)
+KSB1,Textos centro de costo,CSKT,Maestro,1,core,incluir,Legibilidad de reportes CO/OPEX (nombres de CC)

@@ -200,10 +200,10 @@ En SLT se configura:
 
 | Categoría | Cantidad | Tablas Estimadas | Complejidad |
 |-------------------------------|----------|------------------|-----------------|
-| Transacciones Prioridad 1 | 4 | ~14 | Media a Alta |
-| Transacciones Prioridad 2 | 4 | ~8 | Media |
+| Transacciones Prioridad 1 | 4 | ~18 | Media a Alta |
+| Transacciones Prioridad 2 | 4 | ~10 | Media |
 | Transacciones Pendientes | 10 | ~3 (aportes marginales/condicionales) | Baja a Media |
-| **TOTAL ESTIMADO (MVP)** | **18** | **24–31 tablas** | **Mixta (optimizada por S/4)** |
+| **TOTAL ESTIMADO (MVP)** | **18** | **32–38 tablas** | **Mixta (optimizada por S/4)** |
 
 ---
 
@@ -218,7 +218,7 @@ ENTRADAS (Fase 0)              PROCESO                    SALIDAS
 ─────────────────              ───────                    ────────
 ┌─────────────────┐           ┌──────────────────┐      ┌────────────────┐
 │ 18 Transacciones│──────────▶│ Análisis de      │─────▶│ Lista de       │
-│ SAP priorizadas │           │ Tablas           │      │ 24–31 Tablas   │
+│ SAP priorizadas │           │ Tablas           │      │ 32–38 Tablas   │
 └─────────────────┘           │ Subyacentes      │      │ SAP a Replicar │
                               └──────────────────┘      └────────────────┘
                                        │
@@ -260,8 +260,8 @@ ENTRADAS (Fase 0)              PROCESO                    SALIDAS
 ✅ **Mínimo 80% de las tablas identificadas disponibles en BigQuery**
 
 Por ejemplo:
-- Si se identifican 24–31 tablas necesarias
-- Mínimo 20 tablas deben estar disponibles
+- Si se identifican 32–38 tablas necesarias
+ - Mínimo 26 tablas deben estar disponibles
 - Si <20 disponibles: Evaluar plan B (escalamiento a TI Global, uso de extractores RFC, etc.)
 
 ---
@@ -440,7 +440,7 @@ Luego recreas el informe en Power BI usando esos datos.
 **Proceso Completo:**
 
 1. **Negocio identifica** 18 transacciones críticas
-2. **Fase 0 mapea** transacciones → 24–31 tablas SAP (optimizado por ACDOCA)
+2. **Fase 0 mapea** transacciones → 32–38 tablas SAP (optimizado por ACDOCA)
 3. **TI Global confirma** disponibilidad de tablas en BigQuery
 4. **SLT replica** tablas configuradas a BigQuery
 5. **BigQuery procesa** datos (limpieza, transformaciones)
@@ -480,7 +480,7 @@ Luego recreas el informe en Power BI usando esos datos.
 
 ### P5: ¿Cuántas tablas SAP existen en total?
 
-**R:** SAP S/4HANA tiene >5.000 tablas. Este proyecto replica **24–31** tablas (24 núcleo + hasta 7 condicionales), un rango optimizado por el uso de **ACDOCA** (Universal Journal) que reemplaza múltiples tablas históricas.
+**R:** SAP S/4HANA tiene >5.000 tablas. Este proyecto replica **32–38** tablas (32 núcleo + hasta 6 condicionales en el MVP), un rango optimizado por el uso de **ACDOCA** (Universal Journal) y la promoción de tablas semánticas críticas para mejorar legibilidad.
 
 ---
 
@@ -511,7 +511,7 @@ Esta sección documenta el proceso propuesto para reducir el rango operativo de 
 ### 11.1. Estado Canónico (Vigente) y Gestión
 | Concepto | Valor Vigente (Canónico) | Notas |
 |----------|---------------------------|-------|
-| Número de Tablas (MVP) | 24–31 tablas | 24 núcleo + hasta 7 condicionales. Sustituye rangos previos (~35–65, ~70–90, ~76–85, 19–25). |
+| Número de Tablas (MVP) | 32–38 tablas | 32 núcleo (24 técnicas + 8 semánticas críticas) + hasta 6 condicionales. Sustituye 24–31 y rangos previos. |
 | Tablas Obsoletas Excluidas | BSEG, COEP, FAGLFLEXA | Confirmado por uso de ACDOCA/ACDOCA_T (S/4HANA). |
 | Tablas Condicionales | VBEP, KONV, VBFA, MCHB, CE1XXXX, CE4XXXX, STXL | Activar según KPI/método (backlog, pricing, flujo ventas, stock por lote, CO-PA cost-based, textos). |
 
@@ -548,8 +548,8 @@ Categorías utilizadas en `docs/internos/mapeo_transacciones_tablas_detallado.cs
 - Documento `docs/entregables/ALCANCE_TABLAS_E_INDICES.md` (vigente) como referencia operativa.
 
 ### 11.7. Nota de Transparencia
-Las menciones a rangos de tablas en documentos históricos se consideran EXPLORATORIAS. Este anexo y `estado_documentos.md` reflejan el rango canónico de 24–31 tablas.
+Las menciones a rangos de tablas en documentos históricos se consideran EXPLORATORIAS. Este anexo y `estado_documentos.md` reflejan el rango canónico de 32–38 tablas.
 
 ---
 
-*Versión: 1.5 - 9 de noviembre de 2025 (actualizado rango canónico a 24–31 y referencias de índices)*
+*Versión: 1.6 - 9 de noviembre de 2025 (actualizado rango canónico a 32–38 y referencias de índices)*

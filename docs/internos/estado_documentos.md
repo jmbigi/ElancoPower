@@ -6,7 +6,7 @@ Este archivo consolida el **estado** (vigente / histórico / auxiliar) de los pr
 
 - No se modifica nada dentro de `inputs/` (fuentes históricas recibidas de Elanco)
 - Cada documento "vigente" debe declarar explícitamente si reemplaza una versión previa
-- El alcance funcional (18 transacciones) y el rango de tablas (24–31 tablas) tienen UNA sola fuente canónica
+- El alcance funcional (18 transacciones) y el rango de tablas (32–38 tablas) tienen UNA sola fuente canónica
 
 ## 2. Fuentes Canónicas Actualizadas
 
@@ -40,7 +40,7 @@ Este archivo consolida el **estado** (vigente / histórico / auxiliar) de los pr
 | Aspecto | Valor Canónico | Consistencia |
 |---------|----------------|--------------|
 | Transacciones | 18 | OK |
-| Tablas Estimadas | 24–31 tablas | OK (optimizado por Universal Journal) |
+| Tablas Estimadas | 32–38 tablas | OK (núcleo extendido + condicionales por KPI) |
 | Dashboards | 12 | OK |
 | Esfuerzo Total | 1,590 horas | OK |
 | Duración | 42 semanas | OK |
@@ -53,5 +53,5 @@ Este archivo consolida el **estado** (vigente / histórico / auxiliar) de los pr
 - Añadir diagrama resumen (Mermaid) de dependencias documento → dominio
 
 ---
-Última actualización: 8-nov-2025
+Última actualización: 9-nov-2025
 Responsable: (asignar)

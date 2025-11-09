@@ -46,7 +46,7 @@ Operación Centroamérica y Sudamérica (CASA)
 | Transacciones SAP | 18 |
 | Dashboards Power BI | 12 |
 | Esfuerzo Total | 1,590 horas (42 semanas) |
-| Rango Tablas SAP (MVP) | 24–31 (24 núcleo + hasta 7 condicionales) |
+| Rango Tablas SAP (MVP) | 32–38 (32 núcleo + hasta 6 condicionales) |
 | Distribución Fases | F0: 235h (6 sem) · F1: 696h (22 sem) · F2: 659h (14 sem) |
 
 Nota de canonicidad: Ante cualquier discrepancia prevalecen `03_TRANSACCIONES_SAP_INCLUIDAS.md`, `ANEXO_TECNICO_TRANSACCIONES_VS_TABLAS.md`, `08_ESTIMACION_DE_ESFUERZOS_Y_COSTOS.md` y `09_CRONOGRAMA_SEMANAL.md`.

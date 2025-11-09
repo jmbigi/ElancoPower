@@ -41,12 +41,12 @@ Implementar una **solución integral de centralización de datos de análisis** 
 
 #### ✅ Sistemas Fuente
 - **SAP S/4HANA:** Datos de 18 transacciones priorizadas (ver sección 3)
-   - *Nota técnica:* Se replicarán las **tablas SAP subyacentes** asociadas a estas transacciones (alcance consolidado MVP vigente: **24 tablas núcleo + hasta 7 condicionales = 24–31 tablas**)
+   - *Nota técnica:* Se replicarán las **tablas SAP subyacentes** asociadas a estas transacciones (alcance consolidado MVP vigente: **32 tablas núcleo + hasta 6 condicionales = 32–38 tablas**)
   - Las transacciones SAP son interfaces de usuario; lo que se replica mediante SLT son las tablas de base de datos
 - **Módulos SAP:** MM, SD, FI, CO
 - **Países:** Todos los países de la operación CASA (~10 países)
 - **Historización:** Mínimo 24 meses de datos históricos
-- **Volumen de Tablas (MVP):** **24–31 tablas SAP** (24 núcleo incluidas + hasta 7 condicionales activables por KPI, incluyendo CO-PA y tablas de soporte como textos). Rango anterior (~76–85) y subtotal previo (24–28) quedan reemplazados por esta estimación optimizada basada en S/4HANA Universal Journal.
+- **Volumen de Tablas (MVP):** **32–38 tablas SAP** (32 núcleo incluidas + hasta 6 condicionales activables por KPI, incluyendo CO-PA y tablas de soporte como textos). Rangos anteriores (~76–85, 24–31) quedan reemplazados por esta estimación optimizada basada en S/4HANA Universal Journal.
 
 #### ✅ Infraestructura de Datos
 - **Data Lake:** Google BigQuery (dataset casa_bi: entornos dev / qa / prod)
@@ -225,7 +225,7 @@ El proyecto se divide en **4 fases** con objetivos específicos:
 
 | Métrica | Objetivo |
 |---------|----------|
-| **Tablas SAP replicadas** | 100% de las tablas núcleo (24) + condicionales aprobadas (0–7) = 24–31 |
+| **Tablas SAP replicadas** | 100% de las tablas núcleo (32) + condicionales aprobadas (0–6) = 32–38 |
 | **Transacciones SAP con datos disponibles** | 18 de 18 (100%) |
 | **Reducción tiempo de consolidación** | ≥ 70% (de 3-5 días a < 1 día) |
 | **Tiempo de actualización de dashboards** | ≤ 24 horas desde cierre de periodo |

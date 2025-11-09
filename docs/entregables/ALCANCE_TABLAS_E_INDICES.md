@@ -1,6 +1,6 @@
 # Alcance Final de Tablas SAP e Índices (BigQuery)
 
-Fecha: 9-nov-2025 (actualizado)
+Fecha: 9-nov-2025 (actualizado - reclass 32–38)
 Fuente canónica: `docs/internos/mapeo_transacciones_tablas_detallado.csv`
 Contexto: SAP S/4HANA replicado a Google BigQuery vía SAP SLT
 
@@ -8,13 +8,14 @@ Contexto: SAP S/4HANA replicado a Google BigQuery vía SAP SLT
 
 ## 1) Resumen ejecutivo
 
-- Alcance de tablas SAP a replicar (MVP): 24–31 tablas
-  - 24 tablas núcleo (core) obligatorias
-  - 7 tablas condicionales potenciales (según KPI / método: backlog, pricing, flujo ventas, stock por lote, CO-PA cost-based, textos largos)
-- Racional técnico: uso de ACDOCA/ACDOCA_T (S/4HANA) para sustituir BSEG/COEP/FAGLFLEXA y reducir drásticamente el volumen de tablas sin perder cobertura funcional.
-- Índices en BigQuery: se implementan como particionamiento y clustering por tabla. No se crean índices tipo RDBMS.
+- Alcance de tablas SAP a replicar (MVP extendido): 32–38 tablas
+  - 32 tablas núcleo (24 técnicas + 8 semánticas críticas)
+  - Hasta 6 tablas condicionales iniciales (backlog, pricing, flujo ventas, stock por lote, CO-PA cost-based, textos largos – activación según KPI). El séptimo candidato (uno de los condicionales) puede diferirse si no hay caso de uso confirmado.
+- Racional técnico: promoción de tablas semánticas (SKAT, KNB1, KNVV, LFB1, T001W, EKET, CKMLCR, CSKT) para evitar retrabajo y mejorar legibilidad/adopción temprana.
+- Sustitución estructural mantenida: Universal Journal (ACDOCA/ACDOCA_T) elimina necesidad de BSEG/COEP/FAGLFLEXA.
+- Estrategia de rendimiento: particionamiento + clustering (sin índices RDBMS tradicionales).
 
-Este documento reemplaza cualquier rango anterior (~35–65, ~70–90, ~76–85) y se declara como referencia vigente para cantidad de tablas e índices en Fase 1.
+Este documento reemplaza el rango previo 24–31 y declara la nueva referencia vigente 32–38 para Fase 1.
 
 ---
 
@@ -23,9 +24,9 @@ Este documento reemplaza cualquier rango anterior (~35–65, ~70–90, ~76–85)
 | Elemento | Valor Vigente |
 |----------|---------------|
 | Transacciones SAP | 18 |
-| Rango de Tablas (Fase 1) | 24–31 tablas |
-| Núcleo | 24 tablas |
-| Condicionales potenciales | 7 tablas (VBEP, KONV, VBFA, MCHB, CE1XXXX, CE4XXXX, STXL) |
+| Rango de Tablas (Fase 1) | 32–38 tablas |
+| Núcleo | 32 tablas |
+| Condicionales potenciales | 6–7 tablas (activación selectiva) |
 | Dashboards | 12 |
 | Esfuerzo Total | 1,590 horas |
 | Duración | 42 semanas |
@@ -44,53 +45,61 @@ Gobernanza: cualquier modificación posterior deberá (a) registrarse en `CORREC
 
 ## 2) Lista de tablas por estado de inclusión
 
-### 2.1. Núcleo (24) – incluir
+### 2.1. Núcleo Extendido (32) – incluir
 
-FI/CO
+FI/CO (Contable / Controlling)
 - ACDOCA (Universal Journal)
 - ACDOCA_T (Totales)
 - BKPF (Cabecera documento FI)
 - AUFK (Órdenes internas)
-- CSKS (Maestro centros de costo)
-- CSKA (Maestro elementos de costo)
+- CSKS (Centros de costo)
+- CSKA (Elementos de costo)
 - SKA1 (Plan de cuentas)
+- SKAT (Textos de cuentas)
+- CSKT (Textos de centros de costo)
 
-SD
+SD (Ventas)
 - VBAK (Cabecera OV)
 - VBAP (Posición OV)
 - VBUK (Estatus cabecera OV)
 - VBUP (Estatus posición OV)
+- KNB1 (Cliente por sociedad)
+- KNVV (Cliente vista comercial)
 
-MM
+MM / Logística / Compras
 - EKKO (Cabecera OC)
 - EKPO (Posición OC)
+- EKET (Programación entregas OC)
 - MKPF (Cabecera mov. material)
 - MSEG (Posición mov. material)
 - MARD (Stock por almacén)
 - MBEW (Valorización)
 - MARC (Material por planta)
+- CKMLCR (Cost component split)
 
-Maestros
-- MARA (Maestro material)
-- MAKT (Descripciones de material)
-- KNA1 (Maestro cliente)
-- LFA1 (Maestro proveedor)
+Maestros Generales
+- MARA (Material)
+- MAKT (Textos material)
+- KNA1 (Cliente general)
+- LFA1 (Proveedor general)
+- LFB1 (Proveedor por sociedad)
 - BUT000 (Business Partner)
 - T001 (Sociedades)
+- T001W (Plantas / centros)
 
-### 2.2. Condicionales (7) – candidato_incluir
+### 2.2. Condicionales (6–7) – candidato_incluir
 
-Logística, Ventas, Inventarios, CO-PA y Textos
-- VBEP (Schedule lines, backlog/aging) – activar sólo si KPI explícito lo requiere.
-- KONV (Condiciones de precio) – si se requiere análisis de pricing.
-- VBFA (Flujo de documentos de ventas) – pipeline OV→Entrega→Factura.
-- MCHB (Stock por lote) – si los KPIs requieren granularidad por lote.
-- CE1XXXX (CO-PA reales Costing-Based) – sólo si el método Costing-Based está activo y se necesitan características detalladas.
-- CE4XXXX (CO-PA plan Costing-Based) – si se requiere comparación plan vs real en KE24.
-- STXL (Textos largos) – declustering en SLT requerido; activar sólo si dashboards requieren textos enriquecidos.
+Activación por KPI / método:
+- VBEP (Schedule lines / backlog / aging)
+- KONV (Condiciones de precio)
+- VBFA (Flujo documentos ventas)
+- MCHB (Stock por lote)
+- CE1XXXX (CO-PA reales Costing-Based)
+- CE4XXXX (CO-PA plan Costing-Based)
+- STXL (Textos largos) [puede diferirse si no hay requerimiento de textos extendidos]
 
-Opcional (fuera del rango, activar sólo si análisis granular de pricing lo justifica):
-- KONP (detalle adicional de condiciones de precio)
+Opcional fuera de rango base:
+- KONP (detalle granular condiciones de precio)
 
 ### 2.3. Excluidas por S/4HANA (3)
 
@@ -98,7 +107,7 @@ Opcional (fuera del rango, activar sólo si análisis granular de pricing lo jus
 
 ---
 
-### 2.3. CO-PA (Condicional por Método)
+### 2.4. CO-PA (Condicional por Método)
 
 - Account-Based CO-PA: cubierto por ACDOCA (recomendado en S/4HANA).
 - Costing-Based CO-PA: incluir como condicionales las tablas **CE1XXXX** (reales) y **CE4XXXX** (plan) si el sistema utiliza Costing-Based y se requiere KE24 con características de rentabilidad detalladas.

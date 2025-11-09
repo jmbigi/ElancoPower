@@ -7,9 +7,9 @@ Fecha: 8 de noviembre de 2025
 Propósito: Referencia técnica rápida para desarrolladores y analistas.
 ================================================================================
 
-La confirmación de que el sistema fuente es **S/4HANA** define la estrategia de replicación. El foco principal es la tabla **`ACDOCA` (Universal Journal)**. Rango vigente (MVP) de tablas a replicar: **24 tablas núcleo + hasta 7 condicionales = 24–31**. Este documento se actualizó el 08-nov-2025 para reflejar la optimización basada en Universal Journal y la promoción de tablas maestras al núcleo.
+La confirmación de que el sistema fuente es **S/4HANA** define la estrategia de replicación. El foco principal es la tabla **`ACDOCA` (Universal Journal)**. Rango vigente (MVP) de tablas a replicar: **32 tablas núcleo (24 técnicas + 8 semánticas) + hasta 6 condicionales = 32–38**. Este documento se actualizó el 09-nov-2025 para reflejar la promoción de tablas semánticas críticas y mantener condicionales sujetos a KPI.
 
-DISCLAMER HISTÓRICO: Este archivo se conserva como referencia técnica interna. No es fuente canónica para cifras de alcance. Rangos anteriores (19–25, 24–28, ~35–65, ~70–90, ~76–85) han sido reemplazados definitivamente por el rango vigente 24–31 (24 núcleo + hasta 7 condicionales). Para valores oficiales consultar: `docs/propuesta_final/03_TRANSACCIONES_SAP_INCLUIDAS.md`, `docs/propuesta_final/ANEXO_TECNICO_TRANSACCIONES_VS_TABLAS.md`, `docs/propuesta_final/08_ESTIMACION_DE_ESFUERZOS_Y_COSTOS.md`, `docs/propuesta_final/09_CRONOGRAMA_SEMANAL.md` y `docs/internos/estado_documentos.md`.
+DISCLAMER HISTÓRICO: Este archivo se conserva como referencia técnica interna. No es fuente canónica para cifras de alcance. Rangos anteriores (19–25, 24–28, ~35–65, ~70–90, ~76–85, 24–31) han sido reemplazados definitivamente por el rango vigente 32–38. Para valores oficiales consultar: `docs/propuesta_final/03_TRANSACCIONES_SAP_INCLUIDAS.md`, `docs/propuesta_final/ANEXO_TECNICO_TRANSACCIONES_VS_TABLAS.md`, `docs/propuesta_final/08_ESTIMACION_DE_ESFUERZOS_Y_COSTOS.md`, `docs/propuesta_final/09_CRONOGRAMA_SEMANAL.md` y `docs/internos/estado_documentos.md`.
 
 --------------------------------------------------------------------------------
 SECCIÓN 1: EL FOCO PRINCIPAL - UNIVERSAL JOURNAL (FI/CO)
@@ -90,7 +90,7 @@ SECCIÓN 6: RESUMEN NUMÉRICO DEL ALCANCE (MVP)
 | Tablas núcleo (incluir) | 24 | Confirmadas para robustez de reportes. |
 | Tablas condicionales | 7+ | Activación sujeta a validación KPI/caso uso. |
 | Tablas obsoletas | 3 | Excluidas (BSEG, COEP, FAGLFLEXA) |
-| Total potencial | 24–31+ | Rango vigente |
+| Total potencial | 32–38 | Rango vigente |
 
 Nota: Tablas de compatibilidad (LFB1, KNB1, KNVV) fuera de MVP salvo requerimiento explícito en procesos P2P o segmentación extendida de clientes/proveedores.
 
@@ -100,6 +100,6 @@ SECCIÓN 7: NOTA DE CONSISTENCIA
 Este documento está alineado con:
 - `docs/internos/mapeo_transacciones_tablas_detallado.csv` (estado_inclusion)
 - `docs/entregables/ALCANCE_TABLAS_E_INDICES.md` (política de particionamiento y clustering)
-- `docs/propuesta_final/ANEXO_TECNICO_TRANSACCIONES_VS_TABLAS.md` (rango vigente 24–31)
+- `docs/propuesta_final/ANEXO_TECNICO_TRANSACCIONES_VS_TABLAS.md` (rango vigente 32–38)
 
 Última actualización: 08-nov-2025

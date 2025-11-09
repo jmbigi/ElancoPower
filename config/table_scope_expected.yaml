@@ -19,10 +19,18 @@ core_tables:
   - MAKT          # Descripciones material (promovida a core para UX/KPIs legibles)
   - MARC          # Material por planta (promovida; necesaria para granularidad WERKS)
   - KNA1          # Maestro cliente
-  - LFA1          # Maestro proveedor (promovida por cobertura robusta aunque KPIs AP puedan diferirse)
+  - LFA1          # Maestro proveedor
   - BUT000        # Business Partner (canónico)
-  - SKA1          # Plan de cuentas (promovida por jerarquías contables y etiquetado cuentas)
+  - SKA1          # Plan de cuentas (jerarquías contables)
   - T001          # Sociedades (company codes)
+  - SKAT          # Textos de cuentas contables (legibilidad reportes FI)
+  - KNB1          # Cliente por sociedad (condiciones de pago, riesgo crédito)
+  - KNVV          # Cliente vista comercial (canal, sector, oficina ventas)
+  - LFB1          # Proveedor por sociedad (condiciones de pago AP)
+  - T001W         # Plantas / centros logísticos (nombres legibles)
+  - EKET          # Programación de entregas (cumplimiento proveedores)
+  - CKMLCR        # Cost component split (Material Ledger - costos estándar)
+  - CSKT          # Textos centros de costo (legibilidad OPEX/CO)
 
 conditional_tables:
   - VBEP          # Schedule lines / backlog / aging (ventas)
@@ -44,26 +52,18 @@ optional_tables:
 recommended_additional_candidates:
   CEPC: "Profit Center master (needed if PRCTR dimensional analytics beyond code list)"
   SKB1: "G/L account company code data (if statements need local attributes)"
-  # VBFA movido a conditional_tables
-  # LFA1 promovido a core_tables
-  KNB1: "Customer master company code view (credit control, payment terms)"
-  KNVV: "Customer sales view (sales area, distribution channel, division)"
   TCURR: "Exchange rates (if multi-currency normalization is required)"
   TCURF: "Exchange rate types (support for currency conversion logic)"
   MSKA: "Special stock (consignment) if inventory KPIs need it"
-  CKMLCR: "Material ledger cost component split (if detailed cost analysis required)"
-  # MARC promovido a core_tables
   MAST: "Material to BOM link (if future manufacturing analytics considered)"
-  T001W: "Plants / Storage locations extended attributes"
-  # CE1XXXX y CE4XXXX ahora en optional_tables con calificador Costing-Based
 
 rules:
-  max_core_tables: 25
+  max_core_tables: 40
   min_core_tables: 15
-  expected_core_count: 24   # actualizado tras promoción de MAKT, MARC, LFA1, SKA1
-  max_total_tables: 32      # ampliado para permitir condicionales CO-PA y STXL
+  expected_core_count: 32   # actualizado tras promoción de 8 tablas críticas
+  max_total_tables: 39      # core 32 + condicionales (7) = 39 (rango 32–39)
   include_optional_if: "Confirmed KPI dependency OR activation of Costing-Based CO-PA"
 
 metadata:
-  version: "2025-11-08-reclass2"
-  note: "Scope updated adding CO-PA (CE1/CE4) and STXL as conditional; core 24, conditional 7."
+  version: "2025-11-09-reclass3"
+  note: "Promoted 8 critical semantic tables (SKAT, KNB1, KNVV, LFB1, T001W, EKET, CKMLCR, CSKT); new canonical range 32–39 (core 32 + up to 7 conditional)."

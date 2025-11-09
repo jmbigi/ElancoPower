@@ -46,9 +46,9 @@ TRANSACCIÓN SAP (UI)          TABLAS SAP (Datos)         REPLICACIÓN SLT
 | **Prioridad 1 (Críticas)** | 4 | 22% | 10–14 tablas |
 | **Prioridad 2 (Importantes)** | 4 | 22% | 6–8 tablas |
 | **Pendientes de clasificar** | 10 | 56% | 3–5 tablas (aportes marginales/condicionales) |
-| **TOTAL** | **18** | **100%** | **24–31 tablas SAP (MVP ampliado)** |
+| **TOTAL** | **18** | **100%** | **32–38 tablas SAP (MVP extendido)** |
 
-**Nota:** Una transacción puede requerir múltiples tablas. Por ejemplo, VA05 requiere al menos 3 tablas (VBAK, VBAP, VBEP).
+**Nota:** Una transacción puede requerir múltiples tablas. Por ejemplo, VA05 requiere al menos 6 tablas (VBAK, VBAP, VBUK, VBUP, KNB1, KNVV) y puede incluir VBEP/VBFA según KPI.
 
 ### Distribución por Módulo SAP
 
@@ -86,7 +86,7 @@ Transacción para consultar órdenes de venta abiertas (pendientes de facturaci�
 
 #### Datos Clave
 - **Tablas SAP principales:** VBAK (cabecera), VBAP (posiciones)
-- **Tablas SAP principales en S/4HANA:** VBAK (cabecera), VBAP (posiciones), VBUK (status cabecera), VBUP (status posición)
+- **Tablas SAP principales en S/4HANA:** VBAK (cabecera), VBAP (posiciones), VBUK (status cabecera), VBUP (status posición), KNB1 (cliente x sociedad), KNVV (cliente vista comercial), T001W (planta)
 - **Campos críticos:**
   - Número de orden (VBELN)
   - Cliente (KUNNR)
@@ -170,7 +170,7 @@ Reporte de partidas reales de órdenes de costos (órdenes internas de CO). Util
 
 #### Datos Clave
 - **Tablas SAP principales:** COBK (cabecera doc CO), COEP (partidas individuales), AUFK (maestro de órdenes)
-- **Tablas SAP principales en S/4HANA:** ACDOCA (Universal Journal), AUFK (maestro de órdenes), CSKS (maestro centros de costo)
+- **Tablas SAP principales en S/4HANA:** ACDOCA (Universal Journal), AUFK (maestro de órdenes), CSKS (maestro centros de costo), CSKT (textos centros de costo)
 - **Campos críticos:**
   - Orden CO (AUFNR)
   - Centro de costo (KOSTL)
@@ -209,7 +209,7 @@ Visualización de partidas individuales del libro mayor (General Ledger). Transa
 
 #### Datos Clave
 - **Tablas SAP principales:** BKPF (cabecera documento) (S/4HANA sustituye FAGLFLEXA/BSEG por ACDOCA)
-- **Tablas SAP principales en S/4HANA:** ACDOCA (Universal Journal), BKPF (cabecera documento)
+- **Tablas SAP principales en S/4HANA:** ACDOCA (Universal Journal), BKPF (cabecera documento), SKAT (textos plan de cuentas)
 - **Campos críticos:**
   - Sociedad (BUKRS)
   - Cuenta de mayor (RACCT)
@@ -291,7 +291,7 @@ Visualización de documentos contables (facturas, notas de crédito, pagos). Tra
 
 #### Datos Clave
 - **Tablas SAP principales:** BKPF (cabecera), BSEG (posiciones), BSID/BSAD (partidas deudores)
-- **Tablas SAP principales en S/4HANA:** BKPF (cabecera), ACDOCA (posiciones)
+- **Tablas SAP principales en S/4HANA:** BKPF (cabecera), ACDOCA (posiciones), SKAT (textos de cuentas)
 - **Nota S/4HANA:** BSEG y las vistas de partidas BSID/BSAD se consideran reemplazadas por ACDOCA y estructuras derivadas. No se replican directamente salvo necesidad de compatibilidad muy específica; el modelo se basa en ACDOCA como fuente única de partidas.
 - **Campos críticos:**
   - Número documento (BELNR)
@@ -329,7 +329,7 @@ Visualización de documentos contables (facturas, notas de crédito, pagos). Tra
 Balance de comprobación (Trial Balance) por cuenta de mayor. Resume saldos iniciales, movimientos del periodo y saldos finales.
 
 #### Datos Clave
-- **Tablas SAP principales:** ACDOCA (partidas), ACDOCA_T (totales periodo) (reemplazan FAGLFLEXA/FAGLFLEXT)
+- **Tablas SAP principales:** ACDOCA (partidas), ACDOCA_T (totales periodo) (reemplazan FAGLFLEXA/FAGLFLEXT), SKAT (textos de cuentas)
 - **Campos críticos:**
   - Cuenta de mayor (RACCT)
   - Saldo inicial
@@ -363,7 +363,7 @@ Balance de comprobación (Trial Balance) por cuenta de mayor. Resume saldos inic
 Balance General (Balance Sheet) con estructura jerárquica de cuentas.
 
 #### Datos Clave
-- **Tablas SAP principales:** ACDOCA, SKA1 (plan de cuentas) (FAGLFLEXA ya consolidada en ACDOCA)
+- **Tablas SAP principales:** ACDOCA_T, SKA1 (plan de cuentas), SKAT (textos de cuentas) (FAGLFLEXA ya consolidada en ACDOCA)
 - **Campos críticos:**
   - Cuenta de mayor (RACCT)
   - Grupo de cuentas
@@ -399,7 +399,7 @@ Las siguientes **10 transacciones** están identificadas en el documento origina
 #### Descripción Preliminar
 Lista de pedidos de compra por proveedor. Utilizada para seguimiento de órdenes de compra abiertas.
 
-**Tablas SAP principales:** EKKO (cabecera OC), EKPO (posiciones OC)
+**Tablas SAP principales:** EKKO (cabecera OC), EKPO (posiciones OC), EKET (programación de entregas)
 
 ---
 
@@ -427,7 +427,7 @@ Visualización de costos estándar de materiales por centro.
 #### Descripción Preliminar
 Análisis de stock por fecha de recepción (SLED/BBD analysis).
 
-**Tablas SAP principales:** MSEG (movimientos), MARD (stocks)
+**Tablas SAP principales:** MSEG (movimientos), MARD (stocks), T156 (clases de movimiento) [condicional]
 
 ---
 
@@ -457,7 +457,7 @@ Transacción custom para consulta de condiciones de pricing.
 #### Descripción Preliminar
 Visualización individual de pedidos de compra.
 
-**Tablas SAP principales:** EKKO, EKPO
+**Tablas SAP principales:** EKKO, EKPO, EKET
 
 ---
 
@@ -471,7 +471,7 @@ Visualización individual de pedidos de compra.
 #### Descripción Preliminar
 Partidas individuales de proveedores (cuentas por pagar).
 
-**Tablas SAP principales en S/4HANA:** BKPF, ACDOCA (filtrando por tipo de cuenta 'K')
+**Tablas SAP principales en S/4HANA:** BKPF, ACDOCA (filtrando por tipo de cuenta 'K'), LFB1 (proveedor por sociedad)
 
 ---
 
@@ -485,7 +485,7 @@ Partidas individuales de proveedores (cuentas por pagar).
 #### Descripción Preliminar
 Partidas individuales de clientes (cuentas por cobrar).
 
-**Tablas SAP principales en S/4HANA:** BKPF, ACDOCA (filtrando por tipo de cuenta 'D')
+**Tablas SAP principales en S/4HANA:** BKPF, ACDOCA (filtrando por tipo de cuenta 'D'), KNB1 (cliente por sociedad)
 
 ---
 
@@ -499,7 +499,7 @@ Partidas individuales de clientes (cuentas por cobrar).
 #### Descripción Preliminar
 Stock de materiales por centro/almacén.
 
-**Tablas SAP principales:** MARD, MCHB (lotes)
+**Tablas SAP principales:** MARD, MCHB (lotes), T001W (planta)
 
 ---
 
@@ -638,7 +638,7 @@ Para cada transacción se debe validar en Fase 0:
 
 📋 **"Mapeo Completo: Transacciones → Tablas SAP → BigQuery"**
 - 18 transacciones clasificadas por prioridad
-- Listado completo de tablas SAP requeridas (MVP 24–31 tablas; 24 núcleo + hasta 7 condicionales)
+- Listado completo de tablas SAP requeridas (MVP 32–38 tablas; 32 núcleo + hasta 6 condicionales)
 - Confirmación de disponibilidad de cada tabla en BigQuery
 - Estimación de esfuerzo por tabla (configuración SLT, validación, transformaciones)
 - Orden de implementación para Fase 1
@@ -648,4 +648,4 @@ Para cada transacción se debe validar en Fase 0:
 
 *Siguiente sección: [04_FASE_0_REVISION_ALCANCE_Y_FACTIBILIDAD.md](04_FASE_0_REVISION_ALCANCE_Y_FACTIBILIDAD.md)*
 
-*Versión 1.2 - 8-nov-2025 (Actualiza rango tablas MVP de 24–28 a 24–31; se aclara composición 24 núcleo + hasta 7 condicionales)*
+*Versión 1.3 - 9-nov-2025 (Actualiza rango tablas MVP de 24–31 a 32–38; se integran 8 tablas semánticas críticas en núcleo extendido)*

@@ -1,25 +1,25 @@
 # Lista Priorizada de Tablas SAP S/4HANA → BigQuery (Versión Actualizada)
 
 Fecha: 09-nov-2025  
-Estado: Actualización integrada al alcance vigente (core=24, condicional mínimo=4).  
-Fuente canónica: `config/table_scope_expected.yaml` (core=24) + `docs/internos/mapeo_transacciones_tablas_detallado.csv`.
+Estado: Actualización integrada al alcance vigente (core=32, condicional inicial=0–6).  
+Fuente canónica: `config/table_scope_expected.yaml` (core=32) + `docs/internos/mapeo_transacciones_tablas_detallado.csv`.
 
 ---
 ## 1. Resumen Ejecutivo
 
 Se integra la reclasificación solicitada para robustecer cobertura de VA05, MB5B y KE24:
 
-- Núcleo (core): 24 tablas
-- Condicional mínimo: 4 tablas (VBEP, KONV, VBFA, MCHB)
-- Opcionales: STXL, KONP, CE1XXXX/CE4XXXX (sólo si CO-PA Costing-Based)
+- Núcleo (core): 32 tablas (24 técnicas + 8 semánticas críticas)
+- Condicional inicial: 0–6 tablas (VBEP, KONV, VBFA, MCHB, CE1XXXX, CE4XXXX; STXL bajo demanda)
+- Opcionales: STXL, KONP, CE1XXXX/CE4XXXX (si CO-PA Costing-Based)
 
-Impacto: Se promueven a core las tablas MAKT, MARC, LFA1 y SKA1. El rango total estimado queda en 24–31 (activando condicionales mínimas).
+Impacto: Se promueven a core las tablas SKAT, KNB1, KNVV, LFB1, T001W, EKET, CKMLCR y CSKT. El rango total estimado queda en 32–38.
 
 ---
 ## 2. Clasificación Refinada
 
-### 2.1 Core (Núcleo Confirmado: 24)
-ACDOCA, ACDOCA_T, BKPF, AUFK, CSKS, CSKA, SKA1, VBAK, VBAP, VBUK, VBUP, EKKO, EKPO, MKPF, MSEG, MARD, MBEW, MARA, MAKT, MARC, KNA1, LFA1, BUT000, T001
+### 2.1 Core (Núcleo Confirmado: 32)
+ACDOCA, ACDOCA_T, BKPF, AUFK, CSKS, CSKA, SKA1, SKAT, CSKT, VBAK, VBAP, VBUK, VBUP, KNA1, KNB1, KNVV, EKKO, EKPO, EKET, MKPF, MSEG, MARD, MBEW, MARC, CKMLCR, MARA, MAKT, LFA1, LFB1, BUT000, T001, T001W
 
 ### 2.2 Condicional (activar según KPI / método)
 | Tabla | Uso Principal | Activar Si |

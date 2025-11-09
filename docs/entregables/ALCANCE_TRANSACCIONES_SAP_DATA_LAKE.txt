@@ -1,7 +1,7 @@
 ================================================================================
     ALCANCE: TRANSACCIONES SAP PARA SINCRONIZACIÓN CON DATA LAKE
 ================================================================================
-DISCLAMER HISTÓRICO (29-oct-2025): Documento preservado por trazabilidad. No es fuente canónica actual. Valores vigentes del proyecto (8-nov-2025): 18 transacciones, 24–31 tablas (24 núcleo + hasta 7 condicionales), 12 dashboards, 1,590 horas, 42 semanas. Rangos anteriores (19–25, 24–28, ~35–65, ~70–90, ~76–85) quedan marcados como históricos. Consulte siempre las fuentes canónicas: `03_TRANSACCIONES_SAP_INCLUIDAS.md`, `ANEXO_TECNICO_TRANSACCIONES_VS_TABLAS.md`, `08_ESTIMACION_DE_ESFUERZOS_Y_COSTOS.md`, `09_CRONOGRAMA_SEMANAL.md`, `estado_documentos.md`.
+DISCLAMER HISTÓRICO (29-oct-2025): Documento preservado por trazabilidad. No es fuente canónica actual. Valores vigentes del proyecto (9-nov-2025): 18 transacciones, 32–38 tablas (32 núcleo + hasta 6 condicionales), 12 dashboards, 1,590 horas, 42 semanas. Rangos anteriores (19–25, 24–28, 24–31, ~35–65, ~70–90, ~76–85) quedan marcados como históricos. Consulte siempre las fuentes canónicas: `03_TRANSACCIONES_SAP_INCLUIDAS.md`, `ANEXO_TECNICO_TRANSACCIONES_VS_TABLAS.md`, `08_ESTIMACION_DE_ESFUERZOS_Y_COSTOS.md`, `09_CRONOGRAMA_SEMANAL.md`, `estado_documentos.md`.
 Proyecto: Elanco Power - Centralización de Datos
 Fecha: 29 de octubre de 2025
 Fuente: Attach_2_Correo_1_Transacciones SAP.csv (normalizado)
@@ -158,13 +158,13 @@ PRÓXIMOS PASOS
 [ ] Definición de SLA para cada prioridad
 
 ================================================================================
-ADENDA 08-NOV-2025 — Optimización por S/4HANA (Universal Journal) (Histórico, ver rango vigente 24–31 en fuentes canónicas)
+ADENDA 08-NOV-2025 — Optimización por S/4HANA (Universal Journal) (Histórico, ver rango vigente 32–38 en fuentes canónicas)
 ================================================================================
 
 Resumen ejecutivo técnico:
 - Sistema fuente confirmado: S/4HANA.
 - Estrategia pivota al **Universal Journal**: replicar **ACDOCA** (partidas) y **ACDOCA_T** (totales).
-- Beneficio: Sustituye múltiples tablas (BSEG, FAGLFLEXA, COEP). Nota histórica: la mención al rango 19–25 correspondía a iteración preliminar; rango vigente definitivo: **24–31** (ver Anexo Técnico y alcance actualizado).
+- Beneficio: Sustituye múltiples tablas (BSEG, FAGLFLEXA, COEP). Nota histórica: la mención al rango 19–25 correspondía a iteración preliminar; rango vigente definitivo: **32–38** (ver Anexo Técnico y alcance actualizado).
 
 Tablas complementarias prioritarias:
 - FI/CO: BKPF (cabecera), SKA1 (plan de cuentas), CSKS/CSKA (CO), AUFK (órdenes CO).
