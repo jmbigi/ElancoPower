@@ -292,6 +292,7 @@ Visualización de documentos contables (facturas, notas de crédito, pagos). Tra
 #### Datos Clave
 - **Tablas SAP principales:** BKPF (cabecera), BSEG (posiciones), BSID/BSAD (partidas deudores)
 - **Tablas SAP principales en S/4HANA:** BKPF (cabecera), ACDOCA (posiciones)
+- **Nota S/4HANA:** BSEG y las vistas de partidas BSID/BSAD se consideran reemplazadas por ACDOCA y estructuras derivadas. No se replican directamente salvo necesidad de compatibilidad muy específica; el modelo se basa en ACDOCA como fuente única de partidas.
 - **Campos críticos:**
   - Número documento (BELNR)
   - Tipo documento (BLART)

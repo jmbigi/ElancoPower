@@ -66,7 +66,7 @@ EXPECTED_DOCS = {
 }
 
 HISTORICAL_MARKERS = {
-    "19–25", "20–26", "19-25", "20-26"
+    "19–25", "20–26", "19-25", "20-26", "24–28", "24-28"
 }
 
 def read_text(rel_path: str) -> str:
@@ -101,15 +101,24 @@ CHECK_FUNCS = {
 }
 
 def find_outdated_ranges(text: str) -> list[str]:
-    # Exclude lines explicitly marked as HISTÓRICO or historical notes.
+    """Detect lines containing outdated range markers.
+
+    Skips lines that are clearly explanatory upgrade notes (e.g. lines containing
+    'Actualiza rango', 'Versión', or explicit canonical context), to avoid false positives
+    where the old range is being referenced as part of a change log statement.
+    """
     warnings = []
     for line in text.splitlines():
-        if "HISTÓRICO" in line.upper() or "histórico" in line.lower():
+        normalized = line.lower()
+        if (
+            "histórico" in normalized
+            or "actualiza rango" in normalized
+            or "versión" in normalized
+        ):
             continue
         for marker in HISTORICAL_MARKERS:
             if marker in line:
-                # If line also contains current canonical range -> skip
-                if contains_tablas_rango(line):
+                if contains_tablas_rango(line):  # current canonical also present
                     continue
                 warnings.append(line.strip())
     return warnings

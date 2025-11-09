@@ -88,11 +88,11 @@ Verificar disponibilidad de tablas para cada transacción:
 
 | Transacción | Tablas Requeridas | Estado | Ticket |
 |-------------|-------------------|--------|--------|
-| VA05 | VBAK, VBAP, VBEP | ⏳ Por validar | - |
+| VA05 | VBAK, VBAP, (VBEP condicional) | ⏳ Por validar | - |
 | ZLEL008 | Z-tables (TBD) | ❌ No disponible | BQ-7713 |
-| KSB1 | COBK, COEP, AUFK | ⏳ Por validar | - |
-| FAGLL03 | FAGLFLEXA, BKPF, BSEG | ⚠️ Parcial | BQ-7721 |
-| KE24 | CE1*, CE4* | ❌ No disponible | BQ-7713 |
+| KSB1 | (COEP reemplazada por ACDOCA), AUFK, CSKS | ⏳ Por validar | - |
+| FAGLL03 | (FAGLFLEXA/BSEG reemplazadas por ACDOCA/ACDOCA_T), BKPF | ⚠️ Parcial | BQ-7721 |
+| KE24 | CE1*, CE4* (si Costing-Based) | ❌ No disponible | BQ-7713 |
 | ... | ... | ... | ... |
 
 **2. Benchmarks de Performance**
@@ -409,7 +409,7 @@ Esta sección consolida los **supuestos y requisitos operativos críticos** que 
 | 2 | **Conectividad SAP → SLT → BigQuery** | Prueba de extremo a extremo: latencia < 100 ms; puertos RFC abiertos; certificados vigentes; credenciales de service account funcionales. | TI Global + TechOps | ⏳ |
 | 3 | **Permisos BigQuery Equipo Proyecto** | Roles asignados: Data Editor (Funcional SAP, Consultor BI), Viewer (PM, Stakeholders), Admin (TechOps). Service account con permisos BigQuery Job User + Data Editor. | TI Elanco | ⏳ |
 | 4 | **Infraestructura BigQuery Proveída** | Proyecto GCP aprobado, datasets `casa_bi_dev`, `casa_bi_qa`, `casa_bi_prod` creados, política de acceso aplicada. | TI Global Elanco | ⏳ |
-| 5 | **Tablas SAP Prioritarias en Proceso de Replicación** | Solicitudes de replicación para tablas críticas (FAGLFLEXA, CE1*/CE4*, COBK/COEP, VBAK/VBAP, Z-tables) registradas y/o en ejecución. | TI Global / SAP Basis | ⏳ |
+| 5 | **Tablas SAP Prioritarias en Proceso de Replicación** | Solicitudes de replicación para tablas críticas (ACDOCA/ACDOCA_T, CE1*/CE4*, COBK, VBAK/VBAP, Z-tables) registradas y/o en ejecución. | TI Global / SAP Basis | ⏳ |
 | 6 | **Exportación Masiva SAP Autorizada** | Perfil con autorizaciones S_TABU_DIS / S_TABU_RFC y sin límites restrictivos de volumen en extracción. | SAP Basis / TI Global | ⏳ |
 
 #### RACI de Requisitos Técnicos Operativos

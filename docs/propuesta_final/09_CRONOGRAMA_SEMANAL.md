@@ -102,6 +102,7 @@ Inicio efectivo: 6-ene-2026 (considera feriados y disponibilidad inicial)
 
 **Transacciones:** FAGLL03, FB03, F.08, F.01
 **Tablas SAP:** FAGLFLEXA, BKPF, BSEG, FAGLFLEXT, SKA1, BSID, BSAD
+**Nota S/4HANA:** En el modelo definitivo se utilizará ACDOCA/ACDOCA_T como sustituto consolidado de FAGLFLEXA, BSEG y vistas BSID/BSAD.
 - Desarrollo + validación + testing
 - **Horas totales:** 89h (Consultor BI: 60h, Funcional SAP: 26h, Project Manager: 3h)
 - **Hito:** ✅ Módulo FI completo
@@ -184,6 +185,7 @@ Inicio efectivo: 6-ene-2026 (considera feriados y disponibilidad inicial)
 **Dashboards:** Financiero General, OPEX, Controlling
 **Definición SAP Functional + desarrollo**
 **Tablas:** BKPF, BSEG, FAGLFLEXA, COEP, COBK
+**Nota S/4HANA:** Estas estructuras clásicas se cubren vía ACDOCA/ACDOCA_T y relaciones con BKPF/AUFK, evitando replicación directa de BSEG/FAGLFLEXA/COEP salvo casos de compatibilidad.
 - 3 dashboards con RLS
 - **Horas totales:** 82h (Consultor BI: 64h, Funcional SAP: 14h, Project Manager: 4h)
 - **Hito:** ✅ Dashboards Financieros completos

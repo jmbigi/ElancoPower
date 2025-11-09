@@ -1,6 +1,6 @@
 # Elanco Power – Documentación del Proyecto
 
-**Actualizado:** 8 de noviembre de 2025  
+**Actualizado:** 7 de noviembre de 2025  
 **Proyecto:** Automatización SAP → BigQuery → Power BI  
 **Cliente:** Elanco Animal Health  
 **Consultoría:** Aunergia

@@ -194,15 +194,16 @@ Estos requisitos **DEBEN** estar resueltos antes del kick-off:
 
 **Tablas Críticas que DEBEN estar disponibles:**
 
-| Transacción | Tablas SAP | Status BigQuery | Ticket |
-|-------------|------------|-----------------|--------|
-| VA05 | VBAK, VBAP, VBEP | ⏳ Validar | - |
+| Transacción | Tablas SAP (clásicas / referencia) | Status BigQuery | Ticket |
+|-------------|------------------------------------|-----------------|--------|
+| VA05 | VBAK, VBAP, (VBEP condicional) | ⏳ Validar | - |
 | ZLEL008 | Z-tables (TBD) | ❌ No disponible | BQ-7713 |
-| KSB1 | COBK, COEP, AUFK | ⏳ Validar | - |
-| FAGLL03 | FAGLFLEXA, BKPF, BSEG | ⚠️ Parcial | BQ-7721 |
-| KE24 | CE1*, CE4* | ❌ No disponible | BQ-7713 |
+| KSB1 | (COEP reemplazada por ACDOCA), AUFK, CSKS | ⏳ Validar | - |
+| FAGLL03 | (FAGLFLEXA, BSEG reemplazadas por ACDOCA/ACDOCA_T), BKPF | ⚠️ Parcial | BQ-7721 |
+| KE24 | CE1*, CE4* (solo si CO-PA Costing-Based) | ❌ No disponible | BQ-7713 |
 | ME2L | EKKO, EKPO | ⏳ Validar | - |
 | ... | ... | ... | ... |
+**Nota S/4HANA:** Las tablas COEP, BSEG y FAGLFLEXA se cubren mediante ACDOCA/ACDOCA_T; su mención aquí es referencial para trazabilidad funcional.
 
 **Criterio Go/No-Go:**
 - Mínimo 12 de 18 transacciones con tablas completas disponibles

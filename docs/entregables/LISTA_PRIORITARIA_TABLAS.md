@@ -13,7 +13,7 @@ Se integra la reclasificación solicitada para robustecer cobertura de VA05, MB5
 - Condicional mínimo: 4 tablas (VBEP, KONV, VBFA, MCHB)
 - Opcionales: STXL, KONP, CE1XXXX/CE4XXXX (sólo si CO-PA Costing-Based)
 
-Impacto: Se promueven a core las tablas MAKT, MARC, LFA1 y SKA1. El rango total estimado queda en 24–28 (activando condicionales mínimas).
+Impacto: Se promueven a core las tablas MAKT, MARC, LFA1 y SKA1. El rango total estimado queda en 24–31 (activando condicionales mínimas).
 
 ---
 ## 2. Clasificación Refinada

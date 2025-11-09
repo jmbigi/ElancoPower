@@ -203,7 +203,7 @@ En SLT se configura:
 | Transacciones Prioridad 1 | 4 | ~14 | Media a Alta |
 | Transacciones Prioridad 2 | 4 | ~8 | Media |
 | Transacciones Pendientes | 10 | ~3 (aportes marginales/condicionales) | Baja a Media |
-| **TOTAL ESTIMADO (MVP)** | **18** | **25 tablas** | **Mixta (optimizada por S/4)** |
+| **TOTAL ESTIMADO (MVP)** | **18** | **24–31 tablas** | **Mixta (optimizada por S/4)** |
 
 ---
 
@@ -218,7 +218,7 @@ ENTRADAS (Fase 0)              PROCESO                    SALIDAS
 ─────────────────              ───────                    ────────
 ┌─────────────────┐           ┌──────────────────┐      ┌────────────────┐
 │ 18 Transacciones│──────────▶│ Análisis de      │─────▶│ Lista de       │
-│ SAP priorizadas │           │ Tablas           │      │ 25 Tablas      │
+│ SAP priorizadas │           │ Tablas           │      │ 24–31 Tablas   │
 └─────────────────┘           │ Subyacentes      │      │ SAP a Replicar │
                               └──────────────────┘      └────────────────┘
                                        │
@@ -250,7 +250,7 @@ ENTRADAS (Fase 0)              PROCESO                    SALIDAS
 |--------|--------------|---------|------------|
 | Tablas no disponibles en BigQuery | Media | Alto | Ticket a TI Global en Fase 0 |
 | Transacciones Z con tablas desconocidas | Media | Medio | Análisis ABAP (12h incluidas) |
-| Más tablas de lo estimado (>25) | Baja | Medio | Ajuste de alcance en Fase 0 |
+| Más tablas de lo estimado (>31) | Baja | Medio | Ajuste de alcance en Fase 0 |
 | Tablas con volúmenes muy altos (ACDOCA) | Media | Medio | Estrategia de particionamiento y filtros |
 
 ### 5.4. Decisión Go/No-Go
@@ -260,7 +260,7 @@ ENTRADAS (Fase 0)              PROCESO                    SALIDAS
 ✅ **Mínimo 80% de las tablas identificadas disponibles en BigQuery**
 
 Por ejemplo:
-- Si se identifican 25 tablas necesarias
+- Si se identifican 24–31 tablas necesarias
 - Mínimo 20 tablas deben estar disponibles
 - Si <20 disponibles: Evaluar plan B (escalamiento a TI Global, uso de extractores RFC, etc.)
 
@@ -440,7 +440,7 @@ Luego recreas el informe en Power BI usando esos datos.
 **Proceso Completo:**
 
 1. **Negocio identifica** 18 transacciones críticas
-2. **Fase 0 mapea** transacciones → ~35-65 tablas SAP (optimizado por ACDOCA)
+2. **Fase 0 mapea** transacciones → 24–31 tablas SAP (optimizado por ACDOCA)
 3. **TI Global confirma** disponibilidad de tablas en BigQuery
 4. **SLT replica** tablas configuradas a BigQuery
 5. **BigQuery procesa** datos (limpieza, transformaciones)
@@ -480,7 +480,7 @@ Luego recreas el informe en Power BI usando esos datos.
 
 ### P5: ¿Cuántas tablas SAP existen en total?
 
-**R:** SAP S/4HANA tiene >5.000 tablas. Este proyecto replica **25** tablas, un número optimizado por el uso de **ACDOCA** (Universal Journal) que reemplaza múltiples tablas históricas.
+**R:** SAP S/4HANA tiene >5.000 tablas. Este proyecto replica **24–31** tablas (24 núcleo + hasta 7 condicionales), un rango optimizado por el uso de **ACDOCA** (Universal Journal) que reemplaza múltiples tablas históricas.
 
 ---
 
@@ -548,8 +548,8 @@ Categorías utilizadas en `docs/internos/mapeo_transacciones_tablas_detallado.cs
 - Documento `docs/entregables/ALCANCE_TABLAS_E_INDICES.md` (vigente) como referencia operativa.
 
 ### 11.7. Nota de Transparencia
-Las menciones a rangos de tablas en documentos históricos se consideran EXPLORATORIAS. Este anexo y `estado_documentos.md` reflejan el número canónico de 25 tablas.
+Las menciones a rangos de tablas en documentos históricos se consideran EXPLORATORIAS. Este anexo y `estado_documentos.md` reflejan el rango canónico de 24–31 tablas.
 
 ---
 
-*Versión: 1.5 - 9 de noviembre de 2025 (actualizado número canónico a 25 y referencias de índices)*
+*Versión: 1.5 - 9 de noviembre de 2025 (actualizado rango canónico a 24–31 y referencias de índices)*
