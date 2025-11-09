@@ -349,7 +349,7 @@ Cada riesgo incluye:
 
 ---
 
-### Semana 3 (20-26 ene 2026): Planificación Detallada
+### Semana 3 (20 al 26 ene 2026): Planificación Detallada
 
 | Día | Actividad | Responsable | Horas |
 |-----|-----------|-------------|-------|

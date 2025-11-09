@@ -915,7 +915,7 @@ Al final de la **Fase 0** (semana 5), se evaluará si continuar con el proyecto:
 - ✅ Accesos BigQuery (Data Editor) **activos**
 - ✅ Backlog priorizado y **aprobado** por Product Owner
 - ✅ No más de **2 riesgos ALTO bloqueantes** sin plan de mitigación
-- ✅ Estimaciones refinadas dentro de **±15% del esfuerzo original** (510-690 horas)
+- ✅ Estimaciones refinadas dentro de **±15% del esfuerzo original** (1.350-1.830 horas)
 
 ### 🚫 Criterios NO-GO (Detener o Re-planear)
 
@@ -923,7 +923,7 @@ Al final de la **Fase 0** (semana 5), se evaluará si continuar con el proyecto:
 - 🚫 Permisos SAP **NO otorgados** después de 4 semanas
 - 🚫 Tablas críticas en BigQuery **NO disponibles** y sin solución alternativa
 - 🚫 Más de **3 riesgos CRÍTICOS** sin mitigación efectiva
-- 🚫 Estimaciones superan el esfuerzo planificado en **> 25%** (750+ horas)
+- 🚫 Estimaciones superan el esfuerzo planificado en **> 25%** (1.988+ horas)
 - 🚫 Falta de patrocinio ejecutivo o Product Owner empoderado
 
 ### ⚠️ Criterios GO CON AJUSTES

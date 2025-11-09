@@ -41,7 +41,7 @@ La Fase 3 es solo una descripción conceptual de modelos predictivos sin impleme
 
 ESFUERZO Y RECURSOS
 
-El esfuerzo total del proyecto es de 1590 horas distribuidas en 42 semanas. La Fase 0 requiere 235 horas (6 semanas), la Fase 1 necesita 696 horas (22 semanas), y la Fase 2 demanda 659 horas (14 semanas). El equipo estará compuesto por Juan Manuel Bigi como Arquitecto de Datos y Desarrollador principal con 961 horas, Lucía Rodríguez como Analista SAP y Power User con 484 horas, y Linda López como Project Manager con 145 horas. No se incluye consultoría ABAP adicional ya que Lucía y Juan cuentan con expertise SAP.
+El esfuerzo total del proyecto es de 1.590 horas distribuidas en 42 semanas. La Fase 0 requiere 235 horas (6 semanas), la Fase 1 necesita 696 horas (22 semanas), y la Fase 2 demanda 659 horas (14 semanas). El equipo estará compuesto por Juan Manuel Bigi como Arquitecto de Datos y Desarrollador principal con 961 horas, Lucía Rodríguez como Analista SAP y Power User con 484 horas, y Linda López como Project Manager con 145 horas. No se incluye consultoría ABAP adicional ya que Lucía y Juan cuentan con expertise SAP.
 El inicio propuesto es el 6 de enero de 2026 y la finalización estimada a mediados de octubre de 2026 (semana 42 del cronograma).
 
 
@@ -85,12 +85,13 @@ La implementación de modelos predictivos de la Fase 3 no está incluida, solo s
 CRITERIOS DE ÉXITO
 
 El proyecto se considerará exitoso si se cumplen varios criterios cuantitativos y cualitativos. Debe haber 100% de las tablas SAP identificadas replicadas en BigQuery, aproximadamente 25 tablas asociadas a las 18 transacciones. La reducción de tiempo de consolidación debe ser al menos del 70%, pasando de 3-5 días a menos de 1 día. Los dashboards deben actualizarse en máximo 24 horas desde cierre de periodo.
+El proyecto se considerará exitoso si se cumplen varios criterios cuantitativos y cualitativos. Debe haber 100% de las tablas SAP identificadas replicadas en BigQuery, 25 tablas asociadas a las 18 transacciones.
 La exactitud de datos entre SAP y BigQuery debe ser mayor o igual al 95%. Se deben capacitar al menos 15 usuarios entre power users y usuarios finales. La adopción de dashboards debe alcanzar al menos 80% de usuarios activos a 30 días del go-live. La satisfacción de usuarios debe ser de al menos 4.0 sobre 5.0 en encuesta post-implementación.
 
 
 PRÓXIMOS PASOS
 
-Una vez aceptada la propuesta, los próximos pasos son firmar el contrato formal que Aunergia preparará en 3 a 5 días hábiles, definir el acuerdo comercial basado en las 1590 horas de esfuerzo, programar la reunión de kick-off para el 6 de enero de 2026 con duración de 2 a 3 horas, iniciar trámites de accesos a SAP, BigQuery y Power BI, y comenzar formalmente la Fase 0 en la primera semana de enero.
+Una vez aceptada la propuesta, los próximos pasos son firmar el contrato formal que Aunergia preparará en 3 a 5 días hábiles, definir el acuerdo comercial basado en las 1.590 horas de esfuerzo, programar la reunión de kick-off para el 6 de enero de 2026 con duración de 2 a 3 horas, iniciar trámites de accesos a SAP, BigQuery y Power BI, y comenzar formalmente la Fase 0 en la primera semana de enero.
 La validez de esta propuesta es de 30 días desde su emisión, hasta el 8 de diciembre de 2025. El proyecto representa una transformación digital significativa que modernizará los procesos de análisis de datos de Elanco, eliminará tareas manuales repetitivas, y habilitará toma de decisiones basada en información actualizada y confiable para toda la operación CASA.
 
 

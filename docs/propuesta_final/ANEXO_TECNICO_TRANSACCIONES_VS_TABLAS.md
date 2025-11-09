@@ -200,10 +200,10 @@ En SLT se configura:
 
 | Categoría | Cantidad | Tablas Estimadas | Complejidad |
 |-------------------------------|----------|------------------|-----------------|
-| Transacciones Prioridad 1 | 4 | 10–14 | Media a Alta |
-| Transacciones Prioridad 2 | 4 | 6–8 | Media |
-| Transacciones Pendientes | 10 | 3–5 (aportes marginales/condicionales) | Baja a Media |
-| **TOTAL ESTIMADO (MVP)** | **18** | **24–31 tablas** | **Mixta (optimizada por S/4 + CO-PA + textos)** |
+| Transacciones Prioridad 1 | 4 | ~14 | Media a Alta |
+| Transacciones Prioridad 2 | 4 | ~8 | Media |
+| Transacciones Pendientes | 10 | ~3 (aportes marginales/condicionales) | Baja a Media |
+| **TOTAL ESTIMADO (MVP)** | **18** | **25 tablas** | **Mixta (optimizada por S/4)** |
 
 ---
 
@@ -218,7 +218,7 @@ ENTRADAS (Fase 0)              PROCESO                    SALIDAS
 ─────────────────              ───────                    ────────
 ┌─────────────────┐           ┌──────────────────┐      ┌────────────────┐
 │ 18 Transacciones│──────────▶│ Análisis de      │─────▶│ Lista de       │
-│ SAP priorizadas │           │ Tablas           │      │ 35-65 Tablas   │
+│ SAP priorizadas │           │ Tablas           │      │ 25 Tablas      │
 └─────────────────┘           │ Subyacentes      │      │ SAP a Replicar │
                               └──────────────────┘      └────────────────┘
                                        │
@@ -250,7 +250,7 @@ ENTRADAS (Fase 0)              PROCESO                    SALIDAS
 |--------|--------------|---------|------------|
 | Tablas no disponibles en BigQuery | Media | Alto | Ticket a TI Global en Fase 0 |
 | Transacciones Z con tablas desconocidas | Media | Medio | Análisis ABAP (12h incluidas) |
-| Más tablas de lo estimado (>65) | Baja | Medio | Ajuste de alcance en Fase 0 |
+| Más tablas de lo estimado (>25) | Baja | Medio | Ajuste de alcance en Fase 0 |
 | Tablas con volúmenes muy altos (ACDOCA) | Media | Medio | Estrategia de particionamiento y filtros |
 
 ### 5.4. Decisión Go/No-Go
@@ -260,9 +260,9 @@ ENTRADAS (Fase 0)              PROCESO                    SALIDAS
 ✅ **Mínimo 80% de las tablas identificadas disponibles en BigQuery**
 
 Por ejemplo:
-- Si se identifican 50 tablas necesarias (S/4 optimizado)
-- Mínimo 40 tablas deben estar disponibles
-- Si <40 disponibles: Evaluar plan B (escalamiento a TI Global, uso de extractores RFC, etc.)
+- Si se identifican 25 tablas necesarias
+- Mínimo 20 tablas deben estar disponibles
+- Si <20 disponibles: Evaluar plan B (escalamiento a TI Global, uso de extractores RFC, etc.)
 
 ---
 
@@ -480,7 +480,7 @@ Luego recreas el informe en Power BI usando esos datos.
 
 ### P5: ¿Cuántas tablas SAP existen en total?
 
-**R:** SAP S/4HANA tiene >100,000 tablas. Este proyecto replica aproximadamente **~35-65** tablas, optimizado por el uso de **ACDOCA** (Universal Journal) que reemplaza múltiples tablas históricas.
+**R:** SAP S/4HANA tiene >5.000 tablas. Este proyecto replica **25** tablas, un número optimizado por el uso de **ACDOCA** (Universal Journal) que reemplaza múltiples tablas históricas.
 
 ---
 
@@ -511,9 +511,9 @@ Esta sección documenta el proceso propuesto para reducir el rango operativo de 
 ### 11.1. Estado Canónico (Vigente) y Gestión
 | Concepto | Valor Vigente (Canónico) | Notas |
 |----------|---------------------------|-------|
-| Rango de Tablas (MVP) | 24–31 | 24 núcleo + condicionales (VBEP, KONV, VBFA, MCHB, CE1XXXX, CE4XXXX, STXL). Sustituye rangos previos (~35–65, ~70–90, ~76–85). |
+| Número de Tablas (MVP) | 24–31 tablas | 24 núcleo + hasta 7 condicionales. Sustituye rangos previos (~35–65, ~70–90, ~76–85, 19–25). |
 | Tablas Obsoletas Excluidas | BSEG, COEP, FAGLFLEXA | Confirmado por uso de ACDOCA/ACDOCA_T (S/4HANA). |
-| Tablas Condicionales | Mínimas: VBEP, KONV, VBFA, MCHB; Opcionales: STXL, KONP, CE1XXXX, CE4XXXX | Activar por KPI (VBEP/VBFA/KONV/MCHB) o por CO-PA Costing-Based (CE1/CE4) y textos (STXL). |
+| Tablas Condicionales | VBEP, KONV, VBFA, MCHB, CE1XXXX, CE4XXXX, STXL | Activar según KPI/método (backlog, pricing, flujo ventas, stock por lote, CO-PA cost-based, textos). |
 
 ### 11.2. Clasificación de Tablas
 Categorías utilizadas en `docs/internos/mapeo_transacciones_tablas_detallado.csv`:
@@ -548,8 +548,8 @@ Categorías utilizadas en `docs/internos/mapeo_transacciones_tablas_detallado.cs
 - Documento `docs/entregables/ALCANCE_TABLAS_E_INDICES.md` (vigente) como referencia operativa.
 
 ### 11.7. Nota de Transparencia
-Las menciones a "~35–65" en documentos de entregables se consideran EXPLORATORIAS hasta que este anexo se actualice elevando el nuevo rango y `estado_documentos.md` refleje el cambio.
+Las menciones a rangos de tablas en documentos históricos se consideran EXPLORATORIAS. Este anexo y `estado_documentos.md` reflejan el número canónico de 25 tablas.
 
 ---
 
-*Versión: 1.7 - 9 de noviembre de 2025 (incluye CO-PA Costing-Based y textos largos como condicionales; rango 24–31)*
+*Versión: 1.5 - 9 de noviembre de 2025 (actualizado número canónico a 25 y referencias de índices)*

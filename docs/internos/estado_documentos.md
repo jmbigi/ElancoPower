@@ -6,14 +6,14 @@ Este archivo consolida el **estado** (vigente / histórico / auxiliar) de los pr
 
 - No se modifica nada dentro de `inputs/` (fuentes históricas recibidas de Elanco)
 - Cada documento "vigente" debe declarar explícitamente si reemplaza una versión previa
-- El alcance funcional (18 transacciones) y el rango de tablas (24–28) tienen UNA sola fuente canónica
+- El alcance funcional (18 transacciones) y el rango de tablas (24–31 tablas) tienen UNA sola fuente canónica
 
 ## 2. Fuentes Canónicas Actualizadas
 
 | Dominio | Documento | Rol | Comentario |
 |---------|-----------|-----|------------|
 | Alcance Transacciones | `docs/propuesta_final/03_TRANSACCIONES_SAP_INCLUIDAS.md` | Vigente (Canónico) | Define las 18 transacciones finales; explica normalización 22→18 |
-| Tablas Estimadas | `docs/propuesta_final/ANEXO_TECNICO_TRANSACCIONES_VS_TABLAS.md` | Vigente (Canónico) | Rango consolidado 24–31 tablas (24 núcleo + 7 condicionales activables) |
+| Tablas Estimadas | `docs/propuesta_final/ANEXO_TECNICO_TRANSACCIONES_VS_TABLAS.md` | Vigente (Canónico) | Rango vigente 24–31 tablas (24 núcleo + hasta 7 condicionales) |
 | Esfuerzo & Costos | `docs/propuesta_final/08_ESTIMACION_DE_ESFUERZOS_Y_COSTOS.md` | Vigente (Canónico) | Total 1,590h consistente |
 | Cronograma Global | `docs/propuesta_final/09_CRONOGRAMA_SEMANAL.md` | Vigente (Canónico) | 42 semanas totales |
 | Fase 1 (Detalle Data Lake) | `docs/propuesta_final/05_FASE_1_CONSTRUCCION_DATA_LAKE.md` | Vigente | Incluye aclaración semanas internas vs globales |
@@ -32,7 +32,7 @@ Este archivo consolida el **estado** (vigente / histórico / auxiliar) de los pr
 1. Cualquier cambio de alcance (nueva transacción) debe:
    - Ser trazado en `CORRECCIONES_APLICADAS_08NOV2025.md` (o archivo sucesor de changelog)
    - Ajustar simultáneamente: 03 (transacciones), Anexo Técnico (tablas), 08 (esfuerzos) si impacta horas
-2. El rango de tablas solo puede cambiar tras validación Fase 0 o incidencia formal (ticket documentado)
+2. El número de tablas solo puede cambiar tras validación Fase 0 o incidencia formal (ticket documentado)
 3. Si se mantiene divergencia deliberada (ej. archivo histórico con datos obsoletos) debe anotarse aquí
 
 ## 5. Resumen Ejecutivo de Consistencia (Estado Actual)
@@ -40,7 +40,7 @@ Este archivo consolida el **estado** (vigente / histórico / auxiliar) de los pr
 | Aspecto | Valor Canónico | Consistencia |
 |---------|----------------|--------------|
 | Transacciones | 18 | OK |
-| Tablas Estimadas | 24–31 | OK (añade CO-PA Costing-Based y textos largos como condicionales) |
+| Tablas Estimadas | 24–31 tablas | OK (optimizado por Universal Journal) |
 | Dashboards | 12 | OK |
 | Esfuerzo Total | 1,590 horas | OK |
 | Duración | 42 semanas | OK |
@@ -53,5 +53,5 @@ Este archivo consolida el **estado** (vigente / histórico / auxiliar) de los pr
 - Añadir diagrama resumen (Mermaid) de dependencias documento → dominio
 
 ---
-Última actualización: 9-nov-2025
+Última actualización: 8-nov-2025
 Responsable: (asignar)

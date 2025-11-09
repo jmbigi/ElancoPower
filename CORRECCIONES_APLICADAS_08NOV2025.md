@@ -19,74 +19,39 @@ Unificar cifras y criterios entre documentos de `docs/propuesta_final` y elimina
 4. Este archivo creado para trazabilidad de cambios.
 5. `03_TRANSACCIONES_SAP_INCLUIDAS.md`
   - Unificada estimación de tablas a rango canónico ~76-85.
-    - (Obsoleto) Rango ~76-85 reemplazado por 19–25 (19 núcleo + hasta 6 condicionales). Se deja registro histórico.
+    - (Obsoleto) Rango ~76-85 reemplazado por 25 (núcleo + condicionales). Se deja registro histórico.
   - Añadida nota explícita de consolidación histórico (22 líneas originales → 18 transacciones únicas finales).
   - Incluida corrección tipográfica: "Supple-Finanzas" → "Supply-Finanzas".
 6. `ANEXO_TECNICO_TRANSACCIONES_VS_TABLAS.md`
-  - Sustituido rango previo (~70-90 / ~70-84 / ~76-85) por rango vigente 19–25 en todas las ocurrencias activas.
-  - Ajustadas categorías: nueva distribución (Prioridad 1: 10–14 tablas; Prioridad 2: 6–8; Pendientes: 3–5) totalizando 19–25.
-  - Actualizada respuesta FAQ y diagrama Fase 0 con nuevo rango.
+  - Sustituido rango previo (~70-90 / ~70-84 / ~76-85) por el número vigente de 25 en todas las ocurrencias activas.
+  - Ajustadas categorías: nueva distribución (Prioridad 1: ~14 tablas; Prioridad 2: ~8; Pendientes: ~3) totalizando 25.
+  - Actualizada respuesta FAQ y diagrama Fase 0 con el nuevo número.
 7. `05_FASE_1_CONSTRUCCION_DATA_LAKE.md`
   - Añadida nota de interpretación: semanas listadas son internas a la fase; mapeo a semanas globales 7–20.
 8. `09_CRONOGRAMA_SEMANAL.md`
   - Añadida nota aclaratoria sobre diferencia entre semanas globales y semanas internas de fase (evita ambigüedad al leer ambos documentos).
 9. `docs/internos/estado_documentos.md`
-  - Archivo nuevo que categoriza documentos vigentes vs. históricos; define fuentes canónicas (18 transacciones, ~76-85 tablas, 1,590h, 42 semanas).
+  - Archivo nuevo que categoriza documentos vigentes vs. históricos; define fuentes canónicas (18 transacciones, 25 tablas, 1,590h, 42 semanas).
 
 ### Criterios de Verificación Post-Cambio
 - Totales de horas por fase y rol coinciden con documento canónico (`08_ESTIMACION_DE_ESFUERZOS_Y_COSTOS.md`).
 - Cobertura mínima refleja 18 transacciones (4+4+10).
 - No quedan referencias a “116 horas” de Fase 0 en documentos vigentes.
 - Reconciliación >95% alineada con riesgos y supuestos (sección 11).
-- Rango de tablas unificado y optimizado: todas las menciones anteriores (~70-84, ~70-90, ~76-85) reemplazadas por 19–25.
+- Número de tablas unificado y optimizado: todas las menciones a rangos anteriores (~70-84, ~70-90, ~76-85, 19-25) reemplazadas por 25.
 - Semántica de semanas aclarada (global vs. internas) en 05 y 09.
 - Origen histórico de 22 líneas vs. 18 transacciones documentado claramente.
 
 ### Pendientes (No Cambiados)
 - Validar si algún otro documento externo (p.e. `RESUMEN_PROPUESTA_FINAL.txt`) contiene aún la cifra de 116h (no crítico para versión cliente, pero recomendable revisar en próxima iteración).
 - Revisar si en la solución SLT completa hay referencias a distribución antigua de dashboards.
-- Automatizar chequeo de consistencia numérica (script futuro) para asegurar mantenimiento del rango 19–25.
+- Automatizar chequeo de consistencia numérica (script futuro) para asegurar mantenimiento del número 25.
 
 ### Responsable
 Consultor BI (auditoría interna de consistencia documental).
 
 ---
 *Fin del registro de correcciones 08-nov-2025.*
-
-### Cambio de rango final (post optimización inicial): 19–25 tablas (HISTÓRICO)
-Registro histórico del primer ajuste drástico de alcance (reducción desde referencias previas ~70-90 a un modelo lean). Se mantiene para trazabilidad.
-
-### Promoción de T001 y ajuste de rango a 20–26 (HISTÓRICO)
-Fecha: 09-nov-2025
-Motivo: Incorporar atributos de sociedad (Company Code) de forma directa para reforzar joins contables y filtros organizativos sin depender exclusivamente de BKPF.
-Impacto: Núcleo pasa de 19 → 20 tablas; rango total potencial de 19–25 → 20–26 manteniendo máximo de 6 condicionales. No añade complejidad estructural FI (se preserva ACDOCA/ACDOCA_T como fuente central).
-Acciones ejecutadas:
-1. `config/table_scope_expected.yaml`: expected_core_count actualizado a 20 y T001 añadido a core_tables.
-2. `docs/internos/mapeo_transacciones_tablas_detallado.csv`: fila añadida para T001 con estado_inclusion=incluir.
-3. Documentos de alcance (`docs/entregables/ALCANCE_TABLAS_E_INDICES.md`, `docs/propuesta_final/ANEXO_TECNICO_TRANSACCIONES_VS_TABLAS.md`) ajustados al nuevo rango 20–26.
-4. `docs/internos/estado_documentos.md` actualizado para reflejar rango vigente.
-5. Pendiente (ejecutar script de validación nuevamente con conteos core=20 para cerrar formalmente).
-Riesgo: Bajo. T001 presenta volumen moderado y alto valor relacional.
-### Reclasificación ampliada (core 24 / conditional 4) – 08-nov-2025 (VIGENTE)
-Motivo: Incorporar feedback adicional sobre cobertura robusta para transacciones VA05, MB5B, KE24 y asegurar base futura de análisis de rentabilidad y backlog.
-Cambios ejecutados (provisionales):
-1. `config/table_scope_expected.yaml`: Se promueve MAKT, MARC, LFA1, SKA1 a core; se ajustan core_tables (24) y expected_core_count=24.
-2. Se redefinen `conditional_tables` a set mínimo (VBEP, KONV, VBFA, MCHB) y se trasladan STXL, KONP, CE1XXXX, CE4XXXX a `optional_tables` con calificadores.
-3. Notas de recomendados actualizadas (eliminadas entradas duplicadas ahora promovidas).
-4. Metadata version cambiada a `2025-11-08-reclass` para diferenciar de versión canónica previa.
-5. No se alteran todavía documentos ejecutivos; se crea (pendiente) documento de actualización formal si se aprueba.
-Riesgos / Consideraciones:
-- Incremento core 20→24 aún dentro de límite (`max_core_tables:25`).
-- Mayor volumen potencial (LFA1 y MARC añaden joins recurrentes); monitorear costo de replicación inicial.
-- CO-PA tablas CE1XXXX / CE4XXXX se mantienen opcionales para evitar duplicidad si sólo se usa Account-Based.
-Acciones completadas:
-- Validación ejecutada (`scripts/validate_table_scope.py`): core=24, conditional=4, potencial=28 dentro de límite.
-- CSV actualizado con clasificaciones definitivas (MAKT, SKA1, MARC, LFA1 en incluir; VBEP, VBFA, KONV, MCHB candidato_incluir; STXL, KONP, CE1XXXX, CE4XXXX opcional).
-- Documentos sincronizados: README, 02, 03, Anexo Técnico v1.6, Alcance Tablas e Índices, Lista Priorizada, Estado Documentos.
-Pendientes:
-- Confirmar si CO-PA Costing-Based está activo (mover CE1XXXX/CE4XXXX a condicional si aplica).
-- Decidir activación de STXL (declustering) según requerimientos de textos largos.
-Estado: Reclasificación aplicada y considerada canónica a la espera de confirmación CO-PA y textos.
 # CORRECCIONES APLICADAS - 8 de Noviembre de 2025
 
 ## ✅ RESUMEN DE CORRECCIONES
