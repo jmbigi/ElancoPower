@@ -256,7 +256,7 @@ Cada riesgo incluye:
 
 **Responsables:** Project Manager + Stakeholders Elanco  
 **Duración:** 2 horas  
-**Fecha:** 7 de diciembre de 2025 (Semana 4)
+**Fecha:** 17 de febrero de 2026 (Semana 6)
 
 #### Criterios de Decisión Go/No-Go
 
