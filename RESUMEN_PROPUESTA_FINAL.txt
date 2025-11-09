@@ -27,6 +27,7 @@ La solución se construirá sobre un stack tecnológico moderno y robusto, confi
 - Fuente de Datos (ERP): SAP S/4HANA, utilizando los módulos de Finanzas (FI), Controlling (CO), Ventas y Distribución (SD) y Gestión de Materiales (MM).
 - Servidor de Replicación: Se usará SAP Landscape Transformation Server (SLT) para la replicación de datos en tiempo real desde SAP.
 - Data Lake:** Google BigQuery será el repositorio centralizado de datos, utilizando el dataset `casa_bi` (ambientes dev/qa/prod).
+ - Data Lake: Google BigQuery será el repositorio centralizado de datos, utilizando el dataset `casa_bi` (ambientes dev/qa/prod).
 - Visualización (BI): Microsoft Power BI para la creación de los 12 dashboards interactivos. Elanco ya ha adquirido 8 licencias Pro.
 - Herramientas de Soporte: El proyecto se apoyará en BigQuery Studio para consultas.
 
@@ -113,8 +114,7 @@ La implementación de modelos predictivos de la Fase 3 no está incluida, solo s
 
 CRITERIOS DE ÉXITO
 
-El proyecto se considerará exitoso si se cumplen varios criterios cuantitativos y cualitativos. Debe haber 100% de las tablas SAP identificadas replicadas en BigQuery, dentro del rango vigente 24–31 tablas SAP (24 núcleo + hasta 7 condicionales activables por KPI) asociadas a las 18 transacciones. La reducción de tiempo de consolidación debe ser al menos del 70%, pasando de 3-5 días a menos de 1 día. Los dashboards deben actualizarse en máximo 24 horas desde cierre de periodo.
-La exactitud de datos entre SAP y BigQuery debe ser mayor o igual al 95%. Se deben capacitar al menos 15 usuarios entre power users y usuarios finales. La adopción de dashboards debe alcanzar al menos 80% de usuarios activos a 30 días del go-live. La satisfacción de usuarios debe ser de al menos 4.0 sobre 5.0 en encuesta post-implementación.
+El proyecto se considerará exitoso si se cumplen los criterios cuantitativos y cualitativos definidos. Las tablas SAP identificadas deberán estar replicadas en BigQuery, dentro del rango establecido de 32 a 38 tablas (32 del núcleo más hasta 6 condicionales activables como indicadores), asociadas a las 18 transacciones. La exactitud de los datos entre SAP y BigQuery deberá ser igual o superior al 95%. Además, los usuarios deberán haber sido capacitados y deberá existir conformidad formal por parte de ellos. En caso de disconformidad, esta deberá estar debidamente fundamentada, documentada y basada en evidencias técnicas objetivas. No se considerarán válidas las observaciones que no estén respaldadas por criterios verificables dentro del alcance y entregables acordados del proyecto
 
 
 PRÓXIMOS PASOS
