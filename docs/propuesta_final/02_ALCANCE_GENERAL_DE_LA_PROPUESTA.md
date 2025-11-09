@@ -41,12 +41,12 @@ Implementar una **solución integral de centralización de datos de análisis** 
 
 #### ✅ Sistemas Fuente
 - **SAP S/4HANA:** Datos de 18 transacciones priorizadas (ver sección 3)
-   - *Nota técnica:* Se replicarán las **tablas SAP subyacentes** asociadas a estas transacciones (alcance consolidado MVP: 19 tablas núcleo + hasta 6 condicionales = 19–25 tablas)
+   - *Nota técnica:* Se replicarán las **tablas SAP subyacentes** asociadas a estas transacciones (alcance consolidado MVP: 24 tablas núcleo + 4 condicionales mínimas = 24–28 tablas)
   - Las transacciones SAP son interfaces de usuario; lo que se replica mediante SLT son las tablas de base de datos
 - **Módulos SAP:** MM, SD, FI, CO
 - **Países:** Todos los países de la operación CASA (~10 países)
 - **Historización:** Mínimo 24 meses de datos históricos
-- **Volumen de Tablas (MVP):** **19–25 tablas SAP** (19 núcleo incluidas + hasta 6 condicionales sujetas a confirmación de caso de uso). Rango anterior (~76–85) queda reemplazado por esta estimación optimizada basada en S/4HANA Universal Journal.
+- **Volumen de Tablas (MVP):** **24–28 tablas SAP** (24 núcleo incluidas + 4 condicionales mínimas activables por KPI). Rango anterior (~76–85) queda reemplazado por esta estimación optimizada basada en S/4HANA Universal Journal.
 
 #### ✅ Infraestructura de Datos
 - **Data Lake:** Google BigQuery (dataset casa_bi: entornos dev / qa / prod)
@@ -225,7 +225,7 @@ El proyecto se divide en **4 fases** con objetivos específicos:
 
 | Métrica | Objetivo |
 |---------|----------|
-| **Tablas SAP replicadas** | 100% de las tablas núcleo (19) + condicionales aprobadas (0–6) = 19–25 |
+| **Tablas SAP replicadas** | 100% de las tablas núcleo (24) + condicionales aprobadas (0–4) = 24–28 |
 | **Transacciones SAP con datos disponibles** | 18 de 18 (100%) |
 | **Reducción tiempo de consolidación** | ≥ 70% (de 3-5 días a < 1 día) |
 | **Tiempo de actualización de dashboards** | ≤ 24 horas desde cierre de periodo |

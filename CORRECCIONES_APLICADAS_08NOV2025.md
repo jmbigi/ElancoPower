@@ -53,10 +53,10 @@ Consultor BI (auditoría interna de consistencia documental).
 ---
 *Fin del registro de correcciones 08-nov-2025.*
 
-### Cambio de rango final (post optimización inicial): 19–25 tablas
+### Cambio de rango final (post optimización inicial): 19–25 tablas (HISTÓRICO)
 Registro histórico del primer ajuste drástico de alcance (reducción desde referencias previas ~70-90 a un modelo lean). Se mantiene para trazabilidad.
 
-### Promoción de T001 y ajuste de rango a 20–26
+### Promoción de T001 y ajuste de rango a 20–26 (HISTÓRICO)
 Fecha: 09-nov-2025
 Motivo: Incorporar atributos de sociedad (Company Code) de forma directa para reforzar joins contables y filtros organizativos sin depender exclusivamente de BKPF.
 Impacto: Núcleo pasa de 19 → 20 tablas; rango total potencial de 19–25 → 20–26 manteniendo máximo de 6 condicionales. No añade complejidad estructural FI (se preserva ACDOCA/ACDOCA_T como fuente central).
@@ -67,7 +67,7 @@ Acciones ejecutadas:
 4. `docs/internos/estado_documentos.md` actualizado para reflejar rango vigente.
 5. Pendiente (ejecutar script de validación nuevamente con conteos core=20 para cerrar formalmente).
 Riesgo: Bajo. T001 presenta volumen moderado y alto valor relacional.
-### Reclasificación ampliada (core 24 / conditional 4) – 08-nov-2025 (pendiente de validación funcional)
+### Reclasificación ampliada (core 24 / conditional 4) – 08-nov-2025 (VIGENTE)
 Motivo: Incorporar feedback adicional sobre cobertura robusta para transacciones VA05, MB5B, KE24 y asegurar base futura de análisis de rentabilidad y backlog.
 Cambios ejecutados (provisionales):
 1. `config/table_scope_expected.yaml`: Se promueve MAKT, MARC, LFA1, SKA1 a core; se ajustan core_tables (24) y expected_core_count=24.
@@ -79,10 +79,14 @@ Riesgos / Consideraciones:
 - Incremento core 20→24 aún dentro de límite (`max_core_tables:25`).
 - Mayor volumen potencial (LFA1 y MARC añaden joins recurrentes); monitorear costo de replicación inicial.
 - CO-PA tablas CE1XXXX / CE4XXXX se mantienen opcionales para evitar duplicidad si sólo se usa Account-Based.
-Acción pendiente:
-- Ejecutar `scripts/validate_table_scope.py` tras actualizar CSV de mapeo para reflejar estado_inclusion de nuevas tablas core.
-- Confirmar si STXL debe activarse (requiere declustering adicional en SLT).
-Estado: Clasificación aplicada en YAML, pendiente confirmación para volverse canónica en documentos de alcance.
+Acciones completadas:
+- Validación ejecutada (`scripts/validate_table_scope.py`): core=24, conditional=4, potencial=28 dentro de límite.
+- CSV actualizado con clasificaciones definitivas (MAKT, SKA1, MARC, LFA1 en incluir; VBEP, VBFA, KONV, MCHB candidato_incluir; STXL, KONP, CE1XXXX, CE4XXXX opcional).
+- Documentos sincronizados: README, 02, 03, Anexo Técnico v1.6, Alcance Tablas e Índices, Lista Priorizada, Estado Documentos.
+Pendientes:
+- Confirmar si CO-PA Costing-Based está activo (mover CE1XXXX/CE4XXXX a condicional si aplica).
+- Decidir activación de STXL (declustering) según requerimientos de textos largos.
+Estado: Reclasificación aplicada y considerada canónica a la espera de confirmación CO-PA y textos.
 # CORRECCIONES APLICADAS - 8 de Noviembre de 2025
 
 ## ✅ RESUMEN DE CORRECCIONES
