@@ -469,7 +469,7 @@ A continuación se detalla la lista exhaustiva de todos los entregables del proy
  
 
 **Formato:** Documento PDF (15-20 páginas) + Presentación ejecutiva (10 slides)  
-**Fecha Entrega:** 21-oct-2026 (1 semana post go-live)  
+**Fecha Entrega:** Semana 43 (1 semana post go-live)  
 **Aprobador:** Product Owner + Management Elanco
 
 ---
