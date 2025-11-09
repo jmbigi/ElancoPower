@@ -8,7 +8,7 @@
 
 **Automatizar la extracción de datos desde SAP S/4HANA hacia BigQuery**, creando un repositorio centralizado (Data Lake) con datos históricos de las 18 transacciones priorizadas, implementando controles de calidad y estableciendo procesos de sincronización periódica.
 
-_Nota de alcance tablas:_ Rango vigente de replicación **24–31 tablas SAP** (24 núcleo + hasta 7 condicionales incluyendo CO-PA y tablas de soporte como textos), según versión técnica 2025-11-08.
+_Nota de alcance tablas:_ Rango vigente de replicación **32–38 tablas SAP** (32 núcleo + hasta 6 condicionales activadas según KPI/justificación). **Histórico (anterior): 24–31** según versión técnica 2025-11-08.
 
 ---
 

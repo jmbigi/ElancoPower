@@ -6,11 +6,11 @@ específicas de la carpeta `docs/propuesta_final`:
 
 Checks implementados:
  1. Presencia de métricas canónicas (transacciones=18, dashboards=12, horas=1590, semanas=42,
-    rango tablas=24–31) en cada archivo de propuesta_final dependiendo de su naturaleza.
+     rango tablas=32–38) en cada archivo de propuesta_final dependiendo de su naturaleza.
  2. Verificación de horas por fase (235 + 696 + 659 = 1590) y semanas por fase (6 + 22 + 14 = 42)
-    extraídas de documentos clave (00, 08, 09) y README interno de la subcarpeta.
- 3. Detección de referencias a rangos obsoletos (19–25, 20–26, 24–28, 24-28, 19-25, 20-26) en
-    archivos de propuesta_final, diferenciando si están marcadas como histórico / actualización.
+     extraídas de documentos clave (00, 08, 09) y README interno de la subcarpeta.
+ 3. Detección de referencias a rangos obsoletos (19–25, 20–26, 24–28, 24-28, 19-25, 20-26, 24–31, 24-31) en
+     archivos de propuesta_final, diferenciando si están marcadas como histórico / actualización.
  4. Reporte por archivo: métricas encontradas, ausentes, advertencias y rangos obsoletos.
  5. Validación de consistencia cruzada: suma de horas y semanas coincide con totales declarados.
 
@@ -39,7 +39,8 @@ CANONICAL = {
     "dashboards": 12,
     "horas_total": 1590,
     "semanas_total": 42,
-    "tablas_rango": (24, 31),  # texto esperado 24–31 (guión EN DASH o '-')
+    # Rango de tablas actualizado (vigente): 32–38 (32 núcleo + hasta 6 condicionales)
+    "tablas_rango": (32, 38),  # texto esperado 32–38 (guión EN DASH o '-')
     "fase_horas": {
         "fase_0": 235,
         "fase_1": 696,
@@ -62,7 +63,7 @@ EXPECTATIONS = {
     "ANEXO_TECNICO_TRANSACCIONES_VS_TABLAS.md": {"transacciones", "tablas_rango"},
 }
 
-OUTDATED_MARKERS = {"19–25", "20–26", "24–28", "24-28", "19-25", "20-26"}
+OUTDATED_MARKERS = {"19–25", "20–26", "24–28", "24-28", "19-25", "20-26", "24–31", "24-31"}
 
 HISTORICAL_KEYWORDS = {
     "histórico", "historico", "exploratorio", "versión", "version", "actualiza", "actualizado", "rango canónico", "canónico", "canonico"

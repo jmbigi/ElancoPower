@@ -12,7 +12,7 @@
 | **Fase 3 - ML Roadmap** | Descripción conceptual |
 | **TOTAL HORAS** | **1,590h** |
 
-**Rango canónico de tablas SAP (MVP): 24–31 tablas** (24 núcleo + hasta 7 condicionales; optimizado por uso de ACDOCA/ACDOCA_T que reemplaza tablas históricas BSEG, COEP, FAGLFLEXA).
+**Rango canónico de tablas SAP (MVP): 32–38 tablas** (32 núcleo + hasta 6 condicionales; optimizado por uso de ACDOCA/ACDOCA_T que reemplaza tablas históricas BSEG, COEP, FAGLFLEXA).
 
 ### Distribución por Recurso
 
