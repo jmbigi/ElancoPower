@@ -73,7 +73,36 @@ Existe riesgo de que TI Global retrase respuestas a tickets, por eso se incorpor
 
 CONDICIONES COMERCIALES Y GARANTÍAS
 
-El esfuerzo total es de 1590 horas distribuidas en 42 semanas. Las condiciones comerciales específicas y esquema de facturación serán definidas en acuerdo separado. Si el proyecto se detiene en Fase 0 con decisión de NO-GO, solo se factura el esfuerzo de esa fase que son 235 horas.
+El esfuerzo total es de 1590 horas distribuidas en 42 semanas, desglosado por perfil de la siguiente manera:
+
+DISTRIBUCIÓN DE HORAS POR PERFIL:
+- Arquitecto de Datos / Desarrollador BI (Juan Manuel Bigi): 961 horas (60.4%)
+- Analista SAP / Power User (Lucía Rodríguez): 484 horas (30.4%)
+- Project Manager (Linda López): 145 horas (9.1%)
+
+TIMELINE DEL PROYECTO (Inicio: 6-ene-2026):
+
+Semanas 0-6  | FASE 0: Due Diligence & Factibilidad (235h)
+[▓▓▓▓▓▓]      | • Auditoría técnica y validación de tablas SAP
+              | • Workshops de priorización con stakeholders
+              | • POC técnico end-to-end
+              | HITO: Go/No-Go (10-feb-2026)
+
+Semanas 6-28 | FASE 1: Construcción Data Lake (696h)
+[▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓] | • Pipelines ETL para 18 transacciones SAP
+                        | • Setup infraestructura BigQuery (3 zonas)
+                        | • Validación y documentación técnica
+                        | HITO: Data Lake Operativo (mediados-jul-2026)
+
+Semanas 28-42| FASE 2: Modelado & Dashboards Power BI (659h)
+[▓▓▓▓▓▓▓▓▓▓▓▓▓▓] | • Modelo dimensional (8 dims + 6 hechos)
+                 | • Desarrollo de 12 dashboards ejecutivos
+                 | • Testing UAT y capacitación usuarios
+                 | HITO: Go-Live (mediados-oct-2026)
+
+DURACIÓN TOTAL: 42 semanas (~10 meses) | Ene-2026 a Oct-2026
+
+Las condiciones comerciales específicas, tarifas por perfil y esquema de facturación serán definidas en acuerdo comercial separado. Si el proyecto se detiene en Fase 0 con decisión de NO-GO, solo se factura el esfuerzo de esa fase que son 235 horas.
 
 
 EXCLUSIONES DEL ALCANCE
