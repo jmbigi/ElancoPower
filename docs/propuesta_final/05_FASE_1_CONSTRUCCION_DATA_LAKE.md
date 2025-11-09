@@ -8,6 +8,8 @@
 
 **Automatizar la extracción de datos desde SAP S/4HANA hacia BigQuery**, creando un repositorio centralizado (Data Lake) con datos históricos de las 18 transacciones priorizadas, implementando controles de calidad y estableciendo procesos de sincronización periódica.
 
+_Nota de alcance tablas:_ Rango vigente de replicación **24–31 tablas SAP** (24 núcleo + hasta 7 condicionales incluyendo CO-PA y tablas de soporte como textos), según versión técnica 2025-11-08.
+
 ---
 
 ## 5.2. Duración y Recursos (Normalizado)
@@ -159,24 +161,24 @@ SAP S/4HANA                    BIGQUERY DATASET: casa_bi (dev / qa / prod)
 
 | Transacción | Tablas SAP | Complejidad | Horas |
 |-------------|------------|-------------|-------|
-| **FAGLL03** | FAGLFLEXA, BKPF, BSEG | Alta | 12h |
-| **FB03** | BKPF, BSEG, BSID/BSAD | Media | 10h |
-| **F.08** | FAGLFLEXT (totales), FAGLFLEXA | Media | 10h |
-| **F.01** | FAGLFLEXT, SKA1 | Media | 8h |
+| **FAGLL03** | ACDOCA, BKPF | Alta | 12h |
+| **FB03** | BKPF, ACDOCA, BSID/BSAD | Media | 10h |
+| **F.08** | ACDOCA_T (totales), ACDOCA | Media | 10h |
+| **F.01** | ACDOCA, SKA1 | Media | 8h |
 
 #### Pipeline Tipo (Ejemplo: FAGLL03)
 
 **Paso 1: Extracción (RAW)**
 ```sql
--- Crear tabla RAW con datos de FAGLFLEXA
-CREATE OR REPLACE TABLE `casa_bi.raw_faglflexa`
+-- Crear tabla RAW con datos de ACDOCA (S/4HANA Universal Journal)
+CREATE OR REPLACE TABLE `casa_bi.raw_acdoca`
 PARTITION BY DATE(load_timestamp)
 AS
 SELECT 
     *,
     CURRENT_TIMESTAMP() as load_timestamp,
     'fagll03' as source_transaction
-FROM `elanco_erp.faglflexa`
+FROM `elanco_erp.acdoca`
 WHERE budat >= DATE_SUB(CURRENT_DATE(), INTERVAL 24 MONTH);
 ```
 
@@ -198,7 +200,7 @@ SELECT
         ELSE 'VALID'
     END as quality_flag,
     load_timestamp
-FROM `casa_bi.raw_faglflexa`
+FROM `casa_bi.raw_acdoca`
 WHERE quality_flag = 'VALID';
 ```
 
@@ -273,7 +275,7 @@ GROUP BY 1,2,3,4;
 
 | Transacción | Tablas SAP | Complejidad | Horas |
 |-------------|------------|-------------|-------|
-| **KSB1** | COBK, COEP, AUFK | Alta | 16h |
+| **KSB1** | ACDOCA, AUFK, CSKS | Alta | 16h |
 | **KE24** | CE1xxxx, CE4xxxx | Alta | 12h |
 
 **Complejidad CO:**

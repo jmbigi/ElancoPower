@@ -46,7 +46,7 @@ TRANSACCIÓN SAP (UI)          TABLAS SAP (Datos)         REPLICACIÓN SLT
 | **Prioridad 1 (Críticas)** | 4 | 22% | 10–14 tablas |
 | **Prioridad 2 (Importantes)** | 4 | 22% | 6–8 tablas |
 | **Pendientes de clasificar** | 10 | 56% | 3–5 tablas (aportes marginales/condicionales) |
-| **TOTAL** | **18** | **100%** | **24–28 tablas SAP (MVP)** |
+| **TOTAL** | **18** | **100%** | **24–31 tablas SAP (MVP ampliado)** |
 
 **Nota:** Una transacción puede requerir múltiples tablas. Por ejemplo, VA05 requiere al menos 3 tablas (VBAK, VBAP, VBEP).
 
@@ -637,7 +637,7 @@ Para cada transacción se debe validar en Fase 0:
 
 📋 **"Mapeo Completo: Transacciones → Tablas SAP → BigQuery"**
 - 18 transacciones clasificadas por prioridad
-- Listado completo de tablas SAP requeridas (MVP 24–28 tablas)
+- Listado completo de tablas SAP requeridas (MVP 24–31 tablas; 24 núcleo + hasta 7 condicionales)
 - Confirmación de disponibilidad de cada tabla en BigQuery
 - Estimación de esfuerzo por tabla (configuración SLT, validación, transformaciones)
 - Orden de implementación para Fase 1
@@ -647,4 +647,4 @@ Para cada transacción se debe validar en Fase 0:
 
 *Siguiente sección: [04_FASE_0_REVISION_ALCANCE_Y_FACTIBILIDAD.md](04_FASE_0_REVISION_ALCANCE_Y_FACTIBILIDAD.md)*
 
-*Versión 1.1 - 8-nov-2025*
+*Versión 1.2 - 8-nov-2025 (Actualiza rango tablas MVP de 24–28 a 24–31; se aclara composición 24 núcleo + hasta 7 condicionales)*

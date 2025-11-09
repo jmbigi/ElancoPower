@@ -917,6 +917,8 @@ Al final de la **Fase 0** (semana 5), se evaluará si continuar con el proyecto:
 - ✅ No más de **2 riesgos ALTO bloqueantes** sin plan de mitigación
 - ✅ Estimaciones refinadas dentro de **±15% del esfuerzo original** (1.350-1.830 horas)
 
+**Nota de control de alcance técnico:** El rango de tablas SAP para el MVP se mantiene en **24–31 tablas** (24 núcleo confirmadas + hasta 7 condicionales sujetas a disponibilidad / necesidad de KPIs). Cualquier solicitud que exceda 31 tablas debe gestionarse vía Change Request (evita scope creep técnico).
+
 ### 🚫 Criterios NO-GO (Detener o Re-planear)
 
 - 🚫 Menos de **8 transacciones** viables (< 50% del alcance)
