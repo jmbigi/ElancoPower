@@ -123,10 +123,10 @@ A continuación se detalla la lista exhaustiva de todos los entregables del proy
   - Row-Level Security configurado (filtro por país/área)
 
 **Cobertura Mínima:**
-- ✅ Mínimo **12 de 18 transacciones** implementadas
 - ✅ Prioridad 1 (4): 100% completadas
 - ✅ Prioridad 2 (4): 100% completadas (criterio ajustado por compresión de cronograma)
-- ✅ Pendientes de clasificar (10): al menos 4 completadas para alcanzar 12 totales
+- ✅ Pendientes de clasificar (10): al menos 4 de las 10 deben ser completadas.
+- ✅ **Criterio Final:** Se deben implementar un mínimo de 12 transacciones, cumpliendo obligatoriamente con el 100% de las de Prioridad 1 y 2.
 
 **Calidad de Datos:**
 - ✅ Data Quality checks automáticos (validaciones SQL)

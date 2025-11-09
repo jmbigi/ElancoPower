@@ -8,9 +8,9 @@ Contexto: SAP S/4HANA replicado a Google BigQuery vía SAP SLT
 
 ## 1) Resumen ejecutivo
 
-- Alcance de tablas SAP a replicar (MVP): 24–28 tablas
+- Alcance de tablas SAP a replicar (MVP): 24–31 tablas
   - 24 tablas núcleo (core) obligatorias
-  - 4 tablas condicionales mínimas (según KPI)
+  - 7 tablas condicionales potenciales (según KPI / método: backlog, pricing, flujo ventas, stock por lote, CO-PA cost-based, textos largos)
 - Racional técnico: uso de ACDOCA/ACDOCA_T (S/4HANA) para sustituir BSEG/COEP/FAGLFLEXA y reducir drásticamente el volumen de tablas sin perder cobertura funcional.
 - Índices en BigQuery: se implementan como particionamiento y clustering por tabla. No se crean índices tipo RDBMS.
 
@@ -54,17 +54,19 @@ Maestros
 - BUT000 (Business Partner)
 - T001 (Sociedades)
 
-### 2.2. Condicionales (4) – candidato_incluir
+### 2.2. Condicionales (7) – candidato_incluir
 
-Logística y Ventas (mínimo viable)
+Logística, Ventas, Inventarios, CO-PA y Textos
 - VBEP (Schedule lines, backlog/aging) – activar sólo si KPI explícito lo requiere.
 - KONV (Condiciones de precio) – si se requiere análisis de pricing.
 - VBFA (Flujo de documentos de ventas) – pipeline OV→Entrega→Factura.
 - MCHB (Stock por lote) – si los KPIs requieren granularidad por lote.
+- CE1XXXX (CO-PA reales Costing-Based) – sólo si el método Costing-Based está activo y se necesitan características detalladas.
+- CE4XXXX (CO-PA plan Costing-Based) – si se requiere comparación plan vs real en KE24.
+- STXL (Textos largos) – declustering en SLT requerido; activar sólo si dashboards requieren textos enriquecidos.
 
-Opcionales (no contabilizan en el rango; activar si aplica):
-- STXL (Textos largos) – requiere declustering en SLT.
-- KONP (detalle adicional de condiciones) – sólo si análisis granular de pricing.
+Opcional (fuera del rango, activar sólo si análisis granular de pricing lo justifica):
+- KONP (detalle adicional de condiciones de precio)
 
 ### 2.3. Excluidas por S/4HANA (3)
 

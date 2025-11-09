@@ -5,11 +5,11 @@ Validates the presence and consistency of canonical numeric scope values across
 markdown documents. Designed to be lightweight and read-only (no file writes).
 
 Canonical values (current):
-  - Transacciones SAP: 18
-  - Rango tablas SAP: 24–28 (core=24, condicional mínimo=4)
-  - Dashboards Power BI: 12
-  - Esfuerzo total (horas): 1,590
-  - Duración (semanas): 42
+    - Transacciones SAP: 18
+    - Rango tablas SAP: 24–31 (core=24, condicionales potenciales=7)
+    - Dashboards Power BI: 12
+    - Esfuerzo total (horas): 1,590
+    - Duración (semanas): 42
 
 Checks:
  1. Each canonical doc must mention its metric at least once.
