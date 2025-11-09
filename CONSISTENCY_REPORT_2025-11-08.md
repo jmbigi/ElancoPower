@@ -1,5 +1,11 @@
 # Consistency Report – docs/propuesta_final vs. full repository (2025-11-08)
 
+Actualización rápida (revalidación 2):
+- scripts/check_consistency.py → OK (sin advertencias)
+- scripts/validate_table_scope.py → OK (24 core, 7 cond, 3 excluidas; total potencial 31)
+- Corrección aplicada: `CORRECCIONES_APLICADAS_08NOV2025.md` ahora refiere el rango canónico "24–31 tablas" (antes decía "25 tablas").
+- Referencias a tablas clásicas (BSEG/COEP/FAGLFLEXA/BSID/BSAD/BSIK/BSAK) persisten en algunas secciones de `docs/propuesta_final` como contexto, pero con notas S/4HANA que aclaran su sustitución por ACDOCA/ACDOCA_T. No representan inconsistencia de alcance.
+
 Este reporte resume las validaciones automáticas y la revisión manual para verificar que la carpeta `docs/propuesta_final` sea consistente con el resto del repositorio.
 
 ## 1) Validaciones Automáticas

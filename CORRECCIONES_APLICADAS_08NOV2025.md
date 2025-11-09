@@ -19,11 +19,11 @@ Unificar cifras y criterios entre documentos de `docs/propuesta_final` y elimina
 4. Este archivo creado para trazabilidad de cambios.
 5. `03_TRANSACCIONES_SAP_INCLUIDAS.md`
   - Unificada estimación de tablas a rango canónico ~76-85.
-    - (Obsoleto) Rango ~76-85 reemplazado por 25 (núcleo + condicionales). Se deja registro histórico.
+    - (Obsoleto) Rango ~76-85 reemplazado por 24–31 (núcleo 24 + hasta 7 condicionales). Se deja registro histórico.
   - Añadida nota explícita de consolidación histórico (22 líneas originales → 18 transacciones únicas finales).
   - Incluida corrección tipográfica: "Supple-Finanzas" → "Supply-Finanzas".
 6. `ANEXO_TECNICO_TRANSACCIONES_VS_TABLAS.md`
-  - Sustituido rango previo (~70-90 / ~70-84 / ~76-85) por el número vigente de 25 en todas las ocurrencias activas.
+  - Sustituido rango previo (~70-90 / ~70-84 / ~76-85) por el rango vigente 24–31 en todas las ocurrencias activas.
   - Ajustadas categorías: nueva distribución (Prioridad 1: ~14 tablas; Prioridad 2: ~8; Pendientes: ~3) totalizando 25.
   - Actualizada respuesta FAQ y diagrama Fase 0 con el nuevo número.
 7. `05_FASE_1_CONSTRUCCION_DATA_LAKE.md`
@@ -31,7 +31,7 @@ Unificar cifras y criterios entre documentos de `docs/propuesta_final` y elimina
 8. `09_CRONOGRAMA_SEMANAL.md`
   - Añadida nota aclaratoria sobre diferencia entre semanas globales y semanas internas de fase (evita ambigüedad al leer ambos documentos).
 9. `docs/internos/estado_documentos.md`
-  - Archivo nuevo que categoriza documentos vigentes vs. históricos; define fuentes canónicas (18 transacciones, 25 tablas, 1,590h, 42 semanas).
+  - Archivo nuevo que categoriza documentos vigentes vs. históricos; define fuentes canónicas (18 transacciones, 24–31 tablas, 1,590h, 42 semanas).
 
 ### Criterios de Verificación Post-Cambio
 - Totales de horas por fase y rol coinciden con documento canónico (`08_ESTIMACION_DE_ESFUERZOS_Y_COSTOS.md`).
@@ -39,6 +39,7 @@ Unificar cifras y criterios entre documentos de `docs/propuesta_final` y elimina
 - No quedan referencias a “116 horas” de Fase 0 en documentos vigentes.
 - Reconciliación >95% alineada con riesgos y supuestos (sección 11).
 - (HISTÓRICO) Número de tablas unificado y optimizado: todas las menciones a rangos anteriores (~70-84, ~70-90, ~76-85, 19–25) reemplazadas por 25.
+ - (HISTÓRICO) Número de tablas unificado y optimizado: todas las menciones a rangos anteriores (~70-84, ~70-90, ~76-85, 19–25) reemplazadas por 24–31.
 - Semántica de semanas aclarada (global vs. internas) en 05 y 09.
 - Origen histórico de 22 líneas vs. 18 transacciones documentado claramente.
 
@@ -46,6 +47,7 @@ Unificar cifras y criterios entre documentos de `docs/propuesta_final` y elimina
 - Validar si algún otro documento externo (p.e. `RESUMEN_PROPUESTA_FINAL.txt`) contiene aún la cifra de 116h (no crítico para versión cliente, pero recomendable revisar en próxima iteración).
 - Revisar si en la solución SLT completa hay referencias a distribución antigua de dashboards.
 - Automatizar chequeo de consistencia numérica (script futuro) para asegurar mantenimiento del número 25.
+ - Automatizar chequeo de consistencia numérica (script futuro) para asegurar mantenimiento del rango 24–31.
 
 ### Responsable
 Consultor BI (auditoría interna de consistencia documental).
