@@ -1,6 +1,6 @@
 # Elanco Power – Documentación del Proyecto
 
-**Actualizado:** 7 de noviembre de 2025  
+**Actualizado:** 9 de noviembre de 2025  
 **Proyecto:** Automatización SAP → BigQuery → Power BI  
 **Cliente:** Elanco Animal Health  
 **Consultoría:** Aunergia
@@ -36,23 +36,12 @@ ElancoPower/
     │       ├── README_SOLUCION_COMPLETA_SLT.md
     │       ├── Solucion_SLT_CONNECTOR_Y_PLAN_VA05.md (PARTE 1)
     │       └── Solucion_SLT_CONNECTOR_Y_PLAN_VA05_PARTE2.md
-    ├── internos/                (documentos de trabajo)
-    │   ├── ANALISIS_DIFERENCIAS_PRESUPUESTOS.md
-    │   ├── AUDITORIA_FINAL_CONSOLIDACION.md
-    │   ├── AUDITORIA_CONSISTENCIA_SOLUCION_SLT_COMPLETA.md ⭐
-    │   ├── RESUMEN_CORRECCIONES_SLT_COMPLETA.md ⭐
-    │   ├── RESUMEN_EJECUTIVO_CORRECCIONES.md ⭐
-    │   ├── DESGLOSE_PAGOS_POR_ETAPA.md
-    │   ├── INDICE_COMPLETO.md
-    │   ├── REORGANIZACION_COMPLETADA.md
-    │   ├── VERIFICACION_DE_FUENTES.md
-    │   ├── REPORTE_REVISION_FINAL.md
-    │   ├── REVISION_FINAL_QA.md
-    │   ├── checklist_permisos_y_licencias.md
-    │   └── transacciones_sap_backlog.md
-    └── historicos/              (archivos de referencia)
-        ├── presupuesto_actualizado.md
-        └── confirmacion_necesaria.txt
+    └── internos/                (documentos de trabajo)
+        ├── CORRECCIONES_APLICADAS_08NOV2025.md (historial de cambios)
+        ├── estado_documentos.md
+        ├── mapeo_transacciones_tablas_detallado.csv
+        ├── mapeo_transacciones_tablas.txt
+        └── procedimiento_poda_tablas.md
 ```
 
 ---
@@ -78,13 +67,17 @@ Si en el futuro se desea reinstaurar una documentación separada para una "Soluc
 | **PRESUPUESTO_REAL_BASADO_EN_FUENTES_PRIMARIAS.md** | Presupuesto oficial (USD 8,850) | 29 |
 | **RESUMEN_EJECUTIVO_PARA_LUCIA.md** | Versión resumida para Lucía | 8 |
 
-### 📊 Documentos Internos de Trabajo (solo referencia, no alteran cifras canónicas)
+### 📊 Documentos Internos de Trabajo
 
-Nota sobre `docs/internos/`: Se eliminaron referencias a documentos internos específicos porque esa carpeta no contiene archivos en este repo. Cuando haga falta, se podrán reintroducir como documentación de trabajo no canónica. El SSOT sigue siendo `docs/propuesta_final/` y `docs/entregables/`.
+**Carpeta:** `docs/internos/`
 
-### 📚 Archivos Históricos (removidos)
-
-Los archivos históricos previamente referenciados (`presupuesto_actualizado.md`, `confirmacion_necesaria.txt`) ya no están presentes en el repositorio. Se eliminan referencias para mantener consistencia. Si se requiere recuperarlos, crear la carpeta `docs/historicos/` y restaurar su contenido.
+| Documento | Descripción |
+|-----------|-------------|
+| **CORRECCIONES_APLICADAS_08NOV2025.md** | Historial de correcciones y cambios aplicados |
+| **estado_documentos.md** | Estado de documentos y fuentes canónicas |
+| **mapeo_transacciones_tablas_detallado.csv** | Mapeo detallado transacciones ↔ tablas SAP |
+| **mapeo_transacciones_tablas.txt** | Versión texto del mapeo |
+| **procedimiento_poda_tablas.md** | Procedimiento de optimización de tablas |
 
 ---
 
