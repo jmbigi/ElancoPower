@@ -1,135 +1,53 @@
-RESUMEN DE LA PROPUESTA FINAL DE CENTRALIZACIÓN DE DATOS
-Proyecto: Data Lake y Analítica Empresarial para Elanco Animal Health (Operación CASA)
-Fecha: 8 de noviembre de 2025
-Norma: Menos de 2500 palabras
+RESUMEN PROPUESTA FINAL: Centralización de Datos y Analítica – Elanco Animal Health (Operación CASA)
+Fecha: 9 de noviembre de 2025 | Versión: 2.1 (Resumen Ejecutivo Mejorado) | Norma: < 1000 palabras
 ================================================================================
 
-CONTEXTO GENERAL
-
-Elanco Animal Health es una compañía global líder en salud animal con operaciones en más de 10 países de Centroamérica y Sudamérica. Actualmente, los equipos de Finanzas y Supply Chain enfrentan problemas significativos con procesos manuales intensivos para extraer y consolidar datos desde SAP. Los usuarios descargan reportes individuales de múltiples transacciones SAP para cada país, luego consolidan manualmente en Excel, lo que consume considerable tiempo semanal por área. Esta información fragmentada impide realizar análisis integrados y genera decisiones lentas basadas en datos desactualizados.
-Además, aunque Elanco adquirió licencias Power BI Pro para la región, estas están subutilizadas porque los dashboards se conectan a archivos Excel locales sin una fuente de datos centralizada. La compañía ya intentó un piloto con BigQuery pero encontró obstáculos relacionados con permisos SAP insuficientes y tablas faltantes en el Data Lake, por lo que el proyecto quedó inconcluso.
-
+CONTEXTO Y PROBLEMA
+Elanco opera en más de 10 países de Centro y Sudamérica. Finanzas y Supply Chain dependen hoy de procesos manuales: descargar reportes de múltiples transacciones SAP por país, consolidar en Excel y reconstruir indicadores cada periodo. Esto genera alto consumo de tiempo semanal, datos fragmentados y decisiones lentas basadas en información desactualizada. Power BI Pro existe pero está subutilizado porque los dashboards se conectan a archivos locales sin un repositorio único. Un piloto previo con BigQuery se detuvo por permisos SAP incompletos y tablas faltantes.
 
 OBJETIVO DE LA PROPUESTA
+Aunergia implementará una solución integral que automatiza la extracción desde SAP hacia Google BigQuery y construye dashboards ejecutivos en Power BI. Se busca reducir en 70% el tiempo de consolidación y disponer de dashboards en <24h tras el cierre mensual (vs 5–7 días actuales), habilitando analítica confiable para toda la región CASA.
 
-Aunergia propone implementar una solución integral que automatice la extracción de datos desde SAP hacia Google BigQuery y desarrolle dashboards ejecutivos en Power BI. El proyecto eliminará procesos manuales, centralizará información de todos los países CASA, y habilitará capacidades analíticas avanzadas. El objetivo es reducir en un 70% el tiempo de consolidación de datos y permitir que los dashboards estén disponibles en menos de 24 horas tras el cierre mensual.
-
-
-ALCANCE DEL PROYECTO
-
-El proyecto abarca 18 transacciones SAP prioritarias distribuidas en cuatro módulos: Finanzas (FI), Ventas (SD), Materiales (MM) y Controlling (CO). Estas transacciones incluyen operaciones críticas como mayor general, órdenes de venta, inventarios, compras, cuentas por pagar, cuentas por cobrar, y OPEX. Se implementará un Data Lake en BigQuery con arquitectura en tres zonas: RAW para datos crudos, PROCESSED para datos limpios y transformados, y CURATED para el modelo dimensional.
-Se desarrollarán 12 dashboards ejecutivos en Power BI que cubrirán áreas clave como Financiero General, Ventas, Inventario, OPEX, Supply Chain, Compras, Rentabilidad, Cuentas por Pagar, Cuentas por Cobrar, Controlling, y un Dashboard Ejecutivo consolidado. Todos los dashboards tendrán seguridad a nivel de fila (RLS) configurada por país y área, además de actualización automatizada programada.
-
+ALCANCE
+18 transacciones SAP prioritarias (FI, SD, MM, CO) cubriendo mayor general, órdenes de venta, inventarios, compras, cuentas por pagar, cuentas por cobrar y OPEX. Data Lake en BigQuery con 3 zonas: RAW (crudo), PROCESSED (limpio/transformado) y CURATED (modelo dimensional). 12 dashboards ejecutivos: Financiero General, Ventas, Inventario, OPEX, Supply Chain, Compras, Rentabilidad, CxP, CxC, Controlling, Dashboard Ejecutivo consolidado y uno transversal de desempeño. Seguridad RLS por país y área; actualizaciones automatizadas.
 
 PIPELINE TECNOLÓGICO
+Fuente: SAP S/4HANA (FI, CO, SD, MM). Replicación: SAP Landscape Transformation (SLT). Repositorio: BigQuery (dataset `casa_bi` en dev / qa / prod). Herramientas: BigQuery Studio para SQL y validaciones. Visualización: Power BI Service (8 licencias Pro ya disponibles). Modelo dimensional con dimensiones Tiempo, Geografía, Producto, Cliente, Proveedor, Centro y Cuenta Contable.
 
-La solución se construirá sobre un stack tecnológico moderno y robusto, confirmado por las áreas de Finanzas y Operaciones de Elanco.
-- Fuente de Datos (ERP): SAP S/4HANA, utilizando los módulos de Finanzas (FI), Controlling (CO), Ventas y Distribución (SD) y Gestión de Materiales (MM).
-- Servidor de Replicación: Se usará SAP Landscape Transformation Server (SLT) para la replicación de datos en tiempo real desde SAP.
-- Data Lake:** Google BigQuery será el repositorio centralizado de datos, utilizando el dataset `casa_bi` (ambientes dev/qa/prod).
- - Data Lake: Google BigQuery será el repositorio centralizado de datos, utilizando el dataset `casa_bi` (ambientes dev/qa/prod).
-- Visualización (BI): Microsoft Power BI para la creación de los 12 dashboards interactivos. Elanco ya ha adquirido 8 licencias Pro.
-- Herramientas de Soporte: El proyecto se apoyará en BigQuery Studio para consultas.
+FASES DEL PROYECTO (42 semanas)
+Fase 0 – Revisión de Alcance y Factibilidad (6 semanas, 235h): Auditoría técnica, validación de disponibilidad de tablas SAP en BigQuery, priorización de transacciones, plan refinado y una Prueba de Concepto (POC) end-to-end. Cierra con reunión Go/No-Go.
+Fase 1 – Construcción Data Lake (22 semanas, 696h): Pipelines automatizados para las 18 transacciones, ingestión histórica (≥24 meses), 3 zonas de datos, controles de calidad y validaciones SAP vs BigQuery (>95% exactitud objetivo).
+Fase 2 – Modelado y Dashboards (14 semanas, 659h): Diseño de modelo dimensional, desarrollo de 12 dashboards, RLS, UAT, capacitación y Go-Live.
+Fase 3 – Modelos Predictivos (Conceptual, fuera de alcance de implementación): Documento con catálogo de casos de uso (p.ej. forecast ventas, optimización inventario, morosidad, fraude) y roadmap futuro.
 
-
-FASES DEL PROYECTO
-
-El proyecto se ejecuta en Fases 0 a 2 que suman 42 semanas. La Fase 0 de Revisión de Alcance y Factibilidad durará 6 semanas. En esta etapa se realizará una auditoría técnica completa, se validará la disponibilidad de tablas SAP en BigQuery, se priorizarán las 18 transacciones con stakeholders, se elaborará un plan detallado, y se realizará un POC técnico end-to-end. Al finalizar habrá una reunión crítica de Go/No-Go donde se decidirá si continuar con el proyecto.
-La Fase 1 de Construcción del Data Lake tomará 22 semanas. Se implementarán pipelines automatizados para extraer y transformar datos de las 18 transacciones SAP hacia BigQuery. Se configurarán las tres zonas de datos, se implementará historización de al menos 24 meses, y se realizarán validaciones comparando datos de SAP contra BigQuery para asegurar precisión. Esta fase incluye la construcción secuencial de pipelines por módulos: FI, SD, MM, CO, y transacciones custom complejas (ZLEL008, ZVEL015).
-La Fase 2 de Modelado y Dashboards durará 14 semanas. Se diseñará el modelo dimensional con dimensiones de Tiempo, Geografía, Producto, Cliente, Proveedor, Centro y Cuenta Contable. Se desarrollarán los 12 dashboards en Power BI con sus respectivas visualizaciones interactivas, se configurará RLS por país y área, se realizarán pruebas de aceptación de usuario (UAT) en 4 semanas, y se capacitará a los usuarios finales antes del Go-Live.
-La Fase 3 es solo una descripción conceptual de modelos predictivos sin implementación. Se identificarán 8 casos de uso potenciales como pronóstico de ventas, optimización de inventarios, predicción de morosidad, detección de fraudes, segmentación de clientes, entre otros. Se entregará un documento con análisis exploratorio y propuesta de arquitectura para Machine Learning, junto con un roadmap para futura implementación.
-
-
-ESFUERZO Y RECURSOS
-
-El esfuerzo total del proyecto es de 1.590 horas distribuidas en 42 semanas. La Fase 0 requiere 235 horas (6 semanas), la Fase 1 necesita 696 horas (22 semanas), y la Fase 2 demanda 659 horas (14 semanas). El equipo estará compuesto por Juan Manuel Bigi como Arquitecto de Datos y Desarrollador principal con 961 horas, Lucía Rodríguez como Analista SAP y Power User con 484 horas, y Linda López como Project Manager con 145 horas. No se incluye consultoría ABAP adicional ya que Lucía y Juan cuentan con expertise SAP.
-El inicio propuesto es el 6 de enero de 2026 y la finalización estimada a mediados de octubre de 2026 (semana 42 del cronograma).
-
+ESFUERZO Y RECURSOS (Total: 1.590h)
+Fase 0: 235h | Fase 1: 696h | Fase 2: 659h. Equipo: Arquitecto de Datos / Dev Principal (961h), Analista SAP / Power User (484h), Project Manager (145h). Inicio propuesto: 6-ene-2026 | Fin estimado: mediados oct-2026.
 
 ENTREGABLES PRINCIPALES
-
-En la Fase 0 se entregarán cinco documentos clave: un reporte de auditoría técnica con análisis de disponibilidad de datos, un backlog priorizado de transacciones con estimaciones refinadas, la arquitectura detallada del Data Lake, un plan de proyecto actualizado con cronograma semanal, y la decisión formal de Go/No-Go documentada.
-En la Fase 1 se entregará el Data Lake operativo en BigQuery con las tres zonas configuradas y datos históricos cargados, los pipelines automatizados funcionando con orquestación y monitoreo, documentación técnica completa incluyendo diccionarios de datos y diagramas de flujo, y un reporte de validación cruzada entre SAP y BigQuery.
-En la Fase 2 se entregarán los 12 dashboards publicados en Power BI Service con RLS configurado, documentación funcional para usuarios, manuales de capacitación con videos tutoriales, reportes de pruebas de aceptación firmados por stakeholders, y se realizará el Go-Live formal con comunicación a todos los usuarios.
-La Fase 3 entregará un documento descriptivo con catálogo de casos de uso de Machine Learning, análisis exploratorio de datos, propuesta de arquitectura, y roadmap sugerido para implementación futura. Este documento es solo conceptual y no incluye implementación de modelos.
-
+Fase 0: Reporte auditoría técnica, backlog priorizado, arquitectura detallada, plan y cronograma refinado, decisión Go/No-Go. 
+Fase 1: Data Lake operativo (3 zonas), pipelines funcionando con monitoreo, documentación técnica (diccionarios, diagramas), reporte validación SAP–BigQuery. 
+Fase 2: 12 dashboards publicados con RLS, documentación funcional, manuales y capacitación, reportes UAT firmados, Go-Live formal. 
+Fase 3 (conceptual): Documento de casos de uso y roadmap ML.
 
 BENEFICIOS ESPERADOS
+Reducción del 70% en tiempo de extracción y consolidación. Dashboards disponibles en <24h tras cierre mensual. Eliminación de procesos manuales propensos a error. Acceso democratizado a datos con versión única de la verdad y trazabilidad. Base sólida para futura analítica avanzada (ML).
 
-El proyecto generará ahorros operativos significativos. Se estima una reducción del 70% en tiempo de extracción y consolidación de datos, liberando una cantidad sustancial de horas al año considerando las áreas principales de Finanzas, Supply Chain y otras áreas operativas. Los dashboards estarán disponibles en 24 horas tras cierre mensual comparado con los 5 a 7 días actuales. Se eliminan procesos manuales propensos a errores en áreas críticas de Finanzas, Ventas, Inventario y OPEX.
-La democratización del acceso a datos mediante Power BI permitirá que usuarios de diferentes niveles organizacionales puedan consultar información sin depender de TI. Se establece una versión única de la verdad con trazabilidad completa de cambios.
+REQUISITOS Y DEPENDENCIAS
+Permisos SAP completos y tablas necesarias replicadas en BigQuery (tickets pendientes a resolver por TI Global). Asignación de accesos BigQuery (rol Data Editor) al equipo. Disponibilidad de stakeholders para validaciones (~4h/semana). Activación y asignación correcta de licencias Power BI Pro. Definición formal de Product Owner.
 
+RIESGOS Y MITIGACIÓN
+Tablas o transacciones custom faltantes: mitigación con auditoría exhaustiva en Fase 0 y opción de Change Request ABAP especializado. Retrasos de TI Global: holguras en cronograma y seguimiento semanal. Cambios de alcance: proceso formal de Change Request. Performance BigQuery: diseño con particionamiento/clustering y pruebas anticipadas.
 
-REQUISITOS Y DEPENDENCIAS CRÍTICAS
-
-Para que el proyecto sea exitoso se requieren varios elementos críticos. Los permisos SAP completos deben estar resueltos antes de iniciar la Fase 1, actualmente hay un ticket abierto (SAP-48219) que debe cerrarse. Las tablas SAP necesarias deben estar disponibles en BigQuery, hay tickets pendientes (BQ-7713 y BQ-7721) que TI Global debe resolver. Se necesitan accesos de Data Editor en BigQuery para los 6 integrantes del equipo.
-Los stakeholders de Finanzas y Supply Chain deben estar disponibles aproximadamente 4 horas por semana para validaciones y workshops. TI Global debe responder tickets críticos en máximo una semana. Las 8 licencias Power BI Pro ya adquiridas por Elanco deben estar activas y asignadas correctamente. Es fundamental definir un Product Owner que tome decisiones durante el proyecto.
-
-
-RIESGOS Y MITIGACIONES
-
-Existen varios riesgos identificados en el proyecto. El principal es que las transacciones custom (ZLEL008, ZVEL015) sean más complejas de lo estimado, para lo cual, si fuera necesario, se considerará hasta 12 horas de consultoría ABAP especializada mediante Change Request (no incluidas en el esfuerzo base). Otro riesgo es que las tablas SAP requeridas no estén disponibles en BigQuery, lo cual se mitigó con un análisis exhaustivo en Fase 0 y se contempló usar workarounds si es necesario.
-Existe riesgo de que TI Global retrase respuestas a tickets, por eso se incorporaron holguras en el cronograma de 2 a 3 semanas. Los cambios de alcance durante desarrollo se manejan mediante un proceso formal de Change Request que requiere cotización adicional y aprobación. Si hay problemas de performance en BigQuery se aplicarán técnicas de optimización como particionamiento y clustering que ya están consideradas en el diseño.
-
-
-CONDICIONES COMERCIALES Y GARANTÍAS
-
-El esfuerzo total es de 1590 horas distribuidas en 42 semanas, desglosado por perfil de la siguiente manera:
-
-DISTRIBUCIÓN DE HORAS POR PERFIL:
-- Arquitecto de Datos / Desarrollador BI (Juan Manuel Bigi): 961 horas (60.4%)
-- Analista SAP / Power User (Lucía Rodríguez): 484 horas (30.4%)
-- Project Manager (Linda López): 145 horas (9.1%)
-
-TIMELINE DEL PROYECTO (Inicio: 6-ene-2026):
-
-Semanas 0-6  | FASE 0: Due Diligence & Factibilidad (235h)
-[▓▓▓▓▓▓]      | • Auditoría técnica y validación de tablas SAP
-              | • Workshops de priorización con stakeholders
-              | • POC técnico end-to-end
-              | HITO: Go/No-Go (10-feb-2026)
-
-Semanas 6-28 | FASE 1: Construcción Data Lake (696h)
-[▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓] | • Pipelines ETL para 18 transacciones SAP
-                        | • Setup infraestructura BigQuery (3 zonas)
-                        | • Validación y documentación técnica
-                        | HITO: Data Lake Operativo (mediados-jul-2026)
-
-Semanas 28-42| FASE 2: Modelado & Dashboards Power BI (659h)
-[▓▓▓▓▓▓▓▓▓▓▓▓▓▓] | • Modelo dimensional (8 dims + 6 hechos)
-                 | • Desarrollo de 12 dashboards ejecutivos
-                 | • Testing UAT y capacitación usuarios
-                 | HITO: Go-Live (mediados-oct-2026)
-
-DURACIÓN TOTAL: 42 semanas (~10 meses) | Ene-2026 a Oct-2026
-
-Las condiciones comerciales específicas, tarifas por perfil y esquema de facturación serán definidas en acuerdo comercial separado. Si el proyecto se detiene en Fase 0 con decisión de NO-GO, solo se factura el esfuerzo de esa fase que son 235 horas.
-
-
-EXCLUSIONES DEL ALCANCE
-
-No están incluidos en el presupuesto los costos de infraestructura como licencias de Google Cloud Platform, las licencias Power BI Pro ya fueron adquiridas por Elanco, ni herramientas ETL de terceros como Fivetran o Airbyte. Tampoco se incluyen transacciones SAP adicionales más allá de las 18 planificadas, dashboards adicionales más de los 12 contemplados, ni integraciones con otros sistemas como CRM o HRIS.
-La implementación de modelos predictivos de la Fase 3 no está incluida, solo se entrega la descripción conceptual. Cualquier cambio de alcance mayor que requiera más de 10 horas adicionales necesita Change Request formal con cotización y aprobación.
-
+EXCLUSIONES
+No incluye costos de infraestructura GCP, compra de licencias (Power BI ya adquiridas), herramientas ETL de terceros (Fivetran, Airbyte), transacciones SAP adicionales, dashboards extra, integraciones externas (CRM, HRIS) ni implementación de modelos predictivos (Fase 3 solo conceptual).
 
 CRITERIOS DE ÉXITO
-
-El proyecto se considerará exitoso si se cumplen los criterios cuantitativos y cualitativos definidos. Las tablas SAP identificadas deberán estar replicadas en BigQuery, dentro del rango establecido de 32 a 38 tablas (32 del núcleo más hasta 6 condicionales activables como indicadores), asociadas a las 18 transacciones. La exactitud de los datos entre SAP y BigQuery deberá ser igual o superior al 95%. Además, los usuarios deberán haber sido capacitados y deberá existir conformidad formal por parte de ellos. En caso de disconformidad, esta deberá estar debidamente fundamentada, documentada y basada en evidencias técnicas objetivas. No se considerarán válidas las observaciones que no estén respaldadas por criterios verificables dentro del alcance y entregables acordados del proyecto
-
+Replicación satisfactoria de 32–38 tablas asociadas a las 18 transacciones. Exactitud ≥95% entre SAP y BigQuery. Dashboards productivos con RLS aplicado. Usuarios clave capacitados y conformidad formal basada en evidencias técnicas objetivas.
 
 PRÓXIMOS PASOS
-
-Una vez aceptada la propuesta, los próximos pasos son firmar el contrato formal que Aunergia preparará en 3 a 5 días hábiles, definir el acuerdo comercial basado en las 1.590 horas de esfuerzo, programar la reunión de kick-off para el 6 de enero de 2026 con duración de 2 a 3 horas, iniciar trámites de accesos a SAP, BigQuery y Power BI, y comenzar formalmente la Fase 0 en la primera semana de enero.
-La validez de esta propuesta es de 30 días desde su emisión, hasta el 8 de diciembre de 2025. El proyecto representa una transformación digital significativa que modernizará los procesos de análisis de datos de Elanco, eliminará tareas manuales repetitivas, y habilitará toma de decisiones basada en información actualizada y confiable para toda la operación CASA.
-
-
-INFORMACIÓN DE CONTACTO
-
-Por parte de Aunergia, la Coordinadora del Proyecto es Linda López quien gestionará la comunicación general, la Consultoría SAP está a cargo de Lucía Rodríguez quien será el power user principal, y el Arquitecto de Datos es Juan Manuel Bigi responsable del desarrollo técnico. Los detalles de contacto específicos serán proporcionados por Aunergia.
-Por parte de Elanco, el contacto de TI TechOps es David Saboya con email david.saboya@network.elancoah.com quien coordinará aspectos técnicos con TI Global. El Product Owner y otros contactos de las áreas de negocio serán designados según coordinación con Aunergia.
+Tras aceptación: firma de contrato (3–5 días hábiles), acuerdo comercial sobre 1.590h, programación del kick-off (6-ene-2026), gestión de accesos SAP/BigQuery/Power BI y arranque de Fase 0. Validez de esta propuesta: 30 días desde la fecha (vence 9-dic-2025).
 
 ================================================================================
-Documento generado: Noviembre 2025
-Versión: 2.0 - Propuesta Final Actualizada
-Aunergia - Consultoría en Optimización de Procesos y TI
+Aunergia – Consultoría en Optimización de Procesos y TI | Resumen Ejecutivo
 ================================================================================
+
