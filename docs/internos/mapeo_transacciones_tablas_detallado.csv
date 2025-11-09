@@ -4,7 +4,7 @@ VA05,Posición orden de venta,VBAP,Transaccional,1,core,incluir,Necesario para d
 VA05,Estatus cabecera,VBUK,Transaccional,1,core,incluir,Requerido para semáforos y estado ciclo de pedido
 VA05,Estatus posición,VBUP,Transaccional,1,core,incluir,Detalla cumplimiento a nivel de ítem
 VA05,Maestro material,MARA,Maestro,1,core,incluir,Clave para joins de producto
-VA05,Textos material,MAKT,Maestro,1,derivada,candidato_incluir,Solo para descripciones legibles (UX)
+VA05,Textos material,MAKT,Maestro,1,core,incluir,Descripciones legibles multi-idioma para UX/KPIs
 VA05,Maestro cliente,KNA1,Maestro,1,core,incluir,Dimensión cliente
 VA05,Business Partner,BUT000,Maestro,1,core,incluir,Unifica cliente/proveedor (S/4)
 KSB1,Universal Journal,ACDOCA,Finanzas,1,core,incluir,Sustituye COEP/BSEG/FAGLFLEXA
@@ -14,7 +14,7 @@ KSB1,Centro de costo,CSKS,Maestro,1,core,incluir,Dimensión costo
 KSB1,Elemento de costo,CSKA,Maestro,1,core,incluir,Clasificación de gastos
 FAGLL03,Universal Journal,ACDOCA,Finanzas,1,core,incluir,Base de mayor general
 FAGLL03,Cabecera documento,BKPF,Finanzas,1,core,incluir,Metadatos de documentos
-FAGLL03,Plan de cuentas,SKA1,Maestro,1,derivada,candidato_incluir,Jerarquías contables
+FAGLL03,Plan de cuentas,SKA1,Maestro,1,core,incluir,Jerarquías/etiquetas contables para reportes GL
 ZLEL008,Stock almacén,MARD,Inventario,1,core,incluir,KPIs de inventario por almacén
 ZLEL008,Stock por lote,MCHB,Inventario,1,derivada,candidato_incluir,Solo si se requiere granularidad por lote
 ZLEL008,Valoración material,MBEW,Inventario,1,core,incluir,Costos estándar y valorización
@@ -45,3 +45,8 @@ TEXTOS,Textos generales,STXL,Cluster,pendiente,condicional,candidato_incluir,Sol
 LEGACY,Partidas clásicas,BSEG,Finanzas,NA,obsoleta,excluir,Sustituida por ACDOCA
 LEGACY,Partidas CO,COEP,Finanzas,NA,obsoleta,excluir,Sustituida por ACDOCA
 LEGACY,Ledger flexible,FAGLFLEXA,Finanzas,NA,obsoleta,excluir,Sustituida por ACDOCA
+FAGLL03,Maestro de sociedades,T001,Maestro,1,derivada,incluir,Atributos de sociedad (moneda, nombre) para joins y RLS
+ZLEL008,Material por planta,MARC,Maestro,1,core,incluir,Atributos por planta para stock/costos (WERKS)
+XK03,Maestro proveedor,LFA1,Maestro,pendiente,core,incluir,Dimensión proveedor (BP complemento)
+VA05,Schedule lines (fechas programadas),VBEP,Transaccional,1,derivada,candidato_incluir,Backlog/aging y cumplimiento de entrega
+VA05,Flujo de documentos,VBFA,Transaccional,1,derivada,candidato_incluir,Pipeline Pedido→Entrega→Factura

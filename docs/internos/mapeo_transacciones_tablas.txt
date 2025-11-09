@@ -8,6 +8,7 @@ Propósito: Referencia técnica rápida para desarrolladores y analistas.
 ================================================================================
 
 La confirmación de que el sistema fuente es **S/4HANA** define la estrategia de replicación. El foco principal es la tabla **`ACDOCA` (Universal Journal)**. Rango vigente (MVP) de tablas a replicar: **19 núcleo + hasta 6 condicionales = 19–25**. Este documento se actualizó el 08-nov-2025 para reflejar la optimización basada en Universal Journal, reemplazando rangos históricos (~35–65, ~70–90, ~76–85).
+La confirmación de que el sistema fuente es **S/4HANA** define la estrategia de replicación. El foco principal es la tabla **`ACDOCA` (Universal Journal)**. Rango vigente (MVP) de tablas a replicar: **24 núcleo + hasta 7+ condicionales**. Este documento se actualizó el 08-nov-2025 para reflejar la optimización basada en Universal Journal y la promoción de tablas maestras al núcleo.
 
 --------------------------------------------------------------------------------
 SECCIÓN 1: EL FOCO PRINCIPAL - UNIVERSAL JOURNAL (FI/CO)
@@ -19,6 +20,7 @@ SECCIÓN 1: EL FOCO PRINCIPAL - UNIVERSAL JOURNAL (FI/CO)
 | **FI/CO** | FAGLL03, F.08, F.01 | **ACDOCA_T** | Totales pre-agregados (balance / trial balance) – mejora performance de saldos. |
 | **Maestros CO** | KSB1 | **CSKS, CSKA, AUFK** | Dimensiones y órdenes internas (sin cambios en S/4). |
 | **FI Clásico** | FBL1N, FBL5N | **BKPF** | Cabecera de documento. Partidas individuales derivan de ACDOCA (filtradas por tipo de cuenta). |
+| **Maestros FI** | FAGLL03, F.01 | **T001** | Maestro de Sociedades (atributos como moneda, nombre). |
 
 --------------------------------------------------------------------------------
 SECCIÓN 2: MATERIALES Y LOGÍSTICA (MM/SD)
@@ -29,11 +31,12 @@ SECCIÓN 2: MATERIALES Y LOGÍSTICA (MM/SD)
 | **MM** | ME2L, ME23N | **EKKO, EKPO** | Cabecera y posición de pedidos de compra. |
 | **MM** | MB59, MB5B | **MKPF, MSEG** | Movimientos de material (cabecera/posición). |
 | **MM** | MM60 | **MBEW** | Valoración y costos estándar (CRÍTICA). |
-| **MM** | ZLEL008, MB5B | **MARD** | Stock por almacén (núcleo). |
+| **MM** | ZLEL008, MB5B | **MARD, MARC** | Stock por almacén (MARD) y datos de material por planta (MARC). |
 | **MM (Condicional)** | MB5B (detalle lote), ZLEL008 (si requiere lote) | **MCHB** | Stock por lote (solo si KPI exige granularidad). |
 | **SD** | VA05 | **VBAK, VBAP** | Cabecera y posiciones de órdenes de venta. |
 | **SD** | VA05 | **VBUK, VBUP** | Estatus de cabecera y posición (CRÍTICO). |
-| **SD (Opcional)** | VA05 | **VBEP** | Schedule lines (fechas programadas) – evaluar en Fase 0 según KPIs. |
+| **SD (Condicional)** | VA05 | **VBEP** | Schedule lines (fechas programadas) – fundamental para backlog. |
+| **SD (Condicional)** | VA05 | **VBFA** | Flujo de documentos de ventas (pipeline). |
 
 --------------------------------------------------------------------------------
 SECCIÓN 3: DATOS MAESTROS Y CONDICIONES
@@ -42,13 +45,12 @@ SECCIÓN 3: DATOS MAESTROS Y CONDICIONES
 | Módulo | Transacción | Tabla Clave | Propósito |
 | :--- | :--- | :--- | :--- |
 | **Maestros** | XK03, XD03 | **BUT000** | Business Partner unificado (CRÍTICO). |
-| **Maestros** | XD03 | **KNA1** | Cliente (incluida núcleo). |
-| **Maestros (Compatibilidad / Condicional)** | XK03 | **LFA1, LFB1** | Proveedor (compatibilidad – fuera de MVP salvo requerimiento P2P). |
-| **Maestros (Compatibilidad / Condicional)** | XD03 | **KNB1, KNVV** | Vistas cliente (contratos/segmentos) – incluir solo si KPI exige. |
-| **Maestros** | MM60, VA05 | **MARA** | Maestro material (incluida núcleo). |
-| **Maestros (Condicional)** | MM60, VA05 | **MAKT** | Textos de material (solo si se requieren descripciones legibles). |
+| **Maestros** | XD03 | **KNA1** | Cliente (incluida en núcleo). |
+| **Maestros** | XK03 | **LFA1** | Proveedor (incluida en núcleo). |
+| **Maestros (Condicional)** | XD03 | **KNB1, KNVV** | Vistas cliente (contratos/segmentos) – incluir solo si KPI exige. |
+| **Maestros** | MM60, VA05 | **MARA, MAKT** | Maestro y descripciones de material (incluidas en núcleo). |
 | **Precios (Condicional)** | ZVEL015 | **KONV, KONP** | Pricing detallado (incluir solo si caso de uso pricing histórico). |
-| **Plan de Cuentas (Condicional)** | F.01 | **SKA1** | Jerarquías contables para reporte estructurado. |
+| **Plan de Cuentas** | F.01 | **SKA1** | Jerarquías contables para reporte estructurado (incluida en núcleo). |
 
 --------------------------------------------------------------------------------
 SECCIÓN 4: TABLAS ESPECIALES (CLUSTER Y CUSTOM)
@@ -60,6 +62,7 @@ SECCIÓN 4: TABLAS ESPECIALES (CLUSTER Y CUSTOM)
 | **FI** | **COEP** | N/A | **OBSOLETA** (Sustituida por ACDOCA). No replicar. |
 | **FI** | **FAGLFLEXA** | N/A | **OBSOLETA** (Sustituida por ACDOCA). No replicar. |
 | **Global (Condicional)** | **STXL** | (Textos) | Replicar solo si se requieren textos largos; requiere declustering SLT. |
+| **CO-PA (Condicional)** | **CE1xxxx, CE4xxxx** | KE24 | Necesarias si se usa Costing-Based CO-PA. |
 | **Custom** | ZLEL008, ZVEL015 | N/A | Análisis ABAP para confirmar tablas subyacentes antes de definir alcance final. |
 
 --------------------------------------------------------------------------------
@@ -70,13 +73,12 @@ SECCIÓN 5: CONCLUSIÓN DEL MAPEO
 | :--- | :--- | :--- |
 | **CRÍTICA A** | Replicar **`ACDOCA`** y **`ACDOCA_T`** | Sustituye estructuras FI/CO legacy (BSEG, COEP, FAGLFLEXA). |
 | **CRÍTICA B** | Replicar **`VBUK/VBUP`** y **`MBEW`** | Estatus SD y valorización MM esenciales para KPIs. |
-| **CORE INVENTARIO** | Replicar **`MARD`** | Stock por almacén (base inventario). |
+| **CORE LOGÍSTICA** | Replicar **`MARD`** y **`MARC`** | Stock por almacén y datos de planta. |
 | **ANÁLISIS Z** | Código ABAP `ZLEL008` y `ZVEL015` | Identificar tablas Z antes de activar replicación. |
+| **CONDICIONAL BACKLOG** | Evaluar **`VBEP`** | Activar si se requiere análisis de pedidos pendientes. |
 | **CONDICIONAL PRICING** | Evaluar **`KONV/KONP`** | Activar si caso de uso detallado pricing histórico confirmado. |
 | **CONDICIONAL TEXTOS** | Evaluar **`STXL`** | Activar si se requieren textos largos (declustering). |
 | **CONDICIONAL LOTE** | Evaluar **`MCHB`** | Solo si KPIs requieren granularidad por lote. |
-| **CONDICIONAL DESCRIPCIONES** | Evaluar **`MAKT`** | Descripciones legibles de materiales (UX). |
-| **CONDICIONAL PLAN CUENTAS** | Evaluar **`SKA1`** | Jerarquías contables avanzadas. |
 
 --------------------------------------------------------------------------------
 SECCIÓN 6: RESUMEN NUMÉRICO DEL ALCANCE (MVP)
@@ -84,13 +86,12 @@ SECCIÓN 6: RESUMEN NUMÉRICO DEL ALCANCE (MVP)
 
 | Categoría | Conteo | Estado |
 |-----------|--------|--------|
-| Tablas núcleo (incluir) | 19 | Confirmadas en CSV detallado |
-| Tablas condicionales | 6 | Activación sujeta a validación KPI/caso uso |
+| Tablas núcleo (incluir) | 24 | Confirmadas para robustez de reportes. |
+| Tablas condicionales | 7+ | Activación sujeta a validación KPI/caso uso. |
 | Tablas obsoletas | 3 | Excluidas (BSEG, COEP, FAGLFLEXA) |
-| Opcional adicional (VBEP) | 1 | Evaluar si fechas programadas requeridas |
-| Total potencial | 19–25 | Rango vigente |
+| Total potencial | 24–31+ | Rango vigente |
 
-Nota: Tablas de compatibilidad (LFA1, LFB1, KNB1, KNVV) fuera de MVP salvo requerimiento explícito en procesos P2P o segmentación extendida de clientes/proveedores.
+Nota: Tablas de compatibilidad (LFB1, KNB1, KNVV) fuera de MVP salvo requerimiento explícito en procesos P2P o segmentación extendida de clientes/proveedores.
 
 --------------------------------------------------------------------------------
 SECCIÓN 7: NOTA DE CONSISTENCIA

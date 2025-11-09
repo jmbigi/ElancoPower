@@ -52,6 +52,37 @@ Consultor BI (auditoría interna de consistencia documental).
 
 ---
 *Fin del registro de correcciones 08-nov-2025.*
+
+### Cambio de rango final (post optimización inicial): 19–25 tablas
+Registro histórico del primer ajuste drástico de alcance (reducción desde referencias previas ~70-90 a un modelo lean). Se mantiene para trazabilidad.
+
+### Promoción de T001 y ajuste de rango a 20–26
+Fecha: 09-nov-2025
+Motivo: Incorporar atributos de sociedad (Company Code) de forma directa para reforzar joins contables y filtros organizativos sin depender exclusivamente de BKPF.
+Impacto: Núcleo pasa de 19 → 20 tablas; rango total potencial de 19–25 → 20–26 manteniendo máximo de 6 condicionales. No añade complejidad estructural FI (se preserva ACDOCA/ACDOCA_T como fuente central).
+Acciones ejecutadas:
+1. `config/table_scope_expected.yaml`: expected_core_count actualizado a 20 y T001 añadido a core_tables.
+2. `docs/internos/mapeo_transacciones_tablas_detallado.csv`: fila añadida para T001 con estado_inclusion=incluir.
+3. Documentos de alcance (`docs/entregables/ALCANCE_TABLAS_E_INDICES.md`, `docs/propuesta_final/ANEXO_TECNICO_TRANSACCIONES_VS_TABLAS.md`) ajustados al nuevo rango 20–26.
+4. `docs/internos/estado_documentos.md` actualizado para reflejar rango vigente.
+5. Pendiente (ejecutar script de validación nuevamente con conteos core=20 para cerrar formalmente).
+Riesgo: Bajo. T001 presenta volumen moderado y alto valor relacional.
+### Reclasificación ampliada (core 24 / conditional 4) – 08-nov-2025 (pendiente de validación funcional)
+Motivo: Incorporar feedback adicional sobre cobertura robusta para transacciones VA05, MB5B, KE24 y asegurar base futura de análisis de rentabilidad y backlog.
+Cambios ejecutados (provisionales):
+1. `config/table_scope_expected.yaml`: Se promueve MAKT, MARC, LFA1, SKA1 a core; se ajustan core_tables (24) y expected_core_count=24.
+2. Se redefinen `conditional_tables` a set mínimo (VBEP, KONV, VBFA, MCHB) y se trasladan STXL, KONP, CE1XXXX, CE4XXXX a `optional_tables` con calificadores.
+3. Notas de recomendados actualizadas (eliminadas entradas duplicadas ahora promovidas).
+4. Metadata version cambiada a `2025-11-08-reclass` para diferenciar de versión canónica previa.
+5. No se alteran todavía documentos ejecutivos; se crea (pendiente) documento de actualización formal si se aprueba.
+Riesgos / Consideraciones:
+- Incremento core 20→24 aún dentro de límite (`max_core_tables:25`).
+- Mayor volumen potencial (LFA1 y MARC añaden joins recurrentes); monitorear costo de replicación inicial.
+- CO-PA tablas CE1XXXX / CE4XXXX se mantienen opcionales para evitar duplicidad si sólo se usa Account-Based.
+Acción pendiente:
+- Ejecutar `scripts/validate_table_scope.py` tras actualizar CSV de mapeo para reflejar estado_inclusion de nuevas tablas core.
+- Confirmar si STXL debe activarse (requiere declustering adicional en SLT).
+Estado: Clasificación aplicada en YAML, pendiente confirmación para volverse canónica en documentos de alcance.
 # CORRECCIONES APLICADAS - 8 de Noviembre de 2025
 
 ## ✅ RESUMEN DE CORRECCIONES

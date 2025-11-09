@@ -226,7 +226,7 @@ Estado de permisos: consolidado en `docs/propuesta_final/10_REQUISITOS_TECNICOS_
 | Dashboards Power BI | 12 | `docs/propuesta_final/06_FASE_2_MODELADO_Y_DASHBOARDS.md` | Consistente tras correcciones 8-nov |
 | Horas totales | 1,590 | `docs/propuesta_final/08_ESTIMACION_DE_ESFUERZOS_Y_COSTOS.md` + `docs/propuesta_final/CRONOGRAMA_DETALLADO_TAREAS.csv` | JMB 961 / Lucía 484 / Linda 145 (bloques históricos marcados) |
 | Duración | 42 semanas | `docs/propuesta_final/09_CRONOGRAMA_SEMANAL.md` | Sustituye duraciones previas |
-| Tablas SAP estimadas | 70–90 | `docs/propuesta_final/ANEXO_TECNICO_TRANSACCIONES_VS_TABLAS.md` | Baseline histórico inicial: 44 tablas |
+| Tablas SAP estimadas | 19–25 | `docs/propuesta_final/ANEXO_TECNICO_TRANSACCIONES_VS_TABLAS.md` | Rango optimizado por Universal Journal (S/4HANA). Sustituye rangos previos (~70-90). |
 | Go/No-Go mínimo | ≥12 transacciones viables | `docs/propuesta_final/11_RIESGOS_Y_SUPUESTOS.md` | Criterio Fase 0 |
 | Tickets críticos | SAP-48219 / BQ-7713 / BQ-7721 | `docs/propuesta_final/10_REQUISITOS_TECNICOS_Y_ADMINISTRATIVOS.md` | Seguimiento Fase 0 |
 
@@ -244,52 +244,20 @@ Estado de permisos: consolidado en `docs/propuesta_final/10_REQUISITOS_TECNICOS_
 
 ## 📖 GUÍA DE USO POR ROL
 
-### 🌟 Si buscas **Solución SLT Completa** (NUEVO):
-**Carpeta:** `docs/propuesta_final/solucion_slt_completa/`
+### 🌟 Para **Ejecutivos y Project Managers**:
+1. **Inicio Rápido:** `RESUMEN_PROPUESTA_FINAL.txt` (Resumen de 5 minutos).
+2. **Propuesta Canónica:** `docs/propuesta_final/` (Navegar los documentos 00-12 para ver el detalle completo del proyecto, esfuerzo de 1,590h y cronograma de 42 semanas).
+3. **Entregables:** `docs/propuesta_final/12_ENTREGABLES_Y_CONDICIONES_COMERCIALES.md` (Lista de los 20 entregables formales).
 
-1. **Ejecutivos/Sponsors:** 
-   - Empieza: `INICIO_RAPIDO.md` (5 min)
-   - Lee: `RESUMEN_EJECUTIVO_SLT.md` (15 min)
-   - Decide: Aprobar presupuesto $122,595
+### ⚙️ Para el **Equipo Técnico (Desarrollo, SAP, Datos)**:
+1. **Contexto y Problemas:** `docs/propuesta_final/01_CONTEXTO_Y_SITUACION_ACTUAL.md`.
+2. **Alcance Técnico:** `docs/propuesta_final/03_TRANSACCIONES_SAP_INCLUIDAS.md` (18 transacciones) y `docs/propuesta_final/ANEXO_TECNICO_TRANSACCIONES_VS_TABLAS.md` (19-25 tablas).
+3. **Fases y Tareas:** `docs/propuesta_final/04_FASE_0...`, `05_FASE_1...`, `06_FASE_2...` para el detalle de cada etapa.
+4. **Requisitos y Riesgos:** `docs/propuesta_final/10_REQUISITOS...` y `11_RIESGOS...`.
 
-2. **Project Managers:**
-   - Empieza: `INICIO_RAPIDO.md` (5 min)
-   - Lee: `README_SOLUCION_COMPLETA_SLT.md` (30 min)
-   - Acción: Organizar equipo de 7 personas
-
-3. **Técnicos (SAP/Cloud/Data/DevOps):**
-   - Orientación: `INDICE_GENERAL.md` (5 min)
-   - Implementación: `Solucion_SLT_CONNECTOR_Y_PLAN_VA05.md` (Parte 1)
-   - Operations: `Solucion_SLT_CONNECTOR_Y_PLAN_VA05_PARTE2.md`
-   - Acción: Ejecutar scripts de tu fase
-
-**Auditoría y QA:**
-Referencias a auditorías internas específicas fueron removidas del índice por no existir en este repo.
-
----
-
-### 👤 Si eres **Lucía / Linda (Aunergia)**:
-1. **Empieza aquí:** `docs/entregables/RESUMEN_EJECUTIVO_PARA_LUCIA.md` ⭐
-2. **Presupuesto completo:** `docs/entregables/PRESUPUESTO_REAL_BASADO_EN_FUENTES_PRIMARIAS.md`
-Documentación comparativa y pagos: mantener fuera del repo público o en `docs/historicos/` si hiciera falta.
-
-**Opciones a decidir:**
-- Opción A: Propuesta Aunergia histórica (USD 48,000)
-- Opción B: Propuesta personal JM Bigi histórica (USD 8,850)
-- Opción C: Propuesta integral actual (1,590 horas)
-
-### 🏢 Si eres **stakeholder Elanco**:
-1. **Contexto:** `inputs/conversaciones_con_lucia.md`
-2. **Issues técnicos:** `inputs/correo_1_de_lucia.md`
-3. **Presupuesto:** `docs/entregables/PRESUPUESTO_REAL_BASADO_EN_FUENTES_PRIMARIAS.md`
-Checklist de permisos: ver `docs/propuesta_final/10_REQUISITOS_TECNICOS_Y_ADMINISTRATIVOS.md`.
-
-### 👨‍💻 Si eres **Juan Manuel Bigi**:
-1. **Tu presupuesto:** `docs/entregables/PRESUPUESTO_REAL_BASADO_EN_FUENTES_PRIMARIAS.md`
-2. **Transacciones:** `inputs/Attach_2_Correo_1_Transacciones SAP.csv` (o `.normalized.csv`)
-3. **Issues:** `inputs/correo_1_de_lucia.md`
-4. **Especificaciones:** `inputs/Attach_1_Correo_1_Texto_de_Imagen.md`
-Backlog: incluido dentro de `docs/propuesta_final/04_FASE_0_REVISION_ALCANCE_Y_FACTIBILIDAD.md`.
+### 📚 Para **Referencias Históricas**:
+1. **Presupuestos Iniciales:** `docs/entregables/` contiene los presupuestos iniciales (ej. 354h). Estos documentos son **históricos** y no reflejan el alcance final.
+2. **Fuentes Originales:** `inputs/` contiene los correos y archivos originales que dieron inicio al proyecto. No deben ser modificados.
 
 ---
 
@@ -303,13 +271,6 @@ La tabla anterior de documentos específicos SLT fue removida; la solución se d
 
 ### 💰 Presupuestos:
 | Documento | Ubicación | Monto |
-|-----------|-----------|-------------|
-| Presupuesto JM Bigi (Histórico) | `docs/entregables/PRESUPUESTO_REAL_...` | 354 horas |
-| Presupuesto Aunergia (Histórico) | (archivo removido) | USD 48,000 |
-
-### 📊 Datos Técnicos:
-| Dato | Ubicación |
-|------|-----------|
 | 22 Transacciones SAP | `inputs/Attach_2_Correo_1_Transacciones SAP.csv` |
 | Transacciones (normalizado) | `inputs/Attach_2_Correo_1_Transacciones SAP.normalized.csv` |
 | Plataformas confirmadas | `inputs/Que_se_va_a_usar.txt` |
@@ -323,7 +284,7 @@ La tabla anterior de documentos específicos SLT fue removida; la solución se d
 | Audio transcrito (04:39) | `inputs/conversaciones_con_lucia.md` |
 | Power User Persona | `inputs/Attach_1_Correo_1_Texto_de_Imagen.md` |
 | Participantes | `inputs/quienes_somos.txt` |
-| Índice completo | `docs/propuesta_final/README.md` |
+| Índice de la Propuesta Final | `docs/propuesta_final/README.md` |
 
 ---
 

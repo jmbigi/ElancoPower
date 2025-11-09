@@ -1,6 +1,6 @@
 # Alcance Final de Tablas SAP e Índices (BigQuery)
 
-Fecha: 8-nov-2025
+Fecha: 9-nov-2025 (actualizado)
 Fuente canónica: `docs/internos/mapeo_transacciones_tablas_detallado.csv`
 Contexto: SAP S/4HANA replicado a Google BigQuery vía SAP SLT
 
@@ -8,9 +8,9 @@ Contexto: SAP S/4HANA replicado a Google BigQuery vía SAP SLT
 
 ## 1) Resumen ejecutivo
 
-- Alcance de tablas SAP a replicar (MVP): 19–25 tablas
-  - 19 tablas núcleo (core) obligatorias
-  - hasta 6 tablas condicionales (según casos de uso)
+- Alcance de tablas SAP a replicar (MVP): 24–28 tablas
+  - 24 tablas núcleo (core) obligatorias
+  - 4 tablas condicionales mínimas (según KPI)
 - Racional técnico: uso de ACDOCA/ACDOCA_T (S/4HANA) para sustituir BSEG/COEP/FAGLFLEXA y reducir drásticamente el volumen de tablas sin perder cobertura funcional.
 - Índices en BigQuery: se implementan como particionamiento y clustering por tabla. No se crean índices tipo RDBMS.
 
@@ -20,7 +20,7 @@ Este documento reemplaza cualquier rango anterior (~35–65, ~70–90, ~76–85)
 
 ## 2) Lista de tablas por estado de inclusión
 
-### 2.1. Núcleo (19) – incluir
+### 2.1. Núcleo (24) – incluir
 
 FI/CO
 - ACDOCA (Universal Journal)
@@ -29,6 +29,7 @@ FI/CO
 - AUFK (Órdenes internas)
 - CSKS (Maestro centros de costo)
 - CSKA (Maestro elementos de costo)
+- SKA1 (Plan de cuentas)
 
 SD
 - VBAK (Cabecera OV)
@@ -43,27 +44,38 @@ MM
 - MSEG (Posición mov. material)
 - MARD (Stock por almacén)
 - MBEW (Valorización)
+- MARC (Material por planta)
 
 Maestros
 - MARA (Maestro material)
+- MAKT (Descripciones de material)
 - KNA1 (Maestro cliente)
+- LFA1 (Maestro proveedor)
 - BUT000 (Business Partner)
+- T001 (Sociedades)
 
-Nota: `MARD` figura dos veces por diferentes descripciones en el mapeo, pero cuenta 1 sola vez.
+### 2.2. Condicionales (4) – candidato_incluir
 
-### 2.2. Condicionales (6) – candidato_incluir
+Logística y Ventas (mínimo viable)
+- VBEP (Schedule lines, backlog/aging) – activar sólo si KPI explícito lo requiere.
+- KONV (Condiciones de precio) – si se requiere análisis de pricing.
+- VBFA (Flujo de documentos de ventas) – pipeline OV→Entrega→Factura.
+- MCHB (Stock por lote) – si los KPIs requieren granularidad por lote.
 
-- MAKT (Textos de material) – solo si se requieren descripciones legibles en UX
-- MCHB (Stock por lote) – solo si se requieren KPIs a nivel de lote
-- SKA1 (Plan de cuentas) – si se requieren jerarquías contables en reportes
-- KONV, KONP (Condiciones de precio) – si se requiere pricing histórico a detalle
-- STXL (Textos largos, cluster) – si se necesitan textos de documentos; requiere declustering
+Opcionales (no contabilizan en el rango; activar si aplica):
+- STXL (Textos largos) – requiere declustering en SLT.
+- KONP (detalle adicional de condiciones) – sólo si análisis granular de pricing.
 
 ### 2.3. Excluidas por S/4HANA (3)
 
 - BSEG, COEP, FAGLFLEXA – Sustituidas por ACDOCA/ACDOCA_T
 
 ---
+
+### 2.3. Consideraciones CO-PA
+
+- Account-Based CO-PA: cubierto por ACDOCA (recomendado en S/4HANA).
+- Costing-Based CO-PA: considerar tablas CE1XXXX (reales) y CE4XXXX (plan) como opcionales. Sólo activar si el sistema las utiliza y se requiere KE24 con características de rentabilidad detalladas.
 
 ## 3) Política de particionamiento y clustering (BigQuery)
 
@@ -79,7 +91,7 @@ FI/CO
 - ACDOCA_T: partition por periodo fiscal (entero GJAHR_POPER) o por fecha de corte; clustering: BUKRS, RLDNR, RACCT, POPER
 - BKPF: partition por BUDAT_DATE o CPUDT_DATE; clustering: BUKRS, GJAHR, BELNR, BLART
 - AUFK: sin partición; clustering: AUFNR, BUKRS
-- CSKS/CSKA/SKA1: sin partición; clustering: claves de negocio (KOSTL/KTOPL/KSTAR según aplique)
+- CSKS/CSKA (y SKA1 si se activa): sin partición; clustering: claves de negocio (KOSTL/KTOPL/KSTAR)
 
 SD
 - VBAK: partition ERDAT_DATE o AEDAT_DATE; clustering: VKORG, VTWEG, SPART, KUNNR
@@ -92,13 +104,16 @@ MM
 - MKPF/MSEG: partition BUDAT_DATE; clustering (MSEG): MBLNR, MJAHR, BWART, WERKS, LGORT, MATNR
 - MARD: sin partición; clustering: MATNR, WERKS, LGORT
 - MBEW: sin partición; clustering: MATNR, BWKEY
+- MARC: sin partición; clustering: MATNR, WERKS
 - MCHB (condicional): sin partición; clustering: MATNR, WERKS, LGORT, CHARG
 
 Maestros
 - MARA: sin partición; clustering: MATNR
+- MAKT: sin partición; clustering: MATNR, SPRAS
 - KNA1: sin partición; clustering: KUNNR
+- LFA1: sin partición; clustering: LIFNR
 - BUT000: sin partición; clustering: PARTNER (o equivalente de BP)
-- MAKT (condicional): sin partición; clustering: MATNR, SPRAS
+- T001: sin partición; clustering: BUKRS
 
 Precios / Textos (condicionales)
 - KONV/KONP: partition por DATAB_DATE (validez desde) si aplica; clustering: KNUMV, KSCHL, VKORG/VTWEG
@@ -114,9 +129,9 @@ Notas
 
 - Plataforma objetivo: BigQuery (confirmado por antecedentes de tickets).
 - Sistema fuente: SAP S/4HANA; se prioriza ACDOCA/ACDOCA_T.
-- CO-PA: si es account-based, no se requieren tablas CE1*/CE4*; si es cost-based, se evaluará fuera del MVP.
-- VA05: prioriza VBUK/VBUP para estatus; `VBEP` (schedule lines) se evaluará en Fase 0 si es imprescindible para KPIs.
-- Business Partner: `BUT000` es canónico; `KNA1/LFA1` se utilizan como vistas de compatibilidad. En MVP se incluye `KNA1`; `LFA1` se mantiene fuera salvo requerimiento de P2P.
+- CO-PA: si es account-based, no se requieren tablas CE1*/CE4*; si es cost-based, su inclusión es condicional y crítica.
+- VA05: se prioriza VBUK/VBUP para estatus; `VBEP` (schedule lines) se clasifica como condicional de alta importancia.
+- Business Partner: `BUT000` es canónico. `KNA1` y `LFA1` se incluyen en el núcleo para asegurar la cobertura de datos maestros de cliente y proveedor.
 
 ---
 

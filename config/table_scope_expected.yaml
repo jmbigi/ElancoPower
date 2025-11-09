@@ -1,31 +1,34 @@
 core_tables:
-  - ACDOCA
-  - ACDOCA_T
-  - BKPF
-  - AUFK
-  - CSKS
-  - CSKA
-  - VBAK
-  - VBAP
-  - VBUK
-  - VBUP
-  - EKKO
-  - EKPO
-  - MKPF
-  - MSEG
-  - MARD
-  - MBEW
-  - MARA
-  - KNA1
-  - BUT000
+  - ACDOCA        # Universal Journal (account-based + replaces BSEG/COEP/FAGLFLEXA)
+  - ACDOCA_T      # Totales agregados
+  - BKPF          # Cabecera documentos FI
+  - AUFK          # Ordenes internas
+  - CSKS          # Maestro centros de costo
+  - CSKA          # Maestro elementos de costo
+  - VBAK          # Cabecera OV
+  - VBAP          # Posición OV
+  - VBUK          # Estatus cabecera OV
+  - VBUP          # Estatus posición OV
+  - EKKO          # Cabecera OC
+  - EKPO          # Posición OC
+  - MKPF          # Cabecera movimientos material
+  - MSEG          # Posiciones movimientos material
+  - MARD          # Stock por almacén
+  - MBEW          # Valorización material
+  - MARA          # Maestro material
+  - MAKT          # Descripciones material (promovida a core para UX/KPIs legibles)
+  - MARC          # Material por planta (promovida; necesaria para granularidad WERKS)
+  - KNA1          # Maestro cliente
+  - LFA1          # Maestro proveedor (promovida por cobertura robusta aunque KPIs AP puedan diferirse)
+  - BUT000        # Business Partner (canónico)
+  - SKA1          # Plan de cuentas (promovida por jerarquías contables y etiquetado cuentas)
+  - T001          # Sociedades (company codes)
 
 conditional_tables:
-  - MAKT
-  - MCHB
-  - SKA1
-  - KONV
-  - KONP
-  - STXL
+  - VBEP          # Schedule lines / backlog / aging (ventas)
+  - KONV          # Condiciones de precio (detalle pricing)
+  - VBFA          # Flujo documentos venta (pipeline conversión)
+  - MCHB          # Stock por lote (trazabilidad, vencimientos)
 
 excluded_tables:
   - BSEG
@@ -33,33 +36,34 @@ excluded_tables:
   - FAGLFLEXA
 
 optional_tables:
-  - VBEP  # Schedule lines (delivery dates)
+  - STXL      # Textos largos (declustering requerido)
+  - KONP      # Variante condiciones (solo si análisis granular de pricing)
+  - CE1XXXX   # CO-PA actual (solo si Costing-Based CO-PA activo)
+  - CE4XXXX   # CO-PA plan (solo si Costing-Based CO-PA activo y se requiere comparación plan vs real)
 
 recommended_additional_candidates:
   CEPC: "Profit Center master (needed if PRCTR dimensional analytics beyond code list)"
   SKB1: "G/L account company code data (if statements need local attributes)"
-  VBFA: "Sales document flow (for pipeline and conversion funnel metrics)"
-  LFA1: "Vendor master (if supplier analytics or AP dashboards extend)"
+  # VBFA movido a conditional_tables
+  # LFA1 promovido a core_tables
   KNB1: "Customer master company code view (credit control, payment terms)"
   KNVV: "Customer sales view (sales area, distribution channel, division)"
   TCURR: "Exchange rates (if multi-currency normalization is required)"
   TCURF: "Exchange rate types (support for currency conversion logic)"
   MSKA: "Special stock (consignment) if inventory KPIs need it"
   CKMLCR: "Material ledger cost component split (if detailed cost analysis required)"
-  MARC: "Plant-specific material data (if WERKS-level attributes missing)"
+  # MARC promovido a core_tables
   MAST: "Material to BOM link (if future manufacturing analytics considered)"
-  T001: "Company codes master (attributes, currency)"
   T001W: "Plants / Storage locations extended attributes"
-  CE1XXXX: "CO-PA actuals (only if cost-based profitability analysis, account-based covered by ACDOCA)"
-  CE4XXXX: "CO-PA planning (only if plan vs actual at segment level)"
+  # CE1XXXX y CE4XXXX ahora en optional_tables con calificador Costing-Based
 
 rules:
   max_core_tables: 25
   min_core_tables: 15
-  expected_core_count: 19
+  expected_core_count: 24   # actualizado tras promoción de MAKT, MARC, LFA1, SKA1
   max_total_tables: 30
-  include_optional_if: "Confirmed KPI dependency (delivery schedule / backlog aging)"
+  include_optional_if: "Confirmed KPI dependency OR activation of Costing-Based CO-PA"
 
 metadata:
-  version: "2025-11-08"
-  note: "Canonical MVP scope for Elanco Power SAP→BigQuery project."
+  version: "2025-11-08-reclass"
+  note: "Scope updated with reclassification (core 24, conditional 4). Pending formal approval if required."

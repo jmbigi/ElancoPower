@@ -203,7 +203,7 @@ En SLT se configura:
 | Transacciones Prioridad 1 | 4 | 10–14 | Media a Alta |
 | Transacciones Prioridad 2 | 4 | 6–8 | Media |
 | Transacciones Pendientes | 10 | 3–5 (aportes marginales/condicionales) | Baja a Media |
-| **TOTAL ESTIMADO (MVP)** | **18** | **19–25 tablas** | **Mixta (optimizada por S/4)** |
+| **TOTAL ESTIMADO (MVP)** | **18** | **24–28 tablas** | **Mixta (optimizada por S/4)** |
 
 ---
 
@@ -511,9 +511,9 @@ Esta sección documenta el proceso propuesto para reducir el rango operativo de 
 ### 11.1. Estado Canónico (Vigente) y Gestión
 | Concepto | Valor Vigente (Canónico) | Notas |
 |----------|---------------------------|-------|
-| Rango de Tablas (MVP) | 19–25 | 19 núcleo + hasta 6 condicionales. Sustituye rangos previos (~35–65, ~70–90, ~76–85). |
+| Rango de Tablas (MVP) | 24–28 | 24 núcleo + 4 condicionales mínimas. Sustituye rangos previos (~35–65, ~70–90, ~76–85). |
 | Tablas Obsoletas Excluidas | BSEG, COEP, FAGLFLEXA | Confirmado por uso de ACDOCA/ACDOCA_T (S/4HANA). |
-| Tablas Condicionales | STXL, KONV, KONP, MCHB, MAKT, SKA1 | Incluir solo si caso de uso confirmado y validado. |
+| Tablas Condicionales | Mínimas: VBEP, KONV, VBFA, MCHB; Opcionales: STXL, KONP, CE1XXXX, CE4XXXX | Activar por KPI (VBEP/VBFA/KONV/MCHB) o por CO-PA Costing-Based (CE1/CE4) y textos (STXL). |
 
 ### 11.2. Clasificación de Tablas
 Categorías utilizadas en `docs/internos/mapeo_transacciones_tablas_detallado.csv`:
@@ -552,4 +552,4 @@ Las menciones a "~35–65" en documentos de entregables se consideran EXPLORATOR
 
 ---
 
-*Versión: 1.4 - 8 de noviembre de 2025 (actualizado rango canónico a 19–25 y referencias de índices)*
+*Versión: 1.6 - 9 de noviembre de 2025 (actualizado rango canónico a 24–28 y condicional mínimo definido)*
