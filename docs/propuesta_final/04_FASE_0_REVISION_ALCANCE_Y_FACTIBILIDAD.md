@@ -95,6 +95,8 @@ Verificar disponibilidad de tablas para cada transacción:
 | KE24 | CE1*, CE4* (si Costing-Based) | ❌ No disponible | BQ-7713 |
 | ... | ... | ... | ... |
 
+**Nota S/4HANA:** En S/4HANA el detalle contable consolidado se gestiona en **ACDOCA/ACDOCA_T**, que sustituyen a tablas clásicas como **BSEG**, **COEP** y **FAGLFLEXA**. Las menciones a estas estructuras históricas en este documento son referenciales para trazabilidad funcional; la replicación y el modelado del MVP se basarán en ACDOCA/ACDOCA_T y, cuando aplique, en vistas derivadas para **BSID/BSAD/BSIK/BSAK**.
+
 **2. Benchmarks de Performance**
 
 Ejecutar queries representativos:

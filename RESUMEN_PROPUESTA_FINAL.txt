@@ -84,7 +84,7 @@ La implementación de modelos predictivos de la Fase 3 no está incluida, solo s
 
 CRITERIOS DE ÉXITO
 
-El proyecto se considerará exitoso si se cumplen varios criterios cuantitativos y cualitativos. Debe haber 100% de las tablas SAP identificadas replicadas en BigQuery, aproximadamente 25 tablas asociadas a las 18 transacciones. La reducción de tiempo de consolidación debe ser al menos del 70%, pasando de 3-5 días a menos de 1 día. Los dashboards deben actualizarse en máximo 24 horas desde cierre de periodo.
+El proyecto se considerará exitoso si se cumplen varios criterios cuantitativos y cualitativos. Debe haber 100% de las tablas SAP identificadas replicadas en BigQuery, dentro del rango vigente 24–31 tablas SAP (24 núcleo + hasta 7 condicionales activables por KPI) asociadas a las 18 transacciones. La reducción de tiempo de consolidación debe ser al menos del 70%, pasando de 3-5 días a menos de 1 día. Los dashboards deben actualizarse en máximo 24 horas desde cierre de periodo.
 La exactitud de datos entre SAP y BigQuery debe ser mayor o igual al 95%. Se deben capacitar al menos 15 usuarios entre power users y usuarios finales. La adopción de dashboards debe alcanzar al menos 80% de usuarios activos a 30 días del go-live. La satisfacción de usuarios debe ser de al menos 4.0 sobre 5.0 en encuesta post-implementación.
 
 
