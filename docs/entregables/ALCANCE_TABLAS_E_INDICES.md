@@ -18,6 +18,30 @@ Este documento reemplaza cualquier rango anterior (~35–65, ~70–90, ~76–85)
 
 ---
 
+## Acta de Cierre de Alcance (8-nov-2025)
+
+| Elemento | Valor Vigente |
+|----------|---------------|
+| Transacciones SAP | 18 |
+| Rango de Tablas (Fase 1) | 24–31 tablas |
+| Núcleo | 24 tablas |
+| Condicionales potenciales | 7 tablas (VBEP, KONV, VBFA, MCHB, CE1XXXX, CE4XXXX, STXL) |
+| Dashboards | 12 |
+| Esfuerzo Total | 1,590 horas |
+| Duración | 42 semanas |
+
+Notas de activación condicional:
+1. CO-PA Costing-Based: activar CE1XXXX (reales) y CE4XXXX (plan) solo si el sistema utiliza Costing-Based y se requiere granularidad KE24 ampliada. Si el enfoque es exclusivamente Account-Based, ACDOCA cubre el requerimiento.
+2. STXL (textos largos): requiere declustering en SLT; incluir únicamente si los dashboards definidos necesitan textos enriquecidos (descripciones extendidas / notas comerciales).
+3. VBEP: activar cuando exista KPI de backlog / fechas de entrega comprometidas.
+4. KONV: activar si se requiere análisis de pricing a nivel condición; KONP queda fuera del rango (opcional) para granularidad aún mayor.
+5. MCHB: sólo si los KPIs solicitan stock por lote (trazabilidad / vencimientos).
+6. Flujo de ventas (VBFA): incorporar para análisis pipeline OV → Entrega → Factura.
+
+Gobernanza: cualquier modificación posterior deberá (a) registrarse en `CORRECCIONES_APLICADAS_08NOV2025.md`, (b) actualizar este documento y el Anexo Técnico, y (c) pasar validación mediante `scripts/check_consistency.py` (estado=exit 0/1 sin errores).
+
+---
+
 ## 2) Lista de tablas por estado de inclusión
 
 ### 2.1. Núcleo (24) – incluir

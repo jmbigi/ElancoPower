@@ -38,7 +38,7 @@ Unificar cifras y criterios entre documentos de `docs/propuesta_final` y elimina
 - Cobertura mínima refleja 18 transacciones (4+4+10).
 - No quedan referencias a “116 horas” de Fase 0 en documentos vigentes.
 - Reconciliación >95% alineada con riesgos y supuestos (sección 11).
-- Número de tablas unificado y optimizado: todas las menciones a rangos anteriores (~70-84, ~70-90, ~76-85, 19-25) reemplazadas por 25.
+- (HISTÓRICO) Número de tablas unificado y optimizado: todas las menciones a rangos anteriores (~70-84, ~70-90, ~76-85, 19–25) reemplazadas por 25.
 - Semántica de semanas aclarada (global vs. internas) en 05 y 09.
 - Origen histórico de 22 líneas vs. 18 transacciones documentado claramente.
 
