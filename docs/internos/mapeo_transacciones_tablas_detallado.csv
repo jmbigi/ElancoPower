@@ -24,6 +24,8 @@ ZLEL008,Stock ubicación (opcional),MARD,Inventario,1,core,incluir,Consolidado y
 KE24,Universal Journal,ACDOCA,Finanzas,2,core,incluir,Base CO-PA
 KE24,Condiciones de documento,KONV,Precios,2,derivada,candidato_incluir,Detalle de condiciones de pricing
 KE24,Maestro condiciones,KONP,Precios,2,derivada,opcional,Soporte analítico pricing histórico
+KE24,CO-PA actual (Costing-Based),CE1XXXX,Finanzas,2,derivada,candidato_incluir,Activar solo si sistema utiliza Costing-Based CO-PA
+KE24,CO-PA plan (Costing-Based),CE4XXXX,Finanzas,2,derivada,candidato_incluir,Plan vs Real; activar si se requiere comparación de segmento
 FB03,Universal Journal,ACDOCA,Finanzas,2,core,incluir,Detalle partidas contables
 FB03,Cabecera documento,BKPF,Finanzas,2,core,incluir,Metadatos aprobación
 F.08,Universal Journal,ACDOCA,Finanzas,2,core,incluir,Saldos balance comprobación
@@ -41,7 +43,7 @@ FBL5N,Universal Journal,ACDOCA,Finanzas,pendiente,core,incluir,Partidas clientes
 MB5B,Stock histórico,MARD,Inventario,pendiente,core,incluir,Stock corte fecha (derivado)
 XK03,Business Partner,BUT000,Maestro,pendiente,core,incluir,Ya incluido (BP)
 XD03,Business Partner,BUT000,Maestro,pendiente,core,incluir,Ya incluido (BP)
-TEXTOS,Textos generales,STXL,Cluster,pendiente,condicional,opcional,Solo si se requieren textos largos
+TEXTOS,Textos generales,STXL,Cluster,pendiente,condicional,candidato_incluir,Solo si se requieren textos largos (declustering)
 LEGACY,Partidas clásicas,BSEG,Finanzas,NA,obsoleta,excluir,Sustituida por ACDOCA
 LEGACY,Partidas CO,COEP,Finanzas,NA,obsoleta,excluir,Sustituida por ACDOCA
 LEGACY,Ledger flexible,FAGLFLEXA,Finanzas,NA,obsoleta,excluir,Sustituida por ACDOCA

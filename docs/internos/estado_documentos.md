@@ -13,7 +13,7 @@ Este archivo consolida el **estado** (vigente / histórico / auxiliar) de los pr
 | Dominio | Documento | Rol | Comentario |
 |---------|-----------|-----|------------|
 | Alcance Transacciones | `docs/propuesta_final/03_TRANSACCIONES_SAP_INCLUIDAS.md` | Vigente (Canónico) | Define las 18 transacciones finales; explica normalización 22→18 |
-| Tablas Estimadas | `docs/propuesta_final/ANEXO_TECNICO_TRANSACCIONES_VS_TABLAS.md` | Vigente (Canónico) | Rango consolidado 24–28 tablas (24 núcleo + 4 condicionales mínimas) |
+| Tablas Estimadas | `docs/propuesta_final/ANEXO_TECNICO_TRANSACCIONES_VS_TABLAS.md` | Vigente (Canónico) | Rango consolidado 24–31 tablas (24 núcleo + 7 condicionales activables) |
 | Esfuerzo & Costos | `docs/propuesta_final/08_ESTIMACION_DE_ESFUERZOS_Y_COSTOS.md` | Vigente (Canónico) | Total 1,590h consistente |
 | Cronograma Global | `docs/propuesta_final/09_CRONOGRAMA_SEMANAL.md` | Vigente (Canónico) | 42 semanas totales |
 | Fase 1 (Detalle Data Lake) | `docs/propuesta_final/05_FASE_1_CONSTRUCCION_DATA_LAKE.md` | Vigente | Incluye aclaración semanas internas vs globales |
@@ -40,9 +40,9 @@ Este archivo consolida el **estado** (vigente / histórico / auxiliar) de los pr
 | Aspecto | Valor Canónico | Consistencia |
 |---------|----------------|--------------|
 | Transacciones | 18 | OK |
-| Tablas Estimadas | 24–28 | OK (optimizado por Universal Journal + robustez logística/maestros) |
+| Tablas Estimadas | 24–31 | OK (añade CO-PA Costing-Based y textos largos como condicionales) |
 | Dashboards | 12 | OK |
-| Esfuerzo Total | 1,590h | OK |
+| Esfuerzo Total | 1,590 horas | OK |
 | Duración | 42 semanas | OK |
 | Go/No-Go | ≥12 transacciones con tablas disponibles | OK |
 

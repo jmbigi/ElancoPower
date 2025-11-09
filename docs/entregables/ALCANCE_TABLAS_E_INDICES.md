@@ -72,10 +72,10 @@ Opcionales (no contabilizan en el rango; activar si aplica):
 
 ---
 
-### 2.3. Consideraciones CO-PA
+### 2.3. CO-PA (Condicional por Método)
 
 - Account-Based CO-PA: cubierto por ACDOCA (recomendado en S/4HANA).
-- Costing-Based CO-PA: considerar tablas CE1XXXX (reales) y CE4XXXX (plan) como opcionales. Sólo activar si el sistema las utiliza y se requiere KE24 con características de rentabilidad detalladas.
+- Costing-Based CO-PA: incluir como condicionales las tablas **CE1XXXX** (reales) y **CE4XXXX** (plan) si el sistema utiliza Costing-Based y se requiere KE24 con características de rentabilidad detalladas.
 
 ## 3) Política de particionamiento y clustering (BigQuery)
 

@@ -21,21 +21,21 @@ Impacto: Se promueven a core las tablas MAKT, MARC, LFA1 y SKA1. El rango total 
 ### 2.1 Core (Núcleo Confirmado: 24)
 ACDOCA, ACDOCA_T, BKPF, AUFK, CSKS, CSKA, SKA1, VBAK, VBAP, VBUK, VBUP, EKKO, EKPO, MKPF, MSEG, MARD, MBEW, MARA, MAKT, MARC, KNA1, LFA1, BUT000, T001
 
-### 2.2 Condicional mínimo (activar según KPI)
+### 2.2 Condicional (activar según KPI / método)
 | Tabla | Uso Principal | Activar Si |
 |-------|---------------|-----------|
 | VBEP | Fechas programadas, backlog/aging | KPI explícito de fill-rate/backorder |
 | KONV | Desglose pricing | Análisis de condiciones / margen |
 | VBFA | Flujo documento ventas | Pipeline Pedido→Entrega→Factura |
 | MCHB | Stock por lote | KPIs por lote / caducidad |
+| CE1XXXX | CO-PA reales (Costing-Based) | Método Costing-Based activo + rentabilidad por características |
+| CE4XXXX | CO-PA plan (Costing-Based) | Comparación Plan vs Real requerida |
+| STXL | Textos largos | Necesidad de textos documentales en reportes |
 
-### 2.3 Opcionales (no afectan rango mínimo)
+### 2.3 Opcionales (no afectan rango)
 | Tabla | Uso Principal | Activar Si |
 |-------|---------------|-----------|
-| STXL | Textos largos | Requisito explícito de textos documentales |
 | KONP | Soporte granular de pricing | Análisis a nivel condición histórico |
-| CE1XXXX | CO-PA reales (Costing-Based) | Si CO-PA es Costing-Based y se usa KE24 con características |
-| CE4XXXX | CO-PA plan (Costing-Based) | Si se requiere plan vs real en KE24 |
 
 ### 2.4 Excluidas (Sustituidas por S/4HANA Universal Journal)
 BSEG, COEP, FAGLFLEXA, BSID, BSAD, BSIK, BSAK (redundantes al adoptar ACDOCA / vistas derivadas).

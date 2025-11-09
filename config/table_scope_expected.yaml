@@ -29,6 +29,9 @@ conditional_tables:
   - KONV          # Condiciones de precio (detalle pricing)
   - VBFA          # Flujo documentos venta (pipeline conversión)
   - MCHB          # Stock por lote (trazabilidad, vencimientos)
+  - CE1XXXX       # CO-PA actual (si Costing-Based)
+  - CE4XXXX       # CO-PA plan (si Costing-Based)
+  - STXL          # Textos largos (requiere declustering en SLT)
 
 excluded_tables:
   - BSEG
@@ -36,10 +39,7 @@ excluded_tables:
   - FAGLFLEXA
 
 optional_tables:
-  - STXL      # Textos largos (declustering requerido)
   - KONP      # Variante condiciones (solo si análisis granular de pricing)
-  - CE1XXXX   # CO-PA actual (solo si Costing-Based CO-PA activo)
-  - CE4XXXX   # CO-PA plan (solo si Costing-Based CO-PA activo y se requiere comparación plan vs real)
 
 recommended_additional_candidates:
   CEPC: "Profit Center master (needed if PRCTR dimensional analytics beyond code list)"
@@ -61,9 +61,9 @@ rules:
   max_core_tables: 25
   min_core_tables: 15
   expected_core_count: 24   # actualizado tras promoción de MAKT, MARC, LFA1, SKA1
-  max_total_tables: 30
+  max_total_tables: 32      # ampliado para permitir condicionales CO-PA y STXL
   include_optional_if: "Confirmed KPI dependency OR activation of Costing-Based CO-PA"
 
 metadata:
-  version: "2025-11-08-reclass"
-  note: "Scope updated with reclassification (core 24, conditional 4). Pending formal approval if required."
+  version: "2025-11-08-reclass2"
+  note: "Scope updated adding CO-PA (CE1/CE4) and STXL as conditional; core 24, conditional 7."

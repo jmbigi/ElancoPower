@@ -226,7 +226,7 @@ Estado de permisos: consolidado en `docs/propuesta_final/10_REQUISITOS_TECNICOS_
 | Dashboards Power BI | 12 | `docs/propuesta_final/06_FASE_2_MODELADO_Y_DASHBOARDS.md` | Consistente tras correcciones 8-nov |
 | Horas totales | 1,590 | `docs/propuesta_final/08_ESTIMACION_DE_ESFUERZOS_Y_COSTOS.md` + `docs/propuesta_final/CRONOGRAMA_DETALLADO_TAREAS.csv` | JMB 961 / Lucía 484 / Linda 145 (bloques históricos marcados) |
 | Duración | 42 semanas | `docs/propuesta_final/09_CRONOGRAMA_SEMANAL.md` | Sustituye duraciones previas |
-| Tablas SAP estimadas | 24–28 | `docs/propuesta_final/ANEXO_TECNICO_TRANSACCIONES_VS_TABLAS.md` | Rango optimizado por Universal Journal + robustez logística y maestros. Sustituye rangos previos (~70-90). |
+| Tablas SAP estimadas | 24–31 | `docs/propuesta_final/ANEXO_TECNICO_TRANSACCIONES_VS_TABLAS.md` | Rango optimizado por Universal Journal + robustez logística, CO-PA (Costing-Based) y textos. |
 | Go/No-Go mínimo | ≥12 transacciones viables | `docs/propuesta_final/11_RIESGOS_Y_SUPUESTOS.md` | Criterio Fase 0 |
 | Tickets críticos | SAP-48219 / BQ-7713 / BQ-7721 | `docs/propuesta_final/10_REQUISITOS_TECNICOS_Y_ADMINISTRATIVOS.md` | Seguimiento Fase 0 |
 
@@ -251,7 +251,7 @@ Estado de permisos: consolidado en `docs/propuesta_final/10_REQUISITOS_TECNICOS_
 
 ### ⚙️ Para el **Equipo Técnico (Desarrollo, SAP, Datos)**:
 1. **Contexto y Problemas:** `docs/propuesta_final/01_CONTEXTO_Y_SITUACION_ACTUAL.md`.
-2. **Alcance Técnico:** `docs/propuesta_final/03_TRANSACCIONES_SAP_INCLUIDAS.md` (18 transacciones) y `docs/propuesta_final/ANEXO_TECNICO_TRANSACCIONES_VS_TABLAS.md` (24–28 tablas).
+2. **Alcance Técnico:** `docs/propuesta_final/03_TRANSACCIONES_SAP_INCLUIDAS.md` (18 transacciones) y `docs/propuesta_final/ANEXO_TECNICO_TRANSACCIONES_VS_TABLAS.md` (24–31 tablas).
 3. **Fases y Tareas:** `docs/propuesta_final/04_FASE_0...`, `05_FASE_1...`, `06_FASE_2...` para el detalle de cada etapa.
 4. **Requisitos y Riesgos:** `docs/propuesta_final/10_REQUISITOS...` y `11_RIESGOS...`.
 
