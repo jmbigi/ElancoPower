@@ -40,6 +40,17 @@ Operación Centroamérica y Sudamérica (CASA)
 
 ## RESUMEN EJECUTIVO
 
+### FICHA TÉCNICA CANÓNICA
+| Métrica | Valor |
+|---------|-------|
+| Transacciones SAP | 18 |
+| Dashboards Power BI | 12 |
+| Esfuerzo Total | 1,590 horas (42 semanas) |
+| Rango Tablas SAP (MVP) | 24–31 (24 núcleo + hasta 7 condicionales) |
+| Distribución Fases | F0: 235h (6 sem) · F1: 696h (22 sem) · F2: 659h (14 sem) |
+
+Nota de canonicidad: Ante cualquier discrepancia prevalecen `03_TRANSACCIONES_SAP_INCLUIDAS.md`, `ANEXO_TECNICO_TRANSACCIONES_VS_TABLAS.md`, `08_ESTIMACION_DE_ESFUERZOS_Y_COSTOS.md` y `09_CRONOGRAMA_SEMANAL.md`.
+
 ### Contexto
 
 **Elanco Animal Health** es una compañía global líder en salud animal, con operaciones en Centroamérica y Sudamérica (CASA) que abarcan más de 10 países. Actualmente, los equipos de Finanzas, Supply Chain y otras áreas de negocio enfrentan desafíos significativos en la gestión y análisis de información empresarial:

@@ -6,6 +6,8 @@
 **Inicio:** Semana 0 (6 de enero 2026)  
 **Finalización:** Semana 42 (Mediados de octubre 2026)
 
+**Distribución Consolidada (Horas / Semanas):** Fase 0: 235h / 6 sem · Fase 1: 696h / 22 sem · Fase 2: 659h / 14 sem = **1,590h / 42 sem**
+
 ```
 FASE 0          FASE 1                                           FASE 2          
 ────────        ──────────────────────────────────────────────   ──────────────────────────    

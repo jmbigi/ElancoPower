@@ -53,6 +53,21 @@ Unificar cifras y criterios entre documentos de `docs/propuesta_final` y elimina
 - Automatizar chequeo de consistencia numérica (script futuro) para asegurar mantenimiento del número 25.
  - Automatizar chequeo de consistencia numérica (script futuro) para asegurar mantenimiento del rango 24–31.
 
+### 11. Refuerzo de Redundancia Canónica (8-nov-2025, segunda iteración)
+Se añadieron bloques "Ficha Técnica Canónica" y líneas de distribución de horas en:
+1. `docs/propuesta_final/README.md` (incluye ahora el rango 24–31 y nota de canonicidad).
+2. `docs/propuesta_final/00_PORTADA_Y_RESUMEN_EJECUTIVO.md` (bloque tabla con métricas clave).
+3. `docs/propuesta_final/09_CRONOGRAMA_SEMANAL.md` (línea de resumen: Fase 0 235h, Fase 1 696h, Fase 2 659h = 1,590h).
+
+Objetivo: Facilitar verificación manual rápida sin depender de scripts; asegurar que cualquier lectura aislada expone todas las métricas canónicas.
+
+Verificación post-cambio:
+- Fichas contienen exactamente las cifras ya auditadas (18 / 12 / 1,590 / 42 / 24–31 / distribución por fase).
+- No se introducen cifras nuevas; solo redundancia controlada.
+- Formato de miles consistente (1,590) y rango tablas con EN DASH (24–31).
+
+Responsable: Asistente IA (refuerzo documental).
+
 ### Responsable
 Consultor BI (auditoría interna de consistencia documental).
 
