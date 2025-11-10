@@ -1,0 +1,20 @@
+Pregunta 01
+SOBRE VERSION 2_02:
+
+Hola Juan buenas tardes, como estas?
+
+Primeramente te quería agradecer por todo el esfuerzo e información, la propuesta / estimación esta completisima.
+
+Debajo podrás encontrar algunos comentarios que surgieron cuando lo revisamos con el equipo, que nos gustaria que nos ayudes a entender:
+
+- Se puede proponer un esquema con mayor carga horaria, para acortar tiempos? Los tiempos actuales incluyen ciertas premisas, razon por la cual no se podrian acortar?
+
+- Tenes a mano / podrías generar alguna visualización gráfica / esquema de la solución para facilitar el entendimiento de la solución propuesta? (gráfico explicando arquitectura tecnológica de la solución propuesta)
+
+- Necesitaríamos algún recurso técnico ABAP? 
+
+- Seguramente nos pidan un detalle de los perfiles a incorporar, nos podrias pasar un JD con la experiencia necesaria de los mismos?
+
+Desde ya muchas gracias!
+
+Saludos
