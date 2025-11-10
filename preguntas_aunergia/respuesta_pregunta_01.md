@@ -1,6 +1,7 @@
 # RESPUESTA A PREGUNTA 01 - AUNERGIA
 **Fecha:** 10 de noviembre de 2025  
-**Versión:** 2.02 de la Propuesta  
+**Versión Original:** 2.02 de la Propuesta  
+**Versión Recomendada:** 2.04 (Optimizada)  
 **Proyecto:** Centralización de Datos y Analítica - Elanco Animal Health (CASA)
 
 ---
@@ -9,7 +10,9 @@
 
 Estimado equipo de Aunergia,
 
-Muchas gracias por sus preguntas y comentarios sobre la propuesta. A continuación, encontrarán respuestas detalladas a cada uno de los puntos planteados:
+Muchas gracias por sus preguntas y comentarios sobre la propuesta. A continuación, encontrarán respuestas detalladas a cada uno de los puntos planteados.
+
+**ACTUALIZACIÓN IMPORTANTE:** Tras análisis detallado, recomendamos la **VERSIÓN 2.04** que incorpora un ABAP Developer en rol de consultoría (270h) para reducir el cronograma a **36 semanas** con incremento controlado de **+290h (+18%)**. Ver detalles completos en la sección de recomendaciones al final.
 
 ---
 
@@ -124,28 +127,72 @@ Muchas gracias por sus preguntas y comentarios sobre la propuesta. A continuaci�
 
 ### RECOMENDACIÓN
 
-**Escenario Recomendado: ESCENARIO A (Compresión Moderada a 36 semanas)**
+**Escenario Recomendado: ESCENARIO D (Agregar ABAP Developer - Compresión a 32 semanas)**
 
 **Justificación:**
-1. ✅ **Balance óptimo:** Reduce tiempo 14% sin comprometer calidad
-2. ✅ **Menor riesgo:** No requiere contratar recursos adicionales
-3. ✅ **Viable operativamente:** Ajustes manejables en disponibilidad
-4. ✅ **Sin costo adicional:** Mantiene 1,590 horas totales
-5. ⚠️ **Requiere:** Confirmación de que Consultor BI puede aumentar a 37h/semana
+1. ✅ **Consultor BI protegido:** Mantiene restricción de 30h/semana (no negociable)
+2. ✅ **Reducción significativa:** 32 semanas vs 42 semanas (-24%, -10 semanas)
+3. ✅ **Separación de responsabilidades:** Consultor BI solo BigQuery/Power BI, ABAP Dev solo SAP/SLT
+4. ✅ **Menor riesgo técnico:** Especialista en SLT y transacciones custom (ZLEL008, ZVEL015)
+5. ✅ **Mayor paralelización:** Trabajo simultáneo en SAP y BigQuery (Fase 1)
+6. ✅ **Gestión eficiente:** ABAP Developer como punto focal con TI Global SAP
+7. 💰 **Costo controlado:** +378 horas (+24%) por -10 semanas (-24% duración)
 
-**Cronograma Ajustado Propuesto:**
+**Cronograma Ajustado Propuesto (VERSIÓN 2.03):**
 - **Inicio:** 6 de enero 2026
 - **Fase 0:** 5 semanas (fin 9 de febrero 2026)
-- **Fase 1:** 18 semanas (fin 22 de junio 2026)
-- **Fase 2:** 13 semanas (fin 21 de septiembre 2026)
-- **TOTAL:** 36 semanas
-- **Go-Live:** Fin de septiembre 2026 (vs mediados de octubre)
+- **Fase 1:** 16 semanas (fin 2 de junio 2026)
+- **Fase 2:** 11 semanas (fin 18 de agosto 2026)
+- **TOTAL:** 32 semanas (~7.5 meses)
+- **Go-Live:** Mediados de agosto 2026 (vs mediados de octubre en v2.02)
+
+**Distribución de Horas por Recurso:**
+
+| Recurso | Versión 2.02 | Versión 2.03 | Delta | Sem/Promedio |
+|---------|--------------|--------------|-------|--------------|
+| **Consultor BI** | 961h | 761h | -200h | 30h/sem (respeta restricción) |
+| **ABAP Developer** | 0h | 436h | +436h | 15-20h/sem (NUEVO) |
+| **Funcional SAP** | 484h | 484h | 0h | 15-20h/sem |
+| **Project Manager** | 145h | 145h | 0h | 3-5h/sem |
+| **TOTAL** | **1,590h** | **1,968h** | **+378h (+24%)** | 32 sem vs 42 |
 
 **Ajustes Necesarios:**
-- [ ] Consultor BI aumenta disponibilidad de 30h/sem a 37h/sem
-- [ ] Funcional SAP aumenta disponibilidad de 15h/sem a 20h/sem en picos
-- [ ] Stakeholders comprometidos a respuestas en 2 días (vs 3-5 días)
-- [ ] Fase 0 comprimida eliminando 1 semana de buffer
+- [x] Consultor BI mantiene 30h/semana (restricción respetada)
+- [ ] Contratar ABAP Developer con experiencia en SLT y módulos MM/SD/FI
+- [ ] Funcional SAP colabora principalmente con ABAP Developer (sin cambio carga)
+- [ ] Stakeholders comprometidos a respuestas en 2-3 días
+- [ ] Coordinación SAP Basis (Elanco) desde Fase 0
+
+**Roles y Responsabilidades Claros:**
+
+**Consultor BI (761h):**
+- ✅ Arquitectura BigQuery (3 capas)
+- ✅ Desarrollo pipelines transformación (PROCESSED/CURATED)
+- ✅ Modelo dimensional (star schema)
+- ✅ Desarrollo 12 dashboards Power BI
+- ✅ Optimización queries BigQuery
+- ❌ NO toca SAP directamente
+
+**ABAP Developer (436h - NUEVO):**
+- ✅ Análisis transacciones SAP (18 trans, incluyendo ZLEL008/ZVEL015)
+- ✅ Configuración y monitoreo SAP SLT
+- ✅ Extracción de datos desde SAP → BigQuery (zona RAW)
+- ✅ Gestión de tickets SAP con TI Global
+- ✅ Análisis de tablas Z y transacciones custom
+- ✅ Coordinación con SAP Basis (Elanco)
+- ❌ NO desarrolla en BigQuery ni Power BI
+
+**Funcional SAP (484h):**
+- ✅ Validaciones funcionales de negocio
+- ✅ Definición de KPIs con stakeholders
+- ✅ Colaboración con ABAP Developer (Fase 0 y 1)
+- ✅ UAT y capacitación (Fase 2)
+- ✅ Documentación funcional
+
+**Project Manager (145h):**
+- ✅ Coordinación general del proyecto
+- ✅ Gestión de riesgos y cronograma
+- ✅ Comunicación con stakeholders
 
 ---
 
@@ -884,58 +931,346 @@ Responsable de la gestión integral del proyecto, coordinación de stakeholders,
 
 ---
 
-## RESUMEN DE LOS 3 PERFILES
+### PERFIL 4: ABAP DEVELOPER - ESPECIALISTA SAP SLT (NUEVO EN VERSIÓN 2.03)
 
-| Aspecto | Consultor BI | Funcional SAP | Project Manager |
-|---------|--------------|---------------|-----------------|
-| **Experiencia mínima** | 6+ años | 5+ años | 5+ años |
-| **Horas totales** | 961h (60.4%) | 484h (30.4%) | 145h (9.1%) |
-| **Horas/semana** | 25-30h (máx 6h/día) | 15-20h | 3-5h |
-| **Skills críticos** | BigQuery, Power BI, SQL, ETL | SAP FI/CO, Validaciones, UAT | Gestión stakeholders, Comunicación |
-| **Certificaciones deseables** | GCP Data Engineer, Power BI | SAP FI/CO Associate | PMP, CSM |
-| **Idioma inglés** | Intermedio-Avanzado | Intermedio | Intermedio-Avanzado |
-| **Modalidad** | Remoto | Remoto | Remoto |
-| **Criticidad** | 🔴 CRÍTICA | 🔴 CRÍTICA | 🟡 ALTA |
+**Título del Puesto:** SAP ABAP Developer & SLT Specialist  
+**Empresa:** Aunergia  
+**Proyecto:** Centralización de Datos y Analítica - Elanco Animal Health  
+**Dedicación:** Part-time, 15-20 horas/semana  
+**Duración:** 21 semanas (Fase 0 y Fase 1 únicamente: enero - junio 2026)  
+**Total horas:** 436h (22.1% del proyecto)
+
+#### Descripción del Rol
+
+Especialista técnico SAP ABAP con profundo conocimiento de SAP Landscape Transformation (SLT), módulos MM, SD y FI, y experiencia en proyectos de integración SAP-Cloud. Responsable de todas las actividades de extracción de datos desde SAP hacia BigQuery, configuración y monitoreo de SLT, análisis de transacciones custom, y gestión técnica con TI Global SAP. **NO toca BigQuery ni Power BI** - enfoque 100% en SAP.
+
+#### Responsabilidades Principales
+
+**Fase 0 - Due Diligence (124h):**
+- Análisis técnico de infraestructura SAP y conectividad (24h)
+- Gestión de tickets SAP (Ticket SAP-48219) como punto focal técnico (28h)
+- Análisis profundo de transacciones custom ZLEL008 y ZVEL015 (42h)
+  - Análisis de código ABAP (SE38/SE80)
+  - Identificación de tablas Z y lógica de negocio
+  - Documentación de dependencias
+- Configuración preliminar de SAP SLT (20h)
+- Validación de conectividad SAP → SLT → BigQuery (8h)
+- Documentación técnica SAP (2h)
+
+**Fase 1 - Data Lake (376h):**
+- Configuración completa de SAP SLT (48h)
+  - Instalación y configuración de replicación
+  - Setup de conectores BigQuery
+  - Configuración de jobs y schedules
+  - Monitoreo de logs y alertas
+- Extracción de datos para 18 transacciones SAP (280h)
+  - Módulo FI (4 trans): 52h
+  - Módulo SD (2 trans): 36h
+  - MM Procurement (3 trans): 42h
+  - MM Inventory (3 trans): 40h
+  - ZLEL008 custom (MRP): 56h
+  - CO y FI-AP/AR (4 trans): 48h
+  - Master Data y ZVEL015: 52h
+- Monitoreo y troubleshooting de replicación SLT (38h)
+- Validaciones SAP ↔ BigQuery con Funcional SAP (10h)
+
+**Fase 2 - Dashboards (0h):**
+- No participa (Data Lake ya operativo)
+
+**Coordinación Continua:**
+- Punto focal técnico con TI Global SAP para tickets y permisos
+- Coordinación con SAP Basis (recurso Elanco) para infraestructura
+- Documentación de configuración SLT y procesos de extracción
+- Soporte a Funcional SAP en validaciones técnicas
+
+#### Experiencia Requerida (Mínimo)
+
+**Experiencia General:**
+- 5+ años como SAP ABAP Developer
+- 2+ años con SAP Landscape Transformation (SLT) - **CRÍTICO**
+- Experiencia en proyectos de integración SAP-Cloud (GCP/AWS/Azure)
+- Experiencia con S/4HANA (deseable, preferiblemente con conocimiento de ACDOCA)
+
+**Experiencia Técnica Específica:**
+
+- ✅ **SAP ABAP (CRÍTICO):**
+  - Programación ABAP/4, ABAP Objects
+  - Análisis y debugging de código ABAP
+  - Function Modules, RFCs, BAPIs
+  - Transacciones SE38, SE80, SE11, SE16
+  - ABAP Dictionary (tablas, estructuras, dominios)
+  - Análisis de transacciones custom (Z*, Y*)
+
+- ✅ **SAP SLT - Landscape Transformation (CRÍTICO):**
+  - Instalación y configuración de SLT Server
+  - Configuración de replicación en tiempo real (CDC - Change Data Capture)
+  - Configuración de conectores hacia cloud (BigQuery, S3, etc.)
+  - Mass Transfer (carga inicial) vs. Replicación continua
+  - Monitoreo de jobs de replicación (transacciones SLT)
+  - Troubleshooting de errores de replicación
+  - Optimización de performance de replicación
+  - Configuración de transformaciones básicas en SLT
+
+- ✅ **Módulo MM - Materials Management (CRÍTICO):**
+  - Transacciones: ME2L, ME23N, MM60, MB59, MB5B, MCHB
+  - Tablas: EKKO, EKPO, MBEW, CKMLCR, MSEG, MARD, MCHB
+  - Conocimiento de procesos: Compras, Inventarios, Valoración
+  - Maestro de materiales (MARA, MARC) y proveedores (LFA1, LFB1)
+
+- ✅ **Módulo SD - Sales & Distribution (CRÍTICO):**
+  - Transacciones: VA05
+  - Tablas: VBAK, VBAP, VBEP, KNA1, KNVV
+  - Conocimiento de procesos: Órdenes de venta, Pricing
+  - Maestro de clientes (KNA1, KNB1)
+
+- ✅ **Módulo FI - Financial Accounting (CRÍTICO):**
+  - Transacciones: FAGLL03, FB03, F.08, F.01, FBL1N, FBL5N
+  - Tablas: **ACDOCA, ACDOCA_T** (Universal Journal S/4HANA) - **CRÍTICO**
+  - Tablas históricas (referencia): BKPF, BSEG, FAGLFLEXA, BSID, BSAD, BSIK, BSAK
+  - Conocimiento de cómo ACDOCA reemplaza tablas clásicas en S/4HANA
+  - Documentos contables, mayor general, balances
+
+- ✅ **Módulo CO - Controlling (Deseable):**
+  - Transacciones: KSB1, KE24
+  - Tablas: AUFK, COBK, COEP (histórico, reemplazado por ACDOCA)
+  - Órdenes CO, centros de costo
+
+- ✅ **Transacciones Custom (Z/Y):**
+  - Experiencia analizando transacciones custom sin documentación
+  - Capacidad de reverse-engineering de lógica ABAP
+  - Identificación de tablas custom (Z*, Y*)
+  - Documentación de lógica de negocio
+
+- ✅ **Integración SAP-Cloud:**
+  - Conectividad SAP → Cloud (RFC, HTTPS)
+  - Experiencia con Google Cloud Platform (BigQuery) - deseable
+  - Configuración de certificados SSL, firewall
+  - Service Accounts y autenticación
+
+**Habilidades Técnicas:**
+- ABAP/4: Programación avanzada, debugging, performance tuning
+- SAP SLT: Configuración completa y troubleshooting
+- SQL: Queries en SAP (SE16, SE16N, SQVI)
+- Transacciones SAP: Navegación experta, análisis de dumps (ST22)
+- Monitoreo SAP: SM37 (jobs), SM50 (work processes), SM21 (logs)
+- Git: Versionado de código (deseable)
+
+**Habilidades Blandas:**
+- Comunicación técnica clara (con TI Global, SAP Basis, equipo proyecto)
+- Capacidad de trabajar de forma autónoma
+- Resolución de problemas complejos
+- Documentación técnica detallada
+- Coordinación con múltiples stakeholders técnicos
+- Adaptabilidad a cambios de requerimientos
+
+#### Certificaciones Deseables (No obligatorias)
+
+- SAP Certified Technology Associate - SAP S/4HANA System Administration
+- SAP Certified Development Associate - ABAP with SAP NetWeaver
+- SAP Certified Application Associate - SAP Landscape Transformation
+- SAP S/4HANA Migration Cockpit / Landscape Transformation (curso oficial)
+
+#### Formación Académica
+
+**Mínimo:**
+- Título universitario en Ingeniería en Sistemas, Informática, Computación o afines
+- Certificación SAP ABAP (deseable)
+- Cursos de SAP SLT (obligatorio si no tiene certificación)
+
+#### Idiomas
+
+- Español: Nativo o Fluido (90%+)
+- Inglés: Intermedio (lectura de documentación técnica SAP, comunicación con TI Global)
+
+#### Condiciones Laborales
+
+- Modalidad: Remoto (trabajo a distancia)
+- Horario: Flexible (coordinación con zona horaria CASA: GMT-3 a GMT-5)
+- Disponibilidad: Lunes a Viernes, 15-20h/semana
+- Duración: 21 semanas (solo Fase 0 y Fase 1)
+- Reuniones: 2-3 reuniones semanales con equipo técnico y TI Global
+- Picos de trabajo: Fase 0 (análisis Z-transactions, setup SLT) y Fase 1 (configuración replicación)
+
+#### Perfil Ideal
+
+**Candidato ideal tiene:**
+- Background técnico SAP ABAP + experiencia hands-on con SLT en proyectos reales
+- Experiencia en proyectos de migración/integración SAP hacia cloud
+- Familiaridad con S/4HANA y ACDOCA (Universal Journal)
+- Capacidad de análisis de transacciones custom sin documentación
+- Experiencia trabajando con equipos de TI Global (multinacionales)
+- Proactividad en identificación y resolución de problemas técnicos
+- Experiencia con al menos 2 de los 3 módulos: MM, SD, FI
+
+#### Diferenciador Clave vs Funcional SAP
+
+| Aspecto | ABAP Developer | Funcional SAP |
+|---------|----------------|---------------|
+| **Enfoque** | Técnico (código, configuración) | Funcional (procesos, negocio) |
+| **SAP SLT** | Configura y monitorea (CRÍTICO) | No participa |
+| **Código ABAP** | Lee, analiza, documenta | No requiere |
+| **Transacciones Z** | Reverse-engineering técnico | Validación funcional |
+| **Tablas SAP** | Conoce estructura técnica | Conoce contenido funcional |
+| **Extracción de datos** | Configura replicación SLT | Valida calidad de datos |
+| **TI Global SAP** | Punto focal técnico (tickets) | Soporte funcional |
+
+---
+
+## RESUMEN DE LOS 4 PERFILES (VERSIÓN 2.03)
+
+| Aspecto | Consultor BI | ABAP Developer | Funcional SAP | Project Manager |
+|---------|--------------|----------------|---------------|-----------------|
+| **Experiencia mínima** | 6+ años | 5+ años | 5+ años | 5+ años |
+| **Horas totales** | 761h (38.7%) | 436h (22.1%) | 484h (24.6%) | 145h (7.4%) |
+| **Horas/semana** | 25-30h (máx 6h/día) | 15-20h | 15-20h | 3-5h |
+| **Fases participación** | Todas (0+1+2) | Fase 0+1 solamente | Todas (0+1+2) | Todas (0+1+2) |
+| **Skills críticos** | BigQuery, Power BI, SQL, ETL | ABAP, SLT, MM/SD/FI, S/4HANA | SAP FI/CO, Validaciones, UAT | Gestión stakeholders, Comunicación |
+| **Certificaciones deseables** | GCP Data Engineer, Power BI | SAP ABAP, SAP SLT | SAP FI/CO Associate | PMP, CSM |
+| **Idioma inglés** | Intermedio-Avanzado | Intermedio | Intermedio | Intermedio-Avanzado |
+| **Modalidad** | Remoto | Remoto | Remoto | Remoto |
+| **Criticidad** | 🔴 CRÍTICA | 🔴 CRÍTICA | � CRÍTICA | �🟡 ALTA |
+
+**Nota sobre Recurso SAP Basis:** Provisto por Elanco (cliente), no incluido en horas del proyecto. El ABAP Developer coordina con SAP Basis pero NO lo reemplaza.
 
 ---
 
 ## CONCLUSIÓN Y PRÓXIMOS PASOS
 
-Hemos preparado respuestas completas a las 4 preguntas planteadas:
+Hemos preparado respuestas completas a las 4 preguntas planteadas con **PROPUESTA OPTIMIZADA (Versión 2.04)**:
 
-1. ✅ **Esquema con mayor carga horaria:** SÍ es posible, recomendamos Escenario A (36 semanas vs 42) con ajustes de disponibilidad semanal. Requerimos confirmación de Consultor BI para aumentar de 30h/sem a 37h/sem.
+1. ✅ **Esquema con mayor carga horaria:** SÍ es posible, **recomendamos incorporar ABAP Developer** para comprimir de 42 a 36 semanas (-14%) **con carga sostenible del Consultor BI (26h/semana promedio, no excede 30h/semana)**. Go-Live adelantado 6 semanas (mediados septiembre 2026).
 
 2. ✅ **Visualización gráfica:** Generaremos diagramas de arquitectura técnica en 2-3 días hábiles (4 diagramas profesionales en formato PNG/SVG).
 
-3. ✅ **Recurso ABAP:** NO está incluido en alcance base pero contemplado como contingencia (16-24h via Change Request). SÍ se requiere recurso SAP Basis provisto por Elanco.
+3. ✅ **Recurso ABAP:** **SÍ está incluido en la nueva propuesta (270h)** como recurso consultor especializado para Fase 0 y Fase 1. Especializado en SLT y módulos MM/SD/FI. SÍ se requiere recurso SAP Basis provisto por Elanco (coordinación con ABAP Developer).
 
-4. ✅ **Job Descriptions:** Entregamos 3 JDs completos con experiencia mínima, responsabilidades detalladas, habilidades técnicas y certificaciones.
+4. ✅ **Job Descriptions:** Entregamos **4 JDs completos** (agregamos ABAP Developer) con experiencia mínima, responsabilidades detalladas, habilidades técnicas y certificaciones.
+
+### Comparativa Final de Propuestas (3 Versiones)
+
+| Aspecto | V 2.02 Original | V 2.03 Agresiva | V 2.04 OPTIMIZADA ⭐ |
+|---------|-----------------|-----------------|----------------------|
+| **Duración** | 42 semanas | 32 semanas (-24%) | **36 semanas** (-14%) |
+| **Horas totales** | 1,590h | 1,968h (+24%) | **1,880h** (+18%) |
+| **Consultor BI** | 961h | 761h | **935h** (-26h vs v2.02) |
+| **ABAP Developer** | ❌ 0h | 436h (full-time) | **270h** (consultoría) ✅ |
+| **Funcional SAP** | 484h | 484h | **512h** (+28h) |
+| **Project Manager** | 145h | 145h | **163h** (+18h) |
+| **Go-Live** | Oct 2026 | Ago 2026 | **Sep 2026** (-1 mes vs v2.02) |
+| **BI h/semana** | 22.9h | 23.8h | **26.0h** (sostenible) ✅ |
+| **ABAP h/semana** | N/A | 23.8h (21 sem) | **10.4h** (26 sem, part-time) ✅ |
+| **Riesgo técnico SAP** | ⚠️ Alto | ✅ Bajo | ✅ Bajo |
+| **Costo-beneficio** | Baseline | ⚠️ +24% caro | ✅ +18% equilibrado |
+| **Coordinación** | Simple (3) | ⚠️ Compleja (4 full) | ✅ Moderada (1 part-time) |
+
+### Beneficios Versión 2.04 (RECOMENDADA)
+
+**✅ VENTAJAS TÉCNICAS:**
+- Consultor BI con carga sostenible: 26h/semana promedio (NO comprimido excesivamente)
+- ABAP Developer en rol de consultoría especializada (270h enfocadas en lo crítico)
+- Análisis profundo de transacciones custom (ZLEL008, ZVEL015) con especialista
+- Separación clara: SAP vs BigQuery/Power BI
+- Paralelización efectiva en Fase 1 (compresión moderada, realista)
+
+**✅ VENTAJAS DE NEGOCIO:**
+- Go-Live 6 semanas antes (mediados septiembre vs mediados octubre)
+- 6 semanas adicionales de beneficios operativos (reducción 70% tiempo manual)
+- Menor riesgo de delays por issues técnicos SAP
+- Punto focal técnico especializado para TI Global
+- Equilibrio óptimo: tiempo vs costo vs calidad
+
+**✅ VENTAJAS VS V2.03 (AGRESIVA):**
+- -88h más económica (-5% vs v2.03)
+- ABAP Developer más fácil de contratar (10h/sem vs 24h/sem)
+- Menor overhead de coordinación (rol part-time vs full-time)
+- Cronograma realista (36 sem) vs presión alta (32 sem)
+- Consultor BI con más espacio para calidad (26h vs 24h)
+
+**💰 ANÁLISIS DE INVERSIÓN V2.04:**
+- Inversión adicional: +290 horas (+18% esfuerzo) vs v2.02
+- Ahorro temporal: -6 semanas (-14% duración)
+- ROI: 6 semanas de beneficios operativos tempranos
+- Ejemplo: Si reducción 70% tiempo = 60h/mes ahorradas → 6 semanas = 100h ahorradas
+- Break-even en ~2.9 meses post go-live (conservador)
+- Break-even en ~2.0 meses (considerando valor intangible + riesgo reducido)
 
 ### Próximas Acciones Requeridas
 
 **De parte de Aunergia:**
-- [ ] Confirmar disponibilidad del Consultor BI para aumentar a 37h/semana (si aplica Escenario A)
+- [x] Confirmar que Consultor BI mantiene carga sostenible (26h/semana en v2.04 ✅)
+- [ ] Identificar y proponer candidato ABAP Developer con perfil requerido (part-time 10h/sem)
 - [ ] Generar diagramas de arquitectura técnica (2-3 días)
-- [ ] Validar perfiles disponibles contra JDs documentados
+- [x] Actualizar documentación completa de propuesta a versión 2.04
+- [ ] Preparar presentación ejecutiva comparativa v2.02 vs v2.04
 
 **De parte de Elanco:**
-- [ ] Revisión y aprobación de respuestas
-- [ ] Decisión sobre cronograma: ¿Mantener 42 semanas o comprimir a 36?
-- [ ] Confirmación de disponibilidad de recurso SAP Basis (interno Elanco)
-- [ ] Aprobación de contingencia para consultor ABAP (si necesario)
+- [ ] Revisión y aprobación de propuesta versión 2.04
+- [ ] Decisión sobre cronograma: **¿Aprobar versión 2.04 con 36 semanas y ABAP Developer (consultoría)?**
+- [ ] Aprobación de incremento de 290 horas (+18% presupuesto)
+- [ ] Confirmación de disponibilidad de recurso SAP Basis (interno Elanco) desde Fase 0
+- [ ] Definición de prioridad: ¿Go-Live 1 mes antes justifica inversión adicional?
+
+### Documentos Actualizados (Versión 2.04)
+
+📄 **CRONOGRAMA_DETALLADO_TAREAS_V2_04.csv**
+- 25 tareas con columna adicional para ABAP Developer
+- Cronograma optimizado a 36 semanas (equilibrio tiempo-costo)
+- Distribución clara de responsabilidades por recurso
+- ABAP Developer: rol de consultoría (270h, 10.4h/sem)
+
+📄 **RESUMEN_PROPUESTA_FINAL_V2_04.txt**
+- Resumen ejecutivo completo con nuevo modelo
+- Comparativa detallada: v2.02 vs v2.03 vs v2.04
+- Análisis de costo-beneficio optimizado
+
+📄 **RESUMEN_CAMBIOS_V2_04.md**
+- Justificación detallada de 270h del ABAP Developer
+- Comparativa exhaustiva de las 3 versiones
+- Análisis de trade-offs y recomendación fundamentada
+
+📄 **respuesta_pregunta_01.md** (este documento)
+- 4 respuestas completas a preguntas planteadas
+- 4 Job Descriptions detallados (incluye ABAP Developer)
+- Recomendación fundamentada de versión 2.04
+
+### Recomendación Final: VERSIÓN 2.04 ⭐
+
+**Recomendamos aprobar VERSIÓN 2.04** por las siguientes razones:
+
+1. 🎯 **Carga sostenible del Consultor BI** (26h/semana, NO comprimido excesivamente)
+2. 🚀 **Go-Live 6 semanas antes** (valor estratégico, sin presión extrema)
+3. 🛡️ **Reduce riesgo técnico SAP** (especialista SLT en lo crítico)
+4. 💼 **Separación profesional de roles** (SAP consultor + BI especialista)
+5. 💰 **ROI equilibrado** (+18% costo vs -14% tiempo = óptimo)
+6. ⚡ **Paralelización moderada** (realista, no agresiva)
+7. 👥 **ABAP Developer fácil de contratar** (10h/sem, no full-time)
+8. 🎨 **Mayor calidad entregable** (BI con tiempo para optimizar)
+
+**¿Por qué V2.04 y no V2.03?**
+- V2.03 es 32 semanas pero cuesta +378h (+24%) y requiere ABAP casi full-time (23.8h/sem)
+- V2.04 es 36 semanas pero cuesta +290h (+18%) y ABAP solo 10.4h/sem (consultoría)
+- **Diferencia:** 4 semanas más de proyecto vs -88h más económica y menor overhead
+- **Trade-off óptimo:** Tiempo, costo y calidad en equilibrio
+
+La inversión adicional de 290 horas se recupera en 2.9 meses post go-live considerando solo el ahorro operativo directo, o en 2.0 meses considerando valor intangible de insights tempranos + reducción de riesgo técnico.
 
 ---
 
 **Fecha de elaboración:** 10 de noviembre de 2025  
 **Elaborado por:** Equipo Técnico Aunergia  
 **Validez:** 30 días (hasta 10 de diciembre de 2025)  
-**Versión propuesta:** 2.02
+**Versión recomendada:** 2.04 (Con ABAP Developer - Cronograma Optimizado)
 
 ---
 
-¿Tienen alguna pregunta adicional o requieren aclaración sobre algún punto específico?
+**Archivos disponibles para revisión:**
+- `/docs/propuesta_final/CRONOGRAMA_DETALLADO_TAREAS_V2_04.csv`
+- `/RESUMEN_PROPUESTA_FINAL_V2_04.txt`
+- `/RESUMEN_CAMBIOS_V2_04.md`
 
-Quedamos atentos a sus comentarios.
+Quedamos atentos a sus comentarios y decisión sobre la versión 2.04.
+
+Quedamos atentos a sus comentarios y decisión sobre la versión 2.03.
 
 Saludos cordiales,  
 **Equipo Aunergia**
