@@ -36,7 +36,7 @@ La solución se basa en un stack tecnológico robusto y moderno. La fuente de da
 
 Descripción general de la propuesta
 Fases del proyecto
-El proyecto se ejecutará en 42 semanas, divididas en las siguientes fases:
+El proyecto se ejecutará en 36 semanas, divididas en las siguientes fases:
     • Fase 0: Revisión del alcance y factibilidad
     • Fase 1: Construcción del Data Lake
     • Fase 2: Modelado y Dashboards
@@ -54,13 +54,13 @@ Tareas de la Fase 0:
     • Documentación
     • Decisión Go/No-Go
 Fase 1: Construcción del Data Lake
-La Fase 1, de Construcción del Data Lake (22 semanas), se centra en implementar pipelines automatizados para extraer y transformar datos de las 18 transacciones SAP hacia BigQuery. Se configurarán las tres zonas de datos, se implementará la historificación de al menos 24 meses y se realizarán validaciones cruzadas para asegurar la precisión de los datos.
+La Fase 1, de Construcción del Data Lake (20 semanas), se centra en implementar pipelines automatizados para extraer y transformar datos de las 18 transacciones SAP hacia BigQuery. Se configurarán las tres zonas de datos, se implementará la historificación de al menos 24 meses y se realizarán validaciones cruzadas para asegurar la precisión de los datos.
 Tareas de la Fase 1:
     • Setup de infraestructura (datasets, particionamiento, cuentas de servicio, conectividad SLT)
     • Desarrollo secuencial de pipelines por módulo (FI, SD, MM Procurement, MM Inventory, ZLEL008, CO/AP/AR, Master Data y ZVEL015)
     • Bloque de optimización y automatización.
 Fase 2: Modelado y Dashboards
-La Fase 2, de Modelado y Dashboards (14 semanas), consiste en el diseño del modelo dimensional, el desarrollo de los 12 dashboards en Power BI, las pruebas de aceptación de usuario (UAT) y la capacitación a los usuarios finales antes del Go-Live.
+La Fase 2, de Modelado y Dashboards (10 semanas), consiste en el diseño del modelo dimensional, el desarrollo de los 12 dashboards en Power BI, las pruebas de aceptación de usuario (UAT) y la capacitación a los usuarios finales antes del Go-Live.
 Tareas de la Fase 2: 
     • Modelo dimensional (star schema y KPIs)
     • Desarrollo de los 12 dashboards (Financieros, Ventas y Rentabilidad, Supply Chain, Tesorería y Ejecutivo)
@@ -69,7 +69,7 @@ Tareas de la Fase 2:
 Fase 3: Propuesta de modelos predictivos
 La Fase 3 corresponde a una etapa conceptual enfocada en la identificación y evaluación de casos de uso potenciales para modelos predictivos, utilizando las capacidades analíticas y de machine learning disponibles en el ecosistema de la solución, como BigQuery ML, complementadas con visualizaciones avanzadas en Power BI. Durante esta fase se analizarán patrones y correlaciones en los datos integrados para definir hipótesis predictivas de valor para el negocio (por ejemplo, estimaciones de demanda, comportamiento de ventas o eficiencia operativa). Esta etapa no contempla el desarrollo ni la implementación de los modelos, sino que culminará con la entrega de una propuesta técnica detallada que incluirá los casos priorizados, su justificación de negocio, las fuentes de datos requeridas, los enfoques algorítmicos recomendados y las consideraciones para su ejecución en una fase posterior del proyecto.
 Esfuerzo, recursos y cronograma
-El esfuerzo total del proyecto es de 1.590 horas distribuidas a lo largo de 42 semanas. La Fase 0 requiere 235 horas, la Fase 1 necesita 696 horas y la Fase 2 demanda 659 horas. El equipo de Aunergia estará compuesto por un Arquitecto de Datos y Desarrollador principal (961 horas), un Analista SAP y Power User (484 horas) y un Project Manager (145 horas). La fecha de inicio propuesta es el 6 de enero de 2026, con una finalización estimada a mediados de octubre de 2026.
+El esfuerzo total del proyecto es de 1.880 horas distribuidas a lo largo de 36 semanas. La Fase 0 requiere 328 horas, la Fase 1 necesita 852 horas y la Fase 2 demanda 700 horas. El equipo de Aunergia estará compuesto por un Consultor BI (935 horas), un ABAP Developer (270 horas), un Funcional SAP (512 horas) y un Project Manager (163 horas). La fecha de inicio propuesta es el 6 de enero de 2026, con una finalización estimada a mediados de septiembre de 2026.
 Entregables principales
 Los entregables clave por fase son: 
     • En la Fase 0, un reporte de auditoría técnica, un backlog priorizado, la arquitectura detallada del Data Lake, un plan de proyecto actualizado y la decisión formal de Go/No-Go. 
