@@ -18,7 +18,7 @@ Esfuerzo, recursos y cronograma	5
 Entregables principales	6
 Beneficios esperados	6
 Requisitos y dependencias	6
-Exclusiones y criterios de éxito	7
+Exclusiones y criterios de éxito	6
 Próximos pasos	7
 
 
@@ -70,6 +70,7 @@ Fase 3: Propuesta de modelos predictivos
 La Fase 3 corresponde a una etapa conceptual enfocada en la identificación y evaluación de casos de uso potenciales para modelos predictivos, utilizando las capacidades analíticas y de machine learning disponibles en el ecosistema de la solución, como BigQuery ML, complementadas con visualizaciones avanzadas en Power BI. Durante esta fase se analizarán patrones y correlaciones en los datos integrados para definir hipótesis predictivas de valor para el negocio (por ejemplo, estimaciones de demanda, comportamiento de ventas o eficiencia operativa). Esta etapa no contempla el desarrollo ni la implementación de los modelos, sino que culminará con la entrega de una propuesta técnica detallada que incluirá los casos priorizados, su justificación de negocio, las fuentes de datos requeridas, los enfoques algorítmicos recomendados y las consideraciones para su ejecución en una fase posterior del proyecto.
 Esfuerzo, recursos y cronograma
 El esfuerzo total del proyecto es de 1.880 horas distribuidas a lo largo de 36 semanas. La Fase 0 requiere 328 horas, la Fase 1 necesita 852 horas y la Fase 2 demanda 700 horas. El equipo de Aunergia estará compuesto por un Consultor BI (935 horas), un ABAP Developer (270 horas), un Funcional SAP (512 horas) y un Project Manager (163 horas). La fecha de inicio propuesta es el 6 de enero de 2026, con una finalización estimada a mediados de septiembre de 2026.
+
 Entregables principales
 Los entregables clave por fase son: 
     • En la Fase 0, un reporte de auditoría técnica, un backlog priorizado, la arquitectura detallada del Data Lake, un plan de proyecto actualizado y la decisión formal de Go/No-Go. 
