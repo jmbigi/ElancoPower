@@ -1,0 +1,47 @@
+CONSULTOR BI
+
+Requisitos esenciales:
+- Experiencia en Google BigQuery (diseño de arquitecturas de datos, SQL avanzado, optimización de queries)
+- Experiencia en Power BI (desarrollo de dashboards ejecutivos complejos con DAX avanzado y Row-Level Security)
+- Experiencia en modelado dimensional (star schema) y diseño de pipelines ETL/ELT
+- Experiencia demostrable en proyectos end-to-end desde arquitectura hasta go-live
+
+Deseables (no excluyentes):
+- Conocimiento de tablas SAP estándar (ACDOCA, BKPF, VBAK, EKKO)
+- Experiencia con control de costos en plataformas cloud (GCP, AWS o Azure)
+
+ABAP DEVELOPER
+
+Requisitos esenciales:
+- Experiencia en programación ABAP y análisis de código SAP (incluye análisis de transacciones custom Z/Y)
+- Experiencia en SAP Landscape Transformation (SLT) o herramientas similares de replicación de datos
+- Conocimiento de al menos 2 de los módulos: MM (Materials Management), SD (Sales & Distribution), o FI (Financial Accounting)
+- Conocimiento de tablas críticas de SAP (ACDOCA, EKKO, EKPO, VBAK, MARD)
+
+Deseables (no excluyentes):
+- Experiencia en proyectos de integración SAP-Cloud (GCP, AWS o Azure)
+- Conocimiento de troubleshooting de replicación CDC (Change Data Capture) y configuración RFC/HTTPS
+
+FUNCIONAL SAP
+
+Requisitos esenciales:
+- Experiencia en módulos FI (Financial Accounting) y CO (Controlling), más conocimiento básico de MM o SD
+- Capacidad de facilitar workshops con stakeholders de Finanzas y Supply Chain para definición de KPIs
+- Experiencia en liderar User Acceptance Testing (UAT) con validaciones funcionales de datos
+- Habilidad para traducir requerimientos de negocio a especificaciones técnicas
+
+Deseables (no excluyentes):
+- Conocimiento de Universal Journal S/4HANA (ACDOCA/ACDOCA_T)
+- Experiencia coordinando con TI Global para gestión de tickets y permisos SAP
+
+PROJECT MANAGER
+
+Requisitos esenciales:
+- Experiencia en gestión de proyectos de TI (SAP, BI, Analytics o Data)
+- Capacidad de coordinación de stakeholders multinivel (negocio y management ejecutivo)
+- Experiencia en gestión de cronogramas y presupuestos con herramientas de PM
+- Habilidades de comunicación efectiva (oral y escrita) y facilitación de workshops/UAT
+
+Deseables (no excluyentes):
+- Experiencia trabajando con equipos distribuidos remotamente y proyectos internacionales
+- Certificación PMP, PRINCE2 o Scrum Master

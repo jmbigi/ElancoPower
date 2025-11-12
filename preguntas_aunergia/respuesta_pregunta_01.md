@@ -1,18 +1,40 @@
 # RESPUESTA A PREGUNTA 01 - AUNERGIA
-**Fecha:** 10 de noviembre de 2025  
+**Fecha:** 12 de noviembre de 2025  
 **Versión Original:** 2.02 de la Propuesta  
-**Versión Recomendada:** 2.04 (Optimizada)  
+**Versión Actual Recomendada:** 2.04 (Optimizada)  
 **Proyecto:** Centralización de Datos y Analítica - Elanco Animal Health (CASA)
 
 ---
 
-## INTRODUCCIÓN
+## RESUMEN EJECUTIVO
 
 Estimado equipo de Aunergia,
 
-Muchas gracias por sus preguntas y comentarios sobre la propuesta. A continuación, encontrarán respuestas detalladas a cada uno de los puntos planteados.
+Gracias por sus preguntas y comentarios sobre la propuesta. A continuación, encontrarán **respuestas directas, claras y concisas** a cada uno de los 4 puntos planteados.
 
-**ACTUALIZACIÓN IMPORTANTE:** Tras análisis detallado, recomendamos la **VERSIÓN 2.04** que incorpora un ABAP Developer en rol de consultoría (270h) para reducir el cronograma a **36 semanas** con incremento controlado de **+290h (+18%)**. Ver detalles completos en la sección de recomendaciones al final.
+### 📊 RESPUESTAS RÁPIDAS
+
+| # | Pregunta | Respuesta | Detalle |
+|---|----------|-----------|---------|
+| **1** | ¿Acortar tiempos con mayor carga? | ✅ **SÍ** | **V2.04: 36 semanas** (-6 sem, -14%) con ABAP Developer (270h part-time). +290h (+18%) |
+| **2** | ¿Visualización gráfica? | ✅ **SÍ** | **4 diagramas profesionales** en 2-3 días (arquitectura, modelo, flujos) |
+| **3** | ¿Recurso ABAP? | ✅ **SÍ** | **270h incluidas** en V2.04 + SAP Basis (Elanco) requerido |
+| **4** | ¿Job Descriptions? | ✅ **SÍ** | **4 JDs completos**: BI (935h), ABAP (270h), SAP (512h), PM (163h) |
+
+### 🎯 PROPUESTA RECOMENDADA: V2.04 (OPTIMIZADA)
+
+**Cronograma:** 36 semanas (vs 42 original) | **Go-Live:** 13 septiembre 2026  
+**Esfuerzo:** 1,880h (vs 1,590h) | **Incremento:** +290h (+18%)  
+**Equipo:** 4 recursos (BI + ABAP + SAP Functional + PM)  
+**ROI:** Break-even en 2-3 meses post-Go-Live  
+
+**Ventajas clave:**
+- ✅ Carga sostenible BI (26h/sem)
+- ✅ ABAP Developer especialista (10h/sem part-time)
+- ✅ Riesgo técnico SAP reducido
+- ✅ Go-Live 1 mes antes con calidad garantizada
+
+---
 
 ---
 
@@ -60,27 +82,30 @@ Muchas gracias por sus preguntas y comentarios sobre la propuesta. A continuaci�
 
 ### ESCENARIOS DE COMPRESIÓN POSIBLES
 
-#### Escenario A: COMPRESIÓN MODERADA (+25% carga semanal)
-**Meta:** Reducir de 42 a 36 semanas (-14%)
+#### ✅ ESCENARIO RECOMENDADO: VERSIÓN 2.04 (AGREGAR ABAP DEVELOPER)
+**Meta:** Reducir de 42 a 36 semanas (-14%) con carga sostenible
 
-| Aspecto | Modificación Necesaria | Viabilidad | Riesgos |
-|---------|------------------------|------------|---------|
-| **Consultor BI** | Aumentar de 30h/sem a 37h/sem | ⚠️ **DIFÍCIL** - Requiere cambio de restricción personal | Alto burnout, calidad subóptima |
-| **Funcional SAP** | Aumentar de 15h/sem a 20h/sem | ✅ **VIABLE** - Con coordinación interna | Posible sobrecarga operativa |
-| **Project Manager** | Aumentar de 4h/sem a 6h/sem | ✅ **VIABLE** | Mínimo impacto |
-| **Paralelización** | Desarrollar más tareas en paralelo | ⚠️ **LIMITADO** - Dependencias críticas | Riesgo de re-work |
+| Aspecto | Modificación Propuesta | Viabilidad | Beneficio |
+|---------|------------------------|------------|-----------|
+| **Consultor BI** | 26h/sem promedio (NO aumentar) | ✅ **ÓPTIMO** - Carga sostenible | Mantiene calidad |
+| **ABAP Developer** | **NUEVO**: 270h part-time (10.4h/sem) | ✅ **VIABLE** - Rol consultoría | Especialista SAP/SLT |
+| **Funcional SAP** | Aumentar de 12h/sem a 14h/sem | ✅ **VIABLE** - Leve incremento | +28h para validaciones |
+| **Project Manager** | Aumentar de 3.5h/sem a 4.5h/sem | ✅ **VIABLE** - Coordinación | +18h para gestión |
 
-**Cronograma Ajustado:**
-- **Fase 0:** 5 semanas (vs 6) → -1 semana
-- **Fase 1:** 18 semanas (vs 22) → -4 semanas
-- **Fase 2:** 13 semanas (vs 14) → -1 semana
+**Cronograma V2.04:**
+- **Fase 0:** 6 semanas (sin cambio) → Mantener calidad análisis
+- **Fase 1:** 20 semanas (vs 22) → -2 semanas vía paralelización
+- **Fase 2:** 10 semanas (vs 14) → -4 semanas vía optimización UAT
 - **TOTAL:** 36 semanas (~8.5 meses)
+- **Go-Live:** 13 de septiembre 2026
 
-**Costo/Impacto:**
-- ✅ **Ventaja:** Go-Live 6 semanas antes (mediados de agosto 2026)
-- ⚠️ **Riesgo:** 30-40% más riesgo de burnout del Consultor BI
-- ⚠️ **Riesgo:** Calidad potencialmente inferior (menos tiempo de validación)
-- 💰 **Costo:** Sin incremento de horas totales (1,590h), pero mayor intensidad
+**Costo/Beneficio:**
+- ✅ **Ventaja:** Go-Live **6 semanas antes** (1 mes de beneficios adelantados)
+- ✅ **Calidad:** Consultor BI mantiene carga sostenible (26h/sem)
+- ✅ **Riesgo:** ABAP Developer reduce riesgo técnico SAP/SLT
+- ✅ **Especialización:** Separación clara SAP (ABAP) vs BI (Consultor)
+- 💰 **Costo:** +290h (+18% presupuesto) vs -6 semanas (-14% tiempo)
+- 💰 **ROI:** Break-even en 2-3 meses post-Go-Live
 
 #### Escenario B: COMPRESIÓN AGRESIVA (+50% carga semanal)
 **Meta:** Reducir de 42 a 30 semanas (-29%)
@@ -125,43 +150,50 @@ Muchas gracias por sus preguntas y comentarios sobre la propuesta. A continuaci�
 - ⚠️ **Complejidad:** Mayor coordinación (5 personas vs 3)
 - 💰 **Costo:** +35-40% de horas totales (2,146-2,226h vs 1,590h)
 
-### RECOMENDACIÓN
+### RECOMENDACIÓN FINAL
 
-**Escenario Recomendado: ESCENARIO D (Agregar ABAP Developer - Compresión a 32 semanas)**
+**✅ VERSIÓN 2.04 (OPTIMIZADA) - EQUILIBRIO TIEMPO-COSTO-CALIDAD**
 
 **Justificación:**
-1. ✅ **Consultor BI protegido:** Mantiene restricción de 30h/semana (no negociable)
-2. ✅ **Reducción significativa:** 32 semanas vs 42 semanas (-24%, -10 semanas)
-3. ✅ **Separación de responsabilidades:** Consultor BI solo BigQuery/Power BI, ABAP Dev solo SAP/SLT
-4. ✅ **Menor riesgo técnico:** Especialista en SLT y transacciones custom (ZLEL008, ZVEL015)
-5. ✅ **Mayor paralelización:** Trabajo simultáneo en SAP y BigQuery (Fase 1)
-6. ✅ **Gestión eficiente:** ABAP Developer como punto focal con TI Global SAP
-7. 💰 **Costo controlado:** +378 horas (+24%) por -10 semanas (-24% duración)
+1. ✅ **Cronograma realista:** 36 semanas (vs 42 original) → -6 semanas (-14%)
+2. ✅ **Carga sostenible:** Consultor BI promedio 26h/semana (cómodo, permite calidad)
+3. ✅ **ABAP Developer especialista:** 270h en rol consultoría (10.4h/sem, fácil de contratar)
+4. ✅ **Separación de responsabilidades:** ABAP = SAP/SLT | BI = BigQuery/Power BI
+5. ✅ **Menor riesgo técnico:** Especialista en SLT y Z-transactions (ZLEL008, ZVEL015)
+6. ✅ **Costo controlado:** +290h (+18%) vs +378h (+24%) de V2.03
+7. ✅ **ROI positivo:** Break-even en 2-3 meses post-Go-Live
+8. ✅ **Calidad garantizada:** Recursos con tiempo suficiente para hacer bien el trabajo
 
-**Cronograma Ajustado Propuesto (VERSIÓN 2.03):**
+**Cronograma V2.04 (RECOMENDADO):**
 - **Inicio:** 6 de enero 2026
-- **Fase 0:** 5 semanas (fin 9 de febrero 2026)
-- **Fase 1:** 16 semanas (fin 2 de junio 2026)
-- **Fase 2:** 11 semanas (fin 18 de agosto 2026)
-- **TOTAL:** 32 semanas (~7.5 meses)
-- **Go-Live:** Mediados de agosto 2026 (vs mediados de octubre en v2.02)
+- **Fase 0:** 6 semanas (fin 16 de febrero 2026)
+- **Fase 1:** 20 semanas (fin 5 de julio 2026)
+- **Fase 2:** 10 semanas (fin 13 de septiembre 2026)
+- **TOTAL:** 36 semanas (~8.5 meses)
+- **Go-Live:** 13 de septiembre 2026 (vs 15 de octubre en V2.02)
 
-**Distribución de Horas por Recurso:**
+**Distribución de Horas por Recurso (V2.04):**
 
-| Recurso | Versión 2.02 | Versión 2.03 | Delta | Sem/Promedio |
-|---------|--------------|--------------|-------|--------------|
-| **Consultor BI** | 961h | 761h | -200h | 30h/sem (respeta restricción) |
-| **ABAP Developer** | 0h | 436h | +436h | 15-20h/sem (NUEVO) |
-| **Funcional SAP** | 484h | 484h | 0h | 15-20h/sem |
-| **Project Manager** | 145h | 145h | 0h | 3-5h/sem |
-| **TOTAL** | **1,590h** | **1,968h** | **+378h (+24%)** | 32 sem vs 42 |
+| Recurso | V2.02 Original | V2.04 Optimizada | Delta | H/Semana Promedio |
+|---------|----------------|------------------|-------|-------------------|
+| **Consultor BI** | 961h | 935h | -26h | **26.0h/sem** ✅ sostenible |
+| **ABAP Developer** | 0h | **270h** | +270h | **10.4h/sem** ✅ part-time |
+| **Funcional SAP** | 484h | 512h | +28h | 14.2h/sem |
+| **Project Manager** | 145h | 163h | +18h | 4.5h/sem |
+| **TOTAL** | **1,590h** | **1,880h** | **+290h (+18%)** | 36 sem vs 42 |
+
+**Comparativa con V2.03 (Agresiva):**
+- V2.04 es **4 semanas más larga** (36 vs 32) pero **-88h más económica** (-5%)
+- V2.04 tiene **ABAP Developer más fácil de contratar** (10.4h/sem vs 23.8h/sem)
+- V2.04 permite **mayor calidad** (BI con 26h/sem vs 23.8h/sem)
+- V2.04 tiene **menor riesgo de coordinación** (recurso part-time vs full-time)
 
 **Ajustes Necesarios:**
-- [x] Consultor BI mantiene 30h/semana (restricción respetada)
-- [ ] Contratar ABAP Developer con experiencia en SLT y módulos MM/SD/FI
-- [ ] Funcional SAP colabora principalmente con ABAP Developer (sin cambio carga)
-- [ ] Stakeholders comprometidos a respuestas en 2-3 días
-- [ ] Coordinación SAP Basis (Elanco) desde Fase 0
+- ✅ Consultor BI mantiene carga sostenible (26h/sem promedio)
+- ⏳ Contratar ABAP Developer part-time con experiencia SLT y módulos MM/SD/FI
+- ✅ Funcional SAP incrementa levemente (14h/sem, manejable)
+- ⏳ Stakeholders comprometidos a respuestas en 2-3 días
+- ⏳ Coordinación SAP Basis (Elanco) desde Fase 0
 
 **Roles y Responsabilidades Claros:**
 
@@ -1136,32 +1168,38 @@ Especialista técnico SAP ABAP con profundo conocimiento de SAP Landscape Transf
 
 ## CONCLUSIÓN Y PRÓXIMOS PASOS
 
-Hemos preparado respuestas completas a las 4 preguntas planteadas con **PROPUESTA OPTIMIZADA (Versión 2.04)**:
+### Resumen de Respuestas a las 4 Preguntas
 
-1. ✅ **Esquema con mayor carga horaria:** SÍ es posible, **recomendamos incorporar ABAP Developer** para comprimir de 42 a 36 semanas (-14%) **con carga sostenible del Consultor BI (26h/semana promedio, no excede 30h/semana)**. Go-Live adelantado 6 semanas (mediados septiembre 2026).
+1. ✅ **¿Mayor carga horaria para acortar tiempos?**  
+   **SÍ** - Versión 2.04 reduce cronograma de **42 a 36 semanas (-14%)** incorporando **ABAP Developer** (270h, rol consultoría) con carga sostenible del Consultor BI (26h/sem). Incremento controlado de **+290h (+18%)**. Go-Live: **13 de septiembre 2026** (1 mes antes).
 
-2. ✅ **Visualización gráfica:** Generaremos diagramas de arquitectura técnica en 2-3 días hábiles (4 diagramas profesionales en formato PNG/SVG).
+2. ✅ **¿Visualización gráfica de la solución?**  
+   **SÍ** - Generaremos **4 diagramas profesionales** en 2-3 días: arquitectura técnica completa, modelo dimensional star schema, flujo de datos SAP→BigQuery→Power BI, y procesos con validaciones.
 
-3. ✅ **Recurso ABAP:** **SÍ está incluido en la nueva propuesta (270h)** como recurso consultor especializado para Fase 0 y Fase 1. Especializado en SLT y módulos MM/SD/FI. SÍ se requiere recurso SAP Basis provisto por Elanco (coordinación con ABAP Developer).
+3. ✅ **¿Recurso técnico ABAP?**  
+   **SÍ** - **270h de ABAP Developer incluidas en V2.04** como consultor especializado (Fase 0+1, 26 semanas, 10.4h/sem). Analiza Z-transactions (ZLEL008/ZVEL015) y configura SAP SLT. También **requieren SAP Basis** provisto por Elanco.
 
-4. ✅ **Job Descriptions:** Entregamos **4 JDs completos** (agregamos ABAP Developer) con experiencia mínima, responsabilidades detalladas, habilidades técnicas y certificaciones.
+4. ✅ **¿Job Descriptions de los perfiles?**  
+   **SÍ** - **4 JDs completos entregados**: Consultor BI (935h), ABAP Developer (270h), Funcional SAP (512h) y Project Manager (163h) con experiencia, responsabilidades, skills técnicos y certificaciones detalladas.
 
-### Comparativa Final de Propuestas (3 Versiones)
+### Tabla Comparativa: V2.02 Original vs V2.04 Optimizada ⭐
 
-| Aspecto | V 2.02 Original | V 2.03 Agresiva | V 2.04 OPTIMIZADA ⭐ |
-|---------|-----------------|-----------------|----------------------|
-| **Duración** | 42 semanas | 32 semanas (-24%) | **36 semanas** (-14%) |
-| **Horas totales** | 1,590h | 1,968h (+24%) | **1,880h** (+18%) |
-| **Consultor BI** | 961h | 761h | **935h** (-26h vs v2.02) |
-| **ABAP Developer** | ❌ 0h | 436h (full-time) | **270h** (consultoría) ✅ |
-| **Funcional SAP** | 484h | 484h | **512h** (+28h) |
-| **Project Manager** | 145h | 145h | **163h** (+18h) |
-| **Go-Live** | Oct 2026 | Ago 2026 | **Sep 2026** (-1 mes vs v2.02) |
-| **BI h/semana** | 22.9h | 23.8h | **26.0h** (sostenible) ✅ |
-| **ABAP h/semana** | N/A | 23.8h (21 sem) | **10.4h** (26 sem, part-time) ✅ |
-| **Riesgo técnico SAP** | ⚠️ Alto | ✅ Bajo | ✅ Bajo |
-| **Costo-beneficio** | Baseline | ⚠️ +24% caro | ✅ +18% equilibrado |
-| **Coordinación** | Simple (3) | ⚠️ Compleja (4 full) | ✅ Moderada (1 part-time) |
+| Métrica | V 2.02 Original | V 2.04 OPTIMIZADA ⭐ | Delta | Comentario |
+|---------|-----------------|----------------------|-------|------------|
+| **Duración total** | 42 semanas | **36 semanas** | **-6 sem (-14%)** | 1.5 meses más rápido |
+| **Horas totales** | 1,590h | **1,880h** | **+290h (+18%)** | Incremento controlado |
+| **Consultor BI** | 961h (22.9h/sem) | **935h (26.0h/sem)** | -26h | Carga sostenible |
+| **ABAP Developer** | ❌ 0h | **270h (10.4h/sem)** ✅ | +270h (NUEVO) | Part-time, fácil contratar |
+| **Funcional SAP** | 484h (11.5h/sem) | **512h (14.2h/sem)** | +28h | Incremento leve |
+| **Project Manager** | 145h (3.5h/sem) | **163h (4.5h/sem)** | +18h | Mejor coordinación |
+| **Go-Live** | 15 Oct 2026 | **13 Sep 2026** | **-1 mes** | Beneficios adelantados |
+| **Fase 0** | 6 sem | **6 sem** | 0 sem | Mantener calidad |
+| **Fase 1** | 22 sem | **20 sem** | -2 sem | Paralelización |
+| **Fase 2** | 14 sem | **10 sem** | -4 sem | Optimización UAT |
+| **Riesgo técnico SAP** | ⚠️ Alto | ✅ Bajo | Especialista SLT | ABAP Developer |
+| **Calidad entregable** | ⚠️ Presión BI | ✅ Óptima | BI con tiempo | 26h/sem cómodo |
+| **Costo-beneficio** | Baseline | ✅ +18% equilibrado | ROI 2-3 meses | Valor estratégico |
+| **Facilidad contratación** | 3 recursos | ✅ 4 recursos | +1 part-time | ABAP 10h/sem |
 
 ### Beneficios Versión 2.04 (RECOMENDADA)
 
@@ -1194,83 +1232,102 @@ Hemos preparado respuestas completas a las 4 preguntas planteadas con **PROPUEST
 - Break-even en ~2.9 meses post go-live (conservador)
 - Break-even en ~2.0 meses (considerando valor intangible + riesgo reducido)
 
-### Próximas Acciones Requeridas
+### Próximas Acciones
 
 **De parte de Aunergia:**
-- [x] Confirmar que Consultor BI mantiene carga sostenible (26h/semana en v2.04 ✅)
-- [ ] Identificar y proponer candidato ABAP Developer con perfil requerido (part-time 10h/sem)
-- [ ] Generar diagramas de arquitectura técnica (2-3 días)
-- [x] Actualizar documentación completa de propuesta a versión 2.04
-- [ ] Preparar presentación ejecutiva comparativa v2.02 vs v2.04
+- ✅ Respuestas completas a 4 preguntas de Aunergia
+- ✅ 4 Job Descriptions detallados (BI, ABAP, SAP Functional, PM)
+- ✅ Documentación V2.04 actualizada
+- ⏳ **Generar diagramas de arquitectura técnica (2-3 días hábiles)**
+- ⏳ **Identificar candidato ABAP Developer** (perfil: 5+ años ABAP, 2+ SLT, MM/SD/FI)
+- ⏳ Preparar presentación ejecutiva para aprobación
 
 **De parte de Elanco:**
-- [ ] Revisión y aprobación de propuesta versión 2.04
-- [ ] Decisión sobre cronograma: **¿Aprobar versión 2.04 con 36 semanas y ABAP Developer (consultoría)?**
-- [ ] Aprobación de incremento de 290 horas (+18% presupuesto)
-- [ ] Confirmación de disponibilidad de recurso SAP Basis (interno Elanco) desde Fase 0
-- [ ] Definición de prioridad: ¿Go-Live 1 mes antes justifica inversión adicional?
+- ⏳ **Revisión y decisión sobre V2.04** (36 semanas, +290h)
+- ⏳ **Aprobación de presupuesto adicional** (+18% = +290 horas)
+- ⏳ **Confirmación de disponibilidad SAP Basis** (recurso interno Elanco desde Fase 0)
+- ⏳ **Provisión de accesos SAP y BigQuery** antes de kick-off
+- ⏳ **Compromiso de stakeholders** (4-6h/sem para validaciones/UAT)
 
-### Documentos Actualizados (Versión 2.04)
+### Documentos Disponibles (V2.04)
 
-📄 **CRONOGRAMA_DETALLADO_TAREAS_V2_04.csv**
-- 25 tareas con columna adicional para ABAP Developer
-- Cronograma optimizado a 36 semanas (equilibrio tiempo-costo)
-- Distribución clara de responsabilidades por recurso
-- ABAP Developer: rol de consultoría (270h, 10.4h/sem)
+| Documento | Ubicación | Contenido |
+|-----------|-----------|-----------|
+| 📄 **RESUMEN_PROPUESTA_FINAL_V2_04.txt** | `/ElancoPower/` | Resumen ejecutivo <1000 palabras |
+| 📄 **RESUMEN_CAMBIOS_V2_04.md** | `/ElancoPower/` | Análisis detallado V2.02→V2.04 |
+| 📄 **CRONOGRAMA_DETALLADO_TAREAS_V2_04.csv** | `/docs/propuesta_final/` | 25 tareas, 36 semanas, 4 recursos |
+| 📄 **respuesta_pregunta_01.md** | `/preguntas_aunergia/` | Este documento con respuestas |
+| 📁 **Propuesta completa** | `/docs/propuesta_final/` | 13 docs (portada, fases, anexos) |
 
-📄 **RESUMEN_PROPUESTA_FINAL_V2_04.txt**
-- Resumen ejecutivo completo con nuevo modelo
-- Comparativa detallada: v2.02 vs v2.03 vs v2.04
-- Análisis de costo-beneficio optimizado
+### 🏆 Recomendación Final: VERSIÓN 2.04 (OPTIMIZADA)
 
-📄 **RESUMEN_CAMBIOS_V2_04.md**
-- Justificación detallada de 270h del ABAP Developer
-- Comparativa exhaustiva de las 3 versiones
-- Análisis de trade-offs y recomendación fundamentada
+**Recomendamos aprobar VERSIÓN 2.04** por ofrecer el mejor equilibrio tiempo-costo-calidad:
 
-📄 **respuesta_pregunta_01.md** (este documento)
-- 4 respuestas completas a preguntas planteadas
-- 4 Job Descriptions detallados (incluye ABAP Developer)
-- Recomendación fundamentada de versión 2.04
+#### Beneficios Clave V2.04
 
-### Recomendación Final: VERSIÓN 2.04 ⭐
+1. 🎯 **Carga sostenible** - Consultor BI 26h/sem (cómodo, NO sobrecarga)
+2. 🚀 **Go-Live adelantado** - 1 mes antes (13 Sep vs 15 Oct 2026)
+3. 🛡️ **Riesgo técnico reducido** - ABAP Developer especialista en SLT y Z-transactions
+4. 💼 **Roles especializados** - ABAP=SAP/SLT | BI=BigQuery/Power BI
+5. 💰 **Costo controlado** - +18% (vs +24% de V2.03 agresiva)
+6. ⚡ **Cronograma realista** - 36 semanas (balance óptimo)
+7. 👥 **Fácil contratación** - ABAP part-time 10h/sem (no full-time)
+8. 🎨 **Calidad garantizada** - Recursos con tiempo suficiente
+9. 📊 **ROI positivo** - Break-even en 2-3 meses post-Go-Live
+10. ✅ **Menor coordinación** - 1 recurso part-time vs full-time
 
-**Recomendamos aprobar VERSIÓN 2.04** por las siguientes razones:
+#### Análisis de Inversión
 
-1. 🎯 **Carga sostenible del Consultor BI** (26h/semana, NO comprimido excesivamente)
-2. 🚀 **Go-Live 6 semanas antes** (valor estratégico, sin presión extrema)
-3. 🛡️ **Reduce riesgo técnico SAP** (especialista SLT en lo crítico)
-4. 💼 **Separación profesional de roles** (SAP consultor + BI especialista)
-5. 💰 **ROI equilibrado** (+18% costo vs -14% tiempo = óptimo)
-6. ⚡ **Paralelización moderada** (realista, no agresiva)
-7. 👥 **ABAP Developer fácil de contratar** (10h/sem, no full-time)
-8. 🎨 **Mayor calidad entregable** (BI con tiempo para optimizar)
+**Inversión adicional:** +290h (+18% presupuesto)  
+**Ahorro temporal:** -6 semanas (-14% duración)  
+**Beneficios operativos:** Reducción 70% tiempo manual desde 1 mes antes  
+**Break-even:** 2-3 meses post-Go-Live  
 
-**¿Por qué V2.04 y no V2.03?**
-- V2.03 es 32 semanas pero cuesta +378h (+24%) y requiere ABAP casi full-time (23.8h/sem)
-- V2.04 es 36 semanas pero cuesta +290h (+18%) y ABAP solo 10.4h/sem (consultoría)
-- **Diferencia:** 4 semanas más de proyecto vs -88h más económica y menor overhead
-- **Trade-off óptimo:** Tiempo, costo y calidad en equilibrio
+**Cálculo conservador:**
+- Ahorro operativo: ~100h/mes (eliminación procesos manuales)
+- Break-even: 290h / 100h = **2.9 meses**
 
-La inversión adicional de 290 horas se recupera en 2.9 meses post go-live considerando solo el ahorro operativo directo, o en 2.0 meses considerando valor intangible de insights tempranos + reducción de riesgo técnico.
+**Cálculo realista (incluye valor intangible):**
+- Insights de negocio 1 mes antes (valor decisiones basadas en datos)
+- Reducción riesgo de delays (costo de oportunidad)
+- Mayor calidad (menos correcciones post-Go-Live)
+- Break-even: **1.5-2 meses**
 
 ---
 
-**Fecha de elaboración:** 10 de noviembre de 2025  
+## 📋 RESUMEN FINAL
+
+| Pregunta | Respuesta | Detalles |
+|----------|-----------|----------|
+| **1. ¿Acortar tiempos con mayor carga?** | ✅ **SÍ** - V2.04: 36 semanas | Reduce 6 semanas (-14%) con ABAP Developer (270h) |
+| **2. ¿Visualización gráfica?** | ✅ **SÍ** - 4 diagramas | Arquitectura, modelo, flujo, procesos (2-3 días) |
+| **3. ¿Recurso ABAP?** | ✅ **SÍ** - 270h incluidas | Part-time (10.4h/sem) + SAP Basis (Elanco) |
+| **4. ¿Job Descriptions?** | ✅ **SÍ** - 4 JDs completos | BI, ABAP, SAP Functional, PM (ver arriba) |
+
+### Decisión Recomendada
+
+**Aprobar VERSIÓN 2.04** con:
+- ✅ Cronograma: 36 semanas (Go-Live: 13 sep 2026)
+- ✅ Presupuesto: 1,880h (+290h, +18%)
+- ✅ Equipo: BI (935h) + ABAP (270h) + SAP (512h) + PM (163h)
+- ✅ ROI: Break-even en 2-3 meses post-Go-Live
+
+---
+
+**Fecha de elaboración:** 12 de noviembre de 2025  
 **Elaborado por:** Equipo Técnico Aunergia  
-**Validez:** 30 días (hasta 10 de diciembre de 2025)  
-**Versión recomendada:** 2.04 (Con ABAP Developer - Cronograma Optimizado)
+**Validez:** 30 días (hasta 12 de diciembre de 2025)  
+**Versión recomendada:** 2.04 (Optimizada - Equilibrio Tiempo-Costo-Calidad)
 
 ---
 
-**Archivos disponibles para revisión:**
-- `/docs/propuesta_final/CRONOGRAMA_DETALLADO_TAREAS_V2_04.csv`
-- `/RESUMEN_PROPUESTA_FINAL_V2_04.txt`
-- `/RESUMEN_CAMBIOS_V2_04.md`
+**Archivos de referencia:**
+- 📄 `/RESUMEN_PROPUESTA_FINAL_V2_04.txt` - Resumen ejecutivo
+- 📄 `/RESUMEN_CAMBIOS_V2_04.md` - Análisis V2.02→V2.04
+- 📄 `/docs/propuesta_final/CRONOGRAMA_DETALLADO_TAREAS_V2_04.csv` - Cronograma 36 semanas
+- 📁 `/docs/propuesta_final/` - Propuesta completa (13 documentos)
 
 Quedamos atentos a sus comentarios y decisión sobre la versión 2.04.
 
-Quedamos atentos a sus comentarios y decisión sobre la versión 2.03.
-
-Saludos cordiales,  
+**Saludos cordiales,**  
 **Equipo Aunergia**
