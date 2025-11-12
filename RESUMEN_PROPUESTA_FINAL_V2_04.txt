@@ -1,379 +1,61 @@
-===================================================================================
-       RESUMEN EJECUTIVO - PROPUESTA ELANCO DATA LAKE & ANALYTICS
-                         VERSIÓN 2.04 - OPTIMIZADA
-===================================================================================
-
-PROYECTO: Centralización de Datos SAP S/4HANA en BigQuery + Dashboards Power BI
-CLIENTE:  Elanco Animal Health
-FECHA:    10 de noviembre de 2025
-VERSIÓN:  2.04 (Con ABAP Developer - Cronograma Moderado)
-
------------------------------------------------------------------------------------
-1. ALCANCE DEL PROYECTO
------------------------------------------------------------------------------------
-
-OBJETIVO:
-Centralizar 18 transacciones SAP S/4HANA (FI, CO, SD, MM) en Google BigQuery,
-desarrollar 12 dashboards ejecutivos en Power BI con RLS por país/área,
-y entregar Data Lake operacional con capacidad de autoservicio.
-
-MÓDULOS SAP INCLUIDOS:
-- FI (Financial Accounting):          4 transacciones → FAGLL03, FB03, F.08, F.01
-- CO (Controlling):                   2 transacciones → KSB1, KE24
-- SD (Sales & Distribution):          2 transacciones → VA05, KE24
-- MM (Materials Management):          6 transacciones → ME2L, ME23N, MM60, MB59, MB5B, MCHB
-- FI-AP/AR (Accounts Payable/Rec):   2 transacciones → FBL1N, FBL5N
-- Master Data:                        2 transacciones → XK03, XD03
-- Transacciones Custom:               2 transacciones → ZLEL008, ZVEL015
-
-TABLAS SAP S/4HANA:
-32-38 tablas (incluyendo ACDOCA/ACDOCA_T como Universal Journal)
-
-ENTREGABLES:
-- Data Lake BigQuery arquitectura 3 capas (RAW/PROCESSED/CURATED)
-- 12 dashboards Power BI con Row-Level Security (RLS)
-- Modelo dimensional: 8 dimensiones + 6 tablas hechos
-- Documentación técnica y funcional completa
-- Capacitación a usuarios clave (Power BI + autoservicio)
-- 3 meses de garantía post-Go-Live
-
------------------------------------------------------------------------------------
-2. ESTRUCTURA DEL EQUIPO (4 RECURSOS)
------------------------------------------------------------------------------------
-
-┌──────────────────────┬────────────┬──────────────┬─────────────────────────────┐
-│ RECURSO              │ HORAS      │ H/SEMANA     │ RESPONSABILIDAD PRINCIPAL   │
-├──────────────────────┼────────────┼──────────────┼─────────────────────────────┤
-│ Consultor BI         │ 935h       │ 26.0h/sem    │ BigQuery + Power BI         │
-│ ABAP Developer       │ 270h       │ 10.4h/sem*   │ SAP SLT + Z-transactions    │
-│ Funcional SAP        │ 512h       │ 14.2h/sem    │ Definición funcional SAP    │
-│ Project Manager      │ 163h       │  4.5h/sem    │ Coordinación y seguimiento  │
-├──────────────────────┼────────────┼──────────────┼─────────────────────────────┤
-│ TOTAL EQUIPO         │ 1,880h     │ 52.2h/sem    │ (Aunergia provee 4)         │
-├──────────────────────┼────────────┼──────────────┼─────────────────────────────┤
-│ SAP Basis (Cliente)  │ 0h**       │ Bajo demanda │ Permisos SAP, soporte inf.  │
-└──────────────────────┴────────────┴──────────────┴─────────────────────────────┘
-
-NOTAS:
-* ABAP Developer: solo Fase 0 + Fase 1 (26 semanas de 36 totales)
-** SAP Basis: provisto por Elanco, sin costo al proyecto, disponibilidad confirmada
-
-PERFIL ABAP DEVELOPER (NUEVO RECURSO):
-- Experiencia: 5+ años en ABAP, 2+ años en SAP SLT (CRÍTICO)
-- Módulos: MM, SD, FI (conocimiento funcional básico)
-- Responsabilidades:
-  ✓ Configuración y monitoreo SAP SLT (replicación en tiempo real)
-  ✓ Extracción de datos SAP → BigQuery capa RAW
-  ✓ Análisis de transacciones custom (ZLEL008, ZVEL015)
-  ✓ Gestión de tickets SAP con TI Global (punto focal SAP)
-  ✓ NO participa en BigQuery ni Power BI (separación de roles)
-
------------------------------------------------------------------------------------
-3. CRONOGRAMA Y FASES
------------------------------------------------------------------------------------
-
-DURACIÓN TOTAL: 36 SEMANAS (6 de enero 2026 → 13 de septiembre 2026)
-
-┌─────────┬───────────┬─────────────────┬──────────┬───────────────────────────┐
-│ FASE    │ SEMANAS   │ FECHAS          │ ESFUERZO │ ENTREGABLES CLAVE         │
-├─────────┼───────────┼─────────────────┼──────────┼───────────────────────────┤
-│ Fase 0  │ 6 sem     │ 6-ene → 16-feb  │ 328h     │ Arquitectura + POC + Go   │
-│ Fase 1  │ 20 sem    │ 17-feb → 5-jul  │ 852h     │ Data Lake + 18 pipelines  │
-│ Fase 2  │ 10 sem    │ 6-jul → 13-sep  │ 700h     │ 12 dashboards + Go-Live   │
-├─────────┼───────────┼─────────────────┼──────────┼───────────────────────────┤
-│ TOTAL   │ 36 sem    │ ~8.3 meses      │ 1,880h   │ Proyecto completo         │
-└─────────┴───────────┴─────────────────┴──────────┴───────────────────────────┘
-
-HITOS CLAVE:
-✓ Semana 6:  Go/No-Go (fin Fase 0)
-✓ Semana 26: Data Lake operacional (fin Fase 1)
-✓ Semana 36: Go-Live producción (fin Fase 2)
-
-GO-LIVE: 13 de septiembre de 2026
-
------------------------------------------------------------------------------------
-4. FASE 0: REVISIÓN DE ALCANCE Y FACTIBILIDAD (6 SEMANAS)
------------------------------------------------------------------------------------
-
-OBJETIVO:
-Validar la viabilidad técnica y funcional del proyecto mediante análisis detallado,
-diseño de arquitectura y POC end-to-end.
-
-ACTIVIDADES PRINCIPALES:
-1. Diseño arquitectura BigQuery 3 capas (RAW/PROCESSED/CURATED)
-2. Análisis de 18 transacciones SAP y mapeo a 32-38 tablas
-3. Inventario técnico: permisos SAP, acceso BigQuery, configuración SLT
-4. Gestión de tickets críticos (permisos, tablas faltantes)
-5. Workshops funcionales: priorización y validación con stakeholders
-6. Análisis profundo transacciones custom (ZLEL008, ZVEL015) - ABAP Dev
-7. POC técnico end-to-end: SAP → SLT → BigQuery → Power BI
-8. Documentación de arquitectura y plan detallado Fase 1 y 2
-9. Reunión Go/No-Go (aprobación para continuar)
-
-ESFUERZO: 328h (BI: 104h | ABAP: 70h | SAP: 154h | PM: 32h)
-
-ENTREGABLES:
-✓ Documento de arquitectura técnica definitiva
-✓ Backlog priorizado de 18 transacciones
-✓ Listado completo de tablas SAP con volumetría
-✓ POC funcional validado por stakeholders
-✓ Plan detallado de Fase 1 y Fase 2
-✓ Decisión Go/No-Go documentada
-
------------------------------------------------------------------------------------
-5. FASE 1: CONSTRUCCIÓN DEL DATA LAKE (20 SEMANAS)
------------------------------------------------------------------------------------
-
-OBJETIVO:
-Desarrollar e implementar el Data Lake en BigQuery con las 18 transacciones SAP,
-incluyendo pipelines de extracción, transformación y carga (ETL).
-
-ACTIVIDADES PRINCIPALES:
-1. Setup infraestructura completa: datasets, SLT, conectores, Cloud Functions
-2. Desarrollo de pipelines por módulo SAP (extracción + transformación):
-   - Módulo FI:          4 transacciones (FAGLL03, FB03, F.08, F.01)
-   - Módulo SD:          2 transacciones (VA05, KE24)
-   - Módulo MM (Proc):   3 transacciones (ME2L, ME23N, MM60)
-   - Módulo MM (Inv):    3 transacciones (MB59, MB5B, MCHB)
-   - ZLEL008 (custom):   1 transacción compleja MRP
-   - Módulo CO y AP/AR:  4 transacciones (KSB1, KE24, FBL1N, FBL5N)
-   - Master Data + ZVEL: 3 transacciones (XK03, XD03, ZVEL015)
-3. Optimización de queries BigQuery y tuning de performance
-4. Automatización CI/CD y monitoreo de pipelines
-5. Testing integral de las 18 transacciones
-6. Validación funcional con SAP Functional
-7. Documentación técnica completa
-
-SEPARACIÓN DE ROLES (CRÍTICO):
-- ABAP Developer: Extracción desde SAP → BigQuery capa RAW (solo datos crudos)
-- Consultor BI:   Transformación RAW → PROCESSED → CURATED (toda la lógica)
-
-ESFUERZO: 852h (BI: 394h | ABAP: 200h | SAP: 194h | PM: 64h)
-
-ENTREGABLES:
-✓ Data Lake BigQuery con 3 capas operacionales
-✓ 18 pipelines SAP funcionando (extracción + transformación)
-✓ Documentación técnica de cada pipeline
-✓ Monitoreo y alertas configurados
-✓ Validación funcional SAP completada
-✓ Data Lake listo para consumo (dashboards y autoservicio)
-
------------------------------------------------------------------------------------
-6. FASE 2: MODELADO DIMENSIONAL Y DASHBOARDS (10 SEMANAS)
------------------------------------------------------------------------------------
-
-OBJETIVO:
-Construir la capa de consumo: modelo dimensional (star schema), 12 dashboards
-Power BI con RLS, y capacitación a usuarios clave.
-
-ACTIVIDADES PRINCIPALES:
-1. Diseño e implementación modelo dimensional completo:
-   - 8 dimensiones: Tiempo, País, Área, Cliente, Proveedor, Material, Cuenta, CeCo
-   - 6 tablas hechos: Ventas, Compras, Inventario, Contabilidad, CxC, CxP
-   - Vistas SQL y capa semántica (capa CURATED)
-   - Definición de KPIs con SAP Functional
-2. Desarrollo de 12 dashboards Power BI:
-   - Financieros:       3 dashboards (General, OPEX, Controlling)
-   - Ventas:            3 dashboards (Ventas, Rentabilidad, Regional)
-   - Supply Chain:      3 dashboards (Inventario, Supply Chain, Compras)
-   - Tesorería + Ejec: 3 dashboards (CxP, CxC, Dashboard Ejecutivo)
-3. Implementación de Row-Level Security (RLS) por país y área
-4. Testing integral de dashboards con usuarios clave
-5. UAT en 4 fases (Financiero → Comercial → Supply → Ejecutivo)
-6. Ajustes post-UAT basados en feedback
-7. Documentación funcional de dashboards
-8. Capacitación usuarios clave (Power BI + autoservicio)
-9. Preparación y ejecución de Go-Live
-10. Cierre de proyecto y entrega formal
-
-ESFUERZO: 700h (BI: 437h | SAP: 164h | PM: 99h)
-
-ENTREGABLES:
-✓ Modelo dimensional (star schema) completamente documentado
-✓ 12 dashboards Power BI operacionales con RLS
-✓ Documentación funcional de cada dashboard
-✓ Usuarios capacitados (Power BI + autoservicio BigQuery)
-✓ Ambiente productivo operando
-✓ Documentación de cierre y lecciones aprendidas
-✓ 3 meses de garantía post-Go-Live
-
------------------------------------------------------------------------------------
-7. COMPARATIVA DE VERSIONES
------------------------------------------------------------------------------------
-
-┌────────────────────────┬─────────────┬─────────────┬──────────────┐
-│ MÉTRICA                │ V 2.02      │ V 2.04      │ DIFERENCIA   │
-├────────────────────────┼─────────────┼─────────────┼──────────────┤
-│ Duración Total         │ 42 semanas  │ 36 semanas  │ -6 sem (-14%)│
-│ Esfuerzo Total         │ 1,590h      │ 1,880h      │ +290h (+18%) │
-│ Consultor BI           │ 961h        │ 935h        │ -26h (-3%)   │
-│ ABAP Developer         │ 0h          │ 270h        │ +270h (NEW)  │
-│ Funcional SAP          │ 484h        │ 512h        │ +28h (+6%)   │
-│ Project Manager        │ 145h        │ 163h        │ +18h (+12%)  │
-│ Recursos Aunergia      │ 3           │ 4           │ +1           │
-│ Go-Live                │ Oct-2026    │ Sep-2026    │ 1 mes antes  │
-├────────────────────────┼─────────────┼─────────────┼──────────────┤
-│ H/semana Consultor BI  │ 22.9 h/sem  │ 26.0 h/sem  │ +3.1h/sem    │
-│ H/semana ABAP Dev      │ N/A         │ 10.4 h/sem  │ (26 sem)     │
-└────────────────────────┴─────────────┴─────────────┴──────────────┘
-
-VENTAJAS V2.04 VS V2.02:
-✓ Go-Live 6 semanas antes (1 mes de operación adelantado)
-✓ ABAP Developer dedicado para SLT y Z-transactions (reduce riesgo técnico)
-✓ Consultor BI NO excede 30h/sem (26h/sem promedio, cómodo)
-✓ Separación de roles SAP vs BigQuery (mayor eficiencia)
-✓ Inversión controlada: +290h (+18%) para reducir -6 semanas (-14%)
-✓ Paralelización efectiva en Fase 1 (ABAP extrae, BI transforma)
-
-DESVENTAJAS V2.04:
-- Incremento de 290h vs V2.02 (+18% presupuesto)
-- Requiere reclutamiento de ABAP Developer (lead time 2-3 semanas)
-- Mayor coordinación entre recursos (4 vs 3)
-
------------------------------------------------------------------------------------
-8. ANÁLISIS COSTO-BENEFICIO
------------------------------------------------------------------------------------
-
-INVERSIÓN ADICIONAL V2.04:
-+290h × tarifa promedio = inversión incremental vs V2.02
-
-BENEFICIOS CUANTIFICABLES:
-1. Go-Live 1 mes antes (6 semanas)
-   → Elimina ~120h de operación manual en septiembre 2026
-   → Reduce riesgo de errores manuales (costo de corrección)
-   → Adelanta generación de insights de negocio (valor intangible)
-
-2. Reducción de riesgo técnico
-   → ABAP Developer especialista en SLT (tecnología crítica)
-   → Análisis profundo de Z-transactions (ZLEL008, ZVEL015)
-   → Menor probabilidad de delays por problemas SAP
-
-3. Calidad superior
-   → Consultor BI con carga de trabajo sostenible (26h/sem vs 30h/sem)
-   → Mayor tiempo para optimización BigQuery y dashboards
-   → Separación de roles reduce errores de integración
-
-BREAK-EVEN:
-290h inversión adicional / 120h ahorro operativo = 2.4 meses post-Go-Live
-
-ROI PROYECTADO:
-Si se considera valor de insights tempranos + reducción de riesgo,
-el ROI positivo se alcanza en 1-2 meses post-Go-Live.
-
------------------------------------------------------------------------------------
-9. REQUISITOS TÉCNICOS Y ADMINISTRATIVOS
------------------------------------------------------------------------------------
-
-REQUISITOS DE ELANCO:
-✓ Acceso SAP S/4HANA con permisos de lectura a 32-38 tablas
-✓ Disponibilidad de SAP SLT (Landscape Transformation Server)
-✓ Proyecto Google Cloud con BigQuery activo
-✓ 8 licencias Power BI Pro (usuarios ejecutivos)
-✓ Soporte de SAP Basis (Elanco) para permisos y configuración SLT
-✓ Disponibilidad de stakeholders clave para workshops y UAT
-✓ Aprobación de presupuesto adicional (+290h vs V2.02)
-
-REQUISITOS DE AUNERGIA:
-✓ Reclutamiento de ABAP Developer (lead time 2-3 semanas)
-✓ Accesos provistos por Elanco antes del kick-off (6-ene-2026)
-✓ Coordinación con SAP Basis de Elanco durante Fase 0 y Fase 1
-
------------------------------------------------------------------------------------
-10. RIESGOS Y SUPUESTOS
------------------------------------------------------------------------------------
-
-RIESGOS PRINCIPALES:
-1. Delay en contratación de ABAP Developer → Lead time 2-3 semanas (ALTO)
-2. Tickets SAP sin resolver (permisos, tablas faltantes) → Fase 0 mitigación (MEDIO)
-3. Complejidad de Z-transactions mayor a la estimada → ABAP Dev dedicado (MEDIO)
-4. Disponibilidad limitada de SAP Basis (Elanco) → Plan de coordinación (BAJO)
-5. Cambios de alcance durante el proyecto → Change control process (BAJO)
-
-SUPUESTOS CLAVE:
-✓ SAP SLT está disponible y licenciado por Elanco
-✓ Volumetría de datos SAP no excede 500GB (según estimación inicial)
-✓ Permisos SAP se resuelven en Fase 0 (semanas 2-4)
-✓ ABAP Developer contratado antes del kick-off (6-ene-2026)
-✓ Stakeholders disponibles para workshops y UAT según cronograma
-
------------------------------------------------------------------------------------
-11. ENTREGABLES Y GARANTÍA
------------------------------------------------------------------------------------
-
-ENTREGABLES FORMALES:
-1. Data Lake BigQuery operacional (3 capas: RAW/PROCESSED/CURATED)
-2. 18 pipelines SAP funcionando en producción
-3. Modelo dimensional (star schema): 8 dimensiones + 6 hechos
-4. 12 dashboards Power BI con Row-Level Security (RLS)
-5. Documentación técnica completa (arquitectura, pipelines, modelo)
-6. Documentación funcional completa (dashboards, KPIs, usuario)
-7. Usuarios capacitados (Power BI + autoservicio BigQuery)
-8. Código fuente (SQL, Python, DAX) en repositorio Git
-9. Monitoreo y alertas configurados
-10. Documento de cierre de proyecto
-
-GARANTÍA POST-GO-LIVE:
-- 3 meses de soporte correctivo sin costo adicional
-- Resolución de bugs y errores de funcionamiento
-- Ajustes menores de dashboards (sin rediseño)
-- NO incluye: nuevos requerimientos, nuevas transacciones, cambios de alcance
-
------------------------------------------------------------------------------------
-12. CONDICIONES COMERCIALES
------------------------------------------------------------------------------------
-
-MODALIDAD DE CONTRATACIÓN:
-Tiempo y materiales (T&M) con esfuerzo estimado.
-
-ESFUERZO ESTIMADO:
-1,880 horas distribuidas en 4 recursos durante 36 semanas.
-
-FACTURACIÓN:
-Según tarifa horaria por perfil acordada con Aunergia.
-Facturación mensual contra horas trabajadas y reportadas.
-
-VALIDEZ DE LA PROPUESTA:
-30 días a partir del 10 de noviembre de 2025 (hasta 10 de diciembre de 2025).
-
-INICIO PLANIFICADO:
-6 de enero de 2026 (Kick-off)
-
------------------------------------------------------------------------------------
-13. PRÓXIMOS PASOS
------------------------------------------------------------------------------------
-
-DE PARTE DE ELANCO:
-☐ Revisión y aprobación de propuesta versión 2.04
-☐ Decisión sobre inversión adicional (+290h = +18% presupuesto)
-☐ Confirmación de disponibilidad de recurso SAP Basis (interno Elanco)
-☐ Aprobación de cronograma de 36 semanas (Go-Live: 13-sep-2026)
-☐ Provisión de accesos SAP y BigQuery antes del kick-off
-
-DE PARTE DE AUNERGIA:
-☐ Reclutamiento de ABAP Developer (lead time 2-3 semanas)
-☐ Preparación de ambientes de desarrollo y testing
-☐ Elaboración de plan detallado de Fase 0 (semana a semana)
-☐ Coordinación de kick-off (6 de enero de 2026)
-
------------------------------------------------------------------------------------
-14. CONTACTO
------------------------------------------------------------------------------------
-
-ELABORADO POR:
-Aunergia - Equipo de Data Engineering & Analytics
-
-VERSIÓN:
-2.04 (Con ABAP Developer - Cronograma Moderado)
-
-FECHA:
-10 de noviembre de 2025
-
-VALIDEZ:
-30 días (hasta 10 de diciembre de 2025)
-
-Para consultas o aclaraciones sobre esta propuesta, favor contactar a su
-representante de Aunergia.
-
-===================================================================================
-                            FIN DEL RESUMEN EJECUTIVO
-===================================================================================
+RESUMEN PROPUESTA FINAL: Centralización de Datos y Analítica – Elanco Animal Health (Operación CASA)
+Fecha: 10 de noviembre de 2025 | Versión: 2.04 (Con ABAP Developer - Cronograma Moderado) | Norma: < 1000 palabras
+================================================================================
+
+CONTEXTO Y PROBLEMA
+
+El área de Planeamiento Financiero (FP&A) de Elanco requiere consultas manuales periódicas a SAP, lo que genera retrasos en reportes críticos, múltiples solicitudes a TI/Funcionales, inconsistencias en datos extraídos y ausencia de un Data Lake centralizado. Adicionalmente, existen antecedentes previos de carga en BigQuery (tickets 2020-2021) con errores estructurales (falta de índices, modelos no relacionales).
+
+OBJETIVO DE LA PROPUESTA
+
+Construir una arquitectura integral de Datos y Analítica que permita extraer, centralizar y procesar datos de SAP S/4HANA (módulos FI, CO, SD, MM), crear un Data Lake estructurado en Google BigQuery (capas RAW, PROCESSED, CURATED), desarrollar 12 dashboards operacionales en Power BI Service, implementar modelos predictivos de clasificación y regresión, y asegurar gobernanza mediante RLS (Row-Level Security) por países y áreas.
+
+ALCANCE
+
+La solución abarcará 18 transacciones SAP críticas distribuidas en cuatro módulos principales: FI (Financial Accounting) con 4 transacciones incluyendo FAGLL03, FB03, F.08 y F.01; CO (Controlling) con 2 transacciones KSB1 y KE24; SD (Sales & Distribution) con 2 transacciones VA05 y KE24; MM (Materials Management) con 6 transacciones que incluyen ME2L, ME23N, MM60, MB59, MB5B y MCHB; FI-AP/AR (Accounts Payable/Receivable) con 2 transacciones FBL1N y FBL5N; Master Data con 2 transacciones XK03 y XD03; y 2 transacciones custom críticas ZLEL008 y ZVEL015. Se trabajará con 32-38 tablas SAP incluyendo ACDOCA/ACDOCA_T como tabla universal de documentos contables (Universal Journal), BSEG, BKPF, EKKO, EKPO, VBAK, VBAP, entre otras.
+
+PIPELINE TECNOLÓGICO
+
+La arquitectura se basará en SAP SLT (Landscape Transformation Server) para replicación en tiempo real desde SAP S/4HANA hacia Google BigQuery. El Data Lake estará estructurado en tres capas: RAW (réplica directa), PROCESSED (transformaciones, limpieza, cálculo de KPIs) y CURATED (modelos analíticos listos para consumo). Power BI Service consumirá datos desde la capa CURATED mediante conectores nativos, con RLS configurada por país, centro de costo y área funcional. Se implementarán 12 dashboards operacionales con filtros dinámicos, requiriendo 8 licencias Power BI Pro renovables automáticamente. El modelo dimensional incluirá 8 dimensiones (Tiempo, País, Área, Cliente, Proveedor, Material, Cuenta, Centro de Costo) y 6 tablas de hechos (Ventas, Compras, Inventario, Contabilidad, CxC, CxP). La inclusión de un ABAP Developer dedicado permitirá la configuración avanzada de SAP SLT y el análisis profundo de las transacciones custom ZLEL008 y ZVEL015.
+
+FASES DEL PROYECTO
+
+El proyecto se estructura en tres fases principales. La Fase 0 de Revisión de Alcance y Factibilidad (6 semanas, 328 horas) incluye validación técnica de conectividad SAP SLT ↔ BigQuery, confirmación final de las 18 transacciones y tablas asociadas, análisis detallado de transacciones custom, definición de requerimientos de dashboards con usuarios clave, documentación de Data Governance y políticas RLS, desarrollo de POC técnico end-to-end, y reunión de Go/No-Go para aprobación de continuidad. La Fase 1 de Construcción del Data Lake (20 semanas, 852 horas) comprende configuración de SAP SLT para replicación en tiempo real, desarrollo de 18 pipelines de extracción y transformación organizados por módulo SAP, optimización de queries BigQuery y tuning de performance, automatización CI/CD y monitoreo de pipelines, validación de calidad de datos (DQM) y manejo de errores, y documentación técnica completa de la arquitectura implementada. La Fase 2 de Modelado y Dashboards (10 semanas, 700 horas) incluye diseño e implementación del modelo dimensional completo (8 dimensiones + 6 hechos), construcción de 12 dashboards operacionales en Power BI Service distribuidos en dashboards financieros, de ventas, de supply chain, y ejecutivos, implementación de RLS por país/área/centro de costo, pruebas UAT con usuarios finales en 4 fases (Financiero → Comercial → Supply → Ejecutivo), capacitación a usuarios clave (Power BI + autoservicio BigQuery), y ejecución del Go-Live.
+
+ESFUERZO Y RECURSOS
+
+El proyecto requiere un esfuerzo total de 1.880 horas distribuidas en 36 semanas con 4 perfiles especializados: Consultor BI (BigQuery, Power BI) con 935 horas (49.7%), ABAP Developer (Extracción SAP, SLT) con 270 horas (14.4%) participando solo en Fase 0 y Fase 1, Funcional SAP (Mapeo transacciones) con 512 horas (27.2%), y Project Manager (Coordinación, Governance) con 163 horas (8.7%). La distribución por fase es: Fase 0 (Alcance y Factibilidad) 328 horas (17.4%) en 6 semanas, Fase 1 (Construcción Data Lake) 852 horas (45.3%) en 20 semanas, y Fase 2 (Dashboards y Visualización) 700 horas (37.2%) en 10 semanas. El Go-Live estimado es el 13 de septiembre de 2026. La versión 2.04 incorpora un ABAP Developer dedicado (nuevo recurso respecto a V2.02) con experiencia de 5+ años en ABAP y 2+ años en SAP SLT, responsable de configuración y monitoreo de SAP SLT, extracción de datos SAP hacia BigQuery capa RAW, análisis de transacciones custom, y gestión de tickets SAP con TI Global, permitiendo así reducir el cronograma de 42 a 36 semanas (6 semanas menos, equivalente a 1 mes de Go-Live adelantado) con una inversión incremental de 290 horas respecto a V2.02.
+
+ENTREGABLES
+
+La propuesta incluye componentes funcionales (Data Lake en BigQuery con 3 capas operacionales, 18 pipelines SAP funcionando en producción, modelo dimensional con 8 dimensiones y 6 hechos, 12 dashboards en Power BI Service con RLS configurado, pipelines de extracción y transformación automatizados, monitoreo y alertas configurados), documentación técnica (arquitectura del Data Lake con diagramas y flujos de datos, documentación técnica de cada pipeline, diccionario de datos completo, manual de operación y mantenimiento, código fuente en repositorio Git), y capacitación y transferencia (sesiones para usuarios finales, documentación de gobierno de datos y políticas de acceso, documentación funcional de cada dashboard, transferencia de conocimiento a equipo TI de Elanco, documento de cierre de proyecto y lecciones aprendidas), más 3 meses de garantía post-Go-Live para soporte correctivo sin costo adicional.
+
+BENEFICIOS
+
+La implementación permitirá reducir en un 80% el tiempo de extracción manual de reportes SAP y los tickets asociados, centralizar datos en una única fuente de verdad (BigQuery) eliminando inconsistencias, automatizar reportes críticos con actualización diaria/semanal, democratizar el acceso a datos mediante Power BI Service (self-service analytics), establecer una base sólida para proyectos futuros de IA/ML y analítica avanzada, mejorar la toma de decisiones estratégicas mediante información oportuna y confiable, y lograr Go-Live 1 mes antes (13 de septiembre de 2026 vs mediados de octubre 2026 en V2.02), generando valor de negocio adelantado y eliminando aproximadamente 120 horas de operación manual en ese mes. El análisis costo-beneficio muestra que la inversión incremental de 290 horas se recupera en 2.4 meses post-Go-Live, considerando solo el ahorro operativo, y en 1-2 meses si se considera el valor de insights tempranos y reducción de riesgo técnico.
+
+REQUISITOS
+
+Los requisitos técnicos incluyen acceso técnico a SAP S/4HANA con permisos de lectura a 32-38 tablas, disponibilidad de SAP SLT (Landscape Transformation Server), proyecto Google Cloud con BigQuery activo, licencias de Power BI Service (8 Pro confirmadas), ancho de banda de red suficiente para replicación SAP SLT, y soporte de SAP Basis de Elanco para permisos y configuración SLT. Los requisitos organizacionales comprenden disponibilidad de stakeholders clave para workshops y UAT (FP&A, Finanzas, Comercial), aprobaciones de seguridad y compliance en plazos estimados, designación de un SPOC (Single Point of Contact) en Elanco, sesiones semanales de seguimiento con stakeholders, aprobación de presupuesto adicional (+290h vs V2.02), y accesos provistos por Elanco antes del kick-off (6 de enero de 2026). Los supuestos clave son: las 18 transacciones están activas y en uso regular, no hay restricciones legales/compliance para exportar datos a BigQuery, infraestructura SAP SLT está operativa o puede implementarse, no se requieren desarrollos ABAP complejos adicionales más allá de extracción estándar, volumetría de datos SAP no excede 500GB, permisos SAP se resuelven en Fase 0, ABAP Developer es contratado antes del kick-off, y stakeholders disponibles para workshops y UAT según cronograma.
+
+RIESGOS
+
+Los riesgos principales incluyen delay en contratación de ABAP Developer con lead time de 2-3 semanas (riesgo ALTO, mitigación: iniciar reclutamiento inmediatamente post-aprobación), latencia en aprobaciones de seguridad/compliance (mitigación: iniciar trámites en Fase 0 involucrando a InfoSec desde el arranque), tickets SAP sin resolver para permisos o tablas faltantes (riesgo MEDIO, mitigación: validación técnica intensiva en Fase 0 semanas 2-4), complejidad de transacciones custom ZLEL008 y ZVEL015 mayor a la estimada (riesgo MEDIO, mitigación: ABAP Developer dedicado con análisis profundo en Fase 0), calidad inconsistente de datos en SAP con duplicados o campos vacíos (mitigación: DQM robusto en capa PROCESSED con alertas automáticas de anomalías), disponibilidad limitada de SAP Basis de Elanco (riesgo BAJO, mitigación: plan de coordinación y calendario definido), indisponibilidad de usuarios clave para validaciones (mitigación: definir SPOC y backups, calendario de sesiones confirmado anticipadamente), cambios en alcance durante ejecución o scope creep (riesgo BAJO, mitigación: proceso formal de change request con documentación de impacto en cronograma/costo), y problemas de conectividad SAP SLT ↔ BigQuery (mitigación: validación técnica en Fase 0, soporte de BASIS SAP y equipo GCP).
+
+EXCLUSIONES
+
+El proyecto excluye mantenimiento de infraestructura SAP (responsabilidad de TI Elanco), licencias de SAP, BigQuery y Power BI (se asume provistas por cliente), desarrollos ABAP custom no relacionados con extracción estándar o nuevas transacciones, integración con sistemas no-SAP (CRM, ERP externos), migración de datos históricos previos al período definido, soporte correctivo más allá de 3 meses post-Go-Live (requiere contrato de mantenimiento separado), nuevos requerimientos o cambios de alcance no contemplados en esta propuesta (requieren change request formal), y rediseño de dashboards post-Go-Live (la garantía cubre solo ajustes menores).
+
+CRITERIOS DE ÉXITO
+
+El proyecto será exitoso cuando el Data Lake en BigQuery esté operativo con 3 capas (RAW, PROCESSED, CURATED), los 18 pipelines SAP estén funcionando en producción, el modelo dimensional esté completamente documentado (8 dimensiones + 6 hechos), los 12 dashboards en Power BI Service estén validados y en producción, el RLS esté configurado y verificado por país/área/centro de costo, la replicación SAP SLT funcione con latencia menor a 15 minutos, se reduzcan en 80% los tickets de extracción manual de reportes SAP, los usuarios finales estén capacitados y autónomos en consulta de dashboards y autoservicio BigQuery, la documentación técnica y funcional esté entregada y aprobada, el código fuente esté disponible en repositorio Git, el monitoreo y alertas estén configurados, y el Go-Live se ejecute exitosamente el 13 de septiembre de 2026.
+
+PRÓXIMOS PASOS
+
+Los próximos pasos son: revisión y aprobación de la propuesta versión 2.04 por parte de Elanco (FP&A, TI, Finanzas), decisión sobre inversión adicional (+290h = +18% presupuesto respecto a V2.02), confirmación de disponibilidad de recurso SAP Basis interno de Elanco, aprobación de cronograma de 36 semanas con Go-Live el 13 de septiembre de 2026, provisión de accesos SAP y BigQuery antes del kick-off, reclutamiento de ABAP Developer por parte de Aunergia (lead time 2-3 semanas), preparación de ambientes de desarrollo y testing, elaboración de plan detallado de Fase 0 semana a semana, kick-off meeting para alineamiento de expectativas y roles (6 de enero de 2026), inicio de Fase 0 con validación técnica de conectividad y alcance definitivo, definición de calendario de sesiones con usuarios clave (FP&A, Finanzas, Comercial), y firma de contrato y orden de compra para arranque formal del proyecto.
+
+
+
+--------------------------------------------------------------------------------
+Aunergia – Consultoría en Optimización de Procesos y TI
+--------------------------------------------------------------------------------
